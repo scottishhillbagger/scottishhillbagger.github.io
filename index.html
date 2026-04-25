@@ -165,6 +165,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 .modal-tag.munro,.modal-tag.m{color:var(--accent-dark)}
 .modal-tag.corbett,.modal-tag.c{color:var(--accent-dark)}
 .modal-tag.fiona,.modal-tag.f{color:#7B4A8A}
+.modal-tag.bothy,.modal-tag.b{color:var(--terra)}
 .modal-name{font-family:var(--font-display);font-size:1.5rem;font-weight:600;line-height:1.15;margin-bottom:.4rem;color:var(--ink);letter-spacing:-.03em}
 .modal-meta{font-size:.8rem;color:var(--ink3);padding-bottom:.85rem;border-bottom:1px solid var(--rule2);margin-bottom:1rem;display:flex;gap:.6rem;align-items:center;flex-wrap:wrap;font-family:var(--font-mono);letter-spacing:-.01em}
 .modal label{display:block;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);margin-bottom:.3rem;font-weight:600}
@@ -378,6 +379,11 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 .map-pin-wrap{background:transparent !important;border:none !important;display:flex;align-items:center;justify-content:center}
 .map-pin{border-radius:50%;box-sizing:content-box;box-shadow:0 0 0 1.5px rgba(255,255,255,0.95), 0 1px 2px rgba(0,0,0,0.35);transition:transform .12s ease}
 .map-pin:hover{transform:scale(1.2)}
+/* Bothy pin: little house silhouette in terracotta */
+.bothy-pin-wrap{background:transparent !important;border:none !important}
+.bothy-pin{width:18px;height:18px;filter:drop-shadow(0 1px 2px rgba(0,0,0,0.45));transition:transform .12s ease}
+.bothy-pin:hover{transform:scale(1.25)}
+.bothy-pin svg{display:block}
 </style>
 </head>
 <body>
@@ -462,6 +468,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
         <button class="map-type-btn on" data-type="munro">Munros</button>
         <button class="map-type-btn" data-type="corbett">Corbetts</button>
         <button class="map-type-btn" data-type="fiona">Fionas</button>
+        <button class="map-type-btn" data-type="bothy">Bothies</button>
       </div>
       <span style="font-size:.72rem;color:var(--ink3);font-style:italic" id="map-count"></span>
     </div>
@@ -1275,6 +1282,61 @@ var M = [
   {id:"f219",name:"Creag Dhubh Mhor",type:"fiona",height:611,region:"Kintail & Glen Affric",grade:"easy",lat:57.40905,lng:-5.36122}
 ];
 
+// ============ BOTHIES (MBA-maintained, coords from training data — may have errors) ============
+var BOTHIES = [
+  {id:"b001",name:"Shenavall",lat:57.788,lng:-5.235,region:"Ullapool & Assynt"},
+  {id:"b002",name:"Glenbeg",lat:57.726,lng:-5.302,region:"Ullapool & Assynt"},
+  {id:"b003",name:"Suileag",lat:58.158,lng:-5.107,region:"Ullapool & Assynt"},
+  {id:"b004",name:"Schoolhouse (Duag Bridge)",lat:57.967,lng:-4.683,region:"Ullapool & Assynt"},
+  {id:"b005",name:"The Schoolhouse",lat:58.396,lng:-4.819,region:"Sutherland"},
+  {id:"b006",name:"Strabeg",lat:58.476,lng:-4.766,region:"Sutherland"},
+  {id:"b007",name:"Glendhu",lat:58.265,lng:-4.91,region:"Sutherland"},
+  {id:"b008",name:"Glencoul",lat:58.232,lng:-4.953,region:"Sutherland"},
+  {id:"b009",name:"Kearvaig",lat:58.605,lng:-4.845,region:"Sutherland"},
+  {id:"b010",name:"Strathchailleach",lat:58.567,lng:-4.927,region:"Sutherland"},
+  {id:"b011",name:"Lookout (Rubha Hunish)",lat:57.704,lng:-6.343,region:"Skye"},
+  {id:"b012",name:"Camasunary",lat:57.184,lng:-6.122,region:"Skye"},
+  {id:"b013",name:"Maol-Bhuidhe",lat:57.328,lng:-5.421,region:"Kintail & Glen Affric"},
+  {id:"b014",name:"Camban",lat:57.19,lng:-5.22,region:"Kintail & Glen Affric"},
+  {id:"b015",name:"Glen Affric Youth Hostel (Alltbeithe)",lat:57.23,lng:-5.122,region:"Kintail & Glen Affric"},
+  {id:"b016",name:"Craig",lat:57.715,lng:-5.572,region:"Torridon"},
+  {id:"b017",name:"Easan Dorcha (Teahouse)",lat:57.554,lng:-5.345,region:"Torridon"},
+  {id:"b018",name:"Sourlies",lat:56.997,lng:-5.591,region:"Glen Coe & Lochaber"},
+  {id:"b019",name:"A' Chuil",lat:56.953,lng:-5.509,region:"Glen Coe & Lochaber"},
+  {id:"b020",name:"Kinbreack",lat:56.987,lng:-5.405,region:"Glen Coe & Lochaber"},
+  {id:"b021",name:"Oban (Loch Morar)",lat:56.937,lng:-5.583,region:"Glen Coe & Lochaber"},
+  {id:"b022",name:"Ryvoan",lat:57.193,lng:-3.661,region:"Cairngorms"},
+  {id:"b023",name:"Bob Scott's",lat:57.02,lng:-3.498,region:"Cairngorms"},
+  {id:"b024",name:"Hutchison Memorial Hut",lat:57.061,lng:-3.555,region:"Cairngorms"},
+  {id:"b025",name:"Corrour",lat:57.02,lng:-3.666,region:"Cairngorms"},
+  {id:"b026",name:"Faindouran Lodge",lat:57.137,lng:-3.57,region:"Cairngorms"},
+  {id:"b027",name:"Gelder Shiel Stable",lat:56.962,lng:-3.198,region:"Cairngorms"},
+  {id:"b028",name:"Staoineag",lat:56.812,lng:-4.736,region:"Glen Coe & Lochaber"},
+  {id:"b029",name:"Meanach",lat:56.823,lng:-4.834,region:"Glen Coe & Lochaber"},
+  {id:"b030",name:"Lairig Leacach",lat:56.829,lng:-4.851,region:"Glen Coe & Lochaber"},
+  {id:"b031",name:"Tom an Eite (Luibeilt)",lat:56.787,lng:-4.804,region:"Glen Coe & Lochaber"},
+  {id:"b032",name:"Resourie",lat:56.847,lng:-5.43,region:"Glen Coe & Lochaber"},
+  {id:"b033",name:"Essan",lat:56.879,lng:-5.481,region:"Glen Coe & Lochaber"},
+  {id:"b034",name:"Backhill of Bush",lat:55.106,lng:-4.392,region:"Galloway & Southern Uplands"},
+  {id:"b035",name:"Tunskeen",lat:55.184,lng:-4.484,region:"Galloway & Southern Uplands"},
+  {id:"b036",name:"White Laggan",lat:55.08,lng:-4.422,region:"Galloway & Southern Uplands"},
+  {id:"b037",name:"Over Phawn",lat:55.401,lng:-3.484,region:"Galloway & Southern Uplands"},
+  {id:"b038",name:"Rowchoish",lat:56.211,lng:-4.683,region:"Loch Lomond & Trossachs"},
+  {id:"b039",name:"Doune Byre",lat:56.282,lng:-4.713,region:"Loch Lomond & Trossachs"},
+  {id:"b040",name:"Ben Alder Cottage",lat:56.798,lng:-4.471,region:"Perthshire & Breadalbane"},
+  {id:"b041",name:"Culra (closed/derelict)",lat:56.875,lng:-4.487,region:"Perthshire & Breadalbane"},
+  {id:"b042",name:"Ruigh Aiteachain",lat:56.984,lng:-3.879,region:"Perthshire & Breadalbane"},
+  {id:"b043",name:"Carron",lat:56.182,lng:-5.427,region:"Argyll"},
+  {id:"b044",name:"Glenmoidart",lat:56.798,lng:-5.715,region:"Argyll"},
+  {id:"b045",name:"Doune Heritage Centre (Knoydart)",lat:57.053,lng:-5.755,region:"Glen Coe & Lochaber"},
+  {id:"b046",name:"Tarf Hotel (Feith Uaine)",lat:56.926,lng:-3.774,region:"Cairngorms"},
+  {id:"b047",name:"Shielin of Mark",lat:56.879,lng:-3.13,region:"Cairngorms"},
+  {id:"b048",name:"Charr",lat:56.984,lng:-2.703,region:"Eastern Highlands"},
+  {id:"b049",name:"Melgarve",lat:56.965,lng:-4.502,region:"Badenoch & Monadh Liath"},
+  {id:"b050",name:"Garbhail (Garva)",lat:56.985,lng:-4.498,region:"Badenoch & Monadh Liath"}
+];
+
+
 // ============ STATE ============
 var bagged = {};
 var activeTab = 'munro';
@@ -1288,7 +1350,7 @@ var target = null;
 var KEY = 'shb_v6';
 var pressTimer = null;
 var pressedId = null;
-var mapTypes = {munro: true, corbett: false, fiona: false};
+var mapTypes = {munro: true, corbett: false, fiona: false, bothy: false};
 
 // ============ STORAGE ============
 var _store = (function(){
@@ -1708,16 +1770,51 @@ function renderLeafletDots(){
     mk.addTo(leafletMap);
     leafletMarkers.push(mk);
   }
+  // === Render bothies as distinct terracotta hut icons ===
+  if(mapTypes.bothy){
+    for(var bi=0; bi<BOTHIES.length; bi++){
+      var b = BOTHIES[bi];
+      var bHtml = '<div class="bothy-pin" title="' + escHtml(b.name) + '">'
+        + '<svg viewBox="0 0 18 18" width="18" height="18" aria-hidden="true">'
+        + '<path d="M9 2 L2 7 L2.8 7 L2.8 15.5 L15.2 15.5 L15.2 7 L16 7 Z" fill="#B8543A" stroke="#3A1A10" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>'
+        + '<rect x="11.5" y="3.5" width="1.8" height="3" fill="#3A1A10"/>'
+        + '<rect x="7.7" y="10" width="2.6" height="5.5" fill="#3A1A10"/>'
+        + '<path d="M12.4 3 q0.4 -1.5 -0.4 -2 q1 0 1.2 1.2 q0.6 -0.4 0.4 1" fill="none" stroke="#8A8882" stroke-width="0.9" stroke-linecap="round"/>'
+        + '</svg></div>';
+      var bIcon = L.divIcon({
+        className: 'bothy-pin-wrap',
+        html: bHtml,
+        iconSize: [18, 18],
+        iconAnchor: [9, 16]
+      });
+      var bmk = L.marker([b.lat, b.lng], {icon: bIcon, riseOnHover: true, riseOffset: 250});
+      (function(bothy){
+        bmk.bindTooltip(bothy.name + ' — bothy', {direction:'top', sticky:false, opacity:0.95});
+        bmk.on('click', function(e){
+          if(e && e.originalEvent) { e.originalEvent.preventDefault(); e.originalEvent.stopPropagation(); }
+          openBothyModal(bothy.id);
+        });
+        bmk.on('mousedown touchend', function(e){
+          if(e && e.originalEvent && e.originalEvent.type === 'touchend'){
+            e.originalEvent.preventDefault();
+            openBothyModal(bothy.id);
+          }
+        });
+      })(b);
+      bmk.addTo(leafletMap);
+      leafletMarkers.push(bmk);
+    }
+  }
   var bgd=peaks.filter(function(p){return !!bagged[p.id];}).length;
   setText('map-count',bgd+' of '+peaks.length+' '+mapTypeLabel()+' bagged');
 }
 
 function dotStyle(type,bagged){
   // Two-tone: dark outer ring + bright inner fill, plus white halo and drop shadow
-  // size = total dot diameter (px), ring = outer ring colour, fill = inner colour
+  // Sized for Esri's calmer palette — smaller than the OpenTopo-era dots
   if(bagged){
     // Bagged: dark green ring with bright fill — semantic green stays
-    if(type==='munro')   return {ring:'#1A4D28', fill:'#A8D447', size:10};  // largest, brightest
+    if(type==='munro')   return {ring:'#1A4D28', fill:'#A8D447', size:10};
     if(type==='corbett') return {ring:'#235A33', fill:'#9BCB5C', size:9};
     return {ring:'#2E6B3D', fill:'#B5D87E', size:8};                       // fiona
   } else {
@@ -1795,7 +1892,37 @@ function updateRowInPlace(id){
   }
 }
 
+function openBothyModal(id){
+  var b=null;for(var i=0;i<BOTHIES.length;i++) if(BOTHIES[i].id===id){b=BOTHIES[i];break;}
+  if(!b)return;
+  target=b; // for the report-link affordance and the WH button branch
+  var tag=document.getElementById('m-tag');
+  tag.textContent='Bothy';
+  tag.className='modal-tag b';
+  document.getElementById('m-name').textContent=b.name;
+  document.getElementById('m-meta').innerHTML='MBA-maintained &middot; '+escHtml(b.region);
+  // Hide bag controls
+  document.getElementById('btn-bag').classList.add('hidden');
+  document.getElementById('btn-rm').classList.add('hidden');
+  var dateRow=document.getElementById('bag-date');
+  if(dateRow && dateRow.parentNode) dateRow.parentNode.style.display='none';
+  // Update the external-link button label (handler branches on target type)
+  var btnWh=document.getElementById('btn-wh');
+  if(btnWh) btnWh.innerHTML='View on Mountain Bothies Association &#8599;';
+  document.getElementById('modal').classList.add('open');
+  setTimeout(function(){
+    var m2=document.querySelector('#modal .modal');
+    if(m2) m2.scrollTop=0;
+  },10);
+}
+
 function openModal(id){
+  // Restore modal if it was previously used for a bothy
+  document.getElementById('btn-bag').classList.remove('hidden');
+  var dateRow=document.getElementById('bag-date');
+  if(dateRow && dateRow.parentNode) dateRow.parentNode.style.display='';
+  var btnWh=document.getElementById('btn-wh');
+  if(btnWh) btnWh.innerHTML='View route on WalkHighlands &#8599;';
   var m=null;for(var i=0;i<M.length;i++) if(M[i].id===id){m=M[i];break;}
   if(!m)return;
   target=m;
@@ -1939,8 +2066,18 @@ function attachEvents(){
     (function(btn){
       btn.addEventListener('click',function(){
         var type=btn.getAttribute('data-type');
+        // Bothies are an independent overlay — toggle freely
+        if(type==='bothy'){
+          mapTypes.bothy = !mapTypes.bothy;
+          btn.classList.toggle('on');
+          renderMap();
+          return;
+        }
+        // Peak types: must keep at least one peak type on
         var onCount=0;
-        for(var k in mapTypes) if(mapTypes[k]) onCount++;
+        if(mapTypes.munro) onCount++;
+        if(mapTypes.corbett) onCount++;
+        if(mapTypes.fiona) onCount++;
         if(mapTypes[type] && onCount===1) return;
         mapTypes[type]=!mapTypes[type];
         btn.classList.toggle('on');
@@ -2061,7 +2198,13 @@ function attachEvents(){
   document.getElementById('btn-bag').addEventListener('click',saveBag);
   document.getElementById('btn-rm').addEventListener('click',removeBag);
   document.getElementById('btn-wh').addEventListener('click',function(){
-    if(target) openWalkHighlands(target);
+    if(!target) return;
+    // Bothy targets get MBA URL; peaks get WalkHighlands route
+    if(target.id && target.id.charAt(0) === 'b'){
+      window.open('https://www.mountainbothies.org.uk/bothies/', '_blank', 'noopener');
+    } else {
+      openWalkHighlands(target);
+    }
   });
   document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeModal();hideMapTooltip();}});
 
