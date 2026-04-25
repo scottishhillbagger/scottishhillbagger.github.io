@@ -376,8 +376,8 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 
 /* Map pin: two-tone dot with white halo and drop shadow, sits above tiles like a physical pin */
 .map-pin-wrap{background:transparent !important;border:none !important;display:flex;align-items:center;justify-content:center}
-.map-pin{border-radius:50%;box-sizing:content-box;box-shadow:0 0 0 2px rgba(255,255,255,0.95), 0 1px 3px rgba(0,0,0,0.4);transition:transform .12s ease}
-.map-pin:hover{transform:scale(1.18)}
+.map-pin{border-radius:50%;box-sizing:content-box;box-shadow:0 0 0 1.5px rgba(255,255,255,0.95), 0 1px 2px rgba(0,0,0,0.35);transition:transform .12s ease}
+.map-pin:hover{transform:scale(1.2)}
 </style>
 </head>
 <body>
@@ -1675,7 +1675,7 @@ function renderLeafletDots(){
     var s=dotStyle(p.type,is);
     // divIcon: HTML div styled with dark ring + bright fill + white halo + shadow
     // Size includes outer halo so total visual ~size+4px; centre-anchored
-    var ringW = is ? 2 : 1.5;
+    var ringW = is ? 1.5 : 1;
     var iconSize = s.size + 4; // include halo padding
     var html = '<div class="map-pin" style="'
       + 'width:' + s.size + 'px;'
@@ -1717,14 +1717,14 @@ function dotStyle(type,bagged){
   // size = total dot diameter (px), ring = outer ring colour, fill = inner colour
   if(bagged){
     // Bagged: dark green ring with bright fill — semantic green stays
-    if(type==='munro')   return {ring:'#1A4D28', fill:'#A8D447', size:14};  // largest, brightest
-    if(type==='corbett') return {ring:'#235A33', fill:'#9BCB5C', size:12};
-    return {ring:'#2E6B3D', fill:'#B5D87E', size:10};                       // fiona
+    if(type==='munro')   return {ring:'#1A4D28', fill:'#A8D447', size:10};  // largest, brightest
+    if(type==='corbett') return {ring:'#235A33', fill:'#9BCB5C', size:9};
+    return {ring:'#2E6B3D', fill:'#B5D87E', size:8};                       // fiona
   } else {
     // Unbagged: charcoal ring with cream fill — reads as "empty pin"
-    if(type==='munro')   return {ring:'#3A3A38', fill:'#F5F3EE', size:12};
-    if(type==='corbett') return {ring:'#5A5A56', fill:'#FAF8F3', size:10};
-    return {ring:'#7A766E', fill:'#FFFFFF', size:9};                        // fiona
+    if(type==='munro')   return {ring:'#3A3A38', fill:'#F5F3EE', size:9};
+    if(type==='corbett') return {ring:'#5A5A56', fill:'#FAF8F3', size:8};
+    return {ring:'#7A766E', fill:'#FFFFFF', size:7};                        // fiona
   }
 }
 // Backward compat alias
