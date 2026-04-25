@@ -517,8 +517,10 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
     <div class="modal-tag" id="m-tag">Munro</div>
     <h2 class="modal-name" id="m-name"></h2>
     <div class="modal-meta" id="m-meta"></div>
+    <div id="bag-date-row">
     <label for="bag-date">Date Summited</label>
     <input type="date" id="bag-date">
+    </div>
     <div class="modal-acts">
       <button class="btn-p" id="btn-bag">&#10003; Save</button>
       <button class="btn-s hidden" id="btn-rm">Remove</button>
@@ -1895,20 +1897,19 @@ function updateRowInPlace(id){
 function openBothyModal(id){
   var b=null;for(var i=0;i<BOTHIES.length;i++) if(BOTHIES[i].id===id){b=BOTHIES[i];break;}
   if(!b)return;
-  target=b; // for the report-link affordance and the WH button branch
+  target=b;
   var tag=document.getElementById('m-tag');
   tag.textContent='Bothy';
   tag.className='modal-tag b';
   document.getElementById('m-name').textContent=b.name;
   document.getElementById('m-meta').innerHTML='MBA-maintained &middot; '+escHtml(b.region);
-  // Hide bag controls
+  // Hide bag controls and date row — not relevant for bothies
+  document.getElementById('bag-date-row').style.display='none';
   document.getElementById('btn-bag').classList.add('hidden');
   document.getElementById('btn-rm').classList.add('hidden');
-  var dateRow=document.getElementById('bag-date');
-  if(dateRow && dateRow.parentNode) dateRow.parentNode.style.display='none';
-  // Update the external-link button label (handler branches on target type)
+  // Update external link button — use innerHTML for arrow glyph
   var btnWh=document.getElementById('btn-wh');
-  if(btnWh) btnWh.innerHTML='View on Mountain Bothies Association &#8599;';
+  if(btnWh) btnWh.innerHTML='View Mountain Bothies Association &#8599;';
   document.getElementById('modal').classList.add('open');
   setTimeout(function(){
     var m2=document.querySelector('#modal .modal');
@@ -1917,10 +1918,9 @@ function openBothyModal(id){
 }
 
 function openModal(id){
-  // Restore modal if it was previously used for a bothy
+  // Restore state in case modal was last used for a bothy
+  document.getElementById('bag-date-row').style.display='';
   document.getElementById('btn-bag').classList.remove('hidden');
-  var dateRow=document.getElementById('bag-date');
-  if(dateRow && dateRow.parentNode) dateRow.parentNode.style.display='';
   var btnWh=document.getElementById('btn-wh');
   if(btnWh) btnWh.innerHTML='View route on WalkHighlands &#8599;';
   var m=null;for(var i=0;i<M.length;i++) if(M[i].id===id){m=M[i];break;}
@@ -2201,7 +2201,7 @@ function attachEvents(){
     if(!target) return;
     // Bothy targets get MBA URL; peaks get WalkHighlands route
     if(target.id && target.id.charAt(0) === 'b'){
-      window.open('https://www.mountainbothies.org.uk/bothies/', '_blank', 'noopener');
+      location.href='https://www.mountainbothies.org.uk/bothies/';
     } else {
       openWalkHighlands(target);
     }
