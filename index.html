@@ -74,6 +74,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 .tab{flex:1;min-width:72px;padding:1rem .5rem .85rem;background:none;border:none;border-bottom:1px solid transparent;font-family:var(--font-body);font-size:.82rem;font-weight:500;color:var(--ink3);cursor:pointer;white-space:nowrap;text-align:center;transition:color .15s,border-color .15s;letter-spacing:-.005em}
 .tab:hover{color:var(--ink2)}
 .tab.active{color:var(--ink);border-bottom-color:var(--accent);font-weight:600}
+.tab.b.active{border-bottom-color:var(--terra);color:var(--terra)}
 
 
 
@@ -166,6 +167,14 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 .modal-tag.corbett,.modal-tag.c{color:var(--accent-dark)}
 .modal-tag.fiona,.modal-tag.f{color:#7B4A8A}
 .modal-tag.bothy,.modal-tag.b{color:var(--terra)}
+/* Bothy tab */
+.bothy-disclaimer{margin:1rem 1rem .5rem;padding:.85rem 1rem;background:var(--surface);border:1px solid var(--rule);border-radius:10px;font-size:.78rem;color:var(--ink2);line-height:1.5}
+.bothy-disclaimer a{color:var(--accent);text-decoration:none}
+.bothy-disc-icon{font-size:1.1rem;margin-right:.3rem}
+.bothy-region-head{padding:.6rem 1rem .3rem;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3)}
+.bothy-row{display:flex;align-items:center;gap:.9rem;padding:.9rem 1rem;width:100%;text-align:left;background:transparent;border:none;border-bottom:1px solid var(--rule);font-family:inherit;cursor:pointer;transition:background .15s}
+.bothy-row:hover{background:var(--bg)}
+.bothy-row-icon{font-size:1.2rem;color:var(--terra);width:1.4rem;text-align:center;flex-shrink:0}
 .modal-name{font-family:var(--font-display);font-size:1.5rem;font-weight:600;line-height:1.15;margin-bottom:.4rem;color:var(--ink);letter-spacing:-.03em}
 .modal-meta{font-size:.8rem;color:var(--ink3);padding-bottom:.85rem;border-bottom:1px solid var(--rule2);margin-bottom:1rem;display:flex;gap:.6rem;align-items:center;flex-wrap:wrap;font-family:var(--font-mono);letter-spacing:-.01em}
 .modal label{display:block;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);margin-bottom:.3rem;font-weight:600}
@@ -424,7 +433,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
     <button class="tab m active" data-tab="munro">Munros</button>
     <button class="tab c" data-tab="corbett">Corbetts</button>
     <button class="tab f" data-tab="fiona">Fionas</button>
-    <button class="tab k" data-tab="bagged">Bagged</button>
+    <button class="tab b" data-tab="bothy">Bothies</button>
     <button class="tab" data-tab="map">Map</button>
   </div>
 </nav>
@@ -511,6 +520,16 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
     </div>
   </div>
 </div>
+
+<!-- BOTHY SECTION -->
+<div id="bothy-section" style="display:none">
+  <div class="bothy-disclaimer">
+    <span class="bothy-disc-icon">⌂</span>
+    Bothies shown are MBA-maintained shelters sourced from OpenStreetMap. <strong>This is not a complete list.</strong> Always check the <a href="https://www.mountainbothies.org.uk/bothies/" target="_blank" rel="noopener">MBA website</a> for the definitive list and current conditions.
+  </div>
+  <div id="bothy-list"></div>
+</div>
+
 <div class="modal-ov" id="modal">
   <div class="modal">
     <button class="modal-x" id="modal-x">&#10005;</button>
@@ -1385,7 +1404,6 @@ function getList(){
   if(activeTab==='munro') list=list.filter(function(m){return m.type==='munro';});
   else if(activeTab==='corbett') list=list.filter(function(m){return m.type==='corbett';});
   else if(activeTab==='fiona') list=list.filter(function(m){return m.type==='fiona';});
-  else if(activeTab==='bagged') list=list.filter(function(m){return !!bagged[m.id];});
   if(gradeFilter) list=list.filter(function(m){return m.grade===gradeFilter;});
   if(statusFilter==='unbagged') list=list.filter(function(m){return !bagged[m.id];});
   if(regionFilter) list=list.filter(function(m){return m.region===regionFilter;});
@@ -1833,16 +1851,96 @@ function dotColour(type,bagged){
 }
 
 // ============ RENDER MAIN ============
+function renderBothyList(){
+  var el=document.getElementById('bothy-list');
+  if(!el) return;
+  // Sort alphabetically
+  var sorted=BOTHIES.slice().sort(function(a,b){ return a.name.localeCompare(b.name); });
+  // Group by region
+  var regions={};
+  for(var i=0;i<sorted.length;i++){
+    var r=sorted[i].region;
+    if(!regions[r]) regions[r]=[];
+    regions[r].push(sorted[i]);
+  }
+  var regionOrder=Object.keys(regions).sort();
+  var html='';
+  for(var ri=0;ri<regionOrder.length;ri++){
+    var reg=regionOrder[ri];
+    html+='<div class="bothy-region-head">'+escHtml(reg)+'</div>';
+    var bs=regions[reg];
+    for(var bi=0;bi<bs.length;bi++){
+      var b=bs[bi];
+      html+='<button class="mtn-row bothy-row" data-bothy-id="'+escHtml(b.id)+'" tabindex="0">'
+        +'<div class="bothy-row-icon">⌂</div>'
+        +'<div class="row-main">'
+        +'<div class="row-name">'+escHtml(b.name)+'</div>'
+        +'<div class="row-sub"><span class="row-reg">'+escHtml(b.region)+'</span></div>'
+        +'</div>'
+        +'</button>';
+    }
+  }
+  el.innerHTML=html;
+  // Attach tap and long-press handlers
+  var rows=el.querySelectorAll('[data-bothy-id]');
+  for(var i=0;i<rows.length;i++){
+    (function(row){
+      var bid = row.getAttribute('data-bothy-id');
+      var pressTimer = null;
+
+      // Long-press (500ms) → open report modal
+      row.addEventListener('touchstart', function(e){
+        pressTimer = setTimeout(function(){
+          pressTimer = null;
+          openBothyModal(bid);
+        }, 500);
+      }, {passive: true});
+
+      row.addEventListener('touchend', function(e){
+        if(pressTimer){
+          // Short tap — go to MBA
+          clearTimeout(pressTimer);
+          pressTimer = null;
+          location.href = 'https://www.mountainbothies.org.uk/bothies/';
+        }
+      });
+
+      row.addEventListener('touchmove', function(){
+        clearTimeout(pressTimer);
+        pressTimer = null;
+      }, {passive: true});
+
+      // Desktop: click → MBA, contextmenu (right-click) → report modal
+      row.addEventListener('click', function(){
+        location.href = 'https://www.mountainbothies.org.uk/bothies/';
+      });
+
+      row.addEventListener('contextmenu', function(e){
+        e.preventDefault();
+        openBothyModal(bid);
+      });
+    })(rows[i]);
+  }
+}
+
 function renderAll(){
   var ls=document.getElementById('list-section');
   var ms=document.getElementById('map-section');
+  var bs=document.getElementById('bothy-section');
   if(activeTab==='map'){
     if(ls) ls.style.display='none';
     if(ms) ms.style.display='block';
+    if(bs) bs.style.display='none';
     renderMap();
+  } else if(activeTab==='bothy'){
+    if(ls) ls.style.display='none';
+    if(ms) ms.style.display='none';
+    if(bs) bs.style.display='';
+    renderBothyList();
   } else {
     if(ls) ls.style.display='';
     if(ms) ms.style.display='none';
+    if(bs) bs.style.display='none';
     renderList();
   }
 }
@@ -1910,6 +2008,8 @@ function openBothyModal(id){
   // Update external link button — use innerHTML for arrow glyph
   var btnWh=document.getElementById('btn-wh');
   if(btnWh) btnWh.innerHTML='View Mountain Bothies Association &#8599;';
+  var btnReport=document.getElementById('btn-report');
+  if(btnReport) btnReport.textContent='Wrong location? Tap to copy details';
   document.getElementById('modal').classList.add('open');
   setTimeout(function(){
     var m2=document.querySelector('#modal .modal');
@@ -1923,6 +2023,8 @@ function openModal(id){
   document.getElementById('btn-bag').classList.remove('hidden');
   var btnWh=document.getElementById('btn-wh');
   if(btnWh) btnWh.innerHTML='View route on WalkHighlands &#8599;';
+  var btnReport=document.getElementById('btn-report');
+  if(btnReport) btnReport.textContent='Link broken? Tap to copy details';
   var m=null;for(var i=0;i<M.length;i++) if(M[i].id===id){m=M[i];break;}
   if(!m)return;
   target=m;
@@ -2302,16 +2404,28 @@ function attachEvents(){
     btnReport.addEventListener('click', function(){
       var peak = target;
       if(!peak) return;
-      var type = peak.type === 'munro' ? 'munros' : peak.type === 'corbett' ? 'corbetts' : 'fionas';
-      var slug = WH_SLUG_OVERRIDES[peak.id] || whSlug(peak.name);
-      var url = 'https://www.walkhighlands.co.uk/' + type + '/' + slug;
-      var text = 'Broken WalkHighlands link:\n' +
-                 'Peak ID: ' + peak.id + '\n' +
-                 'Name: ' + peak.name + '\n' +
-                 'Height: ' + peak.height + 'm\n' +
-                 'Type: ' + peak.type + '\n' +
-                 'Region: ' + peak.region + '\n' +
-                 'Current URL: ' + url;
+      var text;
+      if(peak.id && peak.id.charAt(0) === 'b'){
+        // Bothy — report coordinates rather than a WH URL
+        text = 'Bothy location report:\n' +
+               'Bothy ID: ' + peak.id + '\n' +
+               'Name: ' + peak.name + '\n' +
+               'Lat: ' + peak.lat + '\n' +
+               'Lng: ' + peak.lng + '\n' +
+               'Region: ' + peak.region;
+      } else {
+        // Peak — report broken WalkHighlands link
+        var type = peak.type === 'munro' ? 'munros' : peak.type === 'corbett' ? 'corbetts' : 'fionas';
+        var slug = WH_SLUG_OVERRIDES[peak.id] || whSlug(peak.name);
+        var url = 'https://www.walkhighlands.co.uk/' + type + '/' + slug;
+        text = 'Broken WalkHighlands link:\n' +
+               'Peak ID: ' + peak.id + '\n' +
+               'Name: ' + peak.name + '\n' +
+               'Height: ' + peak.height + 'm\n' +
+               'Type: ' + peak.type + '\n' +
+               'Region: ' + peak.region + '\n' +
+               'Current URL: ' + url;
+      }
       try {
         if(navigator.clipboard && navigator.clipboard.writeText){
           navigator.clipboard.writeText(text).then(function(){
