@@ -1303,58 +1303,115 @@ var M = [
   {id:"f219",name:"Creag Dhubh Mhor",type:"fiona",height:611,region:"Kintail & Glen Affric",grade:"easy",lat:57.40905,lng:-5.36122}
 ];
 
-// ============ BOTHIES (MBA-maintained, coords from training data — may have errors) ============
+// ============ BOTHIES (MBA-maintained, sourced from Wikipedia/MBA as of March 2025) ============
 var BOTHIES = [
-  {id:"b001",name:"Shenavall",lat:57.788,lng:-5.235,region:"Ullapool & Assynt"},
-  {id:"b002",name:"Glenbeg",lat:57.726,lng:-5.302,region:"Ullapool & Assynt"},
-  {id:"b003",name:"Suileag",lat:58.158,lng:-5.107,region:"Ullapool & Assynt"},
-  {id:"b004",name:"Schoolhouse (Duag Bridge)",lat:57.967,lng:-4.683,region:"Ullapool & Assynt"},
-  {id:"b005",name:"The Schoolhouse",lat:58.396,lng:-4.819,region:"Sutherland"},
-  {id:"b006",name:"Strabeg",lat:58.476,lng:-4.766,region:"Sutherland"},
-  {id:"b007",name:"Glendhu",lat:58.265,lng:-4.91,region:"Sutherland"},
-  {id:"b008",name:"Glencoul",lat:58.232,lng:-4.953,region:"Sutherland"},
-  {id:"b009",name:"Kearvaig",lat:58.605,lng:-4.845,region:"Sutherland"},
-  {id:"b010",name:"Strathchailleach",lat:58.567,lng:-4.927,region:"Sutherland"},
-  {id:"b011",name:"Lookout (Rubha Hunish)",lat:57.704,lng:-6.343,region:"Skye"},
-  {id:"b012",name:"Camasunary",lat:57.184,lng:-6.122,region:"Skye"},
-  {id:"b013",name:"Maol-Bhuidhe",lat:57.328,lng:-5.421,region:"Kintail & Glen Affric"},
-  {id:"b014",name:"Camban",lat:57.19,lng:-5.22,region:"Kintail & Glen Affric"},
-  {id:"b015",name:"Glen Affric Youth Hostel (Alltbeithe)",lat:57.23,lng:-5.122,region:"Kintail & Glen Affric"},
-  {id:"b016",name:"Craig",lat:57.715,lng:-5.572,region:"Torridon"},
-  {id:"b017",name:"Easan Dorcha (Teahouse)",lat:57.554,lng:-5.345,region:"Torridon"},
-  {id:"b018",name:"Sourlies",lat:56.997,lng:-5.591,region:"Glen Coe & Lochaber"},
-  {id:"b019",name:"A' Chuil",lat:56.953,lng:-5.509,region:"Glen Coe & Lochaber"},
-  {id:"b020",name:"Kinbreack",lat:56.987,lng:-5.405,region:"Glen Coe & Lochaber"},
-  {id:"b021",name:"Oban (Loch Morar)",lat:56.937,lng:-5.583,region:"Glen Coe & Lochaber"},
-  {id:"b022",name:"Ryvoan",lat:57.193,lng:-3.661,region:"Cairngorms"},
-  {id:"b023",name:"Bob Scott's",lat:57.02,lng:-3.498,region:"Cairngorms"},
-  {id:"b024",name:"Hutchison Memorial Hut",lat:57.061,lng:-3.555,region:"Cairngorms"},
-  {id:"b025",name:"Corrour",lat:57.02,lng:-3.666,region:"Cairngorms"},
-  {id:"b026",name:"Faindouran Lodge",lat:57.137,lng:-3.57,region:"Cairngorms"},
-  {id:"b027",name:"Gelder Shiel Stable",lat:56.962,lng:-3.198,region:"Cairngorms"},
-  {id:"b028",name:"Staoineag",lat:56.812,lng:-4.736,region:"Glen Coe & Lochaber"},
-  {id:"b029",name:"Meanach",lat:56.823,lng:-4.834,region:"Glen Coe & Lochaber"},
-  {id:"b030",name:"Lairig Leacach",lat:56.829,lng:-4.851,region:"Glen Coe & Lochaber"},
-  {id:"b031",name:"Tom an Eite (Luibeilt)",lat:56.787,lng:-4.804,region:"Glen Coe & Lochaber"},
-  {id:"b032",name:"Resourie",lat:56.847,lng:-5.43,region:"Glen Coe & Lochaber"},
-  {id:"b033",name:"Essan",lat:56.879,lng:-5.481,region:"Glen Coe & Lochaber"},
-  {id:"b034",name:"Backhill of Bush",lat:55.106,lng:-4.392,region:"Galloway & Southern Uplands"},
-  {id:"b035",name:"Tunskeen",lat:55.184,lng:-4.484,region:"Galloway & Southern Uplands"},
-  {id:"b036",name:"White Laggan",lat:55.08,lng:-4.422,region:"Galloway & Southern Uplands"},
-  {id:"b037",name:"Over Phawn",lat:55.401,lng:-3.484,region:"Galloway & Southern Uplands"},
-  {id:"b038",name:"Rowchoish",lat:56.211,lng:-4.683,region:"Loch Lomond & Trossachs"},
-  {id:"b039",name:"Doune Byre",lat:56.282,lng:-4.713,region:"Loch Lomond & Trossachs"},
-  {id:"b040",name:"Ben Alder Cottage",lat:56.798,lng:-4.471,region:"Perthshire & Breadalbane"},
-  {id:"b041",name:"Culra (closed/derelict)",lat:56.875,lng:-4.487,region:"Perthshire & Breadalbane"},
-  {id:"b042",name:"Ruigh Aiteachain",lat:56.984,lng:-3.879,region:"Perthshire & Breadalbane"},
-  {id:"b043",name:"Carron",lat:56.182,lng:-5.427,region:"Argyll"},
-  {id:"b044",name:"Glenmoidart",lat:56.798,lng:-5.715,region:"Argyll"},
-  {id:"b045",name:"Doune Heritage Centre (Knoydart)",lat:57.053,lng:-5.755,region:"Glen Coe & Lochaber"},
-  {id:"b046",name:"Tarf Hotel (Feith Uaine)",lat:56.926,lng:-3.774,region:"Cairngorms"},
-  {id:"b047",name:"Shielin of Mark",lat:56.879,lng:-3.13,region:"Cairngorms"},
-  {id:"b048",name:"Charr",lat:56.984,lng:-2.703,region:"Eastern Highlands"},
-  {id:"b049",name:"Melgarve",lat:56.965,lng:-4.502,region:"Badenoch & Monadh Liath"},
-  {id:"b050",name:"Garbhail (Garva)",lat:56.985,lng:-4.498,region:"Badenoch & Monadh Liath"}
+  {id:"b001",name:"Achnanclach",lat:58.427,lng:-4.346,region:"Northern Highlands",district:"Sutherland",mbaUrl:"https://www.mountainbothies.org.uk/bothies/northern-highlands/achnanclach/"},
+  {id:"b002",name:"Coiremor, Magoo's Bothy",lat:57.857,lng:-4.858,region:"Northern Highlands",district:"Ross-shire",mbaUrl:"https://www.mountainbothies.org.uk/bothies/northern-highlands/coiremor-choire-mhoir/"},
+  {id:"b003",name:"Croft House, Lochstrathy",lat:58.412,lng:-4.067,region:"Northern Highlands",district:"Sutherland",mbaUrl:"https://www.mountainbothies.org.uk/bothies/northern-highlands/croft-house-lochstrathy/"},
+  {id:"b004",name:"Glencoul",lat:58.228,lng:-4.947,region:"Northern Highlands",district:"Sutherland",mbaUrl:"https://www.mountainbothies.org.uk/bothies/northern-highlands/glencoul/"},
+  {id:"b005",name:"Glendhu",lat:58.259,lng:-4.928,region:"Northern Highlands",district:"Sutherland",mbaUrl:"https://www.mountainbothies.org.uk/bothies/northern-highlands/glendhu/"},
+  {id:"b006",name:"Kearvaig",lat:58.609,lng:-4.941,region:"Northern Highlands",district:"Sutherland",mbaUrl:"https://www.mountainbothies.org.uk/bothies/northern-highlands/kearvaig/"},
+  {id:"b007",name:"Knockdamph",lat:57.915,lng:-4.895,region:"Northern Highlands",district:"Sutherland",mbaUrl:"https://www.mountainbothies.org.uk/bothies/northern-highlands/knockdamph/"},
+  {id:"b008",name:"Schoolhouse, Duag Bridge",lat:57.935,lng:-4.805,region:"Northern Highlands",district:"Sutherland",mbaUrl:"https://www.mountainbothies.org.uk/bothies/northern-highlands/schoolhouse-duag-bridge/"},
+  {id:"b009",name:"Shenavall",lat:57.777,lng:-5.254,region:"Northern Highlands",district:"Wester Ross",mbaUrl:"https://www.mountainbothies.org.uk/bothies/northern-highlands/shenavall/"},
+  {id:"b010",name:"Strabeg",lat:58.425,lng:-4.756,region:"Northern Highlands",district:"Sutherland",mbaUrl:"https://www.mountainbothies.org.uk/bothies/northern-highlands/strabeg/"},
+  {id:"b011",name:"Strathan",lat:58.503,lng:-5.01,region:"Northern Highlands",district:"Sutherland",mbaUrl:"https://www.mountainbothies.org.uk/bothies/northern-highlands/strathan/"},
+  {id:"b012",name:"Strathchailleach",lat:58.545,lng:-5.01,region:"Northern Highlands",district:"Sutherland",mbaUrl:"https://www.mountainbothies.org.uk/bothies/northern-highlands/strathchailleach/"},
+  {id:"b013",name:"Suileag",lat:58.14,lng:-5.145,region:"Northern Highlands",district:"Sutherland",mbaUrl:"https://www.mountainbothies.org.uk/bothies/northern-highlands/suileag/"},
+  {id:"b014",name:"Bearnais",lat:57.434,lng:-5.298,region:"North West Highlands and Islands",district:"Wester Ross",mbaUrl:"https://www.mountainbothies.org.uk/bothies/north-west-highlands-islands/bearnais/"},
+  {id:"b015",name:"Camasunary",lat:57.19,lng:-6.112,region:"North West Highlands and Islands",district:"Skye",mbaUrl:"https://www.mountainbothies.org.uk/bothies/north-west-highlands-islands/camasunary/"},
+  {id:"b016",name:"Camban",lat:57.214,lng:-5.225,region:"North West Highlands and Islands",district:"Kintail",mbaUrl:"https://www.mountainbothies.org.uk/bothies/north-west-highlands-islands/camban/"},
+  {id:"b017",name:"Coire Fionnaraich",lat:57.476,lng:-5.421,region:"North West Highlands and Islands",district:"Wester Ross",mbaUrl:"https://www.mountainbothies.org.uk/bothies/north-west-highlands-islands/coire-fionnaraich/"},
+  {id:"b018",name:"Craig",lat:57.61,lng:-5.727,region:"North West Highlands and Islands",district:"Wester Ross",mbaUrl:"https://www.mountainbothies.org.uk/bothies/north-west-highlands-islands/craig/"},
+  {id:"b019",name:"Easan Dorcha (The Teahouse)",lat:57.519,lng:-5.323,region:"North West Highlands and Islands",district:"Wester Ross",mbaUrl:"https://www.mountainbothies.org.uk/bothies/north-west-highlands-islands/easan-dorcha-the-teahouse/"},
+  {id:"b020",name:"Lookout (Rubha Hunish)",lat:57.701,lng:-6.344,region:"North West Highlands and Islands",district:"Skye",mbaUrl:"https://www.mountainbothies.org.uk/bothies/north-west-highlands-islands/lookout-rubha-hunish/"},
+  {id:"b021",name:"Maol Bhuidhe",lat:57.372,lng:-5.241,region:"North West Highlands and Islands",district:"Wester Ross",mbaUrl:"https://www.mountainbothies.org.uk/bothies/north-west-highlands-islands/maol-bhuidhe/"},
+  {id:"b022",name:"Ollisdal",lat:57.36,lng:-6.636,region:"North West Highlands and Islands",district:"Skye",mbaUrl:"https://www.mountainbothies.org.uk/bothies/north-west-highlands-islands/ollisdal/"},
+  {id:"b023",name:"Taigh Thormoid Dhuibh (Raasay)",lat:57.499,lng:-5.988,region:"North West Highlands and Islands",district:"Skye",mbaUrl:"https://www.mountainbothies.org.uk/bothies/north-west-highlands-islands/taigh-thormoid-dhuibh-raasay/"},
+  {id:"b024",name:"Uags",lat:57.349,lng:-5.787,region:"North West Highlands and Islands",district:"Applecross",mbaUrl:"https://www.mountainbothies.org.uk/bothies/north-west-highlands-islands/uags/"},
+  {id:"b025",name:"Uisinis",lat:57.28,lng:-7.231,region:"North West Highlands and Islands",district:"Outer Hebrides",mbaUrl:"https://www.mountainbothies.org.uk/bothies/north-west-highlands-islands/uisinis/"},
+  {id:"b026",name:"A' Chuil",lat:56.977,lng:-5.384,region:"Western Highlands",district:"Lochaber",mbaUrl:"https://www.mountainbothies.org.uk/bothies/western-highlands-islands/achuil/"},
+  {id:"b027",name:"Dibidil",lat:56.952,lng:-6.289,region:"Western Highlands",district:"R\u00f9m",mbaUrl:"https://www.mountainbothies.org.uk/bothies/western-highlands-islands/dibidil/"},
+  {id:"b028",name:"Gleann Dubh-lighe",lat:56.884,lng:-5.375,region:"Western Highlands",district:"Lochaber",mbaUrl:"https://www.mountainbothies.org.uk/bothies/western-highlands-islands/gleann-dubh-lighe/"},
+  {id:"b029",name:"Glenpean",lat:56.958,lng:-5.396,region:"Western Highlands",district:"Lochaber",mbaUrl:"https://www.mountainbothies.org.uk/bothies/western-highlands-islands/glenpean/"},
+  {id:"b030",name:"Guirdil",lat:57.025,lng:-6.418,region:"Western Highlands",district:"R\u00f9m",mbaUrl:"https://www.mountainbothies.org.uk/bothies/western-highlands-islands/guirdil/"},
+  {id:"b031",name:"Invermallie",lat:56.953,lng:-5.067,region:"Western Highlands",district:"Lochaber",mbaUrl:"https://www.mountainbothies.org.uk/bothies/western-highlands-islands/invermallie/"},
+  {id:"b032",name:"Kinbreack",lat:57.013,lng:-5.292,region:"Western Highlands",district:"Lochaber",mbaUrl:"https://www.mountainbothies.org.uk/bothies/western-highlands-islands/kinbreack/"},
+  {id:"b033",name:"Oban",lat:56.952,lng:-5.515,region:"Western Highlands",district:"Lochaber",mbaUrl:"https://www.mountainbothies.org.uk/bothies/western-highlands-islands/oban/"},
+  {id:"b034",name:"Sourlies",lat:56.997,lng:-5.513,region:"Western Highlands",district:"Lochaber",mbaUrl:"https://www.mountainbothies.org.uk/bothies/western-highlands-islands/sourlies/"},
+  {id:"b035",name:"Suardalan",lat:57.197,lng:-5.506,region:"Western Highlands",district:"Lochaber",mbaUrl:"https://www.mountainbothies.org.uk/bothies/western-highlands-islands/suardalan/"},
+  {id:"b036",name:"Abyssinia",lat:56.266,lng:-4.818,region:"Southwest Highlands and Islands",district:"Loch Lomond",mbaUrl:"https://www.mountainbothies.org.uk/bothies/southwest-highlands-islands/abyssinia/"},
+  {id:"b037",name:"Cadderlie",lat:56.486,lng:-5.175,region:"Southwest Highlands and Islands",district:"North Argyll",mbaUrl:"https://www.mountainbothies.org.uk/bothies/southwest-highlands-islands/cadderlie/"},
+  {id:"b038",name:"Carron",lat:56.145,lng:-5.311,region:"Southwest Highlands and Islands",district:"Knapdale",mbaUrl:"https://www.mountainbothies.org.uk/bothies/southwest-highlands-islands/carron/"},
+  {id:"b039",name:"Cruib",lat:55.977,lng:-5.902,region:"Southwest Highlands and Islands",district:"Jura",mbaUrl:"https://www.mountainbothies.org.uk/bothies/southwest-highlands-islands/cruib/"},
+  {id:"b040",name:"Doune Byre",lat:56.293,lng:-4.696,region:"Southwest Highlands and Islands",district:"Loch Lomond",mbaUrl:"https://www.mountainbothies.org.uk/bothies/southwest-highlands-islands/doune-byre/"},
+  {id:"b041",name:"Druimnashallog",lat:56.294,lng:-5.396,region:"Southwest Highlands and Islands",district:"Lorne",mbaUrl:"https://www.mountainbothies.org.uk/bothies/southwest-highlands-islands/druimnashallag/"},
+  {id:"b042",name:"Essan",lat:56.875,lng:-5.584,region:"Southwest Highlands and Islands",district:"Wester Ross",mbaUrl:"https://www.mountainbothies.org.uk/bothies/southwest-highlands-islands/essan/"},
+  {id:"b043",name:"Glengarrisdale",lat:56.107,lng:-5.79,region:"Southwest Highlands and Islands",district:"Jura",mbaUrl:"https://www.mountainbothies.org.uk/bothies/southwest-highlands-islands/glengarrisdale/"},
+  {id:"b044",name:"Leacraithnaich",lat:56.562,lng:-5.676,region:"Southwest Highlands and Islands",district:"Ardgour",mbaUrl:"https://www.mountainbothies.org.uk/bothies/southwest-highlands-islands/leacraithnaich/"},
+  {id:"b045",name:"Mark Cottage",lat:56.116,lng:-4.849,region:"Southwest Highlands and Islands",district:"Loch Lomond",mbaUrl:"https://www.mountainbothies.org.uk/bothies/southwest-highlands-islands/mark-cottage/"},
+  {id:"b046",name:"Resourie",lat:56.781,lng:-5.502,region:"Southwest Highlands and Islands",district:"Ardgour",mbaUrl:"https://www.mountainbothies.org.uk/bothies/southwest-highlands-islands/resourie/"},
+  {id:"b047",name:"Rowchoish",lat:56.202,lng:-4.684,region:"Southwest Highlands and Islands",district:"Loch Lomond",mbaUrl:"https://www.mountainbothies.org.uk/bothies/southwest-highlands-islands/rowchoish/"},
+  {id:"b048",name:"Taigh Seumas a' Ghlinne, Glen Duror",lat:56.635,lng:-5.227,region:"Southwest Highlands and Islands",district:"Lochaber",mbaUrl:"https://www.mountainbothies.org.uk/bothies/southwest-highlands-islands/taigh-seumas-a-ghlinne-glenduror/"},
+  {id:"b049",name:"Tomsleibhe",lat:56.466,lng:-5.869,region:"Southwest Highlands and Islands",district:"Mull",mbaUrl:"https://www.mountainbothies.org.uk/bothies/southwest-highlands-islands/tomsleibhe/"},
+  {id:"b050",name:"Achadh-nan-darach",lat:57.112,lng:-4.787,region:"Central Highlands",district:"Fort Augustus",mbaUrl:"https://www.mountainbothies.org.uk/bothies/central-highlands/achadh-nan-darach/"},
+  {id:"b051",name:"Ben Alder Cottage",lat:56.779,lng:-4.459,region:"Central Highlands",district:"Rannoch",mbaUrl:"https://www.mountainbothies.org.uk/bothies/central-highlands/ben-alder-cottage/"},
+  {id:"b052",name:"Blackburn of Corrieyairack",lat:57.088,lng:-4.672,region:"Central Highlands",district:"Monadhliath",mbaUrl:"https://www.mountainbothies.org.uk/bothies/central-highlands/blackburn-of-corrieyairack/"},
+  {id:"b053",name:"Culra",lat:56.854,lng:-4.424,region:"Central Highlands",district:"Rannoch",mbaUrl:"https://www.mountainbothies.org.uk/bothies/central-highlands/culra/",closed:true},
+  {id:"b054",name:"Glenbuck",lat:57.057,lng:-4.746,region:"Central Highlands",district:"Monadhliath",mbaUrl:"https://www.mountainbothies.org.uk/bothies/central-highlands/glenbuck/"},
+  {id:"b055",name:"Gorton",lat:56.597,lng:-4.649,region:"Central Highlands",district:"Rannoch",mbaUrl:"https://www.mountainbothies.org.uk/bothies/central-highlands/gorton/"},
+  {id:"b056",name:"Lairig Leacach",lat:56.823,lng:-4.816,region:"Central Highlands",district:"Lochaber",mbaUrl:"https://www.mountainbothies.org.uk/bothies/central-highlands/lairig-leacach/"},
+  {id:"b057",name:"Loch Chiarain",lat:56.731,lng:-4.798,region:"Central Highlands",district:"Lochaber",mbaUrl:"https://www.mountainbothies.org.uk/bothies/central-highlands/loch-chiarain/"},
+  {id:"b058",name:"Luib Chonnal",lat:57.006,lng:-4.646,region:"Central Highlands",district:"Monadhliath",mbaUrl:"https://www.mountainbothies.org.uk/bothies/central-highlands/luib-chonnal/"},
+  {id:"b059",name:"Meanach",lat:56.775,lng:-4.839,region:"Central Highlands",district:"Lochaber",mbaUrl:"https://www.mountainbothies.org.uk/bothies/central-highlands/meanach/"},
+  {id:"b060",name:"Staoineag",lat:56.771,lng:-4.791,region:"Central Highlands",district:"Lochaber",mbaUrl:"https://www.mountainbothies.org.uk/bothies/central-highlands/staoineag/"},
+  {id:"b061",name:"Allt Scheicheachan",lat:56.84,lng:-3.912,region:"Eastern Highlands",district:"Badenoch",mbaUrl:"https://www.mountainbothies.org.uk/bothies/eastern-highlands/allt-scheicheachan/"},
+  {id:"b062",name:"Callater Stable",lat:56.944,lng:-3.353,region:"Eastern Highlands",district:"Mounth",mbaUrl:"https://www.mountainbothies.org.uk/bothies/eastern-highlands/callater-stable/"},
+  {id:"b063",name:"Charr",lat:56.938,lng:-2.633,region:"Eastern Highlands",district:"Mounth",mbaUrl:"https://www.mountainbothies.org.uk/bothies/eastern-highlands/charr/"},
+  {id:"b064",name:"Corrour",lat:57.042,lng:-3.681,region:"Eastern Highlands",district:"Cairngorms",mbaUrl:"https://www.mountainbothies.org.uk/bothies/eastern-highlands/corrour/"},
+  {id:"b065",name:"Faindouran",lat:57.137,lng:-3.519,region:"Eastern Highlands",district:"Cairngorms",mbaUrl:"https://www.mountainbothies.org.uk/bothies/eastern-highlands/faindouran/"},
+  {id:"b066",name:"Fords of Avon Refuge Hut",lat:57.11,lng:-3.584,region:"Eastern Highlands",district:"Cairngorms",mbaUrl:"https://www.mountainbothies.org.uk/bothies/eastern-highlands/fords-of-avon-refuge/",closed:true},
+  {id:"b067",name:"Garbh Choire Refuge",lat:57.067,lng:-3.718,region:"Eastern Highlands",district:"Cairngorms",mbaUrl:"https://www.mountainbothies.org.uk/bothies/eastern-highlands/garbh-choire-refuge/",closed:true},
+  {id:"b068",name:"Gelder Shiel Stable",lat:56.995,lng:-3.224,region:"Eastern Highlands",district:"Mounth",mbaUrl:"https://www.mountainbothies.org.uk/bothies/eastern-highlands/gelder-shiel-stable/"},
+  {id:"b069",name:"Glas Allt Shiel Bothy",lat:56.927,lng:-3.191,region:"Eastern Highlands",district:"Loch Muick",mbaUrl:"https://www.mountainbothies.org.uk/bothies/eastern-highlands/glas-allt-shiel/"},
+  {id:"b070",name:"Hutchison Memorial Hut",lat:57.078,lng:-3.613,region:"Eastern Highlands",district:"Cairngorms",mbaUrl:"https://www.mountainbothies.org.uk/bothies/eastern-highlands/hutchison-memorial-hut/"},
+  {id:"b071",name:"Ruigh Aiteachain",lat:57.012,lng:-3.9,region:"Eastern Highlands",district:"Cairngorms",mbaUrl:"https://www.mountainbothies.org.uk/bothies/eastern-highlands/ruigh-aiteachain/"},
+  {id:"b072",name:"Ruighe Ealasaid (Red House)",lat:56.962,lng:-3.643,region:"Eastern Highlands",district:"Cairngorms",mbaUrl:"https://www.mountainbothies.org.uk/bothies/eastern-highlands/ruighe-ealasaid-red-house/"},
+  {id:"b073",name:"Ryvoan",lat:57.184,lng:-3.646,region:"Eastern Highlands",district:"Cairngorms",mbaUrl:"https://www.mountainbothies.org.uk/bothies/eastern-highlands/ryvoan/"},
+  {id:"b074",name:"Shielin of Mark",lat:56.93,lng:-3.092,region:"Eastern Highlands",district:"Mounth",mbaUrl:"https://www.mountainbothies.org.uk/bothies/eastern-highlands/shielin-of-mark/"},
+  {id:"b075",name:"Tarf Hotel (Feith Uaine)",lat:56.889,lng:-3.763,region:"Eastern Highlands",district:"Badenoch",mbaUrl:"https://www.mountainbothies.org.uk/bothies/eastern-highlands/tarf-hotel-feith-uaine/"},
+  {id:"b076",name:"Brattleburn",lat:55.346,lng:-3.554,region:"Southern Scotland",district:"Lowther Hills",mbaUrl:"https://www.mountainbothies.org.uk/bothies/southern-scotland/brattleburn/"},
+  {id:"b077",name:"Burleywhag",lat:55.284,lng:-3.622,region:"Southern Scotland",district:"Lowther Hills",mbaUrl:"https://www.mountainbothies.org.uk/bothies/southern-scotland/burleywhag/"},
+  {id:"b078",name:"Clennoch",lat:55.276,lng:-4.201,region:"Southern Scotland",district:"Galloway",mbaUrl:"https://www.mountainbothies.org.uk/bothies/southern-scotland/clennoch/"},
+  {id:"b079",name:"Dryfehead",lat:55.286,lng:-3.308,region:"Southern Scotland",district:"Dumfriesshire",mbaUrl:"https://www.mountainbothies.org.uk/bothies/southern-scotland/dryfehead/"},
+  {id:"b080",name:"Gameshope",lat:55.453,lng:-3.371,region:"Southern Scotland",district:"Dumfriesshire",mbaUrl:"https://www.mountainbothies.org.uk/bothies/southern-scotland/gameshope/"},
+  {id:"b081",name:"Greensykes",lat:55.29,lng:-3.084,region:"Southern Scotland",district:"Dumfriesshire",mbaUrl:"https://www.mountainbothies.org.uk/bothies/southern-scotland/greensykes/"},
+  {id:"b082",name:"Kettleton Byre",lat:55.301,lng:-3.716,region:"Southern Scotland",district:"Lowther Hills",mbaUrl:"https://www.mountainbothies.org.uk/bothies/southern-scotland/kettleton-byre/"},
+  {id:"b083",name:"Leysburnfoot (Will's Bothy)",lat:55.272,lng:-2.732,region:"Southern Scotland",district:"Liddesdale",mbaUrl:"https://www.mountainbothies.org.uk/bothies/southern-scotland/leysburnfoot-wills-bothy/"},
+  {id:"b084",name:"Over Phawhope",lat:55.361,lng:-3.293,region:"Southern Scotland",district:"Dumfriesshire",mbaUrl:"https://www.mountainbothies.org.uk/bothies/southern-scotland/over-phawhope/"},
+  {id:"b085",name:"Tunskeen",lat:55.184,lng:-4.476,region:"Southern Scotland",district:"Galloway",mbaUrl:"https://www.mountainbothies.org.uk/bothies/southern-scotland/tunskeen/"},
+  {id:"b086",name:"White Laggan",lat:55.068,lng:-4.403,region:"Southern Scotland",district:"Galloway",mbaUrl:"https://www.mountainbothies.org.uk/bothies/southern-scotland/white-laggan/"},
+  {id:"b088",name:"Cross Fell (Greg's Hut)",lat:54.713,lng:-2.481,region:"Northern England and Borders",district:"North Pennines",mbaUrl:"https://www.mountainbothies.org.uk/bothies/northern-england-borders/cross-fell-gregs-hut/"},
+  {id:"b089",name:"Dubs Hut",lat:54.51,lng:-3.223,region:"Northern England and Borders",district:"Lake District",mbaUrl:"https://www.mountainbothies.org.uk/bothies/northern-england-borders/dubs-hut/"},
+  {id:"b090",name:"Flittingford",lat:55.192,lng:-2.387,region:"Northern England and Borders",district:"Kielder",mbaUrl:"https://www.mountainbothies.org.uk/bothies/northern-england-borders/flittingford/"},
+  {id:"b091",name:"Great Lingy Hut",lat:54.694,lng:-3.068,region:"Northern England and Borders",district:"Lake District",mbaUrl:"https://www.mountainbothies.org.uk/bothies/northern-england-borders/great-lingy-hut/"},
+  {id:"b092",name:"Green",lat:55.101,lng:-2.409,region:"Northern England and Borders",district:"Kielder",mbaUrl:"https://www.mountainbothies.org.uk/bothies/northern-england-borders/green/",closed:true},
+  {id:"b093",name:"Haughtongreen",lat:55.035,lng:-2.333,region:"Northern England and Borders",district:"Kielder",mbaUrl:"https://www.mountainbothies.org.uk/bothies/northern-england-borders/haughtongreen/"},
+  {id:"b094",name:"Kershopehead",lat:55.169,lng:-2.717,region:"Northern England and Borders",district:"North Pennines",mbaUrl:"https://www.mountainbothies.org.uk/bothies/northern-england-borders/kershopehead/"},
+  {id:"b095",name:"Mosedale Cottage",lat:54.478,lng:-2.781,region:"Northern England and Borders",district:"Lake District",mbaUrl:"https://www.mountainbothies.org.uk/bothies/northern-england-borders/mosedale-cottage/"},
+  {id:"b096",name:"Roughside",lat:55.143,lng:-2.401,region:"Northern England and Borders",district:"Kielder",mbaUrl:"https://www.mountainbothies.org.uk/bothies/northern-england-borders/roughside/"},
+  {id:"b097",name:"Spithope",lat:55.344,lng:-2.367,region:"Northern England and Borders",district:"Cheviots",mbaUrl:"https://www.mountainbothies.org.uk/bothies/northern-england-borders/spithope/"},
+  {id:"b098",name:"Wainhope",lat:55.226,lng:-2.519,region:"Northern England and Borders",district:"Kielder",mbaUrl:"https://www.mountainbothies.org.uk/bothies/northern-england-borders/wainhope/"},
+  {id:"b099",name:"Warnscale Head",lat:54.508,lng:-3.228,region:"Northern England and Borders",district:"Lake District",mbaUrl:"https://www.mountainbothies.org.uk/bothies/northern-england-borders/warnscale-head/"},
+  {id:"b100",name:"Arenig Fawr",lat:52.929,lng:-3.712,region:"Wales",district:"Snowdonia",mbaUrl:"https://www.mountainbothies.org.uk/bothies/wales/arenig-fawr/"},
+  {id:"b101",name:"Cae Amos",lat:52.986,lng:-4.211,region:"Wales",district:"Snowdonia",mbaUrl:"https://www.mountainbothies.org.uk/bothies/wales/cae-amos/"},
+  {id:"b102",name:"Dulyn",lat:53.179,lng:-3.939,region:"Wales",district:"Snowdonia",mbaUrl:"https://www.mountainbothies.org.uk/bothies/wales/dulyn/"},
+  {id:"b103",name:"Grwyne Fawr",lat:51.974,lng:-3.129,region:"Wales",district:"Black Mountains",mbaUrl:"https://www.mountainbothies.org.uk/bothies/wales/grwyne-fawr/"},
+  {id:"b104",name:"Lluest Cwm Bach",lat:52.321,lng:-3.614,region:"Wales",district:"Cambrian Mountains",mbaUrl:"https://www.mountainbothies.org.uk/bothies/wales/lluest-cwm-bach/"},
+  {id:"b105",name:"Moel Prysgau",lat:52.235,lng:-3.75,region:"Wales",district:"Cambrian Mountains",mbaUrl:"https://www.mountainbothies.org.uk/bothies/wales/moel-prysgau/"},
+  {id:"b106",name:"Nant Rhys",lat:52.399,lng:-3.711,region:"Wales",district:"Cambrian Mountains",mbaUrl:"https://www.mountainbothies.org.uk/bothies/wales/nant-rhys/"},
+  {id:"b107",name:"Nant Syddion",lat:52.396,lng:-3.804,region:"Wales",district:"Cambrian Mountains",mbaUrl:"https://www.mountainbothies.org.uk/bothies/wales/nant-syddion/"},
+  {id:"b108",name:"Penrhos Isaf",lat:52.798,lng:-3.874,region:"Wales",district:"Snowdonia",mbaUrl:"https://www.mountainbothies.org.uk/bothies/wales/penrhos-isaf/"}
 ];
 
 
@@ -1794,7 +1851,8 @@ function renderLeafletDots(){
   if(mapTypes.bothy){
     for(var bi=0; bi<BOTHIES.length; bi++){
       var b = BOTHIES[bi];
-      var bHtml = '<div class="bothy-pin" title="' + escHtml(b.name) + '">'
+      var bOpacity = b.closed ? '0.45' : '1';
+      var bHtml = '<div class="bothy-pin" title="' + escHtml(b.name) + (b.closed ? ' (closed)' : '') + '" style="opacity:' + bOpacity + '">'
         + '<svg viewBox="0 0 18 18" width="18" height="18" aria-hidden="true">'
         + '<path d="M9 2 L2 7 L2.8 7 L2.8 15.5 L15.2 15.5 L15.2 7 L16 7 Z" fill="#B8543A" stroke="#3A1A10" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>'
         + '<rect x="11.5" y="3.5" width="1.8" height="3" fill="#3A1A10"/>'
@@ -1875,7 +1933,7 @@ function renderBothyList(){
         +'<div class="bothy-row-icon">⌂</div>'
         +'<div class="row-main">'
         +'<div class="row-name">'+escHtml(b.name)+'</div>'
-        +'<div class="row-sub"><span class="row-reg">'+escHtml(b.region)+'</span></div>'
+        +'<div class="row-sub"><span class="row-reg">'+escHtml(b.district)+(b.closed?' <span style="color:var(--terra);font-style:italic">(closed)</span>':'')+'</span></div>'
         +'</div>'
         +'</button>';
     }
@@ -1886,6 +1944,9 @@ function renderBothyList(){
   for(var i=0;i<rows.length;i++){
     (function(row){
       var bid = row.getAttribute('data-bothy-id');
+      var bothy = null;
+      for(var j=0;j<BOTHIES.length;j++) if(BOTHIES[j].id===bid){bothy=BOTHIES[j];break;}
+      var url = (bothy && bothy.mbaUrl) || 'https://www.mountainbothies.org.uk/bothies/';
       var pressTimer = null;
 
       // Long-press (500ms) → open report modal
@@ -1898,10 +1959,10 @@ function renderBothyList(){
 
       row.addEventListener('touchend', function(e){
         if(pressTimer){
-          // Short tap — go to MBA
+          // Short tap — go to MBA page for this bothy
           clearTimeout(pressTimer);
           pressTimer = null;
-          location.href = 'https://www.mountainbothies.org.uk/bothies/';
+          location.href = url;
         }
       });
 
@@ -1912,7 +1973,7 @@ function renderBothyList(){
 
       // Desktop: click → MBA, contextmenu (right-click) → report modal
       row.addEventListener('click', function(){
-        location.href = 'https://www.mountainbothies.org.uk/bothies/';
+        location.href = url;
       });
 
       row.addEventListener('contextmenu', function(e){
@@ -2303,7 +2364,7 @@ function attachEvents(){
     if(!target) return;
     // Bothy targets get MBA URL; peaks get WalkHighlands route
     if(target.id && target.id.charAt(0) === 'b'){
-      location.href='https://www.mountainbothies.org.uk/bothies/';
+      location.href=(target.mbaUrl||'https://www.mountainbothies.org.uk/bothies/');
     } else {
       openWalkHighlands(target);
     }
