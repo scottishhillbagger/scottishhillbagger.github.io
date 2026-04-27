@@ -52,14 +52,16 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 .mast-tag,.mast-sub{display:none}
 .scores{background:var(--bg);border-bottom:1px solid var(--rule);padding:0 0 1rem}
 .scores-in{max-width:680px;margin:0 auto;display:flex}
-.sc{flex:1;text-align:center;padding:.4rem .5rem;position:relative}
+.sc{flex:1;text-align:center;padding:.4rem .3rem;position:relative;min-width:0}
 .sc::after{content:'';position:absolute;right:0;top:20%;bottom:20%;width:1px;background:var(--rule)}
 .sc:last-child::after{display:none}
-.sc-n{font-family:var(--font-display);font-size:1.55rem;font-weight:600;line-height:1;color:var(--ink);font-variant-numeric:tabular-nums;letter-spacing:-.03em}
+.sc-n{font-family:var(--font-display);font-size:1.4rem;font-weight:600;line-height:1;color:var(--ink);font-variant-numeric:tabular-nums;letter-spacing:-.03em}
 
-.sc-l{font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);margin-top:.4rem;line-height:1.2;font-weight:500}
-.sc-bar{height:2px;background:var(--rule);margin:.55rem .5rem 0;border-radius:1px;overflow:hidden}
+.sc-l{font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-top:.4rem;line-height:1.2;font-weight:500}
+.sc-bar{height:2px;background:var(--rule);margin:.55rem .35rem 0;border-radius:1px;overflow:hidden}
 .sc-bar-f{height:100%;background:var(--accent);width:0;transition:width .6s cubic-bezier(.4,0,.2,1)}
+.sc.b .sc-bar-f{background:var(--terra)}
+.sc.b .sc-n{color:var(--terra)}
 
 .prog-wrap{background:var(--accent);padding:.3rem 1.25rem .4rem}
 .prog-in{max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:.2rem}
@@ -168,13 +170,11 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 .modal-tag.fiona,.modal-tag.f{color:#7B4A8A}
 .modal-tag.bothy,.modal-tag.b{color:var(--terra)}
 /* Bothy tab */
-.bothy-disclaimer{margin:1rem 1rem .5rem;padding:.85rem 1rem;background:var(--surface);border:1px solid var(--rule);border-radius:10px;font-size:.78rem;color:var(--ink2);line-height:1.5}
+.bothy-disclaimer{margin:1.5rem 1rem 1rem;padding:.85rem 1rem;background:transparent;border-top:1px solid var(--rule);border-radius:0;font-size:.72rem;color:var(--ink3);line-height:1.5}
 .bothy-disclaimer a{color:var(--accent);text-decoration:none}
-.bothy-disc-icon{font-size:1.1rem;margin-right:.3rem}
+.bothy-disc-icon{font-size:1rem;margin-right:.3rem;opacity:.6}
 .bothy-region-head{padding:.6rem 1rem .3rem;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3)}
-.bothy-row{display:flex;align-items:center;gap:.9rem;padding:.9rem 1rem;width:100%;text-align:left;background:transparent;border:none;border-bottom:1px solid var(--rule);font-family:inherit;cursor:pointer;transition:background .15s}
-.bothy-row:hover{background:var(--bg)}
-.bothy-row-icon{font-size:1.2rem;color:var(--terra);width:1.4rem;text-align:center;flex-shrink:0}
+.bothy-closed{opacity:.6}
 .modal-name{font-family:var(--font-display);font-size:1.5rem;font-weight:600;line-height:1.15;margin-bottom:.4rem;color:var(--ink);letter-spacing:-.03em}
 .modal-meta{font-size:.8rem;color:var(--ink3);padding-bottom:.85rem;border-bottom:1px solid var(--rule2);margin-bottom:1rem;display:flex;gap:.6rem;align-items:center;flex-wrap:wrap;font-family:var(--font-mono);letter-spacing:-.01em}
 .modal label{display:block;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);margin-bottom:.3rem;font-weight:600}
@@ -289,6 +289,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
   .ds-item.total .ds-n{color:var(--accent);font-size:1.35rem;font-weight:700}
   .ds-bar{height:2px;background:var(--rule);border-radius:1px;overflow:hidden}
   .ds-bar-f{height:100%;background:var(--accent);width:0;transition:width .6s cubic-bezier(.4,0,.2,1)}
+#ds-bv-bar{background:var(--terra)}
   /* Main content area */
   .toolbar, .chips, .list-view, .map-view, .info-bar, #list-section, #map-section{
     grid-column:2;
@@ -390,7 +391,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 .map-pin:hover{transform:scale(1.2)}
 /* Bothy pin: little house silhouette in terracotta */
 .bothy-pin-wrap{background:transparent !important;border:none !important}
-.bothy-pin{width:18px;height:18px;filter:drop-shadow(0 1px 2px rgba(0,0,0,0.45));transition:transform .12s ease}
+.bothy-pin{width:14px;height:14px;filter:drop-shadow(0 1px 2px rgba(0,0,0,0.45));transition:transform .12s ease}
 .bothy-pin:hover{transform:scale(1.25)}
 .bothy-pin svg{display:block}
 </style>
@@ -406,6 +407,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
       <div class="sc m"><div class="sc-n" id="mb">0</div><div class="sc-l">Munros</div><div class="sc-bar"><div class="sc-bar-f" id="mb-bar"></div></div></div>
       <div class="sc c"><div class="sc-n" id="cb">0</div><div class="sc-l">Corbetts</div><div class="sc-bar"><div class="sc-bar-f" id="cb-bar"></div></div></div>
       <div class="sc f"><div class="sc-n" id="fb">0</div><div class="sc-l">Fionas</div><div class="sc-bar"><div class="sc-bar-f" id="fb-bar"></div></div></div>
+      <div class="sc b"><div class="sc-n" id="bv">0</div><div class="sc-l">Bothies</div><div class="sc-bar"><div class="sc-bar-f" id="bv-bar"></div></div></div>
       <div class="sc t"><div class="sc-n" id="tb">0</div><div class="sc-l">Total</div><div class="sc-bar"><div class="sc-bar-f" id="tb-bar"></div></div></div>
     </div>
   </div>
@@ -424,6 +426,10 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
       <div class="ds-item">
         <div class="ds-row"><span class="ds-lbl">Fionas</span><span class="ds-n" id="ds-fb">0 / 219</span></div>
         <div class="ds-bar"><div class="ds-bar-f" id="ds-fb-bar"></div></div>
+      </div>
+      <div class="ds-item">
+        <div class="ds-row"><span class="ds-lbl">Bothies</span><span class="ds-n" id="ds-bv">0 / 86</span></div>
+        <div class="ds-bar"><div class="ds-bar-f" id="ds-bv-bar"></div></div>
       </div>
       <div class="ds-item total">
         <div class="ds-row"><span class="ds-lbl">Total bagged</span><span class="ds-n" id="ds-tb">0</span></div>
@@ -523,11 +529,31 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 
 <!-- BOTHY SECTION -->
 <div id="bothy-section" style="display:none">
-  <div class="bothy-disclaimer">
-    <span class="bothy-disc-icon">⌂</span>
-    Bothies shown are MBA-maintained shelters sourced from OpenStreetMap. <strong>This is not a complete list.</strong> Always check the <a href="https://www.mountainbothies.org.uk/bothies/" target="_blank" rel="noopener">MBA website</a> for the definitive list and current conditions.
+  <div class="toolbar">
+    <div class="srch-wrap">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input class="srch" id="bothy-srch" type="text" placeholder="Search bothies or regions…">
+    </div>
+    <div class="tb-chips">
+      <button class="chip" id="bothy-visited-chip">Visited only</button>
+      <button class="chip region-chip" id="bothy-region-chip" aria-expanded="false">
+        <span id="bothy-region-label">Region</span>
+        <svg width="10" height="6" viewBox="0 0 10 6" style="margin-left:.3rem;opacity:.6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <div class="region-panel" id="bothy-region-panel" hidden>
+      <button class="region-item active" data-bothy-region="" type="button">All regions</button>
+      <div id="bothy-region-list"></div>
+    </div>
   </div>
-  <div id="bothy-list"></div>
+  <div class="content">
+    <div class="res-info" id="bothy-res-info"></div>
+    <div id="bothy-list"></div>
+    <div class="bothy-disclaimer">
+      <span class="bothy-disc-icon">⌂</span>
+      Bothies listed are MBA-maintained shelters sourced from the <a href="https://en.wikipedia.org/wiki/List_of_Mountain_Bothies_Association_bothies" target="_blank" rel="noopener">Wikipedia MBA bothy list</a> (current as of March 2025). Always check the <a href="https://www.mountainbothies.org.uk/bothies/" target="_blank" rel="noopener">MBA website</a> for the definitive list and current conditions.
+    </div>
+  </div>
 </div>
 
 <div class="modal-ov" id="modal">
@@ -539,6 +565,10 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
     <div id="bag-date-row">
     <label for="bag-date">Date Summited</label>
     <input type="date" id="bag-date">
+    </div>
+    <div id="bothy-visit-row" style="display:none">
+    <label for="bothy-visit-date">Date Visited</label>
+    <input type="date" id="bothy-visit-date">
     </div>
     <div class="modal-acts">
       <button class="btn-p" id="btn-bag">&#10003; Save</button>
@@ -567,13 +597,17 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 // Swallow cross-origin script errors (from leaflet CDN on file://)
 window.addEventListener('error', function(e){
   // Swallow Leaflet/CDN/tile errors — these are expected when offline or in restricted environments.
-  // Cross-origin scripts surface as "Script error." with empty filename due to browser security,
-  // so treat any error with no filename or a tile-related filename as a map failure.
+  // Cross-origin scripts surface as "Script error." with empty filename due to browser security.
   if(!e || !e.filename || e.filename.indexOf('leaflet') >= 0 || e.filename.indexOf('unpkg') >= 0 || e.filename.indexOf('arcgisonline') >= 0){
     mapOnline = false;
     if(e && e.preventDefault) e.preventDefault();
+    if(e && e.stopImmediatePropagation) e.stopImmediatePropagation();
     return true;
   }
+}, true);
+window.addEventListener('unhandledrejection', function(e){
+  // Swallow tile-load promise rejections from Leaflet
+  if(e && e.preventDefault) e.preventDefault();
 }, true);
 
 // ============ DATA ============
@@ -1396,6 +1430,11 @@ var BOTHIES = [
 
 // ============ STATE ============
 var bagged = {};
+var bothyVisited = {};
+var BOTHY_KEY = 'shb_bothy_v1';
+var bothySearch = '';
+var bothyRegionFilter = '';
+var bothyVisitedFilter = false;
 var activeTab = 'munro';
 var regionFilter = '';
 var sortBy = 'name';
@@ -1417,6 +1456,8 @@ var _store = (function(){
 
 function save(){ if(!_store)return false; try{_store.setItem(KEY,JSON.stringify(bagged));return true;}catch(e){return false;} }
 function load(){ if(!_store)return; try{var r=_store.getItem(KEY);if(r)bagged=JSON.parse(r);}catch(e){bagged={};} }
+function saveBothy(){ if(!_store)return false; try{_store.setItem(BOTHY_KEY,JSON.stringify(bothyVisited));return true;}catch(e){return false;} }
+function loadBothy(){ if(!_store)return; try{var r=_store.getItem(BOTHY_KEY);if(r)bothyVisited=JSON.parse(r);}catch(e){bothyVisited={};} }
 
 function updateStorageStatus(){
   var el=document.getElementById('storage-status');
@@ -1469,12 +1510,14 @@ function updateStats(){
   var mb=munros.filter(function(m){return !!bagged[m.id];}).length;
   var cb=corbetts.filter(function(m){return !!bagged[m.id];}).length;
   var fb=fionas.filter(function(m){return !!bagged[m.id];}).length;
+  var bv=Object.keys(bothyVisited).length;
   var tot=mb+cb+fb;
-  setText('mb',mb);setText('cb',cb);setText('fb',fb);
+  setText('mb',mb);setText('cb',cb);setText('fb',fb);setText('bv',bv);
   setText('tb',tot);setText('ta',M.length);
   setText('ds-mb',mb+' / '+munros.length);
   setText('ds-cb',cb+' / '+corbetts.length);
   setText('ds-fb',fb+' / '+fionas.length);
+  setText('ds-bv',bv+' / '+BOTHIES.length);
   setText('ds-tb',tot);
   // Progress bars
   function setBar(id,n,total){
@@ -1484,10 +1527,12 @@ function updateStats(){
   setBar('mb-bar',mb,munros.length);
   setBar('cb-bar',cb,corbetts.length);
   setBar('fb-bar',fb,fionas.length);
+  setBar('bv-bar',bv,BOTHIES.length);
   setBar('tb-bar',tot,M.length);
   setBar('ds-mb-bar',mb,munros.length);
   setBar('ds-cb-bar',cb,corbetts.length);
   setBar('ds-fb-bar',fb,fionas.length);
+  setBar('ds-bv-bar',bv,BOTHIES.length);
   var mp=munros.length?Math.round(mb/munros.length*100):0;
   var cp=corbetts.length?Math.round(cb/corbetts.length*100):0;
   var fp=fionas.length?Math.round(fb/fionas.length*100):0;
@@ -1635,8 +1680,7 @@ function renderList(){
   var list=getList();
   var lv=document.getElementById('list-view');
   var info=document.getElementById('res-info');
-  var total=activeTab==='bagged'?M.filter(function(m){return !!bagged[m.id];}).length
-    :M.filter(function(m){return m.type===activeTab;}).length;
+  var total=M.filter(function(m){return m.type===activeTab;}).length;
   var label=activeTab==='munro'?'Munros':activeTab==='corbett'?'Corbetts':activeTab==='fiona'?'Fionas':'summits';
   info.textContent=list.length+' of '+total+' '+label;
   if(!list.length){lv.innerHTML='<div class="empty">No peaks match your filters.</div>';return;}
@@ -1831,18 +1875,22 @@ function renderLeafletDots(){
     for(var bi=0; bi<BOTHIES.length; bi++){
       var b = BOTHIES[bi];
       var bOpacity = b.closed ? '0.45' : '1';
-      var bHtml = '<div class="bothy-pin" title="' + escHtml(b.name) + (b.closed ? ' (closed)' : '') + '" style="opacity:' + bOpacity + '">'
-        + '<svg viewBox="0 0 18 18" width="18" height="18" aria-hidden="true">'
-        + '<path d="M9 2 L2 7 L2.8 7 L2.8 15.5 L15.2 15.5 L15.2 7 L16 7 Z" fill="#B8543A" stroke="#3A1A10" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>'
-        + '<rect x="11.5" y="3.5" width="1.8" height="3" fill="#3A1A10"/>'
-        + '<rect x="7.7" y="10" width="2.6" height="5.5" fill="#3A1A10"/>'
-        + '<path d="M12.4 3 q0.4 -1.5 -0.4 -2 q1 0 1.2 1.2 q0.6 -0.4 0.4 1" fill="none" stroke="#8A8882" stroke-width="0.9" stroke-linecap="round"/>'
+      var isVis = !!bothyVisited[b.id];
+      // Visited: filled terracotta with dark brown ring
+      // Not visited: outline cottage with white fill — reads as "empty pin"
+      var bFill = isVis ? '#B8543A' : '#FFFFFF';
+      var bDoorChim = isVis ? '#3A1A10' : '#B8543A';
+      var bHtml = '<div class="bothy-pin" title="' + escHtml(b.name) + (b.closed ? ' (closed)' : '') + (isVis ? ' ✓' : '') + '" style="opacity:' + bOpacity + '">'
+        + '<svg viewBox="0 0 18 18" width="14" height="14" aria-hidden="true">'
+        + '<path d="M9 2 L2 7 L2.8 7 L2.8 15.5 L15.2 15.5 L15.2 7 L16 7 Z" fill="' + bFill + '" stroke="#3A1A10" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"/>'
+        + '<rect x="11.5" y="3.5" width="1.8" height="3" fill="' + bDoorChim + '"/>'
+        + '<rect x="7.7" y="10" width="2.6" height="5.5" fill="' + bDoorChim + '"/>'
         + '</svg></div>';
       var bIcon = L.divIcon({
         className: 'bothy-pin-wrap',
         html: bHtml,
-        iconSize: [18, 18],
-        iconAnchor: [9, 16]
+        iconSize: [14, 14],
+        iconAnchor: [7, 12]
       });
       var bmk = L.marker([b.lat, b.lng], {icon: bIcon, riseOnHover: true, riseOffset: 250});
       (function(bothy){
@@ -1868,15 +1916,13 @@ function renderLeafletDots(){
 
 function dotStyle(type,bagged){
   // Two-tone: dark outer ring + bright inner fill, plus white halo and drop shadow
-  // Sized for Esri's calmer palette — smaller than the OpenTopo-era dots
+  // Munros are the headline (largest); Fionas smallest (most numerous)
   if(bagged){
-    // Bagged: dark green ring with bright fill — semantic green stays
-    if(type==='munro')   return {ring:'#1A4D28', fill:'#A8D447', size:10};
+    if(type==='munro')   return {ring:'#1A4D28', fill:'#A8D447', size:11};
     if(type==='corbett') return {ring:'#235A33', fill:'#9BCB5C', size:9};
-    return {ring:'#2E6B3D', fill:'#B5D87E', size:8};                       // fiona
+    return {ring:'#2E6B3D', fill:'#B5D87E', size:7};                        // fiona
   } else {
-    // Unbagged: charcoal ring with cream fill — reads as "empty pin"
-    if(type==='munro')   return {ring:'#3A3A38', fill:'#F5F3EE', size:9};
+    if(type==='munro')   return {ring:'#3A3A38', fill:'#F5F3EE', size:10};
     if(type==='corbett') return {ring:'#5A5A56', fill:'#FAF8F3', size:8};
     return {ring:'#7A766E', fill:'#FFFFFF', size:7};                        // fiona
   }
@@ -1889,80 +1935,61 @@ function dotColour(type,bagged){
 
 // ============ RENDER MAIN ============
 function renderBothyList(){
+  var visCount = Object.keys(bothyVisited).length;
   var el=document.getElementById('bothy-list');
   if(!el) return;
-  // Sort alphabetically
-  var sorted=BOTHIES.slice().sort(function(a,b){ return a.name.localeCompare(b.name); });
-  // Group by region
-  var regions={};
-  for(var i=0;i<sorted.length;i++){
-    var r=sorted[i].region;
-    if(!regions[r]) regions[r]=[];
-    regions[r].push(sorted[i]);
+
+  // Apply filters
+  var filtered = BOTHIES.slice();
+  if(bothyVisitedFilter) filtered = filtered.filter(function(b){ return !!bothyVisited[b.id]; });
+  if(bothyRegionFilter) filtered = filtered.filter(function(b){ return b.region === bothyRegionFilter; });
+  if(bothySearch){
+    var q = bothySearch.toLowerCase();
+    filtered = filtered.filter(function(b){
+      return b.name.toLowerCase().indexOf(q) >= 0 || b.region.toLowerCase().indexOf(q) >= 0 || b.district.toLowerCase().indexOf(q) >= 0;
+    });
   }
-  var regionOrder=Object.keys(regions).sort();
-  var html='';
-  for(var ri=0;ri<regionOrder.length;ri++){
-    var reg=regionOrder[ri];
-    html+='<div class="bothy-region-head">'+escHtml(reg)+'</div>';
-    var bs=regions[reg];
-    for(var bi=0;bi<bs.length;bi++){
-      var b=bs[bi];
-      html+='<button class="mtn-row bothy-row" data-bothy-id="'+escHtml(b.id)+'" tabindex="0">'
-        +'<div class="bothy-row-icon">⌂</div>'
-        +'<div class="row-main">'
-        +'<div class="row-name">'+escHtml(b.name)+'</div>'
-        +'<div class="row-sub"><span class="row-reg">'+escHtml(b.district)+(b.closed?' <span style="color:var(--terra);font-style:italic">(closed)</span>':'')+'</span></div>'
-        +'</div>'
-        +'</button>';
+
+  // Sort alphabetically
+  filtered.sort(function(a,b){ return a.name.localeCompare(b.name); });
+
+  // Update result count — show visited / total
+  var ri = document.getElementById('bothy-res-info');
+  if(ri){
+    var visText = visCount > 0 ? ' &middot; <span style="color:var(--accent);font-weight:600">'+visCount+' visited</span>' : '';
+    if(filtered.length === BOTHIES.length){
+      ri.innerHTML = BOTHIES.length + ' bothies' + visText;
+    } else {
+      ri.innerHTML = filtered.length + ' of ' + BOTHIES.length + ' bothies' + visText;
     }
   }
-  el.innerHTML=html;
-  // Attach tap and long-press handlers
-  var rows=el.querySelectorAll('[data-bothy-id]');
-  for(var i=0;i<rows.length;i++){
-    (function(row){
-      var bid = row.getAttribute('data-bothy-id');
-      var bothy = null;
-      for(var j=0;j<BOTHIES.length;j++) if(BOTHIES[j].id===bid){bothy=BOTHIES[j];break;}
-      var url = (bothy && bothy.mbaUrl) || 'https://www.mountainbothies.org.uk/bothies/';
-      var pressTimer = null;
 
-      // Long-press (500ms) → open report modal
-      row.addEventListener('touchstart', function(e){
-        pressTimer = setTimeout(function(){
-          pressTimer = null;
-          openBothyModal(bid);
-        }, 500);
-      }, {passive: true});
-
-      row.addEventListener('touchend', function(e){
-        if(pressTimer){
-          // Short tap — go to MBA page for this bothy
-          clearTimeout(pressTimer);
-          pressTimer = null;
-          location.href = url;
-        }
-      });
-
-      row.addEventListener('touchmove', function(){
-        clearTimeout(pressTimer);
-        pressTimer = null;
-      }, {passive: true});
-
-      // Desktop: click → MBA, contextmenu (right-click) → report modal
-      row.addEventListener('click', function(){
-        location.href = url;
-      });
-
-      row.addEventListener('contextmenu', function(e){
-        e.preventDefault();
-        openBothyModal(bid);
-      });
-    })(rows[i]);
+  if(filtered.length === 0){
+    el.innerHTML = '<div style="padding:2rem 1rem;text-align:center;color:var(--ink3)">No bothies match your search.</div>';
+    return;
   }
-}
 
+  // Render flat list — region grouping is handled by the region filter chip
+  var html='';
+  for(var bi=0;bi<filtered.length;bi++){
+    var b=filtered[bi];
+    var isVis=!!bothyVisited[b.id];
+    var dateStr = isVis ? '<span class="row-date">'+escHtml(bothyVisited[b.id])+'</span>' : '';
+    var cls = 'mtn-row'+(isVis?' bagged':'')+(b.closed?' bothy-closed':'');
+    html+='<div class="'+cls+'" data-bothy-id="'+escHtml(b.id)+'" tabindex="-1">'
+      +'<div class="chk" data-toggle="1" role="button" aria-label="Toggle visited"><svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9 10,3"/></svg></div>'
+      +'<div class="row-main" data-link="1">'
+      +'<div class="row-name">'+escHtml(b.name)+'</div>'
+      +'<div class="row-sub"><span class="row-reg">'+escHtml(b.region)+(b.closed?' <span style="color:var(--terra);font-style:italic">(closed)</span>':'')+'</span>'+dateStr+'</div>'
+      +'</div>'
+      +'</div>';
+  }
+  el.innerHTML=html;
+
+  }
+
+
+  
 function renderAll(){
   var ls=document.getElementById('list-section');
   var ms=document.getElementById('map-section');
@@ -1986,6 +2013,21 @@ function renderAll(){
 }
 
 // ============ INTERACTION ============
+function toggleBothyVisited(id){
+  var was = !!bothyVisited[id];
+  if(was){
+    delete bothyVisited[id];
+    showToast('Visit removed');
+  } else {
+    bothyVisited[id] = new Date().toISOString().slice(0,10);
+    showToast('Marked visited');
+  }
+  saveBothy();
+  updateStats();
+  renderBothyList();
+  if(activeTab === 'map') renderMap();
+}
+
 function toggleBagged(id){
   var wasBagged = !!bagged[id];
   if(wasBagged){delete bagged[id];showToast('Removed from bag');}
@@ -1994,10 +2036,8 @@ function toggleBagged(id){
   updateStats();
   // Update just this row's visual state — no full re-render, preserves scroll position
   updateRowInPlace(id);
-  // If we're on the Bagged tab or the sort/filter would move the row,
-  // we need a full re-render. Otherwise skip it.
-  if(activeTab === 'bagged' || sortBy === 'date'
-     || statusFilter === 'bagged' || statusFilter === 'unbagged'){
+  // If sort/filter would move the row, do a full re-render. Otherwise skip.
+  if(sortBy === 'date' || statusFilter === 'bagged' || statusFilter === 'unbagged'){
     renderList();
   } else {
     // Also re-render the map if we're on it (dots need to change colour)
@@ -2040,14 +2080,29 @@ function openBothyModal(id){
   tag.textContent='Bothy';
   tag.className='modal-tag b';
   document.getElementById('m-name').textContent=b.name;
-  document.getElementById('m-meta').innerHTML='MBA-maintained &middot; '+escHtml(b.region);
-  // Hide bag controls and date row — not relevant for bothies
+  document.getElementById('m-meta').innerHTML='MBA-maintained &middot; '+escHtml(b.region)+(b.closed?' &middot; <em style="color:var(--terra)">Currently closed</em>':'');
+  // Hide peak-only controls
   document.getElementById('bag-date-row').style.display='none';
-  document.getElementById('btn-bag').classList.add('hidden');
-  document.getElementById('btn-rm').classList.add('hidden');
-  // Update external link button — use innerHTML for arrow glyph
+  // Show/hide bothy visit controls
+  var bvRow=document.getElementById('bothy-visit-row');
+  var btnBag=document.getElementById('btn-bag');
+  var btnRm=document.getElementById('btn-rm');
+  var isVisited=!!bothyVisited[b.id];
+  if(bvRow) bvRow.style.display='';
+  var bvDate=document.getElementById('bothy-visit-date');
+  if(bvDate) bvDate.value=bothyVisited[b.id]||new Date().toISOString().slice(0,10);
+  if(isVisited){
+    btnBag.textContent='✓ Update date';
+    btnBag.classList.remove('hidden');
+    btnRm.classList.remove('hidden');
+  } else {
+    btnBag.textContent='✓ Mark visited';
+    btnBag.classList.remove('hidden');
+    btnRm.classList.add('hidden');
+  }
+  // Update external link button
   var btnWh=document.getElementById('btn-wh');
-  if(btnWh) btnWh.innerHTML='View Mountain Bothies Association &#8599;';
+  if(btnWh) btnWh.innerHTML='View on Mountain Bothies Association &#8599;';
   var btnReport=document.getElementById('btn-report');
   if(btnReport) btnReport.textContent='Wrong location? Tap to copy details';
   document.getElementById('modal').classList.add('open');
@@ -2061,6 +2116,8 @@ function openModal(id){
   // Restore state in case modal was last used for a bothy
   document.getElementById('bag-date-row').style.display='';
   document.getElementById('btn-bag').classList.remove('hidden');
+  var bvRow=document.getElementById('bothy-visit-row');
+  if(bvRow) bvRow.style.display='none';
   var btnWh=document.getElementById('btn-wh');
   if(btnWh) btnWh.innerHTML='View route on WalkHighlands &#8599;';
   var btnReport=document.getElementById('btn-report');
@@ -2087,8 +2144,34 @@ function openModal(id){
 
 function closeModal(){document.getElementById('modal').classList.remove('open');target=null;}
 
+function saveBothyVisit(){
+  if(!target) return;
+  var id = target.id;
+  var name = target.name;
+  bothyVisited[id] = document.getElementById('bothy-visit-date').value || new Date().toISOString().slice(0,10);
+  saveBothy();
+  updateStats();
+  closeModal();
+  renderBothyList();
+  if(activeTab==='map') renderMap();
+  showToast('Visited: ' + name);
+}
+
+function removeBothyVisit(){
+  if(!target) return;
+  var name = target.name;
+  delete bothyVisited[target.id];
+  saveBothy();
+  updateStats();
+  closeModal();
+  renderBothyList();
+  if(activeTab==='map') renderMap();
+  showToast(name + ' removed');
+}
+
 function saveBag(){
   if(!target)return;
+  if(target.id && target.id.charAt(0)==='b'){ saveBothyVisit(); return; }
   var id = target.id;
   var name = target.name;
   bagged[id]=document.getElementById('bag-date').value||new Date().toISOString().slice(0,10);
@@ -2096,7 +2179,7 @@ function saveBag(){
   closeModal();
   updateStats();
   updateRowInPlace(id);
-  if(activeTab === 'bagged' || sortBy === 'date' || statusFilter){
+  if(sortBy === 'date' || statusFilter){
     renderList();
   } else {
     if(activeTab === 'map') renderMap();
@@ -2106,6 +2189,7 @@ function saveBag(){
 
 function removeBag(){
   if(!target)return;
+  if(target.id && target.id.charAt(0)==='b'){ removeBothyVisit(); return; }
   var id = target.id;
   var n = target.name;
   delete bagged[id];
@@ -2113,7 +2197,7 @@ function removeBag(){
   closeModal();
   updateStats();
   updateRowInPlace(id);
-  if(activeTab === 'bagged' || sortBy === 'date' || statusFilter){
+  if(sortBy === 'date' || statusFilter){
     renderList();
   } else {
     if(activeTab === 'map') renderMap();
@@ -2128,7 +2212,7 @@ function showToast(msg){
 
 // ============ BACKUP ============
 function exportData(){
-  var payload={app:'scottish-hill-bagger',version:6,exported:new Date().toISOString(),bagged:bagged};
+  var payload={app:'scottish-hill-bagger',version:6,exported:new Date().toISOString(),bagged:bagged,bothyVisited:bothyVisited};
   var str=JSON.stringify(payload,null,2);
   var blob=new Blob([str],{type:'application/json'});
   var url=URL.createObjectURL(blob);
@@ -2137,7 +2221,7 @@ function exportData(){
   a.download='hill-bagger-backup-'+new Date().toISOString().slice(0,10)+'.json';
   document.body.appendChild(a);a.click();document.body.removeChild(a);
   setTimeout(function(){URL.revokeObjectURL(url);},1000);
-  showToast('Exported '+Object.keys(bagged).length+' bagged peaks');
+  showToast('Exported '+Object.keys(bagged).length+' peaks, '+Object.keys(bothyVisited).length+' bothies');
 }
 
 function importData(file){
@@ -2147,9 +2231,13 @@ function importData(file){
       var data=JSON.parse(e.target.result);
       if(data.bagged&&typeof data.bagged==='object'){
         var count=Object.keys(data.bagged).length;
-        if(confirm('Import '+count+' bagged peaks? This will replace your current data.')){
-          bagged=data.bagged;save();updateStats();renderAll();
-          showToast('Imported '+count+' peaks');
+        var bcount=data.bothyVisited?Object.keys(data.bothyVisited).length:0;
+        var msg='Import '+count+' bagged peaks'+(bcount?' and '+bcount+' bothy visits':'')+' ? This will replace your current data.';
+        if(confirm(msg)){
+          bagged=data.bagged;save();
+          if(data.bothyVisited){bothyVisited=data.bothyVisited;saveBothy();}
+          updateStats();renderAll();
+          showToast('Imported '+count+' peaks'+(bcount?', '+bcount+' bothies':''));
         }
       } else alert('Invalid backup file format.');
     }catch(err){alert('Could not read backup: '+err.message);}
@@ -2193,6 +2281,20 @@ function attachEvents(){
           var rl=document.getElementById('region-chip-label');
           if(rc) rc.classList.remove('has-selection');
           if(rl) rl.textContent='Region';
+        }
+        // Clear bothy filters when leaving bothy tab
+        if(activeTab !== 'bothy'){
+          bothySearch=''; bothyRegionFilter=''; bothyVisitedFilter=false;
+          var bs=document.getElementById('bothy-srch');
+          var bvc=document.getElementById('bothy-visited-chip');
+          var brc=document.getElementById('bothy-region-chip');
+          var brl=document.getElementById('bothy-region-label');
+          if(bs) bs.value='';
+          if(bvc) bvc.classList.remove('on');
+          if(brc){ brc.classList.remove('has-selection'); brc.setAttribute('aria-expanded','false'); }
+          if(brl) brl.textContent='Region';
+          var brp=document.getElementById('bothy-region-panel');
+          if(brp) brp.setAttribute('hidden','');
         }
         renderAll();
       });
@@ -2335,6 +2437,91 @@ function attachEvents(){
     }
   });
 
+  // ---- Bothy list: same touch model as peaks ----
+  var blv = document.getElementById('bothy-list');
+  if(blv){
+    var bTouchStartX=0, bTouchStartY=0, bPressStartTarget=null, bPressedId=null, bPressTimer=null;
+    function findBothyRow(node){ while(node && node !== blv){ if(node.getAttribute && node.getAttribute('data-bothy-id')) return node; node = node.parentNode; } return null; }
+    function bothyZone(node, attr){ while(node && node !== blv){ if(node.getAttribute && node.getAttribute(attr)) return node; node = node.parentNode; } return null; }
+
+    blv.addEventListener('touchstart', function(e){
+      var row = findBothyRow(e.target);
+      if(!row) return;
+      var t = e.touches[0];
+      bTouchStartX = t.clientX;
+      bTouchStartY = t.clientY;
+      bPressedId = row.getAttribute('data-bothy-id');
+      bPressStartTarget = e.target;
+      row.classList.add('pressing');
+      bPressTimer = setTimeout(function(){
+        bPressTimer = null;
+        if(bPressedId){
+          row.classList.remove('pressing');
+          openBothyModal(bPressedId);
+          bPressedId = null;
+          bPressStartTarget = null;
+        }
+      }, 600);
+    }, {passive: true});
+
+    blv.addEventListener('touchmove', function(e){
+      if(bPressTimer){
+        var t = e.touches[0];
+        var dx = Math.abs(t.clientX - bTouchStartX);
+        var dy = Math.abs(t.clientY - bTouchStartY);
+        if(dx > 10 || dy > 10){
+          clearTimeout(bPressTimer); bPressTimer = null; bPressedId = null; bPressStartTarget = null;
+        }
+      }
+      var rows = blv.querySelectorAll('.pressing');
+      for(var i = 0; i < rows.length; i++) rows[i].classList.remove('pressing');
+    }, {passive: true});
+
+    blv.addEventListener('touchend', function(e){
+      var row = findBothyRow(e.target);
+      if(row) row.classList.remove('pressing');
+      if(bPressTimer){
+        clearTimeout(bPressTimer);
+        bPressTimer = null;
+        if(bPressedId && bPressStartTarget){
+          var id = bPressedId;
+          var startT = bPressStartTarget;
+          bPressedId = null;
+          bPressStartTarget = null;
+          e.preventDefault();
+          if(bothyZone(startT, 'data-toggle')){
+            toggleBothyVisited(id);
+          } else if(bothyZone(startT, 'data-link')){
+            var bb = null;
+            for(var j=0;j<BOTHIES.length;j++) if(BOTHIES[j].id===id){bb=BOTHIES[j];break;}
+            var url = (bb && bb.mbaUrl) || 'https://www.mountainbothies.org.uk/bothies/';
+            var w = window.open(url, '_blank');
+            if(w) w.opener = null;
+          }
+        }
+      }
+      bPressedId = null;
+      bPressStartTarget = null;
+    }, false);
+
+    blv.addEventListener('click', function(e){
+      if(e.detail === 0) return;
+      var row = findBothyRow(e.target);
+      if(!row) return;
+      var id = row.getAttribute('data-bothy-id');
+      if(e.shiftKey){ openBothyModal(id); return; }
+      if(bothyZone(e.target, 'data-toggle')){
+        toggleBothyVisited(id);
+      } else if(bothyZone(e.target, 'data-link')){
+        var bb = null;
+        for(var j=0;j<BOTHIES.length;j++) if(BOTHIES[j].id===id){bb=BOTHIES[j];break;}
+        var url = (bb && bb.mbaUrl) || 'https://www.mountainbothies.org.uk/bothies/';
+        var w = window.open(url, '_blank');
+        if(w) w.opener = null;
+      }
+    });
+  }
+
   document.getElementById('modal-x').addEventListener('click',closeModal);
   document.getElementById('modal').addEventListener('click',function(e){if(e.target===this)closeModal();});
   document.getElementById('btn-bag').addEventListener('click',saveBag);
@@ -2343,7 +2530,9 @@ function attachEvents(){
     if(!target) return;
     // Bothy targets get MBA URL; peaks get WalkHighlands route
     if(target.id && target.id.charAt(0) === 'b'){
-      location.href=(target.mbaUrl||'https://www.mountainbothies.org.uk/bothies/');
+      var bUrl = target.mbaUrl || 'https://www.mountainbothies.org.uk/bothies/';
+      var bW = window.open(bUrl, '_blank');
+      if(bW) bW.opener = null;
     } else {
       openWalkHighlands(target);
     }
@@ -2373,8 +2562,7 @@ function attachEvents(){
   function buildRegionList(){
     // Get regions for current type
     var peaksOfType;
-    if(activeTab==='bagged') peaksOfType = M.filter(function(m){return !!bagged[m.id];});
-    else if(activeTab==='map') peaksOfType = M;
+    if(activeTab==='map') peaksOfType = M;
     else peaksOfType = M.filter(function(m){return m.type===activeTab;});
     
     var counts = {};
@@ -2503,6 +2691,82 @@ function attachEvents(){
       }
     });
   }
+
+  // ---- Bothy toolbar ----
+  var bothySrch = document.getElementById('bothy-srch');
+  var bothyVisitedChip = document.getElementById('bothy-visited-chip');
+  var bothyRegionChip = document.getElementById('bothy-region-chip');
+  var bothyRegionPanel = document.getElementById('bothy-region-panel');
+  var bothyRegionListEl = document.getElementById('bothy-region-list');
+  var bothyRegionLabel = document.getElementById('bothy-region-label');
+
+  function buildBothyRegionList(){
+    var source = bothyVisitedFilter ? BOTHIES.filter(function(b){return !!bothyVisited[b.id];}) : BOTHIES;
+    var counts = {};
+    for(var i=0;i<source.length;i++){
+      var r=source[i].region;
+      counts[r]=(counts[r]||0)+1;
+    }
+    var regions=[];
+    for(var r in counts) regions.push({name:r, count:counts[r]});
+    regions.sort(function(a,b){return a.name.localeCompare(b.name);});
+    var h='';
+    for(var i=0;i<regions.length;i++){
+      var active=(regions[i].name===bothyRegionFilter)?' active':'';
+      h+='<button class="region-item'+active+'" data-bothy-region="'+regions[i].name.replace(/"/g,'&quot;')+'" type="button">'+escHtml(regions[i].name)+' <span class="region-count">'+regions[i].count+'</span></button>';
+    }
+    if(bothyRegionListEl) bothyRegionListEl.innerHTML=h;
+    var allBtn=bothyRegionPanel?bothyRegionPanel.querySelector('[data-bothy-region=""]'):null;
+    if(allBtn){ if(bothyRegionFilter) allBtn.classList.remove('active'); else allBtn.classList.add('active'); }
+  }
+
+  if(bothySrch){
+    bothySrch.addEventListener('input', function(){
+      bothySearch=this.value;
+      renderBothyList();
+    });
+  }
+
+  if(bothyVisitedChip){
+    bothyVisitedChip.addEventListener('click', function(){
+      bothyVisitedFilter=!bothyVisitedFilter;
+      bothyVisitedChip.classList.toggle('on', bothyVisitedFilter);
+      renderBothyList();
+    });
+  }
+
+  if(bothyRegionChip){
+    bothyRegionChip.addEventListener('click', function(){
+      var open=!bothyRegionPanel.hasAttribute('hidden');
+      if(open){
+        bothyRegionPanel.setAttribute('hidden','');
+        bothyRegionChip.setAttribute('aria-expanded','false');
+      } else {
+        buildBothyRegionList();
+        bothyRegionPanel.removeAttribute('hidden');
+        bothyRegionChip.setAttribute('aria-expanded','true');
+      }
+    });
+  }
+
+  if(bothyRegionPanel){
+    bothyRegionPanel.addEventListener('click', function(e){
+      var btn=e.target.closest('[data-bothy-region]');
+      if(!btn) return;
+      bothyRegionFilter=btn.getAttribute('data-bothy-region')||'';
+      if(bothyRegionFilter){
+        bothyRegionLabel.textContent=bothyRegionFilter;
+        bothyRegionChip.classList.add('has-selection');
+      } else {
+        bothyRegionLabel.textContent='Region';
+        bothyRegionChip.classList.remove('has-selection');
+      }
+      bothyRegionPanel.setAttribute('hidden','');
+      bothyRegionChip.setAttribute('aria-expanded','false');
+      renderBothyList();
+      buildBothyRegionList();
+    });
+  }
 }
 
 function showMapTooltip(circle,id){
@@ -2528,6 +2792,7 @@ function hideMapTooltip(){document.getElementById('map-tooltip').classList.remov
 // ============ INIT ============
 function init(){
   try{load();}catch(e){}
+  try{loadBothy();}catch(e){}
   try{updateStats();}catch(e){}
   try{attachEvents();}catch(e){}
   try{updateStorageStatus();}catch(e){}
