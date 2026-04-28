@@ -52,13 +52,13 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 .mast-tag,.mast-sub{display:none}
 .scores{background:var(--bg);border-bottom:1px solid var(--rule);padding:0 0 1rem}
 .scores-in{max-width:680px;margin:0 auto;display:flex}
-.sc{flex:1;text-align:center;padding:.4rem .3rem;position:relative;min-width:0}
+.sc{flex:1;text-align:center;padding:.4rem .5rem;position:relative;min-width:0}
 .sc::after{content:'';position:absolute;right:0;top:20%;bottom:20%;width:1px;background:var(--rule)}
 .sc:last-child::after{display:none}
-.sc-n{font-family:var(--font-display);font-size:1.4rem;font-weight:600;line-height:1;color:var(--ink);font-variant-numeric:tabular-nums;letter-spacing:-.03em}
+.sc-n{font-family:var(--font-display);font-size:1.55rem;font-weight:600;line-height:1;color:var(--ink);font-variant-numeric:tabular-nums;letter-spacing:-.03em}
 
-.sc-l{font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-top:.4rem;line-height:1.2;font-weight:500}
-.sc-bar{height:2px;background:var(--rule);margin:.55rem .35rem 0;border-radius:1px;overflow:hidden}
+.sc-l{font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);margin-top:.4rem;line-height:1.2;font-weight:500}
+.sc-bar{height:2px;background:var(--rule);margin:.55rem .45rem 0;border-radius:1px;overflow:hidden}
 .sc-bar-f{height:100%;background:var(--accent);width:0;transition:width .6s cubic-bezier(.4,0,.2,1)}
 .sc.b .sc-bar-f{background:var(--terra)}
 .sc.b .sc-n{color:var(--terra)}
@@ -435,7 +435,6 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
       <div class="sc c"><div class="sc-n" id="cb">0</div><div class="sc-l">Corbetts</div><div class="sc-bar"><div class="sc-bar-f" id="cb-bar"></div></div></div>
       <div class="sc f"><div class="sc-n" id="fb">0</div><div class="sc-l">Fionas</div><div class="sc-bar"><div class="sc-bar-f" id="fb-bar"></div></div></div>
       <div class="sc b"><div class="sc-n" id="bv">0</div><div class="sc-l">Bothies</div><div class="sc-bar"><div class="sc-bar-f" id="bv-bar"></div></div></div>
-      <div class="sc t"><div class="sc-n" id="tb">0</div><div class="sc-l">Total</div><div class="sc-bar"><div class="sc-bar-f" id="tb-bar"></div></div></div>
     </div>
   </div>
 </header>
@@ -457,9 +456,6 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
       <div class="ds-item">
         <div class="ds-row"><span class="ds-lbl">Bothies</span><span class="ds-n" id="ds-bv">0 / 86</span></div>
         <div class="ds-bar"><div class="ds-bar-f" id="ds-bv-bar"></div></div>
-      </div>
-      <div class="ds-item total">
-        <div class="ds-row"><span class="ds-lbl">Total bagged</span><span class="ds-n" id="ds-tb">0</span></div>
       </div>
     </div>
     <div class="tabs-in">
@@ -1551,15 +1547,11 @@ function updateStats(){
   var cb=corbetts.filter(function(m){return !!bagged[m.id];}).length;
   var fb=fionas.filter(function(m){return !!bagged[m.id];}).length;
   var bv=Object.keys(bothyVisited).length;
-  var tot=mb+cb+fb;
   setText('mb',mb);setText('cb',cb);setText('fb',fb);setText('bv',bv);
-  setText('tb',tot);setText('ta',M.length);
   setText('ds-mb',mb+' / '+munros.length);
   setText('ds-cb',cb+' / '+corbetts.length);
   setText('ds-fb',fb+' / '+fionas.length);
   setText('ds-bv',bv+' / '+BOTHIES.length);
-  setText('ds-tb',tot);
-  // Progress bars
   function setBar(id,n,total){
     var el=document.getElementById(id);
     if(el) el.style.width=(total?Math.round(n/total*100):0)+'%';
@@ -1568,7 +1560,6 @@ function updateStats(){
   setBar('cb-bar',cb,corbetts.length);
   setBar('fb-bar',fb,fionas.length);
   setBar('bv-bar',bv,BOTHIES.length);
-  setBar('tb-bar',tot,M.length);
   setBar('ds-mb-bar',mb,munros.length);
   setBar('ds-cb-bar',cb,corbetts.length);
   setBar('ds-fb-bar',fb,fionas.length);
