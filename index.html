@@ -175,6 +175,33 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 .bothy-disc-icon{font-size:1rem;margin-right:.3rem;opacity:.6}
 .bothy-region-head{padding:.6rem 1rem .3rem;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3)}
 .bothy-closed{opacity:.6}
+/* Floating map search */
+.map-search{position:absolute;top:.6rem;left:.6rem;z-index:1000;font-family:var(--font-body)}
+.map-search-btn{width:36px;height:36px;border-radius:8px;border:1px solid var(--rule);background:rgba(255,255,255,0.95);box-shadow:0 1px 3px rgba(0,0,0,0.15);display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--ink);transition:background .15s}
+.map-search-btn:hover{background:#fff}
+.map-search-btn:active{transform:scale(.94)}
+.map-search-panel{position:absolute;top:0;left:0;width:min(90vw, 320px);background:#fff;border:1px solid var(--rule);border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.15);overflow:hidden}
+.map-search-input-wrap{position:relative;display:flex;align-items:center;border-bottom:1px solid var(--rule);padding:.55rem .55rem .55rem 2rem}
+.map-search-input-wrap svg{position:absolute;left:.7rem;top:50%;transform:translateY(-50%);color:var(--ink4)}
+.map-search-input{flex:1;border:none;outline:none;background:transparent;font-family:inherit;font-size:.85rem;color:var(--ink);padding:.2rem 0;min-width:0}
+.map-search-close{background:none;border:none;font-size:1.4rem;line-height:1;color:var(--ink3);cursor:pointer;padding:0 .3rem;flex-shrink:0}
+.map-search-close:hover{color:var(--ink)}
+.map-search-results{max-height:50vh;overflow-y:auto}
+.map-search-result{display:flex;align-items:center;gap:.6rem;padding:.55rem .7rem;border-bottom:1px solid var(--rule);cursor:pointer;transition:background .12s}
+.map-search-result:last-child{border-bottom:none}
+.map-search-result:hover,.map-search-result.active{background:var(--bg)}
+.map-search-result-icon{width:18px;height:18px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.map-search-result-text{flex:1;min-width:0}
+.map-search-result-name{font-size:.82rem;color:var(--ink);font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.map-search-result-meta{font-size:.68rem;color:var(--ink3);margin-top:.1rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.map-search-result-type{font-size:.55rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink4);font-weight:600}
+.map-search-empty{padding:1.2rem .7rem;text-align:center;color:var(--ink3);font-size:.78rem}
+/* Pulse animation for highlighted target */
+.map-pulse{animation:mapPulse 1.6s ease-out 2}
+@keyframes mapPulse{0%{transform:scale(1)}50%{transform:scale(1.6)}100%{transform:scale(1)}}
+/* Compact Leaflet attribution */
+.leaflet-control-attribution{font-size:.62rem !important;background:rgba(255,255,255,0.85) !important;padding:1px 5px !important;max-width:75vw;border-radius:3px 0 0 0 !important}
+.leaflet-control-attribution a{color:var(--accent-dark) !important}
 .modal-name{font-family:var(--font-display);font-size:1.5rem;font-weight:600;line-height:1.15;margin-bottom:.4rem;color:var(--ink);letter-spacing:-.03em}
 .modal-meta{font-size:.8rem;color:var(--ink3);padding-bottom:.85rem;border-bottom:1px solid var(--rule2);margin-bottom:1rem;display:flex;gap:.6rem;align-items:center;flex-wrap:wrap;font-family:var(--font-mono);letter-spacing:-.01em}
 .modal label{display:block;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);margin-bottom:.3rem;font-weight:600}
@@ -334,7 +361,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 
 /* ===== MAP LAYOUT ===== */
 .map-wrap{max-width:900px;margin:0 auto;padding:0 1rem}
-.map-container{width:100%;display:block;border:1px solid var(--rule);margin-top:.5rem;border-radius:10px;overflow:hidden;background:linear-gradient(180deg,#EEE9DC 0%,#DFD7C2 100%)}
+.map-container{width:100%;display:block;border:1px solid var(--rule);margin-top:.5rem;border-radius:10px;overflow:hidden;background:linear-gradient(180deg,#EEE9DC 0%,#DFD7C2 100%);position:relative}
 #svg-map-view{display:block;width:100%}
 #map-svg-wrap{width:100%;height:75vw;max-height:80vh;min-height:280px;position:relative;overflow:hidden}
 #map-svg{position:absolute;top:0;left:0;width:100%;height:100%}
@@ -517,6 +544,19 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
         </div>
       </div>
       <div id="leaflet-map" class="hidden" style="width:100%;height:70vh;min-height:400px"></div>
+      <div class="map-search" id="map-search">
+        <button class="map-search-btn" id="map-search-btn" type="button" aria-label="Search peaks and bothies">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <div class="map-search-panel" id="map-search-panel" hidden>
+          <div class="map-search-input-wrap">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" id="map-search-input" class="map-search-input" placeholder="Search peaks or bothies…" autocomplete="off">
+            <button class="map-search-close" id="map-search-close" type="button" aria-label="Close search">&times;</button>
+          </div>
+          <div class="map-search-results" id="map-search-results"></div>
+        </div>
+      </div>
       <div class="map-peak-tooltip" id="map-tooltip"></div>
     </div>
     <div class="map-legend">
@@ -1805,7 +1845,7 @@ function renderMap(){
 var BASEMAP = {
   label: 'Esri Topo',
   url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}',
-  attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community',
+  attribution: 'Tiles &copy; <a href="https://www.esri.com" target="_blank">Esri</a>',
   maxZoom: 19
 };
 
@@ -1816,7 +1856,8 @@ function showLeafletMap(){
   el.classList.remove('hidden');
   if(!mapInitialised){
     mapInitialised=true;
-    leafletMap=L.map('leaflet-map',{center:[57.0,-4.5],zoom:6});
+    leafletMap=L.map('leaflet-map',{center:[57.0,-4.5],zoom:6,attributionControl:false});
+    L.control.attribution({prefix:'',position:'bottomright'}).addTo(leafletMap);
     L.tileLayer(BASEMAP.url, {attribution: BASEMAP.attribution, maxZoom: BASEMAP.maxZoom}).addTo(leafletMap);
     setText('map-mode-info', BASEMAP.label);
   }
@@ -2519,6 +2560,132 @@ function attachEvents(){
         var w = window.open(url, '_blank');
         if(w) w.opener = null;
       }
+    });
+  }
+
+  // ---- Map search overlay ----
+  var msBtn = document.getElementById('map-search-btn');
+  var msPanel = document.getElementById('map-search-panel');
+  var msInput = document.getElementById('map-search-input');
+  var msResults = document.getElementById('map-search-results');
+  var msClose = document.getElementById('map-search-close');
+
+  function openMapSearch(){
+    if(!msPanel) return;
+    msPanel.removeAttribute('hidden');
+    msBtn.style.display = 'none';
+    setTimeout(function(){ if(msInput) msInput.focus(); }, 50);
+    renderMapSearchResults('');
+  }
+  function closeMapSearch(){
+    if(!msPanel) return;
+    msPanel.setAttribute('hidden', '');
+    msBtn.style.display = '';
+    if(msInput) msInput.value = '';
+    if(msResults) msResults.innerHTML = '';
+  }
+
+  function renderMapSearchResults(query){
+    if(!msResults) return;
+    var q = (query || '').toLowerCase().trim();
+    var matches = [];
+    if(q.length === 0){
+      msResults.innerHTML = '<div class="map-search-empty">Type to search peaks and bothies</div>';
+      return;
+    }
+    // Search peaks (with bagged/unbagged status)
+    for(var i = 0; i < M.length && matches.length < 12; i++){
+      var p = M[i];
+      if(p.name.toLowerCase().indexOf(q) >= 0 || p.region.toLowerCase().indexOf(q) >= 0){
+        matches.push({kind: p.type, item: p, name: p.name, meta: p.height + 'm · ' + p.region});
+      }
+    }
+    // Search bothies
+    for(var j = 0; j < BOTHIES.length && matches.length < 16; j++){
+      var b = BOTHIES[j];
+      if(b.name.toLowerCase().indexOf(q) >= 0 || b.region.toLowerCase().indexOf(q) >= 0 || (b.district && b.district.toLowerCase().indexOf(q) >= 0)){
+        matches.push({kind: 'bothy', item: b, name: b.name, meta: (b.district ? b.district + ' · ' : '') + b.region + (b.closed ? ' · closed' : '')});
+      }
+    }
+    if(matches.length === 0){
+      msResults.innerHTML = '<div class="map-search-empty">No matches</div>';
+      return;
+    }
+    var html = '';
+    for(var k = 0; k < matches.length && k < 8; k++){
+      var m = matches[k];
+      var typeLabel = m.kind === 'munro' ? 'M' : m.kind === 'corbett' ? 'C' : m.kind === 'fiona' ? 'F' : '⌂';
+      var iconColour = m.kind === 'bothy' ? 'var(--terra)' : 'var(--accent-dark)';
+      html += '<div class="map-search-result" data-kind="' + m.kind + '" data-id="' + escHtml(m.item.id) + '">'
+        + '<div class="map-search-result-icon" style="color:' + iconColour + ';font-weight:700;font-size:.78rem">' + typeLabel + '</div>'
+        + '<div class="map-search-result-text">'
+        + '<div class="map-search-result-name">' + escHtml(m.name) + '</div>'
+        + '<div class="map-search-result-meta">' + escHtml(m.meta) + '</div>'
+        + '</div>'
+        + '</div>';
+    }
+    msResults.innerHTML = html;
+  }
+
+  function flyToTarget(kind, id){
+    var lat, lng, ref;
+    if(kind === 'bothy'){
+      for(var i = 0; i < BOTHIES.length; i++) if(BOTHIES[i].id === id){ ref = BOTHIES[i]; break; }
+      // Make sure bothy layer is on
+      if(ref && !mapTypes.bothy){
+        mapTypes.bothy = true;
+        var btn = document.querySelector('.map-type-btn[data-type="bothy"]');
+        if(btn) btn.classList.add('on');
+        renderMap();
+      }
+    } else {
+      for(var j = 0; j < M.length; j++) if(M[j].id === id){ ref = M[j]; break; }
+      // Make sure relevant peak layer is on
+      if(ref && !mapTypes[kind]){
+        mapTypes[kind] = true;
+        var pbtn = document.querySelector('.map-type-btn[data-type="' + kind + '"]');
+        if(pbtn) pbtn.classList.add('on');
+        renderMap();
+      }
+    }
+    if(!ref || !leafletMap) return;
+    leafletMap.flyTo([ref.lat, ref.lng], 13, {duration: 0.8});
+    // Pulse the matching marker briefly
+    setTimeout(function(){
+      for(var m = 0; m < leafletMarkers.length; m++){
+        var mk = leafletMarkers[m];
+        var ll = mk.getLatLng();
+        if(Math.abs(ll.lat - ref.lat) < 0.0001 && Math.abs(ll.lng - ref.lng) < 0.0001){
+          var icon = mk.getElement && mk.getElement();
+          if(icon){
+            var pin = icon.querySelector('.map-pin, .bothy-pin');
+            if(pin){
+              pin.classList.add('map-pulse');
+              setTimeout(function(){ pin.classList.remove('map-pulse'); }, 3500);
+            }
+          }
+          break;
+        }
+      }
+    }, 850);
+  }
+
+  if(msBtn) msBtn.addEventListener('click', openMapSearch);
+  if(msClose) msClose.addEventListener('click', closeMapSearch);
+  if(msInput){
+    msInput.addEventListener('input', function(){ renderMapSearchResults(this.value); });
+    msInput.addEventListener('keydown', function(e){
+      if(e.key === 'Escape'){ closeMapSearch(); }
+    });
+  }
+  if(msResults){
+    msResults.addEventListener('click', function(e){
+      var r = e.target.closest('.map-search-result');
+      if(!r) return;
+      var kind = r.getAttribute('data-kind');
+      var id = r.getAttribute('data-id');
+      closeMapSearch();
+      flyToTarget(kind, id);
     });
   }
 
