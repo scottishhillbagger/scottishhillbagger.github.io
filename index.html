@@ -40,10 +40,13 @@
   --grade-mod:#8A7640;
   --grade-hard:#A35230;
   --grade-vh:#7A2A22;
-  --font-display:'Geist',-apple-system,BlinkMacSystemFont,sans-serif;
-  --font-body:'Geist',-apple-system,BlinkMacSystemFont,sans-serif;
-  --font-mono:'Geist Mono',ui-monospace,SFMono-Regular,monospace;
+  --font-display:'Geist',-apple-system,BlinkMacSystemFont,'SF Pro Display','Helvetica Neue',sans-serif;
+  --font-body:'Geist',-apple-system,BlinkMacSystemFont,'SF Pro Text','Helvetica Neue',sans-serif;
+  --font-mono:'Geist Mono',ui-monospace,SFMono-Regular,'SF Mono',monospace;
 }
+html{font-size:16px;-webkit-text-size-adjust:100%}
+/* Ensure buttons never inherit browser blue link colour */
+button{color:inherit;-webkit-tap-highlight-color:transparent;}
 html{font-size:16px;-webkit-text-size-adjust:100%}
 body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-height:100vh;-webkit-font-smoothing:antialiased;line-height:1.4;font-size:14px;letter-spacing:-.005em}
 .mast{background:var(--bg);border-bottom:1px solid var(--rule)}
@@ -207,7 +210,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 /* MOBILE-ONLY — already styled above */
 
 /* ============ DESKTOP LAYOUT ============ */
-@media (min-width: 900px){
+@media (min-width: 1024px){
 body{
 display:grid;
 grid-template-columns:260px 1fr;
@@ -324,7 +327,7 @@ background:transparent;
 }
 
 /* Mobile: hide desktop-only elements */
-@media (max-width: 899px){
+@media (max-width: 1023px){
 .desktop-stats{display:none}
 .grade-pill{display:none}
 
