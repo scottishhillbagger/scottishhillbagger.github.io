@@ -63,6 +63,9 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 .sc-l{font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);margin-top:.4rem;line-height:1.2;font-weight:500}
 .sc-bar{height:2px;background:var(--rule);margin:.55rem .45rem 0;border-radius:1px;overflow:hidden}
 .sc-bar-f{height:100%;background:var(--accent);width:0;transition:width .6s cubic-bezier(.4,0,.2,1)}
+.sc.m .sc-bar-f{background:#1A4D28}
+.sc.c .sc-bar-f{background:#7A4A08}
+.sc.f .sc-bar-f{background:#1A5878}
 .sc.b .sc-bar-f{background:var(--terra)}
 .sc.b .sc-n{color:var(--terra)}
 
@@ -79,6 +82,9 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 .tab{flex:1;min-width:72px;padding:1rem .5rem .85rem;background:none;border:none;border-bottom:1px solid transparent;font-family:var(--font-body);font-size:.82rem;font-weight:500;color:var(--ink3);cursor:pointer;white-space:nowrap;text-align:center;transition:color .15s,border-color .15s;letter-spacing:-.005em}
 .tab:hover{color:var(--ink2)}
 .tab.active{color:var(--ink);border-bottom-color:var(--accent);font-weight:600}
+.tab.m.active{border-bottom-color:#1A4D28}
+.tab.c.active{border-bottom-color:#7A4A08}
+.tab.f.active{border-bottom-color:#1A5878}
 .tab.b.active{border-bottom-color:var(--terra);color:var(--terra)}
 
 
@@ -155,9 +161,11 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 
 
 
-.map-legend{display:flex;gap:1rem;padding:.5rem 1.25rem;font-size:.72rem;color:var(--ink2);border-top:1px solid var(--rule2);background:var(--surface);flex-wrap:wrap;align-items:center}
-.legend-dot{display:inline-block;width:10px;height:10px;border-radius:50%;vertical-align:middle;margin-right:3px}
-.legend-dot.b{background:#3E9A5F}.legend-dot.u{background:#767674}
+.map-legend{display:flex;gap:1.1rem;padding:.55rem 1.25rem;font-size:.7rem;color:var(--ink2);border-top:1px solid var(--rule2);background:var(--surface);flex-wrap:wrap;align-items:center}
+.legend-grp{display:inline-flex;align-items:center;gap:.45rem}
+.legend-lbl{font-size:.6rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3)}
+.legend-pair{display:inline-flex;align-items:center;gap:.2rem;font-size:.68rem;color:var(--ink2)}
+.legend-dot{display:inline-block;border-radius:50%;vertical-align:middle;box-shadow:0 0 0 1px rgba(255,255,255,0.95)}
 .map-info{padding:.4rem 1.25rem;background:var(--bg2);font-size:.72rem;color:var(--ink3);border-top:1px solid var(--rule2)}
 .map-peak-tooltip{position:absolute;background:var(--accent);color:var(--surface);padding:.45rem .75rem;border-radius:4px;font-size:.78rem;font-family:inherit;pointer-events:none;z-index:100;white-space:nowrap;box-shadow:0 4px 12px rgba(0,0,0,.2);transform:translate(-50%,-115%);display:none}
 .map-peak-tooltip.show{display:block}
@@ -167,11 +175,11 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 .modal{background:var(--surface);width:100%;max-width:480px;padding:1.5rem 1.25rem 1.5rem;position:relative;border-top:none;max-height:80vh;max-height:80svh;overflow-y:auto;-webkit-overflow-scrolling:touch;border-radius:12px 12px 0 0;padding-bottom:max(1.5rem,calc(1.5rem + env(safe-area-inset-bottom)))}
 .modal-x{position:absolute;top:.5rem;right:.5rem;background:none;border:none;font-size:1.3rem;cursor:pointer;color:var(--ink3);padding:.4rem .7rem;line-height:1;border-radius:4px}
 .modal-x:hover{background:var(--bg);color:var(--ink)}
-.modal-tag{font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;margin-bottom:.35rem;display:inline-block;font-weight:600}
-.modal-tag.munro,.modal-tag.m{color:var(--accent-dark)}
-.modal-tag.corbett,.modal-tag.c{color:var(--accent-dark)}
-.modal-tag.fiona,.modal-tag.f{color:#7B4A8A}
-.modal-tag.bothy,.modal-tag.b{color:var(--terra)}
+.modal-tag{font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.5rem;display:inline-block;font-weight:600;padding:.2rem .55rem;border-radius:4px;border:1px solid currentColor}
+.modal-tag.munro,.modal-tag.m{color:#1A4D28;background:rgba(26,77,40,0.08)}
+.modal-tag.corbett,.modal-tag.c{color:#7A4A08;background:rgba(122,74,8,0.08)}
+.modal-tag.fiona,.modal-tag.f{color:#1A5878;background:rgba(26,88,120,0.08)}
+.modal-tag.bothy,.modal-tag.b{color:var(--terra-dark);background:rgba(184,84,58,0.1)}
 /* Bothy tab */
 .bothy-disclaimer{margin:1.5rem 1rem 1rem;padding:.85rem 1rem;background:transparent;border-top:1px solid var(--rule);border-radius:0;font-size:.72rem;color:var(--ink3);line-height:1.5}
 .bothy-disclaimer a{color:var(--accent);text-decoration:none}
@@ -221,13 +229,32 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 .btn-p:hover{background:var(--accent-dark)}.btn-p:active{background:var(--accent-dark)}
 .btn-s{padding:.75rem .9rem;background:transparent;color:var(--ink3);border:1px solid var(--rule);font-family:var(--font-body);font-size:.82rem;font-weight:500;cursor:pointer;border-radius:8px;-webkit-appearance:none;transition:all .15s;letter-spacing:-.005em}
 .btn-s:hover{border-color:var(--ink3);color:var(--ink)}
-.backup-bar{background:var(--bg);border-top:1px solid var(--rule);padding:.7rem 1.25rem}
+.backup-bar{background:var(--bg);border-top:1px solid var(--rule);padding:.85rem 1.25rem 1rem}
 #storage-status{display:none}
 
-.backup-in{max-width:680px;margin:0 auto;display:flex;gap:.5rem;align-items:center;font-size:.72rem;color:var(--ink4);flex-wrap:wrap}
-.backup-in b{color:var(--ink2)}
-.backup-btn{font-family:inherit;font-size:.7rem;padding:.3rem .7rem;background:var(--surface);border:1px solid var(--rule);color:var(--ink2);cursor:pointer;border-radius:6px;-webkit-appearance:none;transition:all .15s;font-weight:500;letter-spacing:-.005em}
+.backup-in{max-width:680px;margin:0 auto;display:flex;gap:.85rem;align-items:center;flex-wrap:wrap}
+.backup-text{flex:1;min-width:0;display:flex;flex-direction:column;gap:.15rem}
+.backup-text strong{font-size:.78rem;color:var(--ink);font-weight:600;letter-spacing:-.005em}
+.backup-sub{font-size:.66rem;color:var(--ink3);line-height:1.35}
+.backup-sub.warn{color:#A35230;font-weight:500}
+.backup-sub.ok{color:var(--accent-dark)}
+.backup-actions{display:flex;gap:.5rem;flex-shrink:0}
+.backup-btn{font-family:inherit;font-size:.75rem;padding:.45rem .85rem;background:var(--surface);border:1px solid var(--rule);color:var(--ink2);cursor:pointer;border-radius:7px;-webkit-appearance:none;transition:all .15s;font-weight:500;letter-spacing:-.005em;display:inline-flex;align-items:center}
 .backup-btn:hover{border-color:var(--ink3);background:var(--bg)}
+.backup-btn.primary{background:var(--accent);border-color:var(--accent);color:white;font-weight:600}
+.backup-btn.primary:hover{background:var(--accent-dark);border-color:var(--accent-dark)}
+.backup-btn.primary.unsaved{animation:btnPulse 2.4s ease-in-out infinite}
+@keyframes btnPulse{0%,100%{box-shadow:0 0 0 0 rgba(107,122,79,0)}50%{box-shadow:0 0 0 4px rgba(107,122,79,0.18)}}
+
+/* First-bag onboarding banner */
+.onboard-banner{background:#FFF8E0;border-top:1px solid #E8DFA8;border-bottom:1px solid #E8DFA8;padding:.7rem 1.25rem;animation:slideDown .4s ease-out}
+@keyframes slideDown{from{transform:translateY(-100%);opacity:0}to{transform:translateY(0);opacity:1}}
+.onboard-banner-in{max-width:680px;margin:0 auto;display:flex;gap:.6rem;align-items:flex-start;font-size:.78rem;color:#5C4A1A;line-height:1.45}
+.onboard-icon{flex-shrink:0;font-size:1rem;line-height:1}
+.onboard-msg{flex:1}
+.onboard-msg strong{color:#3A2E0E;font-weight:600}
+.onboard-close{flex-shrink:0;background:none;border:none;font-size:1.3rem;line-height:1;color:#8A7D4A;cursor:pointer;padding:0 .15rem;margin-top:-2px}
+.onboard-close:hover{color:#3A2E0E}
 .toast{position:fixed;bottom:1.25rem;left:50%;transform:translateX(-50%) translateY(80px);background:var(--ink);color:var(--surface-elev);padding:.65rem 1.2rem;font-family:var(--font-body);font-size:.82rem;font-weight:500;transition:transform .3s ease;z-index:10001;white-space:nowrap;border-radius:8px;max-width:90vw;box-shadow:0 8px 24px rgba(26,26,25,.15);letter-spacing:-.005em}
 .toast.show{transform:translateX(-50%) translateY(0)}
 .empty{padding:2.5rem 0;text-align:center;color:var(--ink3);font-size:.88rem}
@@ -565,8 +592,23 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
       <div class="map-peak-tooltip" id="map-tooltip"></div>
     </div>
     <div class="map-legend">
-      <span><span class="legend-dot b"></span>Bagged</span>
-      <span><span class="legend-dot u"></span>Unbagged</span>
+      <div class="legend-grp">
+        <span class="legend-lbl">Bagged</span>
+        <span class="legend-pair"><span class="legend-dot" style="width:11px;height:11px;background:#A8D447;border:1.5px solid #1A4D28"></span>M</span>
+        <span class="legend-pair"><span class="legend-dot" style="width:9px;height:9px;background:#F0A030;border:1.5px solid #7A4A08"></span>C</span>
+        <span class="legend-pair"><span class="legend-dot" style="width:7px;height:7px;background:#60B8E0;border:1.5px solid #1A5878"></span>F</span>
+      </div>
+      <div class="legend-grp">
+        <span class="legend-lbl">Unbagged</span>
+        <span class="legend-pair"><span class="legend-dot" style="width:10px;height:10px;background:#D8D4CC;border:1.5px solid #4A4A46"></span>M</span>
+        <span class="legend-pair"><span class="legend-dot" style="width:8px;height:8px;background:#EDE9E2;border:1.5px solid #7A7670"></span>C</span>
+        <span class="legend-pair"><span class="legend-dot" style="width:7px;height:7px;background:#F8F6F2;border:1.5px solid #ABABAA"></span>F</span>
+      </div>
+      <div class="legend-grp">
+        <span class="legend-lbl">Bothy</span>
+        <span class="legend-pair"><svg width="13" height="13" viewBox="0 0 18 18"><path d="M9 2 L2 7 L2.8 7 L2.8 15.5 L15.2 15.5 L15.2 7 L16 7 Z" fill="#B8543A" stroke="#3A1A10" stroke-width="1.3" stroke-linejoin="round"/><rect x="11.5" y="3.5" width="1.8" height="3" fill="#3A1A10"/><rect x="7.7" y="10" width="2.6" height="5.5" fill="#3A1A10"/></svg>visited</span>
+        <span class="legend-pair"><svg width="13" height="13" viewBox="0 0 18 18"><path d="M9 2 L2 7 L2.8 7 L2.8 15.5 L15.2 15.5 L15.2 7 L16 7 Z" fill="#FFFFFF" stroke="#3A1A10" stroke-width="1.3" stroke-linejoin="round"/><rect x="11.5" y="3.5" width="1.8" height="3" fill="#B8543A"/><rect x="7.7" y="10" width="2.6" height="5.5" fill="#B8543A"/></svg>not</span>
+      </div>
       <span style="margin-left:auto;font-style:italic" id="map-mode-info">Loading…</span>
     </div>
   </div>
@@ -632,11 +674,28 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 
 <div class="backup-bar">
   <div class="backup-in">
-    <b>Backup:</b>
-    <button class="backup-btn" id="btn-export">Export JSON</button>
-    <button class="backup-btn" id="btn-import">Import JSON</button>
-    <input type="file" id="file-import" accept=".json" style="display:none">
+    <div class="backup-text">
+      <strong>Back up your data</strong>
+      <span class="backup-sub" id="backup-sub">Your bagged peaks live only on this device.</span>
+    </div>
+    <div class="backup-actions">
+      <button class="backup-btn primary" id="btn-export">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:.3rem;vertical-align:-2px"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Export
+      </button>
+      <button class="backup-btn" id="btn-import">Import</button>
+      <input type="file" id="file-import" accept=".json" style="display:none">
+    </div>
     <span id="storage-status"></span>
+  </div>
+</div>
+
+<!-- First-bag onboarding banner: shown only once -->
+<div id="onboard-banner" class="onboard-banner" hidden>
+  <div class="onboard-banner-in">
+    <span class="onboard-icon">💾</span>
+    <span class="onboard-msg">Your bagged peaks are saved on this device only. <strong>Tap Export below</strong> to keep a backup file.</span>
+    <button class="onboard-close" id="onboard-dismiss" aria-label="Dismiss">&times;</button>
   </div>
 </div>
 
@@ -1481,8 +1540,12 @@ var BOTHIES = [
 var bagged = {};
 var bothyVisited = {};
 var notes = {};
+var bothyNotes = {};
 var BOTHY_KEY = 'shb_bothy_v1';
 var NOTES_KEY = 'shb_notes_v1';
+var BOTHY_NOTES_KEY = 'shb_bothy_notes_v1';
+var LAST_EXPORT_KEY = 'shb_last_export';
+var ONBOARD_KEY = 'shb_onboarded';
 var bothySearch = '';
 var bothyRegionFilter = '';
 var bothyVisitedFilter = false;
@@ -1511,6 +1574,8 @@ function saveBothy(){ if(!_store)return false; try{_store.setItem(BOTHY_KEY,JSON
 function loadBothy(){ if(!_store)return; try{var r=_store.getItem(BOTHY_KEY);if(r)bothyVisited=JSON.parse(r);}catch(e){bothyVisited={};} }
 function saveNotes(){ if(!_store)return false; try{_store.setItem(NOTES_KEY,JSON.stringify(notes));return true;}catch(e){return false;} }
 function loadNotes(){ if(!_store)return; try{var r=_store.getItem(NOTES_KEY);if(r)notes=JSON.parse(r);}catch(e){notes={};} }
+function saveBothyNotes(){ if(!_store)return false; try{_store.setItem(BOTHY_NOTES_KEY,JSON.stringify(bothyNotes));return true;}catch(e){return false;} }
+function loadBothyNotes(){ if(!_store)return; try{var r=_store.getItem(BOTHY_NOTES_KEY);if(r)bothyNotes=JSON.parse(r);}catch(e){bothyNotes={};} }
 
 function updateStorageStatus(){
   var el=document.getElementById('storage-status');
@@ -2027,13 +2092,15 @@ function renderBothyList(){
   for(var bi=0;bi<filtered.length;bi++){
     var b=filtered[bi];
     var isVis=!!bothyVisited[b.id];
+    var hasNote=isVis && !!bothyNotes[b.id];
     var dateStr = isVis ? '<span class="row-date">'+escHtml(bothyVisited[b.id])+'</span>' : '';
+    var noteStr = hasNote ? '<span class="row-note-dot" title="Has notes">✎</span>' : '';
     var cls = 'mtn-row'+(isVis?' bagged':'')+(b.closed?' bothy-closed':'');
     html+='<div class="'+cls+'" data-bothy-id="'+escHtml(b.id)+'" tabindex="-1">'
       +'<div class="chk" data-toggle="1" role="button" aria-label="Toggle visited"><svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9 10,3"/></svg></div>'
       +'<div class="row-main" data-link="1">'
       +'<div class="row-name">'+escHtml(b.name)+'</div>'
-      +'<div class="row-sub"><span class="row-reg">'+escHtml(b.region)+(b.closed?' <span style="color:var(--terra);font-style:italic">(closed)</span>':'')+'</span>'+dateStr+'</div>'
+      +'<div class="row-sub"><span class="row-reg">'+escHtml(b.region)+(b.closed?' <span style="color:var(--terra);font-style:italic">(closed)</span>':'')+'</span>'+dateStr+noteStr+'</div>'
       +'</div>'
       +'</div>';
   }
@@ -2077,6 +2144,8 @@ function toggleBothyVisited(id){
   }
   saveBothy();
   updateStats();
+  updateBackupStatus();
+  maybeShowOnboarding();
   renderBothyList();
   if(activeTab === 'map') renderMap();
 }
@@ -2087,6 +2156,8 @@ function toggleBagged(id){
   else{bagged[id]=new Date().toISOString().slice(0,10);showToast('Bagged!');}
   save();
   updateStats();
+  updateBackupStatus();
+  maybeShowOnboarding();
   // Update just this row's visual state — no full re-render, preserves scroll position
   updateRowInPlace(id);
   // If sort/filter would move the row, do a full re-render. Otherwise skip.
@@ -2134,10 +2205,15 @@ function openBothyModal(id){
   tag.className='modal-tag b';
   document.getElementById('m-name').textContent=b.name;
   document.getElementById('m-meta').innerHTML='MBA-maintained &middot; '+escHtml(b.region)+(b.closed?' &middot; <em style="color:var(--terra)">Currently closed</em>':'');
-  // Hide peak-only controls
+  // Hide peak-only controls but SHOW notes (bothies have notes too)
   document.getElementById('bag-date-row').style.display='none';
   var notesRow=document.getElementById('notes-row');
-  if(notesRow) notesRow.style.display='none';
+  if(notesRow) notesRow.style.display='';
+  var notesEl=document.getElementById('peak-notes');
+  if(notesEl){
+    notesEl.value = bothyNotes[b.id] || '';
+    notesEl.placeholder = 'Stove, water, condition, who you met…';
+  }
   // Show/hide bothy visit controls
   var bvRow=document.getElementById('bothy-visit-row');
   var btnBag=document.getElementById('btn-bag');
@@ -2175,6 +2251,8 @@ function openModal(id){
   if(bvRow) bvRow.style.display='none';
   var notesRow=document.getElementById('notes-row');
   if(notesRow) notesRow.style.display='';
+  var notesElInit=document.getElementById('peak-notes');
+  if(notesElInit) notesElInit.placeholder='Conditions, companions, route taken…';
   var btnWh=document.getElementById('btn-wh');
   if(btnWh) btnWh.innerHTML='View route on WalkHighlands &#8599;';
   var btnReport=document.getElementById('btn-report');
@@ -2208,7 +2286,10 @@ function saveBothyVisit(){
   var id = target.id;
   var name = target.name;
   bothyVisited[id] = document.getElementById('bothy-visit-date').value || new Date().toISOString().slice(0,10);
-  saveBothy();
+  var notesEl=document.getElementById('peak-notes');
+  if(notesEl && notesEl.value.trim()) bothyNotes[id]=notesEl.value.trim();
+  else delete bothyNotes[id];
+  saveBothy(); saveBothyNotes();
   updateStats();
   closeModal();
   renderBothyList();
@@ -2220,7 +2301,8 @@ function removeBothyVisit(){
   if(!target) return;
   var name = target.name;
   delete bothyVisited[target.id];
-  saveBothy();
+  delete bothyNotes[target.id];
+  saveBothy(); saveBothyNotes();
   updateStats();
   closeModal();
   renderBothyList();
@@ -2267,9 +2349,67 @@ function showToast(msg){
   setTimeout(function(){t.classList.remove('show');},2200);
 }
 
+// ============ BACKUP STATUS + ONBOARDING ============
+function updateBackupStatus(){
+  var sub = document.getElementById('backup-sub');
+  var btn = document.getElementById('btn-export');
+  if(!sub) return;
+  var totalEntries = Object.keys(bagged).length + Object.keys(bothyVisited).length;
+  if(totalEntries === 0){
+    sub.textContent = 'Your bagged peaks live only on this device.';
+    sub.className = 'backup-sub';
+    if(btn) btn.classList.remove('unsaved');
+    return;
+  }
+  var lastExport = _store ? _store.getItem(LAST_EXPORT_KEY) : null;
+  if(!lastExport){
+    sub.innerHTML = '⚠ Never backed up — '+totalEntries+' entries at risk if you clear browser data.';
+    sub.className = 'backup-sub warn';
+    if(btn) btn.classList.add('unsaved');
+    return;
+  }
+  // Calculate days since last export
+  var d = new Date(lastExport);
+  var now = new Date();
+  var days = Math.floor((now - d) / (1000*60*60*24));
+  // Format date nicely
+  var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var dStr = d.getDate()+' '+months[d.getMonth()]+' '+d.getFullYear();
+  if(days <= 7){
+    sub.textContent = '✓ Last backed up '+dStr+' ('+(days===0?'today':days+'d ago')+').';
+    sub.className = 'backup-sub ok';
+    if(btn) btn.classList.remove('unsaved');
+  } else if(days <= 30){
+    sub.textContent = 'Last backed up '+dStr+' ('+days+' days ago).';
+    sub.className = 'backup-sub';
+    if(btn) btn.classList.remove('unsaved');
+  } else {
+    sub.innerHTML = '⚠ Last backed up '+days+' days ago — consider backing up again.';
+    sub.className = 'backup-sub warn';
+    if(btn) btn.classList.add('unsaved');
+  }
+}
+
+function maybeShowOnboarding(){
+  if(!_store) return;
+  var seen = false;
+  try { seen = !!_store.getItem(ONBOARD_KEY); } catch(e){}
+  if(seen) return;
+  var totalEntries = Object.keys(bagged).length + Object.keys(bothyVisited).length;
+  if(totalEntries === 0) return;  // Only show after first interaction
+  var banner = document.getElementById('onboard-banner');
+  if(banner) banner.removeAttribute('hidden');
+}
+
+function dismissOnboarding(){
+  var banner = document.getElementById('onboard-banner');
+  if(banner) banner.setAttribute('hidden', '');
+  if(_store) try { _store.setItem(ONBOARD_KEY, '1'); } catch(e){}
+}
+
 // ============ BACKUP ============
 function exportData(){
-  var payload={app:'scottish-hill-bagger',version:6,exported:new Date().toISOString(),bagged:bagged,bothyVisited:bothyVisited,notes:notes};
+  var payload={app:'scottish-hill-bagger',version:6,exported:new Date().toISOString(),bagged:bagged,bothyVisited:bothyVisited,notes:notes,bothyNotes:bothyNotes};
   var str=JSON.stringify(payload,null,2);
   var blob=new Blob([str],{type:'application/json'});
   var url=URL.createObjectURL(blob);
@@ -2278,7 +2418,10 @@ function exportData(){
   a.download='hill-bagger-backup-'+new Date().toISOString().slice(0,10)+'.json';
   document.body.appendChild(a);a.click();document.body.removeChild(a);
   setTimeout(function(){URL.revokeObjectURL(url);},1000);
-  var nCount=Object.keys(notes).length;
+  var nCount=Object.keys(notes).length+Object.keys(bothyNotes).length;
+  // Record last export date
+  if(_store){ try{ _store.setItem(LAST_EXPORT_KEY, new Date().toISOString()); }catch(e){} }
+  updateBackupStatus();
   showToast('Exported '+Object.keys(bagged).length+' peaks, '+Object.keys(bothyVisited).length+' bothies'+(nCount?' + '+nCount+' notes':''));
 }
 
@@ -2290,13 +2433,15 @@ function importData(file){
       if(data.bagged&&typeof data.bagged==='object'){
         var count=Object.keys(data.bagged).length;
         var bcount=data.bothyVisited?Object.keys(data.bothyVisited).length:0;
-        var ncount=data.notes?Object.keys(data.notes).length:0;
+        var ncount=(data.notes?Object.keys(data.notes).length:0)+(data.bothyNotes?Object.keys(data.bothyNotes).length:0);
         var msg='Import '+count+' bagged peaks'+(bcount?' and '+bcount+' bothy visits':'')+(ncount?' and '+ncount+' notes':'')+'? This will replace your current data.';
         if(confirm(msg)){
           bagged=data.bagged;save();
           if(data.bothyVisited){bothyVisited=data.bothyVisited;saveBothy();}
           if(data.notes){notes=data.notes;saveNotes();}
+          if(data.bothyNotes){bothyNotes=data.bothyNotes;saveBothyNotes();}
           updateStats();renderAll();
+          updateBackupStatus();
           showToast('Imported '+count+' peaks'+(bcount?', '+bcount+' bothies':'')+(ncount?', '+ncount+' notes':''));
         }
       } else alert('Invalid backup file format.');
@@ -2731,6 +2876,8 @@ function attachEvents(){
     if(e.target.files&&e.target.files[0]) importData(e.target.files[0]);
     e.target.value='';
   });
+  var onboardDismiss = document.getElementById('onboard-dismiss');
+  if(onboardDismiss) onboardDismiss.addEventListener('click', dismissOnboarding);
 
   // Close tooltip when clicking elsewhere
   document.addEventListener('click',function(e){
@@ -2980,9 +3127,12 @@ function init(){
   try{load();}catch(e){}
   try{loadBothy();}catch(e){}
   try{loadNotes();}catch(e){}
+  try{loadBothyNotes();}catch(e){}
   try{updateStats();}catch(e){}
   try{attachEvents();}catch(e){}
   try{updateStorageStatus();}catch(e){}
+  try{updateBackupStatus();}catch(e){}
+  try{maybeShowOnboarding();}catch(e){}
   try{tryLoadLeaflet();}catch(e){}
   try{renderAll();}catch(e){
     var c=document.getElementById('list-view');
