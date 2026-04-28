@@ -175,6 +175,12 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 .bothy-disc-icon{font-size:1rem;margin-right:.3rem;opacity:.6}
 .bothy-region-head{padding:.6rem 1rem .3rem;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3)}
 .bothy-closed{opacity:.6}
+/* Notes field */
+#notes-row label{display:block;font-size:.72rem;color:var(--ink3);font-weight:500;margin-bottom:.25rem;margin-top:.75rem}
+#peak-notes{width:100%;box-sizing:border-box;border:1px solid var(--rule);border-radius:8px;padding:.55rem .65rem;font-family:inherit;font-size:.82rem;color:var(--ink);background:var(--bg);resize:vertical;min-height:72px;outline:none;transition:border-color .15s}
+#peak-notes:focus{border-color:var(--accent)}
+#peak-notes::placeholder{color:var(--ink4)}
+.row-note-dot{font-size:.68rem;color:var(--ink3);margin-left:.35rem;opacity:.7}
 /* Floating map search */
 .map-search{position:absolute;top:.6rem;left:.6rem;z-index:1000;font-family:var(--font-body)}
 .map-search-btn{width:36px;height:36px;border-radius:8px;border:1px solid var(--rule);background:rgba(255,255,255,0.95);box-shadow:0 1px 3px rgba(0,0,0,0.15);display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--ink);transition:background .15s}
@@ -481,7 +487,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
       <option value="height-asc">Lowest</option>
       <option value="date">Date bagged</option>
     </select>
-    <button class="chip" data-f="status:unbagged">Unbagged only</button>
+    <button class="chip" data-f="status:bagged">Bagged only</button>
     <button class="chip region-chip" id="region-chip" aria-expanded="false">
       <span id="region-chip-label">Region</span>
       <svg width="10" height="6" viewBox="0 0 10 6" style="margin-left:.3rem;opacity:.6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
@@ -605,6 +611,10 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
     <div id="bothy-visit-row" style="display:none">
     <label for="bothy-visit-date">Date Visited</label>
     <input type="date" id="bothy-visit-date">
+    </div>
+    <div id="notes-row">
+    <label for="peak-notes">Notes</label>
+    <textarea id="peak-notes" placeholder="Conditions, companions, route taken…" rows="3"></textarea>
     </div>
     <div class="modal-acts">
       <button class="btn-p" id="btn-bag">&#10003; Save</button>
@@ -1467,7 +1477,9 @@ var BOTHIES = [
 // ============ STATE ============
 var bagged = {};
 var bothyVisited = {};
+var notes = {};
 var BOTHY_KEY = 'shb_bothy_v1';
+var NOTES_KEY = 'shb_notes_v1';
 var bothySearch = '';
 var bothyRegionFilter = '';
 var bothyVisitedFilter = false;
@@ -1494,6 +1506,8 @@ function save(){ if(!_store)return false; try{_store.setItem(KEY,JSON.stringify(
 function load(){ if(!_store)return; try{var r=_store.getItem(KEY);if(r)bagged=JSON.parse(r);}catch(e){bagged={};} }
 function saveBothy(){ if(!_store)return false; try{_store.setItem(BOTHY_KEY,JSON.stringify(bothyVisited));return true;}catch(e){return false;} }
 function loadBothy(){ if(!_store)return; try{var r=_store.getItem(BOTHY_KEY);if(r)bothyVisited=JSON.parse(r);}catch(e){bothyVisited={};} }
+function saveNotes(){ if(!_store)return false; try{_store.setItem(NOTES_KEY,JSON.stringify(notes));return true;}catch(e){return false;} }
+function loadNotes(){ if(!_store)return; try{var r=_store.getItem(NOTES_KEY);if(r)notes=JSON.parse(r);}catch(e){notes={};} }
 
 function updateStorageStatus(){
   var el=document.getElementById('storage-status');
@@ -1518,7 +1532,7 @@ function getList(){
   else if(activeTab==='corbett') list=list.filter(function(m){return m.type==='corbett';});
   else if(activeTab==='fiona') list=list.filter(function(m){return m.type==='fiona';});
   if(gradeFilter) list=list.filter(function(m){return m.grade===gradeFilter;});
-  if(statusFilter==='unbagged') list=list.filter(function(m){return !bagged[m.id];});
+  if(statusFilter==='bagged') list=list.filter(function(m){return !!bagged[m.id];});
   if(regionFilter) list=list.filter(function(m){return m.region===regionFilter;});
   if(searchTerm){
     var q=searchTerm.toLowerCase();
@@ -1693,14 +1707,16 @@ function openWalkHighlands(peak){
 // ============ ROW HTML ============
 function rowHTML(m,rank){
   var is=!!bagged[m.id];
+  var hasNote=is&&!!notes[m.id];
   var dateStr=is?'<span class="row-date">'+fmtDate(bagged[m.id])+'</span>':'';
+  var noteStr=hasNote?'<span class="row-note-dot" title="Has notes">✎</span>':'';
   var grCls=gradeClass(m.grade);
   var cls='mtn-row'+(is?' bagged':' '+grCls);
   return '<div class="'+cls+'" data-id="'+m.id+'" tabindex="-1">'
     +'<div class="chk" data-toggle="1" role="button" aria-label="Toggle bagged"><svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9 10,3"/></svg></div>'
     +'<div class="row-main" data-link="1">'
     +'<div class="row-name">'+escHtml(m.name)+'</div>'
-    +'<div class="row-sub"><span class="row-reg">'+escHtml(m.region)+'</span>'+dateStr+'</div>'
+    +'<div class="row-sub"><span class="row-reg">'+escHtml(m.region)+'</span>'+dateStr+noteStr+'</div>'
     +'</div>'
     +'<div class="row-ht">'+m.height+'<span>m</span></div>'
     +'</div>';
@@ -1954,9 +1970,10 @@ function dotStyle(type,bagged){
     if(type==='corbett') return {ring:'#235A33', fill:'#9BCB5C', size:9};
     return {ring:'#2E6B3D', fill:'#B5D87E', size:7};                        // fiona
   } else {
-    if(type==='munro')   return {ring:'#3A3A38', fill:'#F5F3EE', size:10};
-    if(type==='corbett') return {ring:'#5A5A56', fill:'#FAF8F3', size:8};
-    return {ring:'#7A766E', fill:'#FFFFFF', size:7};                        // fiona
+    // Clear grey hierarchy — Munros darkest/largest, Fionas lightest/smallest
+    if(type==='munro')   return {ring:'#4A4A46', fill:'#D8D4CC', size:10};  // dark charcoal ring, warm mid-grey fill
+    if(type==='corbett') return {ring:'#7A7670', fill:'#EDE9E2', size:8};   // mid-grey ring, light warm fill
+    return {ring:'#ABABAA', fill:'#F8F6F2', size:7};                        // fiona: light grey, near-white
   }
 }
 // Backward compat alias
@@ -2115,6 +2132,8 @@ function openBothyModal(id){
   document.getElementById('m-meta').innerHTML='MBA-maintained &middot; '+escHtml(b.region)+(b.closed?' &middot; <em style="color:var(--terra)">Currently closed</em>':'');
   // Hide peak-only controls
   document.getElementById('bag-date-row').style.display='none';
+  var notesRow=document.getElementById('notes-row');
+  if(notesRow) notesRow.style.display='none';
   // Show/hide bothy visit controls
   var bvRow=document.getElementById('bothy-visit-row');
   var btnBag=document.getElementById('btn-bag');
@@ -2150,6 +2169,8 @@ function openModal(id){
   document.getElementById('btn-bag').classList.remove('hidden');
   var bvRow=document.getElementById('bothy-visit-row');
   if(bvRow) bvRow.style.display='none';
+  var notesRow=document.getElementById('notes-row');
+  if(notesRow) notesRow.style.display='';
   var btnWh=document.getElementById('btn-wh');
   if(btnWh) btnWh.innerHTML='View route on WalkHighlands &#8599;';
   var btnReport=document.getElementById('btn-report');
@@ -2163,9 +2184,11 @@ function openModal(id){
   document.getElementById('m-name').textContent=m.name;
   document.getElementById('m-meta').innerHTML=m.height+'m &middot; '+escHtml(m.region)+' <span class="grade-pill '+gradeClass(m.grade)+'">'+m.grade+'</span>';
   document.getElementById('bag-date').value=bagged[m.id]||new Date().toISOString().slice(0,10);
+  var notesEl=document.getElementById('peak-notes');
+  if(notesEl) notesEl.value=notes[m.id]||'';
   var btnBag=document.getElementById('btn-bag');
   var btnRm=document.getElementById('btn-rm');
-  if(bagged[m.id]){btnBag.textContent='✓ Update Date';btnRm.classList.remove('hidden');}
+  if(bagged[m.id]){btnBag.textContent='✓ Update';btnRm.classList.remove('hidden');}
   else{btnBag.textContent='✓ Save';btnRm.classList.add('hidden');}
   document.getElementById('modal').classList.add('open');
   setTimeout(function(){
@@ -2207,15 +2230,15 @@ function saveBag(){
   var id = target.id;
   var name = target.name;
   bagged[id]=document.getElementById('bag-date').value||new Date().toISOString().slice(0,10);
-  save();
+  var notesEl=document.getElementById('peak-notes');
+  if(notesEl && notesEl.value.trim()) notes[id]=notesEl.value.trim();
+  else delete notes[id];
+  save(); saveNotes();
   closeModal();
   updateStats();
   updateRowInPlace(id);
-  if(sortBy === 'date' || statusFilter){
-    renderList();
-  } else {
-    if(activeTab === 'map') renderMap();
-  }
+  if(sortBy === 'date' || statusFilter){ renderList(); }
+  else { if(activeTab === 'map') renderMap(); }
   showToast('Bagged: ' + name);
 }
 
@@ -2225,15 +2248,13 @@ function removeBag(){
   var id = target.id;
   var n = target.name;
   delete bagged[id];
-  save();
+  delete notes[id];
+  save(); saveNotes();
   closeModal();
   updateStats();
   updateRowInPlace(id);
-  if(sortBy === 'date' || statusFilter){
-    renderList();
-  } else {
-    if(activeTab === 'map') renderMap();
-  }
+  if(sortBy === 'date' || statusFilter){ renderList(); }
+  else { if(activeTab === 'map') renderMap(); }
   showToast(n + ' removed');
 }
 
@@ -2244,7 +2265,7 @@ function showToast(msg){
 
 // ============ BACKUP ============
 function exportData(){
-  var payload={app:'scottish-hill-bagger',version:6,exported:new Date().toISOString(),bagged:bagged,bothyVisited:bothyVisited};
+  var payload={app:'scottish-hill-bagger',version:6,exported:new Date().toISOString(),bagged:bagged,bothyVisited:bothyVisited,notes:notes};
   var str=JSON.stringify(payload,null,2);
   var blob=new Blob([str],{type:'application/json'});
   var url=URL.createObjectURL(blob);
@@ -2253,7 +2274,8 @@ function exportData(){
   a.download='hill-bagger-backup-'+new Date().toISOString().slice(0,10)+'.json';
   document.body.appendChild(a);a.click();document.body.removeChild(a);
   setTimeout(function(){URL.revokeObjectURL(url);},1000);
-  showToast('Exported '+Object.keys(bagged).length+' peaks, '+Object.keys(bothyVisited).length+' bothies');
+  var nCount=Object.keys(notes).length;
+  showToast('Exported '+Object.keys(bagged).length+' peaks, '+Object.keys(bothyVisited).length+' bothies'+(nCount?' + '+nCount+' notes':''));
 }
 
 function importData(file){
@@ -2264,12 +2286,14 @@ function importData(file){
       if(data.bagged&&typeof data.bagged==='object'){
         var count=Object.keys(data.bagged).length;
         var bcount=data.bothyVisited?Object.keys(data.bothyVisited).length:0;
-        var msg='Import '+count+' bagged peaks'+(bcount?' and '+bcount+' bothy visits':'')+' ? This will replace your current data.';
+        var ncount=data.notes?Object.keys(data.notes).length:0;
+        var msg='Import '+count+' bagged peaks'+(bcount?' and '+bcount+' bothy visits':'')+(ncount?' and '+ncount+' notes':'')+'? This will replace your current data.';
         if(confirm(msg)){
           bagged=data.bagged;save();
           if(data.bothyVisited){bothyVisited=data.bothyVisited;saveBothy();}
+          if(data.notes){notes=data.notes;saveNotes();}
           updateStats();renderAll();
-          showToast('Imported '+count+' peaks'+(bcount?', '+bcount+' bothies':''));
+          showToast('Imported '+count+' peaks'+(bcount?', '+bcount+' bothies':'')+(ncount?', '+ncount+' notes':''));
         }
       } else alert('Invalid backup file format.');
     }catch(err){alert('Could not read backup: '+err.message);}
@@ -2951,6 +2975,7 @@ function hideMapTooltip(){document.getElementById('map-tooltip').classList.remov
 function init(){
   try{load();}catch(e){}
   try{loadBothy();}catch(e){}
+  try{loadNotes();}catch(e){}
   try{updateStats();}catch(e){}
   try{attachEvents();}catch(e){}
   try{updateStorageStatus();}catch(e){}
