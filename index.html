@@ -160,6 +160,9 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 .map-type-btn[data-type="corbett"].on{background:#F0A030;color:#7A4A08}
 .map-type-btn[data-type="fiona"].on{background:#60B8E0;color:#1A5878}
 .map-type-btn[data-type="bothy"].on{background:#B8543A;color:white}
+.map-hide-bagged{padding:.4rem .8rem;background:transparent;border:1px solid var(--rule);border-radius:4px;font-family:inherit;font-size:.74rem;color:var(--ink3);cursor:pointer;white-space:nowrap;transition:all .15s;font-weight:500;letter-spacing:-.005em;-webkit-appearance:none;-webkit-tap-highlight-color:transparent}
+.map-hide-bagged:hover{border-color:var(--ink3);color:var(--ink)}
+.map-hide-bagged.on{background:var(--ink);border-color:var(--ink);color:white;font-weight:600}
 
 
 
@@ -186,6 +189,9 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 .bothy-disc-icon{font-size:1rem;margin-right:.3rem;opacity:.6}
 .bothy-region-head{padding:.6rem 1rem .3rem;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3)}
 .bothy-closed{opacity:.6}
+/* First-time hint banner inside the list */
+.first-time-hint{display:flex;align-items:center;gap:.6rem;padding:.7rem .85rem;margin:.4rem 1rem .8rem;background:var(--accent-light);border:1px dashed var(--accent);border-radius:8px;font-size:.74rem;color:var(--accent-dark);line-height:1.4}
+.hint-icon{font-size:.95rem;flex-shrink:0}
 /* Notes field */
 #notes-row label{display:block;font-size:.72rem;color:var(--ink3);font-weight:500;margin-bottom:.25rem;margin-top:.75rem}
 #peak-notes{width:100%;box-sizing:border-box;border:1px solid var(--rule);border-radius:8px;padding:.55rem .65rem;font-family:inherit;font-size:.82rem;color:var(--ink);background:var(--bg);resize:vertical;min-height:72px;outline:none;transition:border-color .15s}
@@ -193,11 +199,11 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 #peak-notes::placeholder{color:var(--ink4)}
 .row-note-dot{font-size:.68rem;color:var(--ink3);margin-left:.35rem;opacity:.7}
 /* Floating map search */
-.map-search{position:absolute;top:.6rem;left:.6rem;z-index:1000;font-family:var(--font-body)}
+.map-search{position:absolute;top:.6rem;right:.6rem;z-index:1000;font-family:var(--font-body)}
+.map-search-panel{position:absolute;top:0;right:0;width:min(90vw, 320px);background:#fff;border:1px solid var(--rule);border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.15);overflow:hidden}
 .map-search-btn{width:36px;height:36px;border-radius:8px;border:1px solid var(--rule);background:rgba(255,255,255,0.95);box-shadow:0 1px 3px rgba(0,0,0,0.15);display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--ink);transition:background .15s}
 .map-search-btn:hover{background:#fff}
 .map-search-btn:active{transform:scale(.94)}
-.map-search-panel{position:absolute;top:0;left:0;width:min(90vw, 320px);background:#fff;border:1px solid var(--rule);border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.15);overflow:hidden}
 .map-search-input-wrap{position:relative;display:flex;align-items:center;border-bottom:1px solid var(--rule);padding:.55rem .55rem .55rem 2rem}
 .map-search-input-wrap svg{position:absolute;left:.7rem;top:50%;transform:translateY(-50%);color:var(--ink4)}
 .map-search-input{flex:1;border:none;outline:none;background:transparent;font-family:inherit;font-size:.85rem;color:var(--ink);padding:.2rem 0;min-width:0}
@@ -222,8 +228,9 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 .modal-name{font-family:var(--font-display);font-size:1.5rem;font-weight:600;line-height:1.15;margin-bottom:.4rem;color:var(--ink);letter-spacing:-.03em}
 .modal-meta{font-size:.8rem;color:var(--ink3);padding-bottom:.85rem;border-bottom:1px solid var(--rule2);margin-bottom:1rem;display:flex;gap:.6rem;align-items:center;flex-wrap:wrap;font-family:var(--font-mono);letter-spacing:-.01em}
 .modal label{display:block;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);margin-bottom:.3rem;font-weight:600}
-.date-label-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.3rem}
+.date-label-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.3rem;gap:.4rem;flex-wrap:wrap}
 .date-label-row label{margin-bottom:0}
+.date-shortcuts{display:flex;gap:.4rem;flex-wrap:wrap}
 .date-shortcut{background:none;border:none;font-family:inherit;font-size:.66rem;color:var(--accent-dark);cursor:pointer;padding:.1rem .2rem;letter-spacing:.02em;font-weight:500;-webkit-appearance:none;text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:2px}
 .date-shortcut:hover{color:var(--ink);text-decoration-color:var(--ink3)}
 .modal input[type=date]{width:100%;padding:.5rem .65rem;font-family:inherit;font-size:1rem;color:var(--ink);background:var(--bg);border:1px solid var(--rule);outline:none;border-radius:4px;color-scheme:light;margin-bottom:.8rem;-webkit-appearance:none}
@@ -407,7 +414,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 #map-section:not(.hidden){display:block}
 
 /* Compact two-line toolbar */
-.toolbar{padding:1rem 1.25rem .5rem;max-width:680px;margin:0 auto}
+.toolbar{padding:1rem 1.25rem .5rem;max-width:680px;margin:0 auto;position:sticky;top:0;background:var(--bg);z-index:10;border-bottom:1px solid var(--rule2)}
 .srch-wrap{position:relative;margin-bottom:.65rem}
 .srch-wrap svg{position:absolute;left:.85rem;top:50%;transform:translateY(-50%);color:var(--ink4);pointer-events:none}
 .srch{width:100%;padding:.55rem .85rem .55rem 2.2rem;font-family:inherit;font-size:16px;color:var(--ink);background:var(--surface);border:1px solid var(--rule);outline:none;border-radius:8px;-webkit-appearance:none;transition:border-color .15s;letter-spacing:-.005em}
@@ -547,6 +554,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
         <button class="map-type-btn" data-type="fiona">Fionas</button>
         <button class="map-type-btn" data-type="bothy">Bothies</button>
       </div>
+      <button class="map-hide-bagged" id="map-hide-bagged" type="button" aria-pressed="false">Hide bagged</button>
       <span style="font-size:.72rem;color:var(--ink3);font-style:italic" id="map-count"></span>
     </div>
   </div>
@@ -608,6 +616,10 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
       <input class="srch" id="bothy-srch" type="text" placeholder="Search bothies or regions…">
     </div>
     <div class="tb-chips">
+      <select class="sel-chip" id="bothy-sort-sel">
+        <option value="name">A–Z</option>
+        <option value="visited">Recent visit</option>
+      </select>
       <button class="chip" id="bothy-visited-chip">Visited only</button>
       <button class="chip region-chip" id="bothy-region-chip" aria-expanded="false">
         <span id="bothy-region-label">Region</span>
@@ -636,11 +648,25 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
     <h2 class="modal-name" id="m-name"></h2>
     <div class="modal-meta" id="m-meta"></div>
     <div id="bag-date-row">
-    <div class="date-label-row"><label for="bag-date">Date Summited</label><button type="button" class="date-shortcut" data-date-target="bag-date">Today</button></div>
+    <div class="date-label-row">
+      <label for="bag-date">Date Summited</label>
+      <div class="date-shortcuts">
+        <button type="button" class="date-shortcut" data-date-target="bag-date" data-date-offset="0">Today</button>
+        <button type="button" class="date-shortcut" data-date-target="bag-date" data-date-offset="1">Yesterday</button>
+        <button type="button" class="date-shortcut" data-date-target="bag-date" data-date-offset="7">1 wk ago</button>
+      </div>
+    </div>
     <input type="date" id="bag-date">
     </div>
     <div id="bothy-visit-row" style="display:none">
-    <div class="date-label-row"><label for="bothy-visit-date">Date Visited</label><button type="button" class="date-shortcut" data-date-target="bothy-visit-date">Today</button></div>
+    <div class="date-label-row">
+      <label for="bothy-visit-date">Date Visited</label>
+      <div class="date-shortcuts">
+        <button type="button" class="date-shortcut" data-date-target="bothy-visit-date" data-date-offset="0">Today</button>
+        <button type="button" class="date-shortcut" data-date-target="bothy-visit-date" data-date-offset="1">Yesterday</button>
+        <button type="button" class="date-shortcut" data-date-target="bothy-visit-date" data-date-offset="7">1 wk ago</button>
+      </div>
+    </div>
     <input type="date" id="bothy-visit-date">
     </div>
     <div id="notes-row">
@@ -1536,6 +1562,7 @@ var MAP_VIEW_KEY = 'shb_map_view';
 var bothySearch = '';
 var bothyRegionFilter = '';
 var bothyVisitedFilter = false;
+var bothySortBy = 'name';
 var activeTab = 'munro';
 var regionFilter = '';
 var sortBy = 'name';
@@ -1548,6 +1575,7 @@ var KEY = 'shb_v6';
 var pressTimer = null;
 var pressedId = null;
 var mapTypes = {munro: true, corbett: false, fiona: false, bothy: false};
+var hideBagged = false;
 
 // ============ STORAGE ============
 var _store = (function(){
@@ -1779,7 +1807,13 @@ function renderList(){
   var label=activeTab==='munro'?'Munros':activeTab==='corbett'?'Corbetts':activeTab==='fiona'?'Fionas':'summits';
   info.textContent=list.length+' of '+total+' '+label;
   if(!list.length){lv.innerHTML='<div class="empty">No peaks match your filters.</div>';return;}
-  var html='';for(var i=0;i<list.length;i++) html+=rowHTML(list[i]);lv.innerHTML=html;
+  var html='';
+  // First-time hint: shown if user has no bagged peaks yet AND no filter is active
+  if(Object.keys(bagged).length===0 && !searchTerm && !regionFilter && !statusFilter){
+    html+='<div class="first-time-hint"><span class="hint-icon">👆</span><span>Tap any '+label.toLowerCase().replace(/s$/,'')+' to record when you bagged it.</span></div>';
+  }
+  for(var i=0;i<list.length;i++) html+=rowHTML(list[i]);
+  lv.innerHTML=html;
 }
 
 // ============ MAP — SVG ============
@@ -1947,7 +1981,7 @@ function renderLeafletDots(){
   if(!leafletMap) return;
   for(var i=0;i<leafletMarkers.length;i++) leafletMap.removeLayer(leafletMarkers[i]);
   leafletMarkers=[];
-  var peaks=M.filter(function(m){ return mapTypes[m.type]; });
+  var peaks=M.filter(function(m){ return mapTypes[m.type] && (!hideBagged || !bagged[m.id]); });
   // Sort so bagged renders on top
   peaks.sort(function(a,b){ return (bagged[a.id]?1:0) - (bagged[b.id]?1:0); });
   for(var i=0;i<peaks.length;i++){
@@ -1995,6 +2029,7 @@ function renderLeafletDots(){
       var b = BOTHIES[bi];
       var bOpacity = b.closed ? '0.45' : '1';
       var isVis = !!bothyVisited[b.id];
+      if(hideBagged && isVis) continue;
       // Visited: filled terracotta with dark brown ring
       // Not visited: outline cottage with white fill — reads as "empty pin"
       var bFill = isVis ? '#B8543A' : '#FFFFFF';
@@ -2071,8 +2106,20 @@ function renderBothyList(){
     });
   }
 
-  // Sort alphabetically
-  filtered.sort(function(a,b){ return a.name.localeCompare(b.name); });
+  // Sort
+  if(bothySortBy === 'visited'){
+    // Most recently visited first; unvisited float to bottom
+    filtered.sort(function(a,b){
+      var da = bothyVisited[a.id] || '';
+      var db = bothyVisited[b.id] || '';
+      if(!da && !db) return a.name.localeCompare(b.name);
+      if(!da) return 1;
+      if(!db) return -1;
+      return db.localeCompare(da);
+    });
+  } else {
+    filtered.sort(function(a,b){ return a.name.localeCompare(b.name); });
+  }
 
   // Update result count — show visited / total
   var ri = document.getElementById('bothy-res-info');
@@ -2092,6 +2139,10 @@ function renderBothyList(){
 
   // Render flat list — region grouping is handled by the region filter chip
   var html='';
+  // First-time hint for bothies
+  if(Object.keys(bothyVisited).length===0 && !searchTerm && !bothyRegionFilter && !statusFilter){
+    html+='<div class="first-time-hint"><span class="hint-icon">👆</span><span>Tap any bothy to record your visit.</span></div>';
+  }
   for(var bi=0;bi<filtered.length;bi++){
     var b=filtered[bi];
     var isVis=!!bothyVisited[b.id];
@@ -2890,10 +2941,25 @@ function attachEvents(){
         var targetId = btn.getAttribute('data-date-target');
         var input = document.getElementById(targetId);
         if(input){
-          input.value = new Date().toISOString().slice(0,10);
+          var offset = btn.getAttribute('data-date-offset');
+          var d = new Date();
+          if(offset) d.setDate(d.getDate() - parseInt(offset, 10));
+          input.value = d.toISOString().slice(0,10);
         }
       });
     })(dateShortcuts[ds]);
+  }
+
+  // Hide bagged toggle on map
+  var hideBaggedBtn = document.getElementById('map-hide-bagged');
+  if(hideBaggedBtn){
+    hideBaggedBtn.addEventListener('click', function(){
+      hideBagged = !hideBagged;
+      hideBaggedBtn.classList.toggle('on', hideBagged);
+      hideBaggedBtn.setAttribute('aria-pressed', hideBagged ? 'true' : 'false');
+      hideBaggedBtn.textContent = hideBagged ? '✓ Hiding bagged' : 'Hide bagged';
+      renderMap();
+    });
   }
 
   // Close tooltip when clicking elsewhere
@@ -3049,6 +3115,13 @@ function attachEvents(){
   var bothyRegionPanel = document.getElementById('bothy-region-panel');
   var bothyRegionListEl = document.getElementById('bothy-region-list');
   var bothyRegionLabel = document.getElementById('bothy-region-label');
+  var bothySortSel = document.getElementById('bothy-sort-sel');
+  if(bothySortSel){
+    bothySortSel.addEventListener('change', function(){
+      bothySortBy = bothySortSel.value;
+      renderBothyList();
+    });
+  }
 
   function buildBothyRegionList(){
     var source = bothyVisitedFilter ? BOTHIES.filter(function(b){return !!bothyVisited[b.id];}) : BOTHIES;
