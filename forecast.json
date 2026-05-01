@@ -1,53 +1,53 @@
 {
-  "summary": "Friday largely dry with sunny spells and a few rain bursts; Saturday increasingly wet with heavy thundery rain and low cloud; Sunday turning colder with showers, snow flurries at altitude, and a rain band threatening the south.",
+  "summary": "No Friday forecast published; Saturday brings cold rain and fog across Scotland, Sunday clears somewhat with showers and cold northerly airflow.",
   "days": [
     "Fri",
     "Sat",
     "Sun"
   ],
-  "updatedAt": "2026-05-01T07:25:00.000Z",
+  "updatedAt": "2026-05-01T14:58:00.000Z",
   "regions": [
     {
       "name": "Northwest Highlands",
       "forecast": [
         {
-          "sky": "partly-cloudy",
-          "windMph": 25,
-          "windDir": "S",
-          "tempC": 11,
-          "cloudFree": 90,
+          "sky": "cloud",
+          "windMph": 10,
+          "windDir": "N",
+          "tempC": 4,
+          "cloudFree": 50,
           "freezingLevel": 9999,
-          "visibility": "good",
-          "amSky": "partly-cloudy",
-          "pmSky": "rain",
+          "visibility": "moderate",
+          "amSky": "cloud",
+          "pmSky": "cloud",
           "status": "marginal",
-          "note": "patchy rain risk; cloud forming Skye before dusk"
+          "note": "No Friday section published; Saturday data used below"
         },
         {
           "sky": "rain",
-          "windMph": 20,
-          "windDir": "S",
-          "tempC": 4,
-          "cloudFree": 20,
+          "windMph": 30,
+          "windDir": "N",
+          "tempC": 3,
+          "cloudFree": 10,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "note": "heavy thundery bursts risk near Great Glen afternoon"
+          "note": "Heavy bursts near Great Glen; fog most summits all day"
         },
         {
           "sky": "partly-cloudy",
-          "windMph": 25,
+          "windMph": 15,
           "windDir": "N",
           "tempC": 2,
           "cloudFree": 70,
-          "freezingLevel": 9999,
+          "freezingLevel": 900,
           "visibility": "excellent",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "note": "hail and snow flurries by evening as low as 500m"
+          "note": "Snow flurries by evening as low as 500m; frost valleys"
         }
       ]
     },
@@ -55,43 +55,43 @@
       "name": "West Highlands",
       "forecast": [
         {
+          "sky": "cloud",
+          "windMph": 10,
+          "windDir": "N",
+          "tempC": 7,
+          "cloudFree": 50,
+          "freezingLevel": 9999,
+          "visibility": "moderate",
+          "amSky": "cloud",
+          "pmSky": "cloud",
+          "status": "marginal",
+          "note": "No Friday section published; Saturday data used below"
+        },
+        {
           "sky": "partly-cloudy",
-          "windMph": 25,
-          "windDir": "S",
-          "tempC": 11,
-          "cloudFree": 80,
+          "windMph": 10,
+          "windDir": "N",
+          "tempC": 7,
+          "cloudFree": 30,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "marginal",
-          "note": "scattered rain bursts spreading east; isolated thunder risk"
-        },
-        {
-          "sky": "rain",
-          "windMph": 10,
-          "windDir": "S",
-          "tempC": 7,
-          "cloudFree": 30,
-          "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "partly-cloudy",
-          "pmSky": "rain",
-          "status": "poor",
-          "note": "heavy thundery bursts; cloud below 300m near coast"
+          "note": "Heavy possibly thundery bursts afternoon; cloud below 300m coast morning"
         },
         {
           "sky": "partly-cloudy",
-          "windMph": 25,
+          "windMph": 10,
           "windDir": "N",
           "tempC": 4,
           "cloudFree": 60,
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "cloud",
-          "pmSky": "rain",
+          "pmSky": "partly-cloudy",
           "status": "marginal",
-          "note": "rain band risk Arran and S Loch Lomond NP afternoon"
+          "note": "Odd light shower; rain risk Arran/S Loch Lomond NP afternoon"
         }
       ]
     },
@@ -99,30 +99,30 @@
       "name": "Cairngorms & Monadhliath",
       "forecast": [
         {
-          "sky": "partly-cloudy",
-          "windMph": 20,
-          "windDir": "S",
-          "tempC": 13,
-          "cloudFree": 80,
+          "sky": "cloud",
+          "windMph": 10,
+          "windDir": "N",
+          "tempC": 7,
+          "cloudFree": 50,
           "freezingLevel": 9999,
-          "visibility": "good",
-          "amSky": "sun",
-          "pmSky": "rain",
+          "visibility": "moderate",
+          "amSky": "cloud",
+          "pmSky": "cloud",
           "status": "marginal",
-          "note": "heavy bursts and thunder risk toward evening"
+          "note": "No Friday section published; Saturday data used below"
         },
         {
           "sky": "rain",
-          "windMph": 10,
-          "windDir": "S",
-          "tempC": 8,
-          "cloudFree": 40,
+          "windMph": 30,
+          "windDir": "NE",
+          "tempC": 5,
+          "cloudFree": 10,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "note": "heavy thundery bursts; rain setting in east of A9"
+          "note": "Heavy possibly thundery rain east of A9 afternoon; fog filling"
         },
         {
           "sky": "partly-cloudy",
@@ -135,7 +135,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "note": "cloud above 1000m by midday; frost some valleys at first"
+          "note": "Frost some valleys; cloud above 1000m by midday"
         }
       ]
     },
@@ -143,43 +143,43 @@
       "name": "Southeastern Highlands",
       "forecast": [
         {
-          "sky": "partly-cloudy",
-          "windMph": 20,
-          "windDir": "S",
-          "tempC": 12,
-          "cloudFree": 80,
-          "freezingLevel": 9999,
-          "visibility": "good",
-          "amSky": "sun",
-          "pmSky": "rain",
-          "status": "marginal",
-          "note": "scattered heavy bursts with thunder risk late afternoon"
-        },
-        {
-          "sky": "rain",
+          "sky": "cloud",
           "windMph": 10,
-          "windDir": "S",
+          "windDir": "N",
           "tempC": 8,
-          "cloudFree": 50,
+          "cloudFree": 60,
           "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "partly-cloudy",
-          "pmSky": "rain",
-          "status": "poor",
-          "note": "heavy thundery bursts N Angus, Glenshee, north of Glen Garry"
+          "visibility": "moderate",
+          "amSky": "cloud",
+          "pmSky": "cloud",
+          "status": "marginal",
+          "note": "No Friday section published; Saturday data used below"
         },
         {
           "sky": "partly-cloudy",
           "windMph": 25,
+          "windDir": "NE",
+          "tempC": 8,
+          "cloudFree": 20,
+          "freezingLevel": 9999,
+          "visibility": "poor",
+          "amSky": "partly-cloudy",
+          "pmSky": "rain",
+          "status": "marginal",
+          "note": "Heavy bursts N Angus/Glenshee/north of Glen Garry; small thunder risk"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMph": 15,
           "windDir": "NE",
           "tempC": 5,
           "cloudFree": 70,
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "cloud",
-          "pmSky": "rain",
+          "pmSky": "partly-cloudy",
           "status": "marginal",
-          "note": "rain band risk near central belt afternoon; gusts 25mph"
+          "note": "Rain risk near central belt afternoon; frost valleys at first"
         }
       ]
     },
@@ -187,47 +187,47 @@
       "name": "Southern Uplands",
       "forecast": [
         {
-          "sky": "rain",
-          "windMph": 20,
-          "windDir": "S",
-          "tempC": 12,
-          "cloudFree": 90,
-          "freezingLevel": 9999,
-          "visibility": "good",
-          "amSky": "partly-cloudy",
-          "pmSky": "rain",
-          "status": "marginal",
-          "note": "heavy thundery bursts spreading east; rain fairly widespread by evening"
-        },
-        {
           "sky": "cloud",
-          "windMph": 20,
+          "windMph": 15,
           "windDir": "SW",
           "tempC": 8,
-          "cloudFree": 20,
+          "cloudFree": 40,
           "freezingLevel": 9999,
           "visibility": "moderate",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "note": "cloud below 300m Solway coast morning; lifting toward 700m later"
+          "note": "No Friday section published; Saturday data used below"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMph": 15,
+          "windDir": "SW",
+          "tempC": 8,
+          "cloudFree": 70,
+          "freezingLevel": 9999,
+          "visibility": "good",
+          "amSky": "cloud",
+          "pmSky": "partly-cloudy",
+          "status": "marginal",
+          "note": "Drizzle/showers near and west of M74; Galloway coast foggy morning"
         },
         {
           "sky": "rain",
-          "windMph": 35,
+          "windMph": 25,
           "windDir": "NE",
           "tempC": 5,
           "cloudFree": 40,
           "freezingLevel": 9999,
           "visibility": "poor",
-          "amSky": "partly-cloudy",
+          "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "note": "persistent rain Galloway to Cheviots; feels as cold as -5C in wind"
+          "note": "Persistent rain likely Cheviots to Galloway most of day"
         }
       ]
     }
   ],
-  "_generated": "2026-05-01T10:46:52.320Z",
+  "_generated": "2026-05-01T14:20:52.197Z",
   "_anchorDate": "2026-05-01"
 }
