@@ -468,6 +468,30 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 .bothy-pin:hover{transform:scale(1.25)}
 .bothy-pin svg{display:block}
 
+/* ============ TOP-LEVEL TABS (Hills / Map / Weather) ============ */
+.top-tab{flex:1;min-width:80px;padding:1rem .5rem .85rem;background:none;border:none;border-bottom:2px solid transparent;font-family:var(--font-body);font-size:.88rem;font-weight:500;color:var(--ink3);cursor:pointer;white-space:nowrap;text-align:center;transition:color .15s,border-color .15s;letter-spacing:-.005em;-webkit-tap-highlight-color:transparent}
+.top-tab:hover{color:var(--ink2)}
+.top-tab.active{color:var(--ink);border-bottom-color:var(--ink);font-weight:600}
+.top-tab.w.active{border-bottom-color:var(--accent);color:var(--ink)}
+
+/* ============ HILL TYPE SEGMENTED CONTROL ============ */
+.hill-types{background:var(--bg);border-bottom:1px solid var(--rule);display:none}
+.hill-types.show{display:block}
+.hill-types-in{max-width:680px;margin:0 auto;padding:.6rem 1.25rem;display:flex;justify-content:flex-start}
+.hill-type-toggle{display:inline-flex;border:1px solid var(--rule);border-radius:4px;overflow:hidden}
+.hill-type{padding:.4rem .95rem;background:transparent;border:none;border-right:1px solid var(--rule);font-family:inherit;font-size:.76rem;color:var(--ink3);cursor:pointer;white-space:nowrap;transition:all .15s;font-weight:500;letter-spacing:-.005em;-webkit-appearance:none;-webkit-tap-highlight-color:transparent}
+.hill-type:last-child{border-right:none}
+.hill-type:hover{background:var(--bg);color:var(--ink)}
+.hill-type.active{font-weight:600}
+.hill-type[data-tab="munro"].active{background:#A8D447;color:#1A4D28}
+.hill-type[data-tab="corbett"].active{background:#F0A030;color:#7A4A08}
+.hill-type[data-tab="fiona"].active{background:#60B8E0;color:#1A5878}
+.hill-type[data-tab="bothy"].active{background:#B8543A;color:white}
+
+/* Hide scores row when on weather tab */
+body.on-weather .scores{display:none}
+body.on-weather .desktop-stats{display:none}
+
 /* ============ WEATHER PANEL ============ */
 .tab.w.active{border-bottom-color:var(--accent)}
 #weather-section{padding:0}
@@ -570,14 +594,23 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
       </div>
     </div>
     <div class="tabs-in">
-    <button class="tab m active" data-tab="munro">Munros</button>
-    <button class="tab c" data-tab="corbett">Corbetts</button>
-    <button class="tab f" data-tab="fiona">Fionas</button>
-    <button class="tab b" data-tab="bothy">Bothies</button>
-    <button class="tab" data-tab="map">Map</button>
-    <button class="tab w" data-tab="weather">Weather</button>
+    <button class="top-tab active" data-toptab="hills">Hills</button>
+    <button class="top-tab" data-toptab="map">Map</button>
+    <button class="top-tab w" data-toptab="weather">Weather</button>
   </div>
 </nav>
+
+<!-- HILL TYPE SEGMENTED CONTROL (only visible when Hills top-tab is active) -->
+<div class="hill-types" id="hill-types">
+  <div class="hill-types-in">
+    <div class="hill-type-toggle">
+      <button class="hill-type m active" data-tab="munro">Munros</button>
+      <button class="hill-type c" data-tab="corbett">Corbetts</button>
+      <button class="hill-type f" data-tab="fiona">Fionas</button>
+      <button class="hill-type b" data-tab="bothy">Bothies</button>
+    </div>
+  </div>
+</div>
 
 <!-- LIST VIEW -->
 <div id="list-section">
@@ -2621,15 +2654,36 @@ function toggleRegion(head){
 }
 
 function attachEvents(){
-  var tabs=document.querySelectorAll('.tab');
-  for(var i=0;i<tabs.length;i++){
+  // Top-tabs (Hills / Map / Weather)
+  var topTabs=document.querySelectorAll('.top-tab');
+  for(var i=0;i<topTabs.length;i++){
     (function(btn){
       btn.addEventListener('click',function(){
-        var all=document.querySelectorAll('.tab');
+        var which = btn.getAttribute('data-toptab');
+        var all=document.querySelectorAll('.top-tab');
         for(var j=0;j<all.length;j++) all[j].classList.remove('active');
         btn.classList.add('active');
-        activeTab=btn.getAttribute('data-tab');
-        // Clear region filter when changing tabs (different peak set)
+
+        // Show/hide hill-type segmented control
+        var hillTypesBar = document.getElementById('hill-types');
+        if(hillTypesBar){
+          if(which==='hills') hillTypesBar.classList.add('show');
+          else hillTypesBar.classList.remove('show');
+        }
+
+        // Set activeTab based on top-tab choice
+        if(which==='map') activeTab='map';
+        else if(which==='weather') activeTab='weather';
+        else {
+          // hills — keep last hill type, or default to munro
+          var activeHillBtn = document.querySelector('.hill-type.active');
+          activeTab = activeHillBtn ? activeHillBtn.getAttribute('data-tab') : 'munro';
+        }
+
+        // Toggle weather body class for score row hiding
+        document.body.classList.toggle('on-weather', activeTab==='weather');
+
+        // Clear filters as before
         if(regionFilter){
           regionFilter='';
           var rc=document.getElementById('region-chip');
@@ -2637,7 +2691,6 @@ function attachEvents(){
           if(rc) rc.classList.remove('has-selection');
           if(rl) rl.textContent='Region';
         }
-        // Clear bothy filters when leaving bothy tab
         if(activeTab !== 'bothy'){
           bothySearch=''; bothyRegionFilter=''; bothyVisitedFilter=false;
           var bs=document.getElementById('bothy-srch');
@@ -2653,7 +2706,58 @@ function attachEvents(){
         }
         renderAll();
       });
-    })(tabs[i]);
+    })(topTabs[i]);
+  }
+
+  // Hill-type segmented control (Munros / Corbetts / Fionas / Bothies)
+  var hillTypeBtns=document.querySelectorAll('.hill-type');
+  for(var i=0;i<hillTypeBtns.length;i++){
+    (function(btn){
+      btn.addEventListener('click',function(){
+        var all=document.querySelectorAll('.hill-type');
+        for(var j=0;j<all.length;j++) all[j].classList.remove('active');
+        btn.classList.add('active');
+        activeTab = btn.getAttribute('data-tab');
+        document.body.classList.remove('on-weather');
+
+        // Make sure the Hills top-tab is active
+        var topAll = document.querySelectorAll('.top-tab');
+        for(var k=0;k<topAll.length;k++){
+          topAll[k].classList.toggle('active', topAll[k].getAttribute('data-toptab')==='hills');
+        }
+        var ht = document.getElementById('hill-types'); if(ht) ht.classList.add('show');
+
+        // Clear filters when switching hill type
+        if(regionFilter){
+          regionFilter='';
+          var rc=document.getElementById('region-chip');
+          var rl=document.getElementById('region-chip-label');
+          if(rc) rc.classList.remove('has-selection');
+          if(rl) rl.textContent='Region';
+        }
+        if(activeTab !== 'bothy'){
+          bothySearch=''; bothyRegionFilter=''; bothyVisitedFilter=false;
+          var bs=document.getElementById('bothy-srch');
+          var bvc=document.getElementById('bothy-visited-chip');
+          var brc=document.getElementById('bothy-region-chip');
+          var brl=document.getElementById('bothy-region-label');
+          if(bs) bs.value='';
+          if(bvc) bvc.classList.remove('on');
+          if(brc){ brc.classList.remove('has-selection'); brc.setAttribute('aria-expanded','false'); }
+          if(brl) brl.textContent='Region';
+          var brp=document.getElementById('bothy-region-panel');
+          if(brp) brp.setAttribute('hidden','');
+        }
+        renderAll();
+      });
+    })(hillTypeBtns[i]);
+  }
+
+  // Initialise hill-types visibility based on starting tab
+  var initialTopTab = document.querySelector('.top-tab.active');
+  if(initialTopTab){
+    var ht0 = document.getElementById('hill-types');
+    if(ht0 && initialTopTab.getAttribute('data-toptab')==='hills') ht0.classList.add('show');
   }
 
   document.getElementById('srch').addEventListener('input',function(e){searchTerm=e.target.value;renderList();});
@@ -3609,7 +3713,7 @@ function wxRender(){
     }catch(e){}
   }
   var html = '';
-  if(summary) html += '<div class="wx-summary">'+wxEsc(summary)+'</div>';
+  // Header: updated time + refresh (no separate summary banner)
   html += '<div class="wx-meta-row"><span>'+wxEsc(updatedTxt)+'</span><button class="wx-refresh" id="wx-refresh-btn"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg>refresh</button></div>';
   html += '<div class="wx-list">';
   var regions = wxData.regions||[];
@@ -3690,13 +3794,20 @@ function wxJumpToMunros(areaName){
   var trackerRegions = WX_AREA_TO_TRACKER[areaName] || [];
   if(!trackerRegions.length) return;
 
-  // Click the Munros tab to inherit existing tab-switch logic
-  var munroTab = document.querySelector('.tab[data-tab="munro"]');
-  if(munroTab) munroTab.click();
+  // Activate Hills top-tab + Munros sub-tab
+  var topTabs = document.querySelectorAll('.top-tab');
+  for(var i=0;i<topTabs.length;i++){
+    topTabs[i].classList.toggle('active', topTabs[i].getAttribute('data-toptab')==='hills');
+  }
+  var hillTypes = document.querySelectorAll('.hill-type');
+  for(var j=0;j<hillTypes.length;j++){
+    hillTypes[j].classList.toggle('active', hillTypes[j].getAttribute('data-tab')==='munro');
+  }
+  var ht = document.getElementById('hill-types'); if(ht) ht.classList.add('show');
+  activeTab = 'munro';
+  document.body.classList.remove('on-weather');
 
-  // After tab switch, set up filters
   setTimeout(function(){
-    // If there's only one tracker region, use the existing region filter
     if(trackerRegions.length===1){
       regionFilter = trackerRegions[0];
       var rc = document.getElementById('region-chip');
@@ -3704,23 +3815,16 @@ function wxJumpToMunros(areaName){
       if(rc) rc.classList.add('has-selection');
       if(rl) rl.textContent = trackerRegions[0];
     } else {
-      // Multi-region: search by region name pattern. The list already filters
-      // by name OR region, so we use a regex-like OR via search field.
-      // Simpler: leave region filter clear, but show a one-time hint.
       regionFilter = '';
     }
-    // Hide bagged so the user sees what they still need
     if(typeof activeFilters !== 'undefined' && activeFilters){
       activeFilters['status:bagged'] = false;
     }
-    // Run a custom filter callback if available, else just re-render
-    if(typeof renderList === 'function') renderList();
-    // Show toast
+    renderAll();
     if(typeof showToast === 'function'){
       var n = wxCountUnbaggedInArea(areaName);
       showToast('Showing '+n+' unbagged Munro'+(n===1?'':'s')+' in '+areaName);
     }
-    // Scroll to top
     window.scrollTo({top:0,behavior:'smooth'});
   }, 50);
 }
