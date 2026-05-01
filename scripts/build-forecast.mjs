@@ -88,6 +88,13 @@ You will be given the live text of 5 MWIS regional forecast pages, fetched direc
 CRITICAL:
 - The first day in your output MUST be today (${dayShort(day0)}). If the page's first labelled day is the day BEFORE today, skip that section and use today's section onward.
 - Match data day-by-day to the date headings in each MWIS page (e.g. "Friday 1st May 2026"). Do not blend days.
+- Region names in your output must match EXACTLY (verbatim, including punctuation and capitalisation):
+    "Northwest Highlands"
+    "West Highlands"
+    "Cairngorms & Monadhliath"
+    "Southeastern Highlands"
+    "Southern Uplands"
+- Read MWIS's headline verdict for each day FIRST. MWIS leads each day with summary lines like "Unbroken bright sunshine" or "Extensive sunshine, mountains free of cloud" or "Heavy thundery bursts". This headline is the ground truth for sky/cloud — anchor your sky, cloudFree, and status to it. Don't dilute it because a later sentence mentions a small risk.
 - Use direct phrasing from MWIS for the "note" field — keep MWIS's specific places, named hazards, and gust speeds (e.g. "gusts 40mph east from Cairngorm plateau", "thundery bursts north of Glen Garry", "Arran/Jura/Mull strongest").
 
 Return ONLY a single JSON object — no markdown fences, no preamble. Start with { end with }.
@@ -99,7 +106,7 @@ Schema:
   "updatedAt": "ISO 8601 — use the most recent MWIS 'Last updated' timestamp across the 5 pages",
   "regions": [
     {
-      "name": "exact region name from the list",
+      "name": "EXACT name from the 5-name list above",
       "forecast": [
         {
           "sky": "sun|partly-cloudy|cloud|rain|fog|snow|storm",
@@ -120,15 +127,19 @@ Schema:
 }
 
 Field rules:
-- windMph: numeric average of the MWIS range. If MWIS says "20-30mph", use 25. If gusts are mentioned and stronger than the average (e.g. "20mph but gusty 40mph"), use the GUST value because it's the safety-relevant number.
-- windDir: dominant compass direction.
-- tempC: temperature on tops/summits.
-- cloudFree: % chance of cloud-free summits. MWIS phrases like "extensive sunshine, mountains free of cloud" → 90-95. "Cloud may form below 600m" → 60-70. "Extensive cloud, may not clear all day" → 10-20.
-- freezingLevel: metres ASL. "Above the summits" → 9999. If MWIS says "freezing level 700m" → 700.
-- status: "go" = good Munro day (low wind, cloud-free tops, dry, safe temps). "marginal" = doable with caveats (gusty, mixed, low confidence forecast). "poor" = avoid (gales, heavy rain, white-out, dangerous).
-- amSky/pmSky: split if MWIS says morning differs from afternoon (e.g. "dry morning, rain by afternoon" → amSky: sun, pmSky: rain).
-- visibility: excellent (>30km), good (10-30km), moderate (4-10km), poor (<4km).
-- note: max 10 words. Reuse MWIS's distinctive language. Examples: "gusts 40mph Cairngorm plateau", "thundery bursts Great Glen pm", "frost overnight, snow above 700m". DO NOT write generic notes like "patchy rain possible".
+- sky / amSky / pmSky: pick the headline. If MWIS says "Unbroken bright sunshine" use "sun", NOT "partly-cloudy". "Extensive sunshine" = sun. "Mostly dry, occasional sunshine, some rain" = partly-cloudy. Only use "rain" if MWIS describes rain as the dominant condition. Only use "cloud" if MWIS says cloud sits below summit height most of the day.
+- cloudFree: anchor to MWIS's cloud-base description. "Mountains free of cloud" / "free of cloud once mist disperses" = 90-95. "Cloud above 600m" with summits >900m = 70-80. "Cloud filling above 600m" with summits ~900m = 30-50. "Cloud may not clear all day" = 10-20. Don't be conservative on bright days.
+- windMph: numeric. If MWIS gives a range "20-30mph" use the average (25). If MWIS warns of stronger gusts (e.g. "gusty 40mph"), use the GUST value because it's the safety-relevant number for hill walkers.
+- windDir: dominant compass direction from MWIS (often "SE", "S", "SW" etc.). Don't simplify "southeasterly" to "S".
+- tempC: temperature on tops/summits as MWIS states it. If MWIS says "10 to 15C on tops" use 12 or 13.
+- freezingLevel: metres ASL. "Above the summits" → 9999. "Freezing level 700m" → 700. Read MWIS carefully — most spring/summer days will be 9999.
+- visibility: excellent (>30km), good (10-30km), moderate (4-10km), poor (<4km). MWIS phrases like "Excellent or superb visibility" → excellent. "Visibility very good" → good. "Visibility often poor in rain" → poor.
+- status: "go" = MWIS's headline is positive (sunshine, dry, manageable wind, comfortable temp). "marginal" = mixed (some rain, gusty, low confidence). "poor" = MWIS warns of heavy rain, thunder, gales, white-out, or dangerous conditions.
+- note: max 10 words. Reuse MWIS's distinctive language. Examples of good notes: "gusts 40mph Cairngorm plateau", "thundery bursts Great Glen pm", "frost overnight, snow above 700m", "Arran/Jura/Mull strongest 35-40mph". DO NOT write generic notes like "patchy rain possible".
+
+Worked example — if MWIS West Highlands Day 1 says:
+  "Bright sunshine. Locally gusty wind. Southeasterly 20 to 30mph, strongest and most gusty Arran, Jura and Mull, where sometimes 35 or 40mph in morning. Mountains free of cloud. Excellent or superb visibility. 10 to 15C on tops."
+Then output: sky:"sun", amSky:"sun", pmSky:"sun", windMph:40, windDir:"SE", tempC:13, cloudFree:95, visibility:"excellent", status:"go", note:"gusts 35-40mph Arran/Jura/Mull morning"
 
 INPUT (live MWIS text):
 
@@ -218,6 +229,31 @@ const expectedFirst = dayShort(day0);
 if (data.days?.[0] !== expectedFirst) {
   console.warn(`⚠ Expected first day "${expectedFirst}", got "${data.days?.[0]}" — overriding`);
   data.days = [dayShort(day0), dayShort(day1), dayShort(day2)];
+}
+
+// 5. Normalise region names — defensive fix in case the model drifts
+// (e.g. "The Northwest Highlands" → "Northwest Highlands")
+const NAME_ALIASES = {
+  'the northwest highlands': 'Northwest Highlands',
+  'northwest highlands': 'Northwest Highlands',
+  'nw highlands': 'Northwest Highlands',
+  'west highlands': 'West Highlands',
+  'cairngorms np and monadhliath': 'Cairngorms & Monadhliath',
+  'cairngorms and monadhliath': 'Cairngorms & Monadhliath',
+  'cairngorms & monadhliath': 'Cairngorms & Monadhliath',
+  'cairngorms': 'Cairngorms & Monadhliath',
+  'southeastern highlands': 'Southeastern Highlands',
+  'south eastern highlands': 'Southeastern Highlands',
+  'southern uplands': 'Southern Uplands',
+};
+if (Array.isArray(data.regions)) {
+  data.regions.forEach((r) => {
+    const key = (r.name || '').toLowerCase().trim();
+    if (NAME_ALIASES[key] && NAME_ALIASES[key] !== r.name) {
+      console.log(`Normalised region name: "${r.name}" → "${NAME_ALIASES[key]}"`);
+      r.name = NAME_ALIASES[key];
+    }
+  });
 }
 
 writeFileSync('forecast.json', JSON.stringify(data, null, 2));
