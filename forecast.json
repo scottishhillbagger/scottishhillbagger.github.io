@@ -1,53 +1,53 @@
 {
-  "summary": "Friday mostly dry and sunny with light-moderate south winds; Saturday unsettled with low-confidence heavy rain and thundery bursts; Sunday cold northerly brings snow flurries on Scottish tops.",
+  "summary": "Friday largely dry and warm with some rain bursts; Saturday wet and cloudy with thundery risk; Sunday cooler with showers and snow flurries in north.",
   "days": [
     "Fri",
     "Sat",
     "Sun"
   ],
-  "updatedAt": "2026-04-30T15:09:00Z",
+  "updatedAt": "2026-05-01T07:25:00.000Z",
   "regions": [
     {
-      "name": "Northwest Highlands",
+      "name": "The Northwest Highlands",
       "forecast": [
         {
           "sky": "partly-cloudy",
           "windMph": 20,
           "windDir": "S",
-          "tempC": 11,
-          "cloudFree": 75,
+          "tempC": 7,
+          "cloudFree": 90,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "partly-cloudy",
-          "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "note": "Rain possible some areas, haze developing"
+          "pmSky": "rain",
+          "status": "go",
+          "note": "Patchy rain; evening cloud forming west across Skye"
         },
         {
           "sky": "rain",
           "windMph": 10,
-          "windDir": "variable",
-          "tempC": 4,
-          "cloudFree": 15,
+          "windDir": "N",
+          "tempC": 3,
+          "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "note": "Thundery bursts near Great Glen afternoon"
+          "note": "Heavy thundery bursts risk near Great Glen afternoon"
         },
         {
-          "sky": "snow",
-          "windMph": 28,
+          "sky": "partly-cloudy",
+          "windMph": 15,
           "windDir": "N",
           "tempC": 2,
-          "cloudFree": 20,
-          "freezingLevel": 700,
-          "visibility": "poor",
-          "amSky": "rain",
-          "pmSky": "snow",
-          "status": "poor",
-          "note": "Snow flurries on tops, freezing level drops"
+          "cloudFree": 70,
+          "freezingLevel": 850,
+          "visibility": "excellent",
+          "amSky": "cloud",
+          "pmSky": "partly-cloudy",
+          "status": "marginal",
+          "note": "Hail and snow flurries by evening as low as 500m"
         }
       ]
     },
@@ -58,84 +58,84 @@
           "sky": "partly-cloudy",
           "windMph": 20,
           "windDir": "S",
-          "tempC": 10,
+          "tempC": 8,
           "cloudFree": 80,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "sun",
-          "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "note": "Patchy rain possible some areas afternoon"
+          "pmSky": "rain",
+          "status": "go",
+          "note": "Scattered rain bursts spreading east; isolated thunder risk"
         },
         {
           "sky": "rain",
-          "windMph": 8,
-          "windDir": "variable",
+          "windMph": 10,
+          "windDir": "S",
           "tempC": 7,
-          "cloudFree": 10,
+          "cloudFree": 30,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "note": "Low confidence; heavy thundery bursts possible"
+          "note": "Heavy thundery bursts; cloud below 300m toward coast"
         },
         {
-          "sky": "snow",
-          "windMph": 28,
+          "sky": "partly-cloudy",
+          "windMph": 15,
           "windDir": "N",
-          "tempC": 2,
-          "cloudFree": 20,
-          "freezingLevel": 700,
-          "visibility": "poor",
-          "amSky": "rain",
-          "pmSky": "snow",
-          "status": "poor",
-          "note": "Hail and snow flurries, freezing on summits"
+          "tempC": 4,
+          "cloudFree": 60,
+          "freezingLevel": 9999,
+          "visibility": "excellent",
+          "amSky": "cloud",
+          "pmSky": "rain",
+          "status": "marginal",
+          "note": "Rain risk Arran and southern Loch Lomond NP afternoon"
         }
       ]
     },
     {
-      "name": "Cairngorms & Monadhliath",
+      "name": "Cairngorms NP and Monadhliath",
       "forecast": [
         {
           "sky": "partly-cloudy",
-          "windMph": 15,
+          "windMph": 17,
           "windDir": "S",
-          "tempC": 9,
-          "cloudFree": 85,
+          "tempC": 13,
+          "cloudFree": 80,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "sun",
-          "pmSky": "partly-cloudy",
+          "pmSky": "rain",
           "status": "go",
-          "note": "Mostly dry; slight haze, high cloud veil"
+          "note": "Dry morning; heavy thundery bursts risk toward evening"
         },
         {
           "sky": "rain",
-          "windMph": 8,
-          "windDir": "variable",
-          "tempC": 7,
-          "cloudFree": 20,
+          "windMph": 10,
+          "windDir": "S",
+          "tempC": 8,
+          "cloudFree": 40,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "note": "Thundery bursts possible; low forecast confidence"
+          "note": "Heavy thundery bursts; rain setting in east of A9"
         },
         {
-          "sky": "snow",
-          "windMph": 28,
+          "sky": "partly-cloudy",
+          "windMph": 10,
           "windDir": "N",
-          "tempC": 1,
-          "cloudFree": 15,
-          "freezingLevel": 700,
-          "visibility": "poor",
-          "amSky": "rain",
-          "pmSky": "snow",
-          "status": "poor",
-          "note": "Sub-zero summits; hail and snow, valley frosts"
+          "tempC": 5,
+          "cloudFree": 50,
+          "freezingLevel": 9999,
+          "visibility": "excellent",
+          "amSky": "cloud",
+          "pmSky": "partly-cloudy",
+          "status": "marginal",
+          "note": "Cloud above 1000m by midday; frost some valleys at first"
         }
       ]
     },
@@ -143,43 +143,43 @@
       "name": "Southeastern Highlands",
       "forecast": [
         {
-          "sky": "sun",
-          "windMph": 25,
-          "windDir": "SE",
-          "tempC": 9,
-          "cloudFree": 90,
+          "sky": "partly-cloudy",
+          "windMph": 17,
+          "windDir": "S",
+          "tempC": 12,
+          "cloudFree": 80,
           "freezingLevel": 9999,
-          "visibility": "excellent",
+          "visibility": "good",
           "amSky": "sun",
-          "pmSky": "sun",
+          "pmSky": "rain",
           "status": "go",
-          "note": "Bright sunshine; gusty plateau winds Deeside"
+          "note": "Heavy thundery bursts late afternoon; locally rain sets in"
         },
         {
           "sky": "rain",
-          "windMph": 8,
-          "windDir": "variable",
-          "tempC": 7,
-          "cloudFree": 15,
+          "windMph": 10,
+          "windDir": "S",
+          "tempC": 8,
+          "cloudFree": 50,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "cloud",
           "pmSky": "rain",
-          "status": "poor",
-          "note": "Heavy thundery rain; low confidence forecast"
+          "status": "marginal",
+          "note": "Thundery bursts north of Glen Garry; N Angus rain setting in"
         },
         {
-          "sky": "snow",
-          "windMph": 28,
+          "sky": "partly-cloudy",
+          "windMph": 15,
           "windDir": "N",
-          "tempC": 1,
-          "cloudFree": 15,
-          "freezingLevel": 700,
-          "visibility": "poor",
-          "amSky": "rain",
-          "pmSky": "snow",
-          "status": "poor",
-          "note": "Cold northerly; snow above 700m, frosts"
+          "tempC": 5,
+          "cloudFree": 70,
+          "freezingLevel": 9999,
+          "visibility": "excellent",
+          "amSky": "cloud",
+          "pmSky": "rain",
+          "status": "marginal",
+          "note": "Rain band risk near central belt afternoon; frost first"
         }
       ]
     },
@@ -187,46 +187,47 @@
       "name": "Southern Uplands",
       "forecast": [
         {
-          "sky": "sun",
+          "sky": "rain",
           "windMph": 15,
           "windDir": "S",
-          "tempC": 5,
-          "cloudFree": 85,
+          "tempC": 12,
+          "cloudFree": 90,
           "freezingLevel": 9999,
-          "visibility": "excellent",
+          "visibility": "good",
           "amSky": "sun",
-          "pmSky": "partly-cloudy",
-          "status": "go",
-          "note": "Sunny morning; high cloud and rain west later"
-        },
-        {
-          "sky": "rain",
-          "windMph": 8,
-          "windDir": "variable",
-          "tempC": 6,
-          "cloudFree": 20,
-          "freezingLevel": 9999,
-          "visibility": "moderate",
-          "amSky": "cloud",
           "pmSky": "rain",
           "status": "marginal",
-          "note": "Showers possible; winds light, uncertain detail"
+          "note": "Heavy thundery bursts spreading east; first dry Galloway"
+        },
+        {
+          "sky": "cloud",
+          "windMph": 18,
+          "windDir": "SW",
+          "tempC": 8,
+          "cloudFree": 20,
+          "freezingLevel": 9999,
+          "visibility": "good",
+          "amSky": "cloud",
+          "pmSky": "partly-cloudy",
+          "status": "marginal",
+          "note": "Solway coast cloud below 300m morning; lifting toward 700m"
         },
         {
           "sky": "rain",
           "windMph": 28,
           "windDir": "N",
-          "tempC": 2,
-          "cloudFree": 15,
-          "freezingLevel": 800,
+          "tempC": 5,
+          "cloudFree": 40,
+          "freezingLevel": 9999,
           "visibility": "poor",
-          "amSky": "rain",
-          "pmSky": "snow",
+          "amSky": "cloud",
+          "pmSky": "rain",
           "status": "poor",
-          "note": "Cold northerly; snow/hail on higher tops"
+          "note": "Persistent rain Galloway to Cheviots; gusts possibly 35mph"
         }
       ]
     }
   ],
-  "_generated": "2026-05-01T09:57:13.414Z"
+  "_generated": "2026-05-01T10:41:36.963Z",
+  "_anchorDate": "2026-05-01"
 }
