@@ -36,7 +36,7 @@ function stripToText(html) {
   return html
     .replace(/<script[\s\S]*?<\/script>/gi, '')
     .replace(/<style[\s\S]*?<\/style>/gi, '')
-    .replace(/<!--[\s\S]*?-->/g, '')
+    .replace(//g, '')
     .replace(/<[^>]+>/g, ' ')
     .replace(/&nbsp;/g, ' ')
     .replace(/&amp;/g, '&')
@@ -138,4 +138,136 @@ ${pagesBlock}`;
 
 // --- JSON parsing with repair ---------------------------------------
 const parseJSON = (text) => {
-  let s = text.trim().replace(/^
+  // Using \x60 to represent backticks to prevent markdown parser truncation
+  let s = text.trim().replace(/^\x60\x60\x60(?:json)?\s*/i, '').replace(/\s*\x60\x60\x60$/, '');
+  const first = s.indexOf('{');
+  const last = s.lastIndexOf('}');
+  if (first === -1) throw new Error('no JSON object found');
+  s = last > first ? s.slice(first, last + 1) : s.slice(first);
+
+  const tryIt = (str) => { try { return JSON.parse(str); } catch { return null; } };
+  let parsed = tryIt(s);
+  if (parsed) return parsed;
+
+  let r = s.replace(/,(\s*[}\]])/g, '$1');
+  parsed = tryIt(r);
+  if (parsed) return parsed;
+
+  const opens = (r.match(/\{/g) || []).length;
+  const closes = (r.match(/\}/g) || []).length;
+  const aOpens = (r.match(/\[/g) || []).length;
+  const aCloses = (r.match(/\]/g) || []).length;
+  let trimmed = r.replace(/,?\s*"[^"]*$/, '').replace(/,?\s*\{[^}]*$/, '').replace(/,\s*$/, '');
+  const candidate = trimmed + ']'.repeat(Math.max(0, aOpens - aCloses)) + '}'.repeat(Math.max(0, opens - closes));
+  parsed = tryIt(candidate);
+  if (parsed) return parsed;
+  throw new Error('malformed JSON from model');
+};
+
+// --- Main -----------------------------------------------------------
+console.log(`Build started ${now.toISOString()}`);
+
+// 1. Fetch all 5 MWIS pages
+console.log('Fetching MWIS pages…');
+const pages = await Promise.all(REGIONS.map(async (r) => {
+  try {
+    const text = await fetchMWIS(r.id);
+    const updated = extractMWISUpdated(text);
+    const updatedISO = updated ? updated.toISOString() : null;
+    console.log(`  ✓ ${r.name} — ${text.length} chars, MWIS updated: ${updatedISO || '?'}`);
+    return { id: r.id, name: r.name, url: `https://www.mwis.org.uk/forecasts/scottish/${r.id}`, text, updatedAt: updatedISO };
+  } catch (e) {
+    console.error(`  ✗ ${r.name} — ${e.message}`);
+    return { id: r.id, name: r.name, url: `https://www.mwis.org.uk/forecasts/scottish/${r.id}`, text: '', updatedAt: null, error: e.message };
+  }
+}));
+
+// Freshness check & dynamic date anchor calculation
+const updatedTimes = pages.map(p => p.updatedAt).filter(Boolean).map(t => new Date(t).getTime());
+const newestUpdate = updatedTimes.length ? Math.max(...updatedTimes) : null;
+const ageHours = newestUpdate ? (Date.now() - newestUpdate) / 36e5 : null;
+
+if (ageHours !== null && ageHours > 24) {
+  console.warn(`⚠ Newest MWIS update is ${ageHours.toFixed(1)}h old — data may be stale`);
+}
+
+// Determine if we are looking at the Morning or Afternoon bulletin
+let isAfternoonBulletin = false;
+if (newestUpdate) {
+  // Extract the hour of the latest MWIS update in UK time
+  const updateUKHour = parseInt(new Date(newestUpdate).toLocaleString('en-GB', { hour: 'numeric', hour12: false, timeZone: 'Europe/London' }), 10);
+  // Afternoon bulletin typically published ~16:30. 14:00 is a safe threshold.
+  if (updateUKHour >= 14) isAfternoonBulletin = true;
+} else {
+  // Fallback to system run time if parsing failed completely
+  const runUKHour = parseInt(todayUK.toLocaleString('en-GB', { hour: 'numeric', hour12: false, timeZone: 'Europe/London' }), 10);
+  if (runUKHour >= 16) isAfternoonBulletin = true;
+}
+
+const startOffset = isAfternoonBulletin ? 1 : 0;
+const day0 = addDays(todayUK, startOffset);
+const day1 = addDays(todayUK, startOffset + 1);
+const day2 = addDays(todayUK, startOffset + 2);
+const forecastDays = [day0, day1, day2];
+
+console.log(`Bulletin type determined: ${isAfternoonBulletin ? 'Afternoon' : 'Morning'} update.`);
+console.log(`Anchoring to Day 1: ${dayShort(day0)} ${dayLong(day0)}`);
+
+// 2. Hand pages + date anchor to Claude for structured extraction
+console.log('Asking Claude to structure the forecast…');
+const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+const message = await client.messages.create({
+  model: 'claude-sonnet-4-6',
+  max_tokens: 4000,
+  messages: [{ role: 'user', content: buildPrompt(pages, forecastDays, isAfternoonBulletin) }],
+});
+
+const responseText = message.content
+  .filter(b => b.type === 'text')
+  .map(b => b.text)
+  .join('\n');
+
+const data = parseJSON(responseText);
+
+// 3. Stamp metadata
+if (!data.updatedAt && newestUpdate) {
+  data.updatedAt = new Date(newestUpdate).toISOString();
+} else if (!data.updatedAt) {
+  data.updatedAt = new Date().toISOString();
+}
+data._generated = new Date().toISOString();
+data._anchorDate = day0.toISOString().slice(0, 10);
+
+// 4. Sanity check — first day label should match dynamic day0
+const expectedFirst = dayShort(day0);
+if (data.days?.[0] !== expectedFirst) {
+  console.warn(`⚠ Expected first day "${expectedFirst}", got "${data.days?.[0]}" — overriding`);
+  data.days = [dayShort(day0), dayShort(day1), dayShort(day2)];
+}
+
+// 5. Normalise region names
+const NAME_ALIASES = {
+  'the northwest highlands': 'Northwest Highlands',
+  'northwest highlands': 'Northwest Highlands',
+  'nw highlands': 'Northwest Highlands',
+  'west highlands': 'West Highlands',
+  'cairngorms np and monadhliath': 'Cairngorms & Monadhliath',
+  'cairngorms and monadhliath': 'Cairngorms & Monadhliath',
+  'cairngorms & monadhliath': 'Cairngorms & Monadhliath',
+  'cairngorms': 'Cairngorms & Monadhliath',
+  'southeastern highlands': 'Southeastern Highlands',
+  'south eastern highlands': 'Southeastern Highlands',
+  'southern uplands': 'Southern Uplands',
+};
+if (Array.isArray(data.regions)) {
+  data.regions.forEach((r) => {
+    const key = (r.name || '').toLowerCase().trim();
+    if (NAME_ALIASES[key] && NAME_ALIASES[key] !== r.name) {
+      console.log(`Normalised region name: "${r.name}" → "${NAME_ALIASES[key]}"`);
+      r.name = NAME_ALIASES[key];
+    }
+  });
+}
+
+writeFileSync('forecast.json', JSON.stringify(data, null, 2));
+console.log(`✓ Wrote forecast.json — ${data.regions?.length || 0} regions, days: ${(data.days || []).join('/')}, updatedAt: ${data.updatedAt}`);
