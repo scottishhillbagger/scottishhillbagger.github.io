@@ -23,7 +23,7 @@ Schema:
 {
   "summary": "One short sentence on the 3-day pattern.",
   "days": ["e.g. Fri", "e.g. Sat", "e.g. Sun"],
-  "updatedAt": "ISO 8601 timestamp from MWIS forecast page, or now",
+  "updatedAt": "ISO 8601 timestamp from MWIS or now",
   "regions": [
     {
       "name": "Region name exactly as given",
@@ -33,24 +33,28 @@ Schema:
           "windMph": 20,
           "windDir": "SE",
           "tempC": 12,
-          "rain": "none|light|heavy|showers",
           "cloudFree": 80,
-          "freezingLevel": 9999,
-          "score": 75,
-          "note": "≤8 words, e.g. 'gusts on summits, frost overnight'"
+          "freezingLevel": 1800,
+          "visibility": "excellent|good|moderate|poor",
+          "amSky": "sun|partly-cloudy|cloud|rain|fog|snow|storm",
+          "pmSky": "sun|partly-cloudy|cloud|rain|fog|snow|storm",
+          "status": "go|marginal|poor",
+          "note": "<=8 words, standout fact e.g. 'gusts on summits, frost overnight'"
         }
       ]
     }
   ]
 }
 
-Scoring (Munro-friendliness, 0-100): cloud-free summits 40%, wind on tops 30%, rain 15%, temp/freezing level 15%. Penalise hard for cloud below summit height.
-
 Rules:
 - Include EVERY region in order, exactly 3 forecast entries each.
 - windMph: numeric average of the range.
-- freezingLevel in metres above sea level (use 9999 if above all summits).
-- Be terse. This renders as an icon grid.`;
+- freezingLevel: metres above sea level (9999 if above all summits).
+- status: "go" if good Munro day (low wind, cloud-free, dry), "marginal" if risky or uncertain, "poor" if dangerous or not worthwhile.
+- amSky/pmSky: separate sky codes for morning vs afternoon — critical for planning.
+- visibility: summit visibility — excellent (>30km), good (10-30km), moderate (4-10km), poor (<4km).
+- note: <=8 words, the single most important planning fact for that day.
+- Be terse.`;
 
 const parseJSON = (text) => {
   let s = text.trim().replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, '');
