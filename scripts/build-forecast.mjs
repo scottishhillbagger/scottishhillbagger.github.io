@@ -13,20 +13,12 @@ const REGIONS = [
   { id: 'southern-uplands', name: 'Southern Uplands' },
 ];
 
-// --- Date anchoring -------------------------------------------------
-// MWIS publishes the morning bulletin around 07:30 UK time. If we're
-// running before that, today's bulletin may not exist yet, so anchor
-// the first day to today regardless and let the model handle it.
-// Run-time is UTC in GitHub Actions; in summer Scotland is UTC+1.
+// --- Date helpers ---------------------------------------------------
 const now = new Date();
 const todayUK = new Date(now.toLocaleString('en-US', { timeZone: 'Europe/London' }));
 const dayShort = (d) => d.toLocaleDateString('en-GB', { weekday: 'short', timeZone: 'Europe/London' });
 const dayLong  = (d) => d.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', timeZone: 'Europe/London' });
 const addDays = (d, n) => { const x = new Date(d); x.setDate(x.getDate() + n); return x; };
-
-const day0 = todayUK;
-const day1 = addDays(todayUK, 1);
-const day2 = addDays(todayUK, 2);
 
 // --- Fetch MWIS pages directly --------------------------------------
 async function fetchMWIS(id) {
@@ -44,7 +36,7 @@ function stripToText(html) {
   return html
     .replace(/<script[\s\S]*?<\/script>/gi, '')
     .replace(/<style[\s\S]*?<\/style>/gi, '')
-    .replace(/<!--[\s\S]*?-->/g, '')
+    .replace(//g, '')
     .replace(/<[^>]+>/g, ' ')
     .replace(/&nbsp;/g, ' ')
     .replace(/&amp;/g, '&')
@@ -57,7 +49,6 @@ function stripToText(html) {
 
 // Pull "Last updated …" timestamp out of the stripped MWIS text.
 function extractMWISUpdated(text) {
-  // e.g. "Last updated Thu 30th Apr 26 at 7:35AM"
   const m = text.match(/Last updated\s+\w+\s+(\d+)\w*\s+(\w+)\s+(\d+)\s+at\s+(\d+):(\d+)(AM|PM)/i);
   if (!m) return null;
   const [, dayN, monthName, yr2, hh, mm, ampm] = m;
@@ -71,9 +62,12 @@ function extractMWISUpdated(text) {
 }
 
 // --- Build the prompt with fetched content embedded -----------------
-function buildPrompt(pages) {
-  const dateBlock = `Today is ${dayLong(day0)}. The 3 days you must forecast are:
-- Day 1: ${dayShort(day0)} (${dayLong(day0)}) — TODAY
+function buildPrompt(pages, forecastDays, isAfternoon) {
+  const [day0, day1, day2] = forecastDays;
+  const firstDayLabel = isAfternoon ? "TOMORROW" : "TODAY";
+
+  const dateBlock = `Today is ${dayLong(todayUK)}. The 3 days you must forecast are:
+- Day 1: ${dayShort(day0)} (${dayLong(day0)}) — ${firstDayLabel}
 - Day 2: ${dayShort(day1)} (${dayLong(day1)})
 - Day 3: ${dayShort(day2)} (${dayLong(day2)})`;
 
@@ -86,7 +80,7 @@ function buildPrompt(pages) {
 You will be given the live text of 5 MWIS regional forecast pages, fetched directly from mwis.org.uk just now. Extract the data for the 3 days listed above. Do not use prior knowledge — use ONLY the text provided below.
 
 CRITICAL:
-- The first day in your output MUST be today (${dayShort(day0)}). If the page's first labelled day is the day BEFORE today, skip that section and use today's section onward.
+- The first day in your output MUST be ${dayShort(day0)}. If the page's first labelled day is the day BEFORE ${dayShort(day0)}, skip that section and start from ${dayShort(day0)} onward.
 - Match data day-by-day to the date headings in each MWIS page (e.g. "Friday 1st May 2026"). Do not blend days.
 - Region names in your output must match EXACTLY (verbatim, including punctuation and capitalisation):
     "Northwest Highlands"
@@ -135,11 +129,7 @@ Field rules:
 - freezingLevel: metres ASL. "Above the summits" → 9999. "Freezing level 700m" → 700. Read MWIS carefully — most spring/summer days will be 9999.
 - visibility: excellent (>30km), good (10-30km), moderate (4-10km), poor (<4km). MWIS phrases like "Excellent or superb visibility" → excellent. "Visibility very good" → good. "Visibility often poor in rain" → poor.
 - status: "go" = MWIS's headline is positive (sunshine, dry, manageable wind, comfortable temp). "marginal" = mixed (some rain, gusty, low confidence). "poor" = MWIS warns of heavy rain, thunder, gales, white-out, or dangerous conditions.
-- note: max 10 words. Reuse MWIS's distinctive language. Examples of good notes: "gusts 40mph Cairngorm plateau", "thundery bursts Great Glen pm", "frost overnight, snow above 700m", "Arran/Jura/Mull strongest 35-40mph". DO NOT write generic notes like "patchy rain possible".
-
-Worked example — if MWIS West Highlands Day 1 says:
-  "Bright sunshine. Locally gusty wind. Southeasterly 20 to 30mph, strongest and most gusty Arran, Jura and Mull, where sometimes 35 or 40mph in morning. Mountains free of cloud. Excellent or superb visibility. 10 to 15C on tops."
-Then output: sky:"sun", amSky:"sun", pmSky:"sun", windMph:40, windDir:"SE", tempC:13, cloudFree:95, visibility:"excellent", status:"go", note:"gusts 35-40mph Arran/Jura/Mull morning"
+- note: max 10 words. Reuse MWIS's distinctive language. DO NOT write generic notes like "patchy rain possible".
 
 INPUT (live MWIS text):
 
@@ -148,113 +138,5 @@ ${pagesBlock}`;
 
 // --- JSON parsing with repair ---------------------------------------
 const parseJSON = (text) => {
-  let s = text.trim().replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, '');
-  const first = s.indexOf('{');
-  const last = s.lastIndexOf('}');
-  if (first === -1) throw new Error('no JSON object found');
-  s = last > first ? s.slice(first, last + 1) : s.slice(first);
-
-  const tryIt = (str) => { try { return JSON.parse(str); } catch { return null; } };
-  let parsed = tryIt(s);
-  if (parsed) return parsed;
-
-  let r = s.replace(/,(\s*[}\]])/g, '$1');
-  parsed = tryIt(r);
-  if (parsed) return parsed;
-
-  const opens = (r.match(/\{/g) || []).length;
-  const closes = (r.match(/\}/g) || []).length;
-  const aOpens = (r.match(/\[/g) || []).length;
-  const aCloses = (r.match(/\]/g) || []).length;
-  let trimmed = r.replace(/,?\s*"[^"]*$/, '').replace(/,?\s*\{[^}]*$/, '').replace(/,\s*$/, '');
-  const candidate = trimmed + ']'.repeat(Math.max(0, aOpens - aCloses)) + '}'.repeat(Math.max(0, opens - closes));
-  parsed = tryIt(candidate);
-  if (parsed) return parsed;
-  throw new Error('malformed JSON from model');
-};
-
-// --- Main -----------------------------------------------------------
-console.log(`Build started ${now.toISOString()} — anchoring to ${dayShort(day0)} ${dayLong(day0)}`);
-
-// 1. Fetch all 5 MWIS pages
-console.log('Fetching MWIS pages…');
-const pages = await Promise.all(REGIONS.map(async (r) => {
-  try {
-    const text = await fetchMWIS(r.id);
-    const updated = extractMWISUpdated(text);
-    const updatedISO = updated ? updated.toISOString() : null;
-    console.log(`  ✓ ${r.name} — ${text.length} chars, MWIS updated: ${updatedISO || '?'}`);
-    return { id: r.id, name: r.name, url: `https://www.mwis.org.uk/forecasts/scottish/${r.id}`, text, updatedAt: updatedISO };
-  } catch (e) {
-    console.error(`  ✗ ${r.name} — ${e.message}`);
-    return { id: r.id, name: r.name, url: `https://www.mwis.org.uk/forecasts/scottish/${r.id}`, text: '', updatedAt: null, error: e.message };
-  }
-}));
-
-// Freshness check — warn if all pages are >24h old
-const updatedTimes = pages.map(p => p.updatedAt).filter(Boolean).map(t => new Date(t).getTime());
-const newestUpdate = updatedTimes.length ? Math.max(...updatedTimes) : null;
-const ageHours = newestUpdate ? (Date.now() - newestUpdate) / 36e5 : null;
-if (ageHours !== null && ageHours > 24) {
-  console.warn(`⚠ Newest MWIS update is ${ageHours.toFixed(1)}h old — data may be stale`);
-}
-
-// 2. Hand pages + date anchor to Claude for structured extraction
-console.log('Asking Claude to structure the forecast…');
-const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
-const message = await client.messages.create({
-  model: 'claude-sonnet-4-6',
-  max_tokens: 4000,
-  messages: [{ role: 'user', content: buildPrompt(pages) }],
-});
-
-const responseText = message.content
-  .filter(b => b.type === 'text')
-  .map(b => b.text)
-  .join('\n');
-
-const data = parseJSON(responseText);
-
-// 3. Stamp metadata
-if (!data.updatedAt && newestUpdate) {
-  data.updatedAt = new Date(newestUpdate).toISOString();
-} else if (!data.updatedAt) {
-  data.updatedAt = new Date().toISOString();
-}
-data._generated = new Date().toISOString();
-data._anchorDate = day0.toISOString().slice(0, 10);
-
-// 4. Sanity check — first day label should match today
-const expectedFirst = dayShort(day0);
-if (data.days?.[0] !== expectedFirst) {
-  console.warn(`⚠ Expected first day "${expectedFirst}", got "${data.days?.[0]}" — overriding`);
-  data.days = [dayShort(day0), dayShort(day1), dayShort(day2)];
-}
-
-// 5. Normalise region names — defensive fix in case the model drifts
-// (e.g. "The Northwest Highlands" → "Northwest Highlands")
-const NAME_ALIASES = {
-  'the northwest highlands': 'Northwest Highlands',
-  'northwest highlands': 'Northwest Highlands',
-  'nw highlands': 'Northwest Highlands',
-  'west highlands': 'West Highlands',
-  'cairngorms np and monadhliath': 'Cairngorms & Monadhliath',
-  'cairngorms and monadhliath': 'Cairngorms & Monadhliath',
-  'cairngorms & monadhliath': 'Cairngorms & Monadhliath',
-  'cairngorms': 'Cairngorms & Monadhliath',
-  'southeastern highlands': 'Southeastern Highlands',
-  'south eastern highlands': 'Southeastern Highlands',
-  'southern uplands': 'Southern Uplands',
-};
-if (Array.isArray(data.regions)) {
-  data.regions.forEach((r) => {
-    const key = (r.name || '').toLowerCase().trim();
-    if (NAME_ALIASES[key] && NAME_ALIASES[key] !== r.name) {
-      console.log(`Normalised region name: "${r.name}" → "${NAME_ALIASES[key]}"`);
-      r.name = NAME_ALIASES[key];
-    }
-  });
-}
-
-writeFileSync('forecast.json', JSON.stringify(data, null, 2));
-console.log(`✓ Wrote forecast.json — ${data.regions?.length || 0} regions, days: ${(data.days || []).join('/')}, updatedAt: ${data.updatedAt}`);
+  let s = text.trim().replace(/^
+http://googleusercontent.com/immersive_entry_chip/0
