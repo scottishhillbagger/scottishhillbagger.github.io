@@ -33,18 +33,17 @@ async function fetchMWIS(id) {
 
 // Strip HTML to plain text — keep visible content only, drop tags.
 function stripToText(html) {
-  return html
-    .replace(/<script[\s\S]*?<\/script>/gi, '')
-    .replace(/<style[\s\S]*?<\/style>/gi, '')
-    .replace(//g, '')
-    .replace(/<[^>]+>/g, ' ')
-    .replace(/&nbsp;/g, ' ')
-    .replace(/&amp;/g, '&')
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
-    .replace(/&[a-z]+;/gi, '')
-    .replace(/\s+/g, ' ')
-    .trim();
+  let text = html.replace(/<script[\s\S]*?<\/script>/gi, '');
+  text = text.replace(/<style[\s\S]*?<\/style>/gi, '');
+  text = text.replace(/<!--[\s\S]*?-->/g, '');
+  text = text.replace(/<[^>]+>/g, ' ');
+  text = text.replace(/&nbsp;/g, ' ');
+  text = text.replace(/&amp;/g, '&');
+  text = text.replace(/&lt;/g, '<');
+  text = text.replace(/&gt;/g, '>');
+  text = text.replace(/&[a-z]+;/gi, '');
+  text = text.replace(/\s+/g, ' ');
+  return text.trim();
 }
 
 // Pull "Last updated …" timestamp out of the stripped MWIS text.
@@ -66,80 +65,19 @@ function buildPrompt(pages, forecastDays, isAfternoon) {
   const [day0, day1, day2] = forecastDays;
   const firstDayLabel = isAfternoon ? "TOMORROW" : "TODAY";
 
-  const dateBlock = `Today is ${dayLong(todayUK)}. The 3 days you must forecast are:
-- Day 1: ${dayShort(day0)} (${dayLong(day0)}) — ${firstDayLabel}
-- Day 2: ${dayShort(day1)} (${dayLong(day1)})
-- Day 3: ${dayShort(day2)} (${dayLong(day2)})`;
+  const dateBlock = `Today is ${dayLong(todayUK)}. The 3 days you must forecast are:\n- Day 1: ${dayShort(day0)} (${dayLong(day0)}) — ${firstDayLabel}\n- Day 2: ${dayShort(day1)} (${dayLong(day1)})\n- Day 3: ${dayShort(day2)} (${dayLong(day2)})`;
 
-  const pagesBlock = pages
-    .map((p) => `=== ${p.name} (source: ${p.url}) ===\nMWIS last updated: ${p.updatedAt || 'not detected'}\n\n${p.text.slice(0, 8000)}`)
-    .join('\n\n');
+  const mappedPages = pages.map((p) => `=== ${p.name} (source: ${p.url}) ===\nMWIS last updated: ${p.updatedAt || 'not detected'}\n\n${p.text.slice(0, 8000)}`);
+  const pagesBlock = mappedPages.join('\n\n');
 
-  return `${dateBlock}
-
-You will be given the live text of 5 MWIS regional forecast pages, fetched directly from mwis.org.uk just now. Extract the data for the 3 days listed above. Do not use prior knowledge — use ONLY the text provided below.
-
-CRITICAL:
-- The first day in your output MUST be ${dayShort(day0)}. If the page's first labelled day is the day BEFORE ${dayShort(day0)}, skip that section and start from ${dayShort(day0)} onward.
-- Match data day-by-day to the date headings in each MWIS page (e.g. "Friday 1st May 2026"). Do not blend days.
-- Region names in your output must match EXACTLY (verbatim, including punctuation and capitalisation):
-    "Northwest Highlands"
-    "West Highlands"
-    "Cairngorms & Monadhliath"
-    "Southeastern Highlands"
-    "Southern Uplands"
-- Read MWIS's headline verdict for each day FIRST. MWIS leads each day with summary lines like "Unbroken bright sunshine" or "Extensive sunshine, mountains free of cloud" or "Heavy thundery bursts". This headline is the ground truth for sky/cloud — anchor your sky, cloudFree, and status to it. Don't dilute it because a later sentence mentions a small risk.
-- Use direct phrasing from MWIS for the "note" field — keep MWIS's specific places, named hazards, and gust speeds (e.g. "gusts 40mph east from Cairngorm plateau", "thundery bursts north of Glen Garry", "Arran/Jura/Mull strongest").
-
-Return ONLY a single JSON object — no markdown fences, no preamble. Start with { end with }.
-
-Schema:
-{
-  "summary": "One short sentence describing the 3-day pattern across Scotland.",
-  "days": ["${dayShort(day0)}", "${dayShort(day1)}", "${dayShort(day2)}"],
-  "updatedAt": "ISO 8601 — use the most recent MWIS 'Last updated' timestamp across the 5 pages",
-  "regions": [
-    {
-      "name": "EXACT name from the 5-name list above",
-      "forecast": [
-        {
-          "sky": "sun|partly-cloudy|cloud|rain|fog|snow|storm",
-          "windMph": 25,
-          "windDir": "SE",
-          "tempC": 12,
-          "cloudFree": 90,
-          "freezingLevel": 9999,
-          "visibility": "excellent|good|moderate|poor",
-          "amSky": "sun|partly-cloudy|cloud|rain|fog|snow|storm",
-          "pmSky": "sun|partly-cloudy|cloud|rain|fog|snow|storm",
-          "status": "go|marginal|poor",
-          "note": "<=10 words, paraphrasing MWIS's most specific warning/highlight for this day"
-        }
-      ]
-    }
-  ]
-}
-
-Field rules:
-- sky / amSky / pmSky: pick the headline. If MWIS says "Unbroken bright sunshine" use "sun", NOT "partly-cloudy". "Extensive sunshine" = sun. "Mostly dry, occasional sunshine, some rain" = partly-cloudy. Only use "rain" if MWIS describes rain as the dominant condition. Only use "cloud" if MWIS says cloud sits below summit height most of the day.
-- cloudFree: anchor to MWIS's cloud-base description. "Mountains free of cloud" / "free of cloud once mist disperses" = 90-95. "Cloud above 600m" with summits >900m = 70-80. "Cloud filling above 600m" with summits ~900m = 30-50. "Cloud may not clear all day" = 10-20. Don't be conservative on bright days.
-- windMph: numeric. If MWIS gives a range "20-30mph" use the average (25). If MWIS warns of stronger gusts (e.g. "gusty 40mph"), use the GUST value because it's the safety-relevant number for hill walkers.
-- windDir: dominant compass direction from MWIS (often "SE", "S", "SW" etc.). Don't simplify "southeasterly" to "S".
-- tempC: temperature on tops/summits as MWIS states it. If MWIS says "10 to 15C on tops" use 12 or 13.
-- freezingLevel: metres ASL. "Above the summits" → 9999. "Freezing level 700m" → 700. Read MWIS carefully — most spring/summer days will be 9999.
-- visibility: excellent (>30km), good (10-30km), moderate (4-10km), poor (<4km). MWIS phrases like "Excellent or superb visibility" → excellent. "Visibility very good" → good. "Visibility often poor in rain" → poor.
-- status: "go" = MWIS's headline is positive (sunshine, dry, manageable wind, comfortable temp). "marginal" = mixed (some rain, gusty, low confidence). "poor" = MWIS warns of heavy rain, thunder, gales, white-out, or dangerous conditions.
-- note: max 10 words. Reuse MWIS's distinctive language. DO NOT write generic notes like "patchy rain possible".
-
-INPUT (live MWIS text):
-
-${pagesBlock}`;
+  return `${dateBlock}\n\nYou will be given the live text of 5 MWIS regional forecast pages, fetched directly from mwis.org.uk just now. Extract the data for the 3 days listed above. Do not use prior knowledge — use ONLY the text provided below.\n\nCRITICAL:\n- The first day in your output MUST be ${dayShort(day0)}. If the page's first labelled day is the day BEFORE ${dayShort(day0)}, skip that section and start from ${dayShort(day0)} onward.\n- Match data day-by-day to the date headings in each MWIS page (e.g. "Friday 1st May 2026"). Do not blend days.\n- Region names in your output must match EXACTLY (verbatim, including punctuation and capitalisation):\n    "Northwest Highlands"\n    "West Highlands"\n    "Cairngorms & Monadhliath"\n    "Southeastern Highlands"\n    "Southern Uplands"\n- Read MWIS's headline verdict for each day FIRST. MWIS leads each day with summary lines like "Unbroken bright sunshine" or "Extensive sunshine, mountains free of cloud" or "Heavy thundery bursts". This headline is the ground truth for sky/cloud — anchor your sky, cloudFree, and status to it. Don't dilute it because a later sentence mentions a small risk.\n- Use direct phrasing from MWIS for the "note" field — keep MWIS's specific places, named hazards, and gust speeds (e.g. "gusts 40mph east from Cairngorm plateau", "thundery bursts north of Glen Garry", "Arran/Jura/Mull strongest").\n\nReturn ONLY a single JSON object — no markdown fences, no preamble. Start with { end with }.\n\nSchema:\n{\n  "summary": "One short sentence describing the 3-day pattern across Scotland.",\n  "days": ["${dayShort(day0)}", "${dayShort(day1)}", "${dayShort(day2)}"],\n  "updatedAt": "ISO 8601 — use the most recent MWIS 'Last updated' timestamp across the 5 pages",\n  "regions": [\n    {\n      "name": "EXACT name from the 5-name list above",\n      "forecast": [\n        {\n          "sky": "sun|partly-cloudy|cloud|rain|fog|snow|storm",\n          "windMph": 25,\n          "windDir": "SE",\n          "tempC": 12,\n          "cloudFree": 90,\n          "freezingLevel": 9999,\n          "visibility": "excellent|good|moderate|poor",\n          "amSky": "sun|partly-cloudy|cloud|rain|fog|snow|storm",\n          "pmSky": "sun|partly-cloudy|cloud|rain|fog|snow|storm",\n          "status": "go|marginal|poor",\n          "note": "<=10 words, paraphrasing MWIS's most specific warning/highlight for this day"\n        }\n      ]\n    }\n  ]\n}\n\nField rules:\n- sky / amSky / pmSky: pick the headline. If MWIS says "Unbroken bright sunshine" use "sun", NOT "partly-cloudy". "Extensive sunshine" = sun. "Mostly dry, occasional sunshine, some rain" = partly-cloudy. Only use "rain" if MWIS describes rain as the dominant condition. Only use "cloud" if MWIS says cloud sits below summit height most of the day.\n- cloudFree: anchor to MWIS's cloud-base description. "Mountains free of cloud" / "free of cloud once mist disperses" = 90-95. "Cloud above 600m" with summits >900m = 70-80. "Cloud filling above 600m" with summits ~900m = 30-50. "Cloud may not clear all day" = 10-20. Don't be conservative on bright days.\n- windMph: numeric. If MWIS gives a range "20-30mph" use the average (25). If MWIS warns of stronger gusts (e.g. "gusty 40mph"), use the GUST value because it's the safety-relevant number for hill walkers.\n- windDir: dominant compass direction from MWIS (often "SE", "S", "SW" etc.). Don't simplify "southeasterly" to "S".\n- tempC: temperature on tops/summits as MWIS states it. If MWIS says "10 to 15C on tops" use 12 or 13.\n- freezingLevel: metres ASL. "Above the summits" → 9999. "Freezing level 700m" → 700. Read MWIS carefully — most spring/summer days will be 9999.\n- visibility: excellent (>30km), good (10-30km), moderate (4-10km), poor (<4km). MWIS phrases like "Excellent or superb visibility" → excellent. "Visibility very good" → good. "Visibility often poor in rain" → poor.\n- status: "go" = MWIS's headline is positive (sunshine, dry, manageable wind, comfortable temp). "marginal" = mixed (some rain, gusty, low confidence). "poor" = MWIS warns of heavy rain, thunder, gales, white-out, or dangerous conditions.\n- note: max 10 words. Reuse MWIS's distinctive language. DO NOT write generic notes like "patchy rain possible".\n\nINPUT (live MWIS text):\n\n${pagesBlock}`;
 }
 
 // --- JSON parsing with repair ---------------------------------------
 const parseJSON = (text) => {
-  // Using \x60 to represent backticks to prevent markdown parser truncation
-  let s = text.trim().replace(/^\x60\x60\x60(?:json)?\s*/i, '').replace(/\s*\x60\x60\x60$/, '');
+  let s = text.trim();
+  s = s.replace(/^\x60\x60\x60(?:json)?\s*/i, '');
+  s = s.replace(/\s*\x60\x60\x60$/, '');
   const first = s.indexOf('{');
   const last = s.lastIndexOf('}');
   if (first === -1) throw new Error('no JSON object found');
@@ -157,7 +95,9 @@ const parseJSON = (text) => {
   const closes = (r.match(/\}/g) || []).length;
   const aOpens = (r.match(/\[/g) || []).length;
   const aCloses = (r.match(/\]/g) || []).length;
-  let trimmed = r.replace(/,?\s*"[^"]*$/, '').replace(/,?\s*\{[^}]*$/, '').replace(/,\s*$/, '');
+  let trimmed = r.replace(/,?\s*"[^"]*$/, '');
+  trimmed = trimmed.replace(/,?\s*\{[^}]*$/, '');
+  trimmed = trimmed.replace(/,\s*$/, '');
   const candidate = trimmed + ']'.repeat(Math.max(0, aOpens - aCloses)) + '}'.repeat(Math.max(0, opens - closes));
   parsed = tryIt(candidate);
   if (parsed) return parsed;
@@ -222,10 +162,9 @@ const message = await client.messages.create({
   messages: [{ role: 'user', content: buildPrompt(pages, forecastDays, isAfternoonBulletin) }],
 });
 
-const responseText = message.content
-  .filter(b => b.type === 'text')
-  .map(b => b.text)
-  .join('\n');
+const textBlocks = message.content.filter(b => b.type === 'text');
+const textStrings = textBlocks.map(b => b.text);
+const responseText = textStrings.join('\n');
 
 const data = parseJSON(responseText);
 
