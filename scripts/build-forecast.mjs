@@ -36,7 +36,7 @@ function stripToText(html) {
   return html
     .replace(/<script[\s\S]*?<\/script>/gi, '')
     .replace(/<style[\s\S]*?<\/style>/gi, '')
-    .replace(//g, '')
+    .replace(/<!--[\s\S]*?-->/g, '')
     .replace(/<[^>]+>/g, ' ')
     .replace(/&nbsp;/g, ' ')
     .replace(/&amp;/g, '&')
@@ -139,4 +139,3 @@ ${pagesBlock}`;
 // --- JSON parsing with repair ---------------------------------------
 const parseJSON = (text) => {
   let s = text.trim().replace(/^
-http://googleusercontent.com/immersive_entry_chip/0
