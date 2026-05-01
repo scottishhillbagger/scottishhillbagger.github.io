@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hill Forecast · 3-day outlook</title>
+<style>
+  :root {
+    --bg: #fafaf7;
+    --surface: #ffffff;
+    --ink: #1a1a1a;
+    --muted: #6b6b6b;
+    --faint: #a8a8a8;
+    --line: #e5e5e0;
+    --accent: #2d7a4f;
+    --warn: #c4742a;
+    --bad: #b03838;
+    --highlight: rgba(45, 122, 79, 0.08);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #131311;
+      --surface: #1c1c1a;
+      --ink: #f0efe9;
+      --muted: #9a9a93;
+      --faint: #5a5a55;
+      --line: #2a2a27;
+      --accent: #5dc28a;
+      --warn: #e09b4d;
+      --bad: #d96565;
+      --highlight: rgba(93, 194, 138, 0.1);
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+    line-height: 1.5;
+    font-size: 15px;
+    min-height: 100vh;
+    padding: 32px 20px;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+
+  header { margin-bottom: 28px; }
+  .eyebrow {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+  h1 {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+  .summary {
+    color: var(--muted);
+    font-size: 14px;
+    margin-top: 6px;
+  }
+
+  .meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .refresh {
+    background: none;
+    border: none;
+    color: var(--muted);
+    font-size: 12px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-family: inherit;
+  }
+  .refresh:hover { color: var(--ink); background: var(--line); }
+  .refresh.spinning svg { animation: spin 1s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+  th {
+    text-align: left;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--faint);
+    font-weight: 500;
+    padding: 8px 12px 12px;
+    border-bottom: 1px solid var(--line);
+  }
+  th:first-child { padding-left: 0; }
+  th:last-child { padding-right: 0; }
+
+  td {
+    padding: 14px 12px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: middle;
+  }
+  td:first-child { padding-left: 0; }
+  td:last-child { padding-right: 0; }
+
+  tr:last-child td { border-bottom: none; }
+
+  .region-name {
+    font-weight: 500;
+    font-size: 14px;
+  }
+  .region-meta {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  .day-cell {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 10px;
+    margin: -6px -10px;
+    border-radius: 6px;
+  }
+  .day-cell.best {
+    background: var(--highlight);
+    box-shadow: inset 0 0 0 1px rgba(45, 122, 79, 0.25);
+  }
+  @media (prefers-color-scheme: dark) {
+    .day-cell.best { box-shadow: inset 0 0 0 1px rgba(93, 194, 138, 0.3); }
+  }
+
+  .sky-icon {
+    flex-shrink: 0;
+    color: var(--ink);
+    opacity: 0.85;
+  }
+  .score {
+    font-weight: 600;
+    font-size: 15px;
+    font-variant-numeric: tabular-nums;
+    min-width: 24px;
+  }
+  .score.high { color: var(--accent); }
+  .score.mid { color: var(--warn); }
+  .score.low { color: var(--bad); }
+
+  .conditions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+  }
+  .wind-arrow {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin-right: 2px;
+    vertical-align: -1px;
+  }
+
+  .pdf-link {
+    color: var(--faint);
+    text-decoration: none;
+    display: inline-flex;
+    padding: 6px;
+    border-radius: 4px;
+  }
+  .pdf-link:hover { color: var(--ink); background: var(--line); }
+
+  footer {
+    margin-top: 28px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+    font-size: 11px;
+    color: var(--faint);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  footer a { color: var(--muted); }
+  footer a:hover { color: var(--ink); }
+
+  .state {
+    padding: 60px 20px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .state.error {
+    background: rgba(176, 56, 56, 0.05);
+    border: 1px solid rgba(176, 56, 56, 0.2);
+    border-radius: 8px;
+    color: var(--bad);
+    padding: 20px;
+    text-align: left;
+  }
+  .state.error button {
+    margin-top: 8px;
+    background: none;
+    border: 1px solid var(--bad);
+    color: var(--bad);
+    padding: 4px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font: inherit;
+    font-size: 12px;
+  }
+
+  .scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+  @media (max-width: 640px) {
+    body { padding: 20px 16px; }
+    table { min-width: 580px; }
+    .conditions { gap: 6px; font-size: 11px; }
+  }
+
+  /* Skeleton loading */
+  .skeleton {
+    background: linear-gradient(90deg, var(--line) 0%, var(--surface) 50%, var(--line) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 4px;
+    height: 14px;
+  }
+  @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Mountain Bulletin · Scotland</div>
+    <h1>Hill weather · 3-day outlook</h1>
+    <p class="summary" id="summary"></p>
+  </header>
+
+  <div class="meta">
+    <span id="updated"></span>
+    <button class="refresh" id="refresh" aria-label="Refresh forecast">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg>
+      <span id="refresh-label">refresh</span>
+    </button>
+  </div>
+
+  <div id="content">
+    <div class="state" id="loading">
+      <div style="display: flex; flex-direction: column; gap: 12px; max-width: 560px; margin: 0 auto;">
+        <div class="skeleton" style="height: 32px;"></div>
+        <div class="skeleton" style="height: 32px;"></div>
+        <div class="skeleton" style="height: 32px;"></div>
+        <div class="skeleton" style="height: 32px;"></div>
+        <div class="skeleton" style="height: 32px;"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <span>Source: <a href="https://www.mwis.org.uk" target="_blank" rel="noopener">Mountain Weather Information Service</a></span>
+    <span>Munro-friendliness: cloud, wind, rain, temp</span>
+  </footer>
+</div>
+
+<script>
+  // Configure where to fetch the forecast JSON.
+  // Option A (static, recommended): point to forecast.json built by GitHub Action.
+  // Option B (serverless): point to your /api/forecast endpoint.
+  const FORECAST_URL = './forecast.json';
+
+  const REGIONS = [
+    { id: 'the-northwest-highlands', name: 'Northwest Highlands' },
+    { id: 'west-highlands', name: 'West Highlands' },
+    { id: 'cairngorms-np-and-monadhliath', name: 'Cairngorms & Monadhliath' },
+    { id: 'southeastern-highlands', name: 'Southeastern Highlands' },
+    { id: 'southern-uplands', name: 'Southern Uplands' },
+  ];
+
+  const PDF_URL = (id) => `https://www.mwis.org.uk/forecasts/scottish/${id}`;
+
+  // Inline SVG icons — keep markup terse
+  const ICONS = {
+    sun: '<svg class="sky-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>',
+    'partly-cloudy': '<svg class="sky-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v2M5.22 5.22l1.42 1.42M2 12h2M20 12h2M15.95 6.34A6.49 6.49 0 0 0 9 4.07"/><path d="M16 21H8a5 5 0 0 1-1-9.9 7 7 0 1 1 13 3.9"/></svg>',
+    cloud: '<svg class="sky-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 1 0-1.41-8.78 7 7 0 1 0-13.6 2.78"/><path d="M2 19h15.5"/></svg>',
+    rain: '<svg class="sky-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/><path d="M16 14v6M8 14v6M12 16v6"/></svg>',
+    fog: '<svg class="sky-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14h18M3 18h18M3 22h18M5 10a7 7 0 1 1 14 0"/></svg>',
+    snow: '<svg class="sky-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M12 2v20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"/></svg>',
+    storm: '<svg class="sky-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 16.9A5 5 0 0 0 18 7h-1.26a8 8 0 1 0-11.62 9"/><path d="m13 12-3 5h4l-3 5"/></svg>',
+  };
+
+  const WIND_DEG = { N: 180, NE: 225, E: 270, SE: 315, S: 0, SW: 45, W: 90, NW: 135 };
+
+  const windArrow = (dir, mph) => {
+    const deg = WIND_DEG[(dir || '').toUpperCase()] ?? 0;
+    const opacity = mph >= 25 ? 1 : mph >= 15 ? 0.7 : 0.4;
+    return `<svg class="wind-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="transform: rotate(${deg}deg); opacity: ${opacity}"><path d="M12 19V5M5 12l7-7 7 7"/></svg>`;
+  };
+
+  const scoreClass = (s) => s >= 70 ? 'high' : s >= 45 ? 'mid' : 'low';
+
+  const findBest = (regions) => {
+    let best = { ri: -1, di: -1, score: -1 };
+    regions.forEach((r, ri) => (r.forecast || []).forEach((f, di) => {
+      if ((f.score ?? 0) > best.score) best = { ri, di, score: f.score };
+    }));
+    return best.score >= 70 ? best : null;
+  };
+
+  const escapeHtml = (s) => String(s || '').replace(/[&<>"']/g, (c) =>
+    ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
+  const render = (data) => {
+    const summary = document.getElementById('summary');
+    const updated = document.getElementById('updated');
+    const content = document.getElementById('content');
+
+    summary.textContent = data.summary || '';
+    if (data.updatedAt) {
+      const d = new Date(data.updatedAt);
+      const time = d.toLocaleString('en-GB', { weekday: 'short', hour: '2-digit', minute: '2-digit' });
+      updated.textContent = `Updated ${time}`;
+    }
+
+    const best = findBest(data.regions || []);
+    const days = data.days || ['', '', ''];
+
+    let html = '<div class="scroll-x"><table><thead><tr>';
+    html += '<th>Region</th>';
+    days.forEach((d) => { html += `<th>${escapeHtml(d)}</th>`; });
+    html += '<th aria-label="MWIS"></th></tr></thead><tbody>';
+
+    (data.regions || []).forEach((region, ri) => {
+      const meta = REGIONS.find((r) => r.name === region.name) || REGIONS[ri];
+      html += '<tr>';
+      html += `<td><div class="region-name">${escapeHtml(region.name)}</div></td>`;
+
+      (region.forecast || []).slice(0, 3).forEach((f, di) => {
+        const isBest = best && ri === best.ri && di === best.di;
+        const sky = ICONS[f.sky] || ICONS.cloud;
+        const sc = f.score ?? 0;
+        html += `<td><div class="day-cell ${isBest ? 'best' : ''}" title="${escapeHtml(f.note || '')}">`;
+        html += sky;
+        html += `<span class="score ${scoreClass(sc)}">${sc}</span>`;
+        html += '<span class="conditions">';
+        html += `<span>${windArrow(f.windDir, f.windMph || 0)}${f.windMph ?? '—'}</span>`;
+        html += `<span>${f.tempC ?? '—'}°</span>`;
+        html += '</span></div></td>';
+      });
+
+      // Pad missing days
+      const missing = 3 - (region.forecast?.length || 0);
+      for (let i = 0; i < missing; i++) html += '<td></td>';
+
+      html += `<td><a class="pdf-link" href="${PDF_URL(meta?.id || '')}" target="_blank" rel="noopener" title="Full MWIS forecast">`;
+      html += '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>';
+      html += '</a></td></tr>';
+    });
+
+    html += '</tbody></table></div>';
+    content.innerHTML = html;
+  };
+
+  const renderError = (msg) => {
+    document.getElementById('content').innerHTML =
+      `<div class="state error">Couldn't load forecast — ${escapeHtml(msg)}.<br><button onclick="loadForecast()">Try again</button></div>`;
+  };
+
+  async function loadForecast() {
+    const btn = document.getElementById('refresh');
+    btn.classList.add('spinning');
+    try {
+      const res = await fetch(FORECAST_URL, { cache: 'no-cache' });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      render(data);
+    } catch (e) {
+      renderError(e.message);
+    } finally {
+      btn.classList.remove('spinning');
+    }
+  }
+
+  document.getElementById('refresh').addEventListener('click', loadForecast);
+  loadForecast();
+</script>
+</body>
+</html>
