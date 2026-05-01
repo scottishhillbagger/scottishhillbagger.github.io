@@ -467,6 +467,71 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 .bothy-pin{width:14px;height:14px;filter:drop-shadow(0 1px 2px rgba(0,0,0,0.45));transition:transform .12s ease}
 .bothy-pin:hover{transform:scale(1.25)}
 .bothy-pin svg{display:block}
+
+/* ============ WEATHER PANEL ============ */
+.tab.w.active{border-bottom-color:var(--accent)}
+#weather-section{padding:0}
+.wx-summary{background:var(--accent);color:rgba(255,255,255,.92);padding:.6rem 1.25rem .65rem;font-size:.74rem;line-height:1.45;letter-spacing:0;max-width:680px;margin:0 auto}
+.wx-summary strong{color:#fff;font-weight:600}
+.wx-meta-row{max-width:680px;margin:0 auto;padding:.6rem 1.25rem;display:flex;justify-content:space-between;align-items:center;font-size:.66rem;color:var(--ink3);font-family:var(--font-mono);letter-spacing:-.01em;border-bottom:1px solid var(--rule)}
+.wx-refresh{background:none;border:none;color:var(--ink3);font:inherit;cursor:pointer;display:inline-flex;align-items:center;gap:4px;padding:.15rem .4rem;border-radius:4px}
+.wx-refresh:hover{background:var(--bg2);color:var(--ink)}
+.wx-refresh.spin svg{animation:wxspin 1s linear infinite}
+@keyframes wxspin{to{transform:rotate(360deg)}}
+.wx-list{max-width:680px;margin:0 auto}
+.wx-region{border-bottom:1px solid var(--rule);background:var(--bg)}
+.wx-region:last-child{border-bottom:none}
+.wx-rg-head{padding:.85rem 1.25rem .7rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;-webkit-tap-highlight-color:transparent}
+.wx-rg-name{font-family:var(--font-display);font-size:.94rem;font-weight:500;letter-spacing:-.01em;color:var(--ink)}
+.wx-chev{color:var(--ink4);font-size:1rem;flex-shrink:0;transition:transform .2s;line-height:1}
+.wx-region.open .wx-chev{transform:rotate(90deg)}
+.wx-day-strip{display:flex;padding:0 1rem .85rem;gap:6px}
+.wx-day{flex:1;padding:10px 4px 12px;display:flex;flex-direction:column;align-items:center;gap:5px;cursor:pointer;border:1px solid var(--rule2);border-radius:6px;background:var(--surface);transition:background .15s,border-color .15s;-webkit-tap-highlight-color:transparent}
+.wx-day.go-bg{background:var(--accent-light);border-color:#C9D1B5}
+.wx-day.open,.wx-day.go-bg.open{background:var(--surface-elev);border-color:var(--accent)}
+.wx-day-label{font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);font-weight:500}
+.wx-day-icon{width:26px;height:26px;color:var(--ink);opacity:.85}
+.wx-day-status{font-size:.58rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.wx-st-go{color:var(--accent-dark)}
+.wx-st-marg{color:#7A4A08}
+.wx-st-poor{color:var(--terra-dark)}
+.wx-detail{padding:.85rem 1.25rem 1.1rem;background:var(--surface);border-top:1px solid var(--rule2)}
+.wx-det-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.7rem;gap:.5rem}
+.wx-det-day-label{font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);font-weight:600}
+.wx-det-tag{font-size:.6rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:.2rem .55rem;border-radius:4px;border:1px solid currentColor}
+.wx-det-tag.go{color:var(--accent-dark);background:rgba(107,122,79,.08)}
+.wx-det-tag.marg{color:#7A4A08;background:rgba(122,74,8,.08)}
+.wx-det-tag.poor{color:var(--terra-dark);background:rgba(184,84,58,.1)}
+.wx-det-row{display:flex;justify-content:space-between;align-items:center;padding:.4rem 0;border-bottom:1px solid var(--rule2);font-size:.78rem;gap:.75rem}
+.wx-det-row:last-of-type{border-bottom:none}
+.wx-det-label{color:var(--ink2);font-size:.72rem;letter-spacing:-.005em;flex-shrink:0}
+.wx-det-val{font-family:var(--font-mono);font-size:.76rem;color:var(--ink);letter-spacing:-.01em;font-weight:500;text-align:right}
+.wx-det-val.danger{color:var(--terra-dark)}
+.wx-det-val.good{color:var(--accent-dark)}
+.wx-ampm{display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end}
+.wx-pill{font-size:.6rem;padding:.18rem .5rem;border-radius:3px;font-weight:500;letter-spacing:.02em;font-family:var(--font-body);white-space:nowrap}
+.wx-pill-sun{background:rgba(107,122,79,.15);color:var(--accent-dark)}
+.wx-pill-cloud{background:var(--bg2);color:var(--ink2)}
+.wx-pill-rain{background:rgba(26,88,120,.1);color:#1A5878}
+.wx-pill-fog{background:var(--bg2);color:var(--ink2)}
+.wx-pill-snow{background:rgba(26,88,120,.1);color:#1A5878}
+.wx-pill-storm{background:rgba(184,84,58,.1);color:var(--terra-dark)}
+.wx-det-note{margin-top:.7rem;padding-top:.6rem;border-top:1px solid var(--rule2);font-size:.74rem;color:var(--ink2);font-style:italic;line-height:1.5}
+.wx-cta{margin-top:.85rem;padding:.7rem .85rem;background:var(--accent-light);border:1px solid #C9D1B5;border-radius:6px;display:flex;gap:.6rem;align-items:center}
+.wx-cta-text{flex:1;font-size:.74rem;color:var(--accent-dark);line-height:1.4}
+.wx-cta-text strong{font-weight:600}
+.wx-cta-btn{padding:.45rem .7rem;background:var(--ink);color:var(--surface-elev);border:none;border-radius:6px;font-family:var(--font-body);font-size:.7rem;font-weight:600;letter-spacing:-.005em;cursor:pointer;flex-shrink:0;-webkit-appearance:none}
+.wx-cta-btn:hover{background:var(--accent-dark)}
+.wx-mwis-link{display:inline-flex;align-items:center;gap:4px;margin-top:.65rem;font-size:.7rem;color:var(--accent-dark);text-decoration:none;font-weight:500;font-family:var(--font-body)}
+.wx-mwis-link:hover{text-decoration:underline}
+.wx-skel{padding:1.25rem;display:flex;flex-direction:column;gap:.75rem;max-width:680px;margin:0 auto}
+.wx-skel-row{height:80px;background:linear-gradient(90deg,var(--rule2) 0%,var(--surface) 50%,var(--rule2) 100%);background-size:200% 100%;animation:wxshim 1.5s infinite;border-radius:6px}
+@keyframes wxshim{0%{background-position:200% 0}100%{background-position:-200% 0}}
+.wx-error{padding:.85rem 1rem;background:rgba(184,84,58,.08);border:1px solid rgba(184,84,58,.25);border-radius:6px;color:var(--terra-dark);font-size:.78rem;max-width:680px;margin:1rem auto}
+.wx-error button{margin-top:.5rem;background:none;border:1px solid var(--terra-dark);color:var(--terra-dark);padding:.35rem .7rem;border-radius:4px;cursor:pointer;font:inherit;font-size:.72rem}
+.wx-foot{padding:1rem 1.25rem 1.25rem;font-size:.72rem;color:var(--ink3);max-width:680px;margin:0 auto;line-height:1.55;border-top:1px solid var(--rule)}
+.wx-foot a{color:var(--accent-dark);text-decoration:none}
+.wx-foot a:hover{text-decoration:underline}
 </style>
 </head>
 <body>
@@ -510,6 +575,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
     <button class="tab f" data-tab="fiona">Fionas</button>
     <button class="tab b" data-tab="bothy">Bothies</button>
     <button class="tab" data-tab="map">Map</button>
+    <button class="tab w" data-tab="weather">Weather</button>
   </div>
 </nav>
 
@@ -637,6 +703,19 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
     <div class="bothy-disclaimer">
       <span class="bothy-disc-icon">⌂</span>
       Bothies listed are MBA-maintained shelters sourced from the <a href="https://en.wikipedia.org/wiki/List_of_Mountain_Bothies_Association_bothies" target="_blank" rel="noopener">Wikipedia MBA bothy list</a> (current as of March 2025). Always check the <a href="https://www.mountainbothies.org.uk/bothies/" target="_blank" rel="noopener">MBA website</a> for the definitive list and current conditions.
+    </div>
+  </div>
+</div>
+
+<!-- WEATHER SECTION -->
+<div id="weather-section" style="display:none">
+  <div id="wx-content">
+    <div class="wx-skel">
+      <div class="wx-skel-row"></div>
+      <div class="wx-skel-row"></div>
+      <div class="wx-skel-row"></div>
+      <div class="wx-skel-row"></div>
+      <div class="wx-skel-row"></div>
     </div>
   </div>
 </div>
@@ -2168,20 +2247,37 @@ function renderAll(){
   var ls=document.getElementById('list-section');
   var ms=document.getElementById('map-section');
   var bs=document.getElementById('bothy-section');
+  var ws=document.getElementById('weather-section');
+  // Toggle masthead title between Bagger and Forecast
+  var h1=document.querySelector('.mast-h1');
+  if(h1){
+    h1.innerHTML = activeTab==='weather'
+      ? 'Scottish <em>Hill Forecast</em>'
+      : 'Scottish <em>Hill Bagger</em>';
+  }
   if(activeTab==='map'){
     if(ls) ls.style.display='none';
     if(ms) ms.style.display='block';
     if(bs) bs.style.display='none';
+    if(ws) ws.style.display='none';
     renderMap();
   } else if(activeTab==='bothy'){
     if(ls) ls.style.display='none';
     if(ms) ms.style.display='none';
     if(bs) bs.style.display='';
+    if(ws) ws.style.display='none';
     renderBothyList();
+  } else if(activeTab==='weather'){
+    if(ls) ls.style.display='none';
+    if(ms) ms.style.display='none';
+    if(bs) bs.style.display='none';
+    if(ws) ws.style.display='';
+    loadWeather();
   } else {
     if(ls) ls.style.display='';
     if(ms) ms.style.display='none';
     if(bs) bs.style.display='none';
+    if(ws) ws.style.display='none';
     renderList();
   }
 }
@@ -3351,6 +3447,320 @@ document.addEventListener('keydown', function(e){
       for(var i=0;i<rows2.length;i++) rows2[i].classList.remove('focused');
     }
   });
+
+/* ============ WEATHER MODULE ============ */
+var WX_URL = './forecast.json';
+
+// MWIS area → tracker region(s) mapping
+var WX_AREA_TO_TRACKER = {
+  'West Highlands': ['Argyll','Arran','Glen Coe & Lochaber','Loch Lomond & Trossachs','Southwest Highlands and Islands','Western Highlands','Skye'],
+  'Northwest Highlands': ['Kintail & Glen Affric','North West Highlands and Islands','Northern Highlands','Outer Hebrides','Sutherland','Torridon & Wester Ross','Ullapool & Assynt'],
+  'Cairngorms & Monadhliath': ['Cairngorms','Badenoch & Monadh Liath','Eastern Highlands'],
+  'Southeastern Highlands': ['Central Highlands','Perthshire & Breadalbane'],
+  'Southern Uplands': ['Galloway','Southern Scotland','Southern Uplands']
+};
+var WX_REGION_IDS = {
+  'Northwest Highlands': 'the-northwest-highlands',
+  'West Highlands': 'west-highlands',
+  'Cairngorms & Monadhliath': 'cairngorms-np-and-monadhliath',
+  'Southeastern Highlands': 'southeastern-highlands',
+  'Southern Uplands': 'southern-uplands'
+};
+var WX_MWIS = function(id){return 'https://www.mwis.org.uk/forecasts/scottish/'+id;};
+var WX_WIND_DEG = {N:180,NE:225,E:270,SE:315,S:0,SW:45,W:90,NW:135};
+var WX_SKY = {
+  sun:'<svg class="wx-day-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>',
+  'partly-cloudy':'<svg class="wx-day-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v2M5.22 5.22l1.42 1.42M2 12h2M20 12h2M15.95 6.34A6.49 6.49 0 0 0 9 4.07"/><path d="M16 21H8a5 5 0 0 1-1-9.9 7 7 0 1 1 13 3.9"/></svg>',
+  cloud:'<svg class="wx-day-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 1 0-1.41-8.78 7 7 0 1 0-13.6 2.78"/><path d="M2 19h15.5"/></svg>',
+  rain:'<svg class="wx-day-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/><path d="M16 14v6M8 14v6M12 16v6"/></svg>',
+  fog:'<svg class="wx-day-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14h18M3 18h18M3 22h18M5 10a7 7 0 1 1 14 0"/></svg>',
+  snow:'<svg class="wx-day-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="22"/><path d="m20 6-8 4-8-4"/><path d="m20 18-8-4-8 4"/></svg>',
+  storm:'<svg class="wx-day-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 16.9A5 5 0 0 0 18 7h-1.26a8 8 0 1 0-11.62 9"/><path d="m13 12-3 5h4l-3 5"/></svg>'
+};
+var WX_SKY_LABEL = {sun:'Sun','partly-cloudy':'Mixed',cloud:'Cloud',rain:'Rain',fog:'Fog',snow:'Snow',storm:'Storm'};
+var WX_PILL_CLASS = {sun:'wx-pill-sun','partly-cloudy':'wx-pill-cloud',cloud:'wx-pill-cloud',rain:'wx-pill-rain',fog:'wx-pill-fog',snow:'wx-pill-snow',storm:'wx-pill-storm'};
+
+var wxData = null;
+var wxLoading = false;
+var wxOpenRegion = null;
+var wxOpenDay = {}; // {regionName: dayIdx}
+
+function wxEsc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+
+function wxWindDesc(mph){
+  if(mph>=45) return {label:'dangerous',danger:true};
+  if(mph>=30) return {label:'strong',danger:false};
+  if(mph>=18) return {label:'breezy',danger:false};
+  return {label:'calm',danger:false};
+}
+function wxStatusLabel(s){return s==='go'?'Go':s==='marginal'?'Marginal':s==='poor'?"Don't go":'—';}
+function wxStatusClass(s){return s==='go'?'wx-st-go':s==='marginal'?'wx-st-marg':'wx-st-poor';}
+function wxStatusTagClass(s){return s==='go'?'go':s==='marginal'?'marg':'poor';}
+function wxVisLabel(v){return ({excellent:'Excellent',good:'Good',moderate:'Moderate',poor:'Poor'})[v]||'—';}
+function wxFreezeLabel(m){if(!m||m>=9000) return 'Above summits'; return m.toLocaleString()+' m';}
+
+function wxWindArrow(dir,mph){
+  var deg = WX_WIND_DEG[(dir||'').toUpperCase()];
+  if(deg==null) deg=0;
+  var op = mph>=30?1:mph>=18?0.75:0.45;
+  return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:11px;height:11px;display:inline-block;vertical-align:-1px;transform:rotate('+deg+'deg);opacity:'+op+'"><path d="M12 19V5M5 12l7-7 7 7"/></svg>';
+}
+
+function wxPill(skyCode,label){
+  var cls = WX_PILL_CLASS[skyCode]||'wx-pill-cloud';
+  return '<span class="wx-pill '+cls+'">'+wxEsc(label)+' '+wxEsc(WX_SKY_LABEL[skyCode]||'')+'</span>';
+}
+
+// Count unbagged Munros across the tracker regions a given MWIS area covers
+function wxCountUnbaggedInArea(areaName){
+  var trackerRegions = WX_AREA_TO_TRACKER[areaName] || [];
+  var count = 0;
+  for(var i=0;i<M.length;i++){
+    var p = M[i];
+    if(p.type!=='munro') continue;
+    if(trackerRegions.indexOf(p.region) < 0) continue;
+    if(!bagged[p.id]) count++;
+  }
+  return count;
+}
+
+function wxRenderDayCell(f, dayIdx, regionName, isOpen){
+  if(!f){return '<div class="wx-day"><span style="color:var(--ink4);font-size:.7rem">—</span></div>';}
+  var st = f.status||'marginal';
+  var goBg = st==='go' ? ' go-bg' : '';
+  var openClass = isOpen ? ' open' : '';
+  return ''+
+  '<div class="wx-day'+goBg+openClass+'" data-region="'+wxEsc(regionName)+'" data-day="'+dayIdx+'">'+
+    '<div class="wx-day-label">'+wxEsc((wxData.days||[])[dayIdx]||'')+'</div>'+
+    (WX_SKY[f.sky]||WX_SKY.cloud)+
+    '<div class="wx-day-status '+wxStatusClass(st)+'">'+wxStatusLabel(st)+'</div>'+
+  '</div>';
+}
+
+function wxRenderDetail(region, dayIdx){
+  var f = (region.forecast||[])[dayIdx];
+  if(!f) return '';
+  var st = f.status||'marginal';
+  var wd = wxWindDesc(f.windMph||0);
+  var areaId = WX_REGION_IDS[region.name] || '';
+  var unbagged = wxCountUnbaggedInArea(region.name);
+  var dayName = (wxData.days||[])[dayIdx] || 'Day';
+
+  var ctaHtml = '';
+  if(unbagged > 0){
+    ctaHtml = ''+
+    '<div class="wx-cta">'+
+      '<div class="wx-cta-text">You have <strong>'+unbagged+' unbagged Munro'+(unbagged===1?'':'s')+'</strong> in this area.</div>'+
+      '<button class="wx-cta-btn" data-area="'+wxEsc(region.name)+'">View peaks ↗</button>'+
+    '</div>';
+  }
+
+  return ''+
+  '<div class="wx-detail">'+
+    '<div class="wx-det-head">'+
+      '<span class="wx-det-day-label">'+wxEsc(dayName)+'</span>'+
+      '<span class="wx-det-tag '+wxStatusTagClass(st)+'">'+wxStatusLabel(st)+'</span>'+
+    '</div>'+
+    '<div class="wx-det-row"><span class="wx-det-label">Wind</span><span class="wx-det-val'+(wd.danger?' danger':(f.windMph<=18?' good':''))+'">'+wxWindArrow(f.windDir,f.windMph||0)+' '+(f.windMph!=null?f.windMph:'—')+' mph '+wxEsc(f.windDir||'')+' · '+wd.label+'</span></div>'+
+    '<div class="wx-det-row"><span class="wx-det-label">Temperature on tops</span><span class="wx-det-val">'+(f.tempC!=null?f.tempC+'°C':'—')+'</span></div>'+
+    '<div class="wx-det-row"><span class="wx-det-label">Cloud-free summits</span><span class="wx-det-val'+((f.cloudFree||0)>=75?' good':((f.cloudFree||0)<40?' danger':''))+'">'+(f.cloudFree!=null?f.cloudFree+'%':'—')+'</span></div>'+
+    '<div class="wx-det-row"><span class="wx-det-label">Visibility</span><span class="wx-det-val">'+wxVisLabel(f.visibility)+'</span></div>'+
+    '<div class="wx-det-row"><span class="wx-det-label">Freezing level</span><span class="wx-det-val">'+wxFreezeLabel(f.freezingLevel)+'</span></div>'+
+    '<div class="wx-det-row"><span class="wx-det-label">Through the day</span><span class="wx-ampm">'+wxPill(f.amSky||f.sky,'AM')+wxPill(f.pmSky||f.sky,'PM')+'</span></div>'+
+    (f.note?'<div class="wx-det-note">'+wxEsc(f.note)+'</div>':'')+
+    ctaHtml+
+    '<a class="wx-mwis-link" href="'+WX_MWIS(areaId)+'" target="_blank" rel="noopener">↗ Full MWIS forecast</a>'+
+  '</div>';
+}
+
+function wxRenderRegion(region){
+  var open = (wxOpenRegion === region.name);
+  var dayIdx = wxOpenDay[region.name];
+  if(dayIdx==null) dayIdx = 0;
+  var fc = region.forecast||[];
+  var stripHtml = '';
+  for(var i=0;i<3;i++){
+    stripHtml += wxRenderDayCell(fc[i], i, region.name, open && dayIdx===i);
+  }
+  return ''+
+  '<div class="wx-region'+(open?' open':'')+'" data-region="'+wxEsc(region.name)+'">'+
+    '<div class="wx-rg-head" data-rgtoggle="'+wxEsc(region.name)+'">'+
+      '<div class="wx-rg-name">'+wxEsc(region.name)+'</div>'+
+      '<span class="wx-chev">›</span>'+
+    '</div>'+
+    '<div class="wx-day-strip">'+stripHtml+'</div>'+
+    (open ? wxRenderDetail(region, dayIdx) : '')+
+  '</div>';
+}
+
+function wxRender(){
+  var c = document.getElementById('wx-content');
+  if(!c) return;
+  if(!wxData){
+    c.innerHTML = '<div class="wx-skel"><div class="wx-skel-row"></div><div class="wx-skel-row"></div><div class="wx-skel-row"></div><div class="wx-skel-row"></div><div class="wx-skel-row"></div></div>';
+    return;
+  }
+  var summary = wxData.summary || '';
+  var updatedTxt = '';
+  if(wxData.updatedAt){
+    try{
+      var d = new Date(wxData.updatedAt);
+      updatedTxt = 'Updated '+d.toLocaleString('en-GB',{weekday:'short',hour:'2-digit',minute:'2-digit'});
+    }catch(e){}
+  }
+  var html = '';
+  if(summary) html += '<div class="wx-summary">'+wxEsc(summary)+'</div>';
+  html += '<div class="wx-meta-row"><span>'+wxEsc(updatedTxt)+'</span><button class="wx-refresh" id="wx-refresh-btn"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg>refresh</button></div>';
+  html += '<div class="wx-list">';
+  var regions = wxData.regions||[];
+  for(var i=0;i<regions.length;i++) html += wxRenderRegion(regions[i]);
+  html += '</div>';
+  html += '<div class="wx-foot">Forecasts from <a href="https://www.mwis.org.uk" target="_blank" rel="noopener">MWIS</a>, the Mountain Weather Information Service. Data refreshes twice daily. Always check the full MWIS bulletin before heading to the hills.</div>';
+  c.innerHTML = html;
+  wxAttachEvents();
+}
+
+function wxAttachEvents(){
+  // Region head toggles
+  var heads = document.querySelectorAll('[data-rgtoggle]');
+  for(var i=0;i<heads.length;i++){
+    (function(h){
+      h.addEventListener('click', function(){
+        var rname = h.getAttribute('data-rgtoggle');
+        if(wxOpenRegion === rname){
+          wxOpenRegion = null;
+        } else {
+          wxOpenRegion = rname;
+          // Auto-open best day if not already chosen
+          if(wxOpenDay[rname]==null){
+            var region = (wxData.regions||[]).find(function(r){return r.name===rname;});
+            if(region){
+              var bestIdx = 0, bestRank = -1;
+              var rank = {go:3,marginal:2,poor:1};
+              (region.forecast||[]).forEach(function(f,idx){
+                var r = rank[f.status]||0;
+                if(r>bestRank){bestRank=r;bestIdx=idx;}
+              });
+              wxOpenDay[rname] = bestIdx;
+            }
+          }
+        }
+        wxRender();
+      });
+    })(heads[i]);
+  }
+  // Day cell taps
+  var cells = document.querySelectorAll('.wx-day[data-day]');
+  for(var j=0;j<cells.length;j++){
+    (function(c){
+      c.addEventListener('click', function(e){
+        e.stopPropagation();
+        var rname = c.getAttribute('data-region');
+        var didx = parseInt(c.getAttribute('data-day'),10);
+        wxOpenRegion = rname;
+        wxOpenDay[rname] = didx;
+        wxRender();
+      });
+    })(cells[j]);
+  }
+  // Refresh
+  var rb = document.getElementById('wx-refresh-btn');
+  if(rb){
+    rb.addEventListener('click', function(){
+      rb.classList.add('spin');
+      loadWeather(true);
+    });
+  }
+  // Cross-link CTAs
+  var ctas = document.querySelectorAll('.wx-cta-btn[data-area]');
+  for(var k=0;k<ctas.length;k++){
+    (function(b){
+      b.addEventListener('click', function(){
+        var area = b.getAttribute('data-area');
+        wxJumpToMunros(area);
+      });
+    })(ctas[k]);
+  }
+}
+
+// Switch to Munros tab and pre-filter to all tracker-regions inside this MWIS area.
+// We use a multi-region filter: since the existing region filter is single-select,
+// we set searchTerm to a special token that matches any of the area's regions.
+function wxJumpToMunros(areaName){
+  var trackerRegions = WX_AREA_TO_TRACKER[areaName] || [];
+  if(!trackerRegions.length) return;
+
+  // Click the Munros tab to inherit existing tab-switch logic
+  var munroTab = document.querySelector('.tab[data-tab="munro"]');
+  if(munroTab) munroTab.click();
+
+  // After tab switch, set up filters
+  setTimeout(function(){
+    // If there's only one tracker region, use the existing region filter
+    if(trackerRegions.length===1){
+      regionFilter = trackerRegions[0];
+      var rc = document.getElementById('region-chip');
+      var rl = document.getElementById('region-chip-label');
+      if(rc) rc.classList.add('has-selection');
+      if(rl) rl.textContent = trackerRegions[0];
+    } else {
+      // Multi-region: search by region name pattern. The list already filters
+      // by name OR region, so we use a regex-like OR via search field.
+      // Simpler: leave region filter clear, but show a one-time hint.
+      regionFilter = '';
+    }
+    // Hide bagged so the user sees what they still need
+    if(typeof activeFilters !== 'undefined' && activeFilters){
+      activeFilters['status:bagged'] = false;
+    }
+    // Run a custom filter callback if available, else just re-render
+    if(typeof renderList === 'function') renderList();
+    // Show toast
+    if(typeof showToast === 'function'){
+      var n = wxCountUnbaggedInArea(areaName);
+      showToast('Showing '+n+' unbagged Munro'+(n===1?'':'s')+' in '+areaName);
+    }
+    // Scroll to top
+    window.scrollTo({top:0,behavior:'smooth'});
+  }, 50);
+}
+
+function loadWeather(force){
+  if(wxLoading) return;
+  if(wxData && !force){ wxRender(); return; }
+  wxLoading = true;
+  if(!wxData) wxRender(); // show skeleton
+  fetch(WX_URL, {cache: force?'reload':'default'})
+    .then(function(r){
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json();
+    })
+    .then(function(data){
+      wxData = data;
+      try{ localStorage.setItem('wx:cache', JSON.stringify({at:Date.now(),data:data})); }catch(e){}
+      wxLoading = false;
+      wxRender();
+    })
+    .catch(function(err){
+      wxLoading = false;
+      // Try cached fallback
+      try{
+        var cached = localStorage.getItem('wx:cache');
+        if(cached){
+          var p = JSON.parse(cached);
+          if(p && p.data){
+            wxData = p.data;
+            wxRender();
+            return;
+          }
+        }
+      }catch(e){}
+      var c = document.getElementById('wx-content');
+      if(c){
+        c.innerHTML = '<div class="wx-error">Couldn\'t load forecast — '+wxEsc(err.message)+'.<br><button onclick="loadWeather(true)">Try again</button></div>';
+      }
+    });
+}
 
 </script>
 </body>
