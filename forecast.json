@@ -1,5 +1,5 @@
 {
-  "summary": "Foggy and drizzly Sunday across Scotland, Monday improving with sunshine before afternoon showers, Tuesday cold with scattered snow showers.",
+  "summary": "Fog and drizzle Sunday across all regions, clearing Monday with sunny spells, then cold northerly snow showers Tuesday.",
   "days": [
     "Sun",
     "Mon",
@@ -16,12 +16,12 @@
           "windDir": "E",
           "tempC": 2,
           "cloudFree": 20,
-          "freezingLevel": 9999,
+          "freezingLevel": 850,
           "visibility": "poor",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "note": "Extensive cloud east, bases 500-600m west coast dawn"
+          "note": "Drizzly showers/flurries; cloud lifting to 800-900m afternoon"
         },
         {
           "sky": "partly-cloudy",
@@ -34,20 +34,20 @@
           "amSky": "sun",
           "pmSky": "rain",
           "status": "marginal",
-          "note": "Showers set in for several afternoon hours, locally heavier falls"
+          "note": "Showers setting in for several afternoon hours, far north blustery"
         },
         {
           "sky": "partly-cloudy",
           "windMph": 10,
           "windDir": "NW",
-          "tempC": 0,
+          "tempC": -1,
           "cloudFree": 70,
-          "freezingLevel": 800,
+          "freezingLevel": 850,
           "visibility": "good",
           "amSky": "cloud",
           "pmSky": "sun",
           "status": "marginal",
-          "note": "Scattered snow showers, risk clustering easternmost hills"
+          "note": "Scattered snow showers from north; clustering easternmost hills"
         }
       ]
     },
@@ -58,40 +58,40 @@
           "sky": "cloud",
           "windMph": 10,
           "windDir": "E",
-          "tempC": 3,
+          "tempC": 4,
           "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "note": "Extensive hill fog, bases near glen level Central Belt at dawn"
+          "note": "Extensive hill fog and drizzle; bases staying near 700-800m Glencoe"
         },
         {
           "sky": "partly-cloudy",
           "windMph": 15,
           "windDir": "WNW",
           "tempC": 3,
-          "cloudFree": 60,
+          "cloudFree": 45,
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "sun",
           "pmSky": "partly-cloudy",
-          "status": "go",
-          "note": "Mostly sunny morning, showers pushing into Lochaber afternoon"
+          "status": "marginal",
+          "note": "Sunny morning, showers pushing into Lochaber afternoon, dry Loch Lomond"
         },
         {
           "sky": "partly-cloudy",
           "windMph": 10,
           "windDir": "NW",
-          "tempC": 0,
+          "tempC": -1,
           "cloudFree": 60,
           "freezingLevel": 700,
           "visibility": "good",
           "amSky": "cloud",
           "pmSky": "sun",
           "status": "marginal",
-          "note": "Morning fog inland Ben Nevis south, few snow showers drifting north"
+          "note": "Snow showers from north; freezing level 400-500m Creag Meagaidh"
         }
       ]
     },
@@ -107,35 +107,35 @@
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "cloud",
-          "pmSky": "partly-cloudy",
+          "pmSky": "cloud",
           "status": "poor",
-          "note": "Blanket fog to glen level east, high Cairngorms likely cloud all day"
+          "note": "Extensive fog; high Cairngorms likely in cloud all day"
         },
         {
           "sky": "partly-cloudy",
           "windMph": 20,
           "windDir": "W",
           "tempC": 4,
-          "cloudFree": 80,
+          "cloudFree": 55,
           "freezingLevel": 9999,
-          "visibility": "good",
+          "visibility": "excellent",
           "amSky": "sun",
           "pmSky": "rain",
-          "status": "go",
-          "note": "Sunny morning, showers merging afternoon giving hours of rain"
+          "status": "marginal",
+          "note": "Sunny morning, showers merging to constant rain afternoon, lowering to 600m"
         },
         {
           "sky": "partly-cloudy",
           "windMph": 10,
-          "windDir": "variable",
-          "tempC": 0,
+          "windDir": "N",
+          "tempC": -1,
           "cloudFree": 60,
-          "freezingLevel": 500,
+          "freezingLevel": 700,
           "visibility": "good",
           "amSky": "cloud",
           "pmSky": "sun",
           "status": "marginal",
-          "note": "Snow showers clustering in larger groups, caps clinging east Cairngorms"
+          "note": "Snow showers from north clustering; freezing level 500m near Inverness"
         }
       ]
     },
@@ -153,10 +153,10 @@
           "amSky": "cloud",
           "pmSky": "cloud",
           "status": "poor",
-          "note": "Extensive fog to glen level, drizzle west of A9, murky all day"
+          "note": "Extensive fog and drizzle; lingering Callander and Loch Tay"
         },
         {
-          "sky": "sun",
+          "sky": "partly-cloudy",
           "windMph": 15,
           "windDir": "W",
           "tempC": 5,
@@ -166,20 +166,20 @@
           "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "go",
-          "note": "Sunny morning excellent visibility, scattered showers drifting in later"
+          "note": "Sunny morning, scattered showers drifting from north and west later"
         },
         {
           "sky": "partly-cloudy",
           "windMph": 10,
-          "windDir": "variable",
-          "tempC": 0,
+          "windDir": "N",
+          "tempC": -1,
           "cloudFree": 60,
-          "freezingLevel": 500,
+          "freezingLevel": 700,
           "visibility": "good",
           "amSky": "cloud",
           "pmSky": "sun",
           "status": "marginal",
-          "note": "Blanket fog dawn, snow showers clustering, 500-600m freezing level"
+          "note": "Snow showers clustering; freezing level 500-600m, frosts in glens"
         }
       ]
     },
@@ -190,14 +190,14 @@
           "sky": "rain",
           "windMph": 20,
           "windDir": "NE",
-          "tempC": 4,
+          "tempC": 5,
           "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
           "pmSky": "cloud",
           "status": "poor",
-          "note": "Persistent rain east Borders and Cheviots nearly constant, fog all day"
+          "note": "Persistent rain east Borders and Cheviot; fog likely all day eastern hills"
         },
         {
           "sky": "partly-cloudy",
@@ -207,27 +207,27 @@
           "cloudFree": 80,
           "freezingLevel": 9999,
           "visibility": "excellent",
-          "amSky": "partly-cloudy",
+          "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "note": "Cloud clears most summits morning, patches sunshine Borders, excellent visibility"
+          "note": "Cloud clearing summits morning; sunshine especially Borders, dry hills"
         },
         {
           "sky": "partly-cloudy",
           "windMph": 10,
           "windDir": "NNW",
-          "tempC": 3,
+          "tempC": 4,
           "cloudFree": 80,
-          "freezingLevel": 800,
+          "freezingLevel": 850,
           "visibility": "good",
           "amSky": "cloud",
           "pmSky": "sun",
           "status": "marginal",
-          "note": "Snow above 500m, showers clustering into broader rain periods"
+          "note": "Snow above 500m; showers clustering east Borders and Cheviot"
         }
       ]
     }
   ],
-  "_generated": "2026-05-02T17:10:01.289Z",
+  "_generated": "2026-05-02T19:43:36.211Z",
   "_anchorDate": "2026-05-03"
 }
