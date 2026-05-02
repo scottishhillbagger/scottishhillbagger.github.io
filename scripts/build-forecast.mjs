@@ -63,9 +63,9 @@ function extractMWISUpdated(text) {
 // --- Build the prompt with fetched content embedded -----------------
 function buildPrompt(pages, forecastDays, isAfternoon) {
   const [day0, day1, day2] = forecastDays;
-  const firstDayLabel = isAfternoon ? "TOMORROW" : "TODAY";
+  const firstDayLabel = isAfternoon ? "TOMORROW (relative to update)" : "TODAY (relative to update)";
 
-  const dateBlock = `Today is ${dayLong(todayUK)}. The 3 days you must forecast are:\n- Day 1: ${dayShort(day0)} (${dayLong(day0)}) — ${firstDayLabel}\n- Day 2: ${dayShort(day1)} (${dayLong(day1)})\n- Day 3: ${dayShort(day2)} (${dayLong(day2)})`;
+  const dateBlock = `The 3 days you must forecast are:\n- Day 1: ${dayShort(day0)} (${dayLong(day0)}) — ${firstDayLabel}\n- Day 2: ${dayShort(day1)} (${dayLong(day1)})\n- Day 3: ${dayShort(day2)} (${dayLong(day2)})`;
 
   const mappedPages = pages.map((p) => `=== ${p.name} (source: ${p.url}) ===\nMWIS last updated: ${p.updatedAt || 'not detected'}\n\n${p.text.slice(0, 8000)}`);
   const pagesBlock = mappedPages.join('\n\n');
@@ -131,23 +131,41 @@ if (ageHours !== null && ageHours > 24) {
   console.warn(`⚠ Newest MWIS update is ${ageHours.toFixed(1)}h old — data may be stale`);
 }
 
-// Determine if we are looking at the Morning or Afternoon bulletin
+let day0, day1, day2;
 let isAfternoonBulletin = false;
+
 if (newestUpdate) {
-  // Extract the hour of the latest MWIS update in UK time
-  const updateUKHour = parseInt(new Date(newestUpdate).toLocaleString('en-GB', { hour: 'numeric', hour12: false, timeZone: 'Europe/London' }), 10);
-  // Afternoon bulletin typically published ~16:30. 14:00 is a safe threshold.
-  if (updateUKHour >= 14) isAfternoonBulletin = true;
+  // 1. Get the date of the MWIS update itself in UK time
+  const updateDate = new Date(newestUpdate);
+  const updateUKDateStr = updateDate.toLocaleString('en-US', { timeZone: 'Europe/London' });
+  const updateUKDate = new Date(updateUKDateStr);
+  updateUKDate.setHours(0, 0, 0, 0); // Strip time, keep just the date
+
+  // 2. Check the hour it was published
+  const updateUKHour = parseInt(updateDate.toLocaleString('en-GB', { hour: 'numeric', hour12: false, timeZone: 'Europe/London' }), 10);
+  
+  // 3. If published >= 14:00, Day 1 of the forecast is the day AFTER the update date.
+  if (updateUKHour >= 14) {
+    isAfternoonBulletin = true;
+    day0 = addDays(updateUKDate, 1);
+  } else {
+    isAfternoonBulletin = false;
+    day0 = updateUKDate;
+  }
 } else {
-  // Fallback to system run time if parsing failed completely
+  // Fallback if parsing fails completely: use system time
   const runUKHour = parseInt(todayUK.toLocaleString('en-GB', { hour: 'numeric', hour12: false, timeZone: 'Europe/London' }), 10);
-  if (runUKHour >= 16) isAfternoonBulletin = true;
+  if (runUKHour >= 16) {
+    isAfternoonBulletin = true;
+    day0 = addDays(todayUK, 1);
+  } else {
+    isAfternoonBulletin = false;
+    day0 = todayUK;
+  }
 }
 
-const startOffset = isAfternoonBulletin ? 1 : 0;
-const day0 = addDays(todayUK, startOffset);
-const day1 = addDays(todayUK, startOffset + 1);
-const day2 = addDays(todayUK, startOffset + 2);
+day1 = addDays(day0, 1);
+day2 = addDays(day0, 2);
 const forecastDays = [day0, day1, day2];
 
 console.log(`Bulletin type determined: ${isAfternoonBulletin ? 'Afternoon' : 'Morning'} update.`);
