@@ -126,9 +126,12 @@ Schema:
       "forecast": [
         {
           "sky": "sun|partly-cloudy|cloud|rain|fog|snow|storm",
-          "windMph": 25,
+          "windMphLow": 20,
+          "windMphHigh": 30,
+          "gustMph": 40,
           "windDir": "SE",
-          "tempC": 12,
+          "tempCLow": 8,
+          "tempCHigh": 12,
           "cloudFree": 90,
           "freezingLevel": 9999,
           "visibility": "excellent|good|moderate|poor",
@@ -145,17 +148,18 @@ Schema:
 Field rules:
 - sky / amSky / pmSky: pick the headline. If MWIS says "Unbroken bright sunshine" use "sun", NOT "partly-cloudy". "Extensive sunshine" = sun. "Mostly dry, occasional sunshine, some rain" = partly-cloudy. Only use "rain" if MWIS describes rain as the dominant condition. Only use "cloud" if MWIS says cloud sits below summit height most of the day.
 - cloudFree: anchor to MWIS's cloud-base description. "Mountains free of cloud" / "free of cloud once mist disperses" = 90-95. "Cloud above 600m" with summits >900m = 70-80. "Cloud filling above 600m" with summits ~900m = 30-50. "Cloud may not clear all day" = 10-20. Don't be conservative on bright days.
-- windMph: numeric. If MWIS gives a range "20-30mph" use the average (25). If MWIS warns of stronger gusts (e.g. "gusty 40mph"), use the GUST value because it's the safety-relevant number for hill walkers.
+- windMphLow / windMphHigh: extract the MWIS range as two numbers. If MWIS says "20 to 30 mph", use windMphLow=20, windMphHigh=30. If MWIS gives a single number (e.g. "around 15mph"), use that for both. Always include both.
+- gustMph: ONLY if MWIS explicitly mentions gusts (words like "gusty", "gusts", "gusting"). If MWIS says "gusts 40mph" or "perhaps 35-40mph", use 40. If no gusts mentioned, OMIT this field entirely (do not include it as null or 0).
 - windDir: dominant compass direction from MWIS (often "SE", "S", "SW" etc.). Don't simplify "southeasterly" to "S".
-- tempC: temperature on tops/summits as MWIS states it. If MWIS says "10 to 15C on tops" use 12 or 13.
-- freezingLevel: metres ASL. "Above the summits" → 9999. "Freezing level 700m" → 700. Read MWIS carefully — most spring/summer days will be 9999.
-- visibility: excellent (>30km), good (10-30km), moderate (4-10km), poor (<4km). MWIS phrases like "Excellent or superb visibility" → excellent. "Visibility very good" → good. "Visibility often poor in rain" → poor.
-- status: "go" = MWIS's headline is positive (sunshine, dry, manageable wind, comfortable temp). "marginal" = mixed (some rain, gusty, low confidence). "poor" = MWIS warns of heavy rain, thunder, gales, white-out, or dangerous conditions.
+- tempCLow / tempCHigh: temperature range on tops/summits as MWIS states it. "10 to 15C on tops" → tempCLow=10, tempCHigh=15. Single number → use for both.
+- freezingLevel: metres ASL. "Above the summits" → 9999. "Freezing level 700m" → 700.
+- visibility: excellent (>30km), good (10-30km), moderate (4-10km), poor (<4km).
+- status: "go" = MWIS's headline is positive (sunshine, dry, manageable wind, comfortable temp). "marginal" = mixed (some rain, gusty, low confidence). "poor" = MWIS warns of heavy rain, thunder, gales, white-out, or dangerous conditions. When deciding, weight the GUST or HIGH wind value (not the average) — a 40mph gust day is poor regardless of the calm 10mph low.
 - note: max 10 words. Reuse MWIS's distinctive language. Examples of good notes: "gusts 40mph Cairngorm plateau", "thundery bursts Great Glen pm", "frost overnight, snow above 700m", "Arran/Jura/Mull strongest 35-40mph". DO NOT write generic notes like "patchy rain possible".
 
 Worked example — if MWIS West Highlands Day 1 says:
   "Bright sunshine. Locally gusty wind. Southeasterly 20 to 30mph, strongest and most gusty Arran, Jura and Mull, where sometimes 35 or 40mph in morning. Mountains free of cloud. Excellent or superb visibility. 10 to 15C on tops."
-Then output: sky:"sun", amSky:"sun", pmSky:"sun", windMph:40, windDir:"SE", tempC:13, cloudFree:95, visibility:"excellent", status:"go", note:"gusts 35-40mph Arran/Jura/Mull morning"
+Then output: sky:"sun", amSky:"sun", pmSky:"sun", windMphLow:20, windMphHigh:30, gustMph:40, windDir:"SE", tempCLow:10, tempCHigh:15, cloudFree:95, visibility:"excellent", status:"go", note:"gusts 35-40mph Arran/Jura/Mull morning"
 
 INPUT (live MWIS text):
 
