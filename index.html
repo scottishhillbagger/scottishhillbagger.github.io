@@ -601,15 +601,34 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 .help-tooltip{position:absolute;z-index:50;background:var(--ink);color:var(--surface-elev);font-family:var(--font-body);font-size:.74rem;line-height:1.4;padding:.55rem .7rem;border-radius:6px;max-width:260px;letter-spacing:-.005em;box-shadow:0 4px 12px rgba(0,0,0,0.18);pointer-events:none}
 .help-tooltip::after{content:'';position:absolute;top:-5px;left:18px;border-left:5px solid transparent;border-right:5px solid transparent;border-bottom:5px solid var(--ink)}
 
-/* ============ ABOUT MODAL ============ */
-.about-link{display:inline-block;margin-top:.4rem;font-size:.72rem;color:var(--ink3);text-decoration:none;border-bottom:1px solid transparent;letter-spacing:-.005em}
-.about-link:hover{color:var(--ink);border-bottom-color:var(--ink3)}
-.about-body{font-size:.82rem;line-height:1.55;color:var(--ink2);letter-spacing:-.005em}
-.about-body p{margin:0 0 .85rem 0}
-.about-body h3{font-family:var(--font-display);font-size:.85rem;font-weight:600;color:var(--ink);margin:1.2rem 0 .5rem;letter-spacing:-.01em}
-.about-body a{color:var(--accent-dark);text-decoration:none;border-bottom:1px solid transparent}
-.about-body a:hover{border-bottom-color:var(--accent-dark)}
-.about-body strong{color:var(--ink);font-weight:600}
+/* ============ ABOUT MODAL — colophon idiom ============ */
+.mast-icon-btn{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;padding:0;background:transparent;border:1px solid var(--ink4);color:var(--ink3);border-radius:50%;cursor:pointer;-webkit-appearance:none;-webkit-tap-highlight-color:transparent;transition:all .15s;flex-shrink:0}
+.mast-icon-btn:hover{border-color:var(--ink);color:var(--ink);background:var(--bg2)}
+.mast-icon-btn:active{transform:scale(.92)}
+.about-modal-inner{padding:1.85rem 1.65rem 1.4rem}
+.about-eyebrow{font-size:.6rem;text-transform:uppercase;letter-spacing:.18em;color:var(--ink3);font-weight:500;margin-bottom:.35rem}
+.about-title{font-family:var(--font-display);font-size:1.3rem;font-weight:600;color:var(--ink);line-height:1.1;letter-spacing:-.025em;margin:0 0 1.6rem}
+.about-title em{font-style:normal;color:var(--accent);font-weight:500}
+.about-section{padding-top:1rem;margin-top:1rem;border-top:1px solid var(--rule2)}
+.about-section:first-of-type{padding-top:0;margin-top:0;border-top:none}
+.about-label{font-size:.6rem;text-transform:uppercase;letter-spacing:.16em;color:var(--ink3);font-weight:600;margin-bottom:.85rem}
+.about-list{margin:0;padding:0}
+.about-list dt{display:flex;align-items:baseline;justify-content:space-between;gap:.5rem;border-bottom:1px solid var(--rule2);padding-bottom:.25rem;margin-bottom:.4rem;margin-top:1rem}
+.about-list dt:first-child{margin-top:0}
+.al-name{font-family:var(--font-display);font-size:.94rem;font-weight:600;color:var(--ink);letter-spacing:-.015em}
+.al-count{font-family:var(--font-mono);font-size:.92rem;font-weight:500;color:var(--accent-dark);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.about-list dd{margin:0 0 .15rem 0;font-size:.78rem;line-height:1.5;color:var(--ink2);letter-spacing:-.005em}
+.about-list dd em{font-style:italic;color:var(--ink2)}
+.about-sources{list-style:none;margin:0;padding:0}
+.about-sources li{display:flex;gap:.85rem;padding:.35rem 0;font-size:.78rem;line-height:1.45;border-bottom:1px solid var(--rule2)}
+.about-sources li:last-child{border-bottom:none}
+.as-k{flex:0 0 70px;font-size:.62rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink3);font-weight:500;padding-top:.1rem}
+.as-v{flex:1;color:var(--ink2);letter-spacing:-.005em}
+.as-v a{color:var(--terra-dark);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .12s}
+.as-v a:hover{border-bottom-color:var(--terra-dark)}
+.about-p{margin:0;font-size:.78rem;line-height:1.5;color:var(--ink2);letter-spacing:-.005em}
+.about-p strong{color:var(--ink);font-weight:600}
+.about-foot{margin:1.4rem 0 0;padding-top:1rem;border-top:1px solid var(--rule2);font-size:.7rem;line-height:1.55;color:var(--ink3);letter-spacing:-.005em}
 
 /* ============ WEATHER PANEL ============ */
 .tab.w.active{border-bottom-color:var(--accent)}
@@ -680,9 +699,11 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 <body>
 
 <header class="mast">
-  <div class="mast-in" style="display:flex;justify-content:space-between;align-items:baseline;gap:1rem">
+  <div class="mast-in" style="display:flex;justify-content:space-between;align-items:center;gap:1rem">
     <h1 class="mast-h1">Scottish <em>Hill Bagger</em></h1>
-    <button class="about-link" id="about-btn" type="button" aria-label="About this app">About</button>
+    <button class="mast-icon-btn" id="about-btn" type="button" aria-label="About this app" title="About">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+    </button>
   </div>
   <div class="scores">
     <div class="scores-in">
@@ -917,22 +938,44 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 
 <!-- ABOUT MODAL -->
 <div class="modal-ov" id="about-modal">
-  <div class="modal">
+  <div class="modal about-modal-inner">
     <button class="modal-x" id="about-x" aria-label="Close">&#10005;</button>
-    <h2 class="modal-name" style="font-size:1.05rem;margin-bottom:.5rem">About this app</h2>
-    <div class="about-body">
-      <p>A simple, calm tracker for Scottish hill bagging — keep a record of the summits you've climbed and the bothies you've stayed in, with weather forecasts to help plan your next trip.</p>
-      <h3>The lists</h3>
-      <p><strong>Munros</strong> — Scottish mountains over 3,000ft (914.4m), as catalogued by Sir Hugh Munro in 1891 and maintained by the Scottish Mountaineering Club. There are 282.</p>
-      <p><strong>Corbetts</strong> — Hills between 2,500–3,000ft (762–914m) with at least 500ft (152m) of prominence, named after John Rooke Corbett. There are 222.</p>
-      <p><strong>Fionas</strong> — Hills between 2,000–2,500ft (610–762m) with at least 500ft of prominence. Formerly known as the "Grahams". There are 219.</p>
-      <p><strong>Bothies</strong> — Simple shelters in remote areas of Scotland, maintained by the Mountain Bothies Association and free to use. 86 are listed.</p>
-      <h3>Data &amp; privacy</h3>
-      <p>Hill data is sourced from the <a href="https://www.smc.org.uk/" target="_blank" rel="noopener">Scottish Mountaineering Club</a> and the <a href="https://www.hills-database.co.uk/" target="_blank" rel="noopener">Database of British and Irish Hills</a>. Bothy data comes from the <a href="https://www.mountainbothies.org.uk/" target="_blank" rel="noopener">Mountain Bothies Association</a>. Weather forecasts are from <a href="https://www.mwis.org.uk/" target="_blank" rel="noopener">MWIS</a>, the Mountain Weather Information Service.</p>
-      <p>Your bagged peaks, visited bothies, and notes are stored locally on this device only — nothing is sent to a server. Use Export to save a backup file you can restore.</p>
-      <h3>The fine print</h3>
-      <p>Always check the full MWIS bulletin and current MBA bothy status before heading out. Hill walking carries real risk; this app is a planning aid, not a substitute for proper preparation.</p>
+
+    <div class="about-eyebrow">A field guide to</div>
+    <h2 class="about-title">Scottish <em>Hill Bagging</em></h2>
+
+    <div class="about-section">
+      <div class="about-label">The Hills</div>
+      <dl class="about-list">
+        <dt><span class="al-name">Munros</span><span class="al-count">282</span></dt>
+        <dd>Mountains over 3,000ft (914m), as catalogued by Sir Hugh Munro in his 1891 <em>Tables</em>. Maintained by the Scottish Mountaineering Club.</dd>
+
+        <dt><span class="al-name">Corbetts</span><span class="al-count">222</span></dt>
+        <dd>Hills between 2,500–3,000ft (762–914m) with at least 500ft (152m) of prominence. Named for John Rooke Corbett, an early Scottish Mountaineering Club member.</dd>
+
+        <dt><span class="al-name">Fionas</span><span class="al-count">219</span></dt>
+        <dd>Hills between 2,000–2,500ft (610–762m) with at least 500ft (152m) of prominence. Formerly known as Grahams.</dd>
+
+        <dt><span class="al-name">Bothies</span><span class="al-count">86</span></dt>
+        <dd>Simple shelters in remote country, free to use, maintained by the Mountain Bothies Association.</dd>
+      </dl>
     </div>
+
+    <div class="about-section">
+      <div class="about-label">Sources</div>
+      <ul class="about-sources">
+        <li><span class="as-k">Hills</span><span class="as-v"><a href="https://www.smc.org.uk/" target="_blank" rel="noopener">SMC</a> · <a href="https://www.hills-database.co.uk/" target="_blank" rel="noopener">Database of British &amp; Irish Hills</a></span></li>
+        <li><span class="as-k">Bothies</span><span class="as-v"><a href="https://www.mountainbothies.org.uk/" target="_blank" rel="noopener">Mountain Bothies Association</a></span></li>
+        <li><span class="as-k">Weather</span><span class="as-v"><a href="https://www.mwis.org.uk/" target="_blank" rel="noopener">Mountain Weather Information Service</a></span></li>
+      </ul>
+    </div>
+
+    <div class="about-section">
+      <div class="about-label">Privacy</div>
+      <p class="about-p">Your bagged peaks, visited bothies, and notes live on this device only. Use <strong>Export</strong> to save a backup file you can restore.</p>
+    </div>
+
+    <p class="about-foot"><em>Always check the full MWIS bulletin and current MBA bothy status before heading out. Hill walking carries real risk; this is a planning aid, not a substitute for proper preparation.</em></p>
   </div>
 </div>
 
