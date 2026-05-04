@@ -285,10 +285,13 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
     grid-template-rows:auto 1fr;
     min-height:100vh;
   }
-  /* Header spans both columns */
+  /* Header spans both columns and stays fixed at top while scrolling */
   .mast{
     grid-column:1 / -1;
     grid-row:1;
+    position:sticky;
+    top:0;
+    z-index:30;
   }
   .mast-in{
     max-width:1200px;
@@ -298,18 +301,20 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
   .scores{
     display:none; /* stats move into the sidebar instead */
   }
-  /* Tabs become the sidebar */
+  /* Tabs become the sidebar — sticks below the masthead */
   .tabs{
     grid-column:1;
     grid-row:2;
     position:sticky;
-    top:0;
+    top:60px; /* sits below the masthead height */
     align-self:start;
     background:var(--surface);
     border-right:1px solid var(--rule);
     border-bottom:none;
-    height:100%;
+    height:calc(100vh - 60px);
     min-height:calc(100vh - 60px);
+    z-index:20;
+    overflow-y:auto;
   }
   .tabs-in{
     flex-direction:column;
@@ -399,12 +404,28 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
     background:var(--accent-light);
   }
 
-  /* Hill-types segmented bar sits at top of content column */
+  /* Hill-types segmented bar sits at top of content column, sticky below masthead */
   .hill-types-in{
     padding:1rem 1.25rem .5rem;
     max-width:680px;
     margin:0 auto;
     justify-content:flex-start;
+  }
+  .hill-types{
+    position:sticky;
+    top:60px;
+    z-index:15;
+    background:var(--bg);
+  }
+  /* Toolbar (search + filter chips) sticks below the hill-types bar */
+  .toolbar{
+    position:sticky;
+    top:118px; /* masthead 60 + hill-types ~58 */
+    z-index:14;
+  }
+  /* When hill-types isn't shown (Map / Weather tabs), toolbar sticks directly below mast */
+  body:not(.has-hilltypes) .toolbar{
+    top:60px;
   }
 
   /* Backup bar + onboard banner: full-width footer across both columns */
@@ -2724,8 +2745,8 @@ function attachEvents(){
         // Show/hide hill-type segmented control
         var hillTypesBar = document.getElementById('hill-types');
         if(hillTypesBar){
-          if(which==='hills') hillTypesBar.classList.add('show');
-          else hillTypesBar.classList.remove('show');
+          if(which==='hills'){ hillTypesBar.classList.add('show'); document.body.classList.add('has-hilltypes'); }
+          else { hillTypesBar.classList.remove('show'); document.body.classList.remove('has-hilltypes'); }
         }
 
         // Set activeTab based on top-tab choice
@@ -2781,8 +2802,7 @@ function attachEvents(){
           topAll[k].classList.toggle('active', topAll[k].getAttribute('data-toptab')==='hills');
         }
         var ht = document.getElementById('hill-types'); if(ht) ht.classList.add('show');
-
-        // Clear filters when switching hill type
+        document.body.classList.add('has-hilltypes');
         if(regionFilter){
           regionFilter='';
           var rc=document.getElementById('region-chip');
@@ -2812,7 +2832,10 @@ function attachEvents(){
   var initialTopTab = document.querySelector('.top-tab.active');
   if(initialTopTab){
     var ht0 = document.getElementById('hill-types');
-    if(ht0 && initialTopTab.getAttribute('data-toptab')==='hills') ht0.classList.add('show');
+    if(ht0 && initialTopTab.getAttribute('data-toptab')==='hills'){
+      ht0.classList.add('show');
+      document.body.classList.add('has-hilltypes');
+    }
   }
 
   document.getElementById('srch').addEventListener('input',function(e){searchTerm=e.target.value;renderList();});
@@ -3217,6 +3240,7 @@ function attachEvents(){
       topTabs[i].classList.toggle('active', topTabs[i].getAttribute('data-toptab')==='map');
     }
     var ht = document.getElementById('hill-types'); if(ht) ht.classList.remove('show');
+    document.body.classList.remove('has-hilltypes');
     activeTab = 'map';
     renderAll();
 
