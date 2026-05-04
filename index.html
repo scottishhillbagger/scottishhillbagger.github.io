@@ -913,16 +913,6 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
         <button class="f-opt" data-fs="status" data-val="bagged">Bagged</button>
       </div>
     </div>
-    <div class="filter-section" id="filter-grade-section">
-      <div class="filter-label">Grade</div>
-      <div class="filter-options">
-        <button class="f-opt active" data-fs="grade" data-val="">Any</button>
-        <button class="f-opt" data-fs="grade" data-val="Easy">Easy</button>
-        <button class="f-opt" data-fs="grade" data-val="Moderate">Moderate</button>
-        <button class="f-opt" data-fs="grade" data-val="Hard">Hard</button>
-        <button class="f-opt" data-fs="grade" data-val="Very Hard">Very Hard</button>
-      </div>
-    </div>
     <div class="filter-section">
       <div class="filter-label">Region</div>
       <div class="filter-options" id="filter-region-options">
@@ -1906,7 +1896,7 @@ var activeTab = 'munro';
 var regionFilter = '';
 var sortBy = 'name';
 var searchTerm = '';
-var gradeFilter = '';
+var gradeFilter = ''; // unused — grade filter removed
 var statusFilter = '';
 var collapsed = {};
 var target = null;
@@ -2125,8 +2115,7 @@ function rowHTML(m,rank){
   var hasNote=is&&!!notes[m.id];
   var dateStr=is?'<span class="row-date">'+fmtDate(bagged[m.id])+'</span>':'';
   var noteStr=hasNote?'<span class="row-note-dot" title="Has notes">✎</span>':'';
-  var grCls=gradeClass(m.grade);
-  var cls='mtn-row'+(is?' bagged':' '+grCls);
+  var cls='mtn-row'+(is?' bagged':'');
   return '<div class="'+cls+'" data-id="'+m.id+'" tabindex="-1">'
     +'<div class="chk" data-toggle="1" role="button" aria-label="Toggle bagged"><svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9 10,3"/></svg></div>'
     +'<div class="row-main" data-link="1">'
@@ -2678,7 +2667,7 @@ function openModal(id){
   tag.textContent=m.type==='munro'?'Munro':m.type==='corbett'?'Corbett':'Fiona';
   tag.className='modal-tag '+(m.type==='munro'?'m':m.type==='corbett'?'c':'f');
   document.getElementById('m-name').textContent=m.name;
-  document.getElementById('m-meta').innerHTML=m.height+'m &middot; '+escHtml(m.region)+' <span class="grade-pill '+gradeClass(m.grade)+'">'+m.grade+'</span>';
+  document.getElementById('m-meta').innerHTML=m.height+'m &middot; '+escHtml(m.region);
   document.getElementById('bag-date').value=bagged[m.id]||new Date().toISOString().slice(0,10);
   var notesEl=document.getElementById('peak-notes');
   if(notesEl) notesEl.value=notes[m.id]||'';
@@ -3006,13 +2995,11 @@ function attachEvents(){
   var filterCount = document.getElementById('filter-count');
   var activeChipsBar = document.getElementById('active-chips');
   var filterRegionOpts = document.getElementById('filter-region-options');
-  var filterGradeSection = document.getElementById('filter-grade-section');
 
   function activeFilterCount(){
     var n = 0;
     if(sortBy && sortBy !== 'name') n++;
     if(statusFilter) n++;
-    if(gradeFilter) n++;
     if(regionFilter) n++;
     return n;
   }
@@ -3027,7 +3014,6 @@ function attachEvents(){
   function syncFilterSheetFromState(){
     setFOpt('sort', sortBy || 'name');
     setFOpt('status', statusFilter || '');
-    setFOpt('grade', gradeFilter || '');
     setFOpt('region', regionFilter || '');
   }
 
@@ -3055,10 +3041,6 @@ function attachEvents(){
 
   function openFilterSheet(){
     if(!filterSheet) return;
-    // Hide grade for bothies
-    if(filterGradeSection){
-      filterGradeSection.style.display = (activeTab === 'bothy') ? 'none' : '';
-    }
     buildFilterRegionOptions();
     syncFilterSheetFromState();
     filterSheet.classList.add('open');
@@ -3090,7 +3072,6 @@ function attachEvents(){
       // Apply
       if(section === 'sort') sortBy = val || 'name';
       else if(section === 'status') statusFilter = val;
-      else if(section === 'grade') gradeFilter = val;
       else if(section === 'region') regionFilter = val;
       updateActiveChips();
       renderList();
@@ -3101,7 +3082,6 @@ function attachEvents(){
     filterClear.addEventListener('click', function(){
       sortBy = 'name';
       statusFilter = '';
-      gradeFilter = '';
       regionFilter = '';
       syncFilterSheetFromState();
       buildFilterRegionOptions();
@@ -3118,7 +3098,6 @@ function attachEvents(){
       chips.push({k:'sort', l:sortLbl});
     }
     if(statusFilter) chips.push({k:'status', l: statusFilter==='bagged' ? 'Bagged' : 'Unbagged'});
-    if(gradeFilter) chips.push({k:'grade', l: gradeFilter});
     if(regionFilter) chips.push({k:'region', l: regionFilter});
 
     if(!chips.length){
@@ -3144,7 +3123,6 @@ function attachEvents(){
       var k = b.getAttribute('data-clear');
       if(k === 'sort') sortBy = 'name';
       else if(k === 'status') statusFilter = '';
-      else if(k === 'grade') gradeFilter = '';
       else if(k === 'region') regionFilter = '';
       syncFilterSheetFromState();
       updateActiveChips();
