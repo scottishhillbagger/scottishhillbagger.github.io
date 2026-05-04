@@ -207,6 +207,15 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 .map-search-btn{width:36px;height:36px;border-radius:8px;border:1px solid var(--rule);background:rgba(255,255,255,0.95);box-shadow:0 1px 3px rgba(0,0,0,0.15);display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--ink);transition:background .15s}
 .map-search-btn:hover{background:#fff}
 .map-search-btn:active{transform:scale(.94)}
+.map-locate-btn{position:absolute;top:.6rem;right:3.4rem;z-index:1000;width:36px;height:36px;border-radius:8px;border:1px solid var(--rule);background:rgba(255,255,255,0.95);box-shadow:0 1px 3px rgba(0,0,0,0.15);display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--ink);transition:background .15s,color .15s;font-family:var(--font-body);-webkit-appearance:none;padding:0}
+.map-locate-btn:hover{background:#fff}
+.map-locate-btn:active{transform:scale(.94)}
+.map-locate-btn.locating{color:var(--accent)}
+.map-locate-btn.locating svg{animation:locatePulse 1.2s ease-in-out infinite}
+.map-locate-btn.error{color:var(--terra)}
+@keyframes locatePulse{0%,100%{opacity:1}50%{opacity:.4}}
+.map-locate-pin{background:transparent !important;border:none !important}
+.map-locate-pin div{width:16px;height:16px;border-radius:50%;background:var(--accent);border:3px solid #fff;box-shadow:0 0 0 1px var(--accent),0 2px 6px rgba(0,0,0,0.35)}
 .map-search-input-wrap{position:relative;display:flex;align-items:center;border-bottom:1px solid var(--rule);padding:.55rem .55rem .55rem 2rem}
 .map-search-input-wrap svg{position:absolute;left:.7rem;top:50%;transform:translateY(-50%);color:var(--ink4)}
 .map-search-input{flex:1;border:none;outline:none;background:transparent;font-family:inherit;font-size:.85rem;color:var(--ink);padding:.2rem 0;min-width:0}
@@ -758,6 +767,9 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
         </div>
       </div>
       <div id="leaflet-map" class="hidden" style="width:100%;height:70vh;min-height:400px"></div>
+      <button class="map-locate-btn" id="map-locate-btn" type="button" aria-label="Show my location" title="Show my location">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/></svg>
+      </button>
       <div class="map-search" id="map-search">
         <button class="map-search-btn" id="map-search-btn" type="button" aria-label="Search peaks and bothies">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
@@ -3068,6 +3080,90 @@ function attachEvents(){
       }
     });
   }
+
+  // ---- Map "Show my location" button ----
+  var locateBtn = document.getElementById('map-locate-btn');
+  var locateMarker = null;
+  var locateAccuracyCircle = null;
+
+  function clearLocateMarker(){
+    if(locateMarker){ try{ leafletMap.removeLayer(locateMarker); }catch(e){} locateMarker = null; }
+    if(locateAccuracyCircle){ try{ leafletMap.removeLayer(locateAccuracyCircle); }catch(e){} locateAccuracyCircle = null; }
+  }
+
+  function showLocate(){
+    if(!locateBtn) return;
+    if(!('geolocation' in navigator)){
+      showToast('Geolocation not supported by your browser');
+      return;
+    }
+    if(!leafletMap){
+      showToast('Map not ready yet');
+      return;
+    }
+    locateBtn.classList.remove('error');
+    locateBtn.classList.add('locating');
+    locateBtn.setAttribute('aria-label', 'Locating…');
+
+    navigator.geolocation.getCurrentPosition(function(pos){
+      locateBtn.classList.remove('locating');
+      locateBtn.setAttribute('aria-label', 'Show my location');
+
+      var lat = pos.coords.latitude;
+      var lng = pos.coords.longitude;
+      var acc = pos.coords.accuracy || 50; // metres
+
+      // Sanity check: are they roughly within the British Isles? If not, give a hint.
+      if(lat < 49 || lat > 61 || lng < -10 || lng > 3){
+        showToast('You appear to be outside Scotland (' + lat.toFixed(1) + ', ' + lng.toFixed(1) + ')');
+      }
+
+      clearLocateMarker();
+
+      // Accuracy circle (faded) and a precise dot
+      locateAccuracyCircle = L.circle([lat, lng], {
+        radius: Math.min(acc, 5000),
+        color: '#6B7A4F',
+        weight: 1,
+        opacity: 0.4,
+        fillColor: '#6B7A4F',
+        fillOpacity: 0.08,
+        interactive: false
+      }).addTo(leafletMap);
+
+      var locIcon = L.divIcon({
+        className: 'map-locate-pin',
+        html: '<div></div>',
+        iconSize: [16, 16],
+        iconAnchor: [8, 8]
+      });
+      locateMarker = L.marker([lat, lng], {icon: locIcon, interactive: false, keyboard: false}).addTo(leafletMap);
+
+      // Choose zoom level based on accuracy
+      var zoom = acc < 100 ? 14 : acc < 1000 ? 12 : acc < 10000 ? 10 : 8;
+      leafletMap.flyTo([lat, lng], zoom, {duration: 0.8});
+
+      // Fade the marker after 30s
+      setTimeout(function(){ clearLocateMarker(); }, 30000);
+
+    }, function(err){
+      locateBtn.classList.remove('locating');
+      locateBtn.classList.add('error');
+      locateBtn.setAttribute('aria-label', 'Show my location');
+      var msg = 'Couldn\'t get your location';
+      if(err.code === 1) msg = 'Location blocked. Enable in browser settings.';
+      else if(err.code === 2) msg = 'Location unavailable. Are you offline?';
+      else if(err.code === 3) msg = 'Location request timed out';
+      showToast(msg);
+      setTimeout(function(){ locateBtn.classList.remove('error'); }, 3000);
+    }, {
+      enableHighAccuracy: true,
+      timeout: 10000,
+      maximumAge: 5 * 60 * 1000  // accept 5-min-old cached position
+    });
+  }
+
+  if(locateBtn) locateBtn.addEventListener('click', showLocate);
 
   // ---- Map search overlay ----
   var msBtn = document.getElementById('map-search-btn');
