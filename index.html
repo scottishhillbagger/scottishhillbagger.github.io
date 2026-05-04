@@ -140,6 +140,9 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 .row-ht{font-family:var(--font-mono);font-size:.82rem;color:var(--ink2);flex-shrink:0;font-variant-numeric:tabular-nums;font-weight:500;letter-spacing:-.02em}
 .row-ht span{font-size:.65rem;color:var(--ink4);margin-left:.15rem;font-weight:400}
 .ht-m{display:block;font-size:.88rem;line-height:1.2}
+.row-details{flex-shrink:0;background:none;border:none;padding:.5rem .15rem .5rem .5rem;margin-left:.15rem;color:var(--ink4);cursor:pointer;display:flex;align-items:center;justify-content:center;-webkit-tap-highlight-color:transparent;transition:color .15s;-webkit-appearance:none;font:inherit}
+.row-details:hover{color:var(--ink)}
+.row-details:active{color:var(--accent)}
 
 .rg-head{display:flex;justify-content:space-between;align-items:center;padding:.6rem .25rem .4rem;border-bottom:1px solid var(--rule);cursor:pointer;-webkit-tap-highlight-color:transparent}
 .rg-head:hover{background:var(--bg)}
@@ -363,9 +366,14 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
   .ds-bar{height:2px;background:var(--rule);border-radius:1px;overflow:hidden}
   .ds-bar-f{height:100%;background:var(--accent);width:0;transition:width .6s cubic-bezier(.4,0,.2,1)}
 #ds-bv-bar{background:var(--terra)}
-  /* Main content area */
-  .toolbar, .chips, .list-view, .map-view, .info-bar, #list-section, #map-section, #bothy-section, #weather-section, .hill-types{
+  /* Main content column wrapper */
+  .main-col{
     grid-column:2;
+    grid-row:2;
+    min-width:0;
+  }
+  /* Items inside .main-col flow normally — no grid placement needed */
+  .toolbar, .chips, .list-view, .map-view, .info-bar{
     max-width:none;
   }
 
@@ -408,9 +416,6 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
     padding-left:2rem;
     padding-right:2rem;
   }
-
-  /* Hide the desktop mini-stats panel on Weather tab */
-  body.on-weather .desktop-stats{display:none}
 
   /* Weather panel max-width on desktop */
   #weather-section{padding:0}
@@ -535,9 +540,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 .hill-type[data-tab="fiona"].active{background:#60B8E0;color:#1A5878}
 .hill-type[data-tab="bothy"].active{background:#B8543A;color:white}
 
-/* Hide scores row when on weather tab */
-body.on-weather .scores{display:none}
-body.on-weather .desktop-stats{display:none}
+/* Counters stay visible on all top-tabs for layout coherence */
 
 /* ============ WEATHER PANEL ============ */
 .tab.w.active{border-bottom-color:var(--accent)}
@@ -648,6 +651,7 @@ body.on-weather .desktop-stats{display:none}
 </nav>
 
 <!-- HILL TYPE SEGMENTED CONTROL (only visible when Hills top-tab is active) -->
+<div class="main-col">
 <div class="hill-types" id="hill-types">
   <div class="hill-types-in">
     <div class="hill-type-toggle">
@@ -799,6 +803,7 @@ body.on-weather .desktop-stats{display:none}
     </div>
   </div>
 </div>
+</div><!-- /.main-col -->
 
 <div class="modal-ov" id="modal">
   <div class="modal">
@@ -1955,6 +1960,7 @@ function rowHTML(m,rank){
     +'<div class="row-sub"><span class="row-reg">'+escHtml(m.region)+'</span>'+dateStr+noteStr+'</div>'
     +'</div>'
     +'<div class="row-ht">'+m.height+'<span>m</span></div>'
+    +'<button class="row-details" data-details="1" aria-label="View details" tabindex="-1"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>'
     +'</div>';
 }
 
@@ -2318,6 +2324,7 @@ function renderBothyList(){
       +'<div class="row-name">'+escHtml(b.name)+'</div>'
       +'<div class="row-sub"><span class="row-reg">'+escHtml(b.region)+(b.closed?' <span style="color:var(--terra);font-style:italic">(closed)</span>':'')+'</span>'+dateStr+noteStr+'</div>'
       +'</div>'
+      +'<button class="row-details" data-details="1" aria-label="View details" tabindex="-1"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>'
       +'</div>';
   }
   el.innerHTML=html;
@@ -2731,7 +2738,6 @@ function attachEvents(){
         }
 
         // Toggle weather body class for score row hiding
-        document.body.classList.toggle('on-weather', activeTab==='weather');
 
         // Clear filters as before
         if(regionFilter){
@@ -2768,7 +2774,6 @@ function attachEvents(){
         for(var j=0;j<all.length;j++) all[j].classList.remove('active');
         btn.classList.add('active');
         activeTab = btn.getAttribute('data-tab');
-        document.body.classList.remove('on-weather');
 
         // Make sure the Hills top-tab is active
         var topAll = document.querySelectorAll('.top-tab');
@@ -2914,7 +2919,9 @@ function attachEvents(){
         pressStartTarget = null;
         e.preventDefault(); // suppress synthetic click that iOS would fire next
         // Dispatch based on where the touch STARTED
-        if(findZone(startT, 'data-toggle')){
+        if(findZone(startT, 'data-details')){
+          openModal(id);
+        } else if(findZone(startT, 'data-toggle')){
           toggleBagged(id);
         } else if(findZone(startT, 'data-link')){
           var peak = findPeak(id);
@@ -2934,6 +2941,11 @@ function attachEvents(){
     if(head){ toggleRegion(head); return; }
     var row = findRow(e.target);
     if(!row) return;
+    // Chevron click — open detail modal (works for desktop AND mobile)
+    if(findZone(e.target, 'data-details')){
+      openModal(row.getAttribute('data-id'));
+      return;
+    }
     if(e.shiftKey){
       openModal(row.getAttribute('data-id'));
       return;
@@ -2998,7 +3010,9 @@ function attachEvents(){
           bPressedId = null;
           bPressStartTarget = null;
           e.preventDefault();
-          if(bothyZone(startT, 'data-toggle')){
+          if(bothyZone(startT, 'data-details')){
+            openBothyModal(id);
+          } else if(bothyZone(startT, 'data-toggle')){
             toggleBothyVisited(id);
           } else if(bothyZone(startT, 'data-link')){
             var bb = null;
@@ -3018,6 +3032,7 @@ function attachEvents(){
       var row = findBothyRow(e.target);
       if(!row) return;
       var id = row.getAttribute('data-bothy-id');
+      if(bothyZone(e.target, 'data-details')){ openBothyModal(id); return; }
       if(e.shiftKey){ openBothyModal(id); return; }
       if(bothyZone(e.target, 'data-toggle')){
         toggleBothyVisited(id);
@@ -3203,7 +3218,6 @@ function attachEvents(){
     }
     var ht = document.getElementById('hill-types'); if(ht) ht.classList.remove('show');
     activeTab = 'map';
-    document.body.classList.remove('on-weather');
     renderAll();
 
     // Pan/zoom after the map renders
@@ -3915,7 +3929,6 @@ function wxJumpToMunros(areaName){
   }
   var ht = document.getElementById('hill-types'); if(ht) ht.classList.add('show');
   activeTab = 'munro';
-  document.body.classList.remove('on-weather');
 
   setTimeout(function(){
     if(trackerRegions.length===1){
