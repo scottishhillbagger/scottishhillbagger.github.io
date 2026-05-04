@@ -14,9 +14,9 @@ jobs:
   forecast:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v5
+      - uses: actions/setup-node@v4
         with:
           node-version: '20'
 
@@ -33,5 +33,5 @@ jobs:
           git config user.name "forecast-bot"
           git config user.email "forecast-bot@users.noreply.github.com"
           git add forecast.json
-          git diff --staged --quiet || git commit -m "Update forecast $(date -u +%Y-%m-%d_%H:%M)"
+          git diff --staged --quiet || git commit -m "Update forecast $(TZ='Europe/London' date +'%Y-%m-%d %H:%M %Z')"
           git push
