@@ -572,6 +572,45 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 
 /* Counters stay visible on all top-tabs for layout coherence */
 
+/* ============ FILTER & SORT SHEET ============ */
+.filter-chip{display:inline-flex;align-items:center;gap:.2rem}
+.filter-chip .filter-count{display:inline-flex;align-items:center;justify-content:center;min-width:18px;height:18px;padding:0 .35rem;background:var(--accent);color:#fff;border-radius:9px;font-size:.65rem;font-weight:700;margin-left:.4rem;letter-spacing:0}
+.active-chips{display:flex;flex-wrap:wrap;gap:.35rem;padding:.4rem 1.25rem 0;max-width:680px;margin:0 auto}
+.active-chip{display:inline-flex;align-items:center;gap:.3rem;font-family:var(--font-body);font-size:.7rem;padding:.25rem .55rem .25rem .65rem;background:var(--accent-light);border:1px solid #C9D1B5;color:var(--accent-dark);border-radius:13px;cursor:pointer;letter-spacing:-.005em;font-weight:500;-webkit-appearance:none;transition:background .12s}
+.active-chip:hover{background:#DDE5C9}
+.active-chip .x{font-size:.85rem;line-height:1;opacity:.7}
+.active-chip:hover .x{opacity:1}
+
+.filter-sheet-modal{max-width:480px}
+.filter-section{margin-bottom:1rem;padding-bottom:.85rem;border-bottom:1px solid var(--rule2)}
+.filter-section:last-of-type{border-bottom:none}
+.filter-label{font-size:.65rem;text-transform:uppercase;letter-spacing:.12em;color:var(--ink3);font-weight:600;margin-bottom:.5rem}
+.filter-options{display:flex;flex-wrap:wrap;gap:.35rem}
+.f-opt{font-family:var(--font-body);font-size:.78rem;padding:.4rem .8rem;background:var(--surface);border:1px solid var(--rule);color:var(--ink2);border-radius:14px;cursor:pointer;font-weight:500;letter-spacing:-.005em;-webkit-appearance:none;transition:all .12s}
+.f-opt:hover{border-color:var(--ink3);color:var(--ink)}
+.f-opt.active{background:var(--ink);color:var(--surface-elev);border-color:var(--ink);font-weight:600}
+.filter-actions{display:flex;justify-content:space-between;gap:.6rem;margin-top:1rem;padding-top:.85rem;border-top:1px solid var(--rule2)}
+.filter-actions .btn-s{flex:0 0 auto}
+.filter-actions .btn-p{flex:1}
+
+/* ============ ?-icon next to hill-type tabs ============ */
+.hilltype-help{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;margin-left:.4rem;padding:0;background:transparent;border:1px solid var(--ink4);color:var(--ink3);border-radius:50%;font-family:var(--font-body);font-size:.7rem;font-weight:600;cursor:pointer;-webkit-appearance:none;transition:all .12s;vertical-align:middle}
+.hilltype-help:hover{border-color:var(--ink);color:var(--ink);background:var(--bg2)}
+
+/* Tooltip for ?-icon */
+.help-tooltip{position:absolute;z-index:50;background:var(--ink);color:var(--surface-elev);font-family:var(--font-body);font-size:.74rem;line-height:1.4;padding:.55rem .7rem;border-radius:6px;max-width:260px;letter-spacing:-.005em;box-shadow:0 4px 12px rgba(0,0,0,0.18);pointer-events:none}
+.help-tooltip::after{content:'';position:absolute;top:-5px;left:18px;border-left:5px solid transparent;border-right:5px solid transparent;border-bottom:5px solid var(--ink)}
+
+/* ============ ABOUT MODAL ============ */
+.about-link{display:inline-block;margin-top:.4rem;font-size:.72rem;color:var(--ink3);text-decoration:none;border-bottom:1px solid transparent;letter-spacing:-.005em}
+.about-link:hover{color:var(--ink);border-bottom-color:var(--ink3)}
+.about-body{font-size:.82rem;line-height:1.55;color:var(--ink2);letter-spacing:-.005em}
+.about-body p{margin:0 0 .85rem 0}
+.about-body h3{font-family:var(--font-display);font-size:.85rem;font-weight:600;color:var(--ink);margin:1.2rem 0 .5rem;letter-spacing:-.01em}
+.about-body a{color:var(--accent-dark);text-decoration:none;border-bottom:1px solid transparent}
+.about-body a:hover{border-bottom-color:var(--accent-dark)}
+.about-body strong{color:var(--ink);font-weight:600}
+
 /* ============ WEATHER PANEL ============ */
 .tab.w.active{border-bottom-color:var(--accent)}
 #weather-section{padding:0}
@@ -641,8 +680,9 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 <body>
 
 <header class="mast">
-  <div class="mast-in">
+  <div class="mast-in" style="display:flex;justify-content:space-between;align-items:baseline;gap:1rem">
     <h1 class="mast-h1">Scottish <em>Hill Bagger</em></h1>
+    <button class="about-link" id="about-btn" type="button" aria-label="About this app">About</button>
   </div>
   <div class="scores">
     <div class="scores-in">
@@ -690,6 +730,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
       <button class="hill-type f" data-tab="fiona">Fionas</button>
       <button class="hill-type b" data-tab="bothy">Bothies</button>
     </div>
+    <button class="hilltype-help" id="hilltype-help-btn" type="button" aria-label="What's this?">?</button>
   </div>
 </div>
 
@@ -701,22 +742,13 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
     <input class="srch" id="srch" type="text" placeholder="Search peaks or regions…">
   </div>
   <div class="tb-chips" id="chips">
-    <select class="sel-chip" id="sort-sel">
-      <option value="name">A–Z</option>
-      <option value="height-desc">Highest</option>
-      <option value="height-asc">Lowest</option>
-      <option value="date">Date bagged</option>
-    </select>
-    <button class="chip" data-f="status:bagged">Bagged only</button>
-    <button class="chip region-chip" id="region-chip" aria-expanded="false">
-      <span id="region-chip-label">Region</span>
-      <svg width="10" height="6" viewBox="0 0 10 6" style="margin-left:.3rem;opacity:.6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+    <button class="chip filter-chip" id="filter-btn" type="button" aria-label="Open filters">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:.3rem;vertical-align:-1px"><line x1="4" y1="6" x2="20" y2="6"/><line x1="7" y1="12" x2="17" y2="12"/><line x1="10" y1="18" x2="14" y2="18"/></svg>
+      <span>Filter &amp; sort</span>
+      <span class="filter-count" id="filter-count" hidden>0</span>
     </button>
   </div>
-  <div class="region-panel" id="region-panel" hidden>
-    <button class="region-item active" data-region="" type="button">All regions</button>
-    <div id="region-list"></div>
-  </div>
+  <div class="active-chips" id="active-chips" hidden></div>
 </div>
 <div class="content">
   <div class="res-info" id="res-info"></div>
@@ -837,6 +869,72 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
   </div>
 </div>
 </div><!-- /.main-col -->
+
+<!-- FILTER SHEET -->
+<div class="modal-ov" id="filter-sheet">
+  <div class="modal filter-sheet-modal">
+    <button class="modal-x" id="filter-sheet-x" aria-label="Close filters">&#10005;</button>
+    <h2 class="modal-name" style="font-size:1.05rem;margin-bottom:.5rem">Filter &amp; sort</h2>
+    <div class="filter-section">
+      <div class="filter-label">Sort by</div>
+      <div class="filter-options" id="filter-sort">
+        <button class="f-opt active" data-fs="sort" data-val="name">A–Z</button>
+        <button class="f-opt" data-fs="sort" data-val="height-desc">Highest</button>
+        <button class="f-opt" data-fs="sort" data-val="height-asc">Lowest</button>
+        <button class="f-opt" data-fs="sort" data-val="date">Date bagged</button>
+      </div>
+    </div>
+    <div class="filter-section">
+      <div class="filter-label">Status</div>
+      <div class="filter-options">
+        <button class="f-opt active" data-fs="status" data-val="">All</button>
+        <button class="f-opt" data-fs="status" data-val="unbagged">Unbagged</button>
+        <button class="f-opt" data-fs="status" data-val="bagged">Bagged</button>
+      </div>
+    </div>
+    <div class="filter-section" id="filter-grade-section">
+      <div class="filter-label">Grade</div>
+      <div class="filter-options">
+        <button class="f-opt active" data-fs="grade" data-val="">Any</button>
+        <button class="f-opt" data-fs="grade" data-val="Easy">Easy</button>
+        <button class="f-opt" data-fs="grade" data-val="Moderate">Moderate</button>
+        <button class="f-opt" data-fs="grade" data-val="Hard">Hard</button>
+        <button class="f-opt" data-fs="grade" data-val="Very Hard">Very Hard</button>
+      </div>
+    </div>
+    <div class="filter-section">
+      <div class="filter-label">Region</div>
+      <div class="filter-options" id="filter-region-options">
+        <button class="f-opt active" data-fs="region" data-val="">All regions</button>
+      </div>
+    </div>
+    <div class="filter-actions">
+      <button class="btn-s" id="filter-clear" type="button">Clear all</button>
+      <button class="btn-p" id="filter-apply" type="button">Show results</button>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT MODAL -->
+<div class="modal-ov" id="about-modal">
+  <div class="modal">
+    <button class="modal-x" id="about-x" aria-label="Close">&#10005;</button>
+    <h2 class="modal-name" style="font-size:1.05rem;margin-bottom:.5rem">About this app</h2>
+    <div class="about-body">
+      <p>A simple, calm tracker for Scottish hill bagging — keep a record of the summits you've climbed and the bothies you've stayed in, with weather forecasts to help plan your next trip.</p>
+      <h3>The lists</h3>
+      <p><strong>Munros</strong> — Scottish mountains over 3,000ft (914.4m), as catalogued by Sir Hugh Munro in 1891 and maintained by the Scottish Mountaineering Club. There are 282.</p>
+      <p><strong>Corbetts</strong> — Hills between 2,500–3,000ft (762–914m) with at least 500ft (152m) of prominence, named after John Rooke Corbett. There are 222.</p>
+      <p><strong>Fionas</strong> — Hills between 2,000–2,500ft (610–762m) with at least 500ft of prominence. Formerly known as the "Grahams". There are 219.</p>
+      <p><strong>Bothies</strong> — Simple shelters in remote areas of Scotland, maintained by the Mountain Bothies Association and free to use. 86 are listed.</p>
+      <h3>Data &amp; privacy</h3>
+      <p>Hill data is sourced from the <a href="https://www.smc.org.uk/" target="_blank" rel="noopener">Scottish Mountaineering Club</a> and the <a href="https://www.hills-database.co.uk/" target="_blank" rel="noopener">Database of British and Irish Hills</a>. Bothy data comes from the <a href="https://www.mountainbothies.org.uk/" target="_blank" rel="noopener">Mountain Bothies Association</a>. Weather forecasts are from <a href="https://www.mwis.org.uk/" target="_blank" rel="noopener">MWIS</a>, the Mountain Weather Information Service.</p>
+      <p>Your bagged peaks, visited bothies, and notes are stored locally on this device only — nothing is sent to a server. Use Export to save a backup file you can restore.</p>
+      <h3>The fine print</h3>
+      <p>Always check the full MWIS bulletin and current MBA bothy status before heading out. Hill walking carries real risk; this app is a planning aid, not a substitute for proper preparation.</p>
+    </div>
+  </div>
+</div>
 
 <div class="modal-ov" id="modal">
   <div class="modal">
@@ -2794,6 +2892,7 @@ function attachEvents(){
           if(brp) brp.setAttribute('hidden','');
         }
         renderAll();
+        if(typeof updateActiveChips === 'function') updateActiveChips();
       });
     })(topTabs[i]);
   }
@@ -2836,6 +2935,7 @@ function attachEvents(){
           if(brp) brp.setAttribute('hidden','');
         }
         renderAll();
+        if(typeof updateActiveChips === 'function') updateActiveChips();
       });
     })(hillTypeBtns[i]);
   }
@@ -2851,7 +2951,207 @@ function attachEvents(){
   }
 
   document.getElementById('srch').addEventListener('input',function(e){searchTerm=e.target.value;renderList();});
-  document.getElementById('sort-sel').addEventListener('change',function(e){sortBy=e.target.value;renderList();});
+  // Note: sort-sel and old region-chip/panel are no longer in the DOM for the peak list —
+  // their wiring below is harmless (queries will be null).
+
+  // ============ FILTER SHEET ============
+  var filterSheet = document.getElementById('filter-sheet');
+  var filterBtn = document.getElementById('filter-btn');
+  var filterX = document.getElementById('filter-sheet-x');
+  var filterApply = document.getElementById('filter-apply');
+  var filterClear = document.getElementById('filter-clear');
+  var filterCount = document.getElementById('filter-count');
+  var activeChipsBar = document.getElementById('active-chips');
+  var filterRegionOpts = document.getElementById('filter-region-options');
+  var filterGradeSection = document.getElementById('filter-grade-section');
+
+  function activeFilterCount(){
+    var n = 0;
+    if(sortBy && sortBy !== 'name') n++;
+    if(statusFilter) n++;
+    if(gradeFilter) n++;
+    if(regionFilter) n++;
+    return n;
+  }
+
+  function setFOpt(sectionName, value){
+    var opts = filterSheet.querySelectorAll('.f-opt[data-fs="'+sectionName+'"]');
+    for(var i=0;i<opts.length;i++){
+      opts[i].classList.toggle('active', opts[i].getAttribute('data-val') === value);
+    }
+  }
+
+  function syncFilterSheetFromState(){
+    setFOpt('sort', sortBy || 'name');
+    setFOpt('status', statusFilter || '');
+    setFOpt('grade', gradeFilter || '');
+    setFOpt('region', regionFilter || '');
+  }
+
+  function buildFilterRegionOptions(){
+    if(!filterRegionOpts) return;
+    var peaksOfType;
+    if(activeTab==='bothy') peaksOfType = (typeof BOTHIES !== 'undefined' ? BOTHIES : []);
+    else peaksOfType = M.filter(function(m){return m.type===activeTab;});
+    var seen = {};
+    var regions = [];
+    for(var i=0;i<peaksOfType.length;i++){
+      var r = peaksOfType[i].region;
+      if(!r || seen[r]) continue;
+      seen[r] = true;
+      regions.push(r);
+    }
+    regions.sort();
+    var html = '<button class="f-opt'+(regionFilter?'':' active')+'" data-fs="region" data-val="">All regions</button>';
+    for(var j=0;j<regions.length;j++){
+      var r = regions[j];
+      html += '<button class="f-opt'+(r===regionFilter?' active':'')+'" data-fs="region" data-val="'+escHtml(r).replace(/"/g,'&quot;')+'">'+escHtml(r)+'</button>';
+    }
+    filterRegionOpts.innerHTML = html;
+  }
+
+  function openFilterSheet(){
+    if(!filterSheet) return;
+    // Hide grade for bothies
+    if(filterGradeSection){
+      filterGradeSection.style.display = (activeTab === 'bothy') ? 'none' : '';
+    }
+    buildFilterRegionOptions();
+    syncFilterSheetFromState();
+    filterSheet.classList.add('open');
+  }
+  function closeFilterSheet(){
+    if(filterSheet) filterSheet.classList.remove('open');
+  }
+
+  if(filterBtn) filterBtn.addEventListener('click', openFilterSheet);
+  if(filterX) filterX.addEventListener('click', closeFilterSheet);
+  if(filterApply) filterApply.addEventListener('click', closeFilterSheet);
+  if(filterSheet){
+    filterSheet.addEventListener('click', function(e){
+      if(e.target === filterSheet) closeFilterSheet();
+    });
+  }
+
+  // Click handlers on filter options (delegation)
+  if(filterSheet){
+    filterSheet.addEventListener('click', function(e){
+      var btn = e.target.closest('.f-opt');
+      if(!btn) return;
+      var section = btn.getAttribute('data-fs');
+      var val = btn.getAttribute('data-val') || '';
+      // Mark only this button active in its section
+      var sib = filterSheet.querySelectorAll('.f-opt[data-fs="'+section+'"]');
+      for(var i=0;i<sib.length;i++) sib[i].classList.remove('active');
+      btn.classList.add('active');
+      // Apply
+      if(section === 'sort') sortBy = val || 'name';
+      else if(section === 'status') statusFilter = val;
+      else if(section === 'grade') gradeFilter = val;
+      else if(section === 'region') regionFilter = val;
+      updateActiveChips();
+      renderList();
+    });
+  }
+
+  if(filterClear){
+    filterClear.addEventListener('click', function(){
+      sortBy = 'name';
+      statusFilter = '';
+      gradeFilter = '';
+      regionFilter = '';
+      syncFilterSheetFromState();
+      buildFilterRegionOptions();
+      updateActiveChips();
+      renderList();
+    });
+  }
+
+  function updateActiveChips(){
+    if(!activeChipsBar || !filterCount) return;
+    var chips = [];
+    if(sortBy && sortBy !== 'name'){
+      var sortLbl = ({'height-desc':'Highest first','height-asc':'Lowest first','date':'By date bagged'})[sortBy] || sortBy;
+      chips.push({k:'sort', l:sortLbl});
+    }
+    if(statusFilter) chips.push({k:'status', l: statusFilter==='bagged' ? 'Bagged' : 'Unbagged'});
+    if(gradeFilter) chips.push({k:'grade', l: gradeFilter});
+    if(regionFilter) chips.push({k:'region', l: regionFilter});
+
+    if(!chips.length){
+      activeChipsBar.setAttribute('hidden','');
+      filterCount.setAttribute('hidden','');
+      filterCount.textContent = '0';
+      return;
+    }
+    activeChipsBar.removeAttribute('hidden');
+    filterCount.removeAttribute('hidden');
+    filterCount.textContent = String(chips.length);
+    var html = '';
+    for(var i=0;i<chips.length;i++){
+      html += '<button class="active-chip" data-clear="'+chips[i].k+'" type="button" aria-label="Clear '+escHtml(chips[i].l)+'"><span>'+escHtml(chips[i].l)+'</span><span class="x">×</span></button>';
+    }
+    activeChipsBar.innerHTML = html;
+  }
+
+  if(activeChipsBar){
+    activeChipsBar.addEventListener('click', function(e){
+      var b = e.target.closest('.active-chip');
+      if(!b) return;
+      var k = b.getAttribute('data-clear');
+      if(k === 'sort') sortBy = 'name';
+      else if(k === 'status') statusFilter = '';
+      else if(k === 'grade') gradeFilter = '';
+      else if(k === 'region') regionFilter = '';
+      syncFilterSheetFromState();
+      updateActiveChips();
+      renderList();
+    });
+  }
+
+  // ============ HILL TYPE HELP TOOLTIP ============
+  var HILLTYPE_HELP = {
+    munro: 'Munros are Scottish mountains over 3,000ft (914m), as catalogued by Sir Hugh Munro in 1891. There are 282.',
+    corbett: 'Corbetts are Scottish hills 2,500–3,000ft (762–914m) with at least 500ft of prominence. There are 222.',
+    fiona: 'Fionas (formerly "Grahams") are Scottish hills 2,000–2,500ft (610–762m) with at least 500ft of prominence. There are 219.',
+    bothy: 'Bothies are simple shelters in remote areas of Scotland, maintained by the Mountain Bothies Association and free to use.'
+  };
+  var helpBtn = document.getElementById('hilltype-help-btn');
+  var helpTooltipEl = null;
+  function showHelpTooltip(){
+    if(helpTooltipEl) return;
+    var msg = HILLTYPE_HELP[activeTab] || '';
+    if(!msg) return;
+    helpTooltipEl = document.createElement('div');
+    helpTooltipEl.className = 'help-tooltip';
+    helpTooltipEl.textContent = msg;
+    document.body.appendChild(helpTooltipEl);
+    var rect = helpBtn.getBoundingClientRect();
+    helpTooltipEl.style.top = (rect.bottom + window.scrollY + 8) + 'px';
+    helpTooltipEl.style.left = Math.max(8, rect.left + window.scrollX - 18) + 'px';
+  }
+  function hideHelpTooltip(){
+    if(helpTooltipEl){ helpTooltipEl.remove(); helpTooltipEl = null; }
+  }
+  if(helpBtn){
+    helpBtn.addEventListener('click', function(e){
+      e.stopPropagation();
+      if(helpTooltipEl) hideHelpTooltip(); else showHelpTooltip();
+    });
+    document.addEventListener('click', hideHelpTooltip);
+  }
+
+  // ============ ABOUT MODAL ============
+  var aboutBtn = document.getElementById('about-btn');
+  var aboutModal = document.getElementById('about-modal');
+  var aboutX = document.getElementById('about-x');
+  if(aboutBtn) aboutBtn.addEventListener('click', function(){ if(aboutModal) aboutModal.classList.add('open'); });
+  if(aboutX) aboutX.addEventListener('click', function(){ aboutModal.classList.remove('open'); });
+  if(aboutModal){
+    aboutModal.addEventListener('click', function(e){
+      if(e.target === aboutModal) aboutModal.classList.remove('open');
+    });
+  }
 
   // Map type toggle — multi-select
   var mtypeBtns=document.querySelectorAll('.map-type-btn');
@@ -2879,27 +3179,7 @@ function attachEvents(){
     })(mtypeBtns[i]);
   }
 
-  // Chips
-  var chips=document.querySelectorAll('.chip');
-  for(var i=0;i<chips.length;i++){
-    (function(chip){
-      chip.addEventListener('click',function(){
-        var f=chip.getAttribute('data-f');
-        var parts=f.split(':');var type=parts[0],val=parts[1];
-        if(chip.classList.contains('on')){
-          chip.classList.remove('on');
-          if(type==='grade') gradeFilter='';if(type==='status') statusFilter='';
-        } else {
-          for(var j=0;j<chips.length;j++){
-            if(chips[j].getAttribute('data-f').split(':')[0]===type) chips[j].classList.remove('on');
-          }
-          chip.classList.add('on');
-          if(type==='grade') gradeFilter=val;if(type==='status') statusFilter=val;
-        }
-        renderList();
-      });
-    })(chips[i]);
-  }
+  // (Old chip click handler removed — replaced by filter sheet logic above.)
 
   // Peak rows with long-press
   var lv=document.getElementById('list-view');
@@ -3626,6 +3906,9 @@ function attachEvents(){
       buildBothyRegionList();
     });
   }
+
+  // Initial paint of any active filter chips
+  updateActiveChips();
 }
 
 function showMapTooltip(circle,id){
