@@ -364,10 +364,57 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
   .ds-bar-f{height:100%;background:var(--accent);width:0;transition:width .6s cubic-bezier(.4,0,.2,1)}
 #ds-bv-bar{background:var(--terra)}
   /* Main content area */
-  .toolbar, .chips, .list-view, .map-view, .info-bar, #list-section, #map-section{
+  .toolbar, .chips, .list-view, .map-view, .info-bar, #list-section, #map-section, #bothy-section, #weather-section, .hill-types{
     grid-column:2;
     max-width:none;
   }
+
+  /* Top-tabs: become vertical sidebar items, replacing the old .tab pattern */
+  .top-tab{
+    flex:none;
+    text-align:left;
+    padding:.7rem 1.25rem;
+    border-bottom:none;
+    border-left:2px solid transparent;
+    font-size:.92rem;
+    min-width:0;
+    width:100%;
+  }
+  .top-tab.active{
+    border-bottom-color:transparent;
+    border-left-color:var(--ink);
+    background:var(--bg2);
+    color:var(--ink);
+  }
+  .top-tab.w.active{
+    border-left-color:var(--accent);
+    background:var(--accent-light);
+  }
+
+  /* Hill-types segmented bar sits at top of content column */
+  .hill-types-in{
+    padding:1rem 1.25rem .5rem;
+    max-width:680px;
+    margin:0 auto;
+    justify-content:flex-start;
+  }
+
+  /* Backup bar + onboard banner: full-width footer across both columns */
+  .backup-bar, .onboard-banner{
+    grid-column:1 / -1;
+  }
+  .backup-in, .onboard-banner-in{
+    max-width:1200px;
+    padding-left:2rem;
+    padding-right:2rem;
+  }
+
+  /* Hide the desktop mini-stats panel on Weather tab */
+  body.on-weather .desktop-stats{display:none}
+
+  /* Weather panel max-width on desktop */
+  #weather-section{padding:0}
+  .wx-meta-row, .wx-list, .wx-foot{padding-left:1.25rem;padding-right:1.25rem}
   
   
   .info-bar{padding:.5rem 1.25rem;max-width:680px;margin:0 auto;font-size:.7rem;color:var(--ink3);font-family:var(--font-body);letter-spacing:0}
@@ -791,6 +838,7 @@ body.on-weather .desktop-stats{display:none}
     </div>
     <div style="margin-top:.85rem;padding-top:.85rem;border-top:1px solid var(--rule2)">
       <button class="btn-s" id="btn-wh" style="width:100%;text-align:center">View route on WalkHighlands &#8599;</button>
+      <button class="btn-s" id="btn-show-on-map" style="width:100%;text-align:center;margin-top:.5rem">Show on map &#8599;</button>
       <button class="btn-report" id="btn-report" type="button">Link broken? Tap to copy details</button>
     </div>
   </div>
@@ -2118,6 +2166,7 @@ function renderLeafletDots(){
       iconAnchor: [iconSize/2, iconSize/2]
     });
     var mk = L.marker([p.lat,p.lng], {icon: icon, riseOnHover: true, riseOffset: 250});
+    mk._peakId = p.id;
     (function(peak){
       mk.bindTooltip(peak.name+' — '+peak.height+'m'+(bagged[peak.id]?' ✓':''),{direction:'top',sticky:false,opacity:0.95});
       mk.on('click',function(e){ 
@@ -2159,6 +2208,7 @@ function renderLeafletDots(){
         iconAnchor: [7, 12]
       });
       var bmk = L.marker([b.lat, b.lng], {icon: bIcon, riseOnHover: true, riseOffset: 250});
+      bmk._peakId = b.id;
       (function(bothy){
         bmk.bindTooltip(bothy.name + ' — bothy', {direction:'top', sticky:false, opacity:0.95});
         bmk.on('click', function(e){
@@ -3122,6 +3172,58 @@ function attachEvents(){
       openWalkHighlands(target);
     }
   });
+
+  // "Show on map" — switch to Map tab and pan/zoom to the peak
+  document.getElementById('btn-show-on-map').addEventListener('click', function(){
+    if(!target) return;
+    var peakId = target.id;
+    var lat = target.lat, lng = target.lng;
+    if(typeof lat !== 'number' || typeof lng !== 'number') return;
+
+    // Make sure the relevant map type toggle is ON, otherwise the marker won't exist
+    if(typeof mapTypes !== 'undefined'){
+      if(target.type === 'munro') mapTypes.munro = true;
+      else if(target.type === 'corbett') mapTypes.corbett = true;
+      else if(target.type === 'fiona') mapTypes.fiona = true;
+      else if(peakId && peakId.charAt(0) === 'b') mapTypes.bothy = true;
+      // Update the visual state of the type toggle buttons
+      var typeBtns = document.querySelectorAll('.map-type-btn');
+      for(var ti=0;ti<typeBtns.length;ti++){
+        var t = typeBtns[ti].getAttribute('data-type');
+        typeBtns[ti].classList.toggle('on', !!mapTypes[t]);
+      }
+    }
+
+    closeModal();
+
+    // Activate Map top-tab
+    var topTabs = document.querySelectorAll('.top-tab');
+    for(var i=0;i<topTabs.length;i++){
+      topTabs[i].classList.toggle('active', topTabs[i].getAttribute('data-toptab')==='map');
+    }
+    var ht = document.getElementById('hill-types'); if(ht) ht.classList.remove('show');
+    activeTab = 'map';
+    document.body.classList.remove('on-weather');
+    renderAll();
+
+    // Pan/zoom after the map renders
+    setTimeout(function(){
+      if(leafletMap){
+        leafletMap.invalidateSize();
+        leafletMap.flyTo([lat, lng], 12, {duration: 0.8});
+        // Pop the marker tooltip after flight settles
+        setTimeout(function(){
+          for(var j=0;j<leafletMarkers.length;j++){
+            var mk = leafletMarkers[j];
+            if(mk._peakId === peakId){
+              mk.openTooltip();
+              break;
+            }
+          }
+        }, 900);
+      }
+    }, 200);
+  });
   document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeModal();hideMapTooltip();}});
 
   document.getElementById('btn-export').addEventListener('click',exportData);
@@ -3604,6 +3706,30 @@ function wxWindDesc(mph){
   if(mph>=18) return {label:'breezy',danger:false};
   return {label:'calm',danger:false};
 }
+// Pick the safety-relevant wind value: gust if present, else high, else single windMph (legacy)
+function wxWorstWind(f){
+  if(f.gustMph) return f.gustMph;
+  if(f.windMphHigh != null) return f.windMphHigh;
+  return f.windMph || 0;
+}
+// Render wind range string for detail panel
+function wxWindRange(f){
+  if(f.windMphLow != null && f.windMphHigh != null && f.windMphLow !== f.windMphHigh){
+    return f.windMphLow + '–' + f.windMphHigh + ' mph';
+  }
+  if(f.windMphHigh != null) return f.windMphHigh + ' mph';
+  if(f.windMph != null) return f.windMph + ' mph';
+  return '— mph';
+}
+// Render temp range string
+function wxTempRange(f){
+  if(f.tempCLow != null && f.tempCHigh != null && f.tempCLow !== f.tempCHigh){
+    return f.tempCLow + '–' + f.tempCHigh + '°C';
+  }
+  if(f.tempCHigh != null) return f.tempCHigh + '°C';
+  if(f.tempC != null) return f.tempC + '°C';
+  return '—°C';
+}
 function wxStatusLabel(s){return s==='go'?'Go':s==='marginal'?'Marginal':s==='poor'?"Don't go":'—';}
 function wxStatusClass(s){return s==='go'?'wx-st-go':s==='marginal'?'wx-st-marg':'wx-st-poor';}
 function wxStatusTagClass(s){return s==='go'?'go':s==='marginal'?'marg':'poor';}
@@ -3652,9 +3778,15 @@ function wxRenderDetail(region, dayIdx){
   var f = (region.forecast||[])[dayIdx];
   if(!f) return '';
   var st = f.status||'marginal';
-  var wd = wxWindDesc(f.windMph||0);
+  var worst = wxWorstWind(f);
+  var wd = wxWindDesc(worst);
   var areaId = WX_REGION_IDS[region.name] || '';
   var dayName = (wxData.days||[])[dayIdx] || 'Day';
+
+  // Build wind line: "20–30 mph SE, gusts 40 mph · breezy"
+  var windParts = [wxWindRange(f) + (f.windDir?' '+wxEsc(f.windDir):'')];
+  if(f.gustMph) windParts.push('gusts '+f.gustMph+' mph');
+  var windHtml = wxWindArrow(f.windDir, worst) + ' ' + windParts.join(', ') + ' · ' + wd.label;
 
   return ''+
   '<div class="wx-detail">'+
@@ -3662,8 +3794,8 @@ function wxRenderDetail(region, dayIdx){
       '<span class="wx-det-day-label">'+wxEsc(dayName)+'</span>'+
       '<span class="wx-det-tag '+wxStatusTagClass(st)+'">'+wxStatusLabel(st)+'</span>'+
     '</div>'+
-    '<div class="wx-det-row"><span class="wx-det-label">Wind</span><span class="wx-det-val'+(wd.danger?' danger':(f.windMph<=18?' good':''))+'">'+wxWindArrow(f.windDir,f.windMph||0)+' '+(f.windMph!=null?f.windMph:'—')+' mph '+wxEsc(f.windDir||'')+' · '+wd.label+'</span></div>'+
-    '<div class="wx-det-row"><span class="wx-det-label">Temperature on tops</span><span class="wx-det-val">'+(f.tempC!=null?f.tempC+'°C':'—')+'</span></div>'+
+    '<div class="wx-det-row"><span class="wx-det-label">Wind</span><span class="wx-det-val'+(wd.danger?' danger':(worst<=18?' good':''))+'">'+windHtml+'</span></div>'+
+    '<div class="wx-det-row"><span class="wx-det-label">Temperature on tops</span><span class="wx-det-val">'+wxTempRange(f)+'</span></div>'+
     '<div class="wx-det-row"><span class="wx-det-label">Cloud-free summits</span><span class="wx-det-val'+((f.cloudFree||0)>=75?' good':((f.cloudFree||0)<40?' danger':''))+'">'+(f.cloudFree!=null?f.cloudFree+'%':'—')+'</span></div>'+
     '<div class="wx-det-row"><span class="wx-det-label">Visibility</span><span class="wx-det-val">'+wxVisLabel(f.visibility)+'</span></div>'+
     '<div class="wx-det-row"><span class="wx-det-label">Freezing level</span><span class="wx-det-val">'+wxFreezeLabel(f.freezingLevel)+'</span></div>'+
@@ -3740,18 +3872,9 @@ function wxAttachEvents(){
           wxOpenRegion = null;
         } else {
           wxOpenRegion = rname;
-          // Auto-open best day if not already chosen
+          // Default to today (Day 0). User can tap other day cells to switch.
           if(wxOpenDay[rname]==null){
-            var region = (wxData.regions||[]).find(function(r){return r.name===rname;});
-            if(region){
-              var bestIdx = 0, bestRank = -1;
-              var rank = {go:3,marginal:2,poor:1};
-              (region.forecast||[]).forEach(function(f,idx){
-                var r = rank[f.status]||0;
-                if(r>bestRank){bestRank=r;bestIdx=idx;}
-              });
-              wxOpenDay[rname] = bestIdx;
-            }
+            wxOpenDay[rname] = 0;
           }
         }
         wxRender();
