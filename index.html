@@ -678,7 +678,10 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 .wx-pill-fog{background:var(--bg2);color:var(--ink2)}
 .wx-pill-snow{background:rgba(26,88,120,.1);color:#1A5878}
 .wx-pill-storm{background:rgba(184,84,58,.1);color:var(--terra-dark)}
-.wx-det-note{margin-top:.7rem;padding-top:.6rem;border-top:1px solid var(--rule2);font-size:.74rem;color:var(--ink2);font-style:italic;line-height:1.5}
+.wx-reason{margin:0 0 .8rem 0;padding:.55rem .7rem;border-radius:5px;font-size:.74rem;line-height:1.45;font-style:italic;letter-spacing:-.005em;border-left:3px solid currentColor}
+.wx-reason-go{background:rgba(107,122,79,.08);color:var(--accent-dark)}
+.wx-reason-marg{background:rgba(122,74,8,.06);color:#7A4A08}
+.wx-reason-poor{background:rgba(184,84,58,.07);color:var(--terra-dark)}
 .wx-cta{margin-top:.85rem;padding:.7rem .85rem;background:var(--accent-light);border:1px solid #C9D1B5;border-radius:6px;display:flex;gap:.6rem;align-items:center}
 .wx-cta-text{flex:1;font-size:.74rem;color:var(--accent-dark);line-height:1.4}
 .wx-cta-text strong{font-weight:600}
@@ -4232,13 +4235,14 @@ function wxRenderDetail(region, dayIdx){
       '<span class="wx-det-day-label">'+wxEsc(dayName)+'</span>'+
       '<span class="wx-det-tag '+wxStatusTagClass(st)+'">'+wxStatusLabel(st)+'</span>'+
     '</div>'+
+    // Reason strip — sits right under the header, tinted by status
+    ((f.reason || f.note) ? '<div class="wx-reason wx-reason-'+wxStatusTagClass(st)+'">'+wxEsc(f.reason || f.note)+'</div>' : '')+
     '<div class="wx-det-row"><span class="wx-det-label">Wind</span><span class="wx-det-val'+(wd.danger?' danger':(worst<=18?' good':''))+'">'+windHtml+'</span></div>'+
     '<div class="wx-det-row"><span class="wx-det-label">Temperature on tops</span><span class="wx-det-val">'+wxTempRange(f)+'</span></div>'+
     '<div class="wx-det-row"><span class="wx-det-label">Cloud-free summits</span><span class="wx-det-val'+((f.cloudFree||0)>=75?' good':((f.cloudFree||0)<40?' danger':''))+'">'+(f.cloudFree!=null?f.cloudFree+'%':'—')+'</span></div>'+
     '<div class="wx-det-row"><span class="wx-det-label">Visibility</span><span class="wx-det-val">'+wxVisLabel(f.visibility)+'</span></div>'+
     ((f.freezingLevel != null && f.freezingLevel < 1800) ? '<div class="wx-det-row"><span class="wx-det-label">Freezing level</span><span class="wx-det-val'+(f.freezingLevel < 900 ? ' danger' : '')+'">'+wxFreezeLabel(f.freezingLevel)+'</span></div>' : '')+
     '<div class="wx-det-row"><span class="wx-det-label">Through the day</span><span class="wx-ampm">'+wxPill(f.amSky||f.sky,'AM')+wxPill(f.pmSky||f.sky,'PM')+'</span></div>'+
-    (f.note?'<div class="wx-det-note">'+wxEsc(f.note)+'</div>':'')+
     '<a class="wx-mwis-link" href="'+WX_MWIS(areaId)+'" target="_blank" rel="noopener">↗ Full MWIS forecast</a>'+
   '</div>';
 }
