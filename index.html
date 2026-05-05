@@ -4168,7 +4168,7 @@ function wxTempRange(f){
   if(f.tempC != null) return f.tempC + '°C';
   return '—°C';
 }
-function wxStatusLabel(s){return s==='go'?'Go':s==='marginal'?'Marginal':s==='poor'?"Don't go":'—';}
+function wxStatusLabel(s){return s==='go'?'Go':s==='marginal'?'Marginal':s==='poor'?'Avoid':'—';}
 function wxStatusClass(s){return s==='go'?'wx-st-go':s==='marginal'?'wx-st-marg':'wx-st-poor';}
 function wxStatusTagClass(s){return s==='go'?'go':s==='marginal'?'marg':'poor';}
 function wxVisLabel(v){return ({excellent:'Excellent',good:'Good',moderate:'Moderate',poor:'Poor'})[v]||'—';}
@@ -4236,7 +4236,7 @@ function wxRenderDetail(region, dayIdx){
     '<div class="wx-det-row"><span class="wx-det-label">Temperature on tops</span><span class="wx-det-val">'+wxTempRange(f)+'</span></div>'+
     '<div class="wx-det-row"><span class="wx-det-label">Cloud-free summits</span><span class="wx-det-val'+((f.cloudFree||0)>=75?' good':((f.cloudFree||0)<40?' danger':''))+'">'+(f.cloudFree!=null?f.cloudFree+'%':'—')+'</span></div>'+
     '<div class="wx-det-row"><span class="wx-det-label">Visibility</span><span class="wx-det-val">'+wxVisLabel(f.visibility)+'</span></div>'+
-    '<div class="wx-det-row"><span class="wx-det-label">Freezing level</span><span class="wx-det-val">'+wxFreezeLabel(f.freezingLevel)+'</span></div>'+
+    ((f.freezingLevel != null && f.freezingLevel < 1800) ? '<div class="wx-det-row"><span class="wx-det-label">Freezing level</span><span class="wx-det-val'+(f.freezingLevel < 900 ? ' danger' : '')+'">'+wxFreezeLabel(f.freezingLevel)+'</span></div>' : '')+
     '<div class="wx-det-row"><span class="wx-det-label">Through the day</span><span class="wx-ampm">'+wxPill(f.amSky||f.sky,'AM')+wxPill(f.pmSky||f.sky,'PM')+'</span></div>'+
     (f.note?'<div class="wx-det-note">'+wxEsc(f.note)+'</div>':'')+
     '<a class="wx-mwis-link" href="'+WX_MWIS(areaId)+'" target="_blank" rel="noopener">↗ Full MWIS forecast</a>'+
