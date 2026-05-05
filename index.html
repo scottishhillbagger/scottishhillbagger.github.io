@@ -455,32 +455,12 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
   .info-bar{padding:.5rem 1.25rem;max-width:680px;margin:0 auto;font-size:.7rem;color:var(--ink3);font-family:var(--font-body);letter-spacing:0}
   .list-view{padding:.5rem 1.25rem 3rem;max-width:680px;margin:0 auto}
   .map-view{padding:0 2rem 2rem}
-  /* Show grade + region on desktop rows */
-  .grade-pill{
-    display:inline-block;
-    font-size:.62rem;
-    padding:.1rem .45rem;
-    border-radius:3px;
-    letter-spacing:.05em;
-    text-transform:uppercase;
-    font-weight:600;
-    border:1px solid currentColor;
-    background:transparent;
-  }
-  .grade-pill.g-easy{color:var(--grade-easy)}
-  .grade-pill.g-mod{color:var(--grade-mod)}
-  .grade-pill.g-hard{color:var(--grade-hard)}
-  .grade-pill.g-vh{color:var(--grade-vh)}
   .row-sub .row-reg{display:inline;color:var(--ink3);font-size:.72rem;letter-spacing:.005em}
 }
 
 /* Mobile: hide desktop-only elements */
 @media (max-width: 1023px){
   .desktop-stats{display:none}
-  .grade-pill{display:none}
-  
-  
-  
 }
 
 
@@ -576,9 +556,10 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 .filter-chip{display:inline-flex;align-items:center;gap:.2rem}
 .filter-chip .filter-count{display:inline-flex;align-items:center;justify-content:center;min-width:18px;height:18px;padding:0 .35rem;background:var(--accent);color:#fff;border-radius:9px;font-size:.65rem;font-weight:700;margin-left:.4rem;letter-spacing:0}
 .active-chips{display:flex;flex-wrap:wrap;gap:.35rem;padding:.4rem 1.25rem 0;max-width:680px;margin:0 auto}
-.active-chip{display:inline-flex;align-items:center;gap:.3rem;font-family:var(--font-body);font-size:.7rem;padding:.25rem .55rem .25rem .65rem;background:var(--accent-light);border:1px solid #C9D1B5;color:var(--accent-dark);border-radius:13px;cursor:pointer;letter-spacing:-.005em;font-weight:500;-webkit-appearance:none;transition:background .12s}
+.active-chips[hidden]{display:none}
+.active-chip{display:inline-flex;align-items:center;gap:.3rem;font-family:var(--font-body);font-size:.7rem;padding:.3rem .6rem .3rem .7rem;background:var(--accent-light);border:1px solid #C9D1B5;color:var(--accent-dark);border-radius:13px;cursor:pointer;letter-spacing:-.005em;font-weight:500;-webkit-appearance:none;transition:background .12s;min-height:28px;-webkit-tap-highlight-color:transparent}
 .active-chip:hover{background:#DDE5C9}
-.active-chip .x{font-size:.85rem;line-height:1;opacity:.7}
+.active-chip .x{font-size:.9rem;line-height:1;opacity:.7;padding-left:.1rem}
 .active-chip:hover .x{opacity:1}
 
 .filter-sheet-modal{max-width:480px}
@@ -592,14 +573,6 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 .filter-actions{display:flex;justify-content:space-between;gap:.6rem;margin-top:1rem;padding-top:.85rem;border-top:1px solid var(--rule2)}
 .filter-actions .btn-s{flex:0 0 auto}
 .filter-actions .btn-p{flex:1}
-
-/* ============ ?-icon next to hill-type tabs ============ */
-.hilltype-help{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;margin-left:.4rem;padding:0;background:transparent;border:1px solid var(--ink4);color:var(--ink3);border-radius:50%;font-family:var(--font-body);font-size:.7rem;font-weight:600;cursor:pointer;-webkit-appearance:none;transition:all .12s;vertical-align:middle}
-.hilltype-help:hover{border-color:var(--ink);color:var(--ink);background:var(--bg2)}
-
-/* Tooltip for ?-icon */
-.help-tooltip{position:absolute;z-index:50;background:var(--ink);color:var(--surface-elev);font-family:var(--font-body);font-size:.74rem;line-height:1.4;padding:.55rem .7rem;border-radius:6px;max-width:260px;letter-spacing:-.005em;box-shadow:0 4px 12px rgba(0,0,0,0.18);pointer-events:none}
-.help-tooltip::after{content:'';position:absolute;top:-5px;left:18px;border-left:5px solid transparent;border-right:5px solid transparent;border-bottom:5px solid var(--ink)}
 
 /* ============ ABOUT MODAL — colophon idiom ============ */
 .mast-icon-btn{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;padding:0;background:transparent;border:1px solid var(--ink4);color:var(--ink3);border-radius:50%;cursor:pointer;-webkit-appearance:none;-webkit-tap-highlight-color:transparent;transition:all .15s;flex-shrink:0}
@@ -633,8 +606,6 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 /* ============ WEATHER PANEL ============ */
 .tab.w.active{border-bottom-color:var(--accent)}
 #weather-section{padding:0}
-.wx-summary{background:var(--accent);color:rgba(255,255,255,.92);padding:.6rem 1.25rem .65rem;font-size:.74rem;line-height:1.45;letter-spacing:0;max-width:680px;margin:0 auto}
-.wx-summary strong{color:#fff;font-weight:600}
 .wx-meta-row{max-width:680px;margin:0 auto;padding:.6rem 1.25rem;display:flex;justify-content:space-between;align-items:center;font-size:.66rem;color:var(--ink3);font-family:var(--font-mono);letter-spacing:-.01em;border-bottom:1px solid var(--rule)}
 .wx-refresh{background:none;border:none;color:var(--ink3);font:inherit;cursor:pointer;display:inline-flex;align-items:center;gap:4px;padding:.15rem .4rem;border-radius:4px}
 .wx-refresh:hover{background:var(--bg2);color:var(--ink)}
@@ -657,36 +628,32 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 .wx-st-go{color:var(--accent-dark)}
 .wx-st-marg{color:#7A4A08}
 .wx-st-poor{color:var(--terra-dark)}
-.wx-detail{padding:.85rem 1.25rem 1.1rem;background:var(--surface);border-top:1px solid var(--rule2)}
-.wx-det-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.7rem;gap:.5rem}
+.wx-detail{padding:.85rem 1.25rem 1rem;background:var(--surface);border-top:1px solid var(--rule2)}
+.wx-det-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem;gap:.5rem}
 .wx-det-day-label{font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);font-weight:600}
 .wx-det-tag{font-size:.6rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:.2rem .55rem;border-radius:4px;border:1px solid currentColor}
 .wx-det-tag.go{color:var(--accent-dark);background:rgba(107,122,79,.08)}
 .wx-det-tag.marg{color:#7A4A08;background:rgba(122,74,8,.08)}
 .wx-det-tag.poor{color:var(--terra-dark);background:rgba(184,84,58,.1)}
-.wx-det-row{display:flex;justify-content:space-between;align-items:center;padding:.4rem 0;border-bottom:1px solid var(--rule2);font-size:.78rem;gap:.75rem}
+.wx-det-row{display:flex;justify-content:space-between;align-items:center;padding:.28rem 0;border-bottom:1px solid var(--rule2);font-size:.76rem;gap:.75rem}
 .wx-det-row:last-of-type{border-bottom:none}
-.wx-det-label{color:var(--ink2);font-size:.72rem;letter-spacing:-.005em;flex-shrink:0}
-.wx-det-val{font-family:var(--font-mono);font-size:.76rem;color:var(--ink);letter-spacing:-.01em;font-weight:500;text-align:right}
+.wx-det-label{color:var(--ink3);font-size:.68rem;letter-spacing:-.005em;flex-shrink:0}
+.wx-det-val{font-family:var(--font-mono);font-size:.74rem;color:var(--ink);letter-spacing:-.01em;font-weight:500;text-align:right}
 .wx-det-val.danger{color:var(--terra-dark)}
 .wx-det-val.good{color:var(--accent-dark)}
-.wx-ampm{display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end}
-.wx-pill{font-size:.6rem;padding:.18rem .5rem;border-radius:3px;font-weight:500;letter-spacing:.02em;font-family:var(--font-body);white-space:nowrap}
-.wx-pill-sun{background:rgba(107,122,79,.15);color:var(--accent-dark)}
-.wx-pill-cloud{background:var(--bg2);color:var(--ink2)}
-.wx-pill-rain{background:rgba(26,88,120,.1);color:#1A5878}
-.wx-pill-fog{background:var(--bg2);color:var(--ink2)}
-.wx-pill-snow{background:rgba(26,88,120,.1);color:#1A5878}
-.wx-pill-storm{background:rgba(184,84,58,.1);color:var(--terra-dark)}
-.wx-reason{margin:0 0 .8rem 0;padding:.55rem .7rem;border-radius:5px;font-size:.74rem;line-height:1.45;font-style:italic;letter-spacing:-.005em;border-left:3px solid currentColor}
-.wx-reason-go{background:rgba(107,122,79,.08);color:var(--accent-dark)}
-.wx-reason-marg{background:rgba(122,74,8,.06);color:#7A4A08}
-.wx-reason-poor{background:rgba(184,84,58,.07);color:var(--terra-dark)}
-.wx-cta{margin-top:.85rem;padding:.7rem .85rem;background:var(--accent-light);border:1px solid #C9D1B5;border-radius:6px;display:flex;gap:.6rem;align-items:center}
-.wx-cta-text{flex:1;font-size:.74rem;color:var(--accent-dark);line-height:1.4}
-.wx-cta-text strong{font-weight:600}
-.wx-cta-btn{padding:.45rem .7rem;background:var(--ink);color:var(--surface-elev);border:none;border-radius:6px;font-family:var(--font-body);font-size:.7rem;font-weight:600;letter-spacing:-.005em;cursor:pointer;flex-shrink:0;-webkit-appearance:none}
-.wx-cta-btn:hover{background:var(--accent-dark)}
+.wx-ampm{display:flex;gap:3px;flex-wrap:wrap;justify-content:flex-end}
+.wx-pill{font-size:.57rem;padding:.08rem .35rem;border-radius:3px;font-weight:500;letter-spacing:.01em;font-family:var(--font-body);white-space:nowrap}
+.wx-pill-sun{background:rgba(107,122,79,.12);color:var(--accent-dark)}
+.wx-pill-cloud{background:var(--bg2);color:var(--ink3)}
+.wx-pill-rain{background:rgba(26,88,120,.08);color:#1A5878}
+.wx-pill-fog{background:var(--bg2);color:var(--ink3)}
+.wx-pill-snow{background:rgba(26,88,120,.08);color:#1A5878}
+.wx-pill-storm{background:rgba(184,84,58,.08);color:var(--terra-dark)}
+/* Reason strip — no background fill, just a coloured left border */
+.wx-reason{margin:0 0 .6rem 0;padding:.25rem .6rem;font-size:.72rem;line-height:1.4;letter-spacing:-.005em;border-left:2px solid currentColor;border-radius:0}
+.wx-reason-go{color:var(--accent-dark)}
+.wx-reason-marg{color:#7A4A08}
+.wx-reason-poor{color:var(--terra-dark)}
 .wx-mwis-link{display:inline-flex;align-items:center;gap:4px;margin-top:.65rem;font-size:.7rem;color:var(--accent-dark);text-decoration:none;font-weight:500;font-family:var(--font-body)}
 .wx-mwis-link:hover{text-decoration:underline}
 .wx-skel{padding:1.25rem;display:flex;flex-direction:column;gap:.75rem;max-width:680px;margin:0 auto}
@@ -754,7 +721,6 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
       <button class="hill-type f" data-tab="fiona">Fionas</button>
       <button class="hill-type b" data-tab="bothy">Bothies</button>
     </div>
-    <button class="hilltype-help" id="hilltype-help-btn" type="button" aria-label="What's this?">?</button>
   </div>
 </div>
 
@@ -941,7 +907,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
       <div class="about-label">The Hills</div>
       <dl class="about-list">
         <dt><span class="al-name">Munros</span><span class="al-count">282</span></dt>
-        <dd>Mountains over 3,000ft (914m), as catalogued by Sir Hugh Munro in his 1891 <em>Tables</em>. Maintained by the Scottish Mountaineering Club.</dd>
+        <dd>Mountains over 3,000ft (914m), first catalogued by Sir Hugh Munro in his 1891 <em>Tables</em>. The list is maintained by the Scottish Mountaineering Club.</dd>
 
         <dt><span class="al-name">Corbetts</span><span class="al-count">222</span></dt>
         <dd>Hills between 2,500–3,000ft (762–914m) with at least 500ft (152m) of prominence. Named for John Rooke Corbett, an early Scottish Mountaineering Club member.</dd>
@@ -958,6 +924,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
       <div class="about-label">Sources</div>
       <ul class="about-sources">
         <li><span class="as-k">Hills</span><span class="as-v"><a href="https://www.smc.org.uk/" target="_blank" rel="noopener">SMC</a> · <a href="https://www.hills-database.co.uk/" target="_blank" rel="noopener">Database of British &amp; Irish Hills</a></span></li>
+        <li><span class="as-k">Routes</span><span class="as-v"><a href="https://www.walkhighlands.co.uk/" target="_blank" rel="noopener">WalkHighlands</a></span></li>
         <li><span class="as-k">Bothies</span><span class="as-v"><a href="https://www.mountainbothies.org.uk/" target="_blank" rel="noopener">Mountain Bothies Association</a></span></li>
         <li><span class="as-k">Weather</span><span class="as-v"><a href="https://www.mwis.org.uk/" target="_blank" rel="noopener">Mountain Weather Information Service</a></span></li>
       </ul>
@@ -1899,7 +1866,6 @@ var activeTab = 'munro';
 var regionFilter = '';
 var sortBy = 'name';
 var searchTerm = '';
-var gradeFilter = ''; // unused — grade filter removed
 var statusFilter = '';
 var collapsed = {};
 var target = null;
@@ -1939,8 +1905,8 @@ function getList(){
   if(activeTab==='munro') list=list.filter(function(m){return m.type==='munro';});
   else if(activeTab==='corbett') list=list.filter(function(m){return m.type==='corbett';});
   else if(activeTab==='fiona') list=list.filter(function(m){return m.type==='fiona';});
-  if(gradeFilter) list=list.filter(function(m){return m.grade===gradeFilter;});
   if(statusFilter==='bagged') list=list.filter(function(m){return !!bagged[m.id];});
+  if(statusFilter==='unbagged') list=list.filter(function(m){return !bagged[m.id];});
   if(regionFilter) list=list.filter(function(m){return m.region===regionFilter;});
   if(searchTerm){
     var q=searchTerm.toLowerCase();
@@ -2504,13 +2470,9 @@ function renderAll(){
   var ms=document.getElementById('map-section');
   var bs=document.getElementById('bothy-section');
   var ws=document.getElementById('weather-section');
-  // Toggle masthead title between Bagger and Forecast
+  // Toggle masthead title - always shows Scottish Hill Bagger
   var h1=document.querySelector('.mast-h1');
-  if(h1){
-    h1.innerHTML = activeTab==='weather'
-      ? 'Scottish <em>Hill Forecast</em>'
-      : 'Scottish <em>Hill Bagger</em>';
-  }
+  if(h1) h1.innerHTML = 'Scottish <em>Hill Bagger</em>';
   if(activeTab==='map'){
     if(ls) ls.style.display='none';
     if(ms) ms.style.display='block';
@@ -2876,6 +2838,34 @@ function toggleRegion(head){
   var section=document.getElementById('rs-'+rkey);if(section)section.classList.toggle('collapsed');
 }
 
+  function updateActiveChips(){
+    var activeChipsBar = document.getElementById('active-chips');
+    var filterCount = document.getElementById('filter-count');
+    if(!activeChipsBar || !filterCount) return;
+    var chips = [];
+    if(sortBy && sortBy !== 'name'){
+      var sortLbl = ({'height-desc':'Highest first','height-asc':'Lowest first','date':'By date bagged'})[sortBy] || sortBy;
+      chips.push({k:'sort', l:sortLbl});
+    }
+    if(statusFilter) chips.push({k:'status', l: statusFilter==='bagged' ? 'Bagged' : 'Unbagged'});
+    if(regionFilter) chips.push({k:'region', l: regionFilter});
+
+    if(!chips.length){
+      activeChipsBar.setAttribute('hidden','');
+      filterCount.setAttribute('hidden','');
+      filterCount.textContent = '0';
+      return;
+    }
+    activeChipsBar.removeAttribute('hidden');
+    filterCount.removeAttribute('hidden');
+    filterCount.textContent = String(chips.length);
+    var html = '';
+    for(var i=0;i<chips.length;i++){
+      html += '<button class="active-chip" data-clear="'+chips[i].k+'" type="button" aria-label="Clear '+escHtml(chips[i].l)+'"><span>'+escHtml(chips[i].l)+'</span><span class="x">×</span></button>';
+    }
+    activeChipsBar.innerHTML = html;
+  }
+
 function attachEvents(){
   // Top-tabs (Hills / Map / Weather)
   var topTabs=document.querySelectorAll('.top-tab');
@@ -2908,11 +2898,9 @@ function attachEvents(){
         // Clear filters as before
         if(regionFilter){
           regionFilter='';
-          var rc=document.getElementById('region-chip');
-          var rl=document.getElementById('region-chip-label');
-          if(rc) rc.classList.remove('has-selection');
-          if(rl) rl.textContent='Region';
         }
+        statusFilter='';
+        sortBy='name';
         if(activeTab !== 'bothy'){
           bothySearch=''; bothyRegionFilter=''; bothyVisitedFilter=false;
           var bs=document.getElementById('bothy-srch');
@@ -2951,11 +2939,9 @@ function attachEvents(){
         document.body.classList.add('has-hilltypes');
         if(regionFilter){
           regionFilter='';
-          var rc=document.getElementById('region-chip');
-          var rl=document.getElementById('region-chip-label');
-          if(rc) rc.classList.remove('has-selection');
-          if(rl) rl.textContent='Region';
         }
+        statusFilter='';
+        sortBy='name';
         if(activeTab !== 'bothy'){
           bothySearch=''; bothyRegionFilter=''; bothyVisitedFilter=false;
           var bs=document.getElementById('bothy-srch');
@@ -3093,37 +3079,16 @@ function attachEvents(){
     });
   }
 
-  function updateActiveChips(){
-    if(!activeChipsBar || !filterCount) return;
-    var chips = [];
-    if(sortBy && sortBy !== 'name'){
-      var sortLbl = ({'height-desc':'Highest first','height-asc':'Lowest first','date':'By date bagged'})[sortBy] || sortBy;
-      chips.push({k:'sort', l:sortLbl});
-    }
-    if(statusFilter) chips.push({k:'status', l: statusFilter==='bagged' ? 'Bagged' : 'Unbagged'});
-    if(regionFilter) chips.push({k:'region', l: regionFilter});
-
-    if(!chips.length){
-      activeChipsBar.setAttribute('hidden','');
-      filterCount.setAttribute('hidden','');
-      filterCount.textContent = '0';
-      return;
-    }
-    activeChipsBar.removeAttribute('hidden');
-    filterCount.removeAttribute('hidden');
-    filterCount.textContent = String(chips.length);
-    var html = '';
-    for(var i=0;i<chips.length;i++){
-      html += '<button class="active-chip" data-clear="'+chips[i].k+'" type="button" aria-label="Clear '+escHtml(chips[i].l)+'"><span>'+escHtml(chips[i].l)+'</span><span class="x">×</span></button>';
-    }
-    activeChipsBar.innerHTML = html;
-  }
-
   if(activeChipsBar){
     activeChipsBar.addEventListener('click', function(e){
-      var b = e.target.closest('.active-chip');
-      if(!b) return;
-      var k = b.getAttribute('data-clear');
+      var t = e.target;
+      // Walk up to find .active-chip (polyfill for .closest)
+      while(t && t !== activeChipsBar){
+        if(t.classList && t.classList.contains('active-chip')) break;
+        t = t.parentNode;
+      }
+      if(!t || t === activeChipsBar) return;
+      var k = t.getAttribute('data-clear');
       if(k === 'sort') sortBy = 'name';
       else if(k === 'status') statusFilter = '';
       else if(k === 'region') regionFilter = '';
@@ -3131,38 +3096,6 @@ function attachEvents(){
       updateActiveChips();
       renderList();
     });
-  }
-
-  // ============ HILL TYPE HELP TOOLTIP ============
-  var HILLTYPE_HELP = {
-    munro: 'Munros are Scottish mountains over 3,000ft (914m), as catalogued by Sir Hugh Munro in 1891. There are 282.',
-    corbett: 'Corbetts are Scottish hills 2,500–3,000ft (762–914m) with at least 500ft of prominence. There are 222.',
-    fiona: 'Fionas (formerly "Grahams") are Scottish hills 2,000–2,500ft (610–762m) with at least 500ft of prominence. There are 219.',
-    bothy: 'Bothies are simple shelters in remote areas of Scotland, maintained by the Mountain Bothies Association and free to use.'
-  };
-  var helpBtn = document.getElementById('hilltype-help-btn');
-  var helpTooltipEl = null;
-  function showHelpTooltip(){
-    if(helpTooltipEl) return;
-    var msg = HILLTYPE_HELP[activeTab] || '';
-    if(!msg) return;
-    helpTooltipEl = document.createElement('div');
-    helpTooltipEl.className = 'help-tooltip';
-    helpTooltipEl.textContent = msg;
-    document.body.appendChild(helpTooltipEl);
-    var rect = helpBtn.getBoundingClientRect();
-    helpTooltipEl.style.top = (rect.bottom + window.scrollY + 8) + 'px';
-    helpTooltipEl.style.left = Math.max(8, rect.left + window.scrollX - 18) + 'px';
-  }
-  function hideHelpTooltip(){
-    if(helpTooltipEl){ helpTooltipEl.remove(); helpTooltipEl = null; }
-  }
-  if(helpBtn){
-    helpBtn.addEventListener('click', function(e){
-      e.stopPropagation();
-      if(helpTooltipEl) hideHelpTooltip(); else showHelpTooltip();
-    });
-    document.addEventListener('click', hideHelpTooltip);
   }
 
   // ============ ABOUT MODAL ============
@@ -3709,79 +3642,6 @@ function attachEvents(){
     }
   });
 
-  // Region filter
-  var regionChip = document.getElementById('region-chip');
-  var regionPanel = document.getElementById('region-panel');
-  var regionList = document.getElementById('region-list');
-  var regionLabel = document.getElementById('region-chip-label');
-  
-  function buildRegionList(){
-    // Get regions for current type
-    var peaksOfType;
-    if(activeTab==='map') peaksOfType = M;
-    else peaksOfType = M.filter(function(m){return m.type===activeTab;});
-    
-    var counts = {};
-    for(var i=0;i<peaksOfType.length;i++){
-      var r = peaksOfType[i].region;
-      counts[r] = (counts[r]||0) + 1;
-    }
-    var regions = [];
-    for(var r in counts) regions.push({name:r, count:counts[r]});
-    regions.sort(function(a,b){return a.name.localeCompare(b.name);});
-    
-    var html2 = '';
-    for(var i=0;i<regions.length;i++){
-      var r = regions[i];
-      var active = (r.name === regionFilter) ? ' active' : '';
-      html2 += '<button class="region-item'+active+'" data-region="'+r.name.replace(/"/g,'&quot;')+'" type="button">'+escHtml(r.name)+' <span class="region-count">'+r.count+'</span></button>';
-    }
-    regionList.innerHTML = html2;
-    
-    // Update "All regions" button
-    var allBtn = regionPanel.querySelector('[data-region=""]');
-    if(allBtn) {
-      if(regionFilter) allBtn.classList.remove('active');
-      else allBtn.classList.add('active');
-    }
-  }
-  
-  if(regionChip){
-    regionChip.addEventListener('click', function(){
-      var open = regionPanel.hasAttribute('hidden') ? false : true;
-      if(open){
-        regionPanel.setAttribute('hidden','');
-        regionChip.setAttribute('aria-expanded','false');
-      } else {
-        buildRegionList();
-        regionPanel.removeAttribute('hidden');
-        regionChip.setAttribute('aria-expanded','true');
-      }
-    });
-    
-    regionPanel.addEventListener('click', function(e){
-      var btn = e.target.closest('.region-item');
-      if(!btn) return;
-      regionFilter = btn.getAttribute('data-region') || '';
-      // Update chip label
-      if(regionFilter){
-        regionLabel.textContent = regionFilter;
-        regionChip.classList.add('has-selection');
-      } else {
-        regionLabel.textContent = 'Region';
-        regionChip.classList.remove('has-selection');
-      }
-      // Update active state on buttons
-      var items = regionPanel.querySelectorAll('.region-item');
-      for(var i=0;i<items.length;i++) items[i].classList.remove('active');
-      btn.classList.add('active');
-      // Close panel and re-render
-      regionPanel.setAttribute('hidden','');
-      regionChip.setAttribute('aria-expanded','false');
-      renderList();
-    });
-  }
-
   // Report broken WalkHighlands link — copies peak details to clipboard
   var btnReport = document.getElementById('btn-report');
   if(btnReport){
@@ -4098,14 +3958,7 @@ document.addEventListener('keydown', function(e){
 /* ============ WEATHER MODULE ============ */
 var WX_URL = './forecast.json';
 
-// MWIS area → tracker region(s) mapping
-var WX_AREA_TO_TRACKER = {
-  'West Highlands': ['Argyll','Arran','Glen Coe & Lochaber','Loch Lomond & Trossachs','Southwest Highlands and Islands','Western Highlands','Skye'],
-  'Northwest Highlands': ['Kintail & Glen Affric','North West Highlands and Islands','Northern Highlands','Outer Hebrides','Sutherland','Torridon & Wester Ross','Ullapool & Assynt'],
-  'Cairngorms & Monadhliath': ['Cairngorms','Badenoch & Monadh Liath','Eastern Highlands'],
-  'Southeastern Highlands': ['Central Highlands','Perthshire & Breadalbane'],
-  'Southern Uplands': ['Galloway','Southern Scotland','Southern Uplands']
-};
+// MWIS region ID → URL slug mapping
 var WX_REGION_IDS = {
   'Northwest Highlands': 'the-northwest-highlands',
   'West Highlands': 'west-highlands',
@@ -4190,18 +4043,6 @@ function wxPill(skyCode,label){
 }
 
 // Count unbagged Munros across the tracker regions a given MWIS area covers
-function wxCountUnbaggedInArea(areaName){
-  var trackerRegions = WX_AREA_TO_TRACKER[areaName] || [];
-  var count = 0;
-  for(var i=0;i<M.length;i++){
-    var p = M[i];
-    if(p.type!=='munro') continue;
-    if(trackerRegions.indexOf(p.region) < 0) continue;
-    if(!bagged[p.id]) count++;
-  }
-  return count;
-}
-
 function wxRenderDayCell(f, dayIdx, regionName, isOpen){
   if(!f){return '<div class="wx-day"><span style="color:var(--ink4);font-size:.7rem">—</span></div>';}
   var st = f.status||'marginal';
@@ -4233,16 +4074,13 @@ function wxRenderDetail(region, dayIdx){
   '<div class="wx-detail">'+
     '<div class="wx-det-head">'+
       '<span class="wx-det-day-label">'+wxEsc(dayName)+'</span>'+
-      '<span class="wx-det-tag '+wxStatusTagClass(st)+'">'+wxStatusLabel(st)+'</span>'+
+      '<span class="wx-ampm">'+wxPill(f.amSky||f.sky,'AM')+wxPill(f.pmSky||f.sky,'PM')+'</span>'+
     '</div>'+
-    // Reason strip — sits right under the header, tinted by status
     ((f.reason || f.note) ? '<div class="wx-reason wx-reason-'+wxStatusTagClass(st)+'">'+wxEsc(f.reason || f.note)+'</div>' : '')+
     '<div class="wx-det-row"><span class="wx-det-label">Wind</span><span class="wx-det-val'+(wd.danger?' danger':(worst<=18?' good':''))+'">'+windHtml+'</span></div>'+
-    '<div class="wx-det-row"><span class="wx-det-label">Temperature on tops</span><span class="wx-det-val">'+wxTempRange(f)+'</span></div>'+
-    '<div class="wx-det-row"><span class="wx-det-label">Cloud-free summits</span><span class="wx-det-val'+((f.cloudFree||0)>=75?' good':((f.cloudFree||0)<40?' danger':''))+'">'+(f.cloudFree!=null?f.cloudFree+'%':'—')+'</span></div>'+
-    '<div class="wx-det-row"><span class="wx-det-label">Visibility</span><span class="wx-det-val">'+wxVisLabel(f.visibility)+'</span></div>'+
-    ((f.freezingLevel != null && f.freezingLevel < 1800) ? '<div class="wx-det-row"><span class="wx-det-label">Freezing level</span><span class="wx-det-val'+(f.freezingLevel < 900 ? ' danger' : '')+'">'+wxFreezeLabel(f.freezingLevel)+'</span></div>' : '')+
-    '<div class="wx-det-row"><span class="wx-det-label">Through the day</span><span class="wx-ampm">'+wxPill(f.amSky||f.sky,'AM')+wxPill(f.pmSky||f.sky,'PM')+'</span></div>'+
+    '<div class="wx-det-row"><span class="wx-det-label">Temp on tops</span><span class="wx-det-val">'+wxTempRange(f)+'</span></div>'+
+    '<div class="wx-det-row"><span class="wx-det-label">Summit views</span><span class="wx-det-val'+((f.cloudFree||0)>=75?' good':((f.cloudFree||0)<40?' danger':''))+'">'+(f.cloudFree!=null?f.cloudFree+'%':'—')+'</span></div>'+
+    ((f.freezingLevel != null && f.freezingLevel < 1800) ? '<div class="wx-det-row"><span class="wx-det-label">Freezing</span><span class="wx-det-val'+(f.freezingLevel < 900 ? ' danger' : '')+'">'+wxFreezeLabel(f.freezingLevel)+'</span></div>' : '')+
     '<a class="wx-mwis-link" href="'+WX_MWIS(areaId)+'" target="_blank" rel="noopener">↗ Full MWIS forecast</a>'+
   '</div>';
 }
@@ -4342,44 +4180,6 @@ function wxAttachEvents(){
 // Switch to Munros tab and pre-filter to all tracker-regions inside this MWIS area.
 // We use a multi-region filter: since the existing region filter is single-select,
 // we set searchTerm to a special token that matches any of the area's regions.
-function wxJumpToMunros(areaName){
-  var trackerRegions = WX_AREA_TO_TRACKER[areaName] || [];
-  if(!trackerRegions.length) return;
-
-  // Activate Hills top-tab + Munros sub-tab
-  var topTabs = document.querySelectorAll('.top-tab');
-  for(var i=0;i<topTabs.length;i++){
-    topTabs[i].classList.toggle('active', topTabs[i].getAttribute('data-toptab')==='hills');
-  }
-  var hillTypes = document.querySelectorAll('.hill-type');
-  for(var j=0;j<hillTypes.length;j++){
-    hillTypes[j].classList.toggle('active', hillTypes[j].getAttribute('data-tab')==='munro');
-  }
-  var ht = document.getElementById('hill-types'); if(ht) ht.classList.add('show');
-  activeTab = 'munro';
-
-  setTimeout(function(){
-    if(trackerRegions.length===1){
-      regionFilter = trackerRegions[0];
-      var rc = document.getElementById('region-chip');
-      var rl = document.getElementById('region-chip-label');
-      if(rc) rc.classList.add('has-selection');
-      if(rl) rl.textContent = trackerRegions[0];
-    } else {
-      regionFilter = '';
-    }
-    if(typeof activeFilters !== 'undefined' && activeFilters){
-      activeFilters['status:bagged'] = false;
-    }
-    renderAll();
-    if(typeof showToast === 'function'){
-      var n = wxCountUnbaggedInArea(areaName);
-      showToast('Showing '+n+' unbagged Munro'+(n===1?'':'s')+' in '+areaName);
-    }
-    window.scrollTo({top:0,behavior:'smooth'});
-  }, 50);
-}
-
 function loadWeather(force){
   if(wxLoading) return;
   if(wxData && !force){ wxRender(); return; }
