@@ -658,7 +658,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 .wx-st-marg{color:#7A4A08}
 .wx-st-poor{color:var(--terra-dark)}
 .wx-detail{padding:.85rem 1.25rem 1.1rem;background:var(--surface);border-top:1px solid var(--rule2)}
-.wx-det-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.7rem;gap:.5rem}
+.wx-det-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:.7rem;gap:.5rem}
 .wx-det-day-label{font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);font-weight:600}
 .wx-det-tag{font-size:.6rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:.2rem .55rem;border-radius:4px;border:1px solid currentColor}
 .wx-det-tag.go{color:var(--accent-dark);background:rgba(107,122,79,.08)}
@@ -4230,16 +4230,13 @@ function wxRenderDetail(region, dayIdx){
   '<div class="wx-detail">'+
     '<div class="wx-det-head">'+
       '<span class="wx-det-day-label">'+wxEsc(dayName)+'</span>'+
-      '<span class="wx-det-tag '+wxStatusTagClass(st)+'">'+wxStatusLabel(st)+'</span>'+
+      '<span class="wx-ampm">'+wxPill(f.amSky||f.sky,'AM')+wxPill(f.pmSky||f.sky,'PM')+'</span>'+
     '</div>'+
-    // Reason strip — sits right under the header, tinted by status
     ((f.reason || f.note) ? '<div class="wx-reason wx-reason-'+wxStatusTagClass(st)+'">'+wxEsc(f.reason || f.note)+'</div>' : '')+
     '<div class="wx-det-row"><span class="wx-det-label">Wind</span><span class="wx-det-val'+(wd.danger?' danger':(worst<=18?' good':''))+'">'+windHtml+'</span></div>'+
     '<div class="wx-det-row"><span class="wx-det-label">Temperature on tops</span><span class="wx-det-val">'+wxTempRange(f)+'</span></div>'+
-    '<div class="wx-det-row"><span class="wx-det-label">Cloud-free summits</span><span class="wx-det-val'+((f.cloudFree||0)>=75?' good':((f.cloudFree||0)<40?' danger':''))+'">'+(f.cloudFree!=null?f.cloudFree+'%':'—')+'</span></div>'+
-    '<div class="wx-det-row"><span class="wx-det-label">Visibility</span><span class="wx-det-val">'+wxVisLabel(f.visibility)+'</span></div>'+
+    '<div class="wx-det-row"><span class="wx-det-label">Summit views</span><span class="wx-det-val'+((f.cloudFree||0)>=75?' good':((f.cloudFree||0)<40?' danger':''))+'">'+(f.cloudFree!=null?f.cloudFree+'%':'—')+'</span></div>'+
     ((f.freezingLevel != null && f.freezingLevel < 1800) ? '<div class="wx-det-row"><span class="wx-det-label">Freezing level</span><span class="wx-det-val'+(f.freezingLevel < 900 ? ' danger' : '')+'">'+wxFreezeLabel(f.freezingLevel)+'</span></div>' : '')+
-    '<div class="wx-det-row"><span class="wx-det-label">Through the day</span><span class="wx-ampm">'+wxPill(f.amSky||f.sky,'AM')+wxPill(f.pmSky||f.sky,'PM')+'</span></div>'+
     '<a class="wx-mwis-link" href="'+WX_MWIS(areaId)+'" target="_blank" rel="noopener">↗ Full MWIS forecast</a>'+
   '</div>';
 }
