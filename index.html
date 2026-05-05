@@ -657,32 +657,31 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 .wx-st-go{color:var(--accent-dark)}
 .wx-st-marg{color:#7A4A08}
 .wx-st-poor{color:var(--terra-dark)}
-.wx-detail{padding:.85rem 1.25rem 1rem;background:var(--surface);border-top:1px solid var(--rule2)}
-.wx-det-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem;gap:.5rem}
+.wx-detail{padding:.85rem 1.25rem 1.1rem;background:var(--surface);border-top:1px solid var(--rule2)}
+.wx-det-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.7rem;gap:.5rem}
 .wx-det-day-label{font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);font-weight:600}
 .wx-det-tag{font-size:.6rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:.2rem .55rem;border-radius:4px;border:1px solid currentColor}
 .wx-det-tag.go{color:var(--accent-dark);background:rgba(107,122,79,.08)}
 .wx-det-tag.marg{color:#7A4A08;background:rgba(122,74,8,.08)}
 .wx-det-tag.poor{color:var(--terra-dark);background:rgba(184,84,58,.1)}
-.wx-det-row{display:flex;justify-content:space-between;align-items:center;padding:.28rem 0;border-bottom:1px solid var(--rule2);font-size:.76rem;gap:.75rem}
+.wx-det-row{display:flex;justify-content:space-between;align-items:center;padding:.4rem 0;border-bottom:1px solid var(--rule2);font-size:.78rem;gap:.75rem}
 .wx-det-row:last-of-type{border-bottom:none}
-.wx-det-label{color:var(--ink3);font-size:.68rem;letter-spacing:-.005em;flex-shrink:0}
-.wx-det-val{font-family:var(--font-mono);font-size:.74rem;color:var(--ink);letter-spacing:-.01em;font-weight:500;text-align:right}
+.wx-det-label{color:var(--ink2);font-size:.72rem;letter-spacing:-.005em;flex-shrink:0}
+.wx-det-val{font-family:var(--font-mono);font-size:.76rem;color:var(--ink);letter-spacing:-.01em;font-weight:500;text-align:right}
 .wx-det-val.danger{color:var(--terra-dark)}
 .wx-det-val.good{color:var(--accent-dark)}
-.wx-ampm{display:flex;gap:3px;flex-wrap:wrap;justify-content:flex-end}
-.wx-pill{font-size:.57rem;padding:.08rem .35rem;border-radius:3px;font-weight:500;letter-spacing:.01em;font-family:var(--font-body);white-space:nowrap}
-.wx-pill-sun{background:rgba(107,122,79,.12);color:var(--accent-dark)}
-.wx-pill-cloud{background:var(--bg2);color:var(--ink3)}
-.wx-pill-rain{background:rgba(26,88,120,.08);color:#1A5878}
-.wx-pill-fog{background:var(--bg2);color:var(--ink3)}
-.wx-pill-snow{background:rgba(26,88,120,.08);color:#1A5878}
-.wx-pill-storm{background:rgba(184,84,58,.08);color:var(--terra-dark)}
-/* Reason strip — no background fill, just a coloured left border */
-.wx-reason{margin:0 0 .6rem 0;padding:.25rem .6rem;font-size:.72rem;line-height:1.4;letter-spacing:-.005em;border-left:2px solid currentColor;border-radius:0}
-.wx-reason-go{color:var(--accent-dark)}
-.wx-reason-marg{color:#7A4A08}
-.wx-reason-poor{color:var(--terra-dark)}
+.wx-ampm{display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end}
+.wx-pill{font-size:.6rem;padding:.18rem .5rem;border-radius:3px;font-weight:500;letter-spacing:.02em;font-family:var(--font-body);white-space:nowrap}
+.wx-pill-sun{background:rgba(107,122,79,.15);color:var(--accent-dark)}
+.wx-pill-cloud{background:var(--bg2);color:var(--ink2)}
+.wx-pill-rain{background:rgba(26,88,120,.1);color:#1A5878}
+.wx-pill-fog{background:var(--bg2);color:var(--ink2)}
+.wx-pill-snow{background:rgba(26,88,120,.1);color:#1A5878}
+.wx-pill-storm{background:rgba(184,84,58,.1);color:var(--terra-dark)}
+.wx-reason{margin:0 0 .8rem 0;padding:.55rem .7rem;border-radius:5px;font-size:.74rem;line-height:1.45;font-style:italic;letter-spacing:-.005em;border-left:3px solid currentColor}
+.wx-reason-go{background:rgba(107,122,79,.08);color:var(--accent-dark)}
+.wx-reason-marg{background:rgba(122,74,8,.06);color:#7A4A08}
+.wx-reason-poor{background:rgba(184,84,58,.07);color:var(--terra-dark)}
 .wx-cta{margin-top:.85rem;padding:.7rem .85rem;background:var(--accent-light);border:1px solid #C9D1B5;border-radius:6px;display:flex;gap:.6rem;align-items:center}
 .wx-cta-text{flex:1;font-size:.74rem;color:var(--accent-dark);line-height:1.4}
 .wx-cta-text strong{font-weight:600}
@@ -959,7 +958,6 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
       <div class="about-label">Sources</div>
       <ul class="about-sources">
         <li><span class="as-k">Hills</span><span class="as-v"><a href="https://www.smc.org.uk/" target="_blank" rel="noopener">SMC</a> · <a href="https://www.hills-database.co.uk/" target="_blank" rel="noopener">Database of British &amp; Irish Hills</a></span></li>
-        <li><span class="as-k">Routes</span><span class="as-v"><a href="https://www.walkhighlands.co.uk/" target="_blank" rel="noopener">WalkHighlands</a></span></li>
         <li><span class="as-k">Bothies</span><span class="as-v"><a href="https://www.mountainbothies.org.uk/" target="_blank" rel="noopener">Mountain Bothies Association</a></span></li>
         <li><span class="as-k">Weather</span><span class="as-v"><a href="https://www.mwis.org.uk/" target="_blank" rel="noopener">Mountain Weather Information Service</a></span></li>
       </ul>
@@ -1943,7 +1941,6 @@ function getList(){
   else if(activeTab==='fiona') list=list.filter(function(m){return m.type==='fiona';});
   if(gradeFilter) list=list.filter(function(m){return m.grade===gradeFilter;});
   if(statusFilter==='bagged') list=list.filter(function(m){return !!bagged[m.id];});
-  if(statusFilter==='unbagged') list=list.filter(function(m){return !bagged[m.id];});
   if(regionFilter) list=list.filter(function(m){return m.region===regionFilter;});
   if(searchTerm){
     var q=searchTerm.toLowerCase();
@@ -2507,9 +2504,13 @@ function renderAll(){
   var ms=document.getElementById('map-section');
   var bs=document.getElementById('bothy-section');
   var ws=document.getElementById('weather-section');
-  // Toggle masthead title - always shows Scottish Hill Bagger
+  // Toggle masthead title between Bagger and Forecast
   var h1=document.querySelector('.mast-h1');
-  if(h1) h1.innerHTML = 'Scottish <em>Hill Bagger</em>';
+  if(h1){
+    h1.innerHTML = activeTab==='weather'
+      ? 'Scottish <em>Hill Forecast</em>'
+      : 'Scottish <em>Hill Bagger</em>';
+  }
   if(activeTab==='map'){
     if(ls) ls.style.display='none';
     if(ms) ms.style.display='block';
@@ -2907,9 +2908,11 @@ function attachEvents(){
         // Clear filters as before
         if(regionFilter){
           regionFilter='';
+          var rc=document.getElementById('region-chip');
+          var rl=document.getElementById('region-chip-label');
+          if(rc) rc.classList.remove('has-selection');
+          if(rl) rl.textContent='Region';
         }
-        statusFilter='';
-        sortBy='name';
         if(activeTab !== 'bothy'){
           bothySearch=''; bothyRegionFilter=''; bothyVisitedFilter=false;
           var bs=document.getElementById('bothy-srch');
@@ -2948,9 +2951,11 @@ function attachEvents(){
         document.body.classList.add('has-hilltypes');
         if(regionFilter){
           regionFilter='';
+          var rc=document.getElementById('region-chip');
+          var rl=document.getElementById('region-chip-label');
+          if(rc) rc.classList.remove('has-selection');
+          if(rl) rl.textContent='Region';
         }
-        statusFilter='';
-        sortBy='name';
         if(activeTab !== 'bothy'){
           bothySearch=''; bothyRegionFilter=''; bothyVisitedFilter=false;
           var bs=document.getElementById('bothy-srch');
@@ -4228,13 +4233,16 @@ function wxRenderDetail(region, dayIdx){
   '<div class="wx-detail">'+
     '<div class="wx-det-head">'+
       '<span class="wx-det-day-label">'+wxEsc(dayName)+'</span>'+
-      '<span class="wx-ampm">'+wxPill(f.amSky||f.sky,'AM')+wxPill(f.pmSky||f.sky,'PM')+'</span>'+
+      '<span class="wx-det-tag '+wxStatusTagClass(st)+'">'+wxStatusLabel(st)+'</span>'+
     '</div>'+
+    // Reason strip — sits right under the header, tinted by status
     ((f.reason || f.note) ? '<div class="wx-reason wx-reason-'+wxStatusTagClass(st)+'">'+wxEsc(f.reason || f.note)+'</div>' : '')+
     '<div class="wx-det-row"><span class="wx-det-label">Wind</span><span class="wx-det-val'+(wd.danger?' danger':(worst<=18?' good':''))+'">'+windHtml+'</span></div>'+
-    '<div class="wx-det-row"><span class="wx-det-label">Temp on tops</span><span class="wx-det-val">'+wxTempRange(f)+'</span></div>'+
-    '<div class="wx-det-row"><span class="wx-det-label">Summit views</span><span class="wx-det-val'+((f.cloudFree||0)>=75?' good':((f.cloudFree||0)<40?' danger':''))+'">'+(f.cloudFree!=null?f.cloudFree+'%':'—')+'</span></div>'+
-    ((f.freezingLevel != null && f.freezingLevel < 1800) ? '<div class="wx-det-row"><span class="wx-det-label">Freezing</span><span class="wx-det-val'+(f.freezingLevel < 900 ? ' danger' : '')+'">'+wxFreezeLabel(f.freezingLevel)+'</span></div>' : '')+
+    '<div class="wx-det-row"><span class="wx-det-label">Temperature on tops</span><span class="wx-det-val">'+wxTempRange(f)+'</span></div>'+
+    '<div class="wx-det-row"><span class="wx-det-label">Cloud-free summits</span><span class="wx-det-val'+((f.cloudFree||0)>=75?' good':((f.cloudFree||0)<40?' danger':''))+'">'+(f.cloudFree!=null?f.cloudFree+'%':'—')+'</span></div>'+
+    '<div class="wx-det-row"><span class="wx-det-label">Visibility</span><span class="wx-det-val">'+wxVisLabel(f.visibility)+'</span></div>'+
+    ((f.freezingLevel != null && f.freezingLevel < 1800) ? '<div class="wx-det-row"><span class="wx-det-label">Freezing level</span><span class="wx-det-val'+(f.freezingLevel < 900 ? ' danger' : '')+'">'+wxFreezeLabel(f.freezingLevel)+'</span></div>' : '')+
+    '<div class="wx-det-row"><span class="wx-det-label">Through the day</span><span class="wx-ampm">'+wxPill(f.amSky||f.sky,'AM')+wxPill(f.pmSky||f.sky,'PM')+'</span></div>'+
     '<a class="wx-mwis-link" href="'+WX_MWIS(areaId)+'" target="_blank" rel="noopener">↗ Full MWIS forecast</a>'+
   '</div>';
 }
