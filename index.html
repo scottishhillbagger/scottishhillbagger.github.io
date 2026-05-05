@@ -1943,6 +1943,7 @@ function getList(){
   else if(activeTab==='fiona') list=list.filter(function(m){return m.type==='fiona';});
   if(gradeFilter) list=list.filter(function(m){return m.grade===gradeFilter;});
   if(statusFilter==='bagged') list=list.filter(function(m){return !!bagged[m.id];});
+  if(statusFilter==='unbagged') list=list.filter(function(m){return !bagged[m.id];});
   if(regionFilter) list=list.filter(function(m){return m.region===regionFilter;});
   if(searchTerm){
     var q=searchTerm.toLowerCase();
@@ -2906,11 +2907,9 @@ function attachEvents(){
         // Clear filters as before
         if(regionFilter){
           regionFilter='';
-          var rc=document.getElementById('region-chip');
-          var rl=document.getElementById('region-chip-label');
-          if(rc) rc.classList.remove('has-selection');
-          if(rl) rl.textContent='Region';
         }
+        statusFilter='';
+        sortBy='name';
         if(activeTab !== 'bothy'){
           bothySearch=''; bothyRegionFilter=''; bothyVisitedFilter=false;
           var bs=document.getElementById('bothy-srch');
@@ -2949,11 +2948,9 @@ function attachEvents(){
         document.body.classList.add('has-hilltypes');
         if(regionFilter){
           regionFilter='';
-          var rc=document.getElementById('region-chip');
-          var rl=document.getElementById('region-chip-label');
-          if(rc) rc.classList.remove('has-selection');
-          if(rl) rl.textContent='Region';
         }
+        statusFilter='';
+        sortBy='name';
         if(activeTab !== 'bothy'){
           bothySearch=''; bothyRegionFilter=''; bothyVisitedFilter=false;
           var bs=document.getElementById('bothy-srch');
