@@ -1,8 +1,8 @@
 {
   "days": [
+    "Tue",
     "Wed",
-    "Thu",
-    "Fri"
+    "Thu"
   ],
   "updatedAt": "2026-05-04T15:54:00.000Z",
   "regions": [
@@ -10,22 +10,39 @@
       "name": "Northwest Highlands",
       "forecast": [
         {
+          "sky": "snow",
+          "windMphLow": 5,
+          "windMphHigh": 15,
+          "gustMph": 30,
+          "windDir": "N",
+          "tempCLow": -2,
+          "tempCHigh": 1,
+          "cloudFree": 70,
+          "freezingLevel": 600,
+          "visibility": "good",
+          "amSky": "partly-cloudy",
+          "pmSky": "snow",
+          "status": "marginal",
+          "note": "Snow showers clustering easternmost hills, blustery at dawn"
+        },
+        {
           "sky": "partly-cloudy",
           "windMphLow": 10,
           "windMphHigh": 20,
+          "gustMph": 25,
           "windDir": "S",
           "tempCLow": -2,
           "tempCHigh": 0,
           "cloudFree": 80,
-          "freezingLevel": 800,
+          "freezingLevel": 700,
           "visibility": "excellent",
           "amSky": "partly-cloudy",
-          "pmSky": "partly-cloudy",
+          "pmSky": "snow",
           "status": "marginal",
-          "note": "snow flurries above 700m, gusts 30mph Skye"
+          "note": "Snow flurries above 700m, gustier 30mph Skye during day"
         },
         {
-          "sky": "partly-cloudy",
+          "sky": "rain",
           "windMphLow": 20,
           "windMphHigh": 30,
           "gustMph": 40,
@@ -34,26 +51,11 @@
           "tempCHigh": 5,
           "cloudFree": 50,
           "freezingLevel": 9999,
-          "visibility": "good",
+          "visibility": "moderate",
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "note": "gusts 40mph Skye and Kintail, heavier bursts later"
-        },
-        {
-          "sky": "partly-cloudy",
-          "windMphLow": 5,
-          "windMphHigh": 15,
-          "windDir": "S",
-          "tempCLow": -2,
-          "tempCHigh": 0,
-          "cloudFree": 80,
-          "freezingLevel": 800,
-          "visibility": "excellent",
-          "amSky": "partly-cloudy",
-          "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "note": "snow flurries above 700m, gusts 30mph Skye"
+          "note": "Gusts to 40mph Skye and Kintail, heavier rain coastal"
         }
       ]
     },
@@ -63,34 +65,18 @@
         {
           "sky": "partly-cloudy",
           "windMphLow": 10,
-          "windMphHigh": 20,
+          "windMphHigh": 15,
           "gustMph": 25,
-          "windDir": "S",
-          "tempCLow": -1,
+          "windDir": "N",
+          "tempCLow": -2,
           "tempCHigh": 2,
-          "cloudFree": 80,
-          "freezingLevel": 700,
+          "cloudFree": 60,
+          "freezingLevel": 900,
           "visibility": "excellent",
           "amSky": "partly-cloudy",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "note": "snow flurries above 800-900m, cluster risk Lochaber"
-        },
-        {
-          "sky": "partly-cloudy",
-          "windMphLow": 20,
-          "windMphHigh": 25,
-          "gustMph": 40,
-          "windDir": "SW",
-          "tempCLow": 0,
-          "tempCHigh": 4,
-          "cloudFree": 60,
-          "freezingLevel": 1200,
-          "visibility": "good",
-          "amSky": "cloud",
-          "pmSky": "rain",
-          "status": "poor",
-          "note": "gusts 35-40mph coastal Lochaber, heavier falls risk"
+          "note": "Fog banks inland morning, few snow flurries mostly inland"
         },
         {
           "sky": "partly-cloudy",
@@ -103,10 +89,26 @@
           "cloudFree": 80,
           "freezingLevel": 700,
           "visibility": "excellent",
-          "amSky": "partly-cloudy",
+          "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "note": "snow flurries above 800-900m, cluster risk Lochaber"
+          "note": "Snow flurries above 800-900m, local cluster risk Lochaber"
+        },
+        {
+          "sky": "rain",
+          "windMphLow": 20,
+          "windMphHigh": 25,
+          "gustMph": 40,
+          "windDir": "SW",
+          "tempCLow": 0,
+          "tempCHigh": 4,
+          "cloudFree": 60,
+          "freezingLevel": 1000,
+          "visibility": "moderate",
+          "amSky": "cloud",
+          "pmSky": "rain",
+          "status": "poor",
+          "note": "Gusts 35-40mph coastal Lochaber, heavier falls risk later"
         }
       ]
     },
@@ -114,6 +116,22 @@
       "name": "Cairngorms & Monadhliath",
       "forecast": [
         {
+          "sky": "snow",
+          "windMphLow": 10,
+          "windMphHigh": 15,
+          "gustMph": 30,
+          "windDir": "NNE",
+          "tempCLow": -2,
+          "tempCHigh": 1,
+          "cloudFree": 50,
+          "freezingLevel": 650,
+          "visibility": "good",
+          "amSky": "partly-cloudy",
+          "pmSky": "snow",
+          "status": "marginal",
+          "note": "Snow showers most extensive eastern areas, cloudier afternoon"
+        },
+        {
           "sky": "partly-cloudy",
           "windMphLow": 5,
           "windMphHigh": 15,
@@ -121,42 +139,28 @@
           "tempCLow": -2,
           "tempCHigh": 1,
           "cloudFree": 80,
-          "freezingLevel": 700,
+          "freezingLevel": 650,
           "visibility": "excellent",
-          "amSky": "partly-cloudy",
+          "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "note": "snow flurries above 700-800m, cluster risk north later"
+          "note": "Snow flurries above 700-800m, cluster risk north afternoon"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 20,
           "windMphHigh": 25,
+          "gustMph": 30,
           "windDir": "SSW",
           "tempCLow": 1,
           "tempCHigh": 6,
           "cloudFree": 60,
-          "freezingLevel": 9999,
-          "visibility": "excellent",
+          "freezingLevel": 1000,
+          "visibility": "good",
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "marginal",
-          "note": "gusts 30mph high tops, snow flurries on summits"
-        },
-        {
-          "sky": "partly-cloudy",
-          "windMphLow": 5,
-          "windMphHigh": 15,
-          "windDir": "S",
-          "tempCLow": -2,
-          "tempCHigh": 1,
-          "cloudFree": 80,
-          "freezingLevel": 700,
-          "visibility": "excellent",
-          "amSky": "partly-cloudy",
-          "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "note": "snow flurries above 700-800m, cluster risk north later"
+          "note": "Rain risk greatest afternoon, snow flurries on summits"
         }
       ]
     },
@@ -164,6 +168,22 @@
       "name": "Southeastern Highlands",
       "forecast": [
         {
+          "sky": "snow",
+          "windMphLow": 10,
+          "windMphHigh": 15,
+          "gustMph": 25,
+          "windDir": "NNE",
+          "tempCLow": -2,
+          "tempCHigh": 0,
+          "cloudFree": 60,
+          "freezingLevel": 900,
+          "visibility": "good",
+          "amSky": "partly-cloudy",
+          "pmSky": "snow",
+          "status": "marginal",
+          "note": "Snow showers more frequent with time, cloud banks 800-900m"
+        },
+        {
           "sky": "partly-cloudy",
           "windMphLow": 5,
           "windMphHigh": 15,
@@ -173,40 +193,26 @@
           "cloudFree": 80,
           "freezingLevel": 700,
           "visibility": "excellent",
-          "amSky": "partly-cloudy",
+          "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "note": "snow flurries above 800-900m, showers drifting north"
+          "note": "Snow flurries above 800-900m, mostly clearing northwards"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 20,
           "windMphHigh": 25,
+          "gustMph": 30,
           "windDir": "SSW",
           "tempCLow": 1,
           "tempCHigh": 5,
           "cloudFree": 70,
           "freezingLevel": 9999,
-          "visibility": "excellent",
+          "visibility": "good",
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "marginal",
-          "note": "gusts 30mph highest tops, heavier rain risk afternoon"
-        },
-        {
-          "sky": "partly-cloudy",
-          "windMphLow": 5,
-          "windMphHigh": 15,
-          "windDir": "S",
-          "tempCLow": -2,
-          "tempCHigh": 2,
-          "cloudFree": 80,
-          "freezingLevel": 700,
-          "visibility": "excellent",
-          "amSky": "partly-cloudy",
-          "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "note": "snow flurries above 800-900m, showers drifting north"
+          "note": "Rain greatest chance afternoon, 30mph highest tops, wind chill"
         }
       ]
     },
@@ -216,33 +222,17 @@
         {
           "sky": "partly-cloudy",
           "windMphLow": 10,
-          "windMphHigh": 15,
-          "gustMph": 25,
-          "windDir": "SE",
-          "tempCLow": 0,
-          "tempCHigh": 4,
-          "cloudFree": 90,
-          "freezingLevel": 750,
-          "visibility": "excellent",
-          "amSky": "partly-cloudy",
-          "pmSky": "partly-cloudy",
-          "status": "go",
-          "note": "isolated showers afternoon, gusts 20-25mph later"
-        },
-        {
-          "sky": "partly-cloudy",
-          "windMphLow": 15,
           "windMphHigh": 25,
-          "windDir": "S",
-          "tempCLow": 2,
+          "windDir": "N",
+          "tempCLow": 3,
           "tempCHigh": 5,
-          "cloudFree": 65,
+          "cloudFree": 60,
           "freezingLevel": 9999,
-          "visibility": "excellent",
-          "amSky": "partly-cloudy",
-          "pmSky": "rain",
+          "visibility": "good",
+          "amSky": "cloud",
+          "pmSky": "partly-cloudy",
           "status": "marginal",
-          "note": "extensive cloud 300-400m south Galloway morning, rain pm"
+          "note": "Cloud extensive Borders east morning, snow showers on summits"
         },
         {
           "sky": "partly-cloudy",
@@ -255,14 +245,29 @@
           "cloudFree": 90,
           "freezingLevel": 750,
           "visibility": "excellent",
-          "amSky": "partly-cloudy",
+          "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "go",
-          "note": "isolated showers afternoon, gusts 20-25mph later"
+          "note": "Isolated afternoon showers, gusts 20-25mph later, frost glens"
+        },
+        {
+          "sky": "rain",
+          "windMphLow": 15,
+          "windMphHigh": 25,
+          "windDir": "S",
+          "tempCLow": 2,
+          "tempCHigh": 5,
+          "cloudFree": 65,
+          "freezingLevel": 9999,
+          "visibility": "good",
+          "amSky": "partly-cloudy",
+          "pmSky": "rain",
+          "status": "marginal",
+          "note": "Heavier rain afternoon central/west, extensive cloud south Galloway"
         }
       ]
     }
   ],
-  "_generated": "2026-05-04T22:01:17.525Z",
+  "_generated": "2026-05-05T07:10:50.729Z",
   "_anchorDate": "2026-05-05"
 }
