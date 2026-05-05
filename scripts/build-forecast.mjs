@@ -124,7 +124,7 @@ CRITICAL:
     "Southeastern Highlands"
     "Southern Uplands"
 - Read MWIS's headline verdict for each day FIRST. MWIS leads each day with summary lines like "Unbroken bright sunshine" or "Extensive sunshine, mountains free of cloud" or "Heavy thundery bursts". This headline is the ground truth for sky/cloud — anchor your sky, cloudFree, and status to it. Don't dilute it because a later sentence mentions a small risk.
-- Use direct phrasing from MWIS for the "note" field — keep MWIS's specific places, named hazards, and gust speeds (e.g. "gusts 40mph east from Cairngorm plateau", "thundery bursts north of Glen Garry", "Arran/Jura/Mull strongest").
+- Anchor your "reason" field to the FACTORS THAT DROVE THE CLASSIFICATION — keep MWIS's specific places, named hazards, and gust speeds where useful (e.g. "gusts 40mph east from Cairngorm plateau", "thundery bursts north of Glen Garry", "full winter conditions, snow PM").
 
 Return ONLY a single JSON object — no markdown fences, no preamble. Start with { end with }.
 
@@ -150,7 +150,7 @@ Schema:
           "amSky": "sun|partly-cloudy|cloud|rain|fog|snow|storm",
           "pmSky": "sun|partly-cloudy|cloud|rain|fog|snow|storm",
           "status": "go|marginal|poor",
-          "note": "<=10 words, paraphrasing MWIS's most specific warning/highlight for this day"
+          "reason": "<=12 words, explaining WHY this rating — cite the specific factors"
         }
       ]
     }
@@ -167,11 +167,17 @@ Field rules:
 - freezingLevel: metres ASL. "Above the summits" → 9999. "Freezing level 700m" → 700.
 - visibility: excellent (>30km), good (10-30km), moderate (4-10km), poor (<4km).
 - status: "go" = MWIS's headline is positive (sunshine, dry, manageable wind, comfortable temp). "marginal" = mixed (some rain, gusty, low confidence). "poor" = MWIS warns of heavy rain, thunder, gales, white-out, or dangerous conditions. When deciding, weight the GUST or HIGH wind value (not the average) — a 40mph gust day is poor regardless of the calm 10mph low.
-- note: max 10 words. Reuse MWIS's distinctive language. Examples of good notes: "gusts 40mph Cairngorm plateau", "thundery bursts Great Glen pm", "frost overnight, snow above 700m", "Arran/Jura/Mull strongest 35-40mph". DO NOT write generic notes like "patchy rain possible".
+- reason: max 12 words. MUST explain why this rating, not just describe weather. Always reference the specific factors that drove the classification.
+  Good Go reasons: "unbroken sunshine, light winds, mountains free of cloud" / "dry, calm, excellent visibility — bluebird day" / "fine throughout, breezy on Skye"
+  Good Marginal reasons: "full winter conditions on tops, snow PM" / "gusty 35-40mph Arran ridges; otherwise fine" / "low confidence, possible heavy rain pm"
+  Good Avoid reasons: "gales 60mph, white-out at altitude" / "heavy thundery bursts, poor visibility" / "persistent rain, wind 50mph on summits"
+  DO NOT write generic reasons like "patchy rain possible" or "mixed conditions". Always explain why the rating is what it is.
+
+Special rule on winter conditions: if MWIS reports a low freezing level (e.g. 600-900m) but other conditions are benign, this is "marginal" only if it would surprise an unprepared walker. The reason should explicitly say "winter conditions, [factor]" so users can decide whether they're equipped. Don't downgrade just because it's winter — downgrade for high winds, poor visibility, or precipitation that would make navigation unsafe.
 
 Worked example — if MWIS West Highlands Day 1 says:
   "Bright sunshine. Locally gusty wind. Southeasterly 20 to 30mph, strongest and most gusty Arran, Jura and Mull, where sometimes 35 or 40mph in morning. Mountains free of cloud. Excellent or superb visibility. 10 to 15C on tops."
-Then output: sky:"sun", amSky:"sun", pmSky:"sun", windMphLow:20, windMphHigh:30, gustMph:40, windDir:"SE", tempCLow:10, tempCHigh:15, cloudFree:95, visibility:"excellent", status:"go", note:"gusts 35-40mph Arran/Jura/Mull morning"
+Then output: sky:"sun", amSky:"sun", pmSky:"sun", windMphLow:20, windMphHigh:30, gustMph:40, windDir:"SE", tempCLow:10, tempCHigh:15, cloudFree:95, visibility:"excellent", status:"go", reason:"bright sunshine, mountains free of cloud, gusts 35-40mph on Arran"
 
 INPUT (live MWIS text):
 
