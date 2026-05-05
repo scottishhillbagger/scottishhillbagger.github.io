@@ -15,35 +15,47 @@ const REGIONS = [
 
 // --- Date anchoring -------------------------------------------------
 // MWIS publishes two bulletins daily:
-//   Morning (~07:30 UK): forecasts today, tomorrow, day after
+//   Morning (~07:30 UK):   forecasts today, tomorrow, day after
 //   Afternoon (~15:30 UK): forecasts tomorrow, day after, day after that
 //                          (does NOT re-forecast the current day)
 //
-// GitHub Actions runs at 08:15 and 16:15 UTC.
-// In UK summer (BST = UTC+1): 08:15 UTC = 09:15 BST (morning run)
-//                              16:15 UTC = 17:15 BST (afternoon run)
-// In UK winter (GMT = UTC):   08:15 UTC = 08:15 GMT (morning run)
-//                              16:15 UTC = 16:15 GMT (afternoon run)
-//
-// Rule: if UK local hour >= 15, the afternoon bulletin is out,
-// so shift anchor forward by 1 day.
+// We anchor based on what MWIS actually published, NOT on when our build runs.
+// Why: a build that runs at 17:00 UK doesn't help if MWIS hasn't published the
+// afternoon bulletin yet; we'd anchor to "tomorrow" but read yesterday's data.
+// We compute the anchor AFTER fetching MWIS, using the bulletin's "Last updated"
+// timestamp. The anchorFromBulletin() function below is called later.
 
 const now = new Date();
-const ukHour = parseInt(now.toLocaleString('en-GB', { hour: 'numeric', hour12: false, timeZone: 'Europe/London' }), 10);
-const isAfternoonRun = ukHour >= 15;
-
 const dayShort = (d) => d.toLocaleDateString('en-GB', { weekday: 'short', timeZone: 'Europe/London' });
 const dayLong  = (d) => d.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', timeZone: 'Europe/London' });
 const addDays = (d, n) => { const x = new Date(d); x.setDate(x.getDate() + n); return x; };
 
-const todayUK = new Date(now.toLocaleString('en-US', { timeZone: 'Europe/London' }));
-const anchorUK = isAfternoonRun ? addDays(todayUK, 1) : todayUK;
+// UK-local "today at midnight" Date object
+function ukMidnight(d) {
+  const ymd = d.toLocaleDateString('en-CA', { timeZone: 'Europe/London' }); // e.g. "2026-05-04"
+  return new Date(ymd + 'T00:00:00Z'); // treat as UTC midnight to keep getDate() stable
+}
 
-console.log(`UK hour: ${ukHour} — ${isAfternoonRun ? 'AFTERNOON run, anchor = tomorrow' : 'MORNING run, anchor = today'}`);
+// Given a bulletin published-at timestamp, return the anchor date (day 0 of forecast)
+function anchorFromBulletin(bulletinTime) {
+  // Get UK hour and date of the bulletin
+  const bulletinHourStr = bulletinTime.toLocaleString('en-GB', { hour: 'numeric', hour12: false, timeZone: 'Europe/London' });
+  const bulletinHour = parseInt(bulletinHourStr, 10);
+  const bulletinDay = ukMidnight(bulletinTime);
+  // If bulletin was published in the afternoon (>= 12:00 UK), it forecasts from "tomorrow"
+  // Morning bulletins forecast from "today" (the bulletin's own day)
+  if (bulletinHour >= 12) {
+    return addDays(bulletinDay, 1);
+  }
+  return bulletinDay;
+}
 
-const day0 = anchorUK;
-const day1 = addDays(anchorUK, 1);
-const day2 = addDays(anchorUK, 2);
+// Placeholders — assigned after we fetch MWIS and know the freshest update time.
+// We initialise to a sensible fallback (today) so functions referencing them don't break.
+let day0 = ukMidnight(now);
+let day1 = addDays(day0, 1);
+let day2 = addDays(day0, 2);
+console.log(`Build started at ${now.toISOString()} (UK ${now.toLocaleString('en-GB', { timeZone: 'Europe/London' })})`);
 
 // --- Fetch MWIS pages directly --------------------------------------
 async function fetchMWIS(id) {
@@ -217,6 +229,20 @@ const newestUpdate = updatedTimes.length ? Math.max(...updatedTimes) : null;
 const ageHours = newestUpdate ? (Date.now() - newestUpdate) / 36e5 : null;
 if (ageHours !== null && ageHours > 24) {
   console.warn(`⚠ Newest MWIS update is ${ageHours.toFixed(1)}h old — data may be stale`);
+}
+
+// Compute anchor based on the freshest MWIS bulletin we got (NOT the runner's clock).
+// Why: a build that runs at 17:00 UK doesn't help if MWIS hasn't published the
+// afternoon bulletin yet. Anchoring to the bulletin's own time keeps days correct.
+if (newestUpdate) {
+  const bulletinTime = new Date(newestUpdate);
+  day0 = anchorFromBulletin(bulletinTime);
+  day1 = addDays(day0, 1);
+  day2 = addDays(day0, 2);
+  const bulHourStr = bulletinTime.toLocaleString('en-GB', { hour: 'numeric', hour12: false, timeZone: 'Europe/London' });
+  console.log(`Bulletin published ${bulletinTime.toISOString()} (UK hour ${bulHourStr}) — anchoring day 0 to ${dayShort(day0)} ${day0.toISOString().slice(0,10)}`);
+} else {
+  console.warn('⚠ No MWIS update timestamp found on any page — falling back to today');
 }
 
 // 2. Hand pages + date anchor to Claude for structured extraction
