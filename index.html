@@ -958,6 +958,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
       <div class="about-label">Sources</div>
       <ul class="about-sources">
         <li><span class="as-k">Hills</span><span class="as-v"><a href="https://www.smc.org.uk/" target="_blank" rel="noopener">SMC</a> · <a href="https://www.hills-database.co.uk/" target="_blank" rel="noopener">Database of British &amp; Irish Hills</a></span></li>
+        <li><span class="as-k">Routes</span><span class="as-v"><a href="https://www.walkhighlands.co.uk/" target="_blank" rel="noopener">WalkHighlands</a></span></li>
         <li><span class="as-k">Bothies</span><span class="as-v"><a href="https://www.mountainbothies.org.uk/" target="_blank" rel="noopener">Mountain Bothies Association</a></span></li>
         <li><span class="as-k">Weather</span><span class="as-v"><a href="https://www.mwis.org.uk/" target="_blank" rel="noopener">Mountain Weather Information Service</a></span></li>
       </ul>
@@ -2504,13 +2505,9 @@ function renderAll(){
   var ms=document.getElementById('map-section');
   var bs=document.getElementById('bothy-section');
   var ws=document.getElementById('weather-section');
-  // Toggle masthead title between Bagger and Forecast
+  // Toggle masthead title - always shows Scottish Hill Bagger
   var h1=document.querySelector('.mast-h1');
-  if(h1){
-    h1.innerHTML = activeTab==='weather'
-      ? 'Scottish <em>Hill Forecast</em>'
-      : 'Scottish <em>Hill Bagger</em>';
-  }
+  if(h1) h1.innerHTML = 'Scottish <em>Hill Bagger</em>';
   if(activeTab==='map'){
     if(ls) ls.style.display='none';
     if(ms) ms.style.display='block';
