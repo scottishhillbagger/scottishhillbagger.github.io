@@ -150,7 +150,7 @@ Schema:
           "amSky": "sun|partly-cloudy|cloud|rain|fog|snow|storm",
           "pmSky": "sun|partly-cloudy|cloud|rain|fog|snow|storm",
           "status": "go|marginal|poor",
-          "reason": "<=12 words, explaining WHY this rating — cite the specific factors"
+          "reason": "<=10 words MAX, explaining WHY this rating — cite the specific factors"
         }
       ]
     }
