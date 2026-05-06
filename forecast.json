@@ -23,7 +23,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gales to 50mph west coast, persistent rain, poor visibility fog"
+          "reason": "gales 40-50mph western tops, persistent rain, poor visibility fog"
         },
         {
           "sky": "partly-cloudy",
@@ -36,10 +36,10 @@
           "cloudFree": 45,
           "freezingLevel": 900,
           "visibility": "good",
-          "amSky": "rain",
+          "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "frequent showery rain, sleet/snow tops, gusts 40mph, wind chill -10 to -13C"
+          "reason": "frequent showers with sleet/snow on tops, gusts 40mph, wind chill -10 to -13C"
         },
         {
           "sky": "partly-cloudy",
@@ -54,7 +54,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "snow flurries to mid-slopes, freezing level 600-800m, winter conditions"
+          "reason": "winter conditions, freezing level 600-800m, snow flurries on summits"
         }
       ]
     },
@@ -71,11 +71,11 @@
           "tempCHigh": 5,
           "cloudFree": 50,
           "freezingLevel": 1000,
-          "visibility": "moderate",
-          "amSky": "partly-cloudy",
-          "pmSky": "rain",
+          "visibility": "good",
+          "amSky": "cloud",
+          "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gusts 50mph Lochaber to coast, showery rain persistent west, significant wind chill"
+          "reason": "gusts near 50mph Lochaber/coastal tops, showery rain persistent west, wind chill -5C"
         },
         {
           "sky": "partly-cloudy",
@@ -87,10 +87,10 @@
           "cloudFree": 40,
           "freezingLevel": 1200,
           "visibility": "good",
-          "amSky": "rain",
+          "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "frequent showers morning, snow above 1000m, wind chill -8C, easing afternoon"
+          "reason": "frequent showers AM with snow above 1000m, wind chill -8C, slow clearing south"
         },
         {
           "sky": "partly-cloudy",
@@ -105,7 +105,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "snow flurries on Munros, freezing level 800-1000m, winter conditions on tops"
+          "reason": "winter conditions, freezing level 800-1000m, snow flurries on Munros"
         }
       ]
     },
@@ -122,11 +122,11 @@
           "tempCHigh": 7,
           "cloudFree": 60,
           "freezingLevel": 1000,
-          "visibility": "good",
+          "visibility": "excellent",
           "amSky": "partly-cloudy",
-          "pmSky": "rain",
+          "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "gusts 40mph+ Cairngorms, showery rain clusters moving NE, wind chill -3 to -5C"
+          "reason": "gusts 40mph Cairngorm plateau by evening, showery rain clusters moving NE, wind chill -3 to -5C"
         },
         {
           "sky": "partly-cloudy",
@@ -138,10 +138,10 @@
           "cloudFree": 80,
           "freezingLevel": 1200,
           "visibility": "good",
-          "amSky": "partly-cloudy",
+          "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "gusty north Monadhliath, snow flurries tops, wind chill -10C early, showers PM"
+          "reason": "snow flurries on tops AM, gusty N Monadhliath, wind chill -10C, showers PM"
         },
         {
           "sky": "partly-cloudy",
@@ -156,7 +156,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "snow flurries on Munros, freezing level 800m, winter conditions on tops"
+          "reason": "winter conditions, freezing level 800m, snow flurries on Munros, frost in glens"
         }
       ]
     },
@@ -173,11 +173,11 @@
           "tempCHigh": 7,
           "cloudFree": 70,
           "freezingLevel": 1000,
-          "visibility": "good",
+          "visibility": "excellent",
           "amSky": "partly-cloudy",
-          "pmSky": "rain",
+          "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "gusts 35mph, showery rain clusters moving east, wind chill -3 to -5C"
+          "reason": "gusty 35mph on higher hills, showery rain clusters moving east, wind chill -3 to -5C"
         },
         {
           "sky": "partly-cloudy",
@@ -189,10 +189,10 @@
           "cloudFree": 80,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "partly-cloudy",
+          "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "scattered showers, snow flurries on tops, wind chill -8C early, easing later"
+          "reason": "snow flurries on tops AM, wind chill -8C early, showers PM heavier bursts possible"
         },
         {
           "sky": "partly-cloudy",
@@ -202,12 +202,12 @@
           "tempCLow": -1,
           "tempCHigh": 3,
           "cloudFree": 80,
-          "freezingLevel": 1000,
+          "freezingLevel": 850,
           "visibility": "excellent",
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "snow flurries on tops, freezing level 800-900m, winter conditions morning"
+          "reason": "winter conditions, freezing level 800-900m, snow flurries on tops, residual rain risk"
         }
       ]
     },
@@ -223,11 +223,11 @@
           "tempCHigh": 7,
           "cloudFree": 65,
           "freezingLevel": 9999,
-          "visibility": "good",
+          "visibility": "excellent",
           "amSky": "partly-cloudy",
-          "pmSky": "rain",
+          "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "showery bursts mostly west afternoon, hill fog risk Galloway to Moffat hills"
+          "reason": "extensive low cloud west Galloway/Moffat, showery rain afternoon mostly west"
         },
         {
           "sky": "partly-cloudy",
@@ -240,9 +240,9 @@
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "cloud",
-          "pmSky": "rain",
+          "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "heavy rain risk afternoon central areas, variable cloud, poor visibility in showers"
+          "reason": "risk heavy rain merging central areas PM, variable cloud clinging to tops, poor vis in showers"
         },
         {
           "sky": "partly-cloudy",
@@ -258,11 +258,11 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "patchy rain/drizzle east may linger, low cloud possible, uncertain clearance"
+          "reason": "persistent cloud and drizzle risk eastern hills, low confidence on clearance, feeling -5C in wind"
         }
       ]
     }
   ],
-  "_generated": "2026-05-06T16:02:38.933Z",
+  "_generated": "2026-05-06T20:56:25.124Z",
   "_anchorDate": "2026-05-07"
 }
