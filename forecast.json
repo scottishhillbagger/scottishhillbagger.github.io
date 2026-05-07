@@ -1,45 +1,28 @@
 {
   "days": [
-    "Thu",
     "Fri",
-    "Sat"
+    "Sat",
+    "Sun"
   ],
-  "updatedAt": "2026-05-06T16:26:00.000Z",
+  "updatedAt": "2026-05-07T16:25:00.000Z",
   "regions": [
     {
       "name": "Northwest Highlands",
       "forecast": [
         {
-          "sky": "rain",
-          "windMphLow": 25,
-          "windMphHigh": 35,
-          "gustMph": 50,
-          "windDir": "S",
-          "tempCLow": 0,
-          "tempCHigh": 5,
-          "cloudFree": 30,
-          "freezingLevel": 1000,
-          "visibility": "poor",
-          "amSky": "rain",
-          "pmSky": "rain",
-          "status": "poor",
-          "reason": "gales 40-50mph western tops, persistent rain, poor visibility fog"
-        },
-        {
           "sky": "partly-cloudy",
           "windMphLow": 25,
           "windMphHigh": 40,
-          "gustMph": 40,
           "windDir": "SW",
-          "tempCLow": 2,
-          "tempCHigh": 3,
-          "cloudFree": 45,
-          "freezingLevel": 900,
+          "tempCLow": 0,
+          "tempCHigh": 5,
+          "cloudFree": 20,
+          "freezingLevel": 950,
           "visibility": "good",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "frequent showers with sleet/snow on tops, gusts 40mph, wind chill -10 to -13C"
+          "reason": "gusts 40mph Ben Hope, snow flurries, extensive low cloud west"
         },
         {
           "sky": "partly-cloudy",
@@ -49,12 +32,27 @@
           "tempCLow": -2,
           "tempCHigh": 1,
           "cloudFree": 70,
-          "freezingLevel": 700,
+          "freezingLevel": 800,
           "visibility": "excellent",
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "winter conditions, freezing level 600-800m, snow flurries on summits"
+          "reason": "winter conditions, freezing level 600-800m, frost in glens at dawn"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 30,
+          "windMphHigh": 40,
+          "windDir": "W",
+          "tempCLow": -1,
+          "tempCHigh": 2,
+          "cloudFree": 30,
+          "freezingLevel": 800,
+          "visibility": "poor",
+          "amSky": "sun",
+          "pmSky": "rain",
+          "status": "poor",
+          "reason": "gusts 40mph north, snow to mid-heights, lowering cloud, poor visibility west"
         }
       ]
     },
@@ -63,34 +61,18 @@
       "forecast": [
         {
           "sky": "partly-cloudy",
-          "windMphLow": 25,
-          "windMphHigh": 30,
-          "gustMph": 50,
-          "windDir": "S",
-          "tempCLow": 0,
-          "tempCHigh": 5,
-          "cloudFree": 50,
-          "freezingLevel": 1000,
-          "visibility": "good",
-          "amSky": "cloud",
-          "pmSky": "partly-cloudy",
-          "status": "poor",
-          "reason": "gusts near 50mph Lochaber/coastal tops, showery rain persistent west, wind chill -5C"
-        },
-        {
-          "sky": "partly-cloudy",
           "windMphLow": 20,
           "windMphHigh": 30,
           "windDir": "SW",
-          "tempCLow": 2,
-          "tempCHigh": 5,
-          "cloudFree": 40,
-          "freezingLevel": 1200,
+          "tempCLow": 1,
+          "tempCHigh": 3,
+          "cloudFree": 80,
+          "freezingLevel": 1100,
           "visibility": "good",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "frequent showers AM with snow above 1000m, wind chill -8C, slow clearing south"
+          "reason": "winds 20-30mph easing, wind chill -10C early, cloud lifting by afternoon"
         },
         {
           "sky": "partly-cloudy",
@@ -100,12 +82,27 @@
           "tempCLow": -1,
           "tempCHigh": 3,
           "cloudFree": 80,
-          "freezingLevel": 900,
+          "freezingLevel": 1000,
           "visibility": "excellent",
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "winter conditions, freezing level 800-1000m, snow flurries on Munros"
+          "reason": "winter conditions, freezing level 800-1000m, frost Lochaber glens at dawn"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 30,
+          "windMphHigh": 30,
+          "windDir": "W",
+          "tempCLow": -1,
+          "tempCHigh": 3,
+          "cloudFree": 30,
+          "freezingLevel": 800,
+          "visibility": "moderate",
+          "amSky": "sun",
+          "pmSky": "rain",
+          "status": "poor",
+          "reason": "strengthening to 30mph, persistent rain then snow west Lochaber, lowering cloud"
         }
       ]
     },
@@ -116,32 +113,16 @@
           "sky": "partly-cloudy",
           "windMphLow": 25,
           "windMphHigh": 35,
-          "gustMph": 40,
-          "windDir": "S",
-          "tempCLow": 1,
-          "tempCHigh": 7,
-          "cloudFree": 60,
-          "freezingLevel": 1000,
-          "visibility": "excellent",
-          "amSky": "partly-cloudy",
-          "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "reason": "gusts 40mph Cairngorm plateau by evening, showery rain clusters moving NE, wind chill -3 to -5C"
-        },
-        {
-          "sky": "partly-cloudy",
-          "windMphLow": 25,
-          "windMphHigh": 35,
           "windDir": "SW",
           "tempCLow": 2,
-          "tempCHigh": 6,
-          "cloudFree": 80,
-          "freezingLevel": 1200,
+          "tempCHigh": 4,
+          "cloudFree": 90,
+          "freezingLevel": 1250,
           "visibility": "good",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "snow flurries on tops AM, gusty N Monadhliath, wind chill -10C, showers PM"
+          "reason": "gusts north Monadhliath, wind chill -10C early, easing but chilly all day"
         },
         {
           "sky": "partly-cloudy",
@@ -151,12 +132,27 @@
           "tempCLow": -1,
           "tempCHigh": 2,
           "cloudFree": 80,
-          "freezingLevel": 800,
+          "freezingLevel": 1100,
           "visibility": "excellent",
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "winter conditions, freezing level 800m, snow flurries on Munros, frost in glens"
+          "reason": "winter conditions, freezing level 800m, frost in glens at dawn"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 30,
+          "windMphHigh": 40,
+          "windDir": "W",
+          "tempCLow": -1,
+          "tempCHigh": 3,
+          "cloudFree": 40,
+          "freezingLevel": 800,
+          "visibility": "moderate",
+          "amSky": "sun",
+          "pmSky": "rain",
+          "status": "poor",
+          "reason": "gusts 40mph higher Cairngorms, snow on tops, cloud forming, rapid freeze later"
         }
       ]
     },
@@ -165,34 +161,18 @@
       "forecast": [
         {
           "sky": "partly-cloudy",
-          "windMphLow": 25,
-          "windMphHigh": 30,
-          "gustMph": 35,
-          "windDir": "S",
-          "tempCLow": 1,
-          "tempCHigh": 7,
-          "cloudFree": 70,
-          "freezingLevel": 1000,
-          "visibility": "excellent",
-          "amSky": "partly-cloudy",
-          "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "reason": "gusty 35mph on higher hills, showery rain clusters moving east, wind chill -3 to -5C"
-        },
-        {
-          "sky": "partly-cloudy",
           "windMphLow": 20,
           "windMphHigh": 30,
           "windDir": "SW",
           "tempCLow": 2,
-          "tempCHigh": 6,
-          "cloudFree": 80,
-          "freezingLevel": 9999,
+          "tempCHigh": 4,
+          "cloudFree": 90,
+          "freezingLevel": 1200,
           "visibility": "good",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "snow flurries on tops AM, wind chill -8C early, showers PM heavier bursts possible"
+          "reason": "winds 20-30mph, wind chill -8C early, cloud lifting above summits by afternoon"
         },
         {
           "sky": "partly-cloudy",
@@ -202,12 +182,27 @@
           "tempCLow": -1,
           "tempCHigh": 3,
           "cloudFree": 80,
-          "freezingLevel": 850,
+          "freezingLevel": 1100,
           "visibility": "excellent",
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "winter conditions, freezing level 800-900m, snow flurries on tops, residual rain risk"
+          "reason": "winter conditions, freezing level 800-900m, possible heavier showers Callander"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 25,
+          "windMphHigh": 30,
+          "windDir": "W",
+          "tempCLow": -1,
+          "tempCHigh": 3,
+          "cloudFree": 50,
+          "freezingLevel": 800,
+          "visibility": "good",
+          "amSky": "sun",
+          "pmSky": "partly-cloudy",
+          "status": "marginal",
+          "reason": "strengthening winds, sleet on high tops, showers west of A9 later"
         }
       ]
     },
@@ -217,22 +212,8 @@
         {
           "sky": "partly-cloudy",
           "windMphLow": 15,
-          "windMphHigh": 25,
-          "windDir": "S",
-          "tempCLow": 2,
-          "tempCHigh": 7,
-          "cloudFree": 65,
-          "freezingLevel": 9999,
-          "visibility": "excellent",
-          "amSky": "partly-cloudy",
-          "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "reason": "extensive low cloud west Galloway/Moffat, showery rain afternoon mostly west"
-        },
-        {
-          "sky": "partly-cloudy",
-          "windMphLow": 15,
-          "windMphHigh": 25,
+          "windMphHigh": 20,
+          "gustMph": 25,
           "windDir": "SW",
           "tempCLow": 4,
           "tempCHigh": 7,
@@ -240,12 +221,12 @@
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "cloud",
-          "pmSky": "partly-cloudy",
+          "pmSky": "rain",
           "status": "marginal",
-          "reason": "risk heavy rain merging central areas PM, variable cloud clinging to tops, poor vis in showers"
+          "reason": "locally heavy showers PM, isolated thunder Cheviots, variable cloud on tops"
         },
         {
-          "sky": "partly-cloudy",
+          "sky": "cloud",
           "windMphLow": 15,
           "windMphHigh": 20,
           "gustMph": 25,
@@ -258,11 +239,26 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "persistent cloud and drizzle risk eastern hills, low confidence on clearance, feeling -5C in wind"
+          "reason": "persistent damp drizzle eastern areas, low cloud may linger over hills"
+        },
+        {
+          "sky": "sun",
+          "windMphLow": 10,
+          "windMphHigh": 25,
+          "windDir": "W",
+          "tempCLow": 1,
+          "tempCHigh": 5,
+          "cloudFree": 90,
+          "freezingLevel": 9999,
+          "visibility": "excellent",
+          "amSky": "sun",
+          "pmSky": "partly-cloudy",
+          "status": "go",
+          "reason": "mostly sunny, light winds, showers only risk late afternoon northwest"
         }
       ]
     }
   ],
-  "_generated": "2026-05-06T20:56:25.124Z",
-  "_anchorDate": "2026-05-07"
+  "_generated": "2026-05-07T16:17:58.889Z",
+  "_anchorDate": "2026-05-08"
 }
