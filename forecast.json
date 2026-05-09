@@ -12,9 +12,9 @@
         {
           "sky": "partly-cloudy",
           "windMphLow": 15,
-          "windMphHigh": 25,
+          "windMphHigh": 20,
           "gustMph": 25,
-          "windDir": "N",
+          "windDir": "NW",
           "tempCLow": -2,
           "tempCHigh": 1,
           "cloudFree": 55,
@@ -23,7 +23,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "near/below freezing all day, snow flurries, cloud clearing slowly to 70%"
+          "reason": "near/below freezing all day, snow flurries, cloud clearing slowly"
         },
         {
           "sky": "rain",
@@ -39,7 +39,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 40mph north, worsening rain/snow, cloud lowering, poor visibility west"
+          "reason": "gusts 40mph north, worsening showers turning to snow, lowering cloud west"
         },
         {
           "sky": "cloud",
@@ -48,13 +48,13 @@
           "windDir": "NNW",
           "tempCLow": -3,
           "tempCHigh": 2,
-          "cloudFree": 20,
+          "cloudFree": 30,
           "freezingLevel": 600,
           "visibility": "poor",
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "snow flurries then persistent rain, cloud lowering west, wind rising 30-35mph"
+          "reason": "winds rising 30-35mph, rain developing PM, freezing level 600m dawn"
         }
       ]
     },
@@ -64,7 +64,7 @@
         {
           "sky": "partly-cloudy",
           "windMphLow": 10,
-          "windMphHigh": 25,
+          "windMphHigh": 20,
           "gustMph": 25,
           "windDir": "N",
           "tempCLow": -1,
@@ -74,11 +74,11 @@
           "visibility": "excellent",
           "amSky": "partly-cloudy",
           "pmSky": "partly-cloudy",
-          "status": "go",
-          "reason": "mostly dry, cloud clearing most summits 80%, light winds, chilly but manageable"
+          "status": "marginal",
+          "reason": "around freezing high tops, rare showers, winter conditions require layers"
         },
         {
-          "sky": "partly-cloudy",
+          "sky": "rain",
           "windMphLow": 30,
           "windMphHigh": 30,
           "windDir": "W",
@@ -90,7 +90,7 @@
           "amSky": "sun",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "showers develop widely, sleet/snow high tops, cloud lowering west Loch Linnhe, wind increasing"
+          "reason": "persistent rain then snow high tops, cloud lowering west Loch Linnhe"
         },
         {
           "sky": "cloud",
@@ -104,8 +104,8 @@
           "visibility": "poor",
           "amSky": "partly-cloudy",
           "pmSky": "rain",
-          "status": "marginal",
-          "reason": "snow flurries early, rain developing Lochaber PM, cloud lowering coast, wind increasing"
+          "status": "poor",
+          "reason": "snow flurries then rain Lochaber, cloud lowering coast, winds rising 25-30mph"
         }
       ]
     },
@@ -114,9 +114,9 @@
       "forecast": [
         {
           "sky": "partly-cloudy",
-          "windMphLow": 10,
+          "windMphLow": 15,
           "windMphHigh": 20,
-          "windDir": "NNW",
+          "windDir": "NW",
           "tempCLow": -1,
           "tempCHigh": 2,
           "cloudFree": 80,
@@ -124,11 +124,11 @@
           "visibility": "excellent",
           "amSky": "partly-cloudy",
           "pmSky": "partly-cloudy",
-          "status": "go",
-          "reason": "largely dry, cloud clearing most summits 80%, light winds, around freezing high tops"
+          "status": "marginal",
+          "reason": "around freezing all day high tops, odd snow flurries, winter conditions"
         },
         {
-          "sky": "partly-cloudy",
+          "sky": "rain",
           "windMphLow": 30,
           "windMphHigh": 40,
           "gustMph": 40,
@@ -141,7 +141,7 @@
           "amSky": "sun",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 40mph Cairngorm tops, rain/snow developing PM, cloud forming widely"
+          "reason": "risk gusts 40mph Cairngorm plateau, rain then snow tops, rapid freeze sunset"
         },
         {
           "sky": "partly-cloudy",
@@ -156,7 +156,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "cloud",
           "status": "marginal",
-          "reason": "snow flurries early, drizzly rain later, cloud lingering N Cairngorms, wind rising 25-35mph"
+          "reason": "snow flurries AM, winds rising 25-35mph, freezing level 600m at dawn"
         }
       ]
     },
@@ -165,7 +165,7 @@
       "forecast": [
         {
           "sky": "partly-cloudy",
-          "windMphLow": 10,
+          "windMphLow": 15,
           "windMphHigh": 20,
           "windDir": "N",
           "tempCLow": -1,
@@ -173,10 +173,10 @@
           "cloudFree": 80,
           "freezingLevel": 1000,
           "visibility": "excellent",
-          "amSky": "sun",
+          "amSky": "partly-cloudy",
           "pmSky": "partly-cloudy",
-          "status": "go",
-          "reason": "mostly dry, cloud clearing 80%, light winds, local heavier showers Callander area PM only"
+          "status": "marginal",
+          "reason": "around freezing all day, local heavier showers Callander-Ochils PM"
         },
         {
           "sky": "partly-cloudy",
@@ -191,7 +191,7 @@
           "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "dry morning, showers develop west of A9 PM, wind rising 25-30mph, sleet on tops"
+          "reason": "winds 25-30mph increasing, showers developing PM west of A9, sleet high tops"
         },
         {
           "sky": "partly-cloudy",
@@ -206,7 +206,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "cloud",
           "status": "marginal",
-          "reason": "snow flurries early, freezing level 600m dawn, wind increasing, drizzle west PM"
+          "reason": "snow flurries AM, winds rising to 25-30mph, freezing level 600m at dawn"
         }
       ]
     },
@@ -216,7 +216,7 @@
         {
           "sky": "cloud",
           "windMphLow": 15,
-          "windMphHigh": 30,
+          "windMphHigh": 25,
           "gustMph": 30,
           "windDir": "NE",
           "tempCLow": 1,
@@ -226,14 +226,14 @@
           "visibility": "poor",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "reason": "damp low cloud east AM, poor visibility in rain, sleet above 600m, improving slowly"
+          "status": "poor",
+          "reason": "low cloud and rain east AM, poor visibility, sleet/snow above 600m"
         },
         {
           "sky": "sun",
           "windMphLow": 10,
-          "windMphHigh": 30,
-          "windDir": "WNW",
+          "windMphHigh": 25,
+          "windDir": "NW",
           "tempCLow": 1,
           "tempCHigh": 5,
           "cloudFree": 90,
@@ -242,7 +242,7 @@
           "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "go",
-          "reason": "mostly sunny, 90% cloud-free summits, risk of showers only late PM west"
+          "reason": "mostly sunny, 90% cloud-free summits, freezing level above summits"
         },
         {
           "sky": "partly-cloudy",
@@ -257,11 +257,11 @@
           "amSky": "partly-cloudy",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "freezing level 600m dawn, feeling -7C in wind, scattered showers east PM"
+          "reason": "freezing level 600m dawn east, feeling -7C wind chill, showers possible PM"
         }
       ]
     }
   ],
-  "_generated": "2026-05-08T20:16:05.899Z",
+  "_generated": "2026-05-09T11:28:32.022Z",
   "_anchorDate": "2026-05-09"
 }
