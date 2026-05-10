@@ -23,7 +23,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "persistent rain, snow on tops, gusts 50mph, cloud lowering widely"
+          "reason": "persistent rain/snow, gusts 50mph, cloud lowers, -12°C wind chill"
         },
         {
           "sky": "partly-cloudy",
@@ -38,12 +38,13 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "snow flurries AM, rain later, cloud lowering west, freezing level 600m dawn"
+          "reason": "morning ok, but rain and cloud lowering west by evening, chilly"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 30,
           "windMphHigh": 45,
+          "gustMph": 45,
           "windDir": "W",
           "tempCLow": 0,
           "tempCHigh": 2,
@@ -53,7 +54,7 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gusts 45mph, snow to 700m, hail, thunder risk, significant wind chill"
+          "reason": "gales 30-45mph, snow to 700m, hail, thunder risk, -10 to -15°C wind chill"
         }
       ]
     },
@@ -74,7 +75,7 @@
           "amSky": "sun",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "rain develops, snow above 1000m, gusts 50mph Ben Nevis, cloud lowers widely"
+          "reason": "rain/snow tops, gusts 50mph Ben Nevis, cloud fills above 700-900m pm"
         },
         {
           "sky": "partly-cloudy",
@@ -89,12 +90,13 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "snow flurries AM fading, drizzly rain evening Lochaber, freezing level 600-800m dawn"
+          "reason": "mostly ok AM, drizzly rain and cloud lowering Lochaber by evening"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 30,
           "windMphHigh": 45,
+          "gustMph": 45,
           "windDir": "W",
           "tempCLow": 1,
           "tempCHigh": 3,
@@ -104,7 +106,7 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gusts 45mph, snow to 800m, hail, thunder risk, severe wind chill on tops"
+          "reason": "gales 30-45mph, snow to 800m, hail, thunder risk, -10 to -15°C wind chill"
         }
       ]
     },
@@ -125,7 +127,7 @@
           "amSky": "sun",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "rain sets in, snow tops, gusts 50mph Cairngorms, rapid freeze from north at dusk"
+          "reason": "rain/snow tops, gusts 50mph Cairngorms, cloud fills above 900m pm"
         },
         {
           "sky": "partly-cloudy",
@@ -140,12 +142,13 @@
           "amSky": "partly-cloudy",
           "pmSky": "cloud",
           "status": "marginal",
-          "reason": "snow flurries AM northern Cairngorms, drizzle later, freezing level 400-500m dawn"
+          "reason": "snow flurries AM, cloud lingers N Cairngorms, drizzle risk PM, chilly"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 30,
           "windMphHigh": 45,
+          "gustMph": 45,
           "windDir": "W",
           "tempCLow": 1,
           "tempCHigh": 3,
@@ -155,7 +158,7 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gusts 45mph, snow to 800m, hail, thunder risk, wind chill -10 to -15C"
+          "reason": "gales 30-45mph, snow to 800m, hail, thunder risk, -10 to -15°C wind chill"
         }
       ]
     },
@@ -166,16 +169,17 @@
           "sky": "partly-cloudy",
           "windMphLow": 15,
           "windMphHigh": 40,
+          "gustMph": 40,
           "windDir": "W",
           "tempCLow": -1,
           "tempCHigh": 3,
-          "cloudFree": 65,
-          "freezingLevel": 9999,
+          "cloudFree": 60,
+          "freezingLevel": 1200,
           "visibility": "good",
           "amSky": "sun",
           "pmSky": "rain",
-          "status": "marginal",
-          "reason": "sunny AM, patchy rain develops NW, snow from dusk, gusts 40mph tops"
+          "status": "poor",
+          "reason": "wind to 40mph gusts, cloud/rain lowers onto tops, snow from dusk"
         },
         {
           "sky": "partly-cloudy",
@@ -190,12 +194,13 @@
           "amSky": "partly-cloudy",
           "pmSky": "cloud",
           "status": "marginal",
-          "reason": "largely dry, snow flurries AM east, drizzle later west, freezing level 600m dawn"
+          "reason": "largely dry, isolated snow flurries AM, cloud/drizzle risk PM, chilly"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 30,
           "windMphHigh": 45,
+          "gustMph": 45,
           "windDir": "W",
           "tempCLow": 1,
           "tempCHigh": 3,
@@ -205,7 +210,7 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gusts 45mph, snow to 800m, hail, thunder risk, wind chill -10 to -15C"
+          "reason": "gales 30-45mph, snow to 800m, hail, thunder risk, -10 to -15°C wind chill"
         }
       ]
     },
@@ -216,7 +221,7 @@
           "sky": "partly-cloudy",
           "windMphLow": 10,
           "windMphHigh": 30,
-          "windDir": "WNW",
+          "windDir": "NW",
           "tempCLow": 1,
           "tempCHigh": 5,
           "cloudFree": 90,
@@ -225,7 +230,7 @@
           "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "go",
-          "reason": "largely dry, mostly sunny AM, light wind, cloud free summits above 90%"
+          "reason": "largely dry, sunny morning, cloud free summits >90%, wind building PM"
         },
         {
           "sky": "partly-cloudy",
@@ -240,12 +245,13 @@
           "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "go",
-          "reason": "sunshine and broken cloud, rare showers, light wind, excellent visibility"
+          "reason": "sunshine and broken cloud, rare showers, excellent visibility, light winds"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 30,
           "windMphHigh": 40,
+          "gustMph": 40,
           "windDir": "W",
           "tempCLow": 3,
           "tempCHigh": 4,
@@ -255,11 +261,11 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "early rain, heavy showers, gusts 40mph, wind chill -10C on tops"
+          "reason": "gales 30-40mph squally, early rain, heavy showers, -10°C wind chill"
         }
       ]
     }
   ],
-  "_generated": "2026-05-09T19:46:21.343Z",
+  "_generated": "2026-05-10T11:29:27.312Z",
   "_anchorDate": "2026-05-10"
 }
