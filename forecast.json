@@ -23,12 +23,12 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gale force 45mph gusts 55mph, snow/hail showers, sub-zero tops"
+          "reason": "gale 40-55mph, heavy snow/hail showers, below 0C on tops"
         },
         {
           "sky": "rain",
           "windMphLow": 25,
-          "windMphHigh": 40,
+          "windMphHigh": 30,
           "gustMph": 40,
           "windDir": "NW",
           "tempCLow": 0,
@@ -37,9 +37,9 @@
           "freezingLevel": 900,
           "visibility": "good",
           "amSky": "rain",
-          "pmSky": "snow",
+          "pmSky": "rain",
           "status": "poor",
-          "reason": "snow to 600-700m, heavy hail showers, wind chill -15C, gales increasing"
+          "reason": "widespread heavy snow/hail showers, gusts 40mph, near-freezing tops"
         },
         {
           "sky": "partly-cloudy",
@@ -54,7 +54,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "snow above 700-900m, cloud banking tops, freezing level dropping to 800m Skye"
+          "reason": "snow above 700-900m, cloud banking tops, freezing level 800m Skye-Ben Hope PM"
         }
       ]
     },
@@ -75,12 +75,12 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gale force gusts 55mph, snow/hail showers, wind chill -15C on tops"
+          "reason": "gale 40-55mph, snow/hail showers, challenging walking, significant wind chill"
         },
         {
           "sky": "rain",
           "windMphLow": 25,
-          "windMphHigh": 40,
+          "windMphHigh": 30,
           "gustMph": 40,
           "windDir": "NW",
           "tempCLow": 0,
@@ -89,60 +89,9 @@
           "freezingLevel": 900,
           "visibility": "good",
           "amSky": "rain",
-          "pmSky": "snow",
-          "status": "poor",
-          "reason": "snow to 700m, heavy hail/thunder, wind chill -15C, gales increasing coast"
-        },
-        {
-          "sky": "partly-cloudy",
-          "windMphLow": 15,
-          "windMphHigh": 25,
-          "windDir": "NW",
-          "tempCLow": 0,
-          "tempCHigh": 0,
-          "cloudFree": 50,
-          "freezingLevel": 950,
-          "visibility": "good",
-          "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "snow above 700-900m developing widely, cloud persistent on tops, freezing level"
-        }
-      ]
-    },
-    {
-      "name": "Cairngorms & Monadhliath",
-      "forecast": [
-        {
-          "sky": "partly-cloudy",
-          "windMphLow": 30,
-          "windMphHigh": 45,
-          "gustMph": 55,
-          "windDir": "W",
-          "tempCLow": 1,
-          "tempCHigh": 3,
-          "cloudFree": 70,
-          "freezingLevel": 1100,
-          "visibility": "good",
-          "amSky": "rain",
-          "pmSky": "partly-cloudy",
-          "status": "poor",
-          "reason": "gale force gusts 55mph, snow/hail showers, wind chill -15C, sub-zero tops"
-        },
-        {
-          "sky": "rain",
-          "windMphLow": 25,
-          "windMphHigh": 30,
-          "windDir": "NW",
-          "tempCLow": 0,
-          "tempCHigh": 3,
-          "cloudFree": 40,
-          "freezingLevel": 900,
-          "visibility": "good",
-          "amSky": "cloud",
-          "pmSky": "rain",
-          "status": "poor",
-          "reason": "snow to 600-700m, hail/thunder, cloud capping north Cairngorms, wind chill -15C"
+          "reason": "heavy snow/hail showers inland, gusts 40mph coast, near-freezing tops"
         },
         {
           "sky": "partly-cloudy",
@@ -157,15 +106,15 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "showers developing widely, snow above 700-900m, cloud banking tops, cold"
+          "reason": "showers developing with snow above 700-900m, freezing level 900-1000m"
         }
       ]
     },
     {
-      "name": "Southeastern Highlands",
+      "name": "Cairngorms & Monadhliath",
       "forecast": [
         {
-          "sky": "partly-cloudy",
+          "sky": "rain",
           "windMphLow": 30,
           "windMphHigh": 45,
           "gustMph": 55,
@@ -173,12 +122,63 @@
           "tempCLow": 1,
           "tempCHigh": 3,
           "cloudFree": 70,
-          "freezingLevel": 1100,
+          "freezingLevel": 1000,
           "visibility": "good",
           "amSky": "rain",
-          "pmSky": "partly-cloudy",
+          "pmSky": "rain",
           "status": "poor",
-          "reason": "gale force gusts 55mph, snow/hail to 800m, wind chill -15C on tops"
+          "reason": "gale 40-55mph, snow/hail showers, wind chill -10 to -15C on tops"
+        },
+        {
+          "sky": "rain",
+          "windMphLow": 25,
+          "windMphHigh": 30,
+          "windDir": "NW",
+          "tempCLow": 0,
+          "tempCHigh": 3,
+          "cloudFree": 40,
+          "freezingLevel": 900,
+          "visibility": "good",
+          "amSky": "rain",
+          "pmSky": "rain",
+          "status": "poor",
+          "reason": "widespread heavy snow/hail showers, snow to 600-700m north, near-freezing"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 15,
+          "windMphHigh": 25,
+          "windDir": "NW",
+          "tempCLow": 0,
+          "tempCHigh": 0,
+          "cloudFree": 50,
+          "freezingLevel": 950,
+          "visibility": "good",
+          "amSky": "partly-cloudy",
+          "pmSky": "rain",
+          "status": "marginal",
+          "reason": "showers developing widely, snow above 700-900m, freezing level 900-1000m"
+        }
+      ]
+    },
+    {
+      "name": "Southeastern Highlands",
+      "forecast": [
+        {
+          "sky": "rain",
+          "windMphLow": 30,
+          "windMphHigh": 45,
+          "gustMph": 55,
+          "windDir": "W",
+          "tempCLow": 1,
+          "tempCHigh": 3,
+          "cloudFree": 70,
+          "freezingLevel": 1000,
+          "visibility": "good",
+          "amSky": "rain",
+          "pmSky": "rain",
+          "status": "poor",
+          "reason": "gale 40-55mph, snow/hail showers, wind chill -10 to -15C on tops"
         },
         {
           "sky": "rain",
@@ -193,7 +193,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "snow to 700m, heavy hail/thunder, wind chill -13C, showers widespread PM"
+          "reason": "widespread snow/hail showers, snow to 700m, wind chill -10 to -13C"
         },
         {
           "sky": "partly-cloudy",
@@ -208,7 +208,7 @@
           "amSky": "sun",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "dry start but showers/hail/snow developing from midday, cold NW wind chill"
+          "reason": "dry start, showers with snow above 700-900m developing from mid morning"
         }
       ]
     },
@@ -228,8 +228,8 @@
           "visibility": "good",
           "amSky": "rain",
           "pmSky": "partly-cloudy",
-          "status": "poor",
-          "reason": "gusts 40mph, squally showers, wind chill -10C, early rain then blustery all day"
+          "status": "marginal",
+          "reason": "gusty 30-40mph, early rain then showers, wind chill -10C on tops"
         },
         {
           "sky": "partly-cloudy",
@@ -239,12 +239,12 @@
           "tempCLow": 1,
           "tempCHigh": 4,
           "cloudFree": 60,
-          "freezingLevel": 750,
+          "freezingLevel": 700,
           "visibility": "good",
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "snow on high tops, hail/thunder, wind chill -10C, Galloway 30mph+ gusts"
+          "reason": "heavy hail/snow showers on high tops, gusty 30mph Galloway, wind chill -10C"
         },
         {
           "sky": "partly-cloudy",
@@ -259,11 +259,11 @@
           "amSky": "sun",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "dry sunny start, heavy hail showers PM, sleet on tops, cold NW wind chill"
+          "reason": "dry bright start, showers with hail afternoon, sleet on tops"
         }
       ]
     }
   ],
-  "_generated": "2026-05-11T17:15:39.802Z",
+  "_generated": "2026-05-11T21:06:15.383Z",
   "_anchorDate": "2026-05-12"
 }
