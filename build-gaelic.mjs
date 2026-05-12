@@ -32,27 +32,35 @@ if (todo.length === 0) { console.log('Nothing to do.'); process.exit(0); }
 const BATCH = 40;
 const results = { ...existing };
 
+function extractJSON(text) {
+  try { return JSON.parse(text.trim()); } catch(_) {}
+  const stripped = text.replace(/^```json\s*/,'').replace(/^```\s*/,'').replace(/\s*```$/,'').trim();
+  try { return JSON.parse(stripped); } catch(_) {}
+  const start = text.indexOf('{');
+  const end = text.lastIndexOf('}');
+  if (start !== -1 && end !== -1) {
+    try { return JSON.parse(text.slice(start, end + 1)); } catch(_) {}
+  }
+  throw new Error(`Could not extract JSON. Raw response:\n${text.slice(0, 300)}`);
+}
+
 for (let i = 0; i < todo.length; i += BATCH) {
   const batch = todo.slice(i, i + BATCH);
   console.log(`\nBatch ${Math.floor(i/BATCH)+1}/${Math.ceil(todo.length/BATCH)}: ${batch[0].name} → ${batch[batch.length-1].name}`);
 
   const prompt = `You are an expert in Scottish Gaelic hill names, etymology, and pronunciation.
 
-For each Scottish hill below, provide:
-- "meaning": concise English translation (max 6 words, literal). OMIT if name is non-Gaelic or etymology is genuinely unknown.
-- "pronunciation": phonetic guide for English speakers. CAPS for stressed syllables. Hyphens between syllables. Omit if name is obviously English.
+For each Scottish hill below provide a JSON object. Output ONLY the JSON — no introduction, no explanation, no markdown code fences. Your entire response must start with { and end with }.
 
-Gaelic conventions:
-beinn/ben=hill, càrn/carn=cairn, mòr/mor=big, beag/beg=small, dearg=red, dubh/dhu=black, gorm=blue-green, bàn/ban=white, ruadh=reddish-brown, odhar=dun/greyish, breac=speckled, uaine=green, geal=white/bright, liath=grey, coire=corrie, gleann=glen, bealach=pass
-bh/mh=v, gh=mostly silent, ch=loch-sound, dh=y/silent, -ach="-ach", -aidh="-ee", -aig="-ak"
+Fields per entry:
+- "meaning": concise English translation max 6 words, literal. OMIT field if name is non-Gaelic or etymology unknown.
+- "pronunciation": phonetic for English speakers, CAPS for stressed syllables, hyphens between syllables. OMIT if name is obviously English.
 
-Return ONLY valid JSON, no markdown:
-{
-  "id1": { "meaning": "...", "pronunciation": "..." },
-  "id2": { "meaning": "..." },
-  "id3": {}
-}
-Use {} if name is English/unknown and neither field applies.
+Use {} for any peak with an English or unknown name.
+
+Gaelic rules:
+beinn/ben=hill, càrn/carn=cairn, mòr/mor=big, beag/beg=small, dearg=red, dubh/dhu=black, gorm=blue-green, bàn/ban=white, ruadh=reddish-brown, odhar=dun/grey, breac=speckled, uaine=green, geal=bright white, liath=grey, coire=corrie, gleann=glen, bealach=pass
+bh/mh=v, gh=mostly silent, ch=loch-sound (write as ch), dh=y/silent, -ach="-ach", -aidh="-ee", -aig="-ak"
 
 Hills:
 ${batch.map(p => `${p.id} (${p.type}): ${p.name}`).join('\n')}`;
@@ -61,12 +69,16 @@ ${batch.map(p => `${p.id} (${p.type}): ${p.name}`).join('\n')}`;
     const resp = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'anthropic-version': '2023-06-01', 'x-api-key': API_KEY },
-      body: JSON.stringify({ model: 'claude-sonnet-4-6', max_tokens: 3000, messages: [{ role: 'user', content: prompt }] })
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-6',
+        max_tokens: 3000,
+        messages: [{ role: 'user', content: prompt }]
+      })
     });
     const data = await resp.json();
     if (data.error) throw new Error(data.error.message);
-    const text = data.content[0].text.trim().replace(/^```json\s*/,'').replace(/\s*```$/,'');
-    const parsed = JSON.parse(text);
+
+    const parsed = extractJSON(data.content[0].text);
     let added = 0;
     for (const [id, val] of Object.entries(parsed)) {
       results[id] = (val.meaning || val.pronunciation) ? val : null;
@@ -85,4 +97,4 @@ ${batch.map(p => `${p.id} (${p.type}): ${p.name}`).join('\n')}`;
 
 const withData = Object.values(results).filter(v => v !== null).length;
 const omitted  = Object.values(results).filter(v => v === null).length;
-console.log(`\n✓ Done. ${withData} with Gaelic data, ${omitted} omitted (English/unknown). Written to ${outFile}`);
+console.log(`\n✓ Done. ${withData} with Gaelic data, ${omitted} omitted. Written to ${outFile}`);
