@@ -13,6 +13,7 @@
           "sky": "snow",
           "windMphLow": 25,
           "windMphHigh": 40,
+          "gustMph": 40,
           "windDir": "NW",
           "tempCLow": 0,
           "tempCHigh": 2,
@@ -22,7 +23,7 @@
           "amSky": "snow",
           "pmSky": "snow",
           "status": "poor",
-          "reason": "heavy hail/snow showers, thunder risk, gusts 40mph, 0C tops"
+          "reason": "heavy hail/snow showers, thunder risk, gusts 40mph, sub-zero tops"
         },
         {
           "sky": "partly-cloudy",
@@ -35,9 +36,9 @@
           "freezingLevel": 900,
           "visibility": "good",
           "amSky": "cloud",
-          "pmSky": "rain",
+          "pmSky": "snow",
           "status": "poor",
-          "reason": "widespread hail/snow showers, cloud banked above 800m, freezing tops"
+          "reason": "increasingly widespread hail/snow showers, cloud capping tops 600-1000m"
         },
         {
           "sky": "partly-cloudy",
@@ -53,7 +54,7 @@
           "amSky": "snow",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gusts 40mph dawn, snow/hail showers, -2C tops, arduous start"
+          "reason": "arduous dawn gusts 40mph, snow/hail showers, freezing level 700m rising"
         }
       ]
     },
@@ -64,6 +65,7 @@
           "sky": "snow",
           "windMphLow": 25,
           "windMphHigh": 40,
+          "gustMph": 40,
           "windDir": "NW",
           "tempCLow": 0,
           "tempCHigh": 3,
@@ -73,7 +75,7 @@
           "amSky": "snow",
           "pmSky": "snow",
           "status": "poor",
-          "reason": "heavy hail/snow showers, thunder risk, gusts 40mph, 0C tops"
+          "reason": "heavy hail/snow showers, thunder risk, gusts 40mph, sub-zero wind chill"
         },
         {
           "sky": "partly-cloudy",
@@ -86,9 +88,9 @@
           "freezingLevel": 950,
           "visibility": "good",
           "amSky": "partly-cloudy",
-          "pmSky": "rain",
+          "pmSky": "snow",
           "status": "poor",
-          "reason": "widespread hail/snow showers developing, cloud banked tops, freezing level 900m"
+          "reason": "hail/snow showers developing widely, persistent cloud banking tops 800-1000m"
         },
         {
           "sky": "partly-cloudy",
@@ -99,12 +101,12 @@
           "tempCLow": -2,
           "tempCHigh": 3,
           "cloudFree": 50,
-          "freezingLevel": 800,
+          "freezingLevel": 900,
           "visibility": "good",
           "amSky": "snow",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "gusts 35mph dawn easing, snow/hail showers, -2C rising, Ben Nevis cloud persists"
+          "reason": "blustery dawn gusts 35mph, isolated snow/hail showers, easing through day"
         }
       ]
     },
@@ -124,7 +126,7 @@
           "amSky": "snow",
           "pmSky": "snow",
           "status": "poor",
-          "reason": "heavy hail/snow showers, thunder risk, buffeting gusts, 0C tops"
+          "reason": "heavy hail/snow showers, thunder risk, cloud capping Cairngorms above 1000m"
         },
         {
           "sky": "partly-cloudy",
@@ -139,7 +141,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "snow",
           "status": "poor",
-          "reason": "hail/snow showers developing widely, cloud banked above 900m, freezing tops"
+          "reason": "hail/snow showers developing widely, cloud persisting on tops 900-1100m"
         },
         {
           "sky": "partly-cloudy",
@@ -150,12 +152,12 @@
           "tempCLow": -2,
           "tempCHigh": 3,
           "cloudFree": 40,
-          "freezingLevel": 800,
+          "freezingLevel": 900,
           "visibility": "moderate",
           "amSky": "snow",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gusts 40mph easternmost hills dawn, snow/hail showers, cloud persists northern Cairngorms"
+          "reason": "gusts 40mph eastern Cairngorms at dawn, snow/hail showers, cloud persisting northern tops"
         }
       ]
     },
@@ -172,10 +174,10 @@
           "cloudFree": 50,
           "freezingLevel": 900,
           "visibility": "poor",
-          "amSky": "snow",
+          "amSky": "partly-cloudy",
           "pmSky": "snow",
           "status": "poor",
-          "reason": "heavy hail/snow showers, thunder risk, buffeting gusts, 0C tops"
+          "reason": "heavy hail/snow showers, thunder risk, wind chill -10 to -13C on summits"
         },
         {
           "sky": "partly-cloudy",
@@ -190,7 +192,7 @@
           "amSky": "sun",
           "pmSky": "snow",
           "status": "marginal",
-          "reason": "dry bright start, hail/snow showers developing PM, cloud capping tops"
+          "reason": "dry start then hail/snow showers developing afternoon, cloud capping tops PM"
         },
         {
           "sky": "partly-cloudy",
@@ -201,12 +203,12 @@
           "tempCLow": -2,
           "tempCHigh": 3,
           "cloudFree": 60,
-          "freezingLevel": 800,
+          "freezingLevel": 900,
           "visibility": "good",
           "amSky": "snow",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "gusts 40mph dawn easing, snow/hail showers, tops clearing PM, -2C rising"
+          "reason": "arduous dawn gusts 40mph easing; snow showers morning, tops clearing afternoon"
         }
       ]
     },
@@ -214,7 +216,7 @@
       "name": "Southern Uplands",
       "forecast": [
         {
-          "sky": "partly-cloudy",
+          "sky": "snow",
           "windMphLow": 20,
           "windMphHigh": 30,
           "windDir": "NW",
@@ -226,7 +228,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "snow",
           "status": "poor",
-          "reason": "heavy hail/snow showers, thunder risk, 30mph Galloway, appalling visibility in showers"
+          "reason": "heavy hail/snow showers, thunder risk, gusts 30mph Galloway, wind chill -10C"
         },
         {
           "sky": "partly-cloudy",
@@ -239,9 +241,9 @@
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "sun",
-          "pmSky": "rain",
+          "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "bright start, heavy hail showers PM, sleet tops, freezing level above summits"
+          "reason": "bright start, then hail showers PM; sleet on tops, cloud lowering in showers"
         },
         {
           "sky": "partly-cloudy",
@@ -256,11 +258,11 @@
           "amSky": "snow",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "blustery dawn easing, snow tops initially, showers mainly east of M74"
+          "reason": "blustery dawn 30mph easing; showers east of M74, snow tops initially, clearing"
         }
       ]
     }
   ],
-  "_generated": "2026-05-12T16:35:52.215Z",
+  "_generated": "2026-05-12T21:08:09.226Z",
   "_anchorDate": "2026-05-13"
 }
