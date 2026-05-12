@@ -196,8 +196,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 .bothy-region-head{padding:.6rem 1rem .3rem;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3)}
 .bothy-closed{opacity:.6}
 /* First-time hint banner inside the list */
-.first-time-hint{display:flex;align-items:center;gap:.6rem;padding:.7rem .85rem;margin:.4rem 1rem .8rem;background:var(--accent-light);border:1px dashed var(--accent);border-radius:8px;font-size:.74rem;color:var(--accent-dark);line-height:1.4}
-.hint-icon{font-size:.95rem;flex-shrink:0}
+.first-time-hint{padding:.7rem .85rem;margin:.4rem 1rem .8rem;background:var(--accent-light);border:1px dashed var(--accent);border-radius:8px;font-size:.74rem;color:var(--accent-dark);line-height:1.4}
 /* Notes field */
 #notes-row label{display:block;font-size:.72rem;color:var(--ink3);font-weight:500;margin-bottom:.25rem;margin-top:.75rem}
 #peak-notes{width:100%;box-sizing:border-box;border:1px solid var(--rule);border-radius:8px;padding:.55rem .65rem;font-family:inherit;font-size:.82rem;color:var(--ink);background:var(--bg);resize:vertical;min-height:72px;outline:none;transition:border-color .15s}
@@ -242,6 +241,9 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 .leaflet-control-attribution a{color:var(--accent-dark) !important}
 .modal-name{font-family:var(--font-display);font-size:1.5rem;font-weight:600;line-height:1.15;margin-bottom:.4rem;color:var(--ink);letter-spacing:-.03em}
 .modal-meta{font-size:.8rem;color:var(--ink3);padding-bottom:.85rem;border-bottom:1px solid var(--rule2);margin-bottom:1rem;display:flex;gap:.6rem;align-items:center;flex-wrap:wrap;font-family:var(--font-mono);letter-spacing:-.01em}
+.modal-gaelic{font-size:.76rem;color:var(--ink3);margin:-.1rem 0 .65rem;line-height:1.5}
+.modal-gaelic .g-meaning{font-style:italic}
+.modal-gaelic .g-pronunciation{font-family:var(--font-mono);letter-spacing:.01em;font-size:.7rem}
 .modal label{display:block;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);margin-bottom:.3rem;font-weight:600}
 .date-label-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.3rem;gap:.4rem;flex-wrap:wrap}
 .date-label-row label{margin-bottom:0}
@@ -920,7 +922,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
       <ul class="about-sources">
         <li><span class="as-k">Hills</span><span class="as-v"><a href="https://www.smc.org.uk/" target="_blank" rel="noopener">SMC</a> · <a href="https://www.hills-database.co.uk/" target="_blank" rel="noopener">Database of British &amp; Irish Hills</a></span></li>
         <li><span class="as-k">Routes</span><span class="as-v"><a href="https://www.walkhighlands.co.uk/" target="_blank" rel="noopener">WalkHighlands</a></span></li>
-        <li><span class="as-k">Map</span><span class="as-v"><a href="https://www.esri.com/" target="_blank" rel="noopener">Esri</a></span></li>
+        <li><span class="as-k">Map</span><span class="as-v">Powered by <a href="https://www.esri.com/" target="_blank" rel="noopener">Esri</a> · Sources: Esri, HERE, Garmin, FAO, NOAA, USGS, © OpenStreetMap contributors</span></li>
         <li><span class="as-k">Bothies</span><span class="as-v"><a href="https://www.mountainbothies.org.uk/" target="_blank" rel="noopener">Mountain Bothies Association</a></span></li>
         <li><span class="as-k">Weather</span><span class="as-v"><a href="https://www.mwis.org.uk/" target="_blank" rel="noopener">Mountain Weather Information Service</a></span></li>
       </ul>
@@ -940,6 +942,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
     <button class="modal-x" id="modal-x">&#10005;</button>
     <div class="modal-tag" id="m-tag">Munro</div>
     <h2 class="modal-name" id="m-name"></h2>
+    <div class="modal-gaelic" id="m-gaelic" hidden></div>
     <div class="modal-meta" id="m-meta"></div>
     <div id="bag-date-row">
     <div class="date-label-row">
@@ -1854,7 +1857,9 @@ var LAST_EXPORT_KEY = 'shb_last_export';
 var ONBOARD_KEY = 'shb_onboarded';
 var MAP_VIEW_KEY = 'shb_map_view';
 var bothySearch = '';
-// Bothy filtering uses shared globals (regionFilter, statusFilter, sortBy)
+// Gaelic name data — loaded async, used in openModal
+var GAELIC = {};
+fetch('gaelic.json').then(function(r){ return r.json(); }).then(function(d){ GAELIC = d; }).catch(function(){});
 var activeTab = 'munro';
 var regionFilter = '';
 var sortBy = 'name';
@@ -2101,7 +2106,7 @@ function renderList(){
   var html='';
   // First-time hint: shown if user has no bagged peaks yet AND no filter is active
   if(Object.keys(bagged).length===0 && !searchTerm && !regionFilter && !statusFilter){
-    html+='<div class="first-time-hint"><span class="hint-icon">👆</span><span>Tap any '+label.toLowerCase().replace(/s$/,'')+' to record when you bagged it.</span></div>';
+    html+='<div class="first-time-hint"><span>Tap any '+label.toLowerCase().replace(/s$/,'')+' to record when you bagged it.</span></div>';
   }
   for(var i=0;i<list.length;i++) html+=rowHTML(list[i]);
   lv.innerHTML=html;
@@ -2220,11 +2225,11 @@ function renderMap(){
   }
 }
 
-// Basemap tile source: Esri World Topo (free, no API key, cleaner palette than OpenTopoMap)
+// Basemap tile source: Esri World Topo via authenticated tile service
 var BASEMAP = {
   label: 'Esri Topo',
-  url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}',
-  attribution: 'Tiles &copy; <a href="https://www.esri.com" target="_blank">Esri</a>',
+  url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}?token=AAPTav89-602fyqCZqD02IV6_xQ..4tRcelmv0y497Nj3Th_f6kEn7aUhLBxPrgZ86uwds8gbnNW8rjAeofeTy07mG1adYLPGvsADQmig4rop-XMZZiePxI7lKzJO5796rfUh08RCC-q6vuYZk7YLAJJ4TE5krbLKVxbyLzlA4iodTbQlRsp4AfrFkZEDiHe81bTQVEtqT30mFZwLr87sRfUI3ajC09EbflO3N-pKzJ5lKIdZc9zyKrHlFdBHEtjja8-DWnKcgf0CblVCB78.AT1_aT1B2d5U',
+  attribution: '&copy; <a href="https://www.esri.com" target="_blank" rel="noopener">Esri</a>',
   maxZoom: 19
 };
 
@@ -2435,7 +2440,7 @@ function renderBothyList(){
   var html='';
   // First-time hint for bothies
   if(Object.keys(bothyVisited).length===0 && !searchTerm && !regionFilter && !statusFilter){
-    html+='<div class="first-time-hint"><span class="hint-icon">👆</span><span>Tap any bothy to record your visit.</span></div>';
+    html+='<div class="first-time-hint"><span>Tap any bothy to record your visit.</span></div>';
   }
   for(var bi=0;bi<filtered.length;bi++){
     var b=filtered[bi];
@@ -2626,6 +2631,21 @@ function openModal(id){
   tag.textContent=m.type==='munro'?'Munro':m.type==='corbett'?'Corbett':'Fiona';
   tag.className='modal-tag '+(m.type==='munro'?'m':m.type==='corbett'?'c':'f');
   document.getElementById('m-name').textContent=m.name;
+  // Gaelic name subtitle
+  var gaelicEl = document.getElementById('m-gaelic');
+  if(gaelicEl){
+    var gd = GAELIC[m.id];
+    if(gd && (gd.meaning || gd.pronunciation)){
+      var parts = [];
+      if(gd.meaning) parts.push('<span class="g-meaning">'+escHtml(gd.meaning)+'</span>');
+      if(gd.pronunciation) parts.push('<span class="g-pronunciation">'+escHtml(gd.pronunciation)+'</span>');
+      gaelicEl.innerHTML = parts.join(' &middot; ');
+      gaelicEl.removeAttribute('hidden');
+    } else {
+      gaelicEl.innerHTML = '';
+      gaelicEl.setAttribute('hidden','');
+    }
+  }
   document.getElementById('m-meta').innerHTML=m.height+'m &middot; '+escHtml(m.region);
   document.getElementById('bag-date').value=bagged[m.id]||new Date().toISOString().slice(0,10);
   var notesEl=document.getElementById('peak-notes');
