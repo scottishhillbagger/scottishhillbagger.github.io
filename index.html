@@ -182,13 +182,13 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 .modal-ov{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:10000;display:none;align-items:flex-end;justify-content:center;-webkit-overflow-scrolling:touch;padding-bottom:env(safe-area-inset-bottom)}
 .modal-ov.open{display:flex}
 .modal{background:var(--surface);width:100%;max-width:480px;padding:1.5rem 1.25rem 1.5rem;position:relative;border-top:none;max-height:80vh;max-height:80svh;overflow-y:auto;-webkit-overflow-scrolling:touch;border-radius:12px 12px 0 0;padding-bottom:max(1.5rem,calc(1.5rem + env(safe-area-inset-bottom)))}
-.modal-x{position:absolute;top:.5rem;right:.5rem;background:none;border:none;font-size:1.3rem;cursor:pointer;color:var(--ink3);padding:.4rem .7rem;line-height:1;border-radius:4px}
-.modal-x:hover{background:var(--bg);color:var(--ink)}
-.modal-tag{font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.5rem;display:inline-block;font-weight:600;padding:.2rem .55rem;border-radius:4px;border:1px solid currentColor}
-.modal-tag.munro,.modal-tag.m{color:#1A4D28;background:rgba(26,77,40,0.08)}
-.modal-tag.corbett,.modal-tag.c{color:#7A4A08;background:rgba(122,74,8,0.08)}
-.modal-tag.fiona,.modal-tag.f{color:#1A5878;background:rgba(26,88,120,0.08)}
-.modal-tag.bothy,.modal-tag.b{color:var(--terra-dark);background:rgba(184,84,58,0.1)}
+.modal-x{position:absolute;top:.75rem;right:.75rem;width:32px;height:32px;border-radius:50%;background:rgba(0,0,0,.04);border:none;font-size:1rem;cursor:pointer;color:var(--ink3);padding:0;line-height:1;display:flex;align-items:center;justify-content:center;transition:background .15s,color .15s}
+.modal-x:hover{background:rgba(0,0,0,.08);color:var(--ink)}
+.modal-tag{font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.55rem;display:inline-block;font-weight:600;padding:.22rem .6rem;border-radius:99px}
+.modal-tag.munro,.modal-tag.m{color:#5C7A1E;background:rgba(168,212,71,0.18)}
+.modal-tag.corbett,.modal-tag.c{color:#7A4A08;background:rgba(240,160,48,0.16)}
+.modal-tag.fiona,.modal-tag.f{color:#1A5878;background:rgba(96,184,224,0.18)}
+.modal-tag.bothy,.modal-tag.b{color:var(--terra-dark);background:rgba(184,84,58,0.12)}
 /* Bothy tab */
 .bothy-disclaimer{margin:1.5rem 1rem 1rem;padding:.85rem 1rem;background:transparent;border-top:1px solid var(--rule);border-radius:0;font-size:.72rem;color:var(--ink3);line-height:1.5}
 .bothy-disclaimer a{color:var(--accent);text-decoration:none}
@@ -247,9 +247,11 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 .modal label{display:block;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);margin-bottom:.3rem;font-weight:600}
 .date-label-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.3rem;gap:.4rem;flex-wrap:wrap}
 .date-label-row label{margin-bottom:0}
-.date-shortcuts{display:flex;gap:.4rem;flex-wrap:wrap}
-.date-shortcut{background:none;border:none;font-family:inherit;font-size:.66rem;color:var(--accent-dark);cursor:pointer;padding:.1rem .2rem;letter-spacing:.02em;font-weight:500;-webkit-appearance:none;text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:2px}
-.date-shortcut:hover{color:var(--ink);text-decoration-color:var(--ink3)}
+.opt-label{color:var(--ink4);font-weight:400;font-size:.7rem;letter-spacing:0;text-transform:none;margin-left:.4rem}
+.date-shortcuts{display:flex;gap:.35rem;flex-wrap:wrap}
+.date-shortcut{background:#fff;border:1px solid var(--rule);font-family:inherit;font-size:.7rem;color:var(--ink2);cursor:pointer;padding:.3rem .65rem;letter-spacing:-.005em;font-weight:500;-webkit-appearance:none;border-radius:99px;transition:all .15s}
+.date-shortcut:hover{border-color:var(--ink3);color:var(--ink)}
+.date-shortcut.on{background:var(--ink);border-color:var(--ink);color:var(--surface-elev)}
 .modal input[type=date]{width:100%;padding:.5rem .65rem;font-family:inherit;font-size:1rem;color:var(--ink);background:var(--bg);border:1px solid var(--rule);outline:none;border-radius:4px;color-scheme:light;margin-bottom:.8rem;-webkit-appearance:none}
 .modal input[type=date]:focus{border-color:var(--accent)}
 .modal-acts{display:flex;gap:.5rem}
@@ -511,6 +513,12 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 .btn-report{display:block;width:100%;margin-top:.6rem;padding:.5rem;background:transparent;border:none;font-family:inherit;font-size:.7rem;color:var(--ink4);cursor:pointer;text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px;letter-spacing:-.005em;-webkit-appearance:none;transition:color .15s}
 .btn-report:hover{color:var(--ink3)}
 .btn-report.copied{color:var(--accent);text-decoration-color:var(--accent)}
+/* Quiet footer row for tertiary nav actions */
+.modal-foot{margin-top:1rem;padding-top:.75rem;border-top:1px solid var(--rule);display:flex;gap:.4rem}
+.foot-btn{flex:1;background:transparent;border:none;color:var(--ink2);padding:.55rem .5rem;cursor:pointer;font-family:inherit;font-size:.78rem;font-weight:500;display:flex;align-items:center;justify-content:center;gap:.4rem;border-radius:6px;transition:background .15s,color .15s;letter-spacing:-.005em;-webkit-appearance:none}
+.foot-btn:hover{background:rgba(0,0,0,.04);color:var(--ink)}
+.foot-btn svg{opacity:.55;flex-shrink:0}
+.foot-sep{width:1px;background:var(--rule);margin:.25rem 0}
 
 /* Map pin: two-tone dot with white halo and drop shadow, sits above tiles like a physical pin */
 .map-pin-wrap{background:transparent !important;border:none !important;display:flex;align-items:center;justify-content:center}
@@ -618,6 +626,8 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 .wx-day.open,.wx-day.go-bg.open{background:var(--surface-elev);border-color:var(--accent)}
 .wx-day-label{font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);font-weight:500}
 .wx-day-icon{width:26px;height:26px;color:var(--ink);opacity:.85}
+.wx-gust-icon{width:18px;height:18px;color:var(--terra-dark);margin-left:.2rem;vertical-align:middle}
+.wx-sky-row{display:flex;align-items:center;justify-content:center;gap:.15rem}
 .wx-day-status{font-size:.58rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
 .wx-st-go{color:var(--accent-dark)}
 .wx-st-marg{color:#7A4A08}
@@ -946,7 +956,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
     <div class="modal-meta" id="m-meta"></div>
     <div id="bag-date-row">
     <div class="date-label-row">
-      <label for="bag-date">Date Summited</label>
+      <label for="bag-date">Date bagged</label>
       <div class="date-shortcuts">
         <button type="button" class="date-shortcut" data-date-target="bag-date" data-date-offset="0">Today</button>
         <button type="button" class="date-shortcut" data-date-target="bag-date" data-date-offset="1">Yesterday</button>
@@ -957,7 +967,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
     </div>
     <div id="bothy-visit-row" style="display:none">
     <div class="date-label-row">
-      <label for="bothy-visit-date">Date Visited</label>
+      <label for="bothy-visit-date">Date visited</label>
       <div class="date-shortcuts">
         <button type="button" class="date-shortcut" data-date-target="bothy-visit-date" data-date-offset="0">Today</button>
         <button type="button" class="date-shortcut" data-date-target="bothy-visit-date" data-date-offset="1">Yesterday</button>
@@ -967,18 +977,25 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
     <input type="date" id="bothy-visit-date">
     </div>
     <div id="notes-row">
-    <label for="peak-notes">Notes</label>
+    <label for="peak-notes">Notes <span class="opt-label">optional</span></label>
     <textarea id="peak-notes" placeholder="Conditions, companions, route taken…" rows="3"></textarea>
     </div>
     <div class="modal-acts">
-      <button class="btn-p" id="btn-bag">&#10003; Save</button>
+      <button class="btn-p" id="btn-bag">&#10003; Bag it</button>
       <button class="btn-s hidden" id="btn-rm">Remove</button>
     </div>
-    <div style="margin-top:.85rem;padding-top:.85rem;border-top:1px solid var(--rule2)">
-      <button class="btn-s" id="btn-wh" style="width:100%;text-align:center">View route on WalkHighlands &#8599;</button>
-      <button class="btn-s" id="btn-show-on-map" style="width:100%;text-align:center;margin-top:.5rem">Show on map &#8599;</button>
-      <button class="btn-report" id="btn-report" type="button">Link broken? Tap to copy details</button>
+    <div class="modal-foot">
+      <button class="foot-btn" id="btn-show-on-map">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 6 8 12 8 12s8-6 8-12a8 8 0 0 0-8-8z"/></svg>
+        Show on map
+      </button>
+      <div class="foot-sep"></div>
+      <button class="foot-btn" id="btn-wh">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        Route guide
+      </button>
     </div>
+    <button class="btn-report" id="btn-report" type="button" hidden>Link broken? Tap to copy details</button>
   </div>
 </div>
 
@@ -2588,7 +2605,7 @@ function openBothyModal(id){
   var isVisited=!!bothyVisited[b.id];
   if(bvRow) bvRow.style.display='';
   var bvDate=document.getElementById('bothy-visit-date');
-  if(bvDate) bvDate.value=bothyVisited[b.id]||new Date().toISOString().slice(0,10);
+  if(bvDate){ bvDate.value=bothyVisited[b.id]||new Date().toISOString().slice(0,10); syncDateChips(bvDate); }
   if(isVisited){
     btnBag.textContent='✓ Update';
     btnBag.classList.remove('hidden');
@@ -2600,14 +2617,29 @@ function openBothyModal(id){
   }
   // Update external link button
   var btnWh=document.getElementById('btn-wh');
-  if(btnWh) btnWh.innerHTML='View on Mountain Bothies Association &#8599;';
+  if(btnWh) btnWh.innerHTML='<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>MBA page';
   var btnReport=document.getElementById('btn-report');
-  if(btnReport) btnReport.textContent='Wrong location? Tap to copy details';
+  if(btnReport){ btnReport.textContent='Wrong location? Tap to copy details'; btnReport.setAttribute('hidden',''); btnReport.classList.remove('copied'); }
   document.getElementById('modal').classList.add('open');
   setTimeout(function(){
     var m2=document.querySelector('#modal .modal');
     if(m2) m2.scrollTop=0;
   },10);
+}
+
+// Sync chip 'on' state to whatever date is currently in the input
+function syncDateChips(input){
+  if(!input) return;
+  var row = input.parentNode.querySelector('.date-shortcuts');
+  if(!row) return;
+  var chips = row.querySelectorAll('.date-shortcut');
+  for(var i=0;i<chips.length;i++){
+    var d = new Date();
+    var off = chips[i].getAttribute('data-date-offset');
+    if(off) d.setDate(d.getDate() - parseInt(off,10));
+    if(input.value === d.toISOString().slice(0,10)) chips[i].classList.add('on');
+    else chips[i].classList.remove('on');
+  }
 }
 
 function openModal(id){
@@ -2621,9 +2653,9 @@ function openModal(id){
   var notesElInit=document.getElementById('peak-notes');
   if(notesElInit) notesElInit.placeholder='Conditions, companions, route taken…';
   var btnWh=document.getElementById('btn-wh');
-  if(btnWh) btnWh.innerHTML='View route on WalkHighlands &#8599;';
+  if(btnWh) btnWh.innerHTML='<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Route guide';
   var btnReport=document.getElementById('btn-report');
-  if(btnReport) btnReport.textContent='Link broken? Tap to copy details';
+  if(btnReport){ btnReport.textContent='Link broken? Tap to copy details'; btnReport.setAttribute('hidden',''); btnReport.classList.remove('copied'); }
   var m=null;for(var i=0;i<M.length;i++) if(M[i].id===id){m=M[i];break;}
   if(!m)return;
   target=m;
@@ -2647,13 +2679,15 @@ function openModal(id){
     }
   }
   document.getElementById('m-meta').innerHTML=m.height+'m &middot; '+escHtml(m.region);
-  document.getElementById('bag-date').value=bagged[m.id]||new Date().toISOString().slice(0,10);
+  var bagInput = document.getElementById('bag-date');
+  bagInput.value=bagged[m.id]||new Date().toISOString().slice(0,10);
+  syncDateChips(bagInput);
   var notesEl=document.getElementById('peak-notes');
   if(notesEl) notesEl.value=notes[m.id]||'';
   var btnBag=document.getElementById('btn-bag');
   var btnRm=document.getElementById('btn-rm');
   if(bagged[m.id]){btnBag.textContent='✓ Update';btnRm.classList.remove('hidden');}
-  else{btnBag.textContent='✓ Save';btnRm.classList.add('hidden');}
+  else{btnBag.textContent='✓ Bag it';btnRm.classList.add('hidden');}
   document.getElementById('modal').classList.add('open');
   setTimeout(function(){
     var m2=document.querySelector('#modal .modal');
@@ -3562,6 +3596,9 @@ function attachEvents(){
   document.getElementById('btn-rm').addEventListener('click',removeBag);
   document.getElementById('btn-wh').addEventListener('click',function(){
     if(!target) return;
+    // Reveal "Link broken?" affordance after the user has tapped the route link
+    var rpt = document.getElementById('btn-report');
+    if(rpt) rpt.removeAttribute('hidden');
     // Bothy targets get MBA URL; peaks get WalkHighlands route
     if(target.id && target.id.charAt(0) === 'b'){
       var bUrl = target.mbaUrl || 'https://www.mountainbothies.org.uk/bothies/';
@@ -3634,7 +3671,7 @@ function attachEvents(){
   var onboardDismiss = document.getElementById('onboard-dismiss');
   if(onboardDismiss) onboardDismiss.addEventListener('click', dismissOnboarding);
 
-  // Today shortcut on date inputs
+  // Date shortcuts: set value + mark active chip
   var dateShortcuts = document.querySelectorAll('.date-shortcut');
   for(var ds = 0; ds < dateShortcuts.length; ds++){
     (function(btn){
@@ -3647,9 +3684,32 @@ function attachEvents(){
           if(offset) d.setDate(d.getDate() - parseInt(offset, 10));
           input.value = d.toISOString().slice(0,10);
         }
+        // Mark this chip active among siblings
+        var siblings = btn.parentNode.querySelectorAll('.date-shortcut');
+        for(var s=0; s<siblings.length; s++) siblings[s].classList.remove('on');
+        btn.classList.add('on');
       });
     })(dateShortcuts[ds]);
   }
+  // Clear chip selection when user types a date manually
+  ['bag-date','bothy-visit-date'].forEach(function(id){
+    var inp=document.getElementById(id);
+    if(inp) inp.addEventListener('change', function(){
+      var row=inp.parentNode.querySelector('.date-shortcuts');
+      if(row){
+        var chips=row.querySelectorAll('.date-shortcut');
+        // If the value doesn't match any chip's expected date, clear all chip states
+        var matched=false;
+        for(var c=0;c<chips.length;c++){
+          var d=new Date();
+          var off=chips[c].getAttribute('data-date-offset');
+          if(off) d.setDate(d.getDate()-parseInt(off,10));
+          if(inp.value===d.toISOString().slice(0,10)){ chips[c].classList.add('on'); matched=true; }
+          else chips[c].classList.remove('on');
+        }
+      }
+    });
+  });
 
   // Hide bagged toggle on map
   var hideBaggedBtn = document.getElementById('map-hide-bagged');
@@ -3936,11 +3996,14 @@ var WX_SKY = {
   rain:'<svg class="wx-day-icon" viewBox="0 0 32 32" fill="none"><path d="M23 18H10a5.5 5.5 0 0 1 0-11 6.5 6.5 0 0 1 12.5 1.8A4.5 4.5 0 0 1 23 18z" fill="currentColor" opacity="0.85"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="11" y1="22" x2="9.5" y2="27"/><line x1="17" y1="22" x2="15.5" y2="27"/><line x1="23" y1="22" x2="21.5" y2="27"/></g></svg>',
   // Fog: stacked horizontal bars
   fog:'<svg class="wx-day-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="5" y1="10" x2="27" y2="10"/><line x1="5" y1="16" x2="27" y2="16"/><line x1="5" y1="22" x2="27" y2="22"/><line x1="9" y1="28" x2="23" y2="28" opacity="0.5"/><line x1="9" y1="4" x2="23" y2="4" opacity="0.5"/></svg>',
-  // Snow: cloud with three snowflakes (asterisks)
-  snow:'<svg class="wx-day-icon" viewBox="0 0 32 32" fill="none"><path d="M23 18H10a5.5 5.5 0 0 1 0-11 6.5 6.5 0 0 1 12.5 1.8A4.5 4.5 0 0 1 23 18z" fill="currentColor" opacity="0.85"/><g stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><g transform="translate(11 25)"><line x1="-2.5" y1="0" x2="2.5" y2="0"/><line x1="0" y1="-2.5" x2="0" y2="2.5"/><line x1="-1.7" y1="-1.7" x2="1.7" y2="1.7"/><line x1="-1.7" y1="1.7" x2="1.7" y2="-1.7"/></g><g transform="translate(17 28)"><line x1="-2" y1="0" x2="2" y2="0"/><line x1="0" y1="-2" x2="0" y2="2"/></g><g transform="translate(23 25)"><line x1="-2.5" y1="0" x2="2.5" y2="0"/><line x1="0" y1="-2.5" x2="0" y2="2.5"/><line x1="-1.7" y1="-1.7" x2="1.7" y2="1.7"/><line x1="-1.7" y1="1.7" x2="1.7" y2="-1.7"/></g></g></svg>',
+  // Snow: cloud with a single snowflake below
+  snow:'<svg class="wx-day-icon" viewBox="0 0 32 32" fill="none"><path d="M23 17H10a5.5 5.5 0 0 1 0-11 6.5 6.5 0 0 1 12.5 1.8A4.5 4.5 0 0 1 23 17z" fill="currentColor" opacity="0.85"/><g stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="16.5" y1="20" x2="16.5" y2="29"/><line x1="12.5" y1="22.5" x2="20.5" y2="26.5"/><line x1="20.5" y1="22.5" x2="12.5" y2="26.5"/></g></svg>',
   // Storm: cloud with bold lightning bolt
   storm:'<svg class="wx-day-icon" viewBox="0 0 32 32" fill="none"><path d="M22 16H10a5.5 5.5 0 0 1 0-11 6.5 6.5 0 0 1 12.5 1.8A4.5 4.5 0 0 1 22 16z" fill="currentColor" opacity="0.85"/><path d="M17 17l-5 8h4l-2 6 6-9h-4l3-5z" fill="currentColor"/></svg>'
 };
+// Gust icon (G1 — wind streams) — shown alongside sky icon when gusts ≥40 mph
+var WX_GUST_ICON = '<svg class="wx-gust-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11h13a3 3 0 1 0 -3 -3"/><path d="M4 21h19a3 3 0 1 1 -3 3"/><path d="M4 16h9"/></svg>';
+var WX_GUST_THRESHOLD = 40; // mph
 var WX_SKY_LABEL = {sun:'Sun','partly-cloudy':'Mixed',cloud:'Cloud',rain:'Rain',fog:'Fog',snow:'Snow',storm:'Storm'};
 var WX_PILL_CLASS = {sun:'wx-pill-sun','partly-cloudy':'wx-pill-cloud',cloud:'wx-pill-cloud',rain:'wx-pill-rain',fog:'wx-pill-fog',snow:'wx-pill-snow',storm:'wx-pill-storm'};
 
@@ -4005,10 +4068,15 @@ function wxRenderDayCell(f, dayIdx, regionName, isOpen){
   var st = f.status||'marginal';
   var goBg = st==='go' ? ' go-bg' : '';
   var openClass = isOpen ? ' open' : '';
+  var skyIcon = WX_SKY[f.sky]||WX_SKY.cloud;
+  var gustIcon = (f.gustMph && f.gustMph >= WX_GUST_THRESHOLD) ? WX_GUST_ICON : '';
+  var skyRow = gustIcon
+    ? '<div class="wx-sky-row">'+skyIcon+gustIcon+'</div>'
+    : skyIcon;
   return ''+
   '<div class="wx-day'+goBg+openClass+'" data-region="'+wxEsc(regionName)+'" data-day="'+dayIdx+'">'+
     '<div class="wx-day-label">'+wxEsc((wxData.days||[])[dayIdx]||'')+'</div>'+
-    (WX_SKY[f.sky]||WX_SKY.cloud)+
+    skyRow+
     '<div class="wx-day-status '+wxStatusClass(st)+'">'+wxStatusLabel(st)+'</div>'+
   '</div>';
 }
