@@ -1,10 +1,10 @@
 {
   "days": [
-    "Wed",
     "Thu",
-    "Fri"
+    "Fri",
+    "Sat"
   ],
-  "updatedAt": "2026-05-12T16:35:00.000Z",
+  "updatedAt": "2026-05-13T16:30:00.000Z",
   "regions": [
     {
       "name": "Northwest Highlands",
@@ -12,33 +12,18 @@
         {
           "sky": "snow",
           "windMphLow": 25,
-          "windMphHigh": 40,
+          "windMphHigh": 35,
           "gustMph": 40,
-          "windDir": "NW",
-          "tempCLow": 0,
-          "tempCHigh": 2,
-          "cloudFree": 30,
-          "freezingLevel": 900,
+          "windDir": "N",
+          "tempCLow": -1,
+          "tempCHigh": 0,
+          "cloudFree": 40,
+          "freezingLevel": 950,
           "visibility": "poor",
           "amSky": "snow",
           "pmSky": "snow",
           "status": "poor",
-          "reason": "heavy hail/snow showers, thunder risk, gusts 40mph, sub-zero tops"
-        },
-        {
-          "sky": "partly-cloudy",
-          "windMphLow": 15,
-          "windMphHigh": 25,
-          "windDir": "NW",
-          "tempCLow": -1,
-          "tempCHigh": 0,
-          "cloudFree": 40,
-          "freezingLevel": 900,
-          "visibility": "good",
-          "amSky": "cloud",
-          "pmSky": "snow",
-          "status": "poor",
-          "reason": "increasingly widespread hail/snow showers, cloud capping tops 600-1000m"
+          "reason": "heavy hail/snow showers, gusts 40mph, isolated lightning, near 0C tops"
         },
         {
           "sky": "partly-cloudy",
@@ -48,13 +33,28 @@
           "windDir": "NW",
           "tempCLow": -2,
           "tempCHigh": 1,
-          "cloudFree": 40,
-          "freezingLevel": 800,
+          "cloudFree": 55,
+          "freezingLevel": 850,
           "visibility": "good",
           "amSky": "snow",
           "pmSky": "partly-cloudy",
-          "status": "poor",
-          "reason": "arduous dawn gusts 40mph, snow/hail showers, freezing level 700m rising"
+          "status": "marginal",
+          "reason": "arduous blustery start, snow/hail showers, -2C dawn, easing through day"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 15,
+          "windMphHigh": 25,
+          "windDir": "S",
+          "tempCLow": -1,
+          "tempCHigh": 3,
+          "cloudFree": 80,
+          "freezingLevel": 700,
+          "visibility": "excellent",
+          "amSky": "sun",
+          "pmSky": "rain",
+          "status": "marginal",
+          "reason": "dry sunny morning, rain developing Skye/west coast PM, freezing level low at dawn"
         }
       ]
     },
@@ -66,31 +66,16 @@
           "windMphLow": 25,
           "windMphHigh": 40,
           "gustMph": 40,
-          "windDir": "NW",
+          "windDir": "NNW",
           "tempCLow": 0,
           "tempCHigh": 3,
           "cloudFree": 50,
-          "freezingLevel": 900,
+          "freezingLevel": 1000,
           "visibility": "poor",
-          "amSky": "snow",
-          "pmSky": "snow",
-          "status": "poor",
-          "reason": "heavy hail/snow showers, thunder risk, gusts 40mph, sub-zero wind chill"
-        },
-        {
-          "sky": "partly-cloudy",
-          "windMphLow": 15,
-          "windMphHigh": 25,
-          "windDir": "NW",
-          "tempCLow": 0,
-          "tempCHigh": 0,
-          "cloudFree": 50,
-          "freezingLevel": 950,
-          "visibility": "good",
           "amSky": "partly-cloudy",
           "pmSky": "snow",
           "status": "poor",
-          "reason": "hail/snow showers developing widely, persistent cloud banking tops 800-1000m"
+          "reason": "heavy hail/snow showers, gusts 40mph Lochaber, isolated thunder, significant wind chill"
         },
         {
           "sky": "partly-cloudy",
@@ -100,13 +85,28 @@
           "windDir": "NW",
           "tempCLow": -2,
           "tempCHigh": 3,
-          "cloudFree": 50,
+          "cloudFree": 65,
           "freezingLevel": 900,
-          "visibility": "good",
+          "visibility": "excellent",
           "amSky": "snow",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "blustery dawn gusts 35mph, isolated snow/hail showers, easing through day"
+          "reason": "very blustery start, snow/hail showers, -2C dawn, easing to mostly small later"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 15,
+          "windMphHigh": 25,
+          "windDir": "S",
+          "tempCLow": -1,
+          "tempCHigh": 3,
+          "cloudFree": 80,
+          "freezingLevel": 700,
+          "visibility": "excellent",
+          "amSky": "sun",
+          "pmSky": "rain",
+          "status": "marginal",
+          "reason": "dry sunny morning, rain onto islands/coast PM, snow flurries above 1100m, low dawn freezing level"
         }
       ]
     },
@@ -116,48 +116,48 @@
         {
           "sky": "snow",
           "windMphLow": 25,
-          "windMphHigh": 30,
-          "windDir": "NW",
+          "windMphHigh": 40,
+          "gustMph": 50,
+          "windDir": "NNW",
           "tempCLow": 0,
-          "tempCHigh": 3,
+          "tempCHigh": 2,
           "cloudFree": 40,
-          "freezingLevel": 900,
+          "freezingLevel": 950,
           "visibility": "poor",
           "amSky": "snow",
           "pmSky": "snow",
           "status": "poor",
-          "reason": "heavy hail/snow showers, thunder risk, cloud capping Cairngorms above 1000m"
+          "reason": "gusts over 50mph NE Cairngorms, heavy hail/snow showers, isolated thunder, -10 to -15C chill"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 15,
-          "windMphHigh": 25,
-          "windDir": "NW",
-          "tempCLow": 0,
-          "tempCHigh": 0,
-          "cloudFree": 50,
-          "freezingLevel": 950,
-          "visibility": "good",
-          "amSky": "partly-cloudy",
-          "pmSky": "snow",
-          "status": "poor",
-          "reason": "hail/snow showers developing widely, cloud persisting on tops 900-1100m"
-        },
-        {
-          "sky": "partly-cloudy",
-          "windMphLow": 15,
-          "windMphHigh": 35,
-          "gustMph": 40,
-          "windDir": "NW",
+          "windMphHigh": 40,
+          "windDir": "NNW",
           "tempCLow": -2,
           "tempCHigh": 3,
-          "cloudFree": 40,
+          "cloudFree": 55,
           "freezingLevel": 900,
-          "visibility": "moderate",
+          "visibility": "good",
           "amSky": "snow",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gusts 40mph eastern Cairngorms at dawn, snow/hail showers, cloud persisting northern tops"
+          "reason": "40mph dawn, stronger gusts east, snow/hail showers, -10 to -15C wind chill, arduous start"
+        },
+        {
+          "sky": "sun",
+          "windMphLow": 10,
+          "windMphHigh": 20,
+          "windDir": "SW",
+          "tempCLow": -1,
+          "tempCHigh": 4,
+          "cloudFree": 90,
+          "freezingLevel": 700,
+          "visibility": "excellent",
+          "amSky": "sun",
+          "pmSky": "partly-cloudy",
+          "status": "go",
+          "reason": "mostly dry, 90% cloud-free, light winds, sunshine best early, frost at dawn only"
         }
       ]
     },
@@ -167,48 +167,48 @@
         {
           "sky": "snow",
           "windMphLow": 25,
-          "windMphHigh": 30,
-          "windDir": "NW",
-          "tempCLow": 0,
-          "tempCHigh": 3,
-          "cloudFree": 50,
-          "freezingLevel": 900,
-          "visibility": "poor",
-          "amSky": "partly-cloudy",
-          "pmSky": "snow",
-          "status": "poor",
-          "reason": "heavy hail/snow showers, thunder risk, wind chill -10 to -13C on summits"
-        },
-        {
-          "sky": "partly-cloudy",
-          "windMphLow": 15,
-          "windMphHigh": 25,
-          "windDir": "NW",
+          "windMphHigh": 40,
+          "gustMph": 50,
+          "windDir": "NNW",
           "tempCLow": 0,
           "tempCHigh": 2,
           "cloudFree": 60,
           "freezingLevel": 1000,
-          "visibility": "excellent",
+          "visibility": "poor",
           "amSky": "sun",
           "pmSky": "snow",
-          "status": "marginal",
-          "reason": "dry start then hail/snow showers developing afternoon, cloud capping tops PM"
+          "status": "poor",
+          "reason": "gusts over 50mph eastern hills, hail/snow showers, isolated thunder, significant wind chill"
         },
         {
           "sky": "partly-cloudy",
-          "windMphLow": 15,
-          "windMphHigh": 35,
-          "gustMph": 40,
+          "windMphLow": 20,
+          "windMphHigh": 40,
           "windDir": "NW",
           "tempCLow": -2,
           "tempCHigh": 3,
-          "cloudFree": 60,
-          "freezingLevel": 900,
-          "visibility": "good",
-          "amSky": "snow",
+          "cloudFree": 75,
+          "freezingLevel": 950,
+          "visibility": "excellent",
+          "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "arduous dawn gusts 40mph easing; snow showers morning, tops clearing afternoon"
+          "reason": "arduous blustery start 25-40mph, snow showers, -10 to -15C chill, easing to mostly small"
+        },
+        {
+          "sky": "sun",
+          "windMphLow": 10,
+          "windMphHigh": 20,
+          "windDir": "SW",
+          "tempCLow": -1,
+          "tempCHigh": 4,
+          "cloudFree": 90,
+          "freezingLevel": 700,
+          "visibility": "excellent",
+          "amSky": "sun",
+          "pmSky": "partly-cloudy",
+          "status": "go",
+          "reason": "largely dry, 90% cloud-free, light winds, sunshine best morning, patchy rain risk west evening only"
         }
       ]
     },
@@ -216,34 +216,20 @@
       "name": "Southern Uplands",
       "forecast": [
         {
-          "sky": "snow",
+          "sky": "partly-cloudy",
           "windMphLow": 20,
-          "windMphHigh": 30,
-          "windDir": "NW",
-          "tempCLow": 1,
+          "windMphHigh": 25,
+          "gustMph": 35,
+          "windDir": "NNW",
+          "tempCLow": 2,
           "tempCHigh": 4,
           "cloudFree": 70,
-          "freezingLevel": 700,
-          "visibility": "poor",
-          "amSky": "partly-cloudy",
-          "pmSky": "snow",
-          "status": "poor",
-          "reason": "heavy hail/snow showers, thunder risk, gusts 30mph Galloway, wind chill -10C"
-        },
-        {
-          "sky": "partly-cloudy",
-          "windMphLow": 15,
-          "windMphHigh": 20,
-          "windDir": "NW",
-          "tempCLow": 3,
-          "tempCHigh": 3,
-          "cloudFree": 60,
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "bright start, then hail showers PM; sleet on tops, cloud lowering in showers"
+          "reason": "chilly breezy, gusts 35mph, heavy hail showers PM, isolated thunder risk"
         },
         {
           "sky": "partly-cloudy",
@@ -251,18 +237,33 @@
           "windMphHigh": 30,
           "windDir": "NW",
           "tempCLow": 0,
-          "tempCHigh": 3,
-          "cloudFree": 70,
+          "tempCHigh": 4,
+          "cloudFree": 80,
           "freezingLevel": 9999,
-          "visibility": "good",
-          "amSky": "snow",
-          "pmSky": "sun",
+          "visibility": "excellent",
+          "amSky": "sun",
+          "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "blustery dawn 30mph easing; showers east of M74, snow tops initially, clearing"
+          "reason": "blustery start, significant wind chill dawn, brief showers possible, easing to mostly small"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 10,
+          "windMphHigh": 25,
+          "windDir": "SW",
+          "tempCLow": 1,
+          "tempCHigh": 5,
+          "cloudFree": 80,
+          "freezingLevel": 9999,
+          "visibility": "excellent",
+          "amSky": "sun",
+          "pmSky": "rain",
+          "status": "go",
+          "reason": "dry sunny morning, light winds, rain pushes into Galloway PM only — mostly fine"
         }
       ]
     }
   ],
-  "_generated": "2026-05-12T21:08:09.226Z",
-  "_anchorDate": "2026-05-13"
+  "_generated": "2026-05-13T16:39:43.434Z",
+  "_anchorDate": "2026-05-14"
 }
