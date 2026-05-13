@@ -618,6 +618,8 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 .wx-day.open,.wx-day.go-bg.open{background:var(--surface-elev);border-color:var(--accent)}
 .wx-day-label{font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);font-weight:500}
 .wx-day-icon{width:26px;height:26px;color:var(--ink);opacity:.85}
+.wx-gust-icon{width:18px;height:18px;color:var(--terra-dark);margin-left:.2rem;vertical-align:middle}
+.wx-sky-row{display:flex;align-items:center;justify-content:center;gap:.15rem}
 .wx-day-status{font-size:.58rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
 .wx-st-go{color:var(--accent-dark)}
 .wx-st-marg{color:#7A4A08}
@@ -3936,11 +3938,14 @@ var WX_SKY = {
   rain:'<svg class="wx-day-icon" viewBox="0 0 32 32" fill="none"><path d="M23 18H10a5.5 5.5 0 0 1 0-11 6.5 6.5 0 0 1 12.5 1.8A4.5 4.5 0 0 1 23 18z" fill="currentColor" opacity="0.85"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="11" y1="22" x2="9.5" y2="27"/><line x1="17" y1="22" x2="15.5" y2="27"/><line x1="23" y1="22" x2="21.5" y2="27"/></g></svg>',
   // Fog: stacked horizontal bars
   fog:'<svg class="wx-day-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="5" y1="10" x2="27" y2="10"/><line x1="5" y1="16" x2="27" y2="16"/><line x1="5" y1="22" x2="27" y2="22"/><line x1="9" y1="28" x2="23" y2="28" opacity="0.5"/><line x1="9" y1="4" x2="23" y2="4" opacity="0.5"/></svg>',
-  // Snow: cloud with three snowflakes (asterisks)
-  snow:'<svg class="wx-day-icon" viewBox="0 0 32 32" fill="none"><path d="M23 18H10a5.5 5.5 0 0 1 0-11 6.5 6.5 0 0 1 12.5 1.8A4.5 4.5 0 0 1 23 18z" fill="currentColor" opacity="0.85"/><g stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><g transform="translate(11 25)"><line x1="-2.5" y1="0" x2="2.5" y2="0"/><line x1="0" y1="-2.5" x2="0" y2="2.5"/><line x1="-1.7" y1="-1.7" x2="1.7" y2="1.7"/><line x1="-1.7" y1="1.7" x2="1.7" y2="-1.7"/></g><g transform="translate(17 28)"><line x1="-2" y1="0" x2="2" y2="0"/><line x1="0" y1="-2" x2="0" y2="2"/></g><g transform="translate(23 25)"><line x1="-2.5" y1="0" x2="2.5" y2="0"/><line x1="0" y1="-2.5" x2="0" y2="2.5"/><line x1="-1.7" y1="-1.7" x2="1.7" y2="1.7"/><line x1="-1.7" y1="1.7" x2="1.7" y2="-1.7"/></g></g></svg>',
+  // Snow: cloud with a single snowflake below
+  snow:'<svg class="wx-day-icon" viewBox="0 0 32 32" fill="none"><path d="M23 17H10a5.5 5.5 0 0 1 0-11 6.5 6.5 0 0 1 12.5 1.8A4.5 4.5 0 0 1 23 17z" fill="currentColor" opacity="0.85"/><g stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="16.5" y1="20" x2="16.5" y2="29"/><line x1="12.5" y1="22.5" x2="20.5" y2="26.5"/><line x1="20.5" y1="22.5" x2="12.5" y2="26.5"/></g></svg>',
   // Storm: cloud with bold lightning bolt
   storm:'<svg class="wx-day-icon" viewBox="0 0 32 32" fill="none"><path d="M22 16H10a5.5 5.5 0 0 1 0-11 6.5 6.5 0 0 1 12.5 1.8A4.5 4.5 0 0 1 22 16z" fill="currentColor" opacity="0.85"/><path d="M17 17l-5 8h4l-2 6 6-9h-4l3-5z" fill="currentColor"/></svg>'
 };
+// Gust icon (G1 — wind streams) — shown alongside sky icon when gusts ≥40 mph
+var WX_GUST_ICON = '<svg class="wx-gust-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11h13a3 3 0 1 0 -3 -3"/><path d="M4 21h19a3 3 0 1 1 -3 3"/><path d="M4 16h9"/></svg>';
+var WX_GUST_THRESHOLD = 40; // mph
 var WX_SKY_LABEL = {sun:'Sun','partly-cloudy':'Mixed',cloud:'Cloud',rain:'Rain',fog:'Fog',snow:'Snow',storm:'Storm'};
 var WX_PILL_CLASS = {sun:'wx-pill-sun','partly-cloudy':'wx-pill-cloud',cloud:'wx-pill-cloud',rain:'wx-pill-rain',fog:'wx-pill-fog',snow:'wx-pill-snow',storm:'wx-pill-storm'};
 
@@ -4005,10 +4010,15 @@ function wxRenderDayCell(f, dayIdx, regionName, isOpen){
   var st = f.status||'marginal';
   var goBg = st==='go' ? ' go-bg' : '';
   var openClass = isOpen ? ' open' : '';
+  var skyIcon = WX_SKY[f.sky]||WX_SKY.cloud;
+  var gustIcon = (f.gustMph && f.gustMph >= WX_GUST_THRESHOLD) ? WX_GUST_ICON : '';
+  var skyRow = gustIcon
+    ? '<div class="wx-sky-row">'+skyIcon+gustIcon+'</div>'
+    : skyIcon;
   return ''+
   '<div class="wx-day'+goBg+openClass+'" data-region="'+wxEsc(regionName)+'" data-day="'+dayIdx+'">'+
     '<div class="wx-day-label">'+wxEsc((wxData.days||[])[dayIdx]||'')+'</div>'+
-    (WX_SKY[f.sky]||WX_SKY.cloud)+
+    skyRow+
     '<div class="wx-day-status '+wxStatusClass(st)+'">'+wxStatusLabel(st)+'</div>'+
   '</div>';
 }
