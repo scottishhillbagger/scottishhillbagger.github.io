@@ -23,7 +23,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gusts 40-50mph, snow/hail showers, -2C tops, severe wind chill"
+          "reason": "40mph gusts, snow/hail showers, -10 to -15C wind chill, freezing tops"
         },
         {
           "sky": "partly-cloudy",
@@ -38,7 +38,7 @@
           "amSky": "sun",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "dry fine morning, rain moves onto Skye/Wester Ross afternoon, cloud drops"
+          "reason": "dry bright morning, rain develops Skye/Wester Ross PM, cloud drops to 30%"
         },
         {
           "sky": "rain",
@@ -54,7 +54,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "rain all day, gusts 40mph near Skye, hail/thunder, snow highest tops"
+          "reason": "rain all day, gusts 40mph Skye, heavy showery bursts, hail & thunder risk"
         }
       ]
     },
@@ -63,7 +63,7 @@
       "forecast": [
         {
           "sky": "partly-cloudy",
-          "windMphLow": 25,
+          "windMphLow": 30,
           "windMphHigh": 30,
           "gustMph": 40,
           "windDir": "NW",
@@ -72,10 +72,10 @@
           "cloudFree": 50,
           "freezingLevel": 700,
           "visibility": "excellent",
-          "amSky": "partly-cloudy",
-          "pmSky": "sun",
+          "amSky": "cloud",
+          "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gusts 35-40mph, snow/hail showers, -2C tops, severe wind chill at dawn"
+          "reason": "35-40mph gusts inland, snow/hail showers, -10C wind chill, winter conditions"
         },
         {
           "sky": "partly-cloudy",
@@ -90,7 +90,7 @@
           "amSky": "sun",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "fine morning, rain develops coast/islands afternoon, cloud lowers later"
+          "reason": "fine morning, rain extends inland PM, cloud drops coastal hills, snow above 1100m"
         },
         {
           "sky": "rain",
@@ -106,7 +106,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "rain all day, gusts 40mph coastal tops, hail/thunder, snow highest tops"
+          "reason": "rain all day, gusts 40mph coastal tops, heavy bursts, hail & thunder, snow high tops"
         }
       ]
     },
@@ -115,10 +115,10 @@
       "forecast": [
         {
           "sky": "partly-cloudy",
-          "windMphLow": 25,
+          "windMphLow": 40,
           "windMphHigh": 40,
           "gustMph": 50,
-          "windDir": "NNW",
+          "windDir": "NW",
           "tempCLow": -2,
           "tempCHigh": 3,
           "cloudFree": 40,
@@ -127,12 +127,12 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gusts over 50mph Cairngorm plateau, snow/hail, -10 to -15C wind chill"
+          "reason": "gusts 50mph+ Cairngorm plateau, snow/hail, -10 to -15C wind chill, winter conditions"
         },
         {
           "sky": "sun",
           "windMphLow": 15,
-          "windMphHigh": 20,
+          "windMphHigh": 25,
           "windDir": "SW",
           "tempCLow": -2,
           "tempCHigh": 4,
@@ -142,7 +142,7 @@
           "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "go",
-          "reason": "90% cloud-free Munros, mostly dry, light winds, excellent visibility"
+          "reason": "mostly dry, 90% cloud-free until late, sunshine best early, rain arrives evening"
         },
         {
           "sky": "partly-cloudy",
@@ -158,7 +158,7 @@
           "amSky": "sun",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "heavy showers/hail/thunder PM, gusts 40mph higher Cairngorms, sleet high tops"
+          "reason": "dry AM, heavy showery bursts PM, gusts 40mph higher Cairngorms, hail & thunder risk"
         }
       ]
     },
@@ -167,7 +167,7 @@
       "forecast": [
         {
           "sky": "partly-cloudy",
-          "windMphLow": 25,
+          "windMphLow": 40,
           "windMphHigh": 40,
           "gustMph": 50,
           "windDir": "NW",
@@ -176,10 +176,10 @@
           "cloudFree": 60,
           "freezingLevel": 700,
           "visibility": "excellent",
-          "amSky": "sun",
-          "pmSky": "partly-cloudy",
+          "amSky": "partly-cloudy",
+          "pmSky": "sun",
           "status": "poor",
-          "reason": "gusts over 50mph east hills at dawn, snow/hail, -10 to -15C wind chill"
+          "reason": "gusts 50mph+ easternmost hills, snow/hail showers, -10 to -15C wind chill"
         },
         {
           "sky": "sun",
@@ -194,7 +194,7 @@
           "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "go",
-          "reason": "90% cloud-free Munros until late, dry, excellent visibility all day"
+          "reason": "90% cloud-free, dry most of day, sunshine best early east, rain arrives late west"
         },
         {
           "sky": "partly-cloudy",
@@ -210,7 +210,7 @@
           "amSky": "sun",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "heavy showers/hail/thunder PM, gusts 35-40mph central highlands, sleet high tops"
+          "reason": "dry AM, heavy showery bursts PM extending east, gusts 35-40mph, hail & thunder risk"
         }
       ]
     },
@@ -231,12 +231,12 @@
           "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "blustery 30-35mph, wind chill near -10C, isolated hail showers"
+          "reason": "blustery 35mph gusts east, wind chill -10C, isolated hail showers, chilly tops"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 10,
-          "windMphHigh": 20,
+          "windMphHigh": 25,
           "windDir": "SW",
           "tempCLow": 0,
           "tempCHigh": 5,
@@ -246,7 +246,7 @@
           "amSky": "sun",
           "pmSky": "rain",
           "status": "go",
-          "reason": "fine dry morning, light winds, rain only reaches Galloway late afternoon"
+          "reason": "dry sunny morning, rain arrives Galloway PM gradually, light winds early"
         },
         {
           "sky": "partly-cloudy",
@@ -261,11 +261,11 @@
           "amSky": "sun",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "heavy showers/hail/thunder PM, 20-30mph SW, marked wind chill"
+          "reason": "heavy showery bursts PM, hail & thunder risk, 30mph winds, rain extends east"
         }
       ]
     }
   ],
-  "_generated": "2026-05-14T16:22:17.693Z",
+  "_generated": "2026-05-14T20:57:39.086Z",
   "_anchorDate": "2026-05-15"
 }
