@@ -11,7 +11,7 @@
       "forecast": [
         {
           "sky": "partly-cloudy",
-          "windMphLow": 15,
+          "windMphLow": 10,
           "windMphHigh": 25,
           "windDir": "SSE",
           "tempCLow": -1,
@@ -22,7 +22,7 @@
           "amSky": "sun",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "dry clear AM, rain and low cloud arriving west coast PM"
+          "reason": "Rain and low cloud encroach west from mid-afternoon near Skye"
         },
         {
           "sky": "rain",
@@ -37,7 +37,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "SW 25-35mph, rain all day, hail and thunder risk, snow high tops"
+          "reason": "Rain all day, gusts 35mph, hail/thunder risk, severe wind chill -7 to -10C"
         },
         {
           "sky": "partly-cloudy",
@@ -47,13 +47,13 @@
           "windDir": "SSE",
           "tempCLow": 1,
           "tempCHigh": 5,
-          "cloudFree": 70,
+          "cloudFree": 50,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "localised showery bursts inland PM, thunder risk, gusts 30mph Cuillin"
+          "reason": "Localised heavy showers, thunder risk, gusts 30mph Cuillin, only 30% cloud-free early"
         }
       ]
     },
@@ -62,19 +62,19 @@
       "forecast": [
         {
           "sky": "partly-cloudy",
-          "windMphLow": 15,
+          "windMphLow": 10,
           "windMphHigh": 25,
           "gustMph": 30,
           "windDir": "SSW",
           "tempCLow": -1,
           "tempCHigh": 3,
           "cloudFree": 80,
-          "freezingLevel": 700,
+          "freezingLevel": 750,
           "visibility": "excellent",
           "amSky": "sun",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "dry clear AM, rain and low cloud from west PM, gusts 30mph high tops"
+          "reason": "Fine morning; rain, low cloud, sleet above 1100m arrive from west afternoon"
         },
         {
           "sky": "rain",
@@ -85,12 +85,12 @@
           "tempCLow": 1,
           "tempCHigh": 4,
           "cloudFree": 30,
-          "freezingLevel": 1000,
+          "freezingLevel": 1050,
           "visibility": "good",
-          "amSky": "cloud",
+          "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "SW 25-35mph gusts 40mph, rain all day, snow high tops, thunder risk"
+          "reason": "Gusts 40mph high tops, rain/snow, hail/thunder, wind chill near -10C"
         },
         {
           "sky": "partly-cloudy",
@@ -100,13 +100,13 @@
           "windDir": "SSE",
           "tempCLow": 2,
           "tempCHigh": 6,
-          "cloudFree": 60,
+          "cloudFree": 45,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "patchy rain AM, localised showery bursts inland PM, gusts 30mph coastal tops"
+          "reason": "Showery bursts inland afternoon, gusts 30mph coasts, only 30% cloud-free morning"
         }
       ]
     },
@@ -115,18 +115,18 @@
       "forecast": [
         {
           "sky": "partly-cloudy",
-          "windMphLow": 15,
+          "windMphLow": 10,
           "windMphHigh": 25,
           "windDir": "SW",
           "tempCLow": -2,
           "tempCHigh": 4,
           "cloudFree": 90,
-          "freezingLevel": 600,
+          "freezingLevel": 650,
           "visibility": "excellent",
           "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "go",
-          "reason": "dry clear hills all day, 90% cloud-free, rain only arriving evening"
+          "reason": "Dry most of day, 90% cloud-free, light winds, rain only from evening southwest"
         },
         {
           "sky": "rain",
@@ -142,7 +142,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 40mph Cairngorm plateau, heavy showers PM, sleet, thunder risk"
+          "reason": "Gusts 40mph Cairngorm plateau, heavy showers, sleet, hail/thunder, wind chill -10C"
         },
         {
           "sky": "partly-cloudy",
@@ -152,13 +152,13 @@
           "windDir": "SSE",
           "tempCLow": 2,
           "tempCHigh": 7,
-          "cloudFree": 70,
+          "cloudFree": 55,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "localised heavy showers PM, isolated thunder risk, gusts 25-30mph eastern hills"
+          "reason": "Heavy localised showers afternoon, thunder risk, gusts 25-30mph eastern hills"
         }
       ]
     },
@@ -167,7 +167,7 @@
       "forecast": [
         {
           "sky": "partly-cloudy",
-          "windMphLow": 15,
+          "windMphLow": 10,
           "windMphHigh": 25,
           "windDir": "SW",
           "tempCLow": -1,
@@ -178,7 +178,7 @@
           "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "go",
-          "reason": "dry clear hills most of day, 90% cloud-free, rain only late evening west"
+          "reason": "Dry and clear most of day, 90% cloud-free; rain arrives west only by evening"
         },
         {
           "sky": "rain",
@@ -194,7 +194,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 35-40mph central highlands summits, heavy showers PM, sleet, thunder"
+          "reason": "Gusts 35-40mph central highlands, heavy showers, sleet, hail/thunder, wind chill -10C"
         },
         {
           "sky": "partly-cloudy",
@@ -204,13 +204,13 @@
           "windDir": "SSE",
           "tempCLow": 2,
           "tempCHigh": 6,
-          "cloudFree": 70,
+          "cloudFree": 50,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "localised heavy showers drifting north PM, isolated thunder, gusts 25-30mph"
+          "reason": "Localised heavy showers afternoon, thunder risk, gusts 25-30mph, only 30% clear morning"
         }
       ]
     },
@@ -226,12 +226,12 @@
           "tempCLow": 0,
           "tempCHigh": 5,
           "cloudFree": 80,
-          "freezingLevel": 700,
+          "freezingLevel": 750,
           "visibility": "excellent",
           "amSky": "sun",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "dry AM, rain pushes into Galloway PM, cloud lowers west, gusts 30mph evening"
+          "reason": "Fine morning; rain and lowering cloud arrive Galloway afternoon, gusty 30mph evening"
         },
         {
           "sky": "rain",
@@ -245,8 +245,8 @@
           "visibility": "good",
           "amSky": "partly-cloudy",
           "pmSky": "rain",
-          "status": "marginal",
-          "reason": "SW 20-30mph, heavy showers PM extending east, hail and thunder risk"
+          "status": "poor",
+          "reason": "Heavy showers, hail/thunder, 30mph winds strongest west, marked wind chill"
         },
         {
           "sky": "partly-cloudy",
@@ -256,17 +256,17 @@
           "windDir": "SSE",
           "tempCLow": 3,
           "tempCHigh": 7,
-          "cloudFree": 80,
+          "cloudFree": 55,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "cloud",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "patchy rain AM, showers drifting east PM, gusts 25-30mph western hills later"
+          "reason": "Showers drifting east, gusty 25-30mph west later, improving afternoon western areas"
         }
       ]
     }
   ],
-  "_generated": "2026-05-15T20:38:42.832Z",
+  "_generated": "2026-05-16T11:34:07.612Z",
   "_anchorDate": "2026-05-16"
 }
