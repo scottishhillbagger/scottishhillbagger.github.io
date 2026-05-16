@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Scottish Hill Gaelic</title>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIiBmaWxsPSJub25lIj48ZyBzdHJva2U9IiMxQTFBMTkiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyLjQiPjxwYXRoIGQ9Ik0gNTggMTQgQyA4NiAxMSwgMTAwIDI2LCAxMDQgNDYgQyAxMDggNjgsIDk2IDkwLCA4MCAxMDAgQyA2NCAxMDgsIDM4IDEwNCwgMjQgOTAgQyAxMiA3OCwgMTQgNTYsIDIwIDM4IEMgMjggMjAsIDQwIDE2LCA1OCAxNCBaIi8+PHBhdGggZD0iTSA2MCAyNiBDIDgwIDIzLCA5MiAzNiwgOTQgNTIgQyA5NiA2NiwgODQgODIsIDcwIDg2IEMgNTYgOTIsIDM4IDg4LCAzMiA3OCBDIDI0IDY2LCAyOCA1MCwgMzggMzggQyA0NiAyOCwgNTAgMjgsIDYwIDI2IFoiLz48cGF0aCBkPSJNIDYwIDM4IEMgNzggMzYsIDg2IDQ4LCA4NiA1OCBDIDg2IDcwLCA3NCA3OCwgNjIgNzggQyA1MCA3OCwgNDAgNzIsIDM4IDYyIEMgMzcgNTAsIDUwIDQwLCA1NiAzOCBDIDU3LjUgMzgsIDU4LjUgMzgsIDYwIDM4IFoiLz48cGF0aCBkPSJNIDYyIDUwIEMgNzMgNDksIDc4IDU1LCA3NiA2MiBDIDc0IDY4LCA2OCA3MCwgNjIgNzAgQyA1MyA3MCwgNDcgNjYsIDQ4IDYwIEMgNTAgNTQsIDU2IDUwLCA2MCA1MCBDIDYwLjcgNTAsIDYxLjMgNTAsIDYyIDUwIFoiLz48L2c+PGNpcmNsZSBjeD0iNjIiIGN5PSI2MCIgcj0iNSIgZmlsbD0iI0I4NTQzQSIvPjwvc3ZnPg==">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="gaelic.css">
+</head>
+<body>
+
+<header class="mast">
+  <div class="mast-in">
+    <div class="mast-lockup">
+      <svg class="mast-logo" width="32" height="32" viewBox="0 0 120 120" fill="none" aria-hidden="true">
+        <g stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.2">
+          <path d="M 58 14 C 86 11, 100 26, 104 46 C 108 68, 96 90, 80 100 C 64 108, 38 104, 24 90 C 12 78, 14 56, 20 38 C 28 20, 40 16, 58 14 Z"/>
+          <path d="M 60 38 C 78 36, 86 48, 86 58 C 86 70, 74 78, 62 78 C 50 78, 40 72, 38 62 C 37 50, 50 40, 56 38 C 57.5 38, 58.5 38, 60 38 Z"/>
+          <path d="M 62 50 C 73 49, 78 55, 76 62 C 74 68, 68 70, 62 70 C 53 70, 47 66, 48 60 C 50 54, 56 50, 60 50 C 60.7 50, 61.3 50, 62 50 Z"/>
+        </g>
+        <circle cx="62" cy="60" r="5.5" fill="#B8543A"/>
+      </svg>
+      <h1 class="mast-h1">Scottish <em>Hill Gaelic</em></h1>
+    </div>
+    <a class="mast-back" href="index.html" aria-label="Back to Scottish Hill Bagger">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+      <span>Hill Bagger</span>
+    </a>
+  </div>
+</header>
+
+<p class="mast-deck">A reading &amp; pronunciation guide for Scottish hill names.</p>
+
+<div id="root"></div>
+
+<footer class="page-foot">
+  <div class="page-foot-in">
+    <p class="page-foot-blurb">
+      Thirty-six well-known Scottish hills broken down into their Gaelic roots, sounds, and meanings. Once you learn the patterns here, you can apply them to the other 700.
+    </p>
+    <p class="page-foot-credits">
+      <a href="index.html">← Scottish Hill Bagger</a>
+    </p>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script src="data.js"></script>
+<script type="text/babel" src="silhouette.jsx"></script>
+<script type="text/babel" src="dissector.jsx"></script>
+<script type="text/babel" src="pronunciation.jsx"></script>
+<script type="text/babel" src="quiz.jsx"></script>
+<script type="text/babel" src="fieldguide.jsx"></script>
+<script type="text/babel" src="app.jsx"></script>
+
+</body>
+</html>
