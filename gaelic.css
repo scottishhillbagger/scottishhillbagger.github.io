@@ -960,3 +960,118 @@ input, textarea {
    Utility classes used by widgets
    ───────────────────────────────────────────────────────────────────── */
 .hidden { display: none !important; }
+
+/* ─────────────────────────────────────────────────────────────────────
+   MOBILE — phones and narrow tablets
+   ───────────────────────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .mast-in { padding: .85rem 1rem; }
+  .mast-deck { padding: .75rem 1rem 0; font-size: .76rem; line-height: 1.5; }
+  .app { padding: .75rem 1rem 2rem; }
+
+  /* Mode tabs scroll horizontally instead of wrapping awkwardly */
+  .modes {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    margin: .85rem -1rem 1rem;
+    padding: 0 1rem .15rem;
+    flex-wrap: nowrap;
+  }
+  .modes::-webkit-scrollbar { display: none; }
+  .mode-btn { padding: .55rem .85rem; font-size: .85rem; white-space: nowrap; flex-shrink: 0; }
+
+  /* Hill name: smaller to avoid overflow */
+  .hill-name {
+    font-size: clamp(1.65rem, 9vw, 2.4rem);
+    word-spacing: .1em;
+    line-height: 1.1;
+  }
+  .hill-classification {
+    flex-wrap: wrap;
+    gap: .45rem;
+    font-size: .68rem;
+  }
+
+  /* Pronunciation block: tighter padding */
+  .hill-pron { padding: .7rem .85rem; }
+  .pron-line { font-size: .82rem; }
+  .pron-line.ipa .pron-value { font-size: .72rem; }
+  .hill-meaning { font-size: .95rem; }
+
+  /* Filters chips wrap below picker on mobile */
+  .dissector-top { gap: .55rem; flex-direction: column; align-items: stretch; }
+  .filters { gap: .3rem; }
+  .filter-chip { font-size: .65rem; padding: .2rem .5rem; }
+
+  /* Picker: bigger touch target */
+  .picker-input { padding: .65rem .75rem; }
+  .picker-input input { font-size: 16px; /* avoid iOS auto-zoom */ }
+  .picker-results { max-height: 60vh; }
+
+  /* Right column compacts */
+  .dissector-side { gap: .85rem; }
+  .silhouette-wrap { padding: .75rem; }
+  .part-detail { padding: .8rem .9rem; }
+  .part-detail-text { font-size: 1.3rem; }
+  .part-detail.hint .hint-body { font-size: .82rem; }
+
+  /* Relatives chips smaller */
+  .rel-chip { padding: .3rem .6rem; }
+  .rel-name { font-size: .75rem; }
+  .rel-root { font-size: .62rem; }
+
+  /* — TRAINER — */
+  .trainer-tabs { margin: 0 -1rem 1rem; padding: 0 1rem .4rem; }
+  .trainer-tab { padding: .4rem .7rem; font-size: .72rem; }
+  .group-description { font-size: .85rem; }
+
+  .phoneme-grid { grid-template-columns: repeat(auto-fill, minmax(95px, 1fr)); gap: .4rem; }
+  .phoneme-card { padding: .55rem .5rem; }
+  .phoneme-letters { font-size: 1rem; }
+  .phoneme-anglo { font-size: .72rem; }
+
+  .phoneme-detail { padding: .85rem .9rem; position: static; }
+  .pd-letters { font-size: 1.5rem; }
+  .pd-anglo { font-size: 1rem; }
+
+  /* — QUIZ — */
+  .quiz-header { flex-direction: column; gap: .85rem; align-items: stretch; }
+  .quiz-types { gap: .3rem; }
+  .quiz-type { padding: .5rem .7rem; flex: 1; }
+  .qt-label { font-size: .76rem; }
+  .qt-sub { font-size: .62rem; }
+
+  /* Stats row spreads evenly */
+  .quiz-stats { justify-content: space-around; padding: .6rem 0; background: var(--surface); border-radius: 8px; }
+  .quiz-stats .stat { min-width: 0; flex: 1; }
+  .quiz-stats .stat-value { font-size: 1.2rem; }
+  .quiz-stats .stat-label { font-size: .54rem; }
+
+  .quiz-body { padding: 1rem; }
+  .prompt-hill { font-size: clamp(1.4rem, 6vw, 1.8rem); }
+  .quiz-options { gap: .45rem; }
+  .option { padding: .65rem .75rem; font-size: .85rem; }
+
+  .btn-primary { width: 100%; align-self: stretch; padding: .8rem 1rem; }
+
+  /* — FIELD GUIDE — */
+  .guide-top { gap: .55rem; }
+  .guide-filters { gap: .25rem; width: 100%; overflow-x: auto; flex-wrap: nowrap; padding-bottom: .25rem; }
+  .guide-filters::-webkit-scrollbar { display: none; }
+  .guide-filter { padding: .3rem .65rem; font-size: .7rem; white-space: nowrap; flex-shrink: 0; }
+  .guide-search input { font-size: 16px; /* avoid iOS auto-zoom */ }
+
+  .guide-entry { padding: .75rem .85rem; gap: .65rem; }
+  .entry-word { font-size: 1.05rem; }
+  .entry-meaning { font-size: .82rem; }
+  .entry-pron { font-size: .8rem; }
+  .entry-note { font-size: .72rem; }
+}
+
+/* Even tighter on small phones */
+@media (max-width: 380px) {
+  .mast-h1 { font-size: 1.05rem; }
+  .hill-name { font-size: clamp(1.5rem, 8vw, 2rem); }
+  .quiz-stats .stat-value { font-size: 1.1rem; }
+}
