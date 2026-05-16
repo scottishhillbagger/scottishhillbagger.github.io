@@ -6,26 +6,28 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  /* Bagger palette */
-  --bg:          #F5F1E8;
-  --surface:     #FAF7EE;
+  /* Bagger palette — synced with index.html */
+  --bg:          #F5F3EE;
+  --bg2:         #EDEAE3;
+  --surface:     #FAF8F3;
   --surface-elev:#FFFFFF;
-  --ink:         #1F1E1A;
-  --ink2:        #3F3D38;
-  --ink3:        #7A7770;
-  --ink4:        #B8B5AB;
-  --rule:        #E5E0D2;
-  --rule2:       #EFEBDF;
+  --ink:         #1A1A19;
+  --ink2:        #4A4A47;
+  --ink3:        #8A8882;
+  --ink4:        #C4C0B5;
+  --rule:        #E8E5DC;
+  --rule2:       #F0EDE4;
   --accent:      #6B7A4F;       /* sage */
   --accent-dark: #4E5B38;
-  --accent-light:#EDF0E1;
+  --accent-light:#E8ECDE;
   --terra:       #B8543A;
-  --terra-dark:  #9A4530;
+  --terra-light: #F0D4C9;
+  --terra-dark:  #8A3E2B;
 
-  /* Type system — Geist only */
-  --font-display: 'Geist', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-  --font-body:    'Geist', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-  --font-mono:    'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  /* Type system — Geist only, matches index.html */
+  --font-display:'Geist',-apple-system,BlinkMacSystemFont,'SF Pro Display','Helvetica Neue',sans-serif;
+  --font-body:   'Geist',-apple-system,BlinkMacSystemFont,'SF Pro Text','Helvetica Neue',sans-serif;
+  --font-mono:   'Geist Mono',ui-monospace,SFMono-Regular,'SF Mono',monospace;
 
   /* Hill-type colours (used by classification badges) */
   --c-munro:    #5C7A1E;
@@ -33,12 +35,17 @@
   --c-fiona:    #1A5878;
 }
 
-html, body {
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+body {
   background: var(--bg);
   color: var(--ink);
   font-family: var(--font-body);
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 14px;
+  line-height: 1.4;
+  min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   letter-spacing: -.005em;
@@ -76,9 +83,9 @@ input, textarea {
   padding-top: env(safe-area-inset-top);
 }
 .mast-in {
-  max-width: 1080px;
+  max-width: 680px;
   margin: 0 auto;
-  padding: 1rem 1.25rem;
+  padding: 1.5rem 1.25rem 1.1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -116,7 +123,7 @@ input, textarea {
 .mast-back svg { opacity: .7; }
 
 .mast-deck {
-  max-width: 1080px;
+  max-width: 680px;
   margin: 0 auto;
   padding: .85rem 1.25rem 0;
   font-size: .82rem;
@@ -124,9 +131,14 @@ input, textarea {
   font-style: italic;
 }
 
-@media (max-width: 640px) {
+/* Desktop expansion — matches index.html sidebar-mode breakpoint */
+@media (min-width: 1024px) {
+  .mast-in {
+    max-width: 1200px;
+    padding: .9rem 2rem;
+  }
   .mast-h1 { font-size: 1.15rem; }
-  .mast-back span { display: none; }
+  .mast-deck { max-width: 1200px; padding-left: 2rem; padding-right: 2rem; }
 }
 
 /* ── App shell ──────────────────────────────────────────────────────── */
@@ -966,8 +978,9 @@ input, textarea {
    MOBILE — phones and narrow tablets
    ───────────────────────────────────────────────────────────────────── */
 @media (max-width: 640px) {
-  .mast-in { padding: .85rem 1rem; }
-  .mast-deck { padding: .75rem 1rem 0; font-size: .76rem; line-height: 1.5; }
+  /* Keep masthead padding aligned with index.html base (no mobile shrink) */
+  .mast-back span { display: none; }
+  .mast-deck { padding: .75rem 1.25rem 0; font-size: .76rem; line-height: 1.5; }
   .app { padding: .75rem 1rem 2rem; }
 
   /* Mode tabs scroll horizontally instead of wrapping awkwardly */
