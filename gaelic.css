@@ -73,6 +73,7 @@ input, textarea {
 .mast {
   background: var(--bg);
   border-bottom: 1px solid var(--rule);
+  padding-top: env(safe-area-inset-top);
 }
 .mast-in {
   max-width: 1080px;
