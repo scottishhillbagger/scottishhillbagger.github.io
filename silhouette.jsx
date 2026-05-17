@@ -105,21 +105,10 @@ function variantFor(hill) {
   return h % 3;
 }
 
-// Height bracket — drives an indicator strip beside the hill.
-function heightBracket(h) {
-  if (h >= 1200) return { label: "1200m+", level: 6 };
-  if (h >= 1000) return { label: "1000m+", level: 5 };
-  if (h >= 914)  return { label: "Munro",  level: 4 };
-  if (h >= 762)  return { label: "Corbett", level: 3 };
-  if (h >= 610)  return { label: "Fiona",   level: 2 };
-  return { label: "<610m", level: 1 };
-}
-
-function HillSilhouette({ hill, size = 180, showHeight = true, monochrome = false, inkColor }) {
+function HillSilhouette({ hill, size = 180, monochrome = false, inkColor }) {
   const shape = shapeFor(hill);
   const path = SHAPE_PATHS[shape](variantFor(hill));
   const tint = tintFor(hill);
-  const bracket = heightBracket(hill.height);
   const ink = inkColor || "var(--ink, #1a1a1a)";
 
   // Compose the fill — if there's a color adjective, blend with the ink color.
@@ -127,9 +116,9 @@ function HillSilhouette({ hill, size = 180, showHeight = true, monochrome = fals
   const id = `silhouette-${hill.anglicised.replace(/\s+/g, "-")}`;
 
   return (
-    <svg viewBox="0 0 220 130" width={size} height={size * 0.59}
+    <svg viewBox="0 0 220 110" width={size} height={size * 0.5}
          style={{ display: "block", overflow: "visible" }}
-         aria-label={`${hill.anglicised} silhouette — ${SHAPE_LABEL[shape]}, ${hill.height}m (${bracket.label})`}>
+         aria-label={`${hill.anglicised} silhouette — ${SHAPE_LABEL[shape]}`}>
       <defs>
         <linearGradient id={`${id}-grad`} x1="0" y1="0" x2="0" y2="1">
           <stop offset="0" stopColor={baseFill} stopOpacity="1" />
@@ -148,46 +137,6 @@ function HillSilhouette({ hill, size = 180, showHeight = true, monochrome = fals
       <g transform="translate(0,0)">
         <path d={path} fill={`url(#${id}-grad)`} stroke={ink} strokeOpacity="0.4" strokeWidth="0.6" />
       </g>
-
-      {/* Height tier indicator — rungs fill from the bottom as a hill clears
-          each Scottish classification threshold (Fiona 610m, Corbett 762m,
-          Munro 914m, 1000m+, 1200m+). The caption underneath names the
-          highest tier reached, so the rungs aren't a mystery gauge. */}
-      {showHeight && (
-        <g transform="translate(198, 14)">
-          <title>{`Height: ${hill.height}m — ${bracket.label}`}</title>
-
-          {/* Column label: "ALT" — sets the user's frame */}
-          <text x="6" y="-2" textAnchor="middle"
-                fontFamily="var(--font-mono, ui-monospace)"
-                fontSize="4.5"
-                fill={ink}
-                fillOpacity="0.55"
-                letterSpacing="0.5">ALT</text>
-
-          {/* The six rungs, top-down: 1200m+, 1000m+, Munro, Corbett, Fiona, <610m */}
-          {[6, 5, 4, 3, 2, 1].map((lvl, i) => (
-            <rect key={lvl} x="0" y={i * 9 + 2} width="12" height="2.6"
-                  rx="0.5"
-                  fill={ink}
-                  fillOpacity={lvl <= bracket.level ? 0.65 : 0.12} />
-          ))}
-
-          {/* Active-tier label below the rungs */}
-          <text x="6" y={6 * 9 + 9} textAnchor="middle"
-                fontFamily="var(--font-mono, ui-monospace)"
-                fontSize="5"
-                fontWeight="500"
-                fill={ink}
-                fillOpacity="0.85"
-                letterSpacing="0.3">{bracket.label}</text>
-          <text x="6" y={6 * 9 + 15.5} textAnchor="middle"
-                fontFamily="var(--font-mono, ui-monospace)"
-                fontSize="4.2"
-                fill={ink}
-                fillOpacity="0.5">{hill.height}m</text>
-        </g>
-      )}
     </svg>
   );
 }
