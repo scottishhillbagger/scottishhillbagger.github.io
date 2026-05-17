@@ -25,77 +25,124 @@ function partInfo(part) {
   };
 }
 
-function HillPicker({ hills, value, onChange }) {
-  const [q, setQ] = React.useState("");
-  const [open, setOpen] = React.useState(false);
-  const wrapRef = React.useRef(null);
+// ── <HillList> ─────────────────────────────────────────────────────
+// Grouped, scrollable list of all 36 hills. Replaces the previous search
+// picker — at 36 entries a list is more browsable than a search box, and
+// grouping by generic does extra teaching work on top (the user implicitly
+// sees that all the sgùrr hills share something).
+//
+// Hills are grouped by their first generic (Beinn, Càrn, Sgùrr, Meall first;
+// remaining generics in alphabetical order). Within each group, hills are
+// alphabetised by Gaelic name.
+//
+// An optional `classFilter` narrows to a single classification (Munro /
+// Corbett / Fiona). Empty filter = show all.
+const GENERIC_ORDER = ["beinn", "càrn", "sgùrr", "meall"];
 
+function groupHillsByGeneric(hills) {
+  const groups = {};
+  for (const h of hills) {
+    // The first part's root that's a generic. Falls back to "other" if
+    // somehow none of the parts is marked as a generic in ROOTS.
+    const genericPart = h.parts.find(p => window.ROOTS[p.root]?.type === "generic");
+    const key = genericPart ? genericPart.root : "other";
+    if (!groups[key]) groups[key] = [];
+    groups[key].push(h);
+  }
+  // Sort the keys: GENERIC_ORDER first, then alphabetical for the rest,
+  // then "other" last.
+  const orderedKeys = [
+    ...GENERIC_ORDER.filter(k => groups[k]),
+    ...Object.keys(groups).filter(k => !GENERIC_ORDER.includes(k) && k !== "other").sort(),
+    ...(groups.other ? ["other"] : []),
+  ];
+  return orderedKeys.map(key => ({
+    key,
+    label: key === "other"
+      ? "Special forms — names that don't start with a generic"
+      : window.ROOTS[key]?.meaning ? `${key} — ${window.ROOTS[key].meaning}` : key,
+    hills: [...groups[key]].sort((a, b) => a.name.localeCompare(b.name)),
+  }));
+}
+
+function HillList({ hills, value, onChange, classFilter, onClassFilter }) {
   const filtered = React.useMemo(() => {
-    if (!q.trim()) return hills;
-    const lower = q.toLowerCase();
-    return hills.filter((h) =>
-      h.name.toLowerCase().includes(lower) ||
-      h.anglicised.toLowerCase().includes(lower) ||
-      h.meaning.toLowerCase().includes(lower) ||
-      h.region.toLowerCase().includes(lower)
+    if (!classFilter) return hills;
+    return hills.filter(h =>
+      h.classification === classFilter || h.classification.startsWith(classFilter)
     );
-  }, [q, hills]);
+  }, [hills, classFilter]);
 
-  React.useEffect(() => {
-    const onDocClick = (e) => {
-      if (wrapRef.current && !wrapRef.current.contains(e.target)) setOpen(false);
-    };
-    document.addEventListener("mousedown", onDocClick);
-    return () => document.removeEventListener("mousedown", onDocClick);
-  }, []);
+  const groups = React.useMemo(() => groupHillsByGeneric(filtered), [filtered]);
+
+  // Counts shown on the filter chips reflect the full set, not the filtered
+  // one — otherwise switching to Munro would show "Munro 22" instead of
+  // letting you see what the other filters would jump to.
+  const counts = React.useMemo(() => {
+    const c = {};
+    for (const cls of ["Munro", "Corbett", "Fiona"]) {
+      c[cls] = hills.filter(h => h.classification === cls || h.classification.startsWith(cls)).length;
+    }
+    return c;
+  }, [hills]);
 
   return (
-    <div className="picker" ref={wrapRef}>
-      <div className="picker-input">
-        <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true">
-          <circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" strokeWidth="1.5"/>
-          <path d="M11 11 L14 14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-        </svg>
-        <input
-          type="text"
-          placeholder="Search 36 hills — name, region, meaning…"
-          value={q}
-          onChange={(e) => { setQ(e.target.value); setOpen(true); }}
-          onFocus={() => setOpen(true)}
-        />
-        {q && (
-          <button className="picker-clear" onClick={() => { setQ(""); setOpen(true); }}>
-            Clear
+    <div className="hill-list-wrap">
+      <div className="hill-list-filters" role="group" aria-label="Filter by classification">
+        <button
+          className={`filter-chip ${!classFilter ? "active" : ""}`}
+          onClick={() => onClassFilter("")}
+        >
+          All <em>{hills.length}</em>
+        </button>
+        {["Munro", "Corbett", "Fiona"].map(cls => (
+          <button
+            key={cls}
+            className={`filter-chip ${classFilter === cls ? "active" : ""}`}
+            onClick={() => onClassFilter(classFilter === cls ? "" : cls)}
+          >
+            {cls} <em>{counts[cls]}</em>
           </button>
-        )}
+        ))}
       </div>
-      {open && (
-        <div className="picker-results">
-          {filtered.length === 0 && <div className="picker-empty">No matches.</div>}
-          {filtered.map((h, i) => (
-            <button
-              key={h.anglicised}
-              className={`picker-item ${value && value.anglicised === h.anglicised ? "active" : ""}`}
-              onClick={() => { onChange(h); setOpen(false); setQ(""); }}
-            >
-              <div className="picker-item-name">{h.anglicised}</div>
-              <div className="picker-item-meta">
-                <span>{h.classification}</span>
-                <span>·</span>
-                <span>{h.height}m</span>
-                <span>·</span>
-                <span>{h.region}</span>
-              </div>
-            </button>
-          ))}
-        </div>
-      )}
+
+      <div className="hill-list">
+        {groups.length === 0 && (
+          <div className="hill-list-empty">No hills match this filter.</div>
+        )}
+        {groups.map(group => (
+          <div key={group.key} className="hill-list-group">
+            <div className="hill-list-group-label">{group.label}</div>
+            <div className="hill-list-items">
+              {group.hills.map(h => {
+                const isActive = value && value.anglicised === h.anglicised;
+                return (
+                  <button
+                    key={h.anglicised}
+                    type="button"
+                    className={`hill-list-item ${isActive ? "active" : ""}`}
+                    onClick={() => onChange(h)}
+                    aria-current={isActive ? "true" : undefined}
+                  >
+                    <span className="hill-list-name">{h.name}</span>
+                    <span className="hill-list-anglo">{h.anglicised}</span>
+                    <span className="hill-list-meta">
+                      {h.classification} · {h.height}m
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
 
 function Dissector({ hill, setHill }) {
   const [hoveredPart, setHoveredPart] = React.useState(null);
+  const [classFilter, setClassFilter] = React.useState("");
 
   // Find other hills sharing roots with the active one
   const relatives = React.useMemo(() => {
@@ -120,15 +167,13 @@ function Dissector({ hill, setHill }) {
 
   return (
     <div className="dissector">
-      <div className="dissector-top">
-        <HillPicker hills={window.HILLS} value={hill} onChange={setHill} />
-        <div className="filters">
-          {["Munro", "Corbett", "Fiona"].map((c) => {
-            const count = window.HILLS.filter(h => h.classification === c || h.classification.startsWith(c)).length;
-            return <span key={c} className="filter-chip">{c} <em>{count}</em></span>;
-          })}
-        </div>
-      </div>
+      <HillList
+        hills={window.HILLS}
+        value={hill}
+        onChange={setHill}
+        classFilter={classFilter}
+        onClassFilter={setClassFilter}
+      />
 
       <div className="dissector-body">
         {/* The big name */}

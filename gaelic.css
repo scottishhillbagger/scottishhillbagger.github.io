@@ -1864,3 +1864,139 @@ input, textarea {
   .tour-colour-swatch { width: 22px; height: 22px; }
   .tour-colour-meaning { font-size: .76rem; }
 }
+
+/* ─────────────────────────────────────────────────────────────────────
+   DISSECTOR — Hill list (replaces the search picker)
+   At 36 hills, a grouped list is more browsable than a search box.
+   Groups are by generic word; classification filter chips narrow the
+   visible set. The existing dissector-body / dissector-side layout
+   below is unchanged — only the picker → list swap.
+   ───────────────────────────────────────────────────────────────────── */
+
+.hill-list-wrap {
+  margin-bottom: 1.5rem;
+}
+
+/* Filter chips — interactive, replacing the old non-interactive ones.
+   Reuses the .filter-chip class name from the previous chip pills, but
+   the active state is new (no active state existed before because they
+   weren't buttons). */
+.hill-list-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin-bottom: 1rem;
+}
+.hill-list-filters .filter-chip {
+  cursor: pointer;
+  border: 1px solid var(--rule);
+  background: var(--surface);
+  color: var(--ink3);
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  letter-spacing: .02em;
+  padding: .25rem .55rem;
+  border-radius: 99px;
+  transition: background .15s, border-color .15s, color .15s;
+}
+.hill-list-filters .filter-chip:hover {
+  background: var(--bg2);
+  border-color: var(--ink4);
+}
+.hill-list-filters .filter-chip.active {
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+}
+.hill-list-filters .filter-chip.active em {
+  color: var(--ink4);
+}
+
+/* The list itself — grouped, scrollable, narrowed by classification */
+.hill-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.hill-list-empty {
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--ink3);
+  font-style: italic;
+  background: var(--surface);
+  border: 1px dashed var(--rule);
+  border-radius: 8px;
+}
+
+.hill-list-group-label {
+  font-family: var(--font-mono);
+  font-size: .62rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink3);
+  padding-bottom: .55rem;
+  margin-bottom: .45rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.hill-list-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: .4rem;
+}
+
+.hill-list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .15rem;
+  padding: .7rem .85rem .8rem;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  transition: background .15s, border-color .15s;
+}
+.hill-list-item:hover {
+  background: var(--bg2);
+  border-color: var(--ink4);
+}
+.hill-list-item.active {
+  background: var(--accent-light);
+  border-color: var(--accent);
+}
+.hill-list-name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: .95rem;
+  color: var(--ink);
+  letter-spacing: -.01em;
+  line-height: 1.2;
+}
+.hill-list-anglo {
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  color: var(--ink3);
+  letter-spacing: 0;
+}
+.hill-list-meta {
+  font-family: var(--font-mono);
+  font-size: .62rem;
+  color: var(--ink3);
+  letter-spacing: .04em;
+  margin-top: .15rem;
+}
+.hill-list-item.active .hill-list-meta,
+.hill-list-item.active .hill-list-anglo {
+  color: var(--accent-dark);
+}
+
+@media (max-width: 480px) {
+  .hill-list-items {
+    grid-template-columns: 1fr;
+  }
+  .hill-list-item { padding: .6rem .75rem .7rem; }
+}
