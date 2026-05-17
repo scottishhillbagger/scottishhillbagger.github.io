@@ -1755,3 +1755,112 @@ input, textarea {
   .tour-mutation-form { font-size: .88rem; }
   .tour-mutation-cell.meaning { font-size: .74rem; }
 }
+
+/* ─────────────────────────────────────────────────────────────────────
+   REFERENCE SUB-NAV
+   When the top-level tab is "Reference", a secondary nav strip appears
+   beneath the main tabs to switch between Dissect / Quiz / Glossary.
+   Visually distinct from the top-level tabs so the user feels the nesting.
+   ───────────────────────────────────────────────────────────────────── */
+
+.ref-subnav {
+  display: flex;
+  gap: .25rem;
+  margin-bottom: 1.25rem;
+  margin-top: -.5rem;
+  padding-bottom: .25rem;
+}
+.ref-subnav-btn {
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: .82rem;
+  font-weight: 500;
+  color: var(--ink3);
+  padding: .5rem .85rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: color .15s, background .15s;
+  letter-spacing: -.005em;
+}
+.ref-subnav-btn:hover {
+  color: var(--ink);
+  background: var(--surface);
+}
+.ref-subnav-btn.active {
+  color: var(--ink);
+  background: var(--bg2);
+  font-weight: 500;
+}
+
+@media (max-width: 480px) {
+  .ref-subnav-btn { padding: .45rem .7rem; font-size: .78rem; }
+}
+
+/* ─────────────────────────────────────────────────────────────────────
+   TOUR — Lesson 4 colour grid
+   Reference list of colour adjectives with swatches showing the actual
+   colour each word picks out. Visually different from the mutation grid
+   to signal "this is vocabulary intro" not "this is a rule generalisation".
+   ───────────────────────────────────────────────────────────────────── */
+
+.tour-colour-grid {
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--surface);
+}
+.tour-colour-row {
+  display: grid;
+  grid-template-columns: 36px 1fr 1.4fr;
+  gap: .85rem;
+  align-items: center;
+  padding: .65rem .85rem;
+  border-bottom: 1px solid var(--rule2);
+}
+.tour-colour-row:last-child {
+  border-bottom: none;
+}
+.tour-colour-swatch {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  border: 1px solid var(--rule);
+  flex-shrink: 0;
+}
+.tour-colour-text {
+  display: flex;
+  flex-direction: column;
+  gap: .1rem;
+}
+.tour-colour-word {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: .92rem;
+  color: var(--ink);
+  letter-spacing: 0;
+}
+.tour-colour-pron {
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  color: var(--ink3);
+  letter-spacing: 0;
+}
+.tour-colour-meaning {
+  font-size: .82rem;
+  color: var(--ink2);
+  line-height: 1.4;
+}
+
+@media (max-width: 480px) {
+  .tour-colour-row {
+    grid-template-columns: 28px 1fr 1.2fr;
+    gap: .65rem;
+    padding: .55rem .65rem;
+  }
+  .tour-colour-swatch { width: 22px; height: 22px; }
+  .tour-colour-meaning { font-size: .76rem; }
+}

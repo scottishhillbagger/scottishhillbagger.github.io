@@ -88,9 +88,197 @@ const LESSONS = [
   // Each stub renders a placeholder screen so the navigation works end-to-end
   // and lesson order can be tested. Fill in `examples`, `tryIt`, `recap` to
   // bring each one online.
-  { num: 2,  title: "The big four generics",           stub: "beinn, càrn, sgùrr, meall — which word tells you what kind of hill" },
-  { num: 3,  title: "Stress and how to say it",        stub: "First-syllable stress, and the article exception (an TEALL-ach)" },
-  { num: 4,  title: "Colour adjectives",               stub: "dubh, dearg, bàn, ruadh, gorm — 60% of map vocabulary in one screen" },
+  // ─── Lesson 2 ───────────────────────────────────────────────────────
+  // Builds on Lesson 1: now that the user knows "every name = generic +
+  // qualifier", this lesson installs the four generics that cover 70%+ of
+  // Scottish hill names. Format: four worked examples (one per generic) so
+  // the user sees the silhouette change shape as the generic changes.
+  // Try-it tests: given a name, can the user predict the silhouette?
+  {
+    num: 2,
+    title: "The big four generics",
+    promise: <>
+      Four words cover most Scottish hill names: <em>beinn, càrn, sgùrr,
+      meall</em>. Each describes a different <em>shape</em> of hill. Learn
+      these four and you can read 7 out of 10 names on an OS map.
+    </>,
+    examples: ["Beinn Nibheis", "Càrn Gorm", "Sgùrr Alasdair", "Meall Buidhe"],
+    tryIt: {
+      mode: "predict",
+      prompt: <>
+        Without scrolling back, what shape would you expect <em>Aonach Mòr</em>{" "}
+        to be? <em>Aonach</em> means "ridge" — a long, level, walking-pace top.
+      </>,
+      options: [
+        { label: "A sharp peak (like Sgùrr Alasdair)",        correct: false },
+        { label: "A long flat ridge",                          correct: true  },
+        { label: "A rounded dome (like Meall Buidhe)",         correct: false },
+      ],
+      reveal: <>
+        Right. <em>Aonach</em> is one of the secondary generics — same logical
+        slot as beinn, càrn, sgùrr, meall, but for hills shaped like a long
+        flat-topped ridge. The pattern is the same: the generic tells you the
+        shape, the qualifier tells you which one.
+      </>,
+      wrongReveal: <>
+        Actually no — <em>aonach</em> means "ridge". The word literally
+        describes a long, flat-topped shape. Once you've installed the big
+        four, secondary generics like aonach, stob, and binnein slot in
+        easily — same role, different shape.
+      </>,
+    },
+    recap: [
+      <>
+        The four generics you've now met: <strong>beinn</strong> (classic
+        mountain), <strong>càrn</strong> (cairn-shaped heap), <strong>sgùrr</strong>{" "}
+        (sharp rocky peak), <strong>meall</strong> (rounded lump). Each tells
+        you the <em>shape</em> before you even read the second word.
+      </>,
+      <>
+        Other generics — <em>aonach</em>, <em>stob</em>, <em>binnein</em>,{" "}
+        <em>sròn</em>, <em>creag</em> — follow the same role. When you meet
+        one, ask: "what shape is this word describing?" The qualifier will
+        come next.
+      </>,
+    ],
+  },
+
+  // ─── Lesson 3 ───────────────────────────────────────────────────────
+  // Pronunciation lesson. Two ideas: (1) stress goes on the first syllable
+  // of each content word, (2) articles like "an" and "a'" don't get the
+  // stress — it skips past them to the noun. Most beginner mistakes come
+  // from stressing the article.
+  {
+    num: 3,
+    title: "Stress and how to say it",
+    promise: <>
+      Gaelic stress is more regular than English: <em>first syllable of every
+      content word</em>. The catch: small words like <em>an</em>, <em>a'</em>,{" "}
+      <em>na</em> don't count — stress hops past them to the next real word.
+    </>,
+    examples: ["Sgùrr Dearg", "Aonach Mòr", "Càrn Bàn"],
+    rule: {
+      label: "The stress rule, in two parts",
+      body: <>
+        <p>
+          <strong>Part one:</strong> in any Gaelic word, the stress is on the{" "}
+          <em>first syllable</em>. Always. Almost without exception.
+          <em>SGÙRR</em>, <em>BEIN</em>-yan, <em>AON</em>-ach, <em>MEALL</em>.
+        </p>
+        <p>
+          <strong>Part two:</strong> when a name has an article — <em>an</em>{" "}
+          (the), <em>a'</em> (of the), <em>na</em>, <em>nam</em>, <em>nan</em>{" "}
+          — the article is unstressed. Stress jumps past it to the next
+          content word. So it's <em>an TEALL-ach</em>, not <em>AN teallach</em>.
+        </p>
+      </>,
+    },
+    tryIt: {
+      mode: "predict",
+      prompt: <>
+        Where does the stress fall in <em>Meall a' Bhùiridh</em> ("hill of the
+        bellowing of stags")?
+      </>,
+      options: [
+        { label: "MEALL a' bhùiridh — first syllable of the whole name",        correct: false },
+        { label: "MEALL a' BHÙIR-idh — first syllable of each content word",     correct: true  },
+        { label: "meall A' bhùir-IDH — last syllable, like French",              correct: false },
+      ],
+      reveal: <>
+        Right — <strong>MEALL a' BHÙIR-idh</strong>. Two content words
+        (<em>meall</em> and <em>bhùiridh</em>), one little connector
+        (<em>a'</em>). Stress lands on the first syllable of each content
+        word; the connector is unstressed.
+      </>,
+      wrongReveal: <>
+        Actually it's <strong>MEALL a' BHÙIR-idh</strong>. Two stresses, one
+        on each content word's first syllable; the <em>a'</em> is unstressed
+        and slides past. If you ever land on the final syllable in Gaelic,
+        you're almost certainly wrong.
+      </>,
+    },
+    recap: [
+      <>
+        Two rules, in order of importance: <strong>(1)</strong> stress on the
+        first syllable of every content word, <strong>(2)</strong> articles
+        don't count as content words. Apply them in that order and you'll get
+        most hills right on the first try.
+      </>,
+      <>
+        Edge case to know about: a small number of words have absorbed the
+        article into themselves over centuries (e.g. <em>An Teallach</em>{" "}
+        becomes one breath — <em>an-TEALL-ach</em>, where "an" is unstressed
+        but barely audible as a separate word). The rule still works; just
+        the article is contracted.
+      </>,
+    ],
+  },
+
+  // ─── Lesson 4 ───────────────────────────────────────────────────────
+  // The vocabulary-payoff lesson. Five colour adjectives is enough to read
+  // most colour-named hills on a Scottish map. We show the colour itself as
+  // a swatch (using the data.js hex values where available), then three
+  // worked examples that combine colours with the generics from Lesson 2.
+  //
+  // One real example uses a lenited colour (Beinn Bhàn) — we flag this and
+  // explicitly defer the explanation to Lesson 5. That tension is the hook
+  // for the next lesson.
+  {
+    num: 4,
+    title: "Colour adjectives",
+    promise: <>
+      Five colours — <em>dubh, dearg, bàn, gorm, ruadh</em> — cover more than
+      half the adjectives you'll see in Scottish hill names. Learn these and
+      you can decode most colour-named hills at a glance.
+    </>,
+    colourGrid: {
+      label: "The five colours",
+      caption: <>
+        Each colour word with its sound and the colour it actually picks out.
+        Bear in mind that <em>gorm</em> drifts between blue and green in
+        Gaelic, and <em>ruadh</em> describes the rusty-red of heather and
+        deer, not pillar-box red.
+      </>,
+      rows: [
+        { word: "dubh",  pron: "doo",       meaning: "black",                    hex: "#1A1A19" },
+        { word: "bàn",   pron: "bahn",      meaning: "white, pale",              hex: "#F0EDE4" },
+        { word: "dearg", pron: "JERR-ak",   meaning: "red (bright)",             hex: "#B8543A" },
+        { word: "ruadh", pron: "ROO-ugh",   meaning: "reddish-brown, rusty",     hex: "#A64A1A" },
+        { word: "gorm",  pron: "GOR-om",    meaning: "blue / green (overlaps)",  hex: "#4A6B7A" },
+      ],
+    },
+    examples: ["Càrn Gorm", "Stob Dearg", "Beinn Bhàn"],
+    tryIt: {
+      mode: "reveal",
+      hillName: "Càrn Mòr Dearg",
+      prompt: <>
+        <strong>Càrn Mòr Dearg.</strong> Three words this time. You already
+        know <em>càrn</em> and you've just met <em>dearg</em>.{" "}
+        <em>Mòr</em> means big. Can you piece the whole name together before
+        revealing?
+      </>,
+      feedback: <>
+        "Big red cairn" — generic + size + colour, in that order. The pattern
+        scales: even three-word and four-word names just stack qualifiers on
+        the same skeleton. By now you can probably read half the Munros on
+        the Cairngorms map.
+      </>,
+    },
+    recap: [
+      <>
+        You now have five colours and four+ generics. That's enough vocabulary
+        to read most short colour-named hills:{" "}
+        <em>Càrn Dearg, Stob Bàn, Aonach Dubh, Meall Ruadh</em>. The pattern
+        from Lesson 1 just gets richer; the skeleton stays the same.
+      </>,
+      <>
+        One thing you might have noticed in the third example: <em>Beinn
+        Bhàn</em> uses <em>bhàn</em>, not <em>bàn</em>. Same word, different
+        shape. That's the cliffhanger from Lesson 1, and Lesson 5 finally
+        explains it.
+      </>,
+    ],
+  },
 
   // ─── Lesson 5 ───────────────────────────────────────────────────────
   // The pedagogically hardest lesson in the sequence — first time the user
@@ -194,11 +382,170 @@ const LESSONS = [
     ],
   },
 
-  { num: 6,  title: "The exception that proves the rule", stub: "Homo-organic block: why Beinn Dubh stays unlenited" },
-  { num: 7,  title: "The 'cn' shift",                  stub: "cnoc → 'krochk' and why the n becomes r" },
-  { num: 8,  title: "When 'a' means 'of the'",         stub: "Meall a' Bhùiridh — the genitive article" },
-  { num: 9,  title: "Words that aren't hills",         stub: "loch, gleann, bealach, coire — geography inside hill names" },
-  { num: 10, title: "Putting it together",             stub: "Sìth Chailleann and other long names — the capstone" },
+  // ─── Lesson 6 — enriched stub ───────────────────────────────────────
+  // What this lesson should teach: the homo-organic dental block. After a
+  // noun ending in 'n' (like beinn), an adjective starting with 'd' or 't'
+  // is exempt from lenition, even though the Lesson 5 rule would predict
+  // lenition. Beinn Dubh stays Beinn Dubh, not Beinn Dhubh.
+  //
+  // Suggested layout: reuse Lesson 5's comparison + rule pattern. Compare
+  // Beinn Bhàn (lenited as expected, Lesson 5) vs Beinn Dubh (unlenited,
+  // exception). State the rule. Try-it: predict whether Beinn Dearg lenites.
+  //
+  // Hill data is available: Beinn Bhàn, Beinn Dubh both in HILLS. The
+  // existing Beinn Dubh entry already has the homo-organic note in its
+  // `note` field from the data.js patches — pull that quote into the recap.
+  {
+    num: 6,
+    title: "The exception that proves the rule",
+    stub: "Why Beinn Dubh doesn't lenite — the homo-organic dental block. Lesson 5's rule applies after feminine nouns, except when the adjective starts with d/t and the noun ends in n. Compare Beinn Bhàn (lenited) vs Beinn Dubh (not), state the rule, try-it on Beinn Dearg."
+  },
+
+  // ─── Lesson 7 ───────────────────────────────────────────────────────
+  // Pure phonetic-rule lesson — no hill examples because the 36-hill set has
+  // no cnoc names. Instead: the word in isolation, the sound shift, and a
+  // generalisation to other cn- words. Shorter than other lessons; this is
+  // a quick one-rule installation, not a substantive vocabulary lesson.
+  {
+    num: 7,
+    title: "The 'cn' shift",
+    promise: <>
+      One small but high-impact pronunciation rule: <em>cn</em> at the start
+      of a Gaelic word doesn't sound like the c is silent — the c stays as a
+      hard "k", but the n shifts to a tapped <em>r</em>. The word{" "}
+      <em>cnoc</em> sounds like "krochk".
+    </>,
+    rule: {
+      label: "What's happening",
+      body: <>
+        <p>
+          When you see <em>cn-</em> at the start of a Gaelic word, the cluster
+          undergoes <strong>rhotacism</strong>: the n is replaced (or
+          nasalised) into a tapped r sound. The c is fully pronounced.
+        </p>
+        <p>
+          So <em>cnoc</em> (knoll) = "krochk". <em>Cnap</em> (small lump) =
+          "krap". The same shift applies to <em>cneamh</em> (wild garlic) and
+          a handful of other <em>cn-</em> words. Anglicised forms preserve
+          the new sound: many Scottish places spelled <em>Knock-</em> come
+          from <em>Cnoc</em>.
+        </p>
+      </>,
+    },
+    tryIt: {
+      mode: "predict",
+      prompt: <>
+        Given the rule, how should <em>Cnap Mòr</em> be pronounced — a name
+        you might see on a smaller hill?
+      </>,
+      options: [
+        { label: "k-NAP mor — k and n both audible",             correct: false },
+        { label: "KRAP mor — n becomes r, c stays as k",          correct: true  },
+        { label: "NAP mor — c is silent",                         correct: false },
+      ],
+      reveal: <>
+        Right — <strong>KRAP mor</strong>. The c-becomes-silent reading is the
+        most common beginner mistake (English-speaker intuition), but it's
+        the n that vanishes, not the c. Anglicised "Knock" places preserve
+        the post-shift sound.
+      </>,
+      wrongReveal: <>
+        Actually <strong>KRAP mor</strong>. Think of it as the n being the
+        thing that changes — into a tapped r — while the c stays as a clean
+        "k". The English-speaker instinct is to silence the c (like "knee")
+        but Gaelic does the opposite.
+      </>,
+    },
+    recap: [
+      <>
+        One rule, applied wherever you see <em>cn-</em> at the start of a
+        Gaelic word: <strong>c stays, n becomes r</strong>. So{" "}
+        <em>cnoc</em> = "krochk", <em>cnap</em> = "krap". Look for{" "}
+        anglicised <em>Knock-</em> places on a map — they all come from this
+        sound shift.
+      </>,
+      <>
+        The same dynamic appears in a few other consonant clusters in some
+        dialects (e.g. <em>mn-</em> in older texts), but cn- is the one you'll
+        encounter most. Worth installing because it fixes about a thousand
+        Scottish place names in one go.
+      </>,
+    ],
+  },
+
+  // ─── Lesson 8 — enriched stub ───────────────────────────────────────
+  // What this lesson should teach: the genitive article — when a name
+  // contains "a'", "an", "na", "nam", "nan", it means "of the". This binds
+  // two nouns together: "Meall a' Bhùiridh" = "hill of the bellowing".
+  //
+  // Layout: probably a 2-3 example sequence showing the article in different
+  // positions, with the article visually highlighted in each decomposition.
+  // The breakdown gets a third part-type (article) alongside generic and
+  // qualifier — the existing partsBreakdown helper currently collapses
+  // articles into "qualifier" but we should add a third role for this lesson.
+  //
+  // Available hills: Meall a' Bhùiridh, Càrn an Tuirc, Sgùrr na Cìche,
+  // Sròn a' Choire Ghairbh, Stob Coire nan Lochan. Strong material for this
+  // lesson — the data has good genitive coverage.
+  //
+  // Try-it: predict which article goes with which noun (gender + initial
+  // letter governs the choice). This might be too hard for a beginner; an
+  // easier try-it would be reveal-mode on a four-part name.
+  {
+    num: 8,
+    title: "When 'a' means 'of the'",
+    stub: "Genitive articles — a', an, na, nam, nan all mean 'of the' and bind two nouns together. Meall a' Bhùiridh = hill of the bellowing (stags). The article slot is the third part-type; lesson should add it as a distinct role in the decomposition view."
+  },
+
+  // ─── Lesson 9 — enriched stub ───────────────────────────────────────
+  // What this lesson should teach: geographic words that appear inside hill
+  // names but aren't themselves hills — loch, coire (corrie/cwm), gleann
+  // (glen), bealach (pass). They usually sit after an article: "Stob Coire
+  // nan Lochan" = "peak of the corrie of the small lochs". This is the
+  // lesson that unlocks reading 4- and 5-part names.
+  //
+  // Layout: a small reference grid of the four words (similar to Lesson 4's
+  // colour grid), then 2 worked examples showing the words in context.
+  // Try-it: reveal-mode on Stob Coire nan Lochan — let the user try to
+  // identify each part themselves before revealing.
+  //
+  // Data caveat: the existing parts data has "macduibh" as a placeholder
+  // root for several non-MacDuff parts (Coire, Tuirc, etc). Lesson 9 should
+  // work around this by relying on the part's `text` and `custom` fields
+  // rather than the broken root link. Worth fixing the underlying data bug
+  // in a separate pass.
+  {
+    num: 9,
+    title: "Words that aren't hills",
+    stub: "loch, coire, gleann, bealach — geographic features that show up inside hill names. Stob Coire nan Lochan = 'peak of the corrie of the lochans'. Lesson should add a reference grid of the four words plus 2 worked examples on longer hill names."
+  },
+
+  // ─── Lesson 10 — enriched stub ───────────────────────────────────────
+  // The capstone. Pick one famously complex name (Sìth Chailleann — a
+  // perfect choice because every layer matters: sìth is interesting
+  // pedagogically, Chailleann is lenited and shows a real grammatical case,
+  // and the meaning is poetic) and walk through it piece by piece using
+  // everything from Lessons 1-9.
+  //
+  // Suggested layout: a single hill with the decomposition shown as a
+  // sequential walkthrough. Each part appears with a small commentary that
+  // names which lesson it draws from ("the lenition here is Lesson 5"). A
+  // sense of arrival.
+  //
+  // Try-it could be the user picking any hill from a small list (Bidean nam
+  // Bian, Sgùrr nan Gillean, Buachaille Eitibhe Mòr) and getting a full
+  // decomposition. Or it could be no try-it at all — the lesson IS the
+  // try-it. The recap should be the celebration: "you can now read most of
+  // a Scottish OS map. Here's the reference section for everything else."
+  //
+  // The Finish button (set when atLast) drops the user into Reference →
+  // Dissect, where they can apply what they've learned to whichever hill
+  // they actually care about.
+  {
+    num: 10,
+    title: "Putting it together",
+    stub: "Capstone: Sìth Chailleann ('fairy hill of the Caledonians'), broken down piece by piece with each part annotated by which lesson it draws from. The recap is the graduation moment — 'you can now read a Scottish map'. Finish button routes to Reference → Dissect."
+  },
 ];
 
 const TOTAL_LESSONS = LESSONS.length;
@@ -240,6 +587,16 @@ function Lesson({ lesson, onPrev, onNext, onExit, atFirst, atLast }) {
       ) : (
         <>
           {lesson.promise && <p className="tour-promise">{lesson.promise}</p>}
+
+          {/* Colour reference grid (Lesson 4) — introduces vocabulary BEFORE
+              the examples that use it. Same structural slot as mutationGrid
+              but used for vocab introduction rather than rule generalisation. */}
+          {lesson.colourGrid && (
+            <>
+              <div className="tour-section-label">{lesson.colourGrid.label}</div>
+              <ColourGrid grid={lesson.colourGrid} />
+            </>
+          )}
 
           {/* Sequential worked examples (Lesson 1 style) */}
           {lesson.examples && (
@@ -375,6 +732,36 @@ function ComparePane({ hill }) {
             <div className="tour-part-text">{p.text}</div>
             <div className="tour-part-meaning">{p.meaning}</div>
             {p.pron && <div className="tour-part-pron">{p.pron}</div>}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ── <ColourGrid> ─────────────────────────────────────────────────────
+// Reference grid of colour adjectives. Each row: the Gaelic word, its
+// pronunciation, what colour it means, and a swatch using the hex from
+// data.js. Used in Lesson 4 as a vocabulary introduction before examples.
+//
+// Note that gorm and ruadh have wider meanings than their English glosses
+// suggest — gorm spans blue/green, ruadh is the russet of heather and red
+// deer rather than bright red. The captions in the lesson data flag this.
+function ColourGrid({ grid }) {
+  return (
+    <div className="tour-mutation">
+      {grid.caption && <p className="tour-mutation-caption">{grid.caption}</p>}
+      <div className="tour-colour-grid">
+        {grid.rows.map((r, i) => (
+          <div key={i} className="tour-colour-row">
+            <div className="tour-colour-swatch"
+                 style={{ background: r.hex }}
+                 aria-hidden="true" />
+            <div className="tour-colour-text">
+              <div className="tour-colour-word">{r.word}</div>
+              <div className="tour-colour-pron">{r.pron}</div>
+            </div>
+            <div className="tour-colour-meaning">{r.meaning}</div>
           </div>
         ))}
       </div>
@@ -545,8 +932,14 @@ function PredictTryIt({ tryIt }) {
 }
 
 // ── <Tour> — the public component used by app.jsx ───────────────────
-function Tour({ onExit }) {
-  const [idx, setIdx] = React.useState(0);
+// Accepts `idx` and `setIdx` from a parent that wants to own the lesson
+// state (so it survives tab switching). If neither is passed, falls back to
+// internal state so the component still works standalone (useful for
+// embedding in a preview page or for tests).
+function Tour({ onExit, idx: idxProp, setIdx: setIdxProp }) {
+  const [localIdx, setLocalIdx] = React.useState(0);
+  const idx     = idxProp !== undefined ? idxProp     : localIdx;
+  const setIdx  = setIdxProp || setLocalIdx;
   const lesson = LESSONS[idx];
 
   // Scroll to top whenever the lesson changes — without this, users on a long
@@ -558,8 +951,8 @@ function Tour({ onExit }) {
   return (
     <Lesson
       lesson={lesson}
-      onPrev={() => setIdx(i => Math.max(0, i - 1))}
-      onNext={() => setIdx(i => Math.min(LESSONS.length - 1, i + 1))}
+      onPrev={() => setIdx(Math.max(0, idx - 1))}
+      onNext={() => setIdx(Math.min(LESSONS.length - 1, idx + 1))}
       onExit={onExit || (() => {})}
       atFirst={idx === 0}
       atLast={idx === LESSONS.length - 1}
