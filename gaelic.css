@@ -1491,3 +1491,267 @@ input, textarea {
   .tour-decomp { grid-template-columns: 1fr; gap: .5rem; }
   .tour-nav-btn { padding: .65rem .9rem; font-size: .8rem; }
 }
+
+/* ─────────────────────────────────────────────────────────────────────
+   TOUR — Lesson 5 layout primitives
+   Side-by-side comparison, rule callout, mutation grid, predict-mode try-it.
+   ───────────────────────────────────────────────────────────────────── */
+
+/* Comparison: two hills in equal columns so the user can spot the diff */
+.tour-compare-block {
+  margin-bottom: 1rem;
+}
+.tour-compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .65rem;
+}
+.tour-compare-pane {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  padding: 1rem 1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.tour-compare-name {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -.02em;
+  line-height: 1.1;
+  color: var(--ink);
+}
+.tour-compare-anglo {
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  color: var(--ink3);
+  margin-top: .2rem;
+  letter-spacing: .02em;
+}
+.tour-compare-svg {
+  margin: .65rem 0 .85rem;
+}
+.tour-compare-parts {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  width: 100%;
+  text-align: left;
+}
+.tour-compare-parts .tour-part {
+  padding: .55rem .7rem .6rem;
+}
+.tour-compare-caption {
+  font-size: .82rem;
+  line-height: 1.5;
+  color: var(--ink2);
+  margin-top: 1rem;
+  padding: 0 .25rem;
+}
+.tour-compare-caption em {
+  font-style: normal;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+/* Rule callout — short prose block with an icon, lighter than recap */
+.tour-rule {
+  background: var(--accent-light);
+  border: 1px solid #C9D1B5;
+  border-radius: 10px;
+  padding: 1rem 1.25rem 1.1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+.tour-rule-icon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  background: var(--accent-dark);
+  color: var(--bg);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+}
+.tour-rule-body p {
+  font-size: .9rem;
+  line-height: 1.55;
+  color: var(--ink2);
+  margin-bottom: .55rem;
+}
+.tour-rule-body p:last-child { margin-bottom: 0; }
+.tour-rule-body strong { color: var(--ink); font-weight: 600; }
+.tour-rule-body em { font-style: normal; color: var(--accent-dark); font-weight: 500; }
+
+/* Mutation grid — generalising a sound-change across multiple words */
+.tour-mutation {
+  margin-bottom: 1rem;
+}
+.tour-mutation-caption {
+  font-size: .82rem;
+  color: var(--ink2);
+  line-height: 1.5;
+  margin-bottom: .85rem;
+}
+.tour-mutation-caption em {
+  font-style: normal;
+  font-weight: 500;
+  color: var(--ink);
+}
+.tour-mutation-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.2fr;
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.tour-mutation-head {
+  background: var(--bg2);
+  padding: .6rem .75rem;
+  font-family: var(--font-mono);
+  font-size: .58rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink3);
+}
+.tour-mutation-cell {
+  background: var(--surface);
+  padding: .75rem .85rem;
+  display: flex;
+  flex-direction: column;
+  gap: .15rem;
+}
+.tour-mutation-cell.lenited {
+  background: var(--accent-light);
+}
+.tour-mutation-cell.meaning {
+  font-size: .82rem;
+  color: var(--ink2);
+  justify-content: center;
+}
+.tour-mutation-form {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: .95rem;
+  color: var(--ink);
+  letter-spacing: 0;
+}
+.tour-mutation-cell.lenited .tour-mutation-form {
+  color: var(--accent-dark);
+  font-weight: 600;
+}
+.tour-mutation-sound {
+  font-family: var(--font-mono);
+  font-size: .7rem;
+  color: var(--ink3);
+  letter-spacing: 0;
+}
+
+/* Predict-mode try-it — two/three buttons, reveal after pick */
+.tour-predict-options {
+  display: flex;
+  flex-direction: column;
+  gap: .55rem;
+  margin: .85rem 0 0;
+}
+.tour-predict-option {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: .85rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: .9rem;
+  color: var(--ink);
+  text-align: left;
+  transition: background .15s, border-color .15s, color .15s;
+}
+.tour-predict-option:not(:disabled):hover {
+  background: var(--bg2);
+  border-color: var(--ink4);
+}
+.tour-predict-option.correct {
+  background: var(--accent-light);
+  border-color: var(--accent);
+  color: var(--accent-dark);
+  font-weight: 500;
+}
+.tour-predict-option.wrong {
+  background: var(--terra-light);
+  border-color: var(--terra);
+  color: var(--terra-dark);
+}
+.tour-predict-option.would-be-correct {
+  background: var(--accent-light);
+  border-color: var(--accent);
+  color: var(--accent-dark);
+  opacity: .8;
+}
+.tour-predict-option.muted {
+  opacity: .45;
+}
+.tour-predict-option:disabled {
+  cursor: default;
+}
+.tour-predict-marker {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: .78rem;
+  font-weight: 700;
+}
+.tour-predict-option.correct .tour-predict-marker {
+  background: var(--accent); color: var(--bg);
+}
+.tour-predict-option.wrong .tour-predict-marker {
+  background: var(--terra); color: var(--bg);
+}
+.tour-predict-option.would-be-correct .tour-predict-marker {
+  background: var(--accent); color: var(--bg);
+}
+
+.tour-tryit-cliffhanger {
+  font-size: .78rem;
+  color: var(--ink2);
+  font-style: italic;
+  line-height: 1.5;
+  margin-top: .85rem;
+  padding-top: .85rem;
+  border-top: 1px solid #C9D1B5;
+}
+.tour-tryit-cliffhanger em {
+  font-style: italic;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+/* Mobile: stack the comparison so each pane is full-width.
+   Mutation grid stays 3-column at the tightest widths because the cells
+   are narrow enough. */
+@media (max-width: 520px) {
+  .tour-compare-grid { grid-template-columns: 1fr; gap: .85rem; }
+  .tour-mutation-grid { grid-template-columns: 1fr 1fr 1fr; }
+  .tour-mutation-cell { padding: .6rem .6rem; }
+  .tour-mutation-form { font-size: .88rem; }
+  .tour-mutation-cell.meaning { font-size: .74rem; }
+}

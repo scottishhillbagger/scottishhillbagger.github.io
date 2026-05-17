@@ -91,7 +91,109 @@ const LESSONS = [
   { num: 2,  title: "The big four generics",           stub: "beinn, càrn, sgùrr, meall — which word tells you what kind of hill" },
   { num: 3,  title: "Stress and how to say it",        stub: "First-syllable stress, and the article exception (an TEALL-ach)" },
   { num: 4,  title: "Colour adjectives",               stub: "dubh, dearg, bàn, ruadh, gorm — 60% of map vocabulary in one screen" },
-  { num: 5,  title: "When letters disappear",          stub: "Lenition: why Beinn Bhàn but Càrn Bàn" },
+
+  // ─── Lesson 5 ───────────────────────────────────────────────────────
+  // The pedagogically hardest lesson in the sequence — first time the user
+  // sees that the SAME word looks and sounds different depending on what
+  // comes before it. Uses a comparison layout (not three sequential examples)
+  // because lenition only registers as a pattern when you see the two forms
+  // side by side.
+  //
+  // Data constraint worth knowing: our 36-hill set has only one clean
+  // beinn-plus-lenited-colour example (Beinn Bhàn). So the second teaching
+  // pair generalises via a mutation grid rather than another real hill,
+  // which is actually more honest — the rule operates on adjectives in
+  // general, not on specific named hills.
+  {
+    num: 5,
+    title: "When letters disappear",
+    promise: <>
+      Sometimes the same word looks different depending on what comes before
+      it. There's a pattern — and once you see it, you'll read{" "}
+      <em>twice as many</em> Gaelic words without learning a single new one.
+    </>,
+    compare: {
+      label: "Spot the difference",
+      pair: ["Càrn Bàn", "Beinn Bhàn"],
+      caption: <>
+        Same adjective. Different first letter. The <em>b</em> on the left
+        gained an <em>h</em> on the right — and the sound shifted from "b" to
+        "v". This isn't a different word; it's the same word, softened.
+      </>,
+    },
+    rule: {
+      label: "The rule",
+      body: <>
+        <p>
+          When a feminine noun is followed by an adjective, the adjective{" "}
+          <strong>lenites</strong> if it can — gaining a silent <em>h</em>{" "}
+          after its first letter, which softens the sound.
+        </p>
+        <p>
+          <em>Beinn</em> (mountain) is feminine. <em>Càrn</em> (cairn) is
+          masculine. That's the whole reason for the difference above. Same
+          adjective, two grammatical worlds.
+        </p>
+      </>,
+    },
+    mutationGrid: {
+      label: "What lenition does to common sounds",
+      caption: <>
+        After <em>beinn</em> (or any feminine noun), these are the changes
+        you'll see most often:
+      </>,
+      rows: [
+        { unlenited: "bàn",  lenited: "bhàn",  meaning: "white",        soundUn: "bahn",  soundLen: "vahn"  },
+        { unlenited: "mòr",  lenited: "mhòr",  meaning: "big",          soundUn: "more",  soundLen: "vore"  },
+        { unlenited: "dubh", lenited: "dhubh", meaning: "black",        soundUn: "doo",   soundLen: "ghoo"  },
+        { unlenited: "gorm", lenited: "ghorm", meaning: "blue / green", soundUn: "gorom", soundLen: "ghorom"},
+      ],
+    },
+    tryIt: {
+      // Sgùrr is masculine, so no lenition. The user has to apply the rule
+      // backwards: "lenition fires after feminine; sgùrr isn't feminine; so
+      // bàn stays bàn." This is the test of whether they've internalised the
+      // direction of the rule.
+      mode: "predict",
+      prompt: <>
+        Here's <em>Sgùrr</em> (sharp peak — masculine) plus <em>bàn</em> (white).
+        Does the rule fire? Will the adjective change shape?
+      </>,
+      options: [
+        { label: "Sgùrr Bhàn (lenited)",   correct: false },
+        { label: "Sgùrr Bàn (unchanged)",  correct: true  },
+      ],
+      reveal: <>
+        Right — <strong>Sgùrr Bàn</strong>. Lenition only fires after a feminine
+        noun, and <em>sgùrr</em> is masculine. The adjective stays as it is.
+      </>,
+      wrongReveal: <>
+        Actually no — <strong>Sgùrr Bàn</strong>. Lenition only fires after a{" "}
+        <em>feminine</em> noun. <em>Sgùrr</em> is masculine, so the rule
+        doesn't trigger and <em>bàn</em> stays unchanged.
+      </>,
+      cliffhanger: <>
+        One last thing before you go: in Lesson 1 you saw <em>Beinn Dubh</em> —
+        beinn is feminine, dubh starts with a lenitable letter, but it{" "}
+        <em>doesn't</em> get an h. Why? Lesson 6 explains the one exception
+        that proves the rule.
+      </>,
+    },
+    recap: [
+      <>
+        Lenition is the most useful pattern in Gaelic. Three words get you most
+        of the way: <strong>feminine noun + adjective = h after the first
+        letter</strong>. The "h" is silent in writing terms but it changes the
+        sound — softening b → v, m → v, d → gh, g → gh.
+      </>,
+      <>
+        You can now read <em>Bhàn, Mhòr, Dhubh, Ghorm</em> as easily as their
+        unlenited forms. Doubled vocabulary, one rule. In the next lesson
+        you'll meet the exception that explains <em>Beinn Dubh</em>.
+      </>,
+    ],
+  },
+
   { num: 6,  title: "The exception that proves the rule", stub: "Homo-organic block: why Beinn Dubh stays unlenited" },
   { num: 7,  title: "The 'cn' shift",                  stub: "cnoc → 'krochk' and why the n becomes r" },
   { num: 8,  title: "When 'a' means 'of the'",         stub: "Meall a' Bhùiridh — the genitive article" },
@@ -108,9 +210,9 @@ function Lesson({ lesson, onPrev, onNext, onExit, atFirst, atLast }) {
   // Reset reveal when navigating to a new lesson
   React.useEffect(() => { setRevealed(false); }, [lesson.num]);
 
-  // Stub lessons render a placeholder. Once `examples` is filled in, the
-  // real layout kicks in.
-  const isStub = !lesson.examples;
+  // A lesson is a stub if it has a `stub` description and no real content.
+  // Real lessons must provide at least one content section.
+  const isStub = !!lesson.stub && !lesson.examples && !lesson.compare && !lesson.rule;
 
   return (
     <div className="tour">
@@ -137,17 +239,50 @@ function Lesson({ lesson, onPrev, onNext, onExit, atFirst, atLast }) {
         </div>
       ) : (
         <>
-          <p className="tour-promise">{lesson.promise}</p>
+          {lesson.promise && <p className="tour-promise">{lesson.promise}</p>}
 
-          <div className="tour-section-label">Three worked examples</div>
-          {lesson.examples.map(name => {
-            const hill = findHill(name);
-            return hill ? (
-              <LessonExample key={name} hill={hill} />
-            ) : (
-              <div key={name} className="tour-missing">Hill not found: {name}</div>
-            );
-          })}
+          {/* Sequential worked examples (Lesson 1 style) */}
+          {lesson.examples && (
+            <>
+              <div className="tour-section-label">Three worked examples</div>
+              {lesson.examples.map(name => {
+                const hill = findHill(name);
+                return hill ? (
+                  <LessonExample key={name} hill={hill} />
+                ) : (
+                  <div key={name} className="tour-missing">Hill not found: {name}</div>
+                );
+              })}
+            </>
+          )}
+
+          {/* Side-by-side comparison (Lesson 5+) */}
+          {lesson.compare && (
+            <>
+              <div className="tour-section-label">{lesson.compare.label}</div>
+              <LessonCompare compare={lesson.compare} />
+            </>
+          )}
+
+          {/* Explicit rule statement (Lesson 5+) — for when the rule needs
+              prose attention before the try-it, not just after */}
+          {lesson.rule && (
+            <>
+              <div className="tour-section-label">{lesson.rule.label}</div>
+              <div className="tour-rule">
+                <div className="tour-rule-icon">!</div>
+                <div className="tour-rule-body">{lesson.rule.body}</div>
+              </div>
+            </>
+          )}
+
+          {/* Mutation grid (Lesson 5) — generalising the rule across adjectives */}
+          {lesson.mutationGrid && (
+            <>
+              <div className="tour-section-label">{lesson.mutationGrid.label}</div>
+              <MutationGrid grid={lesson.mutationGrid} />
+            </>
+          )}
 
           {lesson.tryIt && (
             <>
@@ -160,13 +295,17 @@ function Lesson({ lesson, onPrev, onNext, onExit, atFirst, atLast }) {
             </>
           )}
 
-          <div className="tour-section-label">What just happened</div>
-          <div className="tour-recap">
-            <div className="tour-recap-icon">{lesson.num}</div>
-            <div className="tour-recap-body">
-              {lesson.recap.map((p, i) => <p key={i}>{p}</p>)}
-            </div>
-          </div>
+          {lesson.recap && (
+            <>
+              <div className="tour-section-label">What just happened</div>
+              <div className="tour-recap">
+                <div className="tour-recap-icon">{lesson.num}</div>
+                <div className="tour-recap-body">
+                  {lesson.recap.map((p, i) => <p key={i}>{p}</p>)}
+                </div>
+              </div>
+            </>
+          )}
         </>
       )}
 
@@ -191,6 +330,84 @@ function Lesson({ lesson, onPrev, onNext, onExit, atFirst, atLast }) {
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </button>
         )}
+      </div>
+    </div>
+  );
+}
+
+// ── <LessonCompare> ──────────────────────────────────────────────────
+// Side-by-side comparison of two hills. Used when the lesson's point is a
+// difference between them (lenition firing or not, etc.). The two hills sit
+// in equal columns so the user can visually compare their decompositions
+// without scrolling. On mobile (single column) the columns stack but each
+// hill's decomp stays horizontal so the comparison still reads.
+function LessonCompare({ compare }) {
+  const [hillA, hillB] = compare.pair.map(findHill);
+  if (!hillA || !hillB) {
+    return <div className="tour-missing">Compare hills not found</div>;
+  }
+  return (
+    <div className="tour-compare-block">
+      <div className="tour-compare-grid">
+        <ComparePane hill={hillA} />
+        <ComparePane hill={hillB} />
+      </div>
+      {compare.caption && (
+        <p className="tour-compare-caption">{compare.caption}</p>
+      )}
+    </div>
+  );
+}
+
+function ComparePane({ hill }) {
+  const parts = partsBreakdown(hill);
+  return (
+    <div className="tour-compare-pane">
+      <div className="tour-compare-name">{hill.name}</div>
+      <div className="tour-compare-anglo">{hill.pron}</div>
+      <div className="tour-compare-svg">
+        <HillSilhouette hill={hill} size={120} />
+      </div>
+      <div className="tour-compare-parts">
+        {parts.map((p, i) => (
+          <div key={i} className={`tour-part ${p.role}`}>
+            <div className="tour-part-role">{p.role}</div>
+            <div className="tour-part-text">{p.text}</div>
+            <div className="tour-part-meaning">{p.meaning}</div>
+            {p.pron && <div className="tour-part-pron">{p.pron}</div>}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ── <MutationGrid> ───────────────────────────────────────────────────
+// Generalises a sound-change rule across multiple words. Used in Lesson 5
+// to show bàn/bhàn, mòr/mhòr etc. — the rule operates on adjectives in
+// general, so the grid is more honest than pretending the user can find
+// each form in a named hill.
+function MutationGrid({ grid }) {
+  return (
+    <div className="tour-mutation">
+      {grid.caption && <p className="tour-mutation-caption">{grid.caption}</p>}
+      <div className="tour-mutation-grid">
+        <div className="tour-mutation-head">Word</div>
+        <div className="tour-mutation-head">Lenited</div>
+        <div className="tour-mutation-head">Means</div>
+        {grid.rows.map((r, i) => (
+          <React.Fragment key={i}>
+            <div className="tour-mutation-cell">
+              <span className="tour-mutation-form">{r.unlenited}</span>
+              <span className="tour-mutation-sound">{r.soundUn}</span>
+            </div>
+            <div className="tour-mutation-cell lenited">
+              <span className="tour-mutation-form">{r.lenited}</span>
+              <span className="tour-mutation-sound">{r.soundLen}</span>
+            </div>
+            <div className="tour-mutation-cell meaning">{r.meaning}</div>
+          </React.Fragment>
+        ))}
       </div>
     </div>
   );
@@ -225,7 +442,20 @@ function LessonExample({ hill }) {
 }
 
 // ── <TryIt> ─────────────────────────────────────────────────────────
+// Two interaction modes:
+//   - "reveal" (default): show a hill, user thinks, taps button, breakdown
+//     and feedback appear. Used in Lesson 1.
+//   - "predict": user picks between 2-3 options before seeing the answer.
+//     Used when the lesson is about a rule, and we want to test whether
+//     they've internalised it.
 function TryIt({ tryIt, revealed, onReveal }) {
+  if (tryIt.mode === "predict") {
+    return <PredictTryIt tryIt={tryIt} />;
+  }
+  return <RevealTryIt tryIt={tryIt} revealed={revealed} onReveal={onReveal} />;
+}
+
+function RevealTryIt({ tryIt, revealed, onReveal }) {
   const hill = findHill(tryIt.hillName);
   if (!hill) return <div className="tour-missing">Try-it hill not found: {tryIt.hillName}</div>;
   const parts = partsBreakdown(hill);
@@ -259,6 +489,55 @@ function TryIt({ tryIt, revealed, onReveal }) {
             ))}
           </div>
           <p className="tour-tryit-feedback">{tryIt.feedback}</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function PredictTryIt({ tryIt }) {
+  // Track the picked option index. null = unanswered.
+  const [picked, setPicked] = React.useState(null);
+  const isCorrect = picked !== null && tryIt.options[picked].correct;
+  const answered = picked !== null;
+
+  return (
+    <div className="tour-tryit">
+      <p className="tour-tryit-prompt">{tryIt.prompt}</p>
+      <div className="tour-predict-options" role="radiogroup">
+        {tryIt.options.map((opt, i) => {
+          const isPick = picked === i;
+          const cls = !answered ? ""
+                    : isPick && opt.correct ? "correct"
+                    : isPick && !opt.correct ? "wrong"
+                    : !isPick && opt.correct ? "would-be-correct"
+                    : "muted";
+          return (
+            <button
+              key={i}
+              type="button"
+              className={`tour-predict-option ${cls}`}
+              role="radio"
+              aria-checked={isPick}
+              disabled={answered}
+              onClick={() => setPicked(i)}
+            >
+              <span className="tour-predict-marker" aria-hidden="true">
+                {!answered ? "" : opt.correct ? "✓" : isPick ? "✗" : ""}
+              </span>
+              <span className="tour-predict-label">{opt.label}</span>
+            </button>
+          );
+        })}
+      </div>
+      {answered && (
+        <div className="tour-tryit-answer">
+          <p className="tour-tryit-feedback">
+            {isCorrect ? tryIt.reveal : tryIt.wrongReveal}
+          </p>
+          {tryIt.cliffhanger && (
+            <p className="tour-tryit-cliffhanger">{tryIt.cliffhanger}</p>
+          )}
         </div>
       )}
     </div>
