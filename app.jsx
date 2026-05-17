@@ -1,6 +1,7 @@
 // app.jsx — root component, mode switcher.
 
 const MODES = [
+  { id: "tour",      label: "Tour" },
   { id: "dissector", label: "Dissect" },
   { id: "trainer",   label: "Sounds" },
   { id: "quiz",      label: "Quiz" },
@@ -8,7 +9,11 @@ const MODES = [
 ];
 
 function App() {
-  const [mode, setMode] = React.useState("dissector");
+  // Default to "tour" — the guided front door for new learners. Returning
+  // users can switch tabs and (because we don't persist mode) will land back
+  // on Tour next time, which is the intended behaviour while the tour is
+  // still the primary learning surface.
+  const [mode, setMode] = React.useState("tour");
   const [hill, setHill] = React.useState(window.HILLS[0]);
 
   return (
@@ -28,6 +33,7 @@ function App() {
       </nav>
 
       <main className="app-main">
+        {mode === "tour"      && <Tour onExit={() => setMode("dissector")} />}
         {mode === "dissector" && <Dissector hill={hill} setHill={setHill} />}
         {mode === "trainer"   && <PronunciationTrainer />}
         {mode === "quiz"      && <Quiz />}

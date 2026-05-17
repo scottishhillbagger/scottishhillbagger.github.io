@@ -3,6 +3,11 @@
 // Filterable by type (generic / adjective / color / article / qualifier).
 // Each entry shows the word, meaning, pronunciation, IPA, shape glyph if a
 // generic, and example hills using it.
+//
+// Note: this used to have a search input. We removed it because (a) the Tour
+// is now the front door for new learners and (b) search rewarded what users
+// already knew, suppressing the variation the pill filters were designed to
+// surface. The pills do real teaching work — search undid it.
 
 const FILTERS = [
   { id: "all",       label: "All" },
@@ -15,22 +20,12 @@ const FILTERS = [
 
 function FieldGuide() {
   const [filter, setFilter] = React.useState("all");
-  const [query, setQuery] = React.useState("");
 
   const entries = React.useMemo(() => {
     const all = Object.entries(window.ROOTS).map(([key, val]) => ({ key, ...val }));
-    let filtered = all;
-    if (filter !== "all") filtered = filtered.filter(e => e.type === filter);
-    if (query.trim()) {
-      const lower = query.toLowerCase();
-      filtered = filtered.filter(e =>
-        e.key.toLowerCase().includes(lower) ||
-        (e.meaning || "").toLowerCase().includes(lower) ||
-        (e.pron || "").toLowerCase().includes(lower)
-      );
-    }
+    const filtered = filter === "all" ? all : all.filter(e => e.type === filter);
     return filtered.sort((a, b) => a.key.localeCompare(b.key));
-  }, [filter, query]);
+  }, [filter]);
 
   // Count examples per root once
   const exampleMap = React.useMemo(() => {
@@ -57,14 +52,6 @@ function FieldGuide() {
               {f.label}
             </button>
           ))}
-        </div>
-        <div className="guide-search">
-          <input
-            type="text"
-            placeholder="Search by word, meaning, or pronunciation…"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-          />
         </div>
       </div>
 

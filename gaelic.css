@@ -1089,3 +1089,405 @@ input, textarea {
   .hill-name { font-size: clamp(1.5rem, 8vw, 2rem); }
   .quiz-stats .stat-value { font-size: 1.1rem; }
 }
+
+/* ─────────────────────────────────────────────────────────────────────
+   TOUR — guided lessons
+   Lesson 1 + stubs 2–10. Renders inside .app-main as a tour-mode panel.
+   ───────────────────────────────────────────────────────────────────── */
+
+.tour {
+  max-width: 680px;
+  margin: 0 auto;
+  padding-bottom: 6rem;          /* room for sticky nav at the bottom */
+}
+
+/* Progress dots — one per lesson, fills as you go */
+.tour-progress {
+  display: flex;
+  gap: 5px;
+  margin: 0 0 1.5rem;
+}
+.tour-progress-dot {
+  flex: 1;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--ink4);
+  transition: background .25s;
+}
+.tour-progress-dot.done    { background: var(--accent); }
+.tour-progress-dot.current { background: var(--ink); }
+
+/* Header bits */
+.tour-num {
+  font-family: var(--font-mono);
+  font-size: .7rem;
+  font-weight: 500;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--ink3);
+  margin-bottom: .35rem;
+}
+.tour-title {
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -.025em;
+  margin-bottom: .7rem;
+  color: var(--ink);
+}
+.tour-promise {
+  font-size: .95rem;
+  line-height: 1.5;
+  color: var(--ink2);
+  max-width: 48ch;
+  margin-bottom: .5rem;
+}
+.tour-promise em {
+  font-style: normal;
+  color: var(--accent-dark);
+  font-weight: 500;
+}
+
+/* Section dividers */
+.tour-section-label {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+  margin: 2.5rem 0 1rem;
+  font-family: var(--font-mono);
+  font-size: .62rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink3);
+}
+.tour-section-label::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--rule);
+}
+
+/* Worked example card */
+.tour-example {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  padding: 1.1rem 1.25rem 1.25rem;
+  margin-bottom: 1rem;
+}
+.tour-example-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: .85rem;
+}
+.tour-example-name {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -.02em;
+  line-height: 1.1;
+  color: var(--ink);
+}
+.tour-example-anglo {
+  font-family: var(--font-mono);
+  font-size: .7rem;
+  color: var(--ink3);
+  margin-top: .2rem;
+  letter-spacing: .02em;
+}
+.tour-example-svg {
+  flex-shrink: 0;
+}
+
+/* The decomposition — the heart of the lesson */
+.tour-decomp {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .65rem;
+  padding-top: .85rem;
+  border-top: 1px solid var(--rule2);
+}
+.tour-decomp.tour-decomp-flush {
+  padding-top: 0;
+  border-top: none;
+  margin-top: .85rem;
+}
+.tour-part {
+  background: var(--bg2);
+  border-radius: 8px;
+  padding: .7rem .85rem .8rem;
+}
+.tour-part-role {
+  font-family: var(--font-mono);
+  font-size: .55rem;
+  font-weight: 600;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--ink3);
+  margin-bottom: .3rem;
+}
+.tour-part.generic   .tour-part-role { color: var(--accent-dark); }
+.tour-part.qualifier .tour-part-role { color: var(--terra-dark); }
+.tour-part-text {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--ink);
+  margin-bottom: .15rem;
+  letter-spacing: 0;
+}
+.tour-part-meaning {
+  font-size: .78rem;
+  color: var(--ink2);
+  line-height: 1.35;
+}
+.tour-part-pron {
+  font-family: var(--font-mono);
+  font-size: .7rem;
+  color: var(--ink3);
+  margin-top: .3rem;
+  letter-spacing: 0;
+}
+
+/* Try-it block */
+.tour-tryit {
+  background: var(--accent-light);
+  border: 1px solid #C9D1B5;
+  border-radius: 10px;
+  padding: 1.1rem 1.25rem 1.25rem;
+  margin-bottom: 1rem;
+}
+.tour-tryit-prompt {
+  font-size: .78rem;
+  color: var(--accent-dark);
+  font-weight: 500;
+  margin-bottom: .85rem;
+  line-height: 1.4;
+}
+.tour-tryit-prompt em {
+  font-style: normal;
+  font-weight: 600;
+}
+.tour-tryit-hill {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: .85rem;
+}
+.tour-tryit-name {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -.02em;
+  color: var(--ink);
+}
+.tour-tryit-anglo {
+  font-family: var(--font-mono);
+  font-size: .7rem;
+  color: var(--ink3);
+  margin-top: .2rem;
+  letter-spacing: .02em;
+}
+.tour-tryit-btn {
+  background: var(--ink);
+  color: var(--bg);
+  border: none;
+  border-radius: 6px;
+  padding: .65rem 1rem;
+  font-family: inherit;
+  font-size: .78rem;
+  font-weight: 500;
+  letter-spacing: .01em;
+  cursor: pointer;
+  width: 100%;
+  transition: background .15s, transform .15s;
+}
+.tour-tryit-btn:hover  { background: var(--ink2); }
+.tour-tryit-btn:active { transform: scale(.98); }
+.tour-tryit-answer {
+  animation: tour-fade-in .3s ease-out;
+}
+@keyframes tour-fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.tour-tryit-feedback {
+  font-size: .78rem;
+  color: var(--accent-dark);
+  font-weight: 500;
+  margin-top: .85rem;
+  padding-top: .85rem;
+  border-top: 1px solid #C9D1B5;
+  line-height: 1.5;
+}
+.tour-tryit-feedback em {
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* Recap */
+.tour-recap {
+  margin-top: 1rem;
+  padding: 1.1rem 1.25rem;
+  background: var(--bg2);
+  border-radius: 10px;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.tour-recap-icon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  background: var(--ink);
+  color: var(--bg);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: .78rem;
+  font-weight: 600;
+}
+.tour-recap-body p {
+  font-size: .9rem;
+  line-height: 1.5;
+  color: var(--ink2);
+  margin-bottom: .45rem;
+}
+.tour-recap-body p:last-child { margin-bottom: 0; }
+.tour-recap-body strong { color: var(--ink); font-weight: 600; }
+.tour-recap-body em     { font-style: normal; font-weight: 500; color: var(--ink); }
+.tour-recap-body code {
+  font-family: var(--font-mono);
+  font-size: .85em;
+  background: var(--surface);
+  padding: .05em .35em;
+  border-radius: 4px;
+  color: var(--accent-dark);
+  letter-spacing: 0;
+}
+
+/* Stub state (lessons 2–10) */
+.tour-stub {
+  background: var(--surface);
+  border: 1px dashed var(--rule);
+  border-radius: 10px;
+  padding: 2rem 1.5rem;
+  margin: 1rem 0 2rem;
+  text-align: center;
+}
+.tour-stub-label {
+  font-family: var(--font-mono);
+  font-size: .6rem;
+  font-weight: 600;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--ink3);
+  margin-bottom: .5rem;
+}
+.tour-stub-desc {
+  font-size: .88rem;
+  color: var(--ink2);
+  line-height: 1.5;
+  max-width: 40ch;
+  margin: 0 auto;
+}
+
+/* Missing-hill error (shouldn't normally fire — only if data drifts) */
+.tour-missing {
+  padding: .75rem 1rem;
+  background: var(--terra-light);
+  border-radius: 6px;
+  font-size: .78rem;
+  color: var(--terra-dark);
+  font-family: var(--font-mono);
+  margin-bottom: 1rem;
+}
+
+/* Sticky footer nav */
+.tour-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(245, 243, 238, .94);
+  backdrop-filter: saturate(120%) blur(8px);
+  -webkit-backdrop-filter: saturate(120%) blur(8px);
+  border-top: 1px solid var(--rule);
+  padding: .85rem 1.25rem calc(.85rem + env(safe-area-inset-bottom));
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 100%;
+}
+/* Center the nav contents within the same 680px shell as the body */
+.tour-nav::before, .tour-nav::after { content: none; }
+.tour-nav > * { z-index: 1; }
+.tour-nav {
+  /* Use a pseudo-element trick: pad the bar full-width but center the controls
+     to the tour's max-width via flex + margin auto on the count. */
+}
+@media (min-width: 720px) {
+  .tour-nav {
+    justify-content: center;
+    gap: 2rem;
+  }
+}
+.tour-nav-btn {
+  font-family: inherit;
+  font-size: .85rem;
+  font-weight: 500;
+  letter-spacing: -.005em;
+  padding: .7rem 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--ink2);
+  transition: background .15s, color .15s, border-color .15s;
+}
+.tour-nav-btn:hover {
+  background: var(--surface);
+  color: var(--ink);
+}
+.tour-nav-btn.primary {
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+}
+.tour-nav-btn.primary:hover {
+  background: var(--ink2);
+  color: var(--bg);
+}
+.tour-nav-btn:disabled {
+  opacity: .35;
+  cursor: not-allowed;
+}
+.tour-nav-btn:disabled:hover {
+  background: transparent;
+  color: var(--ink2);
+}
+.tour-nav-count {
+  font-family: var(--font-mono);
+  font-size: .7rem;
+  color: var(--ink3);
+  letter-spacing: .05em;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .tour-title { font-size: 1.4rem; }
+  .tour-decomp { grid-template-columns: 1fr; gap: .5rem; }
+  .tour-nav-btn { padding: .65rem .9rem; font-size: .8rem; }
+}
