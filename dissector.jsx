@@ -26,31 +26,31 @@ function partInfo(part) {
 }
 
 // ── <HillList> ─────────────────────────────────────────────────────
-// Grouped, scrollable list of all 36 hills. Replaces the previous search
-// picker — at 36 entries a list is more browsable than a search box, and
-// grouping by generic does extra teaching work on top (the user implicitly
-// sees that all the sgùrr hills share something).
+// Grouped, scrollable list of all hills. At 37 entries a list is more
+// browsable than a search box, and grouping by generic does extra teaching
+// work (the user implicitly sees that all the sgùrr hills share something).
 //
-// Hills are grouped by their first generic (Beinn, Càrn, Sgùrr, Meall first;
-// remaining generics in alphabetical order). Within each group, hills are
-// alphabetised by Gaelic name.
+// Hills are grouped by their first generic. The big-four generics from
+// Lesson 2 (beinn, càrn, sgùrr, meall) come first; secondary generics
+// alphabetically; names that don't start with a generic in a "Special
+// forms" bucket at the end.
 //
-// An optional `classFilter` narrows to a single classification (Munro /
-// Corbett / Fiona). Empty filter = show all.
+// Layout adapts by viewport:
+//   - Desktop (≥720px): rendered as a sticky left sidebar by the parent
+//     Dissector layout. The list itself just renders; the parent handles
+//     positioning.
+//   - Mobile (<720px): the list collapses into a compact summary bar. Tap
+//     to expand inline; tap a hill to collapse and show the detail.
 const GENERIC_ORDER = ["beinn", "càrn", "sgùrr", "meall"];
 
 function groupHillsByGeneric(hills) {
   const groups = {};
   for (const h of hills) {
-    // The first part's root that's a generic. Falls back to "other" if
-    // somehow none of the parts is marked as a generic in ROOTS.
     const genericPart = h.parts.find(p => window.ROOTS[p.root]?.type === "generic");
     const key = genericPart ? genericPart.root : "other";
     if (!groups[key]) groups[key] = [];
     groups[key].push(h);
   }
-  // Sort the keys: GENERIC_ORDER first, then alphabetical for the rest,
-  // then "other" last.
   const orderedKeys = [
     ...GENERIC_ORDER.filter(k => groups[k]),
     ...Object.keys(groups).filter(k => !GENERIC_ORDER.includes(k) && k !== "other").sort(),
@@ -65,51 +65,33 @@ function groupHillsByGeneric(hills) {
   }));
 }
 
-function HillList({ hills, value, onChange, classFilter, onClassFilter }) {
-  const filtered = React.useMemo(() => {
-    if (!classFilter) return hills;
-    return hills.filter(h =>
-      h.classification === classFilter || h.classification.startsWith(classFilter)
-    );
-  }, [hills, classFilter]);
-
-  const groups = React.useMemo(() => groupHillsByGeneric(filtered), [filtered]);
-
-  // Counts shown on the filter chips reflect the full set, not the filtered
-  // one — otherwise switching to Munro would show "Munro 22" instead of
-  // letting you see what the other filters would jump to.
-  const counts = React.useMemo(() => {
-    const c = {};
-    for (const cls of ["Munro", "Corbett", "Fiona"]) {
-      c[cls] = hills.filter(h => h.classification === cls || h.classification.startsWith(cls)).length;
-    }
-    return c;
-  }, [hills]);
+function HillList({ hills, value, onChange, expanded, onToggle }) {
+  const groups = React.useMemo(() => groupHillsByGeneric(hills), [hills]);
 
   return (
-    <div className="hill-list-wrap">
-      <div className="hill-list-filters" role="group" aria-label="Filter by classification">
-        <button
-          className={`filter-chip ${!classFilter ? "active" : ""}`}
-          onClick={() => onClassFilter("")}
-        >
-          All <em>{hills.length}</em>
-        </button>
-        {["Munro", "Corbett", "Fiona"].map(cls => (
-          <button
-            key={cls}
-            className={`filter-chip ${classFilter === cls ? "active" : ""}`}
-            onClick={() => onClassFilter(classFilter === cls ? "" : cls)}
-          >
-            {cls} <em>{counts[cls]}</em>
-          </button>
-        ))}
-      </div>
+    <div className={`hill-list-wrap ${expanded ? "expanded" : "collapsed"}`}>
+      {/* Mobile-only summary bar — hidden on desktop via CSS.
+          Shows the active hill and a toggle to expand the list. */}
+      <button
+        type="button"
+        className="hill-list-summary"
+        onClick={onToggle}
+        aria-expanded={expanded}
+        aria-controls="hill-list-body"
+      >
+        <span className="hill-list-summary-label">Currently dissecting</span>
+        <span className="hill-list-summary-name">
+          {value ? value.name : "Pick a hill"}
+        </span>
+        <svg className="hill-list-summary-chevron" width="14" height="14"
+             viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+             aria-hidden="true">
+          <path d="m6 9 6 6 6-6"/>
+        </svg>
+      </button>
 
-      <div className="hill-list">
-        {groups.length === 0 && (
-          <div className="hill-list-empty">No hills match this filter.</div>
-        )}
+      <div className="hill-list" id="hill-list-body">
         {groups.map(group => (
           <div key={group.key} className="hill-list-group">
             <div className="hill-list-group-label">{group.label}</div>
@@ -142,7 +124,31 @@ function HillList({ hills, value, onChange, classFilter, onClassFilter }) {
 
 function Dissector({ hill, setHill }) {
   const [hoveredPart, setHoveredPart] = React.useState(null);
-  const [classFilter, setClassFilter] = React.useState("");
+  // Mobile: is the list expanded? Default true on first render so a user
+  // landing here sees the list and the active hill. Once they pick, it
+  // collapses to surface the detail. On desktop CSS keeps the list visible
+  // regardless of this state.
+  const [listExpanded, setListExpanded] = React.useState(true);
+
+  // When the user picks a hill on mobile, collapse the list and scroll the
+  // detail into view. The scroll target is the detail container, which the
+  // useRef below points at.
+  const detailRef = React.useRef(null);
+
+  const handleHillPick = (h) => {
+    setHill(h);
+    setHoveredPart(null);
+    setListExpanded(false);
+    // Defer the scroll until after the layout updates — otherwise we scroll
+    // before the collapse animation, and the user lands halfway through it.
+    // requestAnimationFrame is enough; we don't need to wait for the full
+    // transition because CSS handles the animation independently.
+    requestAnimationFrame(() => {
+      if (detailRef.current && window.matchMedia("(max-width: 719px)").matches) {
+        detailRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+  };
 
   // Find other hills sharing roots with the active one
   const relatives = React.useMemo(() => {
@@ -167,16 +173,20 @@ function Dissector({ hill, setHill }) {
 
   return (
     <div className="dissector">
-      <HillList
-        hills={window.HILLS}
-        value={hill}
-        onChange={setHill}
-        classFilter={classFilter}
-        onClassFilter={setClassFilter}
-      />
+      <div className="dissector-layout">
+        <aside className="dissector-aside">
+          <HillList
+            hills={window.HILLS}
+            value={hill}
+            onChange={handleHillPick}
+            expanded={listExpanded}
+            onToggle={() => setListExpanded(e => !e)}
+          />
+        </aside>
 
-      <div className="dissector-body">
-        {/* The big name */}
+        <section className="dissector-detail" ref={detailRef}>
+          <div className="dissector-body">
+            {/* The big name */}
         <div className="hill-display">
           <div className="hill-classification">
             <span className="badge">{hill.classification}</span>
@@ -284,7 +294,7 @@ function Dissector({ hill, setHill }) {
             <div className="relatives-label">Shares roots with</div>
             <div className="relatives-list">
               {relatives.map(({hill: h, sharedRoot}) => (
-                <button key={h.anglicised} className="rel-chip" onClick={() => setHill(h)}>
+                <button key={h.anglicised} className="rel-chip" onClick={() => handleHillPick(h)}>
                   <span className="rel-name">{h.anglicised}</span>
                   <span className="rel-root">via {sharedRoot}</span>
                 </button>
@@ -292,6 +302,8 @@ function Dissector({ hill, setHill }) {
             </div>
           </div>
         )}
+      </div>
+        </section>
       </div>
     </div>
   );
