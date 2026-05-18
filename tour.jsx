@@ -18,17 +18,23 @@ function findHill(name) {
 }
 
 // ── Helper: build the parts breakdown for a hill, used by examples and
-//    by the try-it reveal. Each part has the role (generic vs qualifier)
-//    derived from its root's `type`. We tolerate roots not being found in
-//    ROOTS so a malformed hill doesn't crash the tour.
+//    by the try-it reveal. Each part has the role (generic vs article vs
+//    qualifier) derived from its root's `type`. We tolerate roots not being
+//    found in ROOTS so a malformed hill doesn't crash the tour.
 function partsBreakdown(hill) {
   if (!hill) return [];
   return hill.parts.map(p => {
     const root = window.ROOTS[p.root] || {};
-    // The "role" is what we show as the slot label. We collapse all
-    // qualifier-ish types into "qualifier" because Lesson 1 only
-    // distinguishes two slots; later lessons can specialise.
-    const role = root.type === "generic" ? "generic" : "qualifier";
+    // The "role" is what we show as the slot label. Three roles:
+    //   - generic: the kind of hill (beinn, càrn, sgùrr, meall…)
+    //   - article: the linking word (a', an, na, nan, nam…) — Lesson 8
+    //   - qualifier: everything else, including nouns and adjectives
+    // The article role is essential for Lesson 8; earlier lessons don't
+    // use hills with articles so they're unaffected.
+    let role;
+    if (root.type === "generic") role = "generic";
+    else if (root.type === "article") role = "article";
+    else role = "qualifier";
     // Use the inline `custom` override if the hill provides one (e.g.
     // for tricky lenited forms where the root's meaning isn't quite right).
     const meaning = p.custom?.meaning || root.meaning || "";
@@ -89,20 +95,41 @@ const LESSONS = [
   // and lesson order can be tested. Fill in `examples`, `tryIt`, `recap` to
   // bring each one online.
   // ─── Lesson 2 ───────────────────────────────────────────────────────
-  // Builds on Lesson 1: now that the user knows "every name = generic +
-  // qualifier", this lesson installs the four generics that cover 70%+ of
-  // Scottish hill names. Format: four worked examples (one per generic) so
-  // the user sees the silhouette change shape as the generic changes.
-  // Try-it tests: given a name, can the user predict the silhouette?
+  // The shape-of-the-hill lesson. Four primary generics fully worked out, plus
+  // a secondary-generics reference grid showing six more words the user will
+  // genuinely meet in the 36 hills (and in the wild). Same primary+rarer split
+  // as Lesson 4's colour grid — top tier to memorise, second tier to recognise.
+  //
+  // Why six secondary and not more: each one appears in the data, has a
+  // distinct shape, and is a name most hillwalkers actually encounter. We
+  // exclude generics that are too obscure (sìth, sàil) or whose use overlaps
+  // with the primary four (mullach with càrn).
   {
     num: 2,
     title: "The big four generics",
     promise: <>
       Four words cover most Scottish hill names: <em>beinn, càrn, sgùrr,
       meall</em>. Each describes a different <em>shape</em> of hill. Learn
-      these four and you can read 7 out of 10 names on an OS map.
+      these four and a handful of secondary words and you can read 7 out of
+      10 names on an OS map.
     </>,
     examples: ["Beinn Nibheis", "Càrn Gorm", "Sgùrr Alasdair", "Meall Buidhe"],
+    genericsGrid: {
+      label: "Secondary generics you'll meet",
+      caption: <>
+        Six more words for "kind of hill" — they fill the same grammatical
+        slot as beinn/càrn/sgùrr/meall, but describe slightly different shapes.
+        Don't memorise these; just learn to recognise them when they appear.
+      </>,
+      rows: [
+        { word: "aonach", shape: "ridge",    meaning: "ridge, level top",        example: "Aonach Mòr" },
+        { word: "stob",   shape: "stub",     meaning: "stubby point",            example: "Stob Dearg" },
+        { word: "sgòr",   shape: "sharp",    meaning: "sharp peak (var. sgùrr)", example: "Sgòr Gaoith" },
+        { word: "bidean", shape: "pinnacle", meaning: "sharp pinnacle",          example: "Bidean nam Bian" },
+        { word: "stac",   shape: "pinnacle", meaning: "stack, steep rock",       example: "Stac Pollaidh" },
+        { word: "creag",  shape: "crag",     meaning: "crag, cliff",             example: "Creag Meagaidh" },
+      ],
+    },
     tryIt: {
       mode: "predict",
       prompt: <>
@@ -115,30 +142,31 @@ const LESSONS = [
         { label: "A rounded dome (like Meall Buidhe)",         correct: false },
       ],
       reveal: <>
-        Right. <em>Aonach</em> is one of the secondary generics — same logical
-        slot as beinn, càrn, sgùrr, meall, but for hills shaped like a long
-        flat-topped ridge. The pattern is the same: the generic tells you the
-        shape, the qualifier tells you which one.
+        Right. <em>Aonach</em> describes a long, flat-topped shape — same
+        slot as the big four, different shape. Once you've installed the
+        primary generics, secondary ones like aonach, stob, and bidean slot
+        in easily.
       </>,
       wrongReveal: <>
         Actually no — <em>aonach</em> means "ridge". The word literally
         describes a long, flat-topped shape. Once you've installed the big
-        four, secondary generics like aonach, stob, and binnein slot in
-        easily — same role, different shape.
+        four, secondary generics like aonach, stob, and bidean follow the
+        same role pattern — different shape, same slot.
       </>,
     },
     recap: [
       <>
-        The four generics you've now met: <strong>beinn</strong> (classic
+        The four primary generics you've met: <strong>beinn</strong> (classic
         mountain), <strong>càrn</strong> (cairn-shaped heap), <strong>sgùrr</strong>{" "}
         (sharp rocky peak), <strong>meall</strong> (rounded lump). Each tells
         you the <em>shape</em> before you even read the second word.
       </>,
       <>
-        Other generics — <em>aonach</em>, <em>stob</em>, <em>binnein</em>,{" "}
-        <em>sròn</em>, <em>creag</em> — follow the same role. When you meet
-        one, ask: "what shape is this word describing?" The qualifier will
-        come next.
+        The six secondary generics — <em>aonach, stob, sgòr, bidean, stac,
+        creag</em> — fill the same slot but describe different shapes. You
+        don't need to memorise them; recognising them when they appear is
+        enough. When you meet any new generic word, ask: "what shape is this
+        word describing?" The qualifier will come next.
       </>,
     ],
   },
@@ -397,23 +425,101 @@ const LESSONS = [
     ],
   },
 
-  // ─── Lesson 6 — enriched stub ───────────────────────────────────────
-  // What this lesson should teach: the homo-organic dental block. After a
-  // noun ending in 'n' (like beinn), an adjective starting with 'd' or 't'
-  // is exempt from lenition, even though the Lesson 5 rule would predict
-  // lenition. Beinn Dubh stays Beinn Dubh, not Beinn Dhubh.
+  // ─── Lesson 6 ───────────────────────────────────────────────────────
+  // Reuses Lesson 5's compare + rule primitives. The pedagogical move: show
+  // two hills that both look like they should lenite (both feminine, both
+  // adjective with lenitable initial), but only one actually does. The
+  // exception (homo-organic dental block) is patterned, not random — that's
+  // the lesson's insight.
   //
-  // Suggested layout: reuse Lesson 5's comparison + rule pattern. Compare
-  // Beinn Bhàn (lenited as expected, Lesson 5) vs Beinn Dubh (unlenited,
-  // exception). State the rule. Try-it: predict whether Beinn Dearg lenites.
-  //
-  // Hill data is available: Beinn Bhàn, Beinn Dubh both in HILLS. The
-  // existing Beinn Dubh entry already has the homo-organic note in its
-  // `note` field from the data.js patches — pull that quote into the recap.
+  // Worth knowing: linguists call this "homorganic" because d/t/s/l/n are
+  // produced at the same place in the mouth as the preceding n in beinn,
+  // and the cluster naturally resists lenition. But for the user that detail
+  // is overkill — they just need to know the rule fires for some letters
+  // and not others, and to recognise the pattern in the wild.
   {
     num: 6,
     title: "The exception that proves the rule",
-    stub: "Why Beinn Dubh doesn't lenite — the homo-organic dental block. Lesson 5's rule applies after feminine nouns, except when the adjective starts with d/t and the noun ends in n. Compare Beinn Bhàn (lenited) vs Beinn Dubh (not), state the rule, try-it on Beinn Dearg."
+    promise: <>
+      Lesson 5 said feminine + adjective = lenition. But you've already met
+      a hill — <em>Beinn Dubh</em> — where it didn't fire. This lesson is
+      the one exception, and the small set of letters it covers.
+    </>,
+    compare: {
+      label: "What changed, what didn't",
+      pair: ["Beinn Bhàn", "Beinn Dubh"],
+      caption: <>
+        Both feminine (beinn). Both adjectives start with letters that can
+        lenite (b → bh, d → dh). But <em>bhàn</em> gained the h and
+        <em> dubh</em> didn't. The rule is the same; the trigger isn't.
+      </>,
+    },
+    rule: {
+      label: "The exception",
+      body: <>
+        <p>
+          When a noun ending in <strong>n</strong> (like <em>beinn</em>) is
+          followed by an adjective starting with <strong>d, t, s, l</strong>{" "}
+          or <strong>n</strong>, lenition <em>doesn't fire</em> — even
+          though the Lesson 5 rule would predict it.
+        </p>
+        <p>
+          Why? The letters d, t, s, l, n are all made with the tongue in the
+          same place in the mouth as the n at the end of beinn. The mouth
+          resists going through a lenition shape and back. So:{" "}
+          <em>Beinn Bhàn</em> (b lenites — different mouth shape),{" "}
+          <em>Beinn Dubh</em> (d doesn't — same mouth shape).
+        </p>
+      </>,
+    },
+    tryIt: {
+      mode: "predict",
+      prompt: <>
+        Imagine you meet a hill called <em>Beinn Dearg</em> ("red mountain").
+        Would the adjective lenite or stay as it is?
+      </>,
+      options: [
+        { label: "Beinn Dhearg — d lenites to dh",                  correct: false },
+        { label: "Beinn Dearg — d stays unchanged",                  correct: true  },
+        { label: "Depends — sometimes lenites, sometimes doesn't",    correct: false },
+      ],
+      reveal: <>
+        Right — <strong>Beinn Dearg</strong> stays unlenited.{" "}
+        <em>Dearg</em> starts with d, which is in the homo-organic group; the
+        n at the end of beinn blocks lenition. You can see this hill all over
+        Scotland and it's always written without the h.
+      </>,
+      wrongReveal: <>
+        Actually it stays as <strong>Beinn Dearg</strong>. The d sound is
+        made in the same part of the mouth as the n at the end of beinn, so
+        lenition can't fire. The "depends" answer feels safe but the rule is
+        actually deterministic — once you know d/t/s/l/n are exempt, you can
+        predict it every time.
+      </>,
+      cliffhanger: <>
+        You now have two rules: <em>feminine triggers lenition</em>{" "}
+        (Lesson 5), and <em>d/t/s/l/n after n blocks it</em> (this lesson).
+        Apply them in that order and you'll predict most Scottish hill names
+        correctly. The remaining lessons are about the small connective
+        words — the "of the" and the "from the" that tie names together.
+      </>,
+    },
+    recap: [
+      <>
+        Two rules combined: <strong>(1)</strong> after a feminine noun, the
+        next adjective lenites; <strong>(2)</strong> but not if both end in
+        n and start with d/t/s/l/n. The second rule is the homo-organic
+        exception — sounds made in the same part of the mouth resist
+        morphing across each other.
+      </>,
+      <>
+        Practical effect: when you see a hill name starting with{" "}
+        <em>Beinn</em> and the next word starts with d, t, s, l or n, expect
+        <em> no h</em> in the second word. <em>Beinn Dearg, Beinn Talaidh,
+        Beinn Sgritheall, Beinn Liath, Beinn Nibheis</em> — none of them
+        lenite.
+      </>,
+    ],
   },
 
   // ─── Lesson 7 ───────────────────────────────────────────────────────
@@ -506,10 +612,86 @@ const LESSONS = [
   // Try-it: predict which article goes with which noun (gender + initial
   // letter governs the choice). This might be too hard for a beginner; an
   // easier try-it would be reveal-mode on a four-part name.
+  // ─── Lesson 8 ───────────────────────────────────────────────────────
+  // The genitive article. Once you've learned generic + qualifier, the next
+  // thing you meet in compound names is the small connective word that
+  // means "of the": a', an, na, nan, nam. The form depends on the gender
+  // and number of what follows (masc sg → a' or an; fem sg → na; plural →
+  // nan, or nam before b/m/p). The user doesn't need to memorise the
+  // grammar — they just need to learn to recognise the article slot, and
+  // know that the noun after it is in genitive case (which often means
+  // it's lenited too).
+  //
+  // Three contrasting examples picked from the data:
+  //   - Meall a' Bhùiridh (a' = of the, masc sg, lenites the noun)
+  //   - Sgùrr nan Gillean (nan = of the, plural masc, no lenition)
+  //   - Bidean nam Bian (nam = of the, plural before b/m/p — special form)
+  // Each shows a different article form so the user sees the variety.
+  //
+  // The article is rendered with a third role (.tour-part.article) so it
+  // visually stands apart from generic and qualifier. The lesson is the
+  // first place this role appears — earlier lessons use hills with no
+  // articles, so they're unaffected.
   {
     num: 8,
-    title: "When 'a' means 'of the'",
-    stub: "Genitive articles — a', an, na, nam, nan all mean 'of the' and bind two nouns together. Meall a' Bhùiridh = hill of the bellowing (stags). The article slot is the third part-type; lesson should add it as a distinct role in the decomposition view."
+    title: "Of the — the connecting word",
+    promise: <>
+      You've seen lots of two-word names. Three-word names usually have a
+      small link in the middle: <em>a', an, na, nan, nam</em>. They all
+      mean "of the". This lesson shows you how to spot them, and what
+      changes around them.
+    </>,
+    examples: ["Meall a' Bhùiridh", "Sgùrr nan Gillean", "Bidean nam Bian"],
+    rule: {
+      label: "Spotting the article",
+      body: <>
+        <p>
+          The article in the middle of a hill name is one of six small
+          words: <strong>an, am, a', na, nan, nam</strong>. Together they
+          all mean "the" or "of the". Which form you see depends on the
+          gender and number of the word that follows — but you don't need
+          to learn those rules to read the names. Just recognise the slot.
+        </p>
+        <p>
+          One thing to notice: the word <em>after</em> the article is
+          often lenited. <em>Meall a' Bhùiridh</em> isn't bùireadh, it's{" "}
+          <em>bhùiridh</em> — the article triggered an h, exactly like the
+          feminine adjective rule in Lesson 5. The mechanism is the same;
+          the trigger is different.
+        </p>
+      </>,
+    },
+    tryIt: {
+      mode: "reveal",
+      hillName: "Sròn a' Choire Ghairbh",
+      prompt: <>
+        Four words: <strong>Sròn a' Choire Ghairbh</strong>. You know{" "}
+        <em>sròn</em> means "nose" or "promontory". You can see{" "}
+        <em>a'</em> as the article. What about the last two? Both lenited
+        — <em>choire</em> from coire (corrie), <em>ghairbh</em> from garbh
+        (rough). Try to piece it together before revealing.
+      </>,
+      feedback: <>
+        "Promontory of the rough corrie." Four words, three slots: generic
+        (sròn) + article (a') + noun (choire) + adjective (ghairbh). Once
+        you can see the article slot, four-word names stop feeling longer
+        than two-word ones — they just have one extra link in the middle.
+      </>,
+    },
+    recap: [
+      <>
+        Six small words — <em>an, am, a', na, nan, nam</em> — all mean
+        "the" or "of the". They sit between two nouns to make compound
+        names. Once you can see the article slot, you can split any long
+        name into the right pieces.
+      </>,
+      <>
+        Side effect: the noun after the article is usually lenited (gains
+        an h). That's why <em>Bhùiridh</em> instead of bùireadh, <em>
+        Choire</em> instead of coire. Same lenition pattern as Lesson 5 —
+        just a different trigger.
+      </>,
+    ],
   },
 
   // ─── Lesson 9 — enriched stub ───────────────────────────────────────
@@ -556,10 +738,85 @@ const LESSONS = [
   // The Finish button (set when atLast) drops the user into Reference →
   // Dissect, where they can apply what they've learned to whichever hill
   // they actually care about.
+  // ─── Lesson 10 ──────────────────────────────────────────────────────
+  // The capstone. Walks through Stob Coire nan Lochan piece by piece. Each
+  // part annotated with which lesson taught the skill needed to read it.
+  // The lesson IS the try-it — no separate try-it block. The recap is the
+  // celebration: you can read most of a Scottish OS map.
+  //
+  // Why Stob Coire nan Lochan: four parts, every lesson contributes —
+  // Lesson 2 (stob, secondary generic), Lesson 5 (lenition), Lesson 8
+  // (article), and an honest acknowledgement that one of the parts
+  // (coire) is the kind of geographic noun a future Lesson 9 will cover
+  // properly. Better than Sìth Chailleann (only 2 parts) for showing
+  // the full mechanism.
+  //
+  // The walkthrough is a new layout primitive: each part gets its own
+  // card with the part text, meaning, pronunciation, and a small label
+  // citing the lesson that introduced the skill needed to read it.
+  // Finish button (atLast) routes the user to Reference → Dissect.
   {
     num: 10,
-    title: "Putting it together",
-    stub: "Capstone: Sìth Chailleann ('fairy hill of the Caledonians'), broken down piece by piece with each part annotated by which lesson it draws from. The recap is the graduation moment — 'you can now read a Scottish map'. Finish button routes to Reference → Dissect."
+    title: "Putting it all together",
+    promise: <>
+      Time to read a hill you've never met. <em>Stob Coire nan Lochan</em>{" "}
+      — four words, every layer you've learned. Each part below is
+      annotated with which lesson made it readable.
+    </>,
+    walkthrough: {
+      hillName: "Stob Coire nan Lochan",
+      caption: <>
+        A real Glen Coe Munro. Take the parts one at a time — each piece
+        comes from a specific lesson.
+      </>,
+      // The lesson references shown next to each part. These are written
+      // as little gloss notes rather than mechanical "see Lesson X" tags.
+      annotations: [
+        // Stob — generic, secondary tier
+        <>
+          <strong>Lesson 2</strong> — <em>stob</em> is a "stubby point",
+          one of the secondary generics. Same slot as beinn, càrn, sgùrr,
+          meall — just a different shape.
+        </>,
+        // Coire — genitive noun, geographic word
+        <>
+          <strong>Future Lesson 9</strong> — <em>coire</em> is a corrie,
+          a cauldron-shaped hollow on the mountain's flank. It's a
+          geographic noun in genitive case, here meaning "of the corrie".
+          (The full geographic-words lesson is still in development.)
+        </>,
+        // nan — article
+        <>
+          <strong>Lesson 8</strong> — <em>nan</em> is the "of the"
+          article, plural form. It signals the next word is itself in
+          genitive case.
+        </>,
+        // Lochan — genitive plural
+        <>
+          <strong>Lesson 8 again</strong> — <em>lochan</em> is "small
+          lochs". Plural noun after the article — exactly the pattern
+          you've just seen.
+        </>,
+      ],
+    },
+    recap: [
+      <>
+        Put together: "<strong>Peak of the corrie of the lochans</strong>"
+        — a stubby summit overlooking a hollow that holds small lochs.
+        The Munro is in Glen Coe; the corrie is one of the most
+        photographed in Scotland. Every word is doing work.
+      </>,
+      <>
+        You can now read most Scottish hill names. The big four generics
+        cover 70% of them; the secondary generics cover most of the rest;
+        the colour and size adjectives reveal the qualifier; the article
+        and lenition rules let you split four- and five-word names into
+        the right pieces. The Reference section has everything else:
+        <em> Dissect</em> any of the 37 hills part by part, <em>Quiz</em>{" "}
+        yourself on what you've learned, or use the <em>Glossary</em> as
+        a lookup when you meet a word you don't recognise.
+      </>,
+    ],
   },
 ];
 
@@ -613,10 +870,13 @@ function Lesson({ lesson, onPrev, onNext, onExit, atFirst, atLast }) {
             </>
           )}
 
-          {/* Sequential worked examples (Lesson 1 style) */}
+          {/* Sequential worked examples (Lesson 1 style). Label adapts to
+              actual count — Lesson 2 has four, others have three. */}
           {lesson.examples && (
             <>
-              <div className="tour-section-label">Three worked examples</div>
+              <div className="tour-section-label">
+                {lesson.examples.length === 4 ? "Four worked examples" : "Three worked examples"}
+              </div>
               {lesson.examples.map(name => {
                 const hill = findHill(name);
                 return hill ? (
@@ -625,6 +885,15 @@ function Lesson({ lesson, onPrev, onNext, onExit, atFirst, atLast }) {
                   <div key={name} className="tour-missing">Hill not found: {name}</div>
                 );
               })}
+            </>
+          )}
+
+          {/* Generics grid (Lesson 2) — secondary words at the same role as
+              the primary four, shown as a reference rather than full examples. */}
+          {lesson.genericsGrid && (
+            <>
+              <div className="tour-section-label">{lesson.genericsGrid.label}</div>
+              <GenericsGrid grid={lesson.genericsGrid} />
             </>
           )}
 
@@ -653,6 +922,16 @@ function Lesson({ lesson, onPrev, onNext, onExit, atFirst, atLast }) {
             <>
               <div className="tour-section-label">{lesson.mutationGrid.label}</div>
               <MutationGrid grid={lesson.mutationGrid} />
+            </>
+          )}
+
+          {/* Walkthrough (Lesson 10 capstone) — one hill, parts annotated
+              with which lesson taught each piece. The lesson IS the
+              try-it, so there's no separate tryIt block. */}
+          {lesson.walkthrough && (
+            <>
+              <div className="tour-section-label">The whole name, layer by layer</div>
+              <Walkthrough walkthrough={lesson.walkthrough} />
             </>
           )}
 
@@ -795,6 +1074,36 @@ function ColourGrid({ grid }) {
   );
 }
 
+// ── <GenericsGrid> ───────────────────────────────────────────────────
+// Reference grid of secondary generics. Each row: shape glyph (from
+// window.ShapeGlyph), the Gaelic word, what kind of hill it describes, and
+// an example name. Used in Lesson 2 to introduce secondary generics without
+// giving them full worked-example treatment. Same idiom as ColourGrid.
+function GenericsGrid({ grid }) {
+  const ShapeGlyph = window.ShapeGlyph;
+  return (
+    <div className="tour-mutation">
+      {grid.caption && <p className="tour-mutation-caption">{grid.caption}</p>}
+      <div className="tour-generics-grid">
+        {grid.rows.map((r, i) => (
+          <div key={i} className="tour-generics-row">
+            <div className="tour-generics-glyph" aria-hidden="true">
+              {ShapeGlyph
+                ? <ShapeGlyph shape={r.shape} size={36} ink="var(--ink)" />
+                : <div style={{width:36,height:18,background:'var(--bg2)',borderRadius:4}} />}
+            </div>
+            <div className="tour-generics-text">
+              <div className="tour-generics-word">{r.word}</div>
+              <div className="tour-generics-meaning">{r.meaning}</div>
+            </div>
+            <div className="tour-generics-example">{r.example}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 // ── <MutationGrid> ───────────────────────────────────────────────────
 // Generalises a sound-change rule across multiple words. Used in Lesson 5
 // to show bàn/bhàn, mòr/mhòr etc. — the rule operates on adjectives in
@@ -850,6 +1159,59 @@ function LessonExample({ hill }) {
           </div>
         ))}
       </div>
+    </article>
+  );
+}
+
+// ── <Walkthrough> ───────────────────────────────────────────────────
+// Lesson 10 capstone. One hill, walked through part by part with each
+// part annotated by which lesson taught the skill needed to read it.
+// Visually distinct from LessonExample: the parts are stacked vertically,
+// each with its annotation sitting beneath it, so the user reads down the
+// column "stob — Lesson 2 — coire — Future Lesson 9 — ..." like a guided
+// tour through the name. The hill's full anglicised name and silhouette
+// sit at the top as the "what we're reading" anchor.
+function Walkthrough({ walkthrough }) {
+  const hill = findHill(walkthrough.hillName);
+  if (!hill) {
+    return <div className="tour-missing">Hill not found: {walkthrough.hillName}</div>;
+  }
+  const parts = partsBreakdown(hill);
+  // We expect annotations array to be the same length as parts. If they
+  // mismatch we still render but warn, so a content bug is visible.
+  const annotations = walkthrough.annotations || [];
+  return (
+    <article className="tour-walkthrough">
+      <div className="tour-walkthrough-header">
+        <div className="tour-walkthrough-anchor">
+          <div className="tour-walkthrough-name">{hill.name}</div>
+          <div className="tour-walkthrough-pron">{hill.pron}</div>
+          <div className="tour-walkthrough-meaning">"{hill.meaning}"</div>
+        </div>
+        <div className="tour-walkthrough-svg">
+          <HillSilhouette hill={hill} size={96} />
+        </div>
+      </div>
+      {walkthrough.caption && (
+        <p className="tour-walkthrough-caption">{walkthrough.caption}</p>
+      )}
+      <ol className="tour-walkthrough-list">
+        {parts.map((p, i) => (
+          <li key={i} className="tour-walkthrough-step">
+            <div className={`tour-part ${p.role}`}>
+              <div className="tour-part-role">{p.role}</div>
+              <div className="tour-part-text">{p.text}</div>
+              <div className="tour-part-meaning">{p.meaning}</div>
+              {p.pron && <div className="tour-part-pron">{p.pron}</div>}
+            </div>
+            {annotations[i] && (
+              <div className="tour-walkthrough-annotation">
+                {annotations[i]}
+              </div>
+            )}
+          </li>
+        ))}
+      </ol>
     </article>
   );
 }

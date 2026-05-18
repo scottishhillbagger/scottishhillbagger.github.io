@@ -1232,6 +1232,10 @@ input, textarea {
 }
 .tour-part.generic   .tour-part-role { color: var(--accent-dark); }
 .tour-part.qualifier .tour-part-role { color: var(--terra-dark); }
+/* Article role (Lesson 8 onwards): the small connective word "of the".
+   Uses a muted ink colour to sit visually between generic and qualifier —
+   present, but lower-weight than the two primary part-types. */
+.tour-part.article   .tour-part-role { color: var(--ink3); }
 .tour-part-text {
   font-family: var(--font-mono);
   font-weight: 500;
@@ -1898,6 +1902,176 @@ input, textarea {
   .tour-colour-swatch { width: 22px; height: 22px; }
   .tour-colour-meaning { font-size: .76rem; }
   .tour-colour-divider { padding: .45rem .65rem .4rem; gap: .55rem; font-size: .52rem; }
+}
+
+/* ─────────────────────────────────────────────────────────────────────
+   GENERICS GRID — Lesson 2 secondary tier
+   Same idiom as the colour grid but with shape glyphs instead of swatches.
+   Three columns: glyph | word + meaning | example hill. The example is
+   the right-aligned anchor that helps the user attach the word to a real
+   hill they might encounter.
+   ───────────────────────────────────────────────────────────────────── */
+
+.tour-generics-grid {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--surface);
+}
+.tour-generics-row {
+  display: grid;
+  grid-template-columns: 46px 1fr auto;
+  gap: .85rem;
+  align-items: center;
+  padding: .65rem .85rem;
+  border-bottom: 1px solid var(--rule2);
+}
+.tour-generics-row:last-child {
+  border-bottom: none;
+}
+.tour-generics-glyph {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+  flex-shrink: 0;
+}
+.tour-generics-glyph svg {
+  display: block;
+}
+.tour-generics-text {
+  display: flex;
+  flex-direction: column;
+  gap: .15rem;
+  min-width: 0;
+}
+.tour-generics-word {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: .92rem;
+  color: var(--ink);
+  letter-spacing: 0;
+}
+.tour-generics-meaning {
+  font-size: .76rem;
+  color: var(--ink2);
+  line-height: 1.4;
+}
+.tour-generics-example {
+  font-family: var(--font-display);
+  font-size: .78rem;
+  font-style: italic;
+  color: var(--ink3);
+  letter-spacing: -.005em;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  .tour-generics-row {
+    grid-template-columns: 38px 1fr auto;
+    gap: .55rem;
+    padding: .55rem .65rem;
+  }
+  .tour-generics-meaning { font-size: .72rem; }
+  .tour-generics-example { font-size: .72rem; }
+}
+
+/* ─────────────────────────────────────────────────────────────────────
+   WALKTHROUGH — Lesson 10 capstone
+   One hill, stacked parts, each part annotated with the lesson that
+   taught it. Visually distinct from LessonExample: parts run down the
+   page in an ordered list, with annotations sitting beneath each part
+   like footnotes that explain the move.
+   ───────────────────────────────────────────────────────────────────── */
+
+.tour-walkthrough {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  padding: 1.1rem 1.1rem 1rem;
+  margin-bottom: 1rem;
+}
+.tour-walkthrough-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: .85rem;
+  padding-bottom: .85rem;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: .9rem;
+}
+.tour-walkthrough-anchor {
+  flex: 1;
+  min-width: 0;
+}
+.tour-walkthrough-name {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -.02em;
+  line-height: 1.1;
+  margin-bottom: .25rem;
+}
+.tour-walkthrough-pron {
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  color: var(--ink3);
+  letter-spacing: 0;
+  margin-bottom: .35rem;
+}
+.tour-walkthrough-meaning {
+  font-size: .82rem;
+  color: var(--ink2);
+  font-style: italic;
+  line-height: 1.35;
+}
+.tour-walkthrough-svg {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tour-walkthrough-caption {
+  font-size: .78rem;
+  color: var(--ink2);
+  line-height: 1.55;
+  margin: 0 0 1rem;
+  font-style: italic;
+}
+.tour-walkthrough-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .85rem;
+}
+.tour-walkthrough-step {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+.tour-walkthrough-step .tour-part {
+  background: var(--surface);
+}
+.tour-walkthrough-annotation {
+  font-size: .76rem;
+  color: var(--ink2);
+  line-height: 1.5;
+  padding: .15rem .15rem 0 .65rem;
+  border-left: 2px solid var(--rule);
+}
+.tour-walkthrough-annotation strong {
+  color: var(--accent-dark);
+  font-weight: 600;
+}
+.tour-walkthrough-annotation em {
+  font-style: italic;
+  color: var(--ink);
 }
 
 /* ─────────────────────────────────────────────────────────────────────
