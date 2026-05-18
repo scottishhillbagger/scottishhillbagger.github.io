@@ -227,24 +227,38 @@ const LESSONS = [
     num: 4,
     title: "Colour adjectives",
     promise: <>
-      Five colours — <em>dubh, dearg, bàn, gorm, ruadh</em> — cover more than
-      half the adjectives you'll see in Scottish hill names. Learn these and
-      you can decode most colour-named hills at a glance.
+      A handful of colour words covers most adjectives you'll see in Scottish
+      hill names. Learn the top five (<em>dubh, bàn, dearg, ruadh, gorm</em>)
+      and you can decode most colour-named hills at a glance; meet the rarer
+      six (<em>geal, buidhe, glas, liath, uaine, odhar</em>) as they come up
+      on the map.
     </>,
     colourGrid: {
-      label: "The five colours",
+      label: "The colour vocabulary",
       caption: <>
-        Each colour word with its sound and the colour it actually picks out.
-        Bear in mind that <em>gorm</em> drifts between blue and green in
-        Gaelic, and <em>ruadh</em> describes the rusty-red of heather and
+        Eleven colour words. The first five are the workhorses — you'll see
+        them on most colour-named hills. The rest are more specialised, but
+        worth knowing when you meet them. <em>Gorm</em> drifts between blue
+        and green, and <em>ruadh</em> describes the rusty-red of heather and
         deer, not pillar-box red.
       </>,
       rows: [
-        { word: "dubh",  pron: "doo",       meaning: "black",                    hex: "#1A1A19" },
-        { word: "bàn",   pron: "bahn",      meaning: "white, pale",              hex: "#F0EDE4" },
-        { word: "dearg", pron: "JERR-ak",   meaning: "red (bright)",             hex: "#B8543A" },
-        { word: "ruadh", pron: "ROO-ugh",   meaning: "reddish-brown, rusty",     hex: "#A64A1A" },
-        { word: "gorm",  pron: "GOR-om",    meaning: "blue / green (overlaps)",  hex: "#4A6B7A" },
+        // The five workhorses — Munro/Corbett names use these constantly.
+        // Hex values pulled from ROOTS in data.js so they stay in sync.
+        { word: "dubh",  pron: "doo",       meaning: "black, dark",            hex: "#2a2a2e" },
+        { word: "bàn",   pron: "bahn",      meaning: "white, fair",            hex: "#e8e2d6" },
+        { word: "dearg", pron: "JERR-ak",   meaning: "red (bright)",           hex: "#b14a3c" },
+        { word: "ruadh", pron: "ROO-ugh",   meaning: "russet, red-brown",      hex: "#a86a3d" },
+        { word: "gorm",  pron: "GORR-om",   meaning: "blue, green-blue",       hex: "#4a6a82" },
+        // Visual divider — common vs rarer split.
+        { divider: true, label: "Rarer, but you'll meet them" },
+        // The six rarer colours.
+        { word: "geal",  pron: "gyal",      meaning: "bright, brilliant white", hex: "#f1ede2" },
+        { word: "buidhe",pron: "BOO-yuh",   meaning: "yellow",                  hex: "#c79b3a" },
+        { word: "glas",  pron: "glass",     meaning: "grey-green",              hex: "#7a8a6e" },
+        { word: "liath", pron: "LEE-uh",    meaning: "grey",                    hex: "#9aa0a2" },
+        { word: "uaine", pron: "OO-an-yuh", meaning: "green (vivid)",           hex: "#5a7a52" },
+        { word: "odhar", pron: "OH-ur",     meaning: "dun, dappled",            hex: "#8a7858" },
       ],
     },
     examples: ["Càrn Gorm", "Stob Dearg", "Beinn Bhàn"],
@@ -266,10 +280,11 @@ const LESSONS = [
     },
     recap: [
       <>
-        You now have five colours and four+ generics. That's enough vocabulary
-        to read most short colour-named hills:{" "}
-        <em>Càrn Dearg, Stob Bàn, Aonach Dubh, Meall Ruadh</em>. The pattern
-        from Lesson 1 just gets richer; the skeleton stays the same.
+        You now have eleven colours and four+ generics. That's enough
+        vocabulary to read most colour-named hills:{" "}
+        <em>Càrn Dearg, Stob Bàn, Aonach Dubh, Meall Ruadh, Beinn Liath</em>.
+        Don't try to memorise all eleven at once — start with the top five and
+        let the rarer ones stick as you meet them in real names.
       </>,
       <>
         One thing you might have noticed in the third example: <em>Beinn
@@ -752,18 +767,29 @@ function ColourGrid({ grid }) {
     <div className="tour-mutation">
       {grid.caption && <p className="tour-mutation-caption">{grid.caption}</p>}
       <div className="tour-colour-grid">
-        {grid.rows.map((r, i) => (
-          <div key={i} className="tour-colour-row">
-            <div className="tour-colour-swatch"
-                 style={{ background: r.hex }}
-                 aria-hidden="true" />
-            <div className="tour-colour-text">
-              <div className="tour-colour-word">{r.word}</div>
-              <div className="tour-colour-pron">{r.pron}</div>
+        {grid.rows.map((r, i) => {
+          // Divider row — splits the common adjectives from the rarer ones.
+          // The label is shown as a small section header inside the grid.
+          if (r.divider) {
+            return (
+              <div key={i} className="tour-colour-divider" role="separator">
+                <span>{r.label}</span>
+              </div>
+            );
+          }
+          return (
+            <div key={i} className="tour-colour-row">
+              <div className="tour-colour-swatch"
+                   style={{ background: r.hex }}
+                   aria-hidden="true" />
+              <div className="tour-colour-text">
+                <div className="tour-colour-word">{r.word}</div>
+                <div className="tour-colour-pron">{r.pron}</div>
+              </div>
+              <div className="tour-colour-meaning">{r.meaning}</div>
             </div>
-            <div className="tour-colour-meaning">{r.meaning}</div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );

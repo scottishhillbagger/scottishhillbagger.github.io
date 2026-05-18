@@ -1824,6 +1824,40 @@ input, textarea {
 .tour-colour-row:last-child {
   border-bottom: none;
 }
+/* Divider row inside the grid — visually separates the common colour
+   adjectives from the rarer ones. Renders as a small uppercase label with
+   horizontal rules on either side, sitting on a slightly tinted background
+   so the eye reads it as a section break, not another colour entry. */
+.tour-colour-divider {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: .55rem .85rem .5rem;
+  background: var(--bg2);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--font-mono);
+  font-size: .55rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink3);
+}
+.tour-colour-divider::before,
+.tour-colour-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--rule);
+}
+.tour-colour-divider span {
+  flex-shrink: 0;
+}
+/* When a divider sits right after a row, the row's bottom border would
+   stack with the divider's top border. Suppress it. */
+.tour-colour-row:has(+ .tour-colour-divider) {
+  border-bottom: none;
+}
 .tour-colour-swatch {
   width: 28px;
   height: 28px;
@@ -1863,95 +1897,162 @@ input, textarea {
   }
   .tour-colour-swatch { width: 22px; height: 22px; }
   .tour-colour-meaning { font-size: .76rem; }
+  .tour-colour-divider { padding: .45rem .65rem .4rem; gap: .55rem; font-size: .52rem; }
 }
 
 /* ─────────────────────────────────────────────────────────────────────
-   DISSECTOR — Hill list (replaces the search picker)
-   At 36 hills, a grouped list is more browsable than a search box.
-   Groups are by generic word; classification filter chips narrow the
-   visible set. The existing dissector-body / dissector-side layout
-   below is unchanged — only the picker → list swap.
+   DISSECTOR — Two-pane layout
+   Desktop (≥720px): list on the left as a sticky sidebar, detail on the
+   right filling the remainder. Both visible simultaneously, both scroll
+   independently. Picking from the list updates the detail without
+   navigating.
+   Mobile (<720px): single column. The list collapses into a summary bar
+   showing the active hill. Tap to expand, tap a hill to collapse + scroll
+   the detail into view. The mobile path mirrors typical list→detail
+   navigation but keeps both surfaces on one page.
    ───────────────────────────────────────────────────────────────────── */
 
+.dissector-layout {
+  display: grid;
+  gap: 1.5rem;
+}
+.dissector-aside {
+  /* On mobile, full-width row above the detail */
+}
+.dissector-detail {
+  min-width: 0;        /* let grid children shrink properly */
+}
+
+@media (min-width: 720px) {
+  .dissector-layout {
+    grid-template-columns: minmax(260px, 320px) 1fr;
+    align-items: start;
+  }
+  .dissector-aside {
+    position: sticky;
+    top: 1rem;
+    max-height: calc(100vh - 2rem);
+    overflow-y: auto;
+    /* Subtle right edge so the list reads as a sidebar */
+    padding-right: .5rem;
+  }
+  /* Hide the mobile summary bar on desktop */
+  .hill-list-summary { display: none; }
+  /* Always show the list body on desktop */
+  .hill-list { display: flex !important; }
+
+  /* Inside the two-pane layout, the detail column has less width than the
+     dissector previously got when it was full-width. Force the inner
+     dissector-body to single-column so the hill name doesn't get cramped
+     by the 320px silhouette sidebar. The silhouette stacks below instead. */
+  .dissector-detail .dissector-body {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* Wide desktop: bring the silhouette back to the right when there's
+   genuinely enough room. 1100px viewport ≈ 800px detail pane after the
+   sidebar, which is comfortable for a 1fr + 320px split. */
+@media (min-width: 1100px) {
+  .dissector-detail .dissector-body {
+    grid-template-columns: 1fr 320px;
+    gap: 2rem;
+  }
+}
+
+/* ── List wrapper — handles collapsed/expanded state on mobile ───── */
 .hill-list-wrap {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0;
 }
 
-/* Filter chips — interactive, replacing the old non-interactive ones.
-   Reuses the .filter-chip class name from the previous chip pills, but
-   the active state is new (no active state existed before because they
-   weren't buttons). */
-.hill-list-filters {
+/* Mobile-only summary bar: shows "Currently dissecting: <hill name>" with
+   a chevron. Tapping toggles the list visibility. Hidden on desktop. */
+.hill-list-summary {
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  gap: .4rem;
-  margin-bottom: 1rem;
-}
-.hill-list-filters .filter-chip {
-  cursor: pointer;
+  align-items: center;
+  gap: .65rem;
+  padding: .85rem 1rem;
+  background: var(--surface);
   border: 1px solid var(--rule);
-  background: var(--surface);
-  color: var(--ink3);
-  font-family: var(--font-mono);
-  font-size: .68rem;
-  letter-spacing: .02em;
-  padding: .25rem .55rem;
-  border-radius: 99px;
-  transition: background .15s, border-color .15s, color .15s;
-}
-.hill-list-filters .filter-chip:hover {
-  background: var(--bg2);
-  border-color: var(--ink4);
-}
-.hill-list-filters .filter-chip.active {
-  background: var(--ink);
-  color: var(--bg);
-  border-color: var(--ink);
-}
-.hill-list-filters .filter-chip.active em {
-  color: var(--ink4);
-}
-
-/* The list itself — grouped, scrollable, narrowed by classification */
-.hill-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
-.hill-list-empty {
-  padding: 1.5rem;
-  text-align: center;
-  color: var(--ink3);
-  font-style: italic;
-  background: var(--surface);
-  border: 1px dashed var(--rule);
   border-radius: 8px;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+  transition: background .15s;
 }
-
-.hill-list-group-label {
+.hill-list-summary:hover {
+  background: var(--bg2);
+}
+.hill-list-summary-label {
   font-family: var(--font-mono);
-  font-size: .62rem;
+  font-size: .58rem;
   font-weight: 600;
   letter-spacing: .14em;
   text-transform: uppercase;
   color: var(--ink3);
-  padding-bottom: .55rem;
-  margin-bottom: .45rem;
+  flex-shrink: 0;
+}
+.hill-list-summary-name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--ink);
+  letter-spacing: -.01em;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.hill-list-summary-chevron {
+  color: var(--ink3);
+  flex-shrink: 0;
+  transition: transform .2s;
+}
+.hill-list-wrap.expanded .hill-list-summary-chevron {
+  transform: rotate(180deg);
+}
+
+/* List body — grouped sections of hill cards. Always shown on desktop;
+   on mobile, only when expanded. */
+.hill-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: .85rem;
+}
+.hill-list-wrap.collapsed .hill-list {
+  display: none;
+}
+
+.hill-list-group-label {
+  font-family: var(--font-mono);
+  font-size: .58rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink3);
+  padding-bottom: .5rem;
+  margin-bottom: .4rem;
   border-bottom: 1px solid var(--rule);
 }
 
+/* Hill cards inside a group. On desktop the sidebar is narrow, so cards
+   stack vertically in a single column. On mobile (when expanded) the cards
+   are also single-column for readability. */
 .hill-list-items {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: .4rem;
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
 }
 
 .hill-list-item {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: .15rem;
-  padding: .7rem .85rem .8rem;
+  gap: .12rem;
+  padding: .6rem .75rem .65rem;
   background: var(--surface);
   border: 1px solid var(--rule);
   border-radius: 8px;
@@ -1971,23 +2072,23 @@ input, textarea {
 .hill-list-name {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: .95rem;
+  font-size: .92rem;
   color: var(--ink);
   letter-spacing: -.01em;
   line-height: 1.2;
 }
 .hill-list-anglo {
   font-family: var(--font-mono);
-  font-size: .68rem;
+  font-size: .66rem;
   color: var(--ink3);
   letter-spacing: 0;
 }
 .hill-list-meta {
   font-family: var(--font-mono);
-  font-size: .62rem;
+  font-size: .6rem;
   color: var(--ink3);
   letter-spacing: .04em;
-  margin-top: .15rem;
+  margin-top: .1rem;
 }
 .hill-list-item.active .hill-list-meta,
 .hill-list-item.active .hill-list-anglo {
@@ -1995,8 +2096,7 @@ input, textarea {
 }
 
 @media (max-width: 480px) {
-  .hill-list-items {
-    grid-template-columns: 1fr;
-  }
-  .hill-list-item { padding: .6rem .75rem .7rem; }
+  .hill-list-item { padding: .55rem .7rem .6rem; }
+  .hill-list-summary { padding: .75rem .85rem; }
+  .hill-list-summary-name { font-size: .92rem; }
 }
