@@ -564,6 +564,24 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 .mast-icon-btn{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;padding:0;background:transparent;border:1px solid var(--ink4);color:var(--ink3);border-radius:50%;cursor:pointer;-webkit-appearance:none;-webkit-tap-highlight-color:transparent;transition:all .15s;flex-shrink:0}
 .mast-icon-btn:hover{border-color:var(--ink);color:var(--ink);background:var(--bg2)}
 .mast-icon-btn:active{transform:scale(.92)}
+/* Mast actions: wrapper for the icon buttons on the right of the masthead.
+   Lets us stack the Gaelic affordance next to the existing About button. */
+.mast-actions{display:flex;align-items:center;gap:.45rem;flex-shrink:0}
+/* Gaelic affordance: typographic "Àà" sitting in the same circular shell as
+   the (i) about button. Hover/long-press tooltip carries the descriptive
+   label ("Gaelic guide — meanings & pronunciation"). */
+.mast-icon-btn.mast-gaelic{
+  font-family:var(--font-display);
+  font-size:14px;
+  font-weight:600;
+  letter-spacing:-.02em;
+  line-height:1;
+  text-decoration:none;
+}
+.mast-icon-btn.mast-gaelic span{
+  display:inline-block;
+  margin-top:-1px; /* optical centring — the grave-À sits a touch high in Geist */
+}
 .about-modal-inner{padding:1.85rem 1.65rem 1.4rem}
 .about-eyebrow{font-size:.6rem;text-transform:uppercase;letter-spacing:.18em;color:var(--ink3);font-weight:500;margin-bottom:.35rem}
 .about-title{font-family:var(--font-display);font-size:1.3rem;font-weight:600;color:var(--ink);line-height:1.1;letter-spacing:-.025em;margin:0 0 1.6rem}
