@@ -1136,12 +1136,21 @@ input, textarea {
   margin-bottom: .7rem;
   color: var(--ink);
 }
+/* The lesson's opening pitch. Now a <div> wrapper rather than a <p> so
+   it can contain multiple paragraphs (Lesson 1 uses this for an emotional
+   preamble before the mechanical "every name = generic + qualifier"). */
 .tour-promise {
   font-size: .95rem;
   line-height: 1.5;
   color: var(--ink2);
   max-width: 48ch;
   margin-bottom: .5rem;
+}
+.tour-promise p {
+  margin: 0 0 .65rem;
+}
+.tour-promise p:last-child {
+  margin-bottom: 0;
 }
 .tour-promise em {
   font-style: normal;
@@ -1954,6 +1963,17 @@ input, textarea {
   color: var(--ink);
   letter-spacing: 0;
 }
+/* Inline pronunciation glyph next to the Gaelic word. Uses the same
+   mono treatment but lighter weight and muted colour so the word stays
+   the headline and the pron sits as a quiet aside. */
+.tour-generics-pron {
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-size: .72rem;
+  color: var(--ink3);
+  letter-spacing: 0;
+  margin-left: .05rem;
+}
 .tour-generics-meaning {
   font-size: .76rem;
   color: var(--ink2);
@@ -1968,6 +1988,29 @@ input, textarea {
   text-align: right;
   flex-shrink: 0;
 }
+/* Footnote beneath the grid — used for asides like the grave-accent note.
+   Sits at the same indent as the grid contents, slightly muted to read
+   as supplementary rather than primary. */
+.tour-generics-footnote {
+  font-size: .78rem;
+  color: var(--ink2);
+  line-height: 1.55;
+  margin: .85rem .15rem 0;
+  padding: .5rem .75rem;
+  background: var(--bg2);
+  border-left: 2px solid var(--rule);
+  border-radius: 0 4px 4px 0;
+}
+.tour-generics-footnote strong {
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-weight: 500;
+  letter-spacing: 0;
+}
+.tour-generics-footnote em {
+  font-style: italic;
+  color: var(--ink);
+}
 
 @media (max-width: 480px) {
   .tour-generics-row {
@@ -1977,6 +2020,78 @@ input, textarea {
   }
   .tour-generics-meaning { font-size: .72rem; }
   .tour-generics-example { font-size: .72rem; }
+}
+
+/* ─────────────────────────────────────────────────────────────────────
+   WORD GRID — Lesson 9 geographic words
+   Flatter than GenericsGrid: no left-column glyph or swatch, just
+   word+pron on the left and meaning (with optional example on the
+   right). Used for reference vocabulary that doesn't have a natural
+   visual hook.
+   ───────────────────────────────────────────────────────────────────── */
+
+.tour-word-grid {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--surface);
+}
+.tour-word-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: .85rem;
+  align-items: baseline;
+  padding: .65rem .85rem;
+  border-bottom: 1px solid var(--rule2);
+}
+.tour-word-row:last-child {
+  border-bottom: none;
+}
+.tour-word-text {
+  display: flex;
+  flex-direction: column;
+  gap: .15rem;
+  min-width: 0;
+}
+.tour-word-word {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: .92rem;
+  color: var(--ink);
+  letter-spacing: 0;
+}
+.tour-word-pron {
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-size: .72rem;
+  color: var(--ink3);
+  letter-spacing: 0;
+  margin-left: .05rem;
+}
+.tour-word-meaning {
+  font-size: .78rem;
+  color: var(--ink2);
+  line-height: 1.45;
+}
+.tour-word-example {
+  font-family: var(--font-display);
+  font-size: .78rem;
+  font-style: italic;
+  color: var(--ink3);
+  letter-spacing: -.005em;
+  text-align: right;
+  flex-shrink: 0;
+  align-self: center;
+}
+@media (max-width: 480px) {
+  .tour-word-row {
+    gap: .55rem;
+    padding: .55rem .65rem;
+  }
+  .tour-word-meaning { font-size: .74rem; }
+  .tour-word-example { font-size: .72rem; }
 }
 
 /* ─────────────────────────────────────────────────────────────────────

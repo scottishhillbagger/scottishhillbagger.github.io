@@ -85,27 +85,8 @@ const LESSONS = [
         Lesson 5.
       </>,
     },
-    recap: [
-      <>
-        Every name you'll meet on this tour follows the same skeleton:{" "}
-        <code>generic + qualifier</code>. The generic tells you what{" "}
-        <strong>kind</strong> of hill — a rounded one, a sharp one, a heap of
-        stones. The qualifier tells you <strong>which</strong> one — the big
-        one, the red one, the one above the loch.
-      </>,
-      <>
-        You've now met three generics (<em>beinn, càrn, sgùrr</em>) and three
-        qualifiers (<em>dubh, bàn, dearg</em>). That's six words. In Lesson 4
-        you'll add five more qualifiers and be able to read most colour-named
-        hills on a Scottish map.
-      </>,
-    ],
   },
 
-  // ─── Lessons 2–10: stubs to be filled in ────────────────────────────
-  // Each stub renders a placeholder screen so the navigation works end-to-end
-  // and lesson order can be tested. Fill in `examples`, `tryIt`, `recap` to
-  // bring each one online.
   // ─── Lesson 2 ───────────────────────────────────────────────────────
   // The shape-of-the-hill lesson. Four primary generics fully worked out, plus
   // a secondary-generics reference grid showing six more words the user will
@@ -181,22 +162,6 @@ const LESSONS = [
         same role pattern — different shape, same slot.
       </>,
     },
-    recap: [
-      <>
-        The four primary generics you've met: <strong>beinn</strong>{" "}
-        (classic mountain), <strong>càrn</strong> (cairn-shaped stony
-        heap), <strong>sgùrr</strong> (sharp rocky peak),{" "}
-        <strong>meall</strong> (wide rounded dome). Each tells you the{" "}
-        <em>shape</em> before you even read the second word.
-      </>,
-      <>
-        The six secondary generics — <em>aonach, stob, sgòr, bidean, stac,
-        creag</em> — fill the same slot but describe different shapes. You
-        don't need to memorise them; recognising them when they appear is
-        enough. When you meet any new generic word, ask: "what shape is
-        this word describing?" The qualifier will come next.
-      </>,
-    ],
   },
 
   // ─── Lesson 3 ───────────────────────────────────────────────────────
@@ -253,21 +218,6 @@ const LESSONS = [
         you're almost certainly wrong.
       </>,
     },
-    recap: [
-      <>
-        Two rules, in order of importance: <strong>(1)</strong> stress on the
-        first syllable of every content word, <strong>(2)</strong> articles
-        don't count as content words. Apply them in that order and you'll get
-        most hills right on the first try.
-      </>,
-      <>
-        Edge case to know about: a small number of words have absorbed the
-        article into themselves over centuries (e.g. <em>An Teallach</em>{" "}
-        becomes one breath — <em>an-TEALL-ach</em>, where "an" is unstressed
-        but barely audible as a separate word). The rule still works; just
-        the article is contracted.
-      </>,
-    ],
   },
 
   // ─── Lesson 4 ───────────────────────────────────────────────────────
@@ -449,19 +399,6 @@ const LESSONS = [
         that proves the rule.
       </>,
     },
-    recap: [
-      <>
-        Lenition is the most useful pattern in Gaelic. Three words get you most
-        of the way: <strong>feminine noun + adjective = h after the first
-        letter</strong>. The "h" is silent in writing terms but it changes the
-        sound — softening b → v, m → v, d → gh, g → gh.
-      </>,
-      <>
-        You can now read <em>Bhàn, Mhòr, Dhubh, Ghorm</em> as easily as their
-        unlenited forms. Doubled vocabulary, one rule. In the next lesson
-        you'll meet the exception that explains <em>Beinn Dubh</em>.
-      </>,
-    ],
   },
 
   // ─── Lesson 6 ───────────────────────────────────────────────────────
@@ -543,22 +480,6 @@ const LESSONS = [
         words — the "of the" and the "from the" that tie names together.
       </>,
     },
-    recap: [
-      <>
-        Two rules combined: <strong>(1)</strong> after a feminine noun, the
-        next adjective lenites; <strong>(2)</strong> but not if both end in
-        n and start with d/t/s/l/n. The second rule is the homo-organic
-        exception — sounds made in the same part of the mouth resist
-        morphing across each other.
-      </>,
-      <>
-        Practical effect: when you see a hill name starting with{" "}
-        <em>Beinn</em> and the next word starts with d, t, s, l or n, expect
-        <em> no h</em> in the second word. <em>Beinn Dearg, Beinn Talaidh,
-        Beinn Sgritheall, Beinn Liath, Beinn Nibheis</em> — none of them
-        lenite.
-      </>,
-    ],
   },
 
   // ─── Lesson 7 ───────────────────────────────────────────────────────
@@ -737,43 +658,127 @@ const LESSONS = [
         than two-word ones — they just have one extra link in the middle.
       </>,
     },
-    recap: [
-      <>
-        Six small words — <em>an, am, a', na, nan, nam</em> — all mean
-        "the" or "of the". They sit between two nouns to make compound
-        names. Once you can see the article slot, you can split any long
-        name into the right pieces.
-      </>,
-      <>
-        Side effect: the noun after the article is usually lenited (gains
-        an h). That's why <em>Bhùiridh</em> instead of bùireadh, <em>
-        Choire</em> instead of coire. Same lenition pattern as Lesson 5 —
-        just a different trigger.
-      </>,
-    ],
   },
 
-  // ─── Lesson 9 — enriched stub ───────────────────────────────────────
-  // What this lesson should teach: geographic words that appear inside hill
-  // names but aren't themselves hills — loch, coire (corrie/cwm), gleann
-  // (glen), bealach (pass). They usually sit after an article: "Stob Coire
-  // nan Lochan" = "peak of the corrie of the small lochs". This is the
-  // lesson that unlocks reading 4- and 5-part names.
+  // ─── Lesson 9 ───────────────────────────────────────────────────────
+  // Geographic words inside hill names — features around the hill that
+  // aren't the hill itself. Coire (corrie), loch (lake), gleann (glen),
+  // bealach (pass), allt (stream). These are the words that turn a
+  // two-part name into a four- or five-part name, because they sit in
+  // genitive constructions with the article: peak OF THE corrie OF THE
+  // lochans.
   //
-  // Layout: a small reference grid of the four words (similar to Lesson 4's
-  // colour grid), then 2 worked examples showing the words in context.
-  // Try-it: reveal-mode on Stob Coire nan Lochan — let the user try to
-  // identify each part themselves before revealing.
+  // The closing recap also picks up the personal-names insight (subsumed
+  // from the original recommendation #4): some hills don't describe a
+  // landform at all — they preserve a person, an animal, or a legend.
+  // Sgùrr Alasdair, Beinn Bhrotain, Buachaille Eitibhe Mòr.
   //
-  // Data caveat: the existing parts data has "macduibh" as a placeholder
-  // root for several non-MacDuff parts (Coire, Tuirc, etc). Lesson 9 should
-  // work around this by relying on the part's `text` and `custom` fields
-  // rather than the broken root link. Worth fixing the underlying data bug
-  // in a separate pass.
+  // Honest scope: only `coire` and `lochan` appear in the current 36-hill
+  // data set. The reference grid still lists loch/gleann/bealach/allt
+  // because the user will meet them on OS maps and corrie/valley names
+  // even if no hill in our set uses them. Flagged as such in the grid
+  // caption rather than pretended over.
   {
     num: 9,
     title: "Words that aren't hills",
-    stub: "loch, coire, gleann, bealach — geographic features that show up inside hill names. Stob Coire nan Lochan = 'peak of the corrie of the lochans'. Lesson should add a reference grid of the four words plus 2 worked examples on longer hill names."
+    promise: <>
+      <p>
+        The longest hill names contain words that aren't really about the
+        hill — they describe features <em>around</em> it. <em>Coire</em>{" "}
+        (corrie), <em>loch</em> (lake), <em>gleann</em> (glen),{" "}
+        <em>bealach</em> (pass). Once you can spot them, four- and
+        five-word names stop feeling intimidating.
+      </p>
+      <p>
+        <em>Stob Coire nan Lochan</em> isn't really about the peak. It's
+        the <em>corrie</em> that the locals named first, after the small
+        lochs in it; the peak is just the high point above. Read the
+        right way, the name tells you what to look for when you arrive.
+      </p>
+    </>,
+    wordGrid: {
+      label: "Words for features around hills",
+      caption: <>
+        Five words you'll meet in hill names and on OS maps. They sit in
+        the qualifier slot — usually after an article — and describe what's
+        next to the hill: a corrie, a small loch, a pass, a stream.
+      </>,
+      rows: [
+        { word: "coire",   pron: "KORR-uh",  meaning: "corrie — a cauldron-shaped hollow in a mountain's flank",
+          example: "Coire an t-Sneachda" },
+        { word: "lochan",  pron: "LOCH-an",  meaning: "a small loch (diminutive of loch)",
+          example: "Coire nan Lochan" },
+        { word: "loch",    pron: "loch",     meaning: "a lake (any size) — the big sister of lochan",
+          example: "Loch Mòr" },
+        { word: "gleann",  pron: "glown",    meaning: "a glen, valley — usually with a river",
+          example: "Gleann Coe" },
+        { word: "bealach", pron: "BYAL-ach", meaning: "a pass between two hills",
+          example: "Bealach na Bà" },
+        { word: "allt",    pron: "owlt",     meaning: "a stream or burn",
+          example: "Allt a' Mhuilinn" },
+      ],
+      footnote: <>
+        Only <em>coire</em> and <em>lochan</em> appear in the 37 hills you
+        can explore in this app. The others you'll meet on the OS maps and
+        in glen-and-corrie names around the hills you climb.
+      </>,
+    },
+    examples: ["Stob Coire nan Lochan"],
+    tryIt: {
+      mode: "predict",
+      prompt: <>
+        Without scrolling back: <strong>Coire an t-Sneachda</strong> is a
+        famous Cairngorms corrie, much used for winter climbing. Given
+        that <em>sneachd</em> means snow, what does the full name say?
+      </>,
+      options: [
+        { label: "Snowy pass",                                  correct: false },
+        { label: "Corrie of the snow",                          correct: true  },
+        { label: "Snow-coloured ridge",                         correct: false },
+      ],
+      reveal: <>
+        Right — "Corrie of the snow". The article <em>an t-</em> is just
+        a special form of "the" before s-words (Lesson 8 territory).
+        Most named corries in Scotland follow this pattern: <em>coire</em>{" "}
+        + article + qualifier. Once you spot the corrie, the rest is
+        whatever the people who walked there saw in it.
+      </>,
+      wrongReveal: <>
+        Actually "Corrie of the snow". <em>Coire</em> is the corrie, the
+        bowl-shaped hollow; <em>sneachd</em> is the snow. The article{" "}
+        <em>an t-</em> is a special form of "the" before s-words. Most
+        named corries follow this pattern — generic + article + what's
+        in it.
+      </>,
+    },
+    recap: [
+      <>
+        The five geographic words — <em>coire, lochan, loch, gleann,
+        bealach</em>, plus <em>allt</em> — fill the qualifier slot of
+        hill names but describe features <em>next to</em> the hill, not
+        the hill itself. When you see them, expect an article nearby
+        (<em>an, na, nan</em>) and probably a lenited noun after it. The
+        pattern is consistent: hill-word + corrie/loch/glen + article +
+        what's in it.
+      </>,
+      <>
+        One more category of "not the hill itself" worth knowing: some
+        names preserve <em>people</em>, not features. <em>Sgùrr Alasdair</em>{" "}
+        on Skye is Alexander's peak — Sheriff Alexander Nicolson, who
+        made the first recorded ascent in 1873. <em>Beinn Bhrotain</em>{" "}
+        in the Cairngorms is the mountain of Brodan, a mythological hound
+        from the Fianna legends. <em>Buachaille Eitibhe Mòr</em> in Glen
+        Coe means "the great herdsman of Etive" — the mountain
+        personified as a guardian-figure watching the glen. The
+        landscape is full of people whose names outlasted the language
+        that gave them.
+      </>,
+      <>
+        Lesson 10 puts everything together on one famously long name. By
+        the end you'll be reading a four-part Gaelic hill name fluently
+        — and you'll have a tour of which lesson taught which piece.
+      </>,
+    ],
   },
 
   // ─── Lesson 10 — enriched stub ───────────────────────────────────────
@@ -817,6 +822,10 @@ const LESSONS = [
   {
     num: 10,
     title: "Putting it all together",
+    // No section label on the recap — the Clearances closing is the
+    // tour's emotional payoff and reads better without a "Worth knowing"
+    // header softening it.
+    recapLabel: "",
     promise: <>
       Time to read a hill you've never met. <em>Stob Coire nan Lochan</em>{" "}
       — four words, every layer you've learned. Each part below is
@@ -839,10 +848,9 @@ const LESSONS = [
         </>,
         // Coire — genitive noun, geographic word
         <>
-          <strong>Future Lesson 9</strong> — <em>coire</em> is a corrie,
-          a cauldron-shaped hollow on the mountain's flank. It's a
+          <strong>Lesson 9</strong> — <em>coire</em> is a corrie, a
+          cauldron-shaped hollow on the mountain's flank. It's a
           geographic noun in genitive case, here meaning "of the corrie".
-          (The full geographic-words lesson is still in development.)
         </>,
         // nan — article
         <>
@@ -968,6 +976,16 @@ function Lesson({ lesson, onPrev, onNext, onExit, atFirst, atLast }) {
             </>
           )}
 
+          {/* Word grid (Lesson 9) — flat reference grid for vocabulary
+              that doesn't have a visual hook (no shape glyph, no swatch).
+              Used for geographic words: coire, loch, gleann, bealach, allt. */}
+          {lesson.wordGrid && (
+            <>
+              <div className="tour-section-label">{lesson.wordGrid.label}</div>
+              <WordGrid grid={lesson.wordGrid} />
+            </>
+          )}
+
           {/* Side-by-side comparison (Lesson 5+) */}
           {lesson.compare && (
             <>
@@ -1019,7 +1037,17 @@ function Lesson({ lesson, onPrev, onNext, onExit, atFirst, atLast }) {
 
           {lesson.recap && (
             <>
-              <div className="tour-section-label">What just happened</div>
+              {/* Section label is configurable. Default reads "Worth
+                  knowing" because the surviving recaps carry new content
+                  (asides, handoffs, closings) rather than restating what
+                  the try-it just taught. Set recapLabel to empty string
+                  to suppress the label entirely (Lesson 10 uses this so
+                  the Clearances closing stands without a header). */}
+              {lesson.recapLabel !== "" && (
+                <div className="tour-section-label">
+                  {lesson.recapLabel || "Worth knowing"}
+                </div>
+              )}
               <div className="tour-recap">
                 <div className="tour-recap-icon">{lesson.num}</div>
                 <div className="tour-recap-body">
@@ -1187,6 +1215,36 @@ function GenericsGrid({ grid }) {
   );
 }
 
+// ── <WordGrid> ──────────────────────────────────────────────────────
+// Simpler reference grid with no left-column visual — just word +
+// pronunciation + meaning, with an optional right-aligned example.
+// Used in Lesson 9 for the geographic-words reference. Same overall
+// idiom as GenericsGrid / ColourGrid, but flatter.
+function WordGrid({ grid }) {
+  return (
+    <div className="tour-mutation">
+      {grid.caption && <p className="tour-mutation-caption">{grid.caption}</p>}
+      <div className="tour-word-grid">
+        {grid.rows.map((r, i) => (
+          <div key={i} className="tour-word-row">
+            <div className="tour-word-text">
+              <div className="tour-word-word">
+                {r.word}
+                {r.pron && <span className="tour-word-pron"> · {r.pron}</span>}
+              </div>
+              <div className="tour-word-meaning">{r.meaning}</div>
+            </div>
+            {r.example && <div className="tour-word-example">{r.example}</div>}
+          </div>
+        ))}
+      </div>
+      {grid.footnote && (
+        <p className="tour-generics-footnote">{grid.footnote}</p>
+      )}
+    </div>
+  );
+}
+
 // ── <MutationGrid> ───────────────────────────────────────────────────
 // Generalises a sound-change rule across multiple words. Used in Lesson 5
 // to show bàn/bhàn, mòr/mhòr etc. — the rule operates on adjectives in
@@ -1251,9 +1309,9 @@ function LessonExample({ hill }) {
 // part annotated by which lesson taught the skill needed to read it.
 // Visually distinct from LessonExample: the parts are stacked vertically,
 // each with its annotation sitting beneath it, so the user reads down the
-// column "stob — Lesson 2 — coire — Future Lesson 9 — ..." like a guided
-// tour through the name. The hill's full anglicised name and silhouette
-// sit at the top as the "what we're reading" anchor.
+// column "stob — Lesson 2 — coire — Lesson 9 — ..." like a guided tour
+// through the name. The hill's full anglicised name and silhouette sit
+// at the top as the "what we're reading" anchor.
 function Walkthrough({ walkthrough }) {
   const hill = findHill(walkthrough.hillName);
   if (!hill) {

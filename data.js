@@ -87,6 +87,39 @@ const ROOTS = {
   "lochnagar": { type: "qualifier", meaning: "of the noisy loch", pron: "loch-na-GAR", ipa: "l̪ˠɔxnəˈkaːɾ" },
   "sùileabhainn": { type: "qualifier", meaning: "pillar mountain", pron: "SOOL-iv-en", ipa: "ˈsuːliven" },
   "bùireadh":{ type: "qualifier", meaning: "the bellowing/roaring of stags in rut", pron: "BOO-rugh", ipa: "ˈpuːɾʲəɣ" },
+
+  // ─── Geographic words (Lesson 9) ───
+  // These describe features of the landscape — not hills themselves but the
+  // surrounding terrain. Each is the lemma form; inflected forms (coire →
+  // choire, lochan → lochain, etc.) appear in the hill data via the part's
+  // `text` field and inflected meaning via `custom`.
+  "coire":   { type: "qualifier", meaning: "corrie, cauldron-shaped hollow", pron: "KORR-uh", ipa: "ˈkʰɔɾə" },
+  "lochan":  { type: "qualifier", meaning: "small loch, lochan", pron: "LOCH-an", ipa: "ˈl̪ˠɔxan" },
+  "gaoth":   { type: "qualifier", meaning: "wind", pron: "GEU", ipa: "ˈkɯː" },
+  "torc":    { type: "qualifier", meaning: "boar", pron: "TORK", ipa: "tʰɔɾk" },
+  "cìoch":   { type: "qualifier", meaning: "breast (cone-shape)", pron: "KEE-uch", ipa: "ˈkʰiːəx" },
+  "caorann": { type: "qualifier", meaning: "rowan tree", pron: "KEUR-an", ipa: "ˈkɯːɾan̪ˠ" },
+  "meagaidh":{ type: "qualifier", meaning: "boggy place", pron: "MEG-ee", ipa: "ˈmɛkiː" },
+
+  // ─── Bràigh: actually a generic (like beinn/aonach) ───
+  // Means "upland, high ground". Not in the Lesson 2 secondary grid because
+  // the six already there feel like the right selection, but proper-typed
+  // so it's tagged correctly in any dissect/quiz views.
+  "bràigh":  { type: "generic", shape: "ridge", meaning: "upland, high ground, brae", pron: "bray", ipa: "praːj" },
+
+  // ─── Riabhach: brindled / streaky-grey colour-adjective ───
+  // A rarer colour word — describes the patchy mottled look of grass-and-rock
+  // upland slopes. Not added to the Lesson 4 colour grid (it's too rare to
+  // earn primary teaching) but tagged as a colour so the dissector treats
+  // it consistently with bàn / dubh / dearg etc.
+  "riabhach": { type: "color", meaning: "brindled, streaky-grey", pron: "REE-uch", ipa: "ˈriəvəx" },
+
+  // ─── Personal names / mythological figures ───
+  // Some hills preserve people rather than features. Tagged as qualifier
+  // (same role-slot as a descriptive adjective) so the existing parts
+  // breakdown handles them without special-casing.
+  "alasdair":{ type: "qualifier", meaning: "Alexander", pron: "AL-as-tair", ipa: "ˈalˠəst̪əɾ" },
+  "brodan":  { type: "qualifier", meaning: "Brodan (a mythical hound)", pron: "BROHT-an", ipa: "ˈpɾɔht̪an" },
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -274,7 +307,7 @@ const HILLS = [
     ipa: "sguːrˠ ˈalˠəst̪əɾ",
     parts: [
       { text: "Sgùrr",    root: "sgùrr" },
-      { text: "Alasdair", root: "macduibh", custom: { meaning: "Alexander (Sheriff Nicolson, 1st ascent 1873)", pron: "AL-as-tair", ipa: "ˈalˠəst̪əɾ" } },
+      { text: "Alasdair", root: "alasdair", custom: { meaning: "Alexander (Sheriff Nicolson, 1st ascent 1873)", pron: "AL-as-tair", ipa: "ˈalˠəst̪əɾ" } },
     ],
     classification: "Munro",
     height: 992,
@@ -499,7 +532,7 @@ const HILLS = [
     ipa: "sgɔːrˠ ˈkɯːi",
     parts: [
       { text: "Sgòr",  root: "sgòr" },
-      { text: "Gaoith", root: "macduibh", custom: { meaning: "of the wind", pron: "GEU-ee", ipa: "ˈkɯːi" } },
+      { text: "Gaoith", root: "gaoth", custom: { meaning: "of the wind", pron: "GEU-ee", ipa: "ˈkɯːi" } },
     ],
     classification: "Munro",
     height: 1118,
@@ -529,9 +562,9 @@ const HILLS = [
     ipa: "sd̥ɔp ˈkʰɔɾə nən ˈl̪ˠɔxan",
     parts: [
       { text: "Stob",    root: "stob" },
-      { text: "Coire",   root: "macduibh", custom: { meaning: "corrie (cauldron-shaped hollow)", pron: "KORR-uh", ipa: "ˈkʰɔɾə" } },
+      { text: "Coire",   root: "coire", custom: { meaning: "corrie (cauldron-shaped hollow)", pron: "KORR-uh", ipa: "ˈkʰɔɾə" } },
       { text: "nan",     root: "nan" },
-      { text: "Lochan",  root: "macduibh", custom: { meaning: "small lochs (lochans)", pron: "LOCH-an", ipa: "ˈl̪ˠɔxan" } },
+      { text: "Lochan",  root: "lochan", custom: { meaning: "small lochs (lochans)", pron: "LOCH-an", ipa: "ˈl̪ˠɔxan" } },
     ],
     classification: "Munro Top",
     height: 1115,
@@ -547,7 +580,7 @@ const HILLS = [
     parts: [
       { text: "Càrn",  root: "càrn" },
       { text: "an",    root: "an" },
-      { text: "Tuirc", root: "macduibh", custom: { meaning: "of the boar", pron: "TOORK", ipa: "tʰuːɾʲk" } },
+      { text: "Tuirc", root: "torc", custom: { meaning: "of the boar", pron: "TOORK", ipa: "tʰuːɾʲk" } },
     ],
     classification: "Munro",
     height: 1019,
@@ -561,8 +594,8 @@ const HILLS = [
     pron: "bray REE-uch",
     ipa: "praːj ˈriəvəx",
     parts: [
-      { text: "Bràigh",   root: "macduibh", custom: { meaning: "upland, high ground", pron: "bray", ipa: "praːj" } },
-      { text: "Riabhach", root: "macduibh", custom: { meaning: "brindled, streaky-grey", pron: "REE-uch", ipa: "ˈriəvəx" } },
+      { text: "Bràigh",   root: "bràigh", custom: { meaning: "upland, high ground", pron: "bray", ipa: "praːj" } },
+      { text: "Riabhach", root: "riabhach", custom: { meaning: "brindled, streaky-grey", pron: "REE-uch", ipa: "ˈriəvəx" } },
     ],
     classification: "Munro",
     height: 1296,
@@ -578,7 +611,7 @@ const HILLS = [
     parts: [
       { text: "Sgùrr", root: "sgùrr" },
       { text: "na",    root: "na" },
-      { text: "Cìche", root: "macduibh", custom: { meaning: "of the breast (cone-shape)", pron: "KEE-khuh", ipa: "ˈkʰiːçə" } },
+      { text: "Cìche", root: "cìoch", custom: { meaning: "of the breast (cone-shape)", pron: "KEE-khuh", ipa: "ˈkʰiːçə" } },
     ],
     classification: "Munro",
     height: 1040,
@@ -593,7 +626,7 @@ const HILLS = [
     ipa: "peɲ ˈvɾɔht̪an",
     parts: [
       { text: "Beinn",    root: "beinn" },
-      { text: "Bhrotain", root: "macduibh", custom: { meaning: "of Brodan, a mythical hound", pron: "VROHT-an", ipa: "ˈvɾɔht̪an" }, lenited: true },
+      { text: "Bhrotain", root: "brodan", custom: { meaning: "of Brodan, a mythical hound", pron: "VROHT-an", ipa: "ˈvɾɔht̪an" }, lenited: true },
     ],
     classification: "Munro",
     height: 1157,
@@ -608,7 +641,7 @@ const HILLS = [
     ipa: "sal̪ˠ ˈxɯːɾɪɲ",
     parts: [
       { text: "Sàil",     root: "sàil" },
-      { text: "Chaorainn", root: "macduibh", custom: { meaning: "of the rowan tree", pron: "KHEUR-an", ipa: "ˈxɯːɾɪɲ" }, lenited: true },
+      { text: "Chaorainn", root: "caorann", custom: { meaning: "of the rowan tree", pron: "KHEUR-an", ipa: "ˈxɯːɾɪɲ" }, lenited: true },
     ],
     classification: "Munro",
     height: 1002,
@@ -623,7 +656,7 @@ const HILLS = [
     ipa: "kʰɾʲek ˈmɛkiː",
     parts: [
       { text: "Creag",   root: "creag" },
-      { text: "Meagaidh", root: "macduibh", custom: { meaning: "boggy place", pron: "MEG-ee", ipa: "ˈmɛkiː" } },
+      { text: "Meagaidh", root: "meagaidh", custom: { meaning: "boggy place", pron: "MEG-ee", ipa: "ˈmɛkiː" } },
     ],
     classification: "Munro",
     height: 1130,
@@ -654,7 +687,7 @@ const HILLS = [
     parts: [
       { text: "Sròn",   root: "sròn" },
       { text: "a'",     root: "a'" },
-      { text: "Choire", root: "macduibh", custom: { meaning: "of the corrie", pron: "KHORR-uh", ipa: "ˈxɔɾə" }, lenited: true },
+      { text: "Choire", root: "coire", custom: { meaning: "of the corrie", pron: "KHORR-uh", ipa: "ˈxɔɾə" }, lenited: true },
       { text: "Ghairbh", root: "garbh", custom: { meaning: "rough (lenited)", pron: "GHARR-iv", ipa: "ˈɣaɾav" }, lenited: true },
     ],
     classification: "Munro",
