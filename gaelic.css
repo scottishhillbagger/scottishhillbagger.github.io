@@ -783,6 +783,19 @@ input, textarea {
   border-radius: 10px;
   padding: 1.5rem;
 }
+/* First-visit orienting copy. Sits above the first question; disappears
+   once the user has answered something. Same muted ink as recap prose so
+   it reads as supporting context rather than a primary instruction. */
+.quiz-intro {
+  font-size: .82rem;
+  line-height: 1.5;
+  color: var(--ink2);
+  text-align: center;
+  margin: -.25rem auto 1.25rem;
+  max-width: 48ch;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--rule2);
+}
 .quiz-prompt { text-align: center; margin-bottom: 1.5rem; }
 .prompt-label {
   font-size: .68rem;
@@ -1800,47 +1813,6 @@ input, textarea {
   .tour-mutation-cell { padding: .6rem .6rem; }
   .tour-mutation-form { font-size: .88rem; }
   .tour-mutation-cell.meaning { font-size: .74rem; }
-}
-
-/* ─────────────────────────────────────────────────────────────────────
-   REFERENCE SUB-NAV
-   When the top-level tab is "Reference", a secondary nav strip appears
-   beneath the main tabs to switch between Dissect / Quiz / Glossary.
-   Visually distinct from the top-level tabs so the user feels the nesting.
-   ───────────────────────────────────────────────────────────────────── */
-
-.ref-subnav {
-  display: flex;
-  gap: .25rem;
-  margin-bottom: 1.25rem;
-  margin-top: -.5rem;
-  padding-bottom: .25rem;
-}
-.ref-subnav-btn {
-  background: transparent;
-  border: none;
-  font-family: inherit;
-  font-size: .82rem;
-  font-weight: 500;
-  color: var(--ink3);
-  padding: .5rem .85rem;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: color .15s, background .15s;
-  letter-spacing: -.005em;
-}
-.ref-subnav-btn:hover {
-  color: var(--ink);
-  background: var(--surface);
-}
-.ref-subnav-btn.active {
-  color: var(--ink);
-  background: var(--bg2);
-  font-weight: 500;
-}
-
-@media (max-width: 480px) {
-  .ref-subnav-btn { padding: .45rem .7rem; font-size: .78rem; }
 }
 
 /* ─────────────────────────────────────────────────────────────────────

@@ -137,6 +137,16 @@ function Quiz() {
       </div>
 
       <div className="quiz-body">
+        {/* First-visit intro: visible only before any question has been
+            answered. Tells the user what this surface is for. Disappears
+            after the first answer; the stats row carries the context. */}
+        {stats.total === 0 && (
+          <div className="quiz-intro">
+            Drill the vocabulary from the tour with random questions.
+            Three modes — pick one above. Streak and accuracy track
+            for the session.
+          </div>
+        )}
         <QuizPrompt question={question} />
         <QuizOptions
           question={question}
