@@ -120,6 +120,7 @@ const ROOTS = {
   // breakdown handles them without special-casing.
   "alasdair":{ type: "qualifier", meaning: "Alexander", pron: "AL-as-tair", ipa: "ˈalˠəst̪əɾ" },
   "brodan":  { type: "qualifier", meaning: "Brodan (a mythical hound)", pron: "BROHT-an", ipa: "ˈpɾɔht̪an" },
+  "coinneach":{ type: "qualifier", meaning: "Kenneth", pron: "KON-yach", ipa: "ˈkʰɔɲəx" },
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -694,6 +695,61 @@ const HILLS = [
     height: 937,
     region: "Loch Lochy",
     note: "Cascade of lenitions: a' Choire (the corrie) Ghairbh (rough → vrough). Classic Gaelic at work.",
+  },
+
+  // ─── Added to fill lesson-coverage gaps ─────────────────────────────
+  // Three hills picked specifically to give the dissector a real example
+  // of vocabulary the lessons teach but that the original 37 hills don't
+  // demonstrate: Cnoc Coinnich (Lesson 7 cn-shift), Geal-chàrn (Lesson 4
+  // geal colour + the unusual adjective-first construction), Beinn Ghlas
+  // (Lesson 4 glas colour + Lesson 5 lenited form).
+
+  {
+    name: "Cnoc Coinnich",
+    anglicised: "Cnoc Coinnich",
+    meaning: "Kenneth's knoll",
+    pron: "krochk KON-yich",
+    ipa: "kɾɔxg ˈkʰɔɲɪç",
+    parts: [
+      { text: "Cnoc",     root: "cnoc" },
+      { text: "Coinnich", root: "coinneach", custom: { meaning: "of Kenneth", pron: "KON-yich", ipa: "ˈkʰɔɲɪç" } },
+    ],
+    classification: "Corbett",
+    height: 847,
+    region: "Arrochar",
+    note: "A Corbett at the head of Loch Goil — and the cn- in the name is the textbook example of the rhotacism rule from Lesson 7. Spelled Cnoc, sounds 'krochk'.",
+  },
+
+  {
+    name: "Geal-chàrn",
+    anglicised: "Geal Charn",
+    meaning: "White cairn",
+    pron: "GYAL KHARN",
+    ipa: "kʲal̪ˠ xaːrˠn",
+    parts: [
+      { text: "Geal",   root: "geal" },
+      { text: "chàrn",  root: "càrn", custom: { meaning: "cairn (lenited)", pron: "KHARN", ipa: "xaːrˠn" }, lenited: true },
+    ],
+    classification: "Munro",
+    height: 917,
+    region: "Drumochter",
+    note: "Unusual word order: the adjective (geal) comes before the generic (chàrn), and it's the generic that's lenited — opposite of the Lesson 5 pattern. Four other Munros share this name; the Drumochter Geal-chàrn is the one most often climbed from the A9.",
+  },
+
+  {
+    name: "Beinn Ghlas",
+    anglicised: "Beinn Ghlas",
+    meaning: "Grey-green mountain",
+    pron: "behn GHLASS",
+    ipa: "peiɲ ɣl̪ˠas̪",
+    parts: [
+      { text: "Beinn", root: "beinn" },
+      { text: "Ghlas", root: "glas", custom: { meaning: "grey-green (lenited)", pron: "GHLASS", ipa: "ɣl̪ˠas̪" }, lenited: true },
+    ],
+    classification: "Munro",
+    height: 1103,
+    region: "Ben Lawers",
+    note: "On the main ridge to Ben Lawers — most walkers pass over its summit on the way. Glas → Ghlas is textbook Lesson 5 lenition: beinn is feminine, so the adjective gains its h.",
   },
 ];
 

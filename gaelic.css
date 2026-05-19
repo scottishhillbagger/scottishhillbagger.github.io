@@ -318,12 +318,37 @@ input, textarea {
 .hill-classification {
   display: flex;
   gap: .65rem;
-  align-items: baseline;
+  align-items: center;
   margin-bottom: .65rem;
   font-size: .72rem;
   font-family: var(--font-mono);
   color: var(--ink3);
   letter-spacing: .02em;
+}
+/* Inline silhouette emblem in the classification row. Visible on narrow
+   viewports where the big silhouette in dissector-side would otherwise
+   stack below everything and create lots of vertical scrolling. Hidden
+   on wide desktop (≥1100px) where the right column has the full-size
+   silhouette. */
+.hill-inline-silhouette {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 32px;
+  color: var(--ink);
+  opacity: .85;
+}
+.hill-inline-silhouette svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+@media (min-width: 1100px) {
+  /* On wide desktop the right column has the big silhouette; the inline
+     one would be redundant. */
+  .hill-inline-silhouette { display: none; }
 }
 .hill-classification .badge {
   font-family: var(--font-body);
@@ -340,7 +365,12 @@ input, textarea {
 
 .hill-name {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 7vw, 3.2rem);
+  /* Tightened from clamp(2rem, 7vw, 3.2rem) — at narrow-desktop widths
+     (720-1000px, when the sidebar eats space) the old clamp produced
+     a 50-60px font that wrapped awkwardly. The new clamp keeps the
+     name compact at narrow widths and only grows on wide desktop where
+     there's real room. */
+  font-size: clamp(1.75rem, 5vw, 2.6rem);
   font-weight: 600;
   line-height: 1.05;
   letter-spacing: -.03em;
@@ -403,6 +433,14 @@ input, textarea {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+/* On narrow viewports (below 1100px) the inline silhouette in the
+   classification row replaces the big one in dissector-side. Hide just
+   the silhouette-wrap, not the whole dissector-side — we still want the
+   part-detail card visible so the user can see breakdowns when they tap
+   parts of the name. */
+@media (max-width: 1099px) {
+  .silhouette-wrap { display: none; }
 }
 .silhouette-wrap {
   background: var(--surface);
@@ -476,6 +514,18 @@ input, textarea {
 }
 .hint-legend span { display: flex; align-items: center; gap: .4rem; }
 .hint-legend i { width: 8px; height: 8px; border-radius: 50%; }
+
+/* On narrow viewports the part-detail hint shrinks down: the legend is
+   useful on wide desktop where the user can see all three colours at
+   rest, but on mobile/narrow desktop it eats space without earning its
+   keep. Show only the prompt label and body line. The user discovers
+   the colours by tapping parts of the name. */
+@media (max-width: 1099px) {
+  .part-detail.hint { padding: .65rem .85rem; }
+  .part-detail.hint .hint-label { margin-bottom: .2rem; }
+  .part-detail.hint .hint-body { margin-bottom: 0; font-size: .8rem; }
+  .hint-legend { display: none; }
+}
 
 /* — Dissector footer — */
 .dissector-footer { display: flex; flex-direction: column; gap: 1rem; }

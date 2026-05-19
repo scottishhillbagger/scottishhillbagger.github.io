@@ -188,7 +188,14 @@ function Dissector({ hill, setHill }) {
           <div className="dissector-body">
             {/* The big name */}
         <div className="hill-display">
+          {/* Classification row, with an inline-silhouette emblem at narrow
+              viewports (hidden on wide desktop by CSS, where the big
+              silhouette in dissector-side takes over). Keeps the header
+              compact instead of stacking the silhouette below everything. */}
           <div className="hill-classification">
+            <div className="hill-inline-silhouette" aria-hidden="true">
+              <HillSilhouette hill={hill} size={48} monochrome={true} />
+            </div>
             <span className="badge">{hill.classification}</span>
             <span className="height">{hill.height}m</span>
             <span className="region">{hill.region}</span>
