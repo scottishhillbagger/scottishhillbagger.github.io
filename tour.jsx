@@ -171,51 +171,76 @@ const LESSONS = [
   // from stressing the article.
   {
     num: 3,
-    title: "Stress and how to say it",
+    title: "Stress and vowel length",
     promise: <>
-      Gaelic stress is more regular than English: <em>first syllable of every
-      content word</em>. The catch: small words like <em>an</em>, <em>a'</em>,{" "}
-      <em>na</em> don't count — stress hops past them to the next real word.
+      Two pronunciation rules that fix most beginner mistakes.{" "}
+      <strong>Stress</strong> in Gaelic is more regular than English — it
+      lands on the first syllable, every time. And those little{" "}
+      <strong>marks above some vowels</strong> aren't decorative; they
+      tell you to stretch the sound.
     </>,
     examples: ["Sgùrr Dearg", "Aonach Mòr", "Càrn Bàn"],
-    rule: {
-      label: "The stress rule, in two parts",
-      body: <>
-        <p>
-          <strong>Part one:</strong> in any Gaelic word, the stress is on the{" "}
-          <em>first syllable</em>. Always. Almost without exception.
-          <em>SGÙRR</em>, <em>BEIN</em>-yan, <em>AON</em>-ach, <em>MEALL</em>.
-        </p>
-        <p>
-          <strong>Part two:</strong> when a name has an article — <em>an</em>{" "}
-          (the), <em>a'</em> (of the), <em>na</em>, <em>nam</em>, <em>nan</em>{" "}
-          — the article is unstressed. Stress jumps past it to the next
-          content word. So it's <em>an TEALL-ach</em>, not <em>AN teallach</em>.
-        </p>
-      </>,
-    },
+    rules: [
+      {
+        label: "Stress — first syllable, always",
+        body: <>
+          <p>
+            <strong>Part one:</strong> in any Gaelic word, the stress is on
+            the <em>first syllable</em>. Always. Almost without exception.
+            <em> SGÙRR</em>, <em>BEIN</em>-yan, <em>AON</em>-ach,{" "}
+            <em>MEALL</em>.
+          </p>
+          <p>
+            <strong>Part two:</strong> when a name has an article —{" "}
+            <em>an</em> (the), <em>a'</em> (of the), <em>na</em>,{" "}
+            <em>nam</em>, <em>nan</em> — the article is unstressed. Stress
+            jumps past it to the next content word. So it's{" "}
+            <em>an TEALL-ach</em>, not <em>AN teallach</em>.
+          </p>
+        </>,
+      },
+      {
+        label: "Vowels with weight — à, è, ò, ù",
+        body: <>
+          <p>
+            Five vowels (a, e, i, o, u) can wear a grave accent: <strong>à,
+            è, ì, ò, ù</strong>. The accent isn't decorative — it makes the
+            vowel <em>long</em>. <em>Mòr</em> (big) is "mor" with a
+            stretched O; without the accent, <em>mor</em> would be a quick
+            "mor". <em>Bàn</em> (white) is "BAAN", not "ban".
+            <em> Sgùrr</em> is "SGOOR", not "sgur".
+          </p>
+          <p>
+            You'll usually hear the difference clearly. It's the only
+            accent modern Gaelic uses, and it matters for both spelling
+            and sound — which is why your data shows <em>Càrn</em>{" "}
+            (long-A) rather than <em>Carn</em>.
+          </p>
+        </>,
+      },
+    ],
     tryIt: {
       mode: "predict",
       prompt: <>
-        Where does the stress fall in <em>Meall a' Bhùiridh</em> ("hill of the
-        bellowing of stags")?
+        Where does the stress fall in <em>Meall a' Bhùiridh</em> ("hill of
+        the bellowing of stags") — and how should you say the vowels?
       </>,
       options: [
-        { label: "MEALL a' bhùiridh — first syllable of the whole name",        correct: false },
-        { label: "MEALL a' BHÙIR-idh — first syllable of each content word",     correct: true  },
-        { label: "meall A' bhùir-IDH — last syllable, like French",              correct: false },
+        { label: "MEALL a' BHOOR-idh — stress + long vowel from ù",        correct: true  },
+        { label: "MEALL a' BHUR-idh — stress correct, but ù as short u",   correct: false },
+        { label: "meall A' bhùir-IDH — last syllable, like French",        correct: false },
       ],
       reveal: <>
-        Right — <strong>MEALL a' BHÙIR-idh</strong>. Two content words
-        (<em>meall</em> and <em>bhùiridh</em>), one little connector
-        (<em>a'</em>). Stress lands on the first syllable of each content
-        word; the connector is unstressed.
+        Right — <strong>MEALL a' BHOOR-idh</strong>. Two content words get
+        first-syllable stress; the connector <em>a'</em> is unstressed.
+        And the <em>ù</em> in <em>Bhùiridh</em> is long, so it stretches
+        — "BHOOR", not "BHUR".
       </>,
       wrongReveal: <>
-        Actually it's <strong>MEALL a' BHÙIR-idh</strong>. Two stresses, one
-        on each content word's first syllable; the <em>a'</em> is unstressed
-        and slides past. If you ever land on the final syllable in Gaelic,
-        you're almost certainly wrong.
+        Actually <strong>MEALL a' BHOOR-idh</strong>. Stress goes on the
+        first syllable of each content word; the <em>a'</em> is
+        unstressed; and the <em>ù</em> in <em>Bhùiridh</em> is long, so
+        you stretch it. Two rules combined in one short name.
       </>,
     },
   },
@@ -337,8 +362,10 @@ const LESSONS = [
       pair: ["Càrn Bàn", "Beinn Bhàn"],
       caption: <>
         Same adjective. Different first letter. The <em>b</em> on the left
-        gained an <em>h</em> on the right — and the sound shifted from "b" to
-        "v". This isn't a different word; it's the same word, softened.
+        gained an <em>h</em> on the right — and the sound shifted from
+        "BAAN" to "VAAN". Look at the pronunciation under each name and
+        you can hear it: same word, softened. This isn't a different
+        word; it's the same word, lenited.
       </>,
     },
     rule: {
@@ -354,19 +381,30 @@ const LESSONS = [
           masculine. That's the whole reason for the difference above. Same
           adjective, two grammatical worlds.
         </p>
+        <p>
+          The h itself is silent — but it's the signal that the sound has
+          changed. <strong>b → v</strong>, <strong>m → v</strong>,{" "}
+          <strong>d → gh</strong> (soft, almost silent),{" "}
+          <strong>g → gh</strong>. So <em>bàn</em> (BAAN) becomes{" "}
+          <em>bhàn</em> (VAAN); <em>mòr</em> (MORE) becomes <em>mhòr</em>{" "}
+          (VORE); <em>dubh</em> (DOO) becomes <em>dhubh</em> (GHOO). Once
+          you can hear the shift, you'll read the lenited forms as
+          fluently as the bare ones.
+        </p>
       </>,
     },
     mutationGrid: {
       label: "What lenition does to common sounds",
       caption: <>
         After <em>beinn</em> (or any feminine noun), these are the changes
-        you'll see most often:
+        you'll see most often. Read the sound pairs in each row — that's
+        what changes when the h appears.
       </>,
       rows: [
-        { unlenited: "bàn",  lenited: "bhàn",  meaning: "white",        soundUn: "bahn",  soundLen: "vahn"  },
-        { unlenited: "mòr",  lenited: "mhòr",  meaning: "big",          soundUn: "more",  soundLen: "vore"  },
-        { unlenited: "dubh", lenited: "dhubh", meaning: "black",        soundUn: "doo",   soundLen: "ghoo"  },
-        { unlenited: "gorm", lenited: "ghorm", meaning: "blue / green", soundUn: "gorom", soundLen: "ghorom"},
+        { unlenited: "bàn",  lenited: "bhàn",  meaning: "white",        soundUn: "BAAN",  soundLen: "VAAN"  },
+        { unlenited: "mòr",  lenited: "mhòr",  meaning: "big",          soundUn: "MORE",  soundLen: "VORE"  },
+        { unlenited: "dubh", lenited: "dhubh", meaning: "black",        soundUn: "DOO",   soundLen: "GHOO"  },
+        { unlenited: "gorm", lenited: "ghorm", meaning: "blue / green", soundUn: "GORom", soundLen: "GHORom"},
       ],
     },
     tryIt: {
@@ -483,42 +521,80 @@ const LESSONS = [
   },
 
   // ─── Lesson 7 ───────────────────────────────────────────────────────
-  // Pure phonetic-rule lesson — no hill examples because the 36-hill set has
-  // no cnoc names. Instead: the word in isolation, the sound shift, and a
-  // generalisation to other cn- words. Shorter than other lessons; this is
-  // a quick one-rule installation, not a substantive vocabulary lesson.
+  // A small but high-leverage pronunciation rule: cn- at the start of a
+  // Gaelic word sounds like "kr-", not like English "knee" (silent c).
+  // The 36-hill set has zero cn- hills, so the lesson anchors instead in
+  // anglicised Scottish place names that preserve the post-shift sound
+  // (Knockando, Knockan, Knock). Those names are everywhere on OS maps
+  // and signposts — and once you spot the pattern, you know why they're
+  // spelled with K but pronounced with KR.
   {
     num: 7,
     title: "The 'cn' shift",
     promise: <>
-      One small but high-impact pronunciation rule: <em>cn</em> at the
-      start of a Gaelic word doesn't sound like the c is silent — the c
-      stays as a hard "k", but the n shifts to a tapped <em>r</em>. The
-      word <em>cnoc</em> sounds like "krochk". The recap also picks up two
-      other pronunciation notes worth carrying with you.
+      One small but high-leverage pronunciation rule: <em>cn</em> at the
+      start of a Gaelic word doesn't sound like "knee" — the c stays as a
+      hard "k", and the n shifts to a tapped <em>r</em>. So <em>cnoc</em>{" "}
+      (a knoll) sounds like "krochk". This one rule unlocks the
+      pronunciation of about a thousand Scottish place names.
     </>,
     rule: {
-      label: "What's happening",
+      label: "What cn actually sounds like",
       body: <>
         <p>
-          When you see <em>cn-</em> at the start of a Gaelic word, the cluster
-          undergoes <strong>rhotacism</strong>: the n is replaced (or
-          nasalised) into a tapped r sound. The c is fully pronounced.
+          When you see <em>cn-</em> at the start of a Gaelic word, both
+          letters are heard — but the n doesn't sound like an English n.
+          It becomes a tapped <em>r</em>, halfway between an "r" and a
+          nasal flick. The c stays as a hard k.
         </p>
         <p>
-          So <em>cnoc</em> (knoll) = "krochk". <em>Cnap</em> (small lump) =
-          "krap". The same shift applies to <em>cneamh</em> (wild garlic) and
-          a handful of other <em>cn-</em> words. Anglicised forms preserve
-          the new sound: many Scottish places spelled <em>Knock-</em> come
-          from <em>Cnoc</em>.
+          So <em>cnoc</em> (a knoll) is "krochk".{" "}
+          <em>Cnap</em> (a small lump) is "krap". The c is fully
+          pronounced; it's the n that morphs.
         </p>
+        <p>
+          The give-away is the anglicised spelling. Whenever you see a
+          Scottish place name spelled <em>Knock-</em>, you're looking at
+          a Gaelic <em>cnoc</em> that English speakers tried to write
+          down. The K survived; the shifted n got the closest English
+          letter (often nothing). Hundreds of place names follow this
+          pattern.
+        </p>
+      </>,
+    },
+    wordGrid: {
+      label: "Real Scottish places that hide a cnoc",
+      caption: <>
+        These anglicised names all come from Gaelic <em>cnoc</em> (knoll)
+        or related cn- words. The Gaelic original is on the left; the
+        anglicisation you'll see on OS maps and road signs is on the
+        right. You'll meet them all over Scotland.
+      </>,
+      rows: [
+        { word: "Cnoc",         pron: "krochk",
+          meaning: "knoll, small rounded hill",
+          example: "Knock" },
+        { word: "Cnocan",       pron: "KROCHK-an",
+          meaning: "little knoll (diminutive)",
+          example: "Knockan" },
+        { word: "Cnoc Ailein",  pron: "krochk AL-en",
+          meaning: "Allan's knoll — preserved as Knockando",
+          example: "Knockando" },
+        { word: "Cnap",         pron: "krap",
+          meaning: "a small lump or knob",
+          example: "Knap (place name)" },
+      ],
+      footnote: <>
+        The Gaelic original is rarely written on a map — but once you
+        know the rule, you can hear the Gaelic name behind every{" "}
+        <em>Knock-</em> place you pass.
       </>,
     },
     tryIt: {
       mode: "predict",
       prompt: <>
-        Given the rule, how should <em>Cnap Mòr</em> be pronounced — a name
-        you might see on a smaller hill?
+        Given the rule, how should <em>Cnap Mòr</em> be pronounced — a
+        name you might see on a smaller hill?
       </>,
       options: [
         { label: "k-NAP mor — k and n both audible",             correct: false },
@@ -526,43 +602,21 @@ const LESSONS = [
         { label: "NAP mor — c is silent",                         correct: false },
       ],
       reveal: <>
-        Right — <strong>KRAP mor</strong>. The c-becomes-silent reading is the
-        most common beginner mistake (English-speaker intuition), but it's
-        the n that vanishes, not the c. Anglicised "Knock" places preserve
-        the post-shift sound.
+        Right — <strong>KRAP mor</strong>. The c-becomes-silent reading
+        is the most common beginner mistake (English-speaker intuition),
+        but it's the n that vanishes, not the c. Anglicised "Knock"
+        places preserve the post-shift sound.
       </>,
       wrongReveal: <>
-        Actually <strong>KRAP mor</strong>. Think of it as the n being the
-        thing that changes — into a tapped r — while the c stays as a clean
-        "k". The English-speaker instinct is to silence the c (like "knee")
-        but Gaelic does the opposite.
+        Actually <strong>KRAP mor</strong>. Think of it as the n being
+        the thing that changes — into a tapped r — while the c stays as
+        a clean "k". The English-speaker instinct is to silence the c
+        (like "knee") but Gaelic does the opposite.
       </>,
     },
     recap: [
       <>
-        One rule, applied wherever you see <em>cn-</em> at the start of a
-        Gaelic word: <strong>c stays, n becomes r</strong>. So{" "}
-        <em>cnoc</em> = "krochk", <em>cnap</em> = "krap". Look for{" "}
-        anglicised <em>Knock-</em> places on a map — they all come from this
-        sound shift.
-      </>,
-      <>
-        The same dynamic appears in a few other consonant clusters in some
-        dialects (e.g. <em>mn-</em> in older texts), but cn- is the one you'll
-        encounter most. Worth installing because it fixes about a thousand
-        Scottish place names in one go.
-      </>,
-      <>
-        While we're on pronunciation, those little marks above some
-        vowels — <strong>à, è, ò, ù</strong> — aren't decorative. The
-        grave accent lengthens the vowel. <em>Mòr</em> (big) is "mor"
-        with a stretched O; <em>mor</em> without the accent would be a
-        quick "mor". <em>Bàn</em> (white) is "BAAN", not "ban". You
-        usually hear the difference clearly. It's the only accent modern
-        Gaelic uses, but it matters for both spelling and sound.
-      </>,
-      <>
-        A note on pronunciation in general, while we're here: Gaelic
+        A note on pronunciation in general while we're here: Gaelic
         sounds vary by region. Skye, the Outer Hebrides, the Cairngorms,
         Sutherland — each has its own dialect. Even native speakers
         sometimes can't pronounce names from other regions. So don't
@@ -995,7 +1049,11 @@ function Lesson({ lesson, onPrev, onNext, onExit, atFirst, atLast }) {
           )}
 
           {/* Explicit rule statement (Lesson 5+) — for when the rule needs
-              prose attention before the try-it, not just after */}
+              prose attention before the try-it, not just after. Two forms:
+              - lesson.rule (singular) — one rule block
+              - lesson.rules (plural) — array of rule blocks, each with its
+                own label and body. Used in L3 to give equal prominence
+                to stress and long vowels. */}
           {lesson.rule && (
             <>
               <div className="tour-section-label">{lesson.rule.label}</div>
@@ -1005,6 +1063,15 @@ function Lesson({ lesson, onPrev, onNext, onExit, atFirst, atLast }) {
               </div>
             </>
           )}
+          {lesson.rules && lesson.rules.map((r, i) => (
+            <React.Fragment key={i}>
+              <div className="tour-section-label">{r.label}</div>
+              <div className="tour-rule">
+                <div className="tour-rule-icon">!</div>
+                <div className="tour-rule-body">{r.body}</div>
+              </div>
+            </React.Fragment>
+          ))}
 
           {/* Mutation grid (Lesson 5) — generalising the rule across adjectives */}
           {lesson.mutationGrid && (
@@ -1049,7 +1116,6 @@ function Lesson({ lesson, onPrev, onNext, onExit, atFirst, atLast }) {
                 </div>
               )}
               <div className="tour-recap">
-                <div className="tour-recap-icon">{lesson.num}</div>
                 <div className="tour-recap-body">
                   {lesson.recap.map((p, i) => <p key={i}>{p}</p>)}
                 </div>
@@ -1198,10 +1264,8 @@ function GenericsGrid({ grid }) {
                 : <div style={{width:36,height:18,background:'var(--bg2)',borderRadius:4}} />}
             </div>
             <div className="tour-generics-text">
-              <div className="tour-generics-word">
-                {r.word}
-                {r.pron && <span className="tour-generics-pron"> · {r.pron}</span>}
-              </div>
+              <div className="tour-generics-word">{r.word}</div>
+              {r.pron && <div className="tour-generics-pron">{r.pron}</div>}
               <div className="tour-generics-meaning">{r.meaning}</div>
             </div>
             <div className="tour-generics-example">{r.example}</div>
@@ -1218,8 +1282,13 @@ function GenericsGrid({ grid }) {
 // ── <WordGrid> ──────────────────────────────────────────────────────
 // Simpler reference grid with no left-column visual — just word +
 // pronunciation + meaning, with an optional right-aligned example.
-// Used in Lesson 9 for the geographic-words reference. Same overall
-// idiom as GenericsGrid / ColourGrid, but flatter.
+// Used in Lesson 9 for the geographic-words reference and Lesson 7 for
+// the anglicised place-names grid. Each row is two-line:
+//   Line 1: word · pron      [example, right-aligned]
+//   Line 2: meaning (full width — gets the room to breathe)
+// This shape gives long meanings ("a cauldron-shaped hollow in a
+// mountain's flank") the horizontal space they need rather than
+// squeezing them into a left column next to a long example name.
 function WordGrid({ grid }) {
   return (
     <div className="tour-mutation">
@@ -1227,14 +1296,14 @@ function WordGrid({ grid }) {
       <div className="tour-word-grid">
         {grid.rows.map((r, i) => (
           <div key={i} className="tour-word-row">
-            <div className="tour-word-text">
-              <div className="tour-word-word">
-                {r.word}
+            <div className="tour-word-headline">
+              <div className="tour-word-headline-l">
+                <span className="tour-word-word">{r.word}</span>
                 {r.pron && <span className="tour-word-pron"> · {r.pron}</span>}
               </div>
-              <div className="tour-word-meaning">{r.meaning}</div>
+              {r.example && <div className="tour-word-example">{r.example}</div>}
             </div>
-            {r.example && <div className="tour-word-example">{r.example}</div>}
+            <div className="tour-word-meaning">{r.meaning}</div>
           </div>
         ))}
       </div>

@@ -1349,23 +1349,6 @@ input, textarea {
   padding: 1.1rem 1.25rem;
   background: var(--bg2);
   border-radius: 10px;
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-}
-.tour-recap-icon {
-  flex-shrink: 0;
-  width: 32px;
-  height: 32px;
-  background: var(--ink);
-  color: var(--bg);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-mono);
-  font-size: .78rem;
-  font-weight: 600;
 }
 .tour-recap-body p {
   font-size: .9rem;
@@ -1963,16 +1946,19 @@ input, textarea {
   color: var(--ink);
   letter-spacing: 0;
 }
-/* Inline pronunciation glyph next to the Gaelic word. Uses the same
-   mono treatment but lighter weight and muted colour so the word stays
-   the headline and the pron sits as a quiet aside. */
+/* Pronunciation under the Gaelic word — same line treatment as
+   ColourGrid's pron. Muted and small so it sits as supplementary
+   information rather than competing with the word for attention.
+   Matches the primary-generic visual hierarchy where pron is small
+   and beneath, not inline. */
 .tour-generics-pron {
   font-family: var(--font-mono);
   font-weight: 400;
-  font-size: .72rem;
+  font-size: .7rem;
   color: var(--ink3);
   letter-spacing: 0;
-  margin-left: .05rem;
+  margin-top: -.05rem;
+  margin-bottom: .15rem;
 }
 .tour-generics-meaning {
   font-size: .76rem;
@@ -2023,11 +2009,11 @@ input, textarea {
 }
 
 /* ─────────────────────────────────────────────────────────────────────
-   WORD GRID — Lesson 9 geographic words
-   Flatter than GenericsGrid: no left-column glyph or swatch, just
-   word+pron on the left and meaning (with optional example on the
-   right). Used for reference vocabulary that doesn't have a natural
-   visual hook.
+   WORD GRID — Lesson 9 geographic words & Lesson 7 anglicised places
+   Two-line layout per row: headline (word · pron, with optional example
+   right-aligned) on line 1, meaning as full-width prose on line 2.
+   This gives long meanings room to breathe rather than fighting for
+   horizontal space against the example.
    ───────────────────────────────────────────────────────────────────── */
 
 .tour-word-grid {
@@ -2039,20 +2025,23 @@ input, textarea {
   background: var(--surface);
 }
 .tour-word-row {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: .85rem;
-  align-items: baseline;
-  padding: .65rem .85rem;
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  padding: .7rem .9rem;
   border-bottom: 1px solid var(--rule2);
 }
 .tour-word-row:last-child {
   border-bottom: none;
 }
-.tour-word-text {
+.tour-word-headline {
   display: flex;
-  flex-direction: column;
-  gap: .15rem;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: .85rem;
+  flex-wrap: wrap;
+}
+.tour-word-headline-l {
   min-width: 0;
 }
 .tour-word-word {
@@ -2068,12 +2057,12 @@ input, textarea {
   font-size: .72rem;
   color: var(--ink3);
   letter-spacing: 0;
-  margin-left: .05rem;
 }
 .tour-word-meaning {
   font-size: .78rem;
   color: var(--ink2);
-  line-height: 1.45;
+  line-height: 1.5;
+  letter-spacing: -.005em;
 }
 .tour-word-example {
   font-family: var(--font-display);
@@ -2083,12 +2072,10 @@ input, textarea {
   letter-spacing: -.005em;
   text-align: right;
   flex-shrink: 0;
-  align-self: center;
 }
 @media (max-width: 480px) {
   .tour-word-row {
-    gap: .55rem;
-    padding: .55rem .65rem;
+    padding: .6rem .75rem;
   }
   .tour-word-meaning { font-size: .74rem; }
   .tour-word-example { font-size: .72rem; }
