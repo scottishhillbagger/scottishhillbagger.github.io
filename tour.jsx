@@ -54,9 +54,21 @@ const LESSONS = [
     num: 1,
     title: "The shape of a hill name",
     promise: <>
-      Every Scottish hill name is built from two pieces: a <em>generic</em> (what
-      kind of hill it is) and a <em>qualifier</em> (which one). Once you see the
-      pattern, you can read names you've never met.
+      <p>
+        Scottish hill names look intimidating on a map. <em>Sgùrr nan
+        Gillean. Stob Coire Sgreamhach. Beinn a' Bheithir.</em> Long words,
+        accented vowels, consonant clusters that don't follow English rules.
+        But almost every name is built from a small set of pieces, and once
+        you see them you start reading the landscape: <em>Càrn Mòr Dearg</em>
+        is just "big red cairn", and now the name is telling you what the
+        hill looks like.
+      </p>
+      <p>
+        Every Scottish hill name is built from two pieces: a{" "}
+        <em>generic</em> (what kind of hill it is) and a <em>qualifier</em>{" "}
+        (which one). Once you see the pattern, you can read names you've
+        never met.
+      </p>
     </>,
     examples: ["Beinn Dubh", "Càrn Bàn", "Sgùrr Dearg"],
     tryIt: {
@@ -109,32 +121,47 @@ const LESSONS = [
     title: "The big four generics",
     promise: <>
       Four words cover most Scottish hill names: <em>beinn, càrn, sgùrr,
-      meall</em>. Each describes a different <em>shape</em> of hill. Learn
-      these four and a handful of secondary words and you can read 7 out of
-      10 names on an OS map.
+      meall</em>. Each describes a different <em>shape</em> of hill — a
+      classic mountain, a stony heap, a sharp rocky peak, a rounded dome.
+      Learn these four and a handful of secondary words and you can read 7
+      out of 10 names on an OS map.
     </>,
     examples: ["Beinn Nibheis", "Càrn Gorm", "Sgùrr Alasdair", "Meall Buidhe"],
     genericsGrid: {
       label: "Secondary generics you'll meet",
       caption: <>
         Six more words for "kind of hill" — they fill the same grammatical
-        slot as beinn/càrn/sgùrr/meall, but describe slightly different shapes.
-        Don't memorise these; just learn to recognise them when they appear.
+        slot as beinn/càrn/sgùrr/meall, but describe slightly different
+        shapes. Don't memorise these; just learn to recognise them when
+        they appear.
       </>,
       rows: [
-        { word: "aonach", shape: "ridge",    meaning: "ridge, level top",        example: "Aonach Mòr" },
-        { word: "stob",   shape: "stub",     meaning: "stubby point",            example: "Stob Dearg" },
-        { word: "sgòr",   shape: "sharp",    meaning: "sharp peak (var. sgùrr)", example: "Sgòr Gaoith" },
-        { word: "bidean", shape: "pinnacle", meaning: "sharp pinnacle",          example: "Bidean nam Bian" },
-        { word: "stac",   shape: "pinnacle", meaning: "stack, steep rock",       example: "Stac Pollaidh" },
-        { word: "creag",  shape: "crag",     meaning: "crag, cliff",             example: "Creag Meagaidh" },
+        { word: "aonach", pron: "EUN-ach", shape: "ridge",
+          meaning: "a long, level ridge — walking-pace ground on top",
+          example: "Aonach Mòr" },
+        { word: "stob",   pron: "stob",    shape: "stub",
+          meaning: "a stubby point — often a subsidiary peak on a ridge",
+          example: "Stob Dearg" },
+        { word: "sgòr",   pron: "skor",    shape: "sharp",
+          meaning: "a sharp peak (a variant spelling of sgùrr)",
+          example: "Sgòr Gaoith" },
+        { word: "bidean", pron: "BEE-jan", shape: "pinnacle",
+          meaning: "a sharp pinnacle, the rocky top of a ridge",
+          example: "Bidean nam Bian" },
+        { word: "stac",   pron: "stachk",  shape: "pinnacle",
+          meaning: "a steep rocky stack, sometimes a sea-stack inland",
+          example: "Stac Pollaidh" },
+        { word: "creag",  pron: "krayk",   shape: "crag",
+          meaning: "a crag or cliff — usually a big rock face",
+          example: "Creag Meagaidh" },
       ],
     },
     tryIt: {
       mode: "predict",
       prompt: <>
         Without scrolling back, what shape would you expect <em>Aonach Mòr</em>{" "}
-        to be? <em>Aonach</em> means "ridge" — a long, level, walking-pace top.
+        to be? <em>Aonach</em> means "ridge" — a long, level, walking-pace
+        top.
       </>,
       options: [
         { label: "A sharp peak (like Sgùrr Alasdair)",        correct: false },
@@ -156,17 +183,18 @@ const LESSONS = [
     },
     recap: [
       <>
-        The four primary generics you've met: <strong>beinn</strong> (classic
-        mountain), <strong>càrn</strong> (cairn-shaped heap), <strong>sgùrr</strong>{" "}
-        (sharp rocky peak), <strong>meall</strong> (rounded lump). Each tells
-        you the <em>shape</em> before you even read the second word.
+        The four primary generics you've met: <strong>beinn</strong>{" "}
+        (classic mountain), <strong>càrn</strong> (cairn-shaped stony
+        heap), <strong>sgùrr</strong> (sharp rocky peak),{" "}
+        <strong>meall</strong> (wide rounded dome). Each tells you the{" "}
+        <em>shape</em> before you even read the second word.
       </>,
       <>
         The six secondary generics — <em>aonach, stob, sgòr, bidean, stac,
         creag</em> — fill the same slot but describe different shapes. You
         don't need to memorise them; recognising them when they appear is
-        enough. When you meet any new generic word, ask: "what shape is this
-        word describing?" The qualifier will come next.
+        enough. When you meet any new generic word, ask: "what shape is
+        this word describing?" The qualifier will come next.
       </>,
     ],
   },
@@ -313,6 +341,17 @@ const LESSONS = [
         <em>Càrn Dearg, Stob Bàn, Aonach Dubh, Meall Ruadh, Beinn Liath</em>.
         Don't try to memorise all eleven at once — start with the top five and
         let the rarer ones stick as you meet them in real names.
+      </>,
+      <>
+        One thing the colour words are really describing: the rock, or how
+        the slope looks in particular conditions. <em>Dearg</em> ("red")
+        usually means reddish granite or sandstone. <em>Liath</em>{" "}
+        ("grey") is grey schist or the look of a hill in mist.{" "}
+        <em>Dubh</em> ("black") often means dark rock or shadowed crag
+        rather than a literally black hillside, and <em>ruadh</em> is the
+        russet brown of dead heather and red deer rather than bright red.
+        The names are descriptions written by people who lived in this
+        landscape and knew it by sight.
       </>,
       <>
         One thing you might have noticed in the third example: <em>Beinn
@@ -531,10 +570,11 @@ const LESSONS = [
     num: 7,
     title: "The 'cn' shift",
     promise: <>
-      One small but high-impact pronunciation rule: <em>cn</em> at the start
-      of a Gaelic word doesn't sound like the c is silent — the c stays as a
-      hard "k", but the n shifts to a tapped <em>r</em>. The word{" "}
-      <em>cnoc</em> sounds like "krochk".
+      One small but high-impact pronunciation rule: <em>cn</em> at the
+      start of a Gaelic word doesn't sound like the c is silent — the c
+      stays as a hard "k", but the n shifts to a tapped <em>r</em>. The
+      word <em>cnoc</em> sounds like "krochk". The recap also picks up two
+      other pronunciation notes worth carrying with you.
     </>,
     rule: {
       label: "What's happening",
@@ -590,6 +630,25 @@ const LESSONS = [
         dialects (e.g. <em>mn-</em> in older texts), but cn- is the one you'll
         encounter most. Worth installing because it fixes about a thousand
         Scottish place names in one go.
+      </>,
+      <>
+        While we're on pronunciation, those little marks above some
+        vowels — <strong>à, è, ò, ù</strong> — aren't decorative. The
+        grave accent lengthens the vowel. <em>Mòr</em> (big) is "mor"
+        with a stretched O; <em>mor</em> without the accent would be a
+        quick "mor". <em>Bàn</em> (white) is "BAAN", not "ban". You
+        usually hear the difference clearly. It's the only accent modern
+        Gaelic uses, but it matters for both spelling and sound.
+      </>,
+      <>
+        A note on pronunciation in general, while we're here: Gaelic
+        sounds vary by region. Skye, the Outer Hebrides, the Cairngorms,
+        Sutherland — each has its own dialect. Even native speakers
+        sometimes can't pronounce names from other regions. So don't
+        worry about getting it perfect. Whether you say "Ben More" or
+        "Beinn Mhòr", the person you're talking to will know exactly
+        what you mean. Close-enough is the goal; treating pronunciation
+        as a test you can fail is the trap.
       </>,
     ],
   },
@@ -816,6 +875,18 @@ const LESSONS = [
         yourself on what you've learned, or use the <em>Glossary</em> as
         a lookup when you meet a word you don't recognise.
       </>,
+      <>
+        One last thing worth knowing. Many of the communities that spoke
+        this language were cleared from the glens during the eighteenth
+        and nineteenth centuries — Strathnaver, Glen Calvie, Knoydart,
+        the long story of people made to leave. Their words remain on
+        every map. <em>Coire na Cìche, Beinn a' Chaorainn, Mullach Coire
+        Mhic Fhearchair</em> — each one is a description written by
+        someone who lived there and knew it by sight. When you stand on
+        a Scottish summit and read the name on the map, you're reading
+        something the people who walked there before you wanted you to
+        know about the place. That's worth knowing.
+      </>,
     ],
   },
 ];
@@ -858,7 +929,7 @@ function Lesson({ lesson, onPrev, onNext, onExit, atFirst, atLast }) {
         </div>
       ) : (
         <>
-          {lesson.promise && <p className="tour-promise">{lesson.promise}</p>}
+          {lesson.promise && <div className="tour-promise">{lesson.promise}</div>}
 
           {/* Colour reference grid (Lesson 4) — introduces vocabulary BEFORE
               the examples that use it. Same structural slot as mutationGrid
@@ -1076,9 +1147,15 @@ function ColourGrid({ grid }) {
 
 // ── <GenericsGrid> ───────────────────────────────────────────────────
 // Reference grid of secondary generics. Each row: shape glyph (from
-// window.ShapeGlyph), the Gaelic word, what kind of hill it describes, and
-// an example name. Used in Lesson 2 to introduce secondary generics without
-// giving them full worked-example treatment. Same idiom as ColourGrid.
+// window.ShapeGlyph), the Gaelic word + pronunciation, what kind of hill
+// it describes, and an example name. Used in Lesson 2 to introduce
+// secondary generics without giving them full worked-example treatment.
+// Same idiom as ColourGrid.
+//
+// Optional `footnote`: a paragraph rendered beneath the grid for any
+// general note the grid wants to make. Available as a general primitive
+// even though no current lesson uses it — leaving the affordance in
+// place so future grids can attach asides without re-engineering.
 function GenericsGrid({ grid }) {
   const ShapeGlyph = window.ShapeGlyph;
   return (
@@ -1093,13 +1170,19 @@ function GenericsGrid({ grid }) {
                 : <div style={{width:36,height:18,background:'var(--bg2)',borderRadius:4}} />}
             </div>
             <div className="tour-generics-text">
-              <div className="tour-generics-word">{r.word}</div>
+              <div className="tour-generics-word">
+                {r.word}
+                {r.pron && <span className="tour-generics-pron"> · {r.pron}</span>}
+              </div>
               <div className="tour-generics-meaning">{r.meaning}</div>
             </div>
             <div className="tour-generics-example">{r.example}</div>
           </div>
         ))}
       </div>
+      {grid.footnote && (
+        <p className="tour-generics-footnote">{grid.footnote}</p>
+      )}
     </div>
   );
 }
