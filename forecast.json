@@ -23,13 +23,12 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusty gales 55-60mph, persistent rain, poor visibility, cloud to low slopes"
+          "reason": "gusty gales 55-60mph, frequent rain, poor visibility, cloud to low slopes"
         },
         {
           "sky": "rain",
           "windMphLow": 15,
           "windMphHigh": 40,
-          "gustMph": 40,
           "windDir": "SW",
           "tempCLow": 6,
           "tempCHigh": 9,
@@ -39,7 +38,7 @@
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "persistent rain south/west, cloud to low slopes, gusts 40mph afternoon"
+          "reason": "rain all Munros, heaviest Easter Ross later; cloud extensive, winds rising 40mph"
         },
         {
           "sky": "rain",
@@ -55,7 +54,7 @@
           "amSky": "rain",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "rain morning, cloud 400-600m coast, gusts 45mph, strenuous arduous walking"
+          "reason": "strenuous-arduous winds, west coast shrouded 400-600m, morning rain Skye/Torridon"
         }
       ]
     },
@@ -76,7 +75,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "near-constant rain, gales 60mph downslope, cloud to low slopes, hail risk"
+          "reason": "gales 60mph downslope, near-constant rain, cloud to low slopes, poor visibility"
         },
         {
           "sky": "rain",
@@ -91,7 +90,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "several hours rain all Munros, cloud 600-700m coast all day, overcast and dull"
+          "reason": "several hours of rain all Munros, cloud 600-700m coast all day, overcast and dull"
         },
         {
           "sky": "rain",
@@ -107,7 +106,7 @@
           "amSky": "rain",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "morning rain Glencoe/Lochaber, fog 300-600m, gusts 45mph, persistent drizzle above 1000m"
+          "reason": "fog 300-600m, morning rain heaviest Glencoe/Lochaber, gusts 45mph, generally poor visibility"
         }
       ]
     },
@@ -128,7 +127,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gales 60mph downslope, persistent rain, cloud to low slopes, hail/thunder risk"
+          "reason": "downslope gusts 60mph, persistent rain, cloud to low slopes, poor visibility"
         },
         {
           "sky": "rain",
@@ -143,7 +142,7 @@
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "patchy rain becoming heavy afternoon, cloud to mid-slopes all day, winds rising 35mph"
+          "reason": "patchy rain turning heavy afternoon, cloud extensive, winds rising 30-35mph"
         },
         {
           "sky": "rain",
@@ -159,7 +158,7 @@
           "amSky": "rain",
           "pmSky": "cloud",
           "status": "marginal",
-          "reason": "morning rain, cloud lifting 800-900m PM, gusts 45mph, drizzle on Cairngorm plateau"
+          "reason": "morning patchy rain, gusts 45mph downslope; cloud lifting to 40% clear north Cairngorms"
         }
       ]
     },
@@ -180,7 +179,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "wet and claggy all day, gales 55mph downslope, cloud to glen level, hail/thunder risk"
+          "reason": "persistent rain all day, downslope gusts 55mph, cloud to low slopes, hail/thunder risk"
         },
         {
           "sky": "rain",
@@ -194,8 +193,8 @@
           "visibility": "poor",
           "amSky": "cloud",
           "pmSky": "rain",
-          "status": "marginal",
-          "reason": "patchy rain becoming heavy afternoon, cloud lifting 800-900m, winds rising 35mph"
+          "status": "poor",
+          "reason": "patchy rain turning heavy afternoon; cloud lifting but wind rising 30-35mph with wind chill"
         },
         {
           "sky": "rain",
@@ -211,7 +210,7 @@
           "amSky": "rain",
           "pmSky": "cloud",
           "status": "marginal",
-          "reason": "morning rain, cloud 400-600m lifting PM, gusts 40mph, drizzle near Loch Tay"
+          "reason": "morning rain, gusts 40mph downslope; cloud 400-600m lifting, 40% clear east afternoon"
         }
       ]
     },
@@ -232,7 +231,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gales 55mph downslope, rain most of day, cloud to low slopes, hail/thunder risk"
+          "reason": "downslope gusts 55mph, rain most of day, cloud to low slopes, hail/thunder risk"
         },
         {
           "sky": "rain",
@@ -247,7 +246,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "frequent rain west, summit breaks probable east when dry, blustery 35mph tops"
+          "reason": "frequent rain patches, blustery 35mph; summit breaks possible east, 60% clear"
         },
         {
           "sky": "rain",
@@ -257,17 +256,17 @@
           "windDir": "SW",
           "tempCLow": 10,
           "tempCHigh": 11,
-          "cloudFree": 40,
+          "cloudFree": 25,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
-          "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "reason": "morning rain, cloud 500m west all day, gusts 40mph, east improves PM with sun glimpses"
+          "pmSky": "cloud",
+          "status": "poor",
+          "reason": "blanket cloud 500m, south Galloway shrouded all day, gusts 40mph, morning rain"
         }
       ]
     }
   ],
-  "_generated": "2026-05-18T17:37:02.981Z",
+  "_generated": "2026-05-18T20:55:19.280Z",
   "_anchorDate": "2026-05-19"
 }
