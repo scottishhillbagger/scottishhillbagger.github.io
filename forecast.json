@@ -23,14 +23,14 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "low cloud, drizzle west, gusts 45mph, poor visibility, murky hills"
+          "reason": "low cloud to 500-700m, drizzle west, gusts 45mph west coast"
         },
         {
           "sky": "cloud",
           "windMphLow": 25,
           "windMphHigh": 35,
           "gustMph": 40,
-          "windDir": "SW",
+          "windDir": "SSW",
           "tempCLow": 8,
           "tempCHigh": 10,
           "cloudFree": 30,
@@ -39,7 +39,7 @@
           "amSky": "cloud",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "extensive hill fog west, drizzle on Skye, gusts 40mph, poor visibility"
+          "reason": "extensive hill fog west, drizzly rain Skye, gusts 40mph west coast"
         },
         {
           "sky": "partly-cloudy",
@@ -54,7 +54,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "drizzle Skye to Torridon morning, gusts 40mph Ben Hope area, low cloud persisting west"
+          "reason": "drizzle Skye to Torridon morning, cloud persisting western tops, blustery 40mph"
         }
       ]
     },
@@ -68,30 +68,30 @@
           "gustMph": 35,
           "windDir": "SW",
           "tempCLow": 5,
-          "tempCHigh": 7,
+          "tempCHigh": 10,
           "cloudFree": 20,
           "freezingLevel": 9999,
-          "visibility": "moderate",
+          "visibility": "good",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "reason": "drizzle focused Lochaber morning, cloud 700m, gusts 35mph, improving afternoon"
+          "status": "poor",
+          "reason": "low cloud to 700m Lochaber morning, drizzle west Loch Linnhe, gusts 35mph"
         },
         {
           "sky": "cloud",
           "windMphLow": 25,
           "windMphHigh": 35,
           "gustMph": 40,
-          "windDir": "SW",
+          "windDir": "SSW",
           "tempCLow": 8,
           "tempCHigh": 10,
           "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "cloud",
-          "pmSky": "cloud",
+          "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "extensive low cloud, drizzle near Loch Linnhe, gusts 40mph west coast"
+          "reason": "extensive low cloud north of Oban, drizzly rain west, gusts 40mph west coast"
         },
         {
           "sky": "partly-cloudy",
@@ -106,7 +106,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "drizzle Lochaber and north Argyll morning, cloud capping tops, clearing afternoon"
+          "reason": "drizzle Lochaber morning fizzling out, cloud lifting afternoon, blustery"
         }
       ]
     },
@@ -120,21 +120,21 @@
           "gustMph": 35,
           "windDir": "SW",
           "tempCLow": 6,
-          "tempCHigh": 10,
+          "tempCHigh": 11,
           "cloudFree": 80,
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "partly-cloudy",
-          "pmSky": "sun",
+          "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "blustery gusts 35mph, variable cloud morning, mostly dry, clearing well afternoon"
+          "reason": "blustery gusts 35mph, cloud variable morning, mostly clearing afternoon"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 15,
           "windMphHigh": 30,
           "gustMph": 40,
-          "windDir": "SW",
+          "windDir": "SSW",
           "tempCLow": 10,
           "tempCHigh": 12,
           "cloudFree": 70,
@@ -143,7 +143,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "gusts 40mph some cols and summits, persistent banks toward Ben Alder, mostly dry"
+          "reason": "gusts 40mph some cols/summits, persistent banks Ben Alder, otherwise mostly dry"
         },
         {
           "sky": "partly-cloudy",
@@ -151,14 +151,14 @@
           "windMphHigh": 35,
           "windDir": "SW",
           "tempCLow": 9,
-          "tempCHigh": 11,
+          "tempCHigh": 12,
           "cloudFree": 70,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "partly-cloudy",
-          "pmSky": "sun",
+          "amSky": "cloud",
+          "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "blustery gusts Cairngorm Plateau morning, cloud capping tops early, dry and clearing PM"
+          "reason": "blustery Cairngorm Plateau morning, cloud capping tops AM, breaking afternoon"
         }
       ]
     },
@@ -172,21 +172,21 @@
           "gustMph": 35,
           "windDir": "SW",
           "tempCLow": 6,
-          "tempCHigh": 10,
+          "tempCHigh": 11,
           "cloudFree": 80,
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "extensive cloud below 600m morning, gusts 35mph, clearing well by afternoon"
+          "reason": "cloud shrouding summits to 500-600m morning, blustery gusts 35mph all day"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 15,
           "windMphHigh": 30,
           "gustMph": 40,
-          "windDir": "SW",
+          "windDir": "SSW",
           "tempCLow": 10,
           "tempCHigh": 12,
           "cloudFree": 60,
@@ -195,7 +195,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "gusts 40mph some cols and summits, persistent banks western hills, mostly dry"
+          "reason": "gusts 40mph some cols/summits, persistent banks western hills, otherwise dry"
         },
         {
           "sky": "partly-cloudy",
@@ -203,14 +203,14 @@
           "windMphHigh": 30,
           "windDir": "SW",
           "tempCLow": 9,
-          "tempCHigh": 11,
+          "tempCHigh": 12,
           "cloudFree": 70,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "partly-cloudy",
-          "pmSky": "sun",
+          "amSky": "cloud",
+          "pmSky": "partly-cloudy",
           "status": "go",
-          "reason": "dry, cloud breaking off tops PM, breezy but manageable, good visibility"
+          "reason": "dry, cloud breaking off tops afternoon, breezy but manageable 20-30mph"
         }
       ]
     },
@@ -231,23 +231,23 @@
           "amSky": "cloud",
           "pmSky": "sun",
           "status": "go",
-          "reason": "mostly dry, low cloud breaking to sunshine, light gusts, warm temperatures"
+          "reason": "mostly dry, low cloud breaking to sunshine, light gusts 30mph, warm"
         },
         {
           "sky": "sun",
           "windMphLow": 10,
           "windMphHigh": 20,
           "gustMph": 30,
-          "windDir": "SW",
+          "windDir": "SSW",
           "tempCLow": 14,
           "tempCHigh": 14,
           "cloudFree": 80,
           "freezingLevel": 9999,
-          "visibility": "excellent",
-          "amSky": "partly-cloudy",
+          "visibility": "good",
+          "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "sunshine, no rain, light winds, hills mostly clear, warm and fine"
+          "reason": "sunshine, no rain, light winds, hills mostly clear, warm 14C on tops"
         },
         {
           "sky": "sun",
@@ -263,11 +263,11 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "sunshine breaking widely, patches clearing near M74, dry, light winds"
+          "reason": "sunshine breaking through widely, no rain, patches west clearing quickly"
         }
       ]
     }
   ],
-  "_generated": "2026-05-22T16:41:09.119Z",
+  "_generated": "2026-05-22T21:00:25.812Z",
   "_anchorDate": "2026-05-23"
 }
