@@ -1,10 +1,10 @@
 {
   "days": [
-    "Sun",
     "Mon",
-    "Tue"
+    "Tue",
+    "Wed"
   ],
-  "updatedAt": "2026-05-23T17:17:00.000Z",
+  "updatedAt": "2026-05-24T16:40:00.000Z",
   "regions": [
     {
       "name": "Northwest Highlands",
@@ -12,33 +12,17 @@
         {
           "sky": "rain",
           "windMphLow": 25,
-          "windMphHigh": 35,
-          "gustMph": 40,
-          "windDir": "SW",
-          "tempCLow": 8,
-          "tempCHigh": 10,
-          "cloudFree": 30,
-          "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "rain",
-          "pmSky": "rain",
-          "status": "poor",
-          "reason": "drizzly rain, extensive low cloud west, gusts 40mph Skye to Ben Hope"
-        },
-        {
-          "sky": "cloud",
-          "windMphLow": 25,
           "windMphHigh": 40,
           "windDir": "SW",
           "tempCLow": 7,
           "tempCHigh": 9,
           "cloudFree": 20,
           "freezingLevel": 9999,
-          "visibility": "moderate",
+          "visibility": "poor",
           "amSky": "rain",
-          "pmSky": "cloud",
+          "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "drizzly morning Skye to Torridon, gusts 40mph Ben Hope area, cloud persisting western tops"
+          "reason": "25-40mph SW, low cloud and drizzle west, 20% cloud-free"
         },
         {
           "sky": "partly-cloudy",
@@ -53,7 +37,22 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "extensive cloud morning, clearing PM; spots drizzle western hills; blustery start"
+          "reason": "extensive low cloud morning, clears PM; blustery start"
+        },
+        {
+          "sky": "sun",
+          "windMphLow": 5,
+          "windMphHigh": 10,
+          "windDir": "S",
+          "tempCLow": 7,
+          "tempCHigh": 14,
+          "cloudFree": 90,
+          "freezingLevel": 9999,
+          "visibility": "good",
+          "amSky": "sun",
+          "pmSky": "sun",
+          "status": "go",
+          "reason": "widespread sunshine, near-calm winds, mountains clear"
         }
       ]
     },
@@ -62,34 +61,18 @@
       "forecast": [
         {
           "sky": "rain",
-          "windMphLow": 15,
+          "windMphLow": 20,
           "windMphHigh": 30,
-          "gustMph": 35,
           "windDir": "SW",
           "tempCLow": 8,
-          "tempCHigh": 10,
+          "tempCHigh": 12,
           "cloudFree": 20,
           "freezingLevel": 9999,
-          "visibility": "moderate",
-          "amSky": "rain",
-          "pmSky": "rain",
-          "status": "poor",
-          "reason": "drizzly rain and extensive low cloud north of Oban, gusts 35mph cols/summits"
-        },
-        {
-          "sky": "cloud",
-          "windMphLow": 20,
-          "windMphHigh": 35,
-          "windDir": "SW",
-          "tempCLow": 7,
-          "tempCHigh": 10,
-          "cloudFree": 20,
-          "freezingLevel": 9999,
-          "visibility": "moderate",
+          "visibility": "poor",
           "amSky": "rain",
           "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "reason": "drizzly Lochaber morning, gusts 35mph, cloud lifting PM to 60% clear"
+          "status": "poor",
+          "reason": "low cloud and drizzle Lochaber, 20-30mph SW, 20% cloud-free"
         },
         {
           "sky": "partly-cloudy",
@@ -102,9 +85,24 @@
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "cloud",
-          "pmSky": "partly-cloudy",
+          "pmSky": "sun",
           "status": "marginal",
-          "reason": "cloud covering Mull to Lochaber morning, clearing PM; winds easing to negligible"
+          "reason": "low cloud north Argyll and Lochaber morning, clearing PM"
+        },
+        {
+          "sky": "sun",
+          "windMphLow": 5,
+          "windMphHigh": 10,
+          "windDir": "S",
+          "tempCLow": 9,
+          "tempCHigh": 15,
+          "cloudFree": 90,
+          "freezingLevel": 9999,
+          "visibility": "good",
+          "amSky": "sun",
+          "pmSky": "sun",
+          "status": "go",
+          "reason": "widespread sunshine, near-calm winds, mountains clear"
         }
       ]
     },
@@ -113,37 +111,21 @@
       "forecast": [
         {
           "sky": "partly-cloudy",
-          "windMphLow": 15,
+          "windMphLow": 20,
           "windMphHigh": 30,
-          "gustMph": 35,
           "windDir": "SW",
           "tempCLow": 10,
-          "tempCHigh": 12,
-          "cloudFree": 70,
+          "tempCHigh": 13,
+          "cloudFree": 80,
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "partly-cloudy",
-          "pmSky": "partly-cloudy",
+          "pmSky": "sun",
           "status": "marginal",
-          "reason": "blustery gusts 35mph, cloud may cap Ben Alder tops, otherwise mostly clear"
+          "reason": "blustery 20-30mph SW, gusts Cairngorm Plateau; mostly dry, warm"
         },
         {
           "sky": "partly-cloudy",
-          "windMphLow": 20,
-          "windMphHigh": 35,
-          "windDir": "SW",
-          "tempCLow": 9,
-          "tempCHigh": 12,
-          "cloudFree": 70,
-          "freezingLevel": 9999,
-          "visibility": "excellent",
-          "amSky": "cloud",
-          "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "reason": "gusts 35mph Cairngorm Plateau morning, cloud capping Ben Alder, lifting PM"
-        },
-        {
-          "sky": "sun",
           "windMphLow": 10,
           "windMphHigh": 20,
           "windDir": "W",
@@ -155,7 +137,22 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "sunshine widely PM, winds easing to 10mph, early caps clearing by midday"
+          "reason": "cap cloud clears by midday, sunshine widely, winds easing"
+        },
+        {
+          "sky": "sun",
+          "windMphLow": 5,
+          "windMphHigh": 10,
+          "windDir": "S",
+          "tempCLow": 8,
+          "tempCHigh": 14,
+          "cloudFree": 70,
+          "freezingLevel": 9999,
+          "visibility": "good",
+          "amSky": "partly-cloudy",
+          "pmSky": "sun",
+          "status": "go",
+          "reason": "low cloud disperses by midday, sunshine expanding, near-calm winds"
         }
       ]
     },
@@ -166,32 +163,16 @@
           "sky": "partly-cloudy",
           "windMphLow": 15,
           "windMphHigh": 25,
-          "gustMph": 30,
           "windDir": "SW",
           "tempCLow": 10,
-          "tempCHigh": 12,
+          "tempCHigh": 14,
           "cloudFree": 80,
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "partly-cloudy",
-          "pmSky": "partly-cloudy",
+          "pmSky": "sun",
           "status": "go",
-          "reason": "mostly dry, hills often clear, blustery gusts 30mph cols/summits"
-        },
-        {
-          "sky": "partly-cloudy",
-          "windMphLow": 20,
-          "windMphHigh": 30,
-          "windDir": "SW",
-          "tempCLow": 9,
-          "tempCHigh": 12,
-          "cloudFree": 70,
-          "freezingLevel": 9999,
-          "visibility": "excellent",
-          "amSky": "cloud",
-          "pmSky": "partly-cloudy",
-          "status": "go",
-          "reason": "dry, cloud lifting off tops PM, blustery 20-30mph but manageable"
+          "reason": "mostly dry, cloud lifting off tops, warm sunshine, moderate breeze"
         },
         {
           "sky": "sun",
@@ -206,7 +187,22 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "sunshine widely, early cloud soon clears, winds easing to negligible PM"
+          "reason": "early cloud clears quickly, sunshine widely, winds soon easing"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 5,
+          "windMphHigh": 10,
+          "windDir": "S",
+          "tempCLow": 7,
+          "tempCHigh": 12,
+          "cloudFree": 50,
+          "freezingLevel": 9999,
+          "visibility": "good",
+          "amSky": "partly-cloudy",
+          "pmSky": "sun",
+          "status": "go",
+          "reason": "low cloud dispersing PM, sunshine expanding, near-calm winds"
         }
       ]
     },
@@ -215,35 +211,18 @@
       "forecast": [
         {
           "sky": "sun",
-          "windMphLow": 10,
-          "windMphHigh": 20,
-          "gustMph": 25,
-          "windDir": "SW",
-          "tempCLow": 14,
-          "tempCHigh": 14,
-          "cloudFree": 80,
-          "freezingLevel": 9999,
-          "visibility": "excellent",
-          "amSky": "partly-cloudy",
-          "pmSky": "sun",
-          "status": "go",
-          "reason": "dry, increasingly extensive sunshine, mostly clear hills, light winds"
-        },
-        {
-          "sky": "sun",
           "windMphLow": 15,
           "windMphHigh": 25,
-          "gustMph": 30,
           "windDir": "SW",
-          "tempCLow": 14,
-          "tempCHigh": 14,
+          "tempCLow": 15,
+          "tempCHigh": 17,
           "cloudFree": 90,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "dry, sunshine breaking widely, western patches clearing quickly, gusts 30mph tops"
+          "reason": "increasingly very warm sunshine, hills clear, moderate breeze"
         },
         {
           "sky": "sun",
@@ -258,11 +237,27 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "extensive sunshine, hills clear, winds negligible, warm and dry"
+          "reason": "extensive sunshine, hills clear, near-calm winds, very warm"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 5,
+          "windMphHigh": 15,
+          "gustMph": 30,
+          "windDir": "SE",
+          "tempCLow": 8,
+          "tempCHigh": 14,
+          "cloudFree": 70,
+          "freezingLevel": 9999,
+          "visibility": "good",
+          "amSky": "cloud",
+          "pmSky": "sun",
+          "status": "go",
+          "reason": "low cloud east dispersing, western hills clear, sunshine extensive"
         }
       ]
     }
   ],
-  "_generated": "2026-05-24T12:00:04.859Z",
-  "_anchorDate": "2026-05-24"
+  "_generated": "2026-05-24T20:15:25.173Z",
+  "_anchorDate": "2026-05-25"
 }
