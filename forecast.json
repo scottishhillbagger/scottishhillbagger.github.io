@@ -1,44 +1,29 @@
 {
   "days": [
-    "Tue",
     "Wed",
-    "Thu"
+    "Thu",
+    "Fri"
   ],
-  "updatedAt": "2026-05-25T16:30:00.000Z",
+  "updatedAt": "2026-05-26T16:00:00.000Z",
   "regions": [
     {
       "name": "Northwest Highlands",
       "forecast": [
         {
-          "sky": "rain",
-          "windMphLow": 15,
-          "windMphHigh": 25,
-          "gustMph": 30,
-          "windDir": "W",
-          "tempCLow": 3,
-          "tempCHigh": 10,
-          "cloudFree": 20,
-          "freezingLevel": 9999,
-          "visibility": "moderate",
-          "amSky": "rain",
-          "pmSky": "partly-cloudy",
-          "status": "poor",
-          "reason": "extensive low cloud, early drizzle, blustery morning, poor visibility"
-        },
-        {
           "sky": "sun",
           "windMphLow": 5,
           "windMphHigh": 10,
-          "windDir": "S",
-          "tempCLow": 7,
+          "gustMph": 20,
+          "windDir": "SE",
+          "tempCLow": 5,
           "tempCHigh": 14,
           "cloudFree": 92,
           "freezingLevel": 9999,
-          "visibility": "good",
+          "visibility": "excellent",
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "widespread sunshine, mountains clear, near-calm winds inland"
+          "reason": "extensive sunshine, mountains free of cloud, light wind"
         },
         {
           "sky": "partly-cloudy",
@@ -54,7 +39,22 @@
           "amSky": "sun",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "gusts 40mph, risk thundery rain by dusk, strengthening winds all day"
+          "reason": "gusty 40mph, risk thundery rain evening, increasingly blustery"
+        },
+        {
+          "sky": "rain",
+          "windMphLow": 35,
+          "windMphHigh": 50,
+          "windDir": "SW",
+          "tempCLow": 6,
+          "tempCHigh": 8,
+          "cloudFree": 20,
+          "freezingLevel": 9999,
+          "visibility": "poor",
+          "amSky": "rain",
+          "pmSky": "cloud",
+          "status": "poor",
+          "reason": "gale 35-50mph, persistent rain west, cloud 600-800m, wind chill -5C"
         }
       ]
     },
@@ -63,9 +63,10 @@
       "forecast": [
         {
           "sky": "partly-cloudy",
-          "windMphLow": 5,
-          "windMphHigh": 10,
-          "windDir": "W",
+          "windMphLow": 10,
+          "windMphHigh": 15,
+          "gustMph": 20,
+          "windDir": "SE",
           "tempCLow": 7,
           "tempCHigh": 14,
           "cloudFree": 90,
@@ -74,22 +75,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "soon light winds, early coastal fog clears, mountains largely sunny"
-        },
-        {
-          "sky": "sun",
-          "windMphLow": 5,
-          "windMphHigh": 10,
-          "windDir": "SE",
-          "tempCLow": 9,
-          "tempCHigh": 14,
-          "cloudFree": 90,
-          "freezingLevel": 9999,
-          "visibility": "good",
-          "amSky": "sun",
-          "pmSky": "sun",
-          "status": "go",
-          "reason": "widespread sunshine, mountains clear, negligible winds inland"
+          "reason": "sun best in west, early patchy cloud clearing, light wind"
         },
         {
           "sky": "partly-cloudy",
@@ -105,7 +91,23 @@
           "amSky": "sun",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "gusty 30-40mph, thundery showers risk later, sudden strong gusts ahead of rain"
+          "reason": "gusty 30-40mph, risk thundery showers later, increasingly blustery"
+        },
+        {
+          "sky": "rain",
+          "windMphLow": 30,
+          "windMphHigh": 40,
+          "gustMph": 50,
+          "windDir": "SW",
+          "tempCLow": 6,
+          "tempCHigh": 8,
+          "cloudFree": 30,
+          "freezingLevel": 9999,
+          "visibility": "poor",
+          "amSky": "rain",
+          "pmSky": "cloud",
+          "status": "poor",
+          "reason": "30-40mph gusts 50mph Ben Nevis group, persistent rain Lochaber, cloud above 600m"
         }
       ]
     },
@@ -114,34 +116,19 @@
       "forecast": [
         {
           "sky": "partly-cloudy",
-          "windMphLow": 10,
-          "windMphHigh": 20,
-          "gustMph": 25,
-          "windDir": "W",
-          "tempCLow": 7,
-          "tempCHigh": 13,
-          "cloudFree": 90,
-          "freezingLevel": 9999,
-          "visibility": "excellent",
-          "amSky": "sun",
-          "pmSky": "partly-cloudy",
-          "status": "go",
-          "reason": "hills largely clear, breezy start easing, isolated shower risk late east"
-        },
-        {
-          "sky": "sun",
           "windMphLow": 5,
           "windMphHigh": 10,
-          "windDir": "SE",
+          "gustMph": 20,
+          "windDir": "SSE",
           "tempCLow": 8,
           "tempCHigh": 14,
-          "cloudFree": 90,
+          "cloudFree": 50,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "partly-cloudy",
+          "amSky": "cloud",
           "pmSky": "sun",
-          "status": "go",
-          "reason": "widespread sunshine, low cloud disperses, near-calm winds all day"
+          "status": "marginal",
+          "reason": "early low cloud east, dispersing by afternoon; cloudFree only 50% AM"
         },
         {
           "sky": "partly-cloudy",
@@ -157,7 +144,23 @@
           "amSky": "sun",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "gusts 35-40mph east, thundery rain risk by dusk, increasingly blustery"
+          "reason": "gusty 35-40mph east Cairngorms, risk thundery rain evening"
+        },
+        {
+          "sky": "rain",
+          "windMphLow": 30,
+          "windMphHigh": 40,
+          "gustMph": 50,
+          "windDir": "SW",
+          "tempCLow": 7,
+          "tempCHigh": 9,
+          "cloudFree": 40,
+          "freezingLevel": 9999,
+          "visibility": "good",
+          "amSky": "rain",
+          "pmSky": "partly-cloudy",
+          "status": "poor",
+          "reason": "30-40mph gusts 50mph high Cairngorms, intermittent rain, wind chill -5C"
         }
       ]
     },
@@ -166,33 +169,18 @@
       "forecast": [
         {
           "sky": "partly-cloudy",
-          "windMphLow": 5,
-          "windMphHigh": 10,
-          "windDir": "W",
-          "tempCLow": 7,
-          "tempCHigh": 13,
-          "cloudFree": 90,
-          "freezingLevel": 9999,
-          "visibility": "excellent",
-          "amSky": "sun",
-          "pmSky": "partly-cloudy",
-          "status": "go",
-          "reason": "hills largely clear, light winds soon negligible, isolated shower risk east PM"
-        },
-        {
-          "sky": "sun",
-          "windMphLow": 5,
-          "windMphHigh": 10,
+          "windMphLow": 10,
+          "windMphHigh": 15,
           "windDir": "SE",
-          "tempCLow": 7,
+          "tempCLow": 5,
           "tempCHigh": 12,
-          "cloudFree": 80,
+          "cloudFree": 50,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "partly-cloudy",
+          "amSky": "cloud",
           "pmSky": "sun",
-          "status": "go",
-          "reason": "sunshine expanding all slopes by afternoon, light winds, low cloud disperses"
+          "status": "marginal",
+          "reason": "low cloud morning, only 50% cloudFree AM, clearing to 80% afternoon"
         },
         {
           "sky": "partly-cloudy",
@@ -208,7 +196,23 @@
           "amSky": "sun",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "gusts 30-40mph east, thundery showers later, sudden strong gusts ahead of rain"
+          "reason": "gusty 30-40mph, risk thundery showers afternoon, sudden strong gusts"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 25,
+          "windMphHigh": 35,
+          "gustMph": 45,
+          "windDir": "SW",
+          "tempCLow": 7,
+          "tempCHigh": 9,
+          "cloudFree": 40,
+          "freezingLevel": 9999,
+          "visibility": "good",
+          "amSky": "rain",
+          "pmSky": "partly-cloudy",
+          "status": "poor",
+          "reason": "25-35mph gusts 40-45mph high tops, patchy rain, wind chill -3C"
         }
       ]
     },
@@ -216,38 +220,23 @@
       "name": "Southern Uplands",
       "forecast": [
         {
-          "sky": "sun",
-          "windMphLow": 5,
-          "windMphHigh": 10,
-          "windDir": "W",
-          "tempCLow": 13,
-          "tempCHigh": 16,
-          "cloudFree": 90,
-          "freezingLevel": 9999,
-          "visibility": "good",
-          "amSky": "sun",
-          "pmSky": "sun",
-          "status": "go",
-          "reason": "warm sunshine, hills clear, light negligible winds, very warm SW"
-        },
-        {
-          "sky": "sun",
-          "windMphLow": 5,
-          "windMphHigh": 10,
+          "sky": "partly-cloudy",
+          "windMphLow": 10,
+          "windMphHigh": 20,
           "gustMph": 30,
           "windDir": "SE",
           "tempCLow": 7,
           "tempCHigh": 14,
-          "cloudFree": 90,
+          "cloudFree": 50,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "sun",
+          "amSky": "cloud",
           "pmSky": "sun",
-          "status": "go",
-          "reason": "extensive sunshine west, low cloud disperses east, gusts 25-30mph Galloway only"
+          "status": "marginal",
+          "reason": "early low cloud east & south, gusty 30mph Galloway afternoon, clearing PM"
         },
         {
-          "sky": "storm",
+          "sky": "partly-cloudy",
           "windMphLow": 25,
           "windMphHigh": 40,
           "windDir": "SE",
@@ -256,14 +245,29 @@
           "cloudFree": 80,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "partly-cloudy",
-          "pmSky": "storm",
+          "amSky": "sun",
+          "pmSky": "rain",
           "status": "poor",
-          "reason": "25-40mph very gusty, thundery downpours afternoon, sudden strong gusts"
+          "reason": "25-40mph very gusty, risk thundery downpours afternoon, sudden strong gusts"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 25,
+          "windMphHigh": 30,
+          "windDir": "SW",
+          "tempCLow": 8,
+          "tempCHigh": 11,
+          "cloudFree": 60,
+          "freezingLevel": 9999,
+          "visibility": "good",
+          "amSky": "cloud",
+          "pmSky": "sun",
+          "status": "marginal",
+          "reason": "blustery 25-30mph, cloud covering western hills morning, wind chill near 0C"
         }
       ]
     }
   ],
-  "_generated": "2026-05-25T20:50:18.907Z",
-  "_anchorDate": "2026-05-26"
+  "_generated": "2026-05-26T18:36:27.378Z",
+  "_anchorDate": "2026-05-27"
 }
