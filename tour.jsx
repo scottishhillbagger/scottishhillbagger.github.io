@@ -924,7 +924,7 @@ const LESSONS = [
         { word: "druim",   pron: "drim",
           meaning: "a ridge, the line you walk along between summits",
           example: "Druim a' Choire Reidh" },
-        { word: "sròn",    pron: "strone",
+        { word: "sròn",    pron: "strawn",
           meaning: "a nose, spur — a ridge-end coming off a bigger mountain",
           example: "Sròn na Lairige" },
       ],
@@ -1220,7 +1220,7 @@ function Lesson({ lesson, onPrev, onNext, onExit, atFirst, atLast }) {
             </>
           )}
 
-          {/* Walkthrough (Lesson 10 capstone) — one hill, parts annotated
+          {/* Walkthrough (Lesson 11 capstone) — one hill, parts annotated
               with which lesson taught each piece. The lesson IS the
               try-it, so there's no separate tryIt block. */}
           {lesson.walkthrough && (
@@ -1247,7 +1247,7 @@ function Lesson({ lesson, onPrev, onNext, onExit, atFirst, atLast }) {
                   knowing" because the surviving recaps carry new content
                   (asides, handoffs, closings) rather than restating what
                   the try-it just taught. Set recapLabel to empty string
-                  to suppress the label entirely (Lesson 10 uses this so
+                  to suppress the label entirely (Lesson 11 uses this so
                   the Clearances closing stands without a header). */}
               {lesson.recapLabel !== "" && (
                 <div className="tour-section-label">

@@ -38,6 +38,20 @@ const ROOTS = {
   "fionn":   { type: "generic", meaning: "fair one",       pron: "fyoon",     ipa: "fjuːn", shape: "classic", note: "Lit. 'fair, white' — often used as a noun for a fair hill." },
   "cùl":     { type: "generic", meaning: "back",           pron: "kool",      ipa: "kʰuːl̪ˠ", shape: "dome", note: "The back side of a hill." },
 
+  // ─── Landscape-feature generics (Lesson 10 — what hill walkers meet
+  // between car park and cairn). These aren't summits — they're the
+  // streams you cross, the glens you walk up, the passes you traverse.
+  // Same generic+qualifier pattern as hill names. Tagged 'generic' so
+  // the existing parts-breakdown role colouring handles them.
+  // druim and sròn are also landscape features but already appear above
+  // as hill-generics — they do double duty. ───
+  "allt":    { type: "generic", meaning: "stream, burn",  pron: "owlt",   ipa: "aul̪ˠt̪", shape: "ridge", note: "Most common watercourse word on OS maps. Anglicised as 'Ault-' in some places (Aultbea, Aultmore). Every hill walk crosses one." },
+  "abhainn": { type: "generic", meaning: "river",         pron: "AH-vin", ipa: "ˈavɪɲ", shape: "ridge", note: "A larger watercourse than allt. The bh sounds 'v' — same lenition rule from Lesson 5." },
+  "gleann":  { type: "generic", meaning: "glen, valley",  pron: "glown",  ipa: "kl̪ˠaun̪ˠ", shape: "ridge", note: "Anglicised as 'Glen' in countless place names. The valley you walk up to reach the hill." },
+  "bealach": { type: "generic", meaning: "pass, gap, saddle", pron: "BYAL-ach", ipa: "ˈpjal̪ˠəx", shape: "ridge", note: "The low point between two summits. 'Bealach na Bà' (pass of cattle) is the famous Applecross example. The ch is gutteral as in loch." },
+  "lairig":  { type: "generic", meaning: "long pass",     pron: "LAR-ig", ipa: "ˈl̪ˠaɾɪc", shape: "ridge", note: "A long, high pass — same family as bealach but bigger and more sustained. The Lairig Ghru between Aviemore and Braemar is the classic." },
+  "bò":      { type: "noun",    meaning: "cow, cattle",   pron: "boh",    ipa: "poː", note: "Animal noun. Appears in place names tied to grazing land or droving routes. The genitive plural form 'bà' shows up in 'Bealach na Bà' (pass of cattle)." },
+
   // ─── Color adjectives (used to tint the silhouette) ───
   "mòr":     { type: "adj", meaning: "big, great",  pron: "mor",    ipa: "moːɾ" },
   "beag":    { type: "adj", meaning: "small",       pron: "bayk",   ipa: "pek" },
