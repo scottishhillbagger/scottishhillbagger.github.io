@@ -772,9 +772,10 @@ const LESSONS = [
           example: "Allt a' Mhuilinn" },
       ],
       footnote: <>
-        Only <em>coire</em> and <em>lochan</em> appear in the 37 hills you
-        can explore in this app. The others you'll meet on the OS maps and
-        in glen-and-corrie names around the hills you climb.
+        Only <em>coire</em> and <em>lochan</em> appear in the 40 hills you
+        can explore in this app. The others come into their own in the
+        next lesson, where the focus shifts from features inside a hill's
+        name to features you actually walk past on the way up.
       </>,
     },
     examples: ["Stob Coire nan Lochan"],
@@ -828,35 +829,172 @@ const LESSONS = [
         that gave them.
       </>,
       <>
-        Lesson 10 puts everything together on one famously long name. By
+        Two lessons left. Lesson 10 widens what you've learned to the land
+        you walk <em>through</em> on the way up — streams, glens, passes,
+        the features named on every OS map between car park and cairn.
+        Lesson 11 puts everything together on one famously long name. By
         the end you'll be reading a four-part Gaelic hill name fluently
         — and you'll have a tour of which lesson taught which piece.
       </>,
     ],
   },
 
-  // ─── Lesson 10 — enriched stub ───────────────────────────────────────
-  // The capstone. Pick one famously complex name (Sìth Chailleann — a
-  // perfect choice because every layer matters: sìth is interesting
-  // pedagogically, Chailleann is lenited and shows a real grammatical case,
-  // and the meaning is poetic) and walk through it piece by piece using
-  // everything from Lessons 1-9.
+  // ─── Lesson 10 — Out on the hill ───────────────────────────────────
+  // A widening lesson. The tour has so far taught hill-name reading;
+  // this lesson extends the toolkit to the rest of the landscape you
+  // walk through to reach a summit — streams, glens, passes, ridges,
+  // spurs. Six new generics, all things a hill walker actually
+  // encounters on the map or on the ground.
   //
-  // Suggested layout: a single hill with the decomposition shown as a
-  // sequential walkthrough. Each part appears with a small commentary that
-  // names which lesson it draws from ("the lenition here is Lesson 5"). A
-  // sense of arrival.
+  // Why this lesson belongs (slot: between L9 and the capstone): the
+  // pattern-recognition the user has built up (generic + qualifier,
+  // articles, lenition) applies identically to non-hill place names.
+  // Every Allt-, Gleann-, Bealach- on an OS map follows the same rules.
+  // Teaching this here means the L11 capstone can implicitly assume
+  // the user reads the whole map, not just the summit dots.
   //
-  // Try-it could be the user picking any hill from a small list (Bidean nam
-  // Bian, Sgùrr nan Gillean, Buachaille Eitibhe Mòr) and getting a full
-  // decomposition. Or it could be no try-it at all — the lesson IS the
-  // try-it. The recap should be the celebration: "you can now read most of
-  // a Scottish OS map. Here's the reference section for everything else."
+  // What's excluded (deliberately): settlement prefixes (Bal-, Auch-,
+  // Kil-, Inver-) and broad-valley terms (strath). They're map
+  // vocabulary but not walking vocabulary. The lesson's frame is
+  // "things you'll meet when hill walking" — settlements are where
+  // you started driving from, not where you walked.
   //
-  // The Finish button (set when atLast) drops the user into Reference →
-  // Dissect, where they can apply what they've learned to whichever hill
-  // they actually care about.
-  // ─── Lesson 10 ──────────────────────────────────────────────────────
+  // Layout: three worked examples + WordGrid + try-it. Same shape as
+  // L9, which makes them feel like paired lessons (L9 = words inside
+  // hill names; L10 = words around hill walks).
+  //
+  // Worked examples chosen specifically:
+  // 1. Bealach na Bà — anchors `bealach`. Famous Applecross pass,
+  //    clean parts breakdown.
+  // 2. Allt a' Chaol Ghlinne — anchors `allt` and `gleann`. Tests
+  //    four lessons at once (allt + article + lenited "narrow" +
+  //    lenited gleann). Real river in Lochaber.
+  // 3. Lairig Ghru — a chance to honestly flag etymological
+  //    uncertainty (`Ghru` is contested) and introduce `lairig` as
+  //    a sibling of `bealach` without expanding the wordGrid.
+  //
+  // The try-it uses Altnabreac — the railway station, whose
+  // anglicised form looks impenetrable until you re-decompose it as
+  // "Allt nam Breac" (stream of the trout). Tests both the new
+  // vocabulary and the user's confidence to break apart a fused name.
+  {
+    num: 10,
+    title: "Out on the hill — the land between summits",
+    promise: <>
+      <p>
+        A hill walk isn't just the summit. The map between car park and
+        cairn is full of Gaelic too — streams to cross, glens to walk
+        up, passes to traverse, ridges to follow. <em>Same rules you
+        already know.</em> Six more words give you the whole landscape.
+      </p>
+      <p>
+        Once you can read <em>Beinn Dubh</em>, you can read{" "}
+        <em>Allt Dubh</em> and <em>Gleann Dubh</em>. The pattern is
+        identical. The generics just change.
+      </p>
+    </>,
+    // No `examples` or `compare` fields: those render LessonExample
+    // cards with hill silhouettes, but the worked examples here
+    // (Bealach na Bà, Allt a' Chaol Ghlinne, Lairig Ghru) are a pass,
+    // a stream and another pass — not hills. The WordGrid carries the
+    // vocabulary; the recap glosses the three worked examples in
+    // prose. Same shape as L7's wordGrid-driven lesson.
+    wordGrid: {
+      label: "Six words for the land you walk through",
+      caption: <>
+        These are the generics you'll meet on OS maps between car park
+        and cairn. The first three are water and valley words you'll
+        cross or follow; the next three are landform features you'll
+        traverse. Same generic + qualifier pattern as hill names —
+        you've done the hard work already.
+      </>,
+      rows: [
+        { word: "allt",    pron: "owlt",
+          meaning: "a stream or burn — every walk has one, named after what's in it or where it flows",
+          example: "Allt a' Mhuilinn" },
+        { word: "abhainn", pron: "AH-vin",
+          meaning: "a river — bigger than an allt, the kind you might have to ford or follow",
+          example: "Abhainn Dubh" },
+        { word: "gleann",  pron: "glown",
+          meaning: "a glen, valley — usually with a river running through it; the approach to most Munros",
+          example: "Gleann Mòr" },
+        { word: "bealach", pron: "BYAL-ach",
+          meaning: "a pass or saddle between two hills — the navigation point on a ridge-walk",
+          example: "Bealach na Bà" },
+        { word: "druim",   pron: "drim",
+          meaning: "a ridge, the line you walk along between summits",
+          example: "Druim a' Choire Reidh" },
+        { word: "sròn",    pron: "strone",
+          meaning: "a nose, spur — a ridge-end coming off a bigger mountain",
+          example: "Sròn na Lairige" },
+      ],
+      footnote: <>
+        You met <em>coire</em>, <em>lochan</em>, and <em>loch</em> in
+        Lesson 9 — they're part of this same family. Together with the
+        six here, you have the dozen-or-so generic words that label the
+        white space between the peaks on every Scottish OS map.
+      </>,
+    },
+    // Try-it: Altnabreac is the railway station near Forsinard. Its
+    // anglicised spelling fuses the parts into one word — but
+    // re-decomposed as "Allt nam Breac", it's a textbook stream-name.
+    // Tests the user's confidence to split a fused anglicisation
+    // AND knowledge of allt.
+    tryIt: {
+      mode: "predict",
+      prompt: <>
+        On the Far North railway line there's a station called{" "}
+        <strong>Altnabreac</strong>. The spelling fuses three Gaelic
+        words. <em>Breac</em> means "trout" (also "speckled"). What
+        does the original name mean?
+      </>,
+      options: [
+        { label: "Speckled hillside",                                correct: false },
+        { label: "Stream of the trout",                              correct: true  },
+        { label: "Trout-coloured pass",                              correct: false },
+      ],
+      reveal: <>
+        Right — <strong>Allt nam Breac</strong>, "stream of the
+        trout". The fused English spelling drops the spaces and
+        smooths the sounds, but the parts are still there: <em>allt</em>{" "}
+        (stream) + <em>nam</em> (of the, plural genitive) + <em>breac</em>{" "}
+        (trout). Once you spot the <em>allt</em>, the rest is a name
+        any angler would understand.
+      </>,
+      wrongReveal: <>
+        Actually "stream of the trout" — <strong>Allt nam Breac</strong>.
+        The fused spelling hides three words: <em>allt</em> (stream) +{" "}
+        <em>nam</em> (of the, plural genitive — the n is for words
+        starting with b/p/m, Lesson 8 territory) + <em>breac</em>{" "}
+        (trout). Whenever you see "Alt-" at the start of an anglicised
+        Scottish name, look for the Gaelic <em>allt</em> hiding inside.
+      </>,
+    },
+    recap: [
+      <>
+        Three of the names in the grid earn a closer look.{" "}
+        <strong>Bealach na Bà</strong> on Applecross means "pass of
+        the cattle" — drovers brought cows over it for centuries.{" "}
+        <strong>Allt a' Mhuilinn</strong> below the Ben is "stream of
+        the mill" — <em>muileann</em> lenited to <em>mhuilinn</em>{" "}
+        after the article. And while we're here, the great Cairngorms
+        pass is <strong>Lairig Ghru</strong>; <em>lairig</em> is a
+        sibling of <em>bealach</em> (a long high pass rather than a
+        saddle), and <em>Ghru</em> is contested — possibly "of the
+        gloom", possibly something else. Even native speakers shrug.
+      </>,
+      <>
+        Every Scottish OS map has more <em>Allt</em> and <em>Gleann</em>{" "}
+        labels than hill names. The dozen geographic words you now
+        know — six here, three from Lesson 9, plus the article system
+        from Lesson 8 — unlock the white space between the peaks. The
+        next lesson is the capstone: one famously long hill name,
+        every layer.
+      </>,
+    ],
+  },
+
+  // ─── Lesson 11 ──────────────────────────────────────────────────────
   // The capstone. Walks through Stob Coire nan Lochan piece by piece. Each
   // part annotated with which lesson taught the skill needed to read it.
   // The lesson IS the try-it — no separate try-it block. The recap is the
@@ -865,16 +1003,14 @@ const LESSONS = [
   // Why Stob Coire nan Lochan: four parts, every lesson contributes —
   // Lesson 2 (stob, secondary generic), Lesson 5 (lenition), Lesson 8
   // (article), and an honest acknowledgement that one of the parts
-  // (coire) is the kind of geographic noun a future Lesson 9 will cover
-  // properly. Better than Sìth Chailleann (only 2 parts) for showing
-  // the full mechanism.
+  // (coire) is the kind of geographic noun Lesson 9 covered.
   //
   // The walkthrough is a new layout primitive: each part gets its own
   // card with the part text, meaning, pronunciation, and a small label
   // citing the lesson that introduced the skill needed to read it.
-  // Finish button (atLast) routes the user to Reference → Dissect.
+  // Finish button (atLast) routes the user to Dissect.
   {
-    num: 10,
+    num: 11,
     title: "Putting it all together",
     // No section label on the recap — the Clearances closing is the
     // tour's emotional payoff and reads better without a "Worth knowing"
@@ -928,14 +1064,17 @@ const LESSONS = [
         photographed in Scotland. Every word is doing work.
       </>,
       <>
-        You can now read most Scottish hill names. The big four generics
-        cover 70% of them; the secondary generics cover most of the rest;
+        You can now read most Scottish hill names — and most of the land
+        you walk through to reach them. The big four generics cover 70%
+        of hill names; the secondary generics cover most of the rest;
         the colour and size adjectives reveal the qualifier; the article
         and lenition rules let you split four- and five-word names into
-        the right pieces. The Reference section has everything else:
-        <em> Dissect</em> any of the 37 hills part by part, <em>Quiz</em>{" "}
-        yourself on what you've learned, or use the <em>Glossary</em> as
-        a lookup when you meet a word you don't recognise.
+        the right pieces; and the geographic vocabulary from the last
+        two lessons unlocks the corries, glens, streams and passes
+        labelled on every OS map. <em>Dissect</em> any of the 40 hills
+        in this app part by part; <em>Quiz</em> yourself on what you've
+        learned; or use the <em>Glossary</em> as a lookup when you meet
+        a word you don't recognise.
       </>,
       <>
         One last thing worth knowing. Many of the communities that spoke
