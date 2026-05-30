@@ -59,7 +59,7 @@ const LESSONS = [
         Gillean. Stob Coire Sgreamhach. Beinn a' Bheithir.</em> Long words,
         accented vowels, consonant clusters that don't follow English rules.
         But almost every name is built from a small set of pieces, and once
-        you see them you start reading the landscape: <em>Càrn Mòr Dearg</em>
+        you see them you start reading the landscape: <em>Càrn Mòr Dearg</em> 
         is just "big red cairn", and now the name is telling you what the
         hill looks like.
       </p>
