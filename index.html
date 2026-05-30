@@ -15,7 +15,7 @@
 <meta name="theme-color" content="#2D6147">
 <link rel="stylesheet" href="styles.css">
 <style>
-/* Bag counter interactivity */
+/* Bag counter interactivity — mobile header */
 .sc {
   cursor: pointer;
   border-radius: 6px;
@@ -27,6 +27,21 @@
 .sc.sc-active {
   background: rgba(255,255,255,0.18);
   outline: 1.5px solid rgba(255,255,255,0.4);
+}
+/* Desktop sidebar stats interactivity */
+.ds-item {
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 4px 6px;
+  margin: -4px -6px;
+  transition: background 0.15s;
+}
+.ds-item:hover {
+  background: rgba(0,0,0,0.06);
+}
+.ds-item.ds-active {
+  background: rgba(0,0,0,0.08);
+  outline: 1.5px solid rgba(0,0,0,0.15);
 }
 </style>
 </head>
@@ -64,19 +79,19 @@
 
 <nav class="tabs">
   <div class="desktop-stats">
-      <div class="ds-item">
+      <div class="ds-item" data-tab="munro" title="Show bagged Munros">
         <div class="ds-row"><span class="ds-lbl">Munros</span><span class="ds-n" id="ds-mb">0 / 282</span></div>
         <div class="ds-bar"><div class="ds-bar-f" id="ds-mb-bar"></div></div>
       </div>
-      <div class="ds-item">
+      <div class="ds-item" data-tab="corbett" title="Show bagged Corbetts">
         <div class="ds-row"><span class="ds-lbl">Corbetts</span><span class="ds-n" id="ds-cb">0 / 222</span></div>
         <div class="ds-bar"><div class="ds-bar-f" id="ds-cb-bar"></div></div>
       </div>
-      <div class="ds-item">
+      <div class="ds-item" data-tab="fiona" title="Show bagged Fionas">
         <div class="ds-row"><span class="ds-lbl">Fionas</span><span class="ds-n" id="ds-fb">0 / 219</span></div>
         <div class="ds-bar"><div class="ds-bar-f" id="ds-fb-bar"></div></div>
       </div>
-      <div class="ds-item">
+      <div class="ds-item" data-tab="bothy" title="Show visited bothies">
         <div class="ds-row"><span class="ds-lbl">Bothies</span><span class="ds-n" id="ds-bv">0 / 86</span></div>
         <div class="ds-bar"><div class="ds-bar-f" id="ds-bv-bar"></div></div>
       </div>
@@ -514,11 +529,16 @@ function updateStats(){
 function setText(id,v){var el=document.getElementById(id);if(el)el.textContent=v;}
 function setStyle(id,prop,v){var el=document.getElementById(id);if(el)el.style[prop]=v;}
 
-// ============ SC COUNTER ACTIVE STATE HELPER ============
+// ============ COUNTER ACTIVE STATE HELPERS ============
 function clearScActive(){
   var allSc = document.querySelectorAll('.sc');
   for(var i=0;i<allSc.length;i++) allSc[i].classList.remove('sc-active');
 }
+function clearDsActive(){
+  var allDs = document.querySelectorAll('.ds-item');
+  for(var i=0;i<allDs.length;i++) allDs[i].classList.remove('ds-active');
+}
+function clearAllCounterActive(){ clearScActive(); clearDsActive(); }
 
 // WalkHighlands slug overrides
 var WH_SLUG_OVERRIDES = {
@@ -1404,7 +1424,7 @@ function attachEvents(){
         if(regionFilter){ regionFilter=''; }
         statusFilter='';
         sortBy='name';
-        clearScActive();
+        clearAllCounterActive();
         if(activeTab !== 'bothy'){
           bothySearch='';
           var bs=document.getElementById('bothy-srch');
@@ -1434,7 +1454,7 @@ function attachEvents(){
         if(regionFilter){ regionFilter=''; }
         statusFilter='';
         sortBy='name';
-        clearScActive();
+        clearAllCounterActive();
         if(activeTab !== 'bothy'){
           bothySearch='';
           var bs=document.getElementById('bothy-srch');
@@ -1470,14 +1490,14 @@ function attachEvents(){
         // Toggle off if already active
         if(activeTab === newTab && statusFilter === 'bagged'){
           statusFilter = '';
-          clearScActive();
+          clearAllCounterActive();
           updateActiveChips();
           renderAll();
           return;
         }
 
         // Switch tab + apply bagged filter
-        clearScActive();
+        clearAllCounterActive();
         activeTab = newTab;
         statusFilter = 'bagged';
         sortBy = 'name';
@@ -1504,6 +1524,52 @@ function attachEvents(){
         renderAll();
       });
     })(scDivs[si]);
+  }
+
+  // ============ DESKTOP STAT COUNTER CLICK ============
+  var dsItems = document.querySelectorAll('.ds-item[data-tab]');
+  for(var dsi=0;dsi<dsItems.length;dsi++){
+    (function(ds){
+      ds.addEventListener('click', function(){
+        var newTab = ds.getAttribute('data-tab');
+
+        // Toggle off if already active
+        if(activeTab === newTab && statusFilter === 'bagged'){
+          statusFilter = '';
+          clearAllCounterActive();
+          updateActiveChips();
+          renderAll();
+          return;
+        }
+
+        // Switch tab + apply bagged filter
+        clearAllCounterActive();
+        activeTab = newTab;
+        statusFilter = 'bagged';
+        sortBy = 'name';
+        regionFilter = '';
+        searchTerm = '';
+        var srchEl = document.getElementById('srch');
+        if(srchEl) srchEl.value = '';
+
+        // Sync hill-type segmented control
+        var htBtns = document.querySelectorAll('.hill-type');
+        for(var k=0;k<htBtns.length;k++){
+          htBtns[k].classList.toggle('active', htBtns[k].getAttribute('data-tab') === newTab);
+        }
+        // Activate Hills top-tab
+        var topAll = document.querySelectorAll('.top-tab');
+        for(var t=0;t<topAll.length;t++){
+          topAll[t].classList.toggle('active', topAll[t].getAttribute('data-toptab')==='hills');
+        }
+        var ht = document.getElementById('hill-types');
+        if(ht){ ht.classList.add('show'); document.body.classList.add('has-hilltypes'); }
+
+        ds.classList.add('ds-active');
+        updateActiveChips();
+        renderAll();
+      });
+    })(dsItems[dsi]);
   }
 
   document.getElementById('srch').addEventListener('input',function(e){searchTerm=e.target.value;renderList();});
@@ -1594,7 +1660,7 @@ function attachEvents(){
       for(var i=0;i<sib.length;i++) sib[i].classList.remove('active');
       btn.classList.add('active');
       if(section === 'sort') sortBy = val || 'name';
-      else if(section === 'status'){ statusFilter = val; clearScActive(); }
+      else if(section === 'status'){ statusFilter = val; clearAllCounterActive(); }
       else if(section === 'region') regionFilter = val;
       updateActiveChips();
       renderActive();
@@ -1606,7 +1672,7 @@ function attachEvents(){
       sortBy = 'name';
       statusFilter = '';
       regionFilter = '';
-      clearScActive();
+      clearAllCounterActive();
       syncFilterSheetFromState();
       buildFilterRegionOptions();
       updateActiveChips();
@@ -1625,7 +1691,7 @@ function attachEvents(){
       if(!t || t === bar) return;
       var k = t.getAttribute('data-clear');
       if(k === 'sort') sortBy = 'name';
-      else if(k === 'status'){ statusFilter = ''; clearScActive(); }
+      else if(k === 'status'){ statusFilter = ''; clearAllCounterActive(); }
       else if(k === 'region') regionFilter = '';
       syncFilterSheetFromState();
       updateActiveChips();
@@ -2051,7 +2117,7 @@ function attachEvents(){
     var ht = document.getElementById('hill-types'); if(ht) ht.classList.remove('show');
     document.body.classList.remove('has-hilltypes');
     activeTab = 'map';
-    clearScActive();
+    clearAllCounterActive();
     renderAll();
     setTimeout(function(){
       if(leafletMap){
