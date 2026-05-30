@@ -739,15 +739,16 @@ const LESSONS = [
       <p>
         The longest hill names contain words that aren't really about the
         hill — they describe features <em>around</em> it. <em>Coire</em>{" "}
-        (corrie), <em>loch</em> (lake), <em>gleann</em> (glen),{" "}
-        <em>bealach</em> (pass). Once you can spot them, four- and
-        five-word names stop feeling intimidating.
+        (corrie), <em>lochan</em> (small loch), <em>loch</em> (lake).
+        Once you can spot them, four- and five-word names stop feeling
+        intimidating.
       </p>
       <p>
-        <em>Stob Coire nan Lochan</em> isn't really about the peak. It's
-        the <em>corrie</em> that the locals named first, after the small
-        lochs in it; the peak is just the high point above. Read the
-        right way, the name tells you what to look for when you arrive.
+        <em>Sròn a' Choire Ghairbh</em> doesn't even name the summit —
+        it names the <em>nose-shaped ridge</em> coming off a rough
+        corrie. The peak is just where that ridge ends up. Read the
+        right way, the name tells you what to look for when you arrive,
+        not what the cartographer wanted to call the top.
       </p>
     </>,
     wordGrid: {
@@ -775,7 +776,7 @@ const LESSONS = [
         the OS map.
       </>,
     },
-    examples: ["Stob Coire nan Lochan"],
+    examples: ["Sròn a' Choire Ghairbh"],
     tryIt: {
       mode: "predict",
       prompt: <>
