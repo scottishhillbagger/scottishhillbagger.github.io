@@ -111,7 +111,7 @@ const LESSONS = [
     genericsGrid: {
       label: "Secondary generics you'll meet",
       caption: <>
-        Six more words for "kind of hill" — they fill the same grammatical
+        Seven more words for "kind of hill" — they fill the same grammatical
         slot as beinn/càrn/sgùrr/meall, but describe slightly different
         shapes. Don't memorise these; just learn to recognise them when
         they appear.
@@ -123,6 +123,9 @@ const LESSONS = [
         { word: "stob",   pron: "stob",    shape: "stub",
           meaning: "a stubby point — often a subsidiary peak on a ridge",
           example: "Stob Dearg" },
+        { word: "sròn",   pron: "strawn",  shape: "nose",
+          meaning: "a nose, spur — a ridge-end coming off a bigger mountain",
+          example: "Sròn a' Choire Ghairbh" },
         { word: "sgòr",   pron: "skor",    shape: "sharp",
           meaning: "a sharp peak (a variant spelling of sgùrr)",
           example: "Sgòr Gaoith" },
@@ -882,7 +885,7 @@ const LESSONS = [
         A hill walk isn't just the summit. The map between car park and
         cairn is full of Gaelic too — streams to cross, glens to walk
         up, passes to traverse, ridges to follow. <em>Same rules you
-        already know.</em> Six more words give you the whole landscape.
+        already know.</em> Five more words give you the whole landscape.
       </p>
       <p>
         Once you can read <em>Beinn Dubh</em>, you can read{" "}
@@ -897,13 +900,13 @@ const LESSONS = [
     // vocabulary; the recap glosses the three worked examples in
     // prose. Same shape as L7's wordGrid-driven lesson.
     wordGrid: {
-      label: "Six words for the land you walk through",
+      label: "Five words for the land you walk through",
       caption: <>
         These are the generics you'll meet on OS maps between car park
         and cairn. The first three are water and valley words you'll
-        cross or follow; the next three are landform features you'll
-        traverse. Same generic + qualifier pattern as hill names —
-        you've done the hard work already.
+        cross or follow; the last two are crossings — a pass between
+        summits, a ridge along the way. Same generic + qualifier pattern
+        as hill names — you've done the hard work already.
       </>,
       rows: [
         { word: "allt",    pron: "owlt",
@@ -921,15 +924,12 @@ const LESSONS = [
         { word: "druim",   pron: "drim",
           meaning: "a ridge, the line you walk along between summits",
           example: "Druim a' Choire Reidh" },
-        { word: "sròn",    pron: "strawn",
-          meaning: "a nose, spur — a ridge-end coming off a bigger mountain",
-          example: "Sròn na Lairige" },
       ],
       footnote: <>
         You met <em>coire</em>, <em>lochan</em>, and <em>loch</em> in
         Lesson 9 — they're part of this same family. Together with the
-        six here, you have the dozen-or-so generic words that label the
-        white space between the peaks on every Scottish OS map.
+        five here, you have the geographic words that label the white
+        space between the peaks on every Scottish OS map.
       </>,
     },
     // Try-it: Altnabreac is the railway station near Forsinard. Its
@@ -982,11 +982,10 @@ const LESSONS = [
       </>,
       <>
         Every Scottish OS map has more <em>Allt</em> and <em>Gleann</em>{" "}
-        labels than hill names. The dozen geographic words you now
-        know — six here, three from Lesson 9, plus the article system
-        from Lesson 8 — unlock the white space between the peaks. The
-        next lesson is the capstone: one famously long hill name,
-        every layer.
+        labels than hill names. The geographic words you now know — five
+        here, three from Lesson 9, plus the article system from Lesson 8
+        — unlock the white space between the peaks. The next lesson is
+        the capstone: one famously long hill name, every layer.
       </>,
     ],
   },
