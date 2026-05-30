@@ -751,31 +751,28 @@ const LESSONS = [
       </p>
     </>,
     wordGrid: {
-      label: "Words for features around hills",
+      label: "Words for features inside hill names",
       caption: <>
-        Five words you'll meet in hill names and on OS maps. They sit in
-        the qualifier slot — usually after an article — and describe what's
-        next to the hill: a corrie, a small loch, a pass, a stream.
+        Three words you'll meet <em>inside</em> the longer hill names.
+        They sit in the qualifier slot — usually after an article — and
+        describe what's next to the peak: a corrie, a small loch in it,
+        a bigger one nearby.
       </>,
       rows: [
         { word: "coire",   pron: "KORR-uh",  meaning: "corrie — a cauldron-shaped hollow in a mountain's flank",
           example: "Coire an t-Sneachda" },
-        { word: "lochan",  pron: "LOCH-an",  meaning: "a small loch (diminutive of loch)",
+        { word: "lochan",  pron: "LOCH-an",  meaning: "a small loch (diminutive of loch) — often tucked in a corrie",
           example: "Coire nan Lochan" },
-        { word: "loch",    pron: "loch",     meaning: "a lake (any size) — the big sister of lochan",
-          example: "Loch Mòr" },
-        { word: "gleann",  pron: "glown",    meaning: "a glen, valley — usually with a river",
-          example: "Gleann Coe" },
-        { word: "bealach", pron: "BYAL-ach", meaning: "a pass between two hills",
-          example: "Bealach na Bà" },
-        { word: "allt",    pron: "owlt",     meaning: "a stream or burn",
-          example: "Allt a' Mhuilinn" },
+        { word: "loch",    pron: "loch",     meaning: "a lake of any size — the bigger sister of lochan",
+          example: "Beinn an Lochain" },
       ],
       footnote: <>
-        Only <em>coire</em> and <em>lochan</em> appear in the 40 hills you
-        can explore in this app. The others come into their own in the
-        next lesson, where the focus shifts from features inside a hill's
-        name to features you actually walk past on the way up.
+        All three appear inside the names of hills in this app — you'll
+        meet them whenever you dissect a four-or-five-word name. The
+        wider family of landscape words (streams, glens, passes) waits
+        for the next lesson, where the focus shifts from features named
+        <em> in </em> a hill to features named <em>between</em> them on
+        the OS map.
       </>,
     },
     examples: ["Stob Coire nan Lochan"],
@@ -808,13 +805,12 @@ const LESSONS = [
     },
     recap: [
       <>
-        The five geographic words — <em>coire, lochan, loch, gleann,
-        bealach</em>, plus <em>allt</em> — fill the qualifier slot of
-        hill names but describe features <em>next to</em> the hill, not
-        the hill itself. When you see them, expect an article nearby
-        (<em>an, na, nan</em>) and probably a lenited noun after it. The
-        pattern is consistent: hill-word + corrie/loch/glen + article +
-        what's in it.
+        The three geographic words — <em>coire, lochan, loch</em> — fill
+        the qualifier slot of hill names but describe features{" "}
+        <em>next to</em> the hill, not the hill itself. When you see
+        them, expect an article nearby (<em>an, na, nan</em>) and
+        probably a lenited noun after it. The pattern is consistent:
+        hill-word + corrie/loch + article + what's in it.
       </>,
       <>
         One more category of "not the hill itself" worth knowing: some
