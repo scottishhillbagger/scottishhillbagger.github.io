@@ -59,7 +59,7 @@ const LESSONS = [
         Gillean. Stob Coire Sgreamhach. Beinn a' Bheithir.</em> Long words,
         accented vowels, consonant clusters that don't follow English rules.
         But almost every name is built from a small set of pieces, and once
-        you see them you start reading the landscape: <em>Càrn Mòr Dearg</em> 
+        you see them you start reading the landscape: <em>Càrn Mòr Dearg</em>
         is just "big red cairn", and now the name is telling you what the
         hill looks like.
       </p>
@@ -89,14 +89,16 @@ const LESSONS = [
 
   // ─── Lesson 2 ───────────────────────────────────────────────────────
   // The shape-of-the-hill lesson. Four primary generics fully worked out, plus
-  // a secondary-generics reference grid showing six more words the user will
-  // genuinely meet in the 36 hills (and in the wild). Same primary+rarer split
+  // a secondary-generics reference grid showing seven more words the user will
+  // genuinely meet in the 40 hills (and in the wild). Same primary+rarer split
   // as Lesson 4's colour grid — top tier to memorise, second tier to recognise.
   //
-  // Why six secondary and not more: each one appears in the data, has a
+  // Why seven secondary and not more: each one appears in the data, has a
   // distinct shape, and is a name most hillwalkers actually encounter. We
   // exclude generics that are too obscure (sìth, sàil) or whose use overlaps
-  // with the primary four (mullach with càrn).
+  // with the primary four (mullach with càrn). Sròn was added when it was
+  // needed as the L8 try-it generic and L9 anchor — properly belongs here
+  // with the other hill-shape projection words.
   {
     num: 2,
     title: "The big four generics",
@@ -347,9 +349,10 @@ const LESSONS = [
   // because lenition only registers as a pattern when you see the two forms
   // side by side.
   //
-  // Data constraint worth knowing: our 36-hill set has only one clean
-  // beinn-plus-lenited-colour example (Beinn Bhàn). So the second teaching
-  // pair generalises via a mutation grid rather than another real hill,
+  // Data constraint worth knowing: our 40-hill set has only two clean
+  // beinn-plus-lenited-colour examples (Beinn Bhàn, Beinn Ghlas). So the
+  // second teaching pair generalises via a mutation grid rather than just
+  // another real hill,
   // which is actually more honest — the rule operates on adjectives in
   // general, not on specific named hills.
   {
@@ -526,11 +529,13 @@ const LESSONS = [
   // ─── Lesson 7 ───────────────────────────────────────────────────────
   // A small but high-leverage pronunciation rule: cn- at the start of a
   // Gaelic word sounds like "kr-", not like English "knee" (silent c).
-  // The 36-hill set has zero cn- hills, so the lesson anchors instead in
-  // anglicised Scottish place names that preserve the post-shift sound
-  // (Knockando, Knockan, Knock). Those names are everywhere on OS maps
-  // and signposts — and once you spot the pattern, you know why they're
-  // spelled with K but pronounced with KR.
+  // Cnoc Coinnich was added to the 40-hill dataset specifically as an
+  // anchor for this lesson — but most learners will spot the cn-shift
+  // in anglicised place names (Knockando, Knockan, Knock) far more
+  // often than on individual hills. The lesson therefore teaches the
+  // rule via a wordGrid of those anglicised places, not a worked
+  // example block, while Cnoc Coinnich sits in the dissector as the
+  // hill walker's own anchor.
   {
     num: 7,
     title: "The 'cn' shift",
@@ -730,11 +735,12 @@ const LESSONS = [
   // landform at all — they preserve a person, an animal, or a legend.
   // Sgùrr Alasdair, Beinn Bhrotain, Buachaille Eitibhe Mòr.
   //
-  // Honest scope: only `coire` and `lochan` appear in the current 36-hill
-  // data set. The reference grid still lists loch/gleann/bealach/allt
-  // because the user will meet them on OS maps and corrie/valley names
-  // even if no hill in our set uses them. Flagged as such in the grid
-  // caption rather than pretended over.
+  // Honest scope: the wordGrid is just three rows now — coire, lochan,
+  // loch — all of which appear inside hill names in the 40-hill dataset.
+  // The wider landscape vocabulary (allt, abhainn, gleann, bealach,
+  // druim — words you meet on the OS map between hills) was lifted out
+  // into Lesson 10. That split makes L9's frame honest: "words inside
+  // hill names" — and lets L10 own "words on the walk in between".
   {
     num: 9,
     title: "Words that aren't hills",
