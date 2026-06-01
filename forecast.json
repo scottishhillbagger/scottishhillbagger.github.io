@@ -17,13 +17,13 @@
           "windDir": "S",
           "tempCLow": 5,
           "tempCHigh": 9,
-          "cloudFree": 20,
+          "cloudFree": 25,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "persistent rain, low cloud to 600m, blustery Cuillin"
+          "reason": "persistent rain, low cloud 600-700m, blustery Cuillin ridges"
         },
         {
           "sky": "partly-cloudy",
@@ -38,7 +38,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "heavy showers possible, risk of thunder, 50% cloud-free"
+          "reason": "heavy showers possible, chance of thunder, cloud varied over tops"
         },
         {
           "sky": "rain",
@@ -50,11 +50,11 @@
           "tempCHigh": 6,
           "cloudFree": 20,
           "freezingLevel": 9999,
-          "visibility": "poor",
+          "visibility": "moderate",
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 50mph Skye, persistent rain, cloud to lower slopes west"
+          "reason": "gusts 50mph Skye, persistent rain west, wind chill -5 to -8C"
         }
       ]
     },
@@ -75,7 +75,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "persistent rain, heavy bursts, cloud to 500m coasts, poor visibility"
+          "reason": "rain most of day, heavy bursts, cloud to 500m coasts, poor visibility"
         },
         {
           "sky": "partly-cloudy",
@@ -90,7 +90,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "heavy showers inland, isolated thunder possible, breezier later"
+          "reason": "heavy showers, isolated thunder possible, cloud lifting afternoon"
         },
         {
           "sky": "rain",
@@ -102,11 +102,11 @@
           "tempCHigh": 6,
           "cloudFree": 10,
           "freezingLevel": 9999,
-          "visibility": "poor",
+          "visibility": "moderate",
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 50mph Ben Nevis group, persistent rain, cloud below 10% free"
+          "reason": "gusts 50mph Ben Nevis group, persistent rain, cloud from lower slopes southwest"
         }
       ]
     },
@@ -127,7 +127,7 @@
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "rain persistent south, cloud to 600-700m, poor visibility in rain"
+          "reason": "rain persistent south, cloud lowering to 600m, poor visibility in rain"
         },
         {
           "sky": "partly-cloudy",
@@ -142,7 +142,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "heavy thundery showers east-northeast, localised storm risk afternoon"
+          "reason": "heavy showers, thunderstorm risk east-northeast, cloud variable over tops"
         },
         {
           "sky": "rain",
@@ -152,13 +152,13 @@
           "windDir": "SSW",
           "tempCLow": 6,
           "tempCHigh": 7,
-          "cloudFree": 20,
+          "cloudFree": 30,
           "freezingLevel": 9999,
-          "visibility": "good",
+          "visibility": "moderate",
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 50mph Cairngorms, persistent rain south, wind chill -5 to -8C"
+          "reason": "gusts 50mph higher Cairngorms, persistent rain south, wind chill -5 to -8C"
         }
       ]
     },
@@ -179,7 +179,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "frequent heavy rain, cloud to 500-700m, poor visibility central highlands"
+          "reason": "rain frequent or persistent, cloud to 500-700m, poor visibility across hills"
         },
         {
           "sky": "partly-cloudy",
@@ -194,7 +194,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "heavy thundery showers east later, gusty 20-25mph south afternoon"
+          "reason": "heavy showers, isolated thunder risk east, cloud variable over tops"
         },
         {
           "sky": "rain",
@@ -206,11 +206,11 @@
           "tempCHigh": 7,
           "cloudFree": 20,
           "freezingLevel": 9999,
-          "visibility": "poor",
+          "visibility": "moderate",
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 50mph highest summits, persistent rain west, cloud 600-800m"
+          "reason": "gusts 50mph highest summits, persistent rain central highlands, wind chill -5 to -8C"
         }
       ]
     },
@@ -231,7 +231,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 35-40mph, persistent heavy rain, cloud to 300m southwest"
+          "reason": "gusts 35-40mph, frequent heavy rain, cloud bases 300m southwest, poor visibility"
         },
         {
           "sky": "partly-cloudy",
@@ -246,7 +246,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "heavy thundery showers drifting east, isolated thunder risk eastern hills"
+          "reason": "heavy showers, thunder risk eastern hills, otherwise lifting cloud and sunny spells"
         },
         {
           "sky": "rain",
@@ -258,15 +258,15 @@
           "tempCHigh": 8,
           "cloudFree": 10,
           "freezingLevel": 9999,
-          "visibility": "poor",
+          "visibility": "moderate",
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 50mph higher summits, persistent rain Galloway, cloud to lower slopes"
+          "reason": "gusts 50mph higher summits, persistent rain Dumfries & Galloway, cloud from lower slopes"
         }
       ]
     }
   ],
-  "_generated": "2026-05-31T17:20:57.259Z",
+  "_generated": "2026-06-01T13:48:09.599Z",
   "_anchorDate": "2026-06-01"
 }
