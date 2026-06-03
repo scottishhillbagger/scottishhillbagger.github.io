@@ -1,60 +1,59 @@
 {
   "days": [
-    "Wed",
     "Thu",
-    "Fri"
+    "Fri",
+    "Sat"
   ],
-  "updatedAt": "2026-06-02T15:39:00.000Z",
+  "updatedAt": "2026-06-03T16:28:00.000Z",
   "regions": [
     {
       "name": "Northwest Highlands",
       "forecast": [
         {
           "sky": "rain",
-          "windMphLow": 15,
+          "windMphLow": 10,
           "windMphHigh": 25,
-          "windDir": "S",
+          "windDir": "W",
           "tempCLow": 5,
-          "tempCHigh": 8,
-          "cloudFree": 35,
+          "tempCHigh": 10,
+          "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "persistent rain, fog afternoon, cloud from 500m, 20% Munro-free PM"
-        },
-        {
-          "sky": "rain",
-          "windMphLow": 20,
-          "windMphHigh": 25,
-          "gustMph": 30,
-          "windDir": "W",
-          "tempCLow": 5,
-          "tempCHigh": 7,
-          "cloudFree": 20,
-          "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "cloud",
-          "pmSky": "rain",
-          "status": "poor",
-          "reason": "rain on/off all day, risk thunder, tops in cloud, only 20% cloud-free"
+          "reason": "rain and showers all day, risk lightning east, cloud covers high tops"
         },
         {
           "sky": "partly-cloudy",
-          "windMphLow": 15,
-          "windMphHigh": 35,
-          "gustMph": 40,
-          "windDir": "SW",
+          "windMphLow": 25,
+          "windMphHigh": 40,
+          "gustMph": 50,
+          "windDir": "W",
           "tempCLow": 3,
-          "tempCHigh": 5,
-          "cloudFree": 60,
+          "tempCHigh": 6,
+          "cloudFree": 70,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "rain",
           "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "reason": "gusts 40mph northern tops early, morning rain, wind chill -5C"
+          "status": "poor",
+          "reason": "gusts 45-50mph early, arduous summits at dawn, significant wind chill"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 25,
+          "windMphHigh": 50,
+          "windDir": "SE",
+          "tempCLow": 5,
+          "tempCHigh": 8,
+          "cloudFree": 20,
+          "freezingLevel": 9999,
+          "visibility": "good",
+          "amSky": "partly-cloudy",
+          "pmSky": "cloud",
+          "status": "poor",
+          "reason": "risk 50-60mph gusts, high uncertainty, rain spreading from Skye westward"
         }
       ]
     },
@@ -63,49 +62,49 @@
       "forecast": [
         {
           "sky": "rain",
-          "windMphLow": 15,
-          "windMphHigh": 35,
-          "windDir": "S",
-          "tempCLow": 5,
-          "tempCHigh": 7,
-          "cloudFree": 10,
-          "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "rain",
-          "pmSky": "rain",
-          "status": "poor",
-          "reason": "rain and fog all day, cloud from 300m south, gusts to 35mph Arran"
-        },
-        {
-          "sky": "rain",
-          "windMphLow": 15,
-          "windMphHigh": 35,
-          "gustMph": 40,
+          "windMphLow": 20,
+          "windMphHigh": 40,
           "windDir": "W",
           "tempCLow": 5,
           "tempCHigh": 7,
           "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "poor",
-          "amSky": "cloud",
+          "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 40mph south summits, thundery bursts, strenuous walking widely"
+          "reason": "persistent rain, winds to 40mph south, arduous conditions Arran to Ben Lomond"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 20,
-          "windMphHigh": 35,
+          "windMphHigh": 40,
+          "gustMph": 50,
           "windDir": "SW",
           "tempCLow": 3,
-          "tempCHigh": 5,
+          "tempCHigh": 6,
           "cloudFree": 40,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "rain",
           "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "reason": "strenuous winds early, sleet on tops, only 40% cloud-free rising through day"
+          "status": "poor",
+          "reason": "gusts 50mph summits at dawn, arduous walking, balance challenged with wind chill"
+        },
+        {
+          "sky": "cloud",
+          "windMphLow": 25,
+          "windMphHigh": 50,
+          "windDir": "SE",
+          "tempCLow": 5,
+          "tempCHigh": 7,
+          "cloudFree": 20,
+          "freezingLevel": 9999,
+          "visibility": "moderate",
+          "amSky": "partly-cloudy",
+          "pmSky": "cloud",
+          "status": "poor",
+          "reason": "risk 50-60mph gusts, persistent rain southern hills, cloud extensive near coast"
         }
       ]
     },
@@ -114,48 +113,48 @@
       "forecast": [
         {
           "sky": "rain",
-          "windMphLow": 15,
-          "windMphHigh": 25,
-          "windDir": "S",
-          "tempCLow": 6,
-          "tempCHigh": 8,
-          "cloudFree": 35,
-          "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "partly-cloudy",
-          "pmSky": "rain",
-          "status": "poor",
-          "reason": "persistent rain PM, fog extensive, 20% cloud-free south afternoon"
-        },
-        {
-          "sky": "rain",
-          "windMphLow": 15,
-          "windMphHigh": 35,
+          "windMphLow": 5,
+          "windMphHigh": 30,
           "windDir": "W",
           "tempCLow": 6,
-          "tempCHigh": 8,
-          "cloudFree": 40,
+          "tempCHigh": 9,
+          "cloudFree": 30,
           "freezingLevel": 9999,
           "visibility": "moderate",
-          "amSky": "partly-cloudy",
+          "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "thundery downpours PM, winds 25-35mph, heavy bursts far east"
+          "reason": "morning rain, heavy afternoon showers with lightning risk, cloud covers high tops"
         },
         {
           "sky": "partly-cloudy",
-          "windMphLow": 15,
-          "windMphHigh": 30,
+          "windMphLow": 20,
+          "windMphHigh": 40,
           "windDir": "SW",
           "tempCLow": 4,
-          "tempCHigh": 6,
-          "cloudFree": 60,
+          "tempCHigh": 7,
+          "cloudFree": 70,
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "morning rain band, wind chill -5C, patchy rain all day, 60% cloud-free rising"
+          "reason": "gusts over tops at dawn, arduous early; easing to nuisance breeze afternoon"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 25,
+          "windMphHigh": 50,
+          "windDir": "SE",
+          "tempCLow": 5,
+          "tempCHigh": 8,
+          "cloudFree": 30,
+          "freezingLevel": 9999,
+          "visibility": "good",
+          "amSky": "partly-cloudy",
+          "pmSky": "cloud",
+          "status": "poor",
+          "reason": "risk 50-60mph gusts, cloud lowering and filling from south, rain developing"
         }
       ]
     },
@@ -164,49 +163,48 @@
       "forecast": [
         {
           "sky": "rain",
+          "windMphLow": 10,
+          "windMphHigh": 35,
+          "windDir": "W",
+          "tempCLow": 6,
+          "tempCHigh": 9,
+          "cloudFree": 30,
+          "freezingLevel": 9999,
+          "visibility": "poor",
+          "amSky": "rain",
+          "pmSky": "rain",
+          "status": "poor",
+          "reason": "morning rain, heavy afternoon showers with lightning risk east, blustery by evening"
+        },
+        {
+          "sky": "partly-cloudy",
           "windMphLow": 15,
-          "windMphHigh": 25,
-          "windDir": "S",
+          "windMphHigh": 40,
+          "windDir": "SW",
+          "tempCLow": 4,
+          "tempCHigh": 8,
+          "cloudFree": 80,
+          "freezingLevel": 9999,
+          "visibility": "excellent",
+          "amSky": "rain",
+          "pmSky": "partly-cloudy",
+          "status": "marginal",
+          "reason": "gusts over tops at dawn, arduous early; easing well, sunny midday window"
+        },
+        {
+          "sky": "cloud",
+          "windMphLow": 25,
+          "windMphHigh": 50,
+          "windDir": "SE",
           "tempCLow": 5,
           "tempCHigh": 7,
           "cloudFree": 20,
           "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "partly-cloudy",
-          "pmSky": "rain",
-          "status": "poor",
-          "reason": "rain and fog by early afternoon, persistent heavy bursts, risk lightning PM"
-        },
-        {
-          "sky": "rain",
-          "windMphLow": 15,
-          "windMphHigh": 35,
-          "gustMph": 40,
-          "windDir": "W",
-          "tempCLow": 6,
-          "tempCHigh": 8,
-          "cloudFree": 30,
-          "freezingLevel": 9999,
           "visibility": "moderate",
-          "amSky": "rain",
-          "pmSky": "rain",
+          "amSky": "partly-cloudy",
+          "pmSky": "cloud",
           "status": "poor",
-          "reason": "gusts 40mph, thundery downpours drifting east, strenuous walking"
-        },
-        {
-          "sky": "partly-cloudy",
-          "windMphLow": 20,
-          "windMphHigh": 35,
-          "windDir": "SW",
-          "tempCLow": 4,
-          "tempCHigh": 5,
-          "cloudFree": 80,
-          "freezingLevel": 9999,
-          "visibility": "excellent",
-          "amSky": "cloud",
-          "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "reason": "strenuous early on south summits, wind chill -5C, patchy rain all day"
+          "reason": "risk 50-60mph gusts, cloud lowering widely, rain developing especially south-facing hills"
         }
       ]
     },
@@ -215,52 +213,52 @@
       "forecast": [
         {
           "sky": "rain",
-          "windMphLow": 25,
+          "windMphLow": 15,
           "windMphHigh": 40,
-          "windDir": "S",
+          "windDir": "SW",
           "tempCLow": 6,
-          "tempCHigh": 9,
-          "cloudFree": 10,
+          "tempCHigh": 10,
+          "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "rain persistent, gusts 40mph Merrick, fog from low slopes, balance affected"
-        },
-        {
-          "sky": "rain",
-          "windMphLow": 15,
-          "windMphHigh": 40,
-          "windDir": "W",
-          "tempCLow": 7,
-          "tempCHigh": 9,
-          "cloudFree": 40,
-          "freezingLevel": 9999,
-          "visibility": "moderate",
-          "amSky": "partly-cloudy",
-          "pmSky": "rain",
-          "status": "poor",
-          "reason": "gusts 35-40mph, thundery heavy bursts, strenuous buffeting PM"
+          "reason": "persistent rain and strong wind all day, tops to 40mph, cloud from 400m Ayrshire"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 15,
-          "windMphHigh": 35,
+          "windMphHigh": 40,
           "windDir": "SW",
           "tempCLow": 4,
           "tempCHigh": 8,
           "cloudFree": 80,
           "freezingLevel": 9999,
           "visibility": "excellent",
-          "amSky": "cloud",
+          "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "strenuous eastern tops early, wind chill -5C, patchy rain most of day"
+          "reason": "strenuous east early, gusts over tops; easing to nuisance wind, sunny spells"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 25,
+          "windMphHigh": 50,
+          "windDir": "SE",
+          "tempCLow": 6,
+          "tempCHigh": 9,
+          "cloudFree": 30,
+          "freezingLevel": 9999,
+          "visibility": "moderate",
+          "amSky": "partly-cloudy",
+          "pmSky": "cloud",
+          "status": "poor",
+          "reason": "risk 50mph gusts, persistent heavy rain developing west, cloud extensive Solway hills"
         }
       ]
     }
   ],
-  "_generated": "2026-06-03T12:51:17.718Z",
-  "_anchorDate": "2026-06-03"
+  "_generated": "2026-06-03T19:57:45.156Z",
+  "_anchorDate": "2026-06-04"
 }
