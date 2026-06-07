@@ -17,13 +17,13 @@
           "windDir": "SW",
           "tempCLow": 5,
           "tempCHigh": 7,
-          "cloudFree": 40,
+          "cloudFree": 30,
           "freezingLevel": 9999,
           "visibility": "poor",
-          "amSky": "rain",
+          "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gale-force gusts 50mph, frequent rain, Skye fog all day"
+          "reason": "gales 50mph west coast, frequent rain, Cuillin fog all day"
         },
         {
           "sky": "rain",
@@ -38,7 +38,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "showery rain, risk thunder, tops frequently clouded, 20% cloud-free"
+          "reason": "showery rain, risk thunder, extensive cloud to 600m, only 20% clear"
         },
         {
           "sky": "partly-cloudy",
@@ -47,13 +47,13 @@
           "windDir": "SW",
           "tempCLow": 3,
           "tempCHigh": 4,
-          "cloudFree": 55,
-          "freezingLevel": 9999,
+          "cloudFree": 50,
+          "freezingLevel": 1100,
           "visibility": "moderate",
-          "amSky": "partly-cloudy",
-          "pmSky": "rain",
+          "amSky": "cloud",
+          "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "widespread showers with snow on highest tops, hail, risk thunder"
+          "reason": "widespread showers, snow on highest tops, hail, risk thunder"
         }
       ]
     },
@@ -73,7 +73,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "frequent heavy rain, fog on high terrain, gusts 40mph, chilly"
+          "reason": "frequent rain heavy at times, high terrain fog-shrouded, gusts 40mph"
         },
         {
           "sky": "rain",
@@ -88,23 +88,22 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "showery rain, risk thunder inland, tops frequently clouded, 20% cloud-free"
+          "reason": "frequent showers, risk thunder, extensive cloud, only 20% Munros clear"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 10,
-          "windMphHigh": 25,
-          "gustMph": 30,
+          "windMphHigh": 30,
           "windDir": "SW",
           "tempCLow": 3,
           "tempCHigh": 4,
           "cloudFree": 40,
           "freezingLevel": 1350,
           "visibility": "moderate",
-          "amSky": "partly-cloudy",
-          "pmSky": "rain",
+          "amSky": "cloud",
+          "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "widespread showers, snow on highest tops, hail and thunder risk"
+          "reason": "widespread showers, snow highest tops, hail, thunder risk, poor visibility"
         }
       ]
     },
@@ -124,7 +123,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "30-35mph all day, rain frequent PM, wind chill near freezing on tops"
+          "reason": "blustery 30-35mph, patchy rain becoming frequent PM, balance challenges"
         },
         {
           "sky": "rain",
@@ -139,7 +138,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "showery, heavier bursts PM, risk thunder, 40% cloud-free, blustery"
+          "reason": "showery rain, heavier PM, risk thunder, 40% clear breaks possible"
         },
         {
           "sky": "partly-cloudy",
@@ -150,11 +149,11 @@
           "tempCHigh": 4,
           "cloudFree": 70,
           "freezingLevel": 1350,
-          "visibility": "moderate",
+          "visibility": "good",
           "amSky": "sun",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "showers widespread PM, snow on tops, thunder risk, dry and clearer AM"
+          "reason": "widespread showers PM, wet snow on tops, thunder risk, 70% clear AM"
         }
       ]
     },
@@ -175,7 +174,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 40mph, rain frequent PM, strenuous all day, wind chill sub-zero"
+          "reason": "gusts 40mph+, patchy rain setting in PM, balance challenges, chilly"
         },
         {
           "sky": "rain",
@@ -190,23 +189,22 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "showery, heavier bursts PM, thunder risk east, blustery with wind chill"
+          "reason": "showery rain, heavier PM, thunder risk east, blustery 20-30mph"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 10,
-          "windMphHigh": 25,
-          "gustMph": 30,
+          "windMphHigh": 30,
           "windDir": "SW",
           "tempCLow": 3,
           "tempCHigh": 5,
           "cloudFree": 70,
           "freezingLevel": 9999,
-          "visibility": "moderate",
+          "visibility": "good",
           "amSky": "sun",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "showers widespread PM, wet snow on tops, thunder and hail risk"
+          "reason": "widespread showers PM, wet snow tops, thunder/hail, dry and clearer AM"
         }
       ]
     },
@@ -239,10 +237,10 @@
           "cloudFree": 50,
           "freezingLevel": 9999,
           "visibility": "moderate",
-          "amSky": "partly-cloudy",
+          "amSky": "rain",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "showery, thunder risk east, heavy burst Cheviots at dawn, 50% cloud-free"
+          "reason": "showery rain, thunder risk later east, band of rain clearing dawn"
         },
         {
           "sky": "partly-cloudy",
@@ -254,14 +252,14 @@
           "cloudFree": 55,
           "freezingLevel": 9999,
           "visibility": "moderate",
-          "amSky": "partly-cloudy",
-          "pmSky": "rain",
+          "amSky": "cloud",
+          "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "widespread showers, hail and thunder risk, fog on western hills to 500m"
+          "reason": "widespread showers, hail and thunder risk, fog on western tops to 500m"
         }
       ]
     }
   ],
-  "_generated": "2026-06-06T17:33:52.053Z",
+  "_generated": "2026-06-07T10:36:48.755Z",
   "_anchorDate": "2026-06-07"
 }
