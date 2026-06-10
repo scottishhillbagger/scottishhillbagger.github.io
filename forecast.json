@@ -22,7 +22,7 @@
           "amSky": "sun",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "scattered showers, sleet on tops, thunder risk, 40% cloud-free"
+          "reason": "showers easing west but thunder risk inland, sleet on tops, 40% cloud-free"
         },
         {
           "sky": "rain",
@@ -38,7 +38,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "persistent rain Skye, gusts 40mph Cuillin, blanket low cloud, 20% cloud-free"
+          "reason": "persistent rain Skye, gusts over 40mph Cuillin, blanket low cloud, poor visibility"
         },
         {
           "sky": "cloud",
@@ -53,7 +53,7 @@
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "40mph winds, foggy above 500-700m west, persistent drizzle, 20% cloud-free"
+          "reason": "winds 25-40mph, fog above 500-700m west, light rain drizzle most of day"
         }
       ]
     },
@@ -68,12 +68,12 @@
           "tempCLow": 2,
           "tempCHigh": 5,
           "cloudFree": 40,
-          "freezingLevel": 1300,
+          "freezingLevel": 1200,
           "visibility": "good",
           "amSky": "sun",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "heavy showers inland, thunder risk, snow above 1100m, 40% cloud-free PM"
+          "reason": "showers inland PM, thunder and hail risk, snow above 1100m, 40% cloud-free"
         },
         {
           "sky": "rain",
@@ -89,7 +89,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "heavy persistent rain, gusts 40mph south, blanket low cloud from 600m, 10% cloud-free"
+          "reason": "heavy persistent rain, blanket cloud to low elevations, gusts 40mph south, 10% cloud-free"
         },
         {
           "sky": "cloud",
@@ -104,7 +104,7 @@
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "40mph winds, cloud base 500-600m coasts, persistent drizzle, 10% cloud-free"
+          "reason": "winds 25-40mph, fog from lower elevations, cloud base below 500-600m coasts, 10% cloud-free"
         }
       ]
     },
@@ -118,13 +118,13 @@
           "windDir": "SW",
           "tempCLow": 3,
           "tempCHigh": 5,
-          "cloudFree": 55,
-          "freezingLevel": 1300,
+          "cloudFree": 50,
+          "freezingLevel": 1200,
           "visibility": "good",
           "amSky": "sun",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "showers develop widely PM, hail and thunder risk, 70% dropping to 40% cloud-free"
+          "reason": "showers develop widely PM, thunder and hail risk, 70% dropping to 40% cloud-free"
         },
         {
           "sky": "rain",
@@ -140,7 +140,7 @@
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "persistent rain SW Cairngorms, gusts 35mph higher tops, extensive cloud above 700-900m"
+          "reason": "persistent rain SW Cairngorms, gusts 35mph higher tops, cloud above 700-900m, 20% cloud-free"
         },
         {
           "sky": "cloud",
@@ -149,13 +149,13 @@
           "windDir": "SW",
           "tempCLow": 6,
           "tempCHigh": 8,
-          "cloudFree": 45,
+          "cloudFree": 30,
           "freezingLevel": 9999,
           "visibility": "moderate",
           "amSky": "cloud",
-          "pmSky": "partly-cloudy",
+          "pmSky": "cloud",
           "status": "poor",
-          "reason": "40mph winds, drizzle west of A9, 30% cloud-free SW but strenuous walking high terrain"
+          "reason": "winds 25-40mph, drizzle near A9 west, cloud caps most tops, buffeting gusts affect balance"
         }
       ]
     },
@@ -169,13 +169,13 @@
           "windDir": "SW",
           "tempCLow": 3,
           "tempCHigh": 5,
-          "cloudFree": 55,
+          "cloudFree": 50,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "sun",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "showers develop widely PM, hail and thunder risk, 70% dropping to 40% cloud-free"
+          "reason": "showers develop widely PM, thunder and hail risk, sleet on tops, 70% dropping to 40% cloud-free"
         },
         {
           "sky": "rain",
@@ -191,7 +191,7 @@
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "persistent rain all day, low cloud above 600m, gusts 35mph higher mountains, 10% cloud-free"
+          "reason": "persistent rain central highlands, blanket cloud above 600m, gusts 35mph higher mountains"
         },
         {
           "sky": "cloud",
@@ -200,13 +200,13 @@
           "windDir": "SW",
           "tempCLow": 6,
           "tempCHigh": 8,
-          "cloudFree": 35,
+          "cloudFree": 25,
           "freezingLevel": 9999,
           "visibility": "moderate",
           "amSky": "cloud",
-          "pmSky": "partly-cloudy",
+          "pmSky": "cloud",
           "status": "poor",
-          "reason": "40mph winds, drizzle west, cloud to 600m Callander area, strenuous high terrain walking"
+          "reason": "winds 25-40mph, cloud base 600m west, drizzle central highlands, buffeting gusts affect balance"
         }
       ]
     },
@@ -226,7 +226,7 @@
           "amSky": "sun",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "heavy showers moving east PM, thunder risk, 60% cloud-free dropping in rain"
+          "reason": "showers move east PM, thunder and hail risk inland, cloud lowering onto tops in rain"
         },
         {
           "sky": "rain",
@@ -242,7 +242,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "persistent rain all day, gusts 35-40mph higher areas, blanket low cloud, 10% cloud-free"
+          "reason": "persistent rain all day, blanket low cloud Dumfries & Galloway, gusts 35-40mph higher areas"
         },
         {
           "sky": "cloud",
@@ -252,17 +252,17 @@
           "windDir": "SW",
           "tempCLow": 7,
           "tempCHigh": 10,
-          "cloudFree": 20,
+          "cloudFree": 10,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "40mph gusts higher tops, foggy below 500-600m Dumfries & Galloway, persistent drizzle west"
+          "reason": "gusts 40mph higher tops, cloud base below 500-600m west, light rain drizzle most of day"
         }
       ]
     }
   ],
-  "_generated": "2026-06-09T18:20:18.496Z",
+  "_generated": "2026-06-10T11:48:33.516Z",
   "_anchorDate": "2026-06-10"
 }
