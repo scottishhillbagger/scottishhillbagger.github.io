@@ -23,22 +23,22 @@
           "amSky": "rain",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "early patchy rain and breezy, gusts 30mph, clearing afternoon"
+          "reason": "early patchy rain and blustery gusts 30mph, clearing afternoon"
         },
         {
           "sky": "partly-cloudy",
-          "windMphLow": 10,
+          "windMphLow": 5,
           "windMphHigh": 10,
           "windDir": "E",
           "tempCLow": 3,
           "tempCHigh": 10,
-          "cloudFree": 75,
+          "cloudFree": 80,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "go",
-          "reason": "mostly dry, often sunny morning, light winds, cloud building late"
+          "reason": "mostly dry, often sunny morning, high cloud building afternoon"
         },
         {
           "sky": "cloud",
@@ -54,7 +54,7 @@
           "amSky": "rain",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "gusts 40mph Skye, patchy rain, fog on high terrain, 30% cloud-free"
+          "reason": "gusts 40mph Skye, extensive cloud/fog, patchy rain all day"
         }
       ]
     },
@@ -75,7 +75,7 @@
           "amSky": "cloud",
           "pmSky": "sun",
           "status": "go",
-          "reason": "early fog and breeze easing; plentiful sun afternoon, mountains largely clear"
+          "reason": "early fog and breeze easing; plentiful sun afternoon, gusts 30mph briefly"
         },
         {
           "sky": "partly-cloudy",
@@ -84,13 +84,13 @@
           "windDir": "SSE",
           "tempCLow": 7,
           "tempCHigh": 10,
-          "cloudFree": 75,
+          "cloudFree": 80,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "sun",
           "pmSky": "rain",
-          "status": "go",
-          "reason": "sunny morning, patchy rain approaching SW afternoon, mostly clear until late"
+          "status": "marginal",
+          "reason": "sunny morning, patchy rain approaching SW afternoon, increasingly blustery coast"
         },
         {
           "sky": "cloud",
@@ -105,7 +105,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "patchy rain on and off, gusts 30-35mph coast, fog on high terrain, 20% cloud-free"
+          "reason": "patchy rain on and off, gusts 35mph coast, fog on high terrain, 20% cloud-free"
         }
       ]
     },
@@ -126,11 +126,11 @@
           "amSky": "rain",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "gusts 35-40mph east, early rain, summits shrouded; clearing and sunny PM"
+          "reason": "gusts 35-40mph east Cairngorms, summit cloud/drizzle morning, easing afternoon"
         },
         {
           "sky": "partly-cloudy",
-          "windMphLow": 10,
+          "windMphLow": 5,
           "windMphHigh": 15,
           "windDir": "SSE",
           "tempCLow": 3,
@@ -141,7 +141,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "partly-cloudy",
           "status": "go",
-          "reason": "dry, broken cloud lifting, extended sunny periods, light winds"
+          "reason": "light winds, broken cloud with sunny periods, dry until night"
         },
         {
           "sky": "cloud",
@@ -156,7 +156,7 @@
           "amSky": "rain",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "summits shrouded all day, patchy rain, fog, only 10% cloud-free"
+          "reason": "shrouded above 900m all day, patchy rain, poor fog visibility on high terrain"
         }
       ]
     },
@@ -171,17 +171,17 @@
           "windDir": "NW",
           "tempCLow": 5,
           "tempCHigh": 11,
-          "cloudFree": 60,
+          "cloudFree": 70,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "cloud",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "gusts 40mph east Glenshee, blustery morning; easing with sunny PM"
+          "reason": "gusts near 40mph east Glenshee/Angus early, challenging stability; easing by afternoon"
         },
         {
           "sky": "sun",
-          "windMphLow": 10,
+          "windMphLow": 5,
           "windMphHigh": 15,
           "windDir": "ESE",
           "tempCLow": 4,
@@ -192,7 +192,7 @@
           "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "go",
-          "reason": "mostly sunny, dry until late, light winds, Munros largely clear"
+          "reason": "mostly sunny, light winds, dry until late; high cloud thickening afternoon"
         },
         {
           "sky": "cloud",
@@ -207,7 +207,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "hills shrouded above 600-700m all day, patchy rain, fog, only 10% clear"
+          "reason": "shrouded above 600-700m all day, patchy rain, poor fog on high terrain"
         }
       ]
     },
@@ -218,7 +218,8 @@
           "sky": "sun",
           "windMphLow": 10,
           "windMphHigh": 20,
-          "windDir": "NW",
+          "gustMph": 25,
+          "windDir": "N",
           "tempCLow": 6,
           "tempCHigh": 11,
           "cloudFree": 90,
@@ -227,11 +228,11 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "early cloud clears summits, mostly sunny, light winds, mostly dry"
+          "reason": "early cloud clears summits, mostly sunny; light winds, very good visibility"
         },
         {
           "sky": "partly-cloudy",
-          "windMphLow": 10,
+          "windMphLow": 5,
           "windMphHigh": 25,
           "windDir": "SSE",
           "tempCLow": 6,
@@ -242,10 +243,10 @@
           "amSky": "sun",
           "pmSky": "rain",
           "status": "go",
-          "reason": "mostly sunny morning, patchy rain arriving SW afternoon, east stays dry"
+          "reason": "mostly sunny morning, patchy rain approaching SW afternoon, east stays dry"
         },
         {
-          "sky": "cloud",
+          "sky": "partly-cloudy",
           "windMphLow": 15,
           "windMphHigh": 25,
           "gustMph": 30,
@@ -257,12 +258,12 @@
           "visibility": "poor",
           "amSky": "rain",
           "pmSky": "rain",
-          "status": "poor",
-          "reason": "hills shrouded, patchy rain setting in, gusts 30mph, poor visibility on tops"
+          "status": "marginal",
+          "reason": "patchy rain, gusts 30mph high tops, shrouded to middle slopes, fog on summits"
         }
       ]
     }
   ],
-  "_generated": "2026-06-13T17:44:01.875Z",
+  "_generated": "2026-06-14T11:09:28.922Z",
   "_anchorDate": "2026-06-14"
 }
