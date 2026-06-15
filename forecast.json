@@ -14,7 +14,7 @@
           "windMphLow": 10,
           "windMphHigh": 15,
           "windDir": "E",
-          "tempCLow": 3,
+          "tempCLow": 7,
           "tempCHigh": 10,
           "cloudFree": 90,
           "freezingLevel": 9999,
@@ -22,7 +22,7 @@
           "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "go",
-          "reason": "mostly light wind, sunny morning, 90% cloud-free Munros, rain only evening"
+          "reason": "mostly dry, sunny AM, 90% Munros clear, light winds, rain only evening"
         },
         {
           "sky": "rain",
@@ -37,7 +37,7 @@
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "30% cloud-free, patchy rain all day, poor visibility on high terrain in fog"
+          "reason": "patchy rain all day, 30% cloud-free, poor visibility in fog on high terrain"
         },
         {
           "sky": "rain",
@@ -53,7 +53,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts over 40mph, rain on and off, only 20% cloud-free, Cuillin buffeting"
+          "reason": "gusts over 40mph west coast, rain on and off, 20% cloud-free, Cuillin balance affected"
         }
       ]
     },
@@ -64,7 +64,6 @@
           "sky": "partly-cloudy",
           "windMphLow": 5,
           "windMphHigh": 25,
-          "gustMph": 20,
           "windDir": "SSE",
           "tempCLow": 7,
           "tempCHigh": 10,
@@ -74,7 +73,7 @@
           "amSky": "sun",
           "pmSky": "rain",
           "status": "go",
-          "reason": "sunny morning, 80% cloud-free, rain only from late afternoon southwest"
+          "reason": "sunny AM, 80% Munros clear, patchy rain spreading NE from afternoon only"
         },
         {
           "sky": "rain",
@@ -89,7 +88,7 @@
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "20% cloud-free, patchy rain on and off, poor visibility fog on high terrain"
+          "reason": "patchy rain on and off wetter later, 20% cloud-free, poor visibility fog on high terrain"
         },
         {
           "sky": "rain",
@@ -105,7 +104,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 40mph Ben Nevis group, rain on and off, extensive cloud to low slopes"
+          "reason": "gusts 40mph Ben Nevis group and coasts, rain on and off, extensive low cloud"
         }
       ]
     },
@@ -125,7 +124,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "light wind, cloud lifts to 90% clear afternoon, dry until night"
+          "reason": "dry until night, cloud clears to 90% PM, light wind, very good visibility"
         },
         {
           "sky": "cloud",
@@ -141,7 +140,7 @@
           "amSky": "rain",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "only 10% cloud-free, shrouded to 500-600m Drumochter-Deeside, patchy rain all day"
+          "reason": "10% cloud-free, terrain above 900m shrouded all day, poor fog visibility, patchy rain"
         },
         {
           "sky": "partly-cloudy",
@@ -153,10 +152,10 @@
           "cloudFree": 40,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "cloud",
+          "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "intermittent rain, 40% cloud-free, gusts over high Cairngorms, heavier bursts NE afternoon"
+          "reason": "intermittent rain, gusts over high Cairngorms, cloud 700-800m Glen Garry to Ben Alder"
         }
       ]
     },
@@ -176,12 +175,12 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "light wind, cloud clears to 80% afternoon, dry until nighttime rain"
+          "reason": "dry until night, cloud clears to 80% PM, light wind, very good visibility after misty start"
         },
         {
           "sky": "cloud",
           "windMphLow": 15,
-          "windMphHigh": 25,
+          "windMphHigh": 20,
           "gustMph": 30,
           "windDir": "S",
           "tempCLow": 6,
@@ -192,7 +191,7 @@
           "amSky": "rain",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "all hills shrouded above 600-700m all day, patchy rain, poor visibility fog"
+          "reason": "all hills shrouded above 600-700m all day, patchy rain, poor fog visibility on high terrain"
         },
         {
           "sky": "partly-cloudy",
@@ -204,10 +203,10 @@
           "cloudFree": 30,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "cloud",
+          "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "intermittent rain, cloud to 600m near Callander, 30% cloud-free, blustery exposed terrain"
+          "reason": "intermittent rain, cloud to 600m near Callander, gusts on highest summits, drier SE"
         }
       ]
     },
@@ -227,7 +226,7 @@
           "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "go",
-          "reason": "mostly sunny morning, 80% cloud-free, rain only afternoon west, light wind early"
+          "reason": "mostly sunny AM, 80% summits clear, dry until afternoon, breeze building Galloway later"
         },
         {
           "sky": "cloud",
@@ -240,10 +239,10 @@
           "cloudFree": 30,
           "freezingLevel": 9999,
           "visibility": "poor",
-          "amSky": "rain",
+          "amSky": "cloud",
           "pmSky": "rain",
-          "status": "marginal",
-          "reason": "hills shrouded middle slopes, gusts 30mph tops, heavy rain south-west slopes evening"
+          "status": "poor",
+          "reason": "hills shrouded to lower slopes, heavy rain south/west slopes evening, poor visibility on tops"
         },
         {
           "sky": "partly-cloudy",
@@ -255,14 +254,14 @@
           "cloudFree": 40,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "cloud",
+          "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "blustery 25-30mph, occasional rain, 40% cloud-free west, clearer north and east"
+          "reason": "blustery 25-30mph, occasional rain, cloud capping tops west of M74, strenuous exposed ridges"
         }
       ]
     }
   ],
-  "_generated": "2026-06-14T17:45:30.721Z",
+  "_generated": "2026-06-15T14:35:50.144Z",
   "_anchorDate": "2026-06-15"
 }
