@@ -10,7 +10,7 @@
       "name": "Northwest Highlands",
       "forecast": [
         {
-          "sky": "rain",
+          "sky": "cloud",
           "windMphLow": 20,
           "windMphHigh": 25,
           "gustMph": 30,
@@ -20,10 +20,10 @@
           "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "poor",
-          "amSky": "rain",
+          "amSky": "cloud",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "low cloud shrouding Munros, fog, patchy rain persistent around Skye"
+          "reason": "low cloud shrouding Munros, poor visibility, persistently damp around Skye"
         },
         {
           "sky": "rain",
@@ -36,10 +36,10 @@
           "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "poor",
-          "amSky": "rain",
+          "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts over 40mph, strenuous walking, Cuillin buffeting, rain Skye/Wester Ross"
+          "reason": "gusts over 40mph, rain most frequent Skye, cloud to 500m near coast"
         },
         {
           "sky": "cloud",
@@ -54,7 +54,7 @@
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "extensive low cloud Skye and coast, patchy rain, buffeting Cuillin ridges"
+          "reason": "extensive cloud Skye all day, patchy rain, buffeting on Cuillin ridges"
         }
       ]
     },
@@ -72,10 +72,10 @@
           "cloudFree": 10,
           "freezingLevel": 9999,
           "visibility": "poor",
-          "amSky": "rain",
+          "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "low cloud shrouding Munros, fog, drizzle and rain worsening from southwest PM"
+          "reason": "low cloud shrouding Munros to mid-slopes, poor visibility, rain worsening PM"
         },
         {
           "sky": "rain",
@@ -88,10 +88,10 @@
           "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "moderate",
-          "amSky": "rain",
-          "pmSky": "cloud",
+          "amSky": "cloud",
+          "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 40mph Ben Nevis group, strenuous walking, rain frequent near coasts/islands"
+          "reason": "gusts 40mph Ben Nevis group, rain on and off, extensive cloud to lower slopes coast"
         },
         {
           "sky": "cloud",
@@ -106,7 +106,7 @@
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "extensive cloud shrouding mountains all day, frequent drizzle and patchy rain"
+          "reason": "extensive cloud shrouding mountains all day, frequent drizzle, misty coasts"
         }
       ]
     },
@@ -124,10 +124,10 @@
           "cloudFree": 10,
           "freezingLevel": 9999,
           "visibility": "poor",
-          "amSky": "rain",
+          "amSky": "cloud",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "terrain above 900m shrouded all day, fog, drizzle and patchy rain Drumochter to Deeside"
+          "reason": "cloud above 900m all day Drumochter-Deeside, poor visibility fog, drizzle and rain"
         },
         {
           "sky": "partly-cloudy",
@@ -142,7 +142,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "intermittent rain, cloud mostly above 900m, stronger gusts high Cairngorms PM"
+          "reason": "intermittent rain, heavier bursts toward Glen Garry, blustery high terrain"
         },
         {
           "sky": "partly-cloudy",
@@ -157,7 +157,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "patchy rain Ben Alder to Drumochter, cloud capping tops, gusty on exposed ridges"
+          "reason": "patchy rain Drumochter-Ben Alder, capping tops, gusty exposed ridges"
         }
       ]
     },
@@ -175,10 +175,10 @@
           "cloudFree": 10,
           "freezingLevel": 9999,
           "visibility": "poor",
-          "amSky": "rain",
-          "pmSky": "cloud",
+          "amSky": "cloud",
+          "pmSky": "rain",
           "status": "poor",
-          "reason": "all hills shrouded above 600-700m all day, fog, persistent low cloud and drizzle"
+          "reason": "all hills shrouded above 600m all day, poor visibility fog, rain worsening PM"
         },
         {
           "sky": "partly-cloudy",
@@ -193,7 +193,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "intermittent rain, cloud to 800-900m west of A9, breaks forming PM eastward"
+          "reason": "intermittent rain west, cloud capping 800-900m, blustery high terrain"
         },
         {
           "sky": "cloud",
@@ -208,7 +208,7 @@
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "fairly extensive cloud, patchy rain and pulses of steady rain, misty Trossachs"
+          "reason": "extensive cloud all day, patchy rain central highlands, misty Trossachs area"
         }
       ]
     },
@@ -229,7 +229,7 @@
           "amSky": "rain",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "hills shrouded to mid/lower slopes, fog, early rain, heavier pulses returning late PM"
+          "reason": "hills shrouded mid-slopes, poor visibility SW, rain returning PM from southwest"
         },
         {
           "sky": "partly-cloudy",
@@ -244,7 +244,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "patchy cloud and occasional rain, breezy but manageable; clearer north and east"
+          "reason": "patchy rain near/west of M74, cloud capping tops, blustery high slopes"
         },
         {
           "sky": "cloud",
@@ -259,11 +259,11 @@
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "hills shrouded 300-500m Galloway west, frequent drizzle/rain, misty southwest coasts"
+          "reason": "cloud above 300-500m Dumfries & Galloway, frequent rain, misty southwest coasts"
         }
       ]
     }
   ],
-  "_generated": "2026-06-15T19:55:17.944Z",
+  "_generated": "2026-06-16T13:04:41.572Z",
   "_anchorDate": "2026-06-16"
 }
