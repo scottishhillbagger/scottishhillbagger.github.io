@@ -23,7 +23,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "persistent rain, low cloud Skye/west coast, poor visibility"
+          "reason": "persistent rain Skye/Wester Ross, extensive low cloud, poor visibility"
         },
         {
           "sky": "rain",
@@ -37,7 +37,7 @@
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
-          "pmSky": "partly-cloudy",
+          "pmSky": "cloud",
           "status": "poor",
           "reason": "gales 40-50mph gusts 60mph, heavy rain, chance of thunder"
         },
@@ -55,7 +55,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gusts 40mph, cloud capping west tops, showery rain, isolated thunder risk"
+          "reason": "gusts over 40mph, cloud capping western tops, showery with isolated thunder risk"
         }
       ]
     },
@@ -76,7 +76,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "persistent rain, extensive low cloud, gusts 35-40mph high tops"
+          "reason": "persistent rain, extensive low cloud shrouding mountains, poor visibility widely"
         },
         {
           "sky": "rain",
@@ -90,9 +90,9 @@
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
-          "pmSky": "partly-cloudy",
+          "pmSky": "cloud",
           "status": "poor",
-          "reason": "gusts 60-70mph, heavy/torrential rain, thunder risk, very low cloud coasts"
+          "reason": "gales 40-50mph gusts 60-70mph high tops, heavy/torrential rain, thunder risk"
         },
         {
           "sky": "partly-cloudy",
@@ -108,7 +108,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "gusts 40mph Ben Nevis range, cloud capping slopes above 800m, showery"
+          "reason": "gusts 40mph Ben Nevis range, cloud capping coasts/slopes, showery morning"
         }
       ]
     },
@@ -116,7 +116,7 @@
       "name": "Cairngorms & Monadhliath",
       "forecast": [
         {
-          "sky": "rain",
+          "sky": "cloud",
           "windMphLow": 25,
           "windMphHigh": 30,
           "gustMph": 40,
@@ -125,11 +125,11 @@
           "tempCHigh": 11,
           "cloudFree": 30,
           "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "cloud",
-          "pmSky": "partly-cloudy",
+          "visibility": "moderate",
+          "amSky": "rain",
+          "pmSky": "cloud",
           "status": "poor",
-          "reason": "patchy rain/drizzle, cloud capping tops, gusts 35-40mph north Cairngorm downslopes"
+          "reason": "cloud capping tops, patchy rain/drizzle, gusts 35-40mph on Cairngorm downslopes"
         },
         {
           "sky": "rain",
@@ -141,11 +141,11 @@
           "tempCHigh": 14,
           "cloudFree": 40,
           "freezingLevel": 9999,
-          "visibility": "poor",
+          "visibility": "moderate",
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 70mph Cairngorm high tops, frequent heavy/thundery rain, dangerous wind"
+          "reason": "gusts 70mph high Cairngorms, frequent heavy/thundery rain, dangerous on tops"
         },
         {
           "sky": "partly-cloudy",
@@ -161,7 +161,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "gusts 35-40mph later, scattered showers, isolated thunder, cloud lifting afternoon"
+          "reason": "gusts 35-40mph increasing later, scattered showers, isolated thunder risk"
         }
       ]
     },
@@ -182,7 +182,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "persistent rain, extensive low cloud, gusts 35-40mph, poor visibility widely"
+          "reason": "persistent rain, extensive low cloud, poor visibility widely, gusts 35-40mph"
         },
         {
           "sky": "rain",
@@ -194,11 +194,11 @@
           "tempCHigh": 13,
           "cloudFree": 20,
           "freezingLevel": 9999,
-          "visibility": "poor",
+          "visibility": "moderate",
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 65-70mph high tops, frequent heavy/thundery rain, cover most high terrain"
+          "reason": "gusts 65-70mph high tops, frequent heavy/torrential rain, thunder risk"
         },
         {
           "sky": "partly-cloudy",
@@ -214,7 +214,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "showers extending east, cloud west of A9 morning, improving afternoon"
+          "reason": "cloud over western central highlands morning, showers spreading east through day"
         }
       ]
     },
@@ -235,7 +235,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "heavy rain Galloway, low cloud, gusts 40mph Cheviots, possible thunder"
+          "reason": "heavy persistent rain Galloway, low cloud, gusts 40mph Cheviots, thunder risk"
         },
         {
           "sky": "rain",
@@ -249,9 +249,9 @@
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
-          "pmSky": "rain",
+          "pmSky": "cloud",
           "status": "poor",
-          "reason": "gales gusts 60mph, heavy/thundery rain, fog low slopes Solway, dangerous"
+          "reason": "gales 40-50mph gusts 60mph, heavy/torrential rain, thunder risk, low cloud"
         },
         {
           "sky": "partly-cloudy",
@@ -266,11 +266,11 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "showers extending east through day, cloud capping west tops into afternoon"
+          "reason": "cloud and showers spreading east through day, misty western hills morning"
         }
       ]
     }
   ],
-  "_generated": "2026-06-17T18:32:00.065Z",
+  "_generated": "2026-06-18T11:58:12.695Z",
   "_anchorDate": "2026-06-18"
 }
