@@ -4,7 +4,7 @@
     "Sat",
     "Sun"
   ],
-  "updatedAt": "2026-06-18T16:25:00.000Z",
+  "updatedAt": "2026-06-19T07:51:00.000Z",
   "regions": [
     {
       "name": "Northwest Highlands",
@@ -23,7 +23,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "heavy thundery rain, gusts 40mph eastern hills, poor visibility"
+          "reason": "heavy thundery rain, gusts 40mph east, low cloud, poor visibility"
         },
         {
           "sky": "partly-cloudy",
@@ -39,7 +39,7 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gusts 40mph, low cloud covering hills, showers Skye and Wester Ross"
+          "reason": "cloud covers hills widely AM, gusts 40mph north, wind chill near -5C"
         },
         {
           "sky": "partly-cloudy",
@@ -54,7 +54,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "mostly dry, cloud lifting and clearing tops, light winds"
+          "reason": "dry, tops clearing, light winds, visibility very good"
         }
       ]
     },
@@ -69,13 +69,13 @@
           "windDir": "SSW",
           "tempCLow": 9,
           "tempCHigh": 12,
-          "cloudFree": 20,
+          "cloudFree": 10,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "risk gales gusts 60mph high tops, heavy thundery rain, low cloud"
+          "reason": "gusts 60mph high tops, heavy torrential rain, risk thunder, near-zero cloud-free"
         },
         {
           "sky": "partly-cloudy",
@@ -91,10 +91,10 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "showers easing PM, low cloud above 600-800m, gusts 35mph Lochaber evening"
+          "reason": "cloud covers hills AM above 600-800m, gusts 35mph Ben Nevis range evening"
         },
         {
-          "sky": "sun",
+          "sky": "partly-cloudy",
           "windMphLow": 10,
           "windMphHigh": 15,
           "windDir": "SW",
@@ -106,7 +106,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "rain not expected, hills clearing during morning, light winds"
+          "reason": "rain not expected, tops clearing, light winds, 90% cloud-free"
         }
       ]
     },
@@ -115,19 +115,19 @@
       "forecast": [
         {
           "sky": "rain",
-          "windMphLow": 35,
+          "windMphLow": 40,
           "windMphHigh": 50,
           "gustMph": 60,
           "windDir": "SSW",
           "tempCLow": 11,
           "tempCHigh": 13,
-          "cloudFree": 30,
+          "cloudFree": 10,
           "freezingLevel": 9999,
           "visibility": "moderate",
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gales gusts 60mph east, heavy thundery rain, low cloud most of day"
+          "reason": "gales 40-50mph, gusts 60mph east, heavy thundery rain, gusts may knock you over"
         },
         {
           "sky": "partly-cloudy",
@@ -142,12 +142,12 @@
           "visibility": "good",
           "amSky": "partly-cloudy",
           "pmSky": "sun",
-          "status": "go",
-          "reason": "showers fading afternoon, cloud mostly clearing, visibility very good"
+          "status": "marginal",
+          "reason": "cloud banks Ben Alder to Drumochter AM, gusts 30mph Cairngorms, improving PM"
         },
         {
           "sky": "sun",
-          "windMphLow": 10,
+          "windMphLow": 15,
           "windMphHigh": 20,
           "windDir": "SW",
           "tempCLow": 6,
@@ -168,7 +168,7 @@
         {
           "sky": "rain",
           "windMphLow": 40,
-          "windMphHigh": 55,
+          "windMphHigh": 50,
           "gustMph": 60,
           "windDir": "SSW",
           "tempCLow": 11,
@@ -179,7 +179,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gales 40-55mph gusts over 60mph, heavy thundery rain, extensive low cloud"
+          "reason": "gales 40-50mph, gusts over 60mph, heavy thundery rain, gusts knock you over"
         },
         {
           "sky": "partly-cloudy",
@@ -192,10 +192,10 @@
           "cloudFree": 55,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "cloud",
-          "pmSky": "partly-cloudy",
-          "status": "go",
-          "reason": "showers fading afternoon, cloud lifting above 900m, visibility very good"
+          "amSky": "partly-cloudy",
+          "pmSky": "sun",
+          "status": "marginal",
+          "reason": "cloud 600-700m west of A9 AM, gusts 30mph, clearing PM to 80% cloud-free"
         },
         {
           "sky": "sun",
@@ -225,13 +225,13 @@
           "windDir": "SSW",
           "tempCLow": 12,
           "tempCHigh": 14,
-          "cloudFree": 45,
+          "cloudFree": 5,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gales gusts 60mph, frequent heavy thundery rain, low cloud Solway to Borders"
+          "reason": "gales 40-50mph, gusts 60mph, frequent heavy thundery rain, cloud to low slopes"
         },
         {
           "sky": "partly-cloudy",
@@ -244,9 +244,9 @@
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "cloud",
-          "pmSky": "sun",
-          "status": "go",
-          "reason": "light showers fading afternoon, cloud clearing all tops, winds modest"
+          "pmSky": "partly-cloudy",
+          "status": "marginal",
+          "reason": "low cloud covers hills AM especially west near Solway, clearing to 90% PM"
         },
         {
           "sky": "sun",
@@ -266,6 +266,6 @@
       ]
     }
   ],
-  "_generated": "2026-06-18T18:34:40.127Z",
+  "_generated": "2026-06-19T12:18:27.451Z",
   "_anchorDate": "2026-06-19"
 }
