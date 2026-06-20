@@ -4,7 +4,7 @@
     "Sun",
     "Mon"
   ],
-  "updatedAt": "2026-06-19T14:47:00.000Z",
+  "updatedAt": "2026-06-20T07:33:00.000Z",
   "regions": [
     {
       "name": "Northwest Highlands",
@@ -16,13 +16,13 @@
           "windDir": "SW",
           "tempCLow": 5,
           "tempCHigh": 8,
-          "cloudFree": 10,
+          "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "cloud",
-          "pmSky": "cloud",
+          "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "windy 40mph north of Ullapool, fog shrouding hills, poor visibility"
+          "reason": "fog shrouding hills, 40mph gusts north of Ullapool, poor visibility"
         },
         {
           "sky": "partly-cloudy",
@@ -31,13 +31,13 @@
           "windDir": "SW",
           "tempCLow": 5,
           "tempCHigh": 10,
-          "cloudFree": 60,
+          "cloudFree": 80,
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "cloud",
-          "pmSky": "partly-cloudy",
+          "pmSky": "sun",
           "status": "marginal",
-          "reason": "cloud clearing slowly, 80% cloud-free only by late afternoon far north"
+          "reason": "cloud clearing slowly northward, only 80% cloud-free by late afternoon"
         },
         {
           "sky": "partly-cloudy",
@@ -52,7 +52,7 @@
           "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "low confidence light rain PM from west, high cloud thickening through day"
+          "reason": "low confidence rain PM, Skye Cuillin fog risk, sunshine fading"
         }
       ]
     },
@@ -66,13 +66,13 @@
           "windDir": "SW",
           "tempCLow": 5,
           "tempCHigh": 8,
-          "cloudFree": 10,
+          "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "fog shrouding hills, gusts 30mph Lochaber, coast cloud base 600-700m"
+          "reason": "fog shrouding hills all day west coast, 30mph gusts Lochaber, poor visibility"
         },
         {
           "sky": "partly-cloudy",
@@ -87,7 +87,7 @@
           "amSky": "cloud",
           "pmSky": "sun",
           "status": "go",
-          "reason": "90% cloud-free by afternoon, light winds, excellent visibility"
+          "reason": "cloud lifting and clearing, 90% cloud-free afternoon, light winds, excellent visibility"
         },
         {
           "sky": "partly-cloudy",
@@ -102,7 +102,7 @@
           "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "low confidence light rain PM, highest risk Lochaber, high cloud thickening"
+          "reason": "low confidence rain PM highest in Lochaber, coastal fog risk, sunshine thinning"
         }
       ]
     },
@@ -116,17 +116,17 @@
           "windDir": "SW",
           "tempCLow": 6,
           "tempCHigh": 10,
-          "cloudFree": 40,
+          "cloudFree": 80,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "cloud",
-          "pmSky": "partly-cloudy",
+          "pmSky": "sun",
           "status": "marginal",
-          "reason": "fog clearing slowly, 35mph gusts Cairngorm plateau, wind chill -2C tops"
+          "reason": "fog clearing by afternoon, 35mph Cairngorm plateau, marked wind chill"
         },
         {
           "sky": "sun",
-          "windMphLow": 10,
+          "windMphLow": 15,
           "windMphHigh": 25,
           "windDir": "SW",
           "tempCLow": 6,
@@ -137,7 +137,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "above 90% cloud-free, sunshine, light winds, excellent visibility"
+          "reason": "above 90% cloud-free, sunshine periods, light winds, excellent visibility"
         },
         {
           "sky": "partly-cloudy",
@@ -152,7 +152,7 @@
           "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "low confidence light rain PM from west, high cloud thickening, small totals"
+          "reason": "low confidence rain PM, high cloud thinning sunshine, otherwise manageable"
         }
       ]
     },
@@ -166,13 +166,13 @@
           "windDir": "SW",
           "tempCLow": 6,
           "tempCHigh": 12,
-          "cloudFree": 50,
+          "cloudFree": 90,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "cloud",
-          "pmSky": "partly-cloudy",
+          "pmSky": "sun",
           "status": "marginal",
-          "reason": "fog clearing early afternoon, gusts 30mph higher tops, wind chill on summits"
+          "reason": "fog clearing by early afternoon, 30mph gusts higher tops, chilly morning"
         },
         {
           "sky": "sun",
@@ -200,9 +200,9 @@
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "sun",
-          "pmSky": "partly-cloudy",
+          "pmSky": "rain",
           "status": "marginal",
-          "reason": "low confidence PM rain bursts, possibly amounting to little, hazy near central belt"
+          "reason": "low confidence rain bursts PM, high cloud, haze near central belt"
         }
       ]
     },
@@ -216,18 +216,18 @@
           "windDir": "SW",
           "tempCLow": 9,
           "tempCHigh": 12,
-          "cloudFree": 70,
+          "cloudFree": 90,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "cloud",
           "pmSky": "sun",
           "status": "go",
-          "reason": "fog clearing by midday, light winds, patchwork sun developing, good visibility"
+          "reason": "fog clearing hills by midday, light winds, sun developing, manageable conditions"
         },
         {
           "sky": "sun",
           "windMphLow": 10,
-          "windMphHigh": 20,
+          "windMphHigh": 15,
           "windDir": "E",
           "tempCLow": 9,
           "tempCHigh": 15,
@@ -237,7 +237,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "above 90% cloud-free, negligible winds, sunshine, excellent visibility"
+          "reason": "above 90% cloud-free, near-calm winds, sunshine periods, excellent visibility"
         },
         {
           "sky": "partly-cloudy",
@@ -252,11 +252,11 @@
           "amSky": "sun",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "low confidence PM rain bursts, small risk thunderstorm, hazy visibility"
+          "reason": "low confidence thundery rain risk PM, hazy, otherwise mostly fine and warm"
         }
       ]
     }
   ],
-  "_generated": "2026-06-19T18:06:30.816Z",
+  "_generated": "2026-06-20T10:41:37.173Z",
   "_anchorDate": "2026-06-20"
 }
