@@ -4,7 +4,7 @@
     "Mon",
     "Tue"
   ],
-  "updatedAt": "2026-06-20T15:00:00.000Z",
+  "updatedAt": "2026-06-21T07:33:00.000Z",
   "regions": [
     {
       "name": "Northwest Highlands",
@@ -22,7 +22,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "showers dying out north AM, cloud clearing south to north through day"
+          "reason": "showers and cloud clearing south to north through day, 30% cloud-free AM"
         },
         {
           "sky": "partly-cloudy",
@@ -37,7 +37,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "low confidence, moderate risk 2-4hrs light rain, Skye fog possible"
+          "reason": "low confidence 2-4hrs light rain, Skye fog risk, only glimpses of sun"
         },
         {
           "sky": "cloud",
@@ -52,7 +52,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "blanket low cloud from coast inland, gusts 40mph north of Torridon, drizzle"
+          "reason": "gusts 40mph north of Torridon, blanket low cloud from 100m, coastal drizzle"
         }
       ]
     },
@@ -62,9 +62,9 @@
         {
           "sky": "sun",
           "windMphLow": 10,
-          "windMphHigh": 20,
+          "windMphHigh": 15,
           "windDir": "SW",
-          "tempCLow": 6,
+          "tempCLow": 5,
           "tempCHigh": 13,
           "cloudFree": 90,
           "freezingLevel": 9999,
@@ -72,7 +72,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "bright sunshine, mountains free of cloud, light winds becoming negligible"
+          "reason": "extensive sunshine, mountains free of cloud, light wind becoming negligible"
         },
         {
           "sky": "partly-cloudy",
@@ -87,7 +87,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "low confidence, moderate risk 2-4hrs light rain, higher slopes shrouded"
+          "reason": "low confidence 2-4hrs light rain, cloud on higher slopes, sun only glimpses"
         },
         {
           "sky": "cloud",
@@ -102,7 +102,7 @@
           "amSky": "sun",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "blanket low cloud coast to inland, drizzle, cloud base 100-300m coastal hills"
+          "reason": "blanket low cloud from 100m coast inland, drizzle, cloud base drops to 10% Munros"
         }
       ]
     },
@@ -111,10 +111,10 @@
       "forecast": [
         {
           "sky": "sun",
-          "windMphLow": 10,
+          "windMphLow": 15,
           "windMphHigh": 20,
           "windDir": "SW",
-          "tempCLow": 6,
+          "tempCLow": 5,
           "tempCHigh": 14,
           "cloudFree": 90,
           "freezingLevel": 9999,
@@ -122,7 +122,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "unbroken bright sunshine, mountains free of cloud, winds negligible by midday"
+          "reason": "unbroken bright sunshine, mountains free of cloud, wind dropping to negligible"
         },
         {
           "sky": "partly-cloudy",
@@ -137,7 +137,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "low confidence, moderate risk 2-4hrs light rain, higher slopes may be shrouded"
+          "reason": "low confidence 2-4hrs light rain, cloud on higher slopes, sun only glimpses"
         },
         {
           "sky": "partly-cloudy",
@@ -146,13 +146,13 @@
           "windDir": "SW",
           "tempCLow": 14,
           "tempCHigh": 17,
-          "cloudFree": 70,
+          "cloudFree": 60,
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "gusts 40mph strengthening through day, cloud risk above 750-1000m west of A9 evening"
+          "reason": "gusts to 40mph strengthening through day, cloud shrouding summits west of A9 evening"
         }
       ]
     },
@@ -164,7 +164,7 @@
           "windMphLow": 10,
           "windMphHigh": 15,
           "windDir": "SW",
-          "tempCLow": 7,
+          "tempCLow": 6,
           "tempCHigh": 14,
           "cloudFree": 90,
           "freezingLevel": 9999,
@@ -172,7 +172,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "unbroken bright sunshine, mountains free of cloud, winds negligible by midday"
+          "reason": "unbroken bright sunshine, mountains free of cloud, wind negligible by midday"
         },
         {
           "sky": "partly-cloudy",
@@ -187,7 +187,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "extensive fog from dawn, risk light rain, low cloud returning in rain"
+          "reason": "extensive fog at dawn, low confidence rain returning, cloud on higher slopes AM"
         },
         {
           "sky": "sun",
@@ -202,7 +202,7 @@
           "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "go",
-          "reason": "extensive sunshine, summits mostly clear, small cloud risk west of A9 evening"
+          "reason": "extensive sunshine, >90% cloud-free, small risk cloud west of A9 evening only"
         }
       ]
     },
@@ -219,10 +219,10 @@
           "cloudFree": 95,
           "freezingLevel": 9999,
           "visibility": "excellent",
-          "amSky": "partly-cloudy",
+          "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "extensive bright sunshine, mountains free of cloud, negligible wind"
+          "reason": "extensive bright sunshine, negligible wind, mountains free of cloud all day"
         },
         {
           "sky": "partly-cloudy",
@@ -237,7 +237,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "small risk light rain, possible thunder, Solway fog, hazy visibility"
+          "reason": "possible thunder, small risk light rain, fog on Solway slopes, high cloud haze"
         },
         {
           "sky": "sun",
@@ -246,17 +246,17 @@
           "windDir": "SW",
           "tempCLow": 16,
           "tempCHigh": 21,
-          "cloudFree": 90,
+          "cloudFree": 95,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "chance thundery showers at first Borders, otherwise extensive sunshine"
+          "reason": "chance thundery showers at first Borders, otherwise sunshine and light winds"
         }
       ]
     }
   ],
-  "_generated": "2026-06-20T17:45:09.400Z",
+  "_generated": "2026-06-21T11:25:22.548Z",
   "_anchorDate": "2026-06-21"
 }
