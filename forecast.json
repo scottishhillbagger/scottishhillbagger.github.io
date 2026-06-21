@@ -1,32 +1,17 @@
 {
   "days": [
-    "Sun",
     "Mon",
-    "Tue"
+    "Tue",
+    "Wed"
   ],
-  "updatedAt": "2026-06-21T07:33:00.000Z",
+  "updatedAt": "2026-06-21T14:22:00.000Z",
   "regions": [
     {
       "name": "Northwest Highlands",
       "forecast": [
         {
           "sky": "partly-cloudy",
-          "windMphLow": 15,
-          "windMphHigh": 25,
-          "windDir": "SW",
-          "tempCLow": 5,
-          "tempCHigh": 10,
-          "cloudFree": 60,
-          "freezingLevel": 9999,
-          "visibility": "excellent",
-          "amSky": "partly-cloudy",
-          "pmSky": "sun",
-          "status": "marginal",
-          "reason": "showers and cloud clearing south to north through day, 30% cloud-free AM"
-        },
-        {
-          "sky": "partly-cloudy",
-          "windMphLow": 15,
+          "windMphLow": 10,
           "windMphHigh": 15,
           "windDir": "S",
           "tempCLow": 9,
@@ -37,34 +22,29 @@
           "amSky": "partly-cloudy",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "low confidence 2-4hrs light rain, Skye fog risk, only glimpses of sun"
+          "reason": "high cloud, occasional rain, low cloud slow to lift on some hills"
         },
         {
-          "sky": "cloud",
+          "sky": "partly-cloudy",
           "windMphLow": 25,
           "windMphHigh": 40,
           "windDir": "SW",
           "tempCLow": 14,
           "tempCHigh": 16,
-          "cloudFree": 10,
+          "cloudFree": 80,
           "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "partly-cloudy",
-          "pmSky": "cloud",
-          "status": "poor",
-          "reason": "gusts 40mph north of Torridon, blanket low cloud from 100m, coastal drizzle"
-        }
-      ]
-    },
-    {
-      "name": "West Highlands",
-      "forecast": [
+          "visibility": "excellent",
+          "amSky": "sun",
+          "pmSky": "partly-cloudy",
+          "status": "marginal",
+          "reason": "gusts 40mph north of Torridon; coastal fog enveloping hills afternoon"
+        },
         {
-          "sky": "sun",
+          "sky": "partly-cloudy",
           "windMphLow": 10,
-          "windMphHigh": 15,
+          "windMphHigh": 25,
           "windDir": "SW",
-          "tempCLow": 5,
+          "tempCLow": 8,
           "tempCHigh": 13,
           "cloudFree": 90,
           "freezingLevel": 9999,
@@ -72,37 +52,57 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "extensive sunshine, mountains free of cloud, light wind becoming negligible"
-        },
+          "reason": "increasingly sunny, cloud clearing through morning, light winds"
+        }
+      ]
+    },
+    {
+      "name": "West Highlands",
+      "forecast": [
         {
           "sky": "partly-cloudy",
-          "windMphLow": 15,
-          "windMphHigh": 15,
+          "windMphLow": 10,
+          "windMphHigh": 20,
           "windDir": "S",
           "tempCLow": 10,
           "tempCHigh": 15,
-          "cloudFree": 60,
+          "cloudFree": 30,
           "freezingLevel": 9999,
-          "visibility": "excellent",
-          "amSky": "partly-cloudy",
+          "visibility": "good",
+          "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "low confidence 2-4hrs light rain, cloud on higher slopes, sun only glimpses"
+          "reason": "extensive fog Loch Lomond NP and Arran AM; low cloud slow to lift"
         },
         {
-          "sky": "cloud",
+          "sky": "sun",
           "windMphLow": 20,
           "windMphHigh": 30,
           "windDir": "SW",
           "tempCLow": 14,
           "tempCHigh": 17,
-          "cloudFree": 10,
+          "cloudFree": 80,
           "freezingLevel": 9999,
-          "visibility": "poor",
+          "visibility": "excellent",
           "amSky": "sun",
-          "pmSky": "cloud",
-          "status": "poor",
-          "reason": "blanket low cloud from 100m coast inland, drizzle, cloud base drops to 10% Munros"
+          "pmSky": "partly-cloudy",
+          "status": "go",
+          "reason": "extensive sunshine, moderate winds; coastal fog risk late Lochaber"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 10,
+          "windMphHigh": 25,
+          "windDir": "SW",
+          "tempCLow": 9,
+          "tempCHigh": 18,
+          "cloudFree": 90,
+          "freezingLevel": 9999,
+          "visibility": "excellent",
+          "amSky": "partly-cloudy",
+          "pmSky": "sun",
+          "status": "go",
+          "reason": "increasingly sunny, cloud clearing through morning, light winds"
         }
       ]
     },
@@ -110,49 +110,49 @@
       "name": "Cairngorms & Monadhliath",
       "forecast": [
         {
-          "sky": "sun",
-          "windMphLow": 15,
-          "windMphHigh": 20,
-          "windDir": "SW",
-          "tempCLow": 5,
-          "tempCHigh": 14,
-          "cloudFree": 90,
-          "freezingLevel": 9999,
-          "visibility": "excellent",
-          "amSky": "partly-cloudy",
-          "pmSky": "sun",
-          "status": "go",
-          "reason": "unbroken bright sunshine, mountains free of cloud, wind dropping to negligible"
-        },
-        {
           "sky": "partly-cloudy",
           "windMphLow": 15,
-          "windMphHigh": 25,
+          "windMphHigh": 15,
           "windDir": "S",
           "tempCLow": 10,
           "tempCHigh": 15,
-          "cloudFree": 60,
+          "cloudFree": 40,
           "freezingLevel": 9999,
           "visibility": "excellent",
-          "amSky": "partly-cloudy",
+          "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "low confidence 2-4hrs light rain, cloud on higher slopes, sun only glimpses"
+          "reason": "extensive cloud S Cairngorms AM 500-750m; low cloud slow to clear"
         },
         {
-          "sky": "partly-cloudy",
+          "sky": "sun",
           "windMphLow": 25,
-          "windMphHigh": 40,
+          "windMphHigh": 35,
           "windDir": "SW",
           "tempCLow": 14,
           "tempCHigh": 17,
-          "cloudFree": 60,
+          "cloudFree": 90,
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "sun",
-          "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "reason": "gusts to 40mph strengthening through day, cloud shrouding summits west of A9 evening"
+          "pmSky": "sun",
+          "status": "go",
+          "reason": "extensive sunshine, gusts 35mph Cairngorm plateau, rain very unlikely"
+        },
+        {
+          "sky": "sun",
+          "windMphLow": 10,
+          "windMphHigh": 25,
+          "windDir": "SW",
+          "tempCLow": 14,
+          "tempCHigh": 20,
+          "cloudFree": 90,
+          "freezingLevel": 9999,
+          "visibility": "excellent",
+          "amSky": "sun",
+          "pmSky": "sun",
+          "status": "go",
+          "reason": "extensive sunshine, rain not expected, light winds, excellent visibility"
         }
       ]
     },
@@ -160,49 +160,49 @@
       "name": "Southeastern Highlands",
       "forecast": [
         {
-          "sky": "sun",
-          "windMphLow": 10,
-          "windMphHigh": 15,
-          "windDir": "SW",
-          "tempCLow": 6,
-          "tempCHigh": 14,
-          "cloudFree": 90,
-          "freezingLevel": 9999,
-          "visibility": "excellent",
-          "amSky": "partly-cloudy",
-          "pmSky": "sun",
-          "status": "go",
-          "reason": "unbroken bright sunshine, mountains free of cloud, wind negligible by midday"
-        },
-        {
-          "sky": "partly-cloudy",
+          "sky": "cloud",
           "windMphLow": 15,
-          "windMphHigh": 25,
+          "windMphHigh": 20,
           "windDir": "S",
           "tempCLow": 10,
           "tempCHigh": 15,
-          "cloudFree": 60,
+          "cloudFree": 10,
           "freezingLevel": 9999,
-          "visibility": "excellent",
+          "visibility": "poor",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "reason": "extensive fog at dawn, low confidence rain returning, cloud on higher slopes AM"
+          "status": "poor",
+          "reason": "extensive fog AM from lower slopes, poor visibility, cloud slow to lift"
         },
         {
           "sky": "sun",
           "windMphLow": 20,
-          "windMphHigh": 30,
+          "windMphHigh": 25,
           "windDir": "SW",
           "tempCLow": 14,
           "tempCHigh": 17,
           "cloudFree": 90,
           "freezingLevel": 9999,
+          "visibility": "good",
+          "amSky": "sun",
+          "pmSky": "sun",
+          "status": "go",
+          "reason": "extensive sunshine, cloud free summits, light winds near central belt"
+        },
+        {
+          "sky": "sun",
+          "windMphLow": 10,
+          "windMphHigh": 25,
+          "windDir": "SW",
+          "tempCLow": 14,
+          "tempCHigh": 20,
+          "cloudFree": 90,
+          "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "sun",
-          "pmSky": "partly-cloudy",
+          "pmSky": "sun",
           "status": "go",
-          "reason": "extensive sunshine, >90% cloud-free, small risk cloud west of A9 evening only"
+          "reason": "extensive sunshine, rain not expected, light winds, excellent visibility"
         }
       ]
     },
@@ -210,39 +210,24 @@
       "name": "Southern Uplands",
       "forecast": [
         {
-          "sky": "sun",
-          "windMphLow": 10,
-          "windMphHigh": 10,
-          "windDir": "E",
-          "tempCLow": 9,
-          "tempCHigh": 15,
-          "cloudFree": 95,
-          "freezingLevel": 9999,
-          "visibility": "excellent",
-          "amSky": "sun",
-          "pmSky": "sun",
-          "status": "go",
-          "reason": "extensive bright sunshine, negligible wind, mountains free of cloud all day"
-        },
-        {
           "sky": "partly-cloudy",
-          "windMphLow": 15,
-          "windMphHigh": 25,
+          "windMphLow": 20,
+          "windMphHigh": 20,
           "windDir": "S",
           "tempCLow": 17,
           "tempCHigh": 17,
-          "cloudFree": 80,
+          "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "partly-cloudy",
+          "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "possible thunder, small risk light rain, fog on Solway slopes, high cloud haze"
+          "reason": "extensive fog AM 300-600m, Solway coastal fog, gradual afternoon clearing"
         },
         {
           "sky": "sun",
           "windMphLow": 15,
-          "windMphHigh": 25,
+          "windMphHigh": 20,
           "windDir": "SW",
           "tempCLow": 16,
           "tempCHigh": 21,
@@ -251,12 +236,27 @@
           "visibility": "good",
           "amSky": "partly-cloudy",
           "pmSky": "sun",
-          "status": "marginal",
-          "reason": "chance thundery showers at first Borders, otherwise sunshine and light winds"
+          "status": "go",
+          "reason": "extensive sunshine, near-certain cloud-free summits, light winds"
+        },
+        {
+          "sky": "sun",
+          "windMphLow": 10,
+          "windMphHigh": 15,
+          "windDir": "SW",
+          "tempCLow": 16,
+          "tempCHigh": 23,
+          "cloudFree": 90,
+          "freezingLevel": 9999,
+          "visibility": "good",
+          "amSky": "sun",
+          "pmSky": "sun",
+          "status": "go",
+          "reason": "extensive sunshine, rain not expected, very light winds, hills fog free"
         }
       ]
     }
   ],
-  "_generated": "2026-06-21T11:25:22.548Z",
-  "_anchorDate": "2026-06-21"
+  "_generated": "2026-06-21T17:50:43.618Z",
+  "_anchorDate": "2026-06-22"
 }
