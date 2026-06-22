@@ -23,7 +23,7 @@
           "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "gusts 40mph north of Ullapool PM, fog enveloping coastal hills"
+          "reason": "gusts 40mph north of Ullapool; fog enveloping coastal hills PM"
         },
         {
           "sky": "partly-cloudy",
@@ -32,13 +32,13 @@
           "windDir": "SW",
           "tempCLow": 8,
           "tempCHigh": 18,
-          "cloudFree": 55,
+          "cloudFree": 70,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "cloud",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "coastal fog clearing slowly; cloud above 450-600m most of morning"
+          "reason": "extensive cloud to 450-600m clearing slowly; coastal fog lingering all day"
         },
         {
           "sky": "partly-cloudy",
@@ -53,7 +53,7 @@
           "amSky": "sun",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "risk thunderstorms and torrential rain, fog extensive on coastal hills north"
+          "reason": "low confidence; thunderstorms and torrential rain risk, especially far north coast"
         }
       ]
     },
@@ -61,7 +61,7 @@
       "name": "West Highlands",
       "forecast": [
         {
-          "sky": "sun",
+          "sky": "partly-cloudy",
           "windMphLow": 20,
           "windMphHigh": 30,
           "windDir": "SW",
@@ -73,7 +73,7 @@
           "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "go",
-          "reason": "extensive sunshine AM; fog reaching coastal hills north of Jura PM only"
+          "reason": "extensive sunshine AM; coastal fog PM north of Jura, inland mostly clear"
         },
         {
           "sky": "partly-cloudy",
@@ -82,13 +82,13 @@
           "windDir": "SW",
           "tempCLow": 9,
           "tempCHigh": 18,
-          "cloudFree": 55,
+          "cloudFree": 70,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "cloud",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "cloud above 450-600m all morning; coastal fog clearing slowly north of Mull"
+          "reason": "cloud 450-600m clearing slowly; coastal fog north of Mull slow to clear"
         },
         {
           "sky": "partly-cloudy",
@@ -103,7 +103,7 @@
           "amSky": "sun",
           "pmSky": "storm",
           "status": "marginal",
-          "reason": "risk scattered thunderstorms with locally torrential rain; otherwise mostly clear"
+          "reason": "scattered thunderstorms risk, locally torrential rain; otherwise mostly cloud free"
         }
       ]
     },
@@ -123,7 +123,7 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "extensive sunshine, almost certain cloud-free Munros, excellent visibility"
+          "reason": "extensive sunshine, almost certain cloud-free Munros, gusts 35mph Cairngorm plateau"
         },
         {
           "sky": "sun",
@@ -138,7 +138,7 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "extensive sunshine, almost certain cloud-free Munros, light winds"
+          "reason": "extensive sunshine, almost certain cloud-free Munros, light winds, rain not expected"
         },
         {
           "sky": "partly-cloudy",
@@ -153,7 +153,7 @@
           "amSky": "sun",
           "pmSky": "storm",
           "status": "marginal",
-          "reason": "risk scattered thunderstorms with locally torrential rain; otherwise sunny"
+          "reason": "scattered thunderstorms risk with torrential rain; mountains mostly cloud free otherwise"
         }
       ]
     },
@@ -173,7 +173,7 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "extensive sunshine, almost certain cloud-free Munros, excellent visibility"
+          "reason": "extensive sunshine, almost certain cloud-free Munros, light winds, excellent visibility"
         },
         {
           "sky": "sun",
@@ -188,7 +188,7 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "extensive sunshine, almost certain cloud-free Munros, light winds"
+          "reason": "extensive sunshine, rain not expected, almost certain cloud-free Munros, light winds"
         },
         {
           "sky": "partly-cloudy",
@@ -203,7 +203,7 @@
           "amSky": "sun",
           "pmSky": "storm",
           "status": "marginal",
-          "reason": "risk scattered thunderstorms with locally torrential rain; mostly cloud-free otherwise"
+          "reason": "scattered thunderstorms risk with locally torrential rain; mountains mostly cloud free"
         }
       ]
     },
@@ -220,10 +220,10 @@
           "cloudFree": 95,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "partly-cloudy",
+          "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "extensive sunshine, light winds negligible impact, almost certain cloud-free summits"
+          "reason": "extensive sunshine, light winds, almost certain cloud-free summits after dawn fog clears"
         },
         {
           "sky": "sun",
@@ -238,7 +238,7 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "extensive sunshine, negligible winds, almost certain cloud-free summits, hazy"
+          "reason": "extensive sunshine, negligible winds, almost certain cloud-free summits, rain not expected"
         },
         {
           "sky": "partly-cloudy",
@@ -253,11 +253,11 @@
           "amSky": "sun",
           "pmSky": "storm",
           "status": "marginal",
-          "reason": "risk isolated thunderstorms with locally torrential rain; persistent haze"
+          "reason": "isolated thunderstorms risk with locally torrential rain; summits mostly cloud free"
         }
       ]
     }
   ],
-  "_generated": "2026-06-22T13:44:42.913Z",
+  "_generated": "2026-06-22T19:43:49.933Z",
   "_anchorDate": "2026-06-23"
 }
