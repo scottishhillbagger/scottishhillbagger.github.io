@@ -13,7 +13,6 @@
           "sky": "partly-cloudy",
           "windMphLow": 25,
           "windMphHigh": 40,
-          "gustMph": 40,
           "windDir": "SW",
           "tempCLow": 9,
           "tempCHigh": 15,
@@ -21,9 +20,9 @@
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "sun",
-          "pmSky": "partly-cloudy",
+          "pmSky": "cloud",
           "status": "marginal",
-          "reason": "gusts 40mph north of Ullapool; fog enveloping coastal hills PM"
+          "reason": "fog enveloping coastal hills PM, 40mph gusts north of Ullapool"
         },
         {
           "sky": "partly-cloudy",
@@ -32,13 +31,13 @@
           "windDir": "SW",
           "tempCLow": 8,
           "tempCHigh": 18,
-          "cloudFree": 70,
+          "cloudFree": 90,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "cloud",
           "pmSky": "sun",
-          "status": "marginal",
-          "reason": "extensive cloud to 450-600m clearing slowly; coastal fog lingering all day"
+          "status": "go",
+          "reason": "cloud clearing through midday, increasingly sunny, light winds"
         },
         {
           "sky": "partly-cloudy",
@@ -51,9 +50,9 @@
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "sun",
-          "pmSky": "rain",
+          "pmSky": "storm",
           "status": "marginal",
-          "reason": "low confidence; thunderstorms and torrential rain risk, especially far north coast"
+          "reason": "risk scattered thunderstorms, locally torrential rain, low confidence"
         }
       ]
     },
@@ -71,9 +70,9 @@
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "sun",
-          "pmSky": "partly-cloudy",
-          "status": "go",
-          "reason": "extensive sunshine AM; coastal fog PM north of Jura, inland mostly clear"
+          "pmSky": "cloud",
+          "status": "marginal",
+          "reason": "fog enveloping coastal hills PM, mist spreading inland toward evening"
         },
         {
           "sky": "partly-cloudy",
@@ -82,13 +81,13 @@
           "windDir": "SW",
           "tempCLow": 9,
           "tempCHigh": 18,
-          "cloudFree": 70,
+          "cloudFree": 90,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "cloud",
           "pmSky": "sun",
-          "status": "marginal",
-          "reason": "cloud 450-600m clearing slowly; coastal fog north of Mull slow to clear"
+          "status": "go",
+          "reason": "cloud clearing through morning, increasingly sunny, light winds"
         },
         {
           "sky": "partly-cloudy",
@@ -103,7 +102,7 @@
           "amSky": "sun",
           "pmSky": "storm",
           "status": "marginal",
-          "reason": "scattered thunderstorms risk, locally torrential rain; otherwise mostly cloud free"
+          "reason": "risk scattered thunderstorms, locally torrential rain, hazy"
         }
       ]
     },
@@ -123,7 +122,7 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "extensive sunshine, almost certain cloud-free Munros, gusts 35mph Cairngorm plateau"
+          "reason": "extensive sunshine, almost certain cloud-free Munros, excellent visibility"
         },
         {
           "sky": "sun",
@@ -138,7 +137,7 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "extensive sunshine, almost certain cloud-free Munros, light winds, rain not expected"
+          "reason": "extensive sunshine, mountains cloud free, light winds, excellent visibility"
         },
         {
           "sky": "partly-cloudy",
@@ -153,7 +152,7 @@
           "amSky": "sun",
           "pmSky": "storm",
           "status": "marginal",
-          "reason": "scattered thunderstorms risk with torrential rain; mountains mostly cloud free otherwise"
+          "reason": "risk scattered thunderstorms, locally torrential rain, unusually humid"
         }
       ]
     },
@@ -173,7 +172,7 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "extensive sunshine, almost certain cloud-free Munros, light winds, excellent visibility"
+          "reason": "extensive sunshine, cloud-free Munros, excellent visibility, light winds"
         },
         {
           "sky": "sun",
@@ -188,7 +187,7 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "extensive sunshine, rain not expected, almost certain cloud-free Munros, light winds"
+          "reason": "extensive sunshine, almost certain cloud-free summits, light winds"
         },
         {
           "sky": "partly-cloudy",
@@ -203,7 +202,7 @@
           "amSky": "sun",
           "pmSky": "storm",
           "status": "marginal",
-          "reason": "scattered thunderstorms risk with locally torrential rain; mountains mostly cloud free"
+          "reason": "risk scattered thunderstorms, locally torrential rain, unusually humid"
         }
       ]
     },
@@ -223,7 +222,7 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "extensive sunshine, light winds, almost certain cloud-free summits after dawn fog clears"
+          "reason": "extensive sunshine, cloud-free summits, negligible wind, warm"
         },
         {
           "sky": "sun",
@@ -238,7 +237,7 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "extensive sunshine, negligible winds, almost certain cloud-free summits, rain not expected"
+          "reason": "extensive sunshine, near-certain cloud-free summits, negligible winds"
         },
         {
           "sky": "partly-cloudy",
@@ -249,15 +248,15 @@
           "tempCHigh": 26,
           "cloudFree": 90,
           "freezingLevel": 9999,
-          "visibility": "good",
+          "visibility": "moderate",
           "amSky": "sun",
           "pmSky": "storm",
           "status": "marginal",
-          "reason": "isolated thunderstorms risk with locally torrential rain; summits mostly cloud free"
+          "reason": "risk isolated thunderstorms, locally torrential rain, persistent haze"
         }
       ]
     }
   ],
-  "_generated": "2026-06-22T19:43:49.933Z",
+  "_generated": "2026-06-23T11:32:08.697Z",
   "_anchorDate": "2026-06-23"
 }
