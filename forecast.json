@@ -18,11 +18,11 @@
           "tempCHigh": 16,
           "cloudFree": 50,
           "freezingLevel": 9999,
-          "visibility": "poor",
+          "visibility": "moderate",
           "amSky": "partly-cloudy",
           "pmSky": "storm",
           "status": "poor",
-          "reason": "afternoon thunderstorms, fog above 500-700m, torrential falls"
+          "reason": "afternoon thunderstorms, fog above 500-700m, torrential rain"
         },
         {
           "sky": "storm",
@@ -35,10 +35,10 @@
           "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "poor",
-          "amSky": "cloud",
+          "amSky": "rain",
           "pmSky": "storm",
           "status": "poor",
-          "reason": "mountains shrouded above 600-700m, thundery downpours afternoon"
+          "reason": "mountains shrouded above 600-700m, prolonged thundery downpours PM"
         },
         {
           "sky": "storm",
@@ -51,7 +51,7 @@
           "cloudFree": 30,
           "freezingLevel": 9999,
           "visibility": "poor",
-          "amSky": "cloud",
+          "amSky": "rain",
           "pmSky": "storm",
           "status": "poor",
           "reason": "gales 35-50mph, thundery downpours, poor visibility around rain"
@@ -74,7 +74,7 @@
           "amSky": "sun",
           "pmSky": "storm",
           "status": "marginal",
-          "reason": "rising thunderstorm risk PM, northern areas sooner, south clears longest"
+          "reason": "rising thunderstorm risk PM north; south largely clear until late"
         },
         {
           "sky": "storm",
@@ -87,10 +87,10 @@
           "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "poor",
-          "amSky": "cloud",
+          "amSky": "rain",
           "pmSky": "storm",
           "status": "poor",
-          "reason": "shrouded above 700-800m, prolonged thundery downpours afternoon"
+          "reason": "slopes shrouded above 700-800m, prolonged thundery downpours PM"
         },
         {
           "sky": "storm",
@@ -103,10 +103,10 @@
           "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "poor",
-          "amSky": "cloud",
+          "amSky": "rain",
           "pmSky": "storm",
           "status": "poor",
-          "reason": "gales 35-50mph, heavy rain bursts, thunder, extensive low cloud"
+          "reason": "gales 35-50mph near coasts, heavy rain, thunder and lightning"
         }
       ]
     },
@@ -114,9 +114,10 @@
       "name": "Cairngorms & Monadhliath",
       "forecast": [
         {
-          "sky": "partly-cloudy",
+          "sky": "sun",
           "windMphLow": 10,
           "windMphHigh": 20,
+          "gustMph": 35,
           "windDir": "S",
           "tempCLow": 17,
           "tempCHigh": 20,
@@ -126,7 +127,7 @@
           "amSky": "sun",
           "pmSky": "storm",
           "status": "marginal",
-          "reason": "warm sunny morning but thunderstorms rising PM, torrential falls west"
+          "reason": "very warm sun AM; late thunderstorm risk west, gusts 35mph high tops"
         },
         {
           "sky": "storm",
@@ -135,13 +136,13 @@
           "windDir": "NE",
           "tempCLow": 15,
           "tempCHigh": 17,
-          "cloudFree": 20,
+          "cloudFree": 30,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "partly-cloudy",
           "pmSky": "storm",
           "status": "poor",
-          "reason": "high tops shrouded all day, prolonged thundery downpours central Highlands"
+          "reason": "high tops shrouded all day, prolonged thundery downpours PM central highlands"
         },
         {
           "sky": "storm",
@@ -154,10 +155,10 @@
           "cloudFree": 30,
           "freezingLevel": 9999,
           "visibility": "poor",
-          "amSky": "cloud",
+          "amSky": "partly-cloudy",
           "pmSky": "storm",
           "status": "poor",
-          "reason": "gales 35-50mph Cairngorm plateau, sudden downpours, thunder widespread"
+          "reason": "gales 35-50mph high Cairngorms, sudden downpours, thunder and lightning"
         }
       ]
     },
@@ -177,7 +178,7 @@
           "amSky": "sun",
           "pmSky": "storm",
           "status": "marginal",
-          "reason": "warm sunny morning, thunderstorm risk rising afternoon into evening"
+          "reason": "sunny warm AM; late thunderstorm risk central highlands, gusts 30-35mph east"
         },
         {
           "sky": "storm",
@@ -186,13 +187,13 @@
           "windDir": "NE",
           "tempCLow": 15,
           "tempCHigh": 18,
-          "cloudFree": 20,
+          "cloudFree": 30,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "partly-cloudy",
           "pmSky": "storm",
           "status": "poor",
-          "reason": "prolonged thundery downpours afternoon, cloud fills extensively as rain sets in"
+          "reason": "cloud fills extensively PM, prolonged thundery downpours central highlands"
         },
         {
           "sky": "storm",
@@ -208,7 +209,7 @@
           "amSky": "cloud",
           "pmSky": "storm",
           "status": "poor",
-          "reason": "gales 35-50mph, sudden downpours and thunder, hills extensively covered"
+          "reason": "gales 35-50mph highest tops, bursts heavy rain, thunder and lightning"
         }
       ]
     },
@@ -228,7 +229,7 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "extensive sunshine, hills cloud free, small shower risk only, light winds"
+          "reason": "hot humid sunshine, mountains free of cloud, light winds all day"
         },
         {
           "sky": "storm",
@@ -238,13 +239,13 @@
           "windDir": "SSW",
           "tempCLow": 17,
           "tempCHigh": 23,
-          "cloudFree": 40,
+          "cloudFree": 50,
           "freezingLevel": 9999,
-          "visibility": "poor",
+          "visibility": "good",
           "amSky": "partly-cloudy",
           "pmSky": "storm",
           "status": "poor",
-          "reason": "heavy thundery bursts from dawn, winds strengthening to 35mph, poor visibility"
+          "reason": "heavy rain/thunderstorms from dawn, gusts 35mph, prolonged falls PM"
         },
         {
           "sky": "storm",
@@ -257,14 +258,14 @@
           "cloudFree": 40,
           "freezingLevel": 9999,
           "visibility": "poor",
-          "amSky": "cloud",
+          "amSky": "rain",
           "pmSky": "storm",
           "status": "poor",
-          "reason": "gales 30-50mph, heavy showery rain all day, thunder, poor visibility"
+          "reason": "gales 30-50mph, heavy showery rain all day, thunder and lightning"
         }
       ]
     }
   ],
-  "_generated": "2026-06-24T18:09:44.758Z",
+  "_generated": "2026-06-25T11:08:55.049Z",
   "_anchorDate": "2026-06-25"
 }
