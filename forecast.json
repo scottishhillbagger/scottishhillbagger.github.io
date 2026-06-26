@@ -21,9 +21,9 @@
           "freezingLevel": 9999,
           "visibility": "moderate",
           "amSky": "partly-cloudy",
-          "pmSky": "storm",
+          "pmSky": "rain",
           "status": "poor",
-          "reason": "thundery showers south PM, hills shrouded above 600-700m, flash flood risk"
+          "reason": "rising thundery showers south PM, mountains shrouded above 600-700m"
         },
         {
           "sky": "storm",
@@ -36,16 +36,16 @@
           "cloudFree": 30,
           "freezingLevel": 9999,
           "visibility": "poor",
-          "amSky": "cloud",
+          "amSky": "rain",
           "pmSky": "storm",
           "status": "poor",
-          "reason": "gusts 50mph, heavy thundery bursts, poor visibility around rain"
+          "reason": "gusts to 50mph, heavy thundery downpours, Cuillin strongest sustained wind"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 20,
           "windMphHigh": 40,
-          "gustMph": 40,
+          "gustMph": 50,
           "windDir": "SW",
           "tempCLow": 6,
           "tempCHigh": 9,
@@ -55,7 +55,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "early rain bands, winds strengthening 30-40mph, Skye shrouded above 700-800m"
+          "reason": "early rain clears inland PM, strengthening 30-40mph gusts, Skye shrouded above 700-800m"
         }
       ]
     },
@@ -73,10 +73,10 @@
           "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "poor",
-          "amSky": "cloud",
+          "amSky": "rain",
           "pmSky": "storm",
           "status": "poor",
-          "reason": "thunderstorms, torrential downpours, hail, flash flood risk, hills shrouded"
+          "reason": "thunderstorms, torrential downpours, flash flood risk, summits shrouded above 700-800m"
         },
         {
           "sky": "storm",
@@ -89,10 +89,10 @@
           "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "poor",
-          "amSky": "cloud",
+          "amSky": "rain",
           "pmSky": "storm",
           "status": "poor",
-          "reason": "gusts 45-55mph, heavy rain clusters, thunder, extensive low cloud"
+          "reason": "gusts 45-55mph, heavy thundery downpours, hills extensively covered in cloud and rain"
         },
         {
           "sky": "partly-cloudy",
@@ -108,7 +108,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "early rain, winds 30-40mph strenuous, feeling near freezing in wind later"
+          "reason": "hills mostly clear PM, winds strengthening 30-40mph, patchy rain from southwest persists"
         }
       ]
     },
@@ -129,10 +129,10 @@
           "amSky": "partly-cloudy",
           "pmSky": "storm",
           "status": "poor",
-          "reason": "thunderstorms PM, flash flood risk central highlands, high terrain shrouded all day"
+          "reason": "thunderstorms PM, torrential downpours, flash flood risk central Highlands, high terrain shrouded"
         },
         {
-          "sky": "storm",
+          "sky": "rain",
           "windMphLow": 40,
           "windMphHigh": 50,
           "gustMph": 50,
@@ -145,7 +145,7 @@
           "amSky": "cloud",
           "pmSky": "storm",
           "status": "poor",
-          "reason": "gusts 40-50mph high tops, sudden downpours, thunder, poor visibility in rain"
+          "reason": "peak gusts 40-50mph high tops, sudden thundery downpours developing from southwest"
         },
         {
           "sky": "partly-cloudy",
@@ -161,7 +161,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "morning rain bands, gusts 35-40mph high tops evening, feeling near freezing in wind"
+          "reason": "morning rain clears, gusts 35-40mph high tops PM, patchy rain Drumochter to Braemar"
         }
       ]
     },
@@ -182,10 +182,10 @@
           "amSky": "partly-cloudy",
           "pmSky": "storm",
           "status": "poor",
-          "reason": "thunderstorms PM, torrential downpours, flash flood risk, cloud filling to middle slopes"
+          "reason": "thunderstorms PM, torrential downpours, flash flood risk, summits extensively shrouded afternoon"
         },
         {
-          "sky": "storm",
+          "sky": "rain",
           "windMphLow": 40,
           "windMphHigh": 50,
           "gustMph": 50,
@@ -198,7 +198,7 @@
           "amSky": "cloud",
           "pmSky": "storm",
           "status": "poor",
-          "reason": "gusts 40-50mph, sudden downpours, thunder, extensive low cloud and ragged patches"
+          "reason": "peak gusts 40-50mph, sudden thundery downpours, hills extensively cloud-covered and rain"
         },
         {
           "sky": "partly-cloudy",
@@ -214,7 +214,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "morning rain bands, gusts 35-40mph late, feeling near freezing in wind"
+          "reason": "morning rain, gusts 35-40mph high tops late PM, mostly clearing to cloud-sun patchwork"
         }
       ]
     },
@@ -224,7 +224,7 @@
         {
           "sky": "storm",
           "windMphLow": 15,
-          "windMphHigh": 25,
+          "windMphHigh": 20,
           "gustMph": 35,
           "windDir": "SSW",
           "tempCLow": 17,
@@ -235,10 +235,10 @@
           "amSky": "partly-cloudy",
           "pmSky": "storm",
           "status": "poor",
-          "reason": "thunderstorms, torrential downpours, flash flood risk, cloud extensive on high terrain"
+          "reason": "thunderstorms, prolonged torrential downpours, flash flood risk, gusts 30-35mph strengthening"
         },
         {
-          "sky": "storm",
+          "sky": "rain",
           "windMphLow": 20,
           "windMphHigh": 30,
           "gustMph": 55,
@@ -251,7 +251,7 @@
           "amSky": "cloud",
           "pmSky": "storm",
           "status": "poor",
-          "reason": "gusts 40-55mph strongest west, heavy rain clusters, thunder, poor visibility in rain"
+          "reason": "gusts 40-55mph strongest west, heavy thundery rain clusters, strenuous walking conditions"
         },
         {
           "sky": "partly-cloudy",
@@ -267,11 +267,11 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "morning rain, gusts 35mph high tops, feeling 1-3C in wind, clears well afternoon"
+          "reason": "morning rain, gusts 35mph high tops, clears well PM; patchy rain lingers Dumfries/Galloway"
         }
       ]
     }
   ],
-  "_generated": "2026-06-25T18:24:26.249Z",
+  "_generated": "2026-06-26T11:15:31.065Z",
   "_anchorDate": "2026-06-26"
 }
