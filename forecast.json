@@ -16,14 +16,14 @@
           "gustMph": 55,
           "windDir": "SSW",
           "tempCLow": 12,
-          "tempCHigh": 13,
+          "tempCHigh": 15,
           "cloudFree": 30,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "afternoon gales 55mph gusts, persistent rain, risk thunder"
+          "reason": "afternoon gales gusts 55mph, heavy showery rain, risk thunder"
         },
         {
           "sky": "partly-cloudy",
@@ -33,29 +33,29 @@
           "windDir": "SW",
           "tempCLow": 7,
           "tempCHigh": 9,
-          "cloudFree": 20,
+          "cloudFree": 40,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "rain",
+          "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gusts 55mph+, arduous later; Skye shrouded above 600-800m"
+          "reason": "strengthening to 40-45mph sustained, gusts 55mph+, wind chill -5C"
         },
         {
-          "sky": "cloud",
+          "sky": "partly-cloudy",
           "windMphLow": 35,
           "windMphHigh": 40,
           "gustMph": 50,
           "windDir": "SW",
           "tempCLow": 5,
           "tempCHigh": 6,
-          "cloudFree": 10,
+          "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gusts 50mph+ dawn, cloud 300-400m west coast, patchy rain south"
+          "reason": "gusts 50mph+ at dawn, cloud 300-400m west coast, wind chill -5C"
         }
       ]
     },
@@ -86,16 +86,16 @@
           "windDir": "SW",
           "tempCLow": 7,
           "tempCHigh": 9,
-          "cloudFree": 20,
+          "cloudFree": 40,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "rain",
+          "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gusts 50mph+ later, arduous with wind chill; cloud extensive morning"
+          "reason": "strengthening to 40mph+ sustained, gusts 50mph+, wind chill 0 to -5C"
         },
         {
-          "sky": "cloud",
+          "sky": "partly-cloudy",
           "windMphLow": 30,
           "windMphHigh": 35,
           "gustMph": 40,
@@ -105,10 +105,10 @@
           "cloudFree": 30,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "rain",
+          "amSky": "cloud",
           "pmSky": "partly-cloudy",
-          "status": "poor",
-          "reason": "gusts 40mph, cloud base 300m coast, patchy rain, strenuous early"
+          "status": "marginal",
+          "reason": "gusts 40mph, cloud base 300m coast, patchy rain, wind chill 0 to -3C"
         }
       ]
     },
@@ -122,14 +122,14 @@
           "gustMph": 50,
           "windDir": "S",
           "tempCLow": 12,
-          "tempCHigh": 13,
+          "tempCHigh": 16,
           "cloudFree": 40,
           "freezingLevel": 9999,
           "visibility": "poor",
-          "amSky": "partly-cloudy",
+          "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "afternoon gales 40-50mph, showery downpours, thunder risk, drizzle early"
+          "reason": "afternoon gales 40-50mph, showery downpours, thunder risk, poor visibility in rain"
         },
         {
           "sky": "partly-cloudy",
@@ -139,29 +139,28 @@
           "windDir": "SW",
           "tempCLow": 8,
           "tempCHigh": 11,
-          "cloudFree": 30,
+          "cloudFree": 50,
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "morning rain clears; gusts 35-40mph high tops evening, patchy rain Drumochter"
+          "reason": "morning rain bands, gusts 35-40mph evening, near-freezing wind chill"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 30,
           "windMphHigh": 40,
-          "gustMph": 40,
           "windDir": "WSW",
           "tempCLow": 6,
-          "tempCHigh": 7,
+          "tempCHigh": 10,
           "cloudFree": 60,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "rain",
-          "pmSky": "sun",
+          "amSky": "cloud",
+          "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "arduous on Cairngorm plateau dawn, gusts 40mph, patchy rain west hills"
+          "reason": "gusty Cairngorm plateau at dawn, wind chill -2 to -5C, patchy rain west"
         }
       ]
     },
@@ -175,14 +174,14 @@
           "gustMph": 50,
           "windDir": "S",
           "tempCLow": 12,
-          "tempCHigh": 13,
+          "tempCHigh": 15,
           "cloudFree": 30,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "afternoon gales 40-50mph, heavy showers, thunder risk, cloud to low slopes"
+          "reason": "afternoon gales 40-50mph, heavy showery bursts, thunder risk, low cloud"
         },
         {
           "sky": "partly-cloudy",
@@ -192,13 +191,13 @@
           "windDir": "SW",
           "tempCLow": 8,
           "tempCHigh": 10,
-          "cloudFree": 30,
+          "cloudFree": 55,
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "morning rain, gusts 35-40mph high tops late; afternoon clears to 80% cloud-free"
+          "reason": "morning rain, gusts 35-40mph late, near-freezing wind chill on tops"
         },
         {
           "sky": "partly-cloudy",
@@ -206,14 +205,14 @@
           "windMphHigh": 35,
           "windDir": "WSW",
           "tempCLow": 6,
-          "tempCHigh": 7,
-          "cloudFree": 30,
+          "tempCHigh": 10,
+          "cloudFree": 50,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "rain",
-          "pmSky": "sun",
+          "amSky": "cloud",
+          "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "strenuous early, cloud 700-800m central highlands, easing wind by evening"
+          "reason": "gusty tops at dawn, cloud to 500m central highlands, below-freezing wind chill"
         }
       ]
     },
@@ -234,7 +233,7 @@
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "afternoon gales 40-55mph, clustered showers, thunder risk, drizzle west hills"
+          "reason": "afternoon gales 40-55mph, heavy thundery showers, poor visibility in rain"
         },
         {
           "sky": "partly-cloudy",
@@ -244,13 +243,13 @@
           "windDir": "SW",
           "tempCLow": 10,
           "tempCHigh": 11,
-          "cloudFree": 30,
+          "cloudFree": 60,
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "rain",
-          "pmSky": "sun",
+          "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "morning rain clears; gusts 35mph tops, afternoon 90% cloud-free Lothians/Cheviots"
+          "reason": "morning rain bands, gusts 35mph, wind chill 1-3C, patchy afternoon showers"
         },
         {
           "sky": "partly-cloudy",
@@ -260,17 +259,17 @@
           "windDir": "W",
           "tempCLow": 7,
           "tempCHigh": 12,
-          "cloudFree": 40,
+          "cloudFree": 55,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "rain",
+          "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "periods of rain west M74, cloud 500m Galloway, heavier showers risk late"
+          "reason": "periods of rain west of M74, gusts 35mph tops, cloud 500m Galloway"
         }
       ]
     }
   ],
-  "_generated": "2026-06-26T18:03:13.300Z",
+  "_generated": "2026-06-27T10:23:59.867Z",
   "_anchorDate": "2026-06-27"
 }
