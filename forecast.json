@@ -19,11 +19,11 @@
           "tempCHigh": 8,
           "cloudFree": 10,
           "freezingLevel": 9999,
-          "visibility": "moderate",
+          "visibility": "good",
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gusts 50mph+ on tops, low cloud from 300m, patchy rain west"
+          "reason": "gusts 50mph+ early, low cloud 300-400m west, patchy rain widespread"
         },
         {
           "sky": "rain",
@@ -34,11 +34,11 @@
           "tempCHigh": 8,
           "cloudFree": 30,
           "freezingLevel": 9999,
-          "visibility": "good",
-          "amSky": "rain",
+          "visibility": "moderate",
+          "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "showery rain, heavy bursts possible, isolated thunder risk"
+          "reason": "showery rain drifting north, heavy bursts possible, isolated thunder risk"
         },
         {
           "sky": "partly-cloudy",
@@ -54,7 +54,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "winds strengthening to 50mph+ later, heavy rain spreading from west PM"
+          "reason": "winds strengthen to 50mph+ later, heavy rain arriving from west evening"
         }
       ]
     },
@@ -71,11 +71,11 @@
           "tempCHigh": 8,
           "cloudFree": 30,
           "freezingLevel": 9999,
-          "visibility": "moderate",
+          "visibility": "good",
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gusts 40mph Ben Nevis range, rain on and off, cloud from 300m coast"
+          "reason": "gusts 40mph Ben Nevis range, cloud base 300m coast, rain on and off"
         },
         {
           "sky": "rain",
@@ -86,11 +86,11 @@
           "tempCHigh": 9,
           "cloudFree": 20,
           "freezingLevel": 9999,
-          "visibility": "poor",
+          "visibility": "moderate",
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "frequent persistent rain, locally heavy, isolated thunder, extensive cloud"
+          "reason": "frequent persistent rain AM, heavy bursts PM, cloud shrouding all high terrain"
         },
         {
           "sky": "partly-cloudy",
@@ -106,7 +106,7 @@
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "winds to 50mph+ later PM, heavy rain spreading from west, cloud capping tops"
+          "reason": "winds reach 50mph+ later, heavy rain arriving from west evening"
         }
       ]
     },
@@ -126,7 +126,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "gusty 30-40mph Cairngorm plateau, cloud breaking east, often dry"
+          "reason": "gusty 30-40mph Cairngorm plateau AM, wind chill -2 to -5C, easing later"
         },
         {
           "sky": "rain",
@@ -137,11 +137,11 @@
           "tempCHigh": 10,
           "cloudFree": 30,
           "freezingLevel": 9999,
-          "visibility": "good",
-          "amSky": "rain",
+          "visibility": "moderate",
+          "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "showery rain spreading SW, heavy bursts locally, isolated thunder risk"
+          "reason": "showery rain spreading SW, heavy bursts and isolated thunder risk PM"
         },
         {
           "sky": "partly-cloudy",
@@ -155,9 +155,9 @@
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "partly-cloudy",
-          "pmSky": "rain",
+          "pmSky": "cloud",
           "status": "marginal",
-          "reason": "dry AM with sun, but winds strengthen to 50mph risk and rain later"
+          "reason": "calm AM but winds strengthen to 40-50mph later, rain risk evening"
         }
       ]
     },
@@ -177,7 +177,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "gusty 30-35mph early, easing; mostly dry east, cloud breaks to 70% east summits"
+          "reason": "gusty 30-35mph early, wind chill near freezing; mostly dry east of A9"
         },
         {
           "sky": "rain",
@@ -188,11 +188,11 @@
           "tempCHigh": 10,
           "cloudFree": 30,
           "freezingLevel": 9999,
-          "visibility": "poor",
+          "visibility": "moderate",
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "persistent rain west AM, heavy bursts PM, isolated thunder, extensive cloud"
+          "reason": "frequent rain AM west, heavy bursts PM, isolated thunder risk, cloud all day"
         },
         {
           "sky": "partly-cloudy",
@@ -206,9 +206,9 @@
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "partly-cloudy",
-          "pmSky": "rain",
+          "pmSky": "cloud",
           "status": "marginal",
-          "reason": "dry and sunny AM, but winds to 50mph risk PM with heavy rain from west"
+          "reason": "calm AM, winds to 40-50mph later, heavy rain risk evening from west"
         }
       ]
     },
@@ -229,7 +229,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "gusts 35mph tops early, patchy rain west, cloud lifting PM, blustery later"
+          "reason": "gusts 35mph some tops AM, patchy rain west, wind chill near freezing early"
         },
         {
           "sky": "rain",
@@ -244,7 +244,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "persistent heavy rain west, heavy bursts PM, isolated thunder, poor visibility"
+          "reason": "persistent rain west, heavy bursts PM widespread, isolated thunder, poor visibility"
         },
         {
           "sky": "partly-cloudy",
@@ -260,11 +260,11 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "dry and brightening AM, but winds to 50mph risk PM with heavy rain later"
+          "reason": "calm AM, strengthening to 40-50mph later, heavy rain risk evening from west"
         }
       ]
     }
   ],
-  "_generated": "2026-06-28T17:34:35.434Z",
+  "_generated": "2026-06-29T12:42:42.841Z",
   "_anchorDate": "2026-06-29"
 }
