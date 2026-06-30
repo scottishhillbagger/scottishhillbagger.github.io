@@ -22,7 +22,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "persistent showery rain, heavy bursts inland, thunder risk, 30% cloud-free"
+          "reason": "showery rain, heavy bursts inland, thunder risk, 30% cloud-free"
         },
         {
           "sky": "rain",
@@ -38,7 +38,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "winds 50-60mph by evening, heavy rain arriving, very difficult conditions"
+          "reason": "winds to 50-60mph PM, heavy rain arriving west, deteriorating rapidly"
         },
         {
           "sky": "rain",
@@ -54,7 +54,7 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "70mph gusts dawn, 40-50mph morning, wind chill -7 to -10C on tops"
+          "reason": "gales 40-50mph, risk 70mph dawn, wind chill -7 to -10C on tops"
         }
       ]
     },
@@ -74,7 +74,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "frequent rain, heavy bursts inland, thunder and hail risk, poor visibility"
+          "reason": "frequent rain, heavy bursts inland, thunder/hail risk, poor visibility"
         },
         {
           "sky": "rain",
@@ -90,11 +90,11 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "winds 50-60mph by evening, heavy rain setting in widely, very difficult"
+          "reason": "winds to 50-60mph PM, heavy rain arriving, very difficult conditions later"
         },
         {
           "sky": "rain",
-          "windMphLow": 25,
+          "windMphLow": 40,
           "windMphHigh": 50,
           "gustMph": 70,
           "windDir": "W",
@@ -106,7 +106,7 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "70mph gusts dawn, severe morning winds, wind chill -5 to -10C on tops"
+          "reason": "gales 40-50mph, risk 70mph dawn, wind chill -5 to -10C, showery west Lochaber"
         }
       ]
     },
@@ -126,13 +126,12 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "showery rain extending north, heavy bursts, thunder risk, 30% cloud-free"
+          "reason": "showery rain, heavy bursts PM, thunder/hail risk, extensive cloud on tops"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 10,
           "windMphHigh": 50,
-          "gustMph": 50,
           "windDir": "S",
           "tempCLow": 8,
           "tempCHigh": 10,
@@ -141,12 +140,12 @@
           "visibility": "excellent",
           "amSky": "partly-cloudy",
           "pmSky": "rain",
-          "status": "marginal",
-          "reason": "fine morning, but 50mph winds and heavy rain arriving by evening"
+          "status": "poor",
+          "reason": "winds surge to 50mph+ evening, heavy rain late, dangerous deterioration"
         },
         {
-          "sky": "rain",
-          "windMphLow": 30,
+          "sky": "partly-cloudy",
+          "windMphLow": 40,
           "windMphHigh": 50,
           "gustMph": 70,
           "windDir": "W",
@@ -155,10 +154,10 @@
           "cloudFree": 60,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "rain",
+          "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "70mph gusts dawn, 40-50mph morning, wind chill -5 to -10C on tops"
+          "reason": "gales 40-50mph, risk 70mph dawn, wind chill -5 to -10C on tops"
         }
       ]
     },
@@ -178,13 +177,12 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "frequent rain, heavy bursts, thunder and hail risk, poor visibility periods"
+          "reason": "frequent rain, heavy bursts, thunder/hail risk, poor visibility in rain"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 10,
           "windMphHigh": 60,
-          "gustMph": 60,
           "windDir": "SW",
           "tempCLow": 8,
           "tempCHigh": 10,
@@ -193,12 +191,12 @@
           "visibility": "excellent",
           "amSky": "partly-cloudy",
           "pmSky": "rain",
-          "status": "marginal",
-          "reason": "fine sunny morning, but 50-60mph winds and heavy rain by evening"
+          "status": "poor",
+          "reason": "winds to 50-60mph evening, heavy rain arriving from west, rapidly dangerous"
         },
         {
-          "sky": "rain",
-          "windMphLow": 25,
+          "sky": "partly-cloudy",
+          "windMphLow": 40,
           "windMphHigh": 50,
           "gustMph": 70,
           "windDir": "W",
@@ -207,10 +205,10 @@
           "cloudFree": 70,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "rain",
+          "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "70mph gusts dawn, 40-50mph morning, wind chill -5 to -10C on tops"
+          "reason": "gales 40-50mph, risk 70mph dawn, wind chill -5 to -10C, balance challenging"
         }
       ]
     },
@@ -230,7 +228,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "frequent persistent rain, heavy bursts, thunder risk, poor visibility"
+          "reason": "frequent persistent rain, heavy bursts, thunder/hail risk, poor visibility"
         },
         {
           "sky": "partly-cloudy",
@@ -245,12 +243,12 @@
           "visibility": "good",
           "amSky": "partly-cloudy",
           "pmSky": "rain",
-          "status": "marginal",
-          "reason": "reasonable morning, but risk 60mph by evening with heavy rain from west"
+          "status": "poor",
+          "reason": "winds to 50-60mph PM, rain from west, near-freezing wind chill on tops"
         },
         {
-          "sky": "rain",
-          "windMphLow": 20,
+          "sky": "partly-cloudy",
+          "windMphLow": 30,
           "windMphHigh": 40,
           "gustMph": 70,
           "windDir": "W",
@@ -259,14 +257,14 @@
           "cloudFree": 80,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "rain",
+          "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "60-70mph gusts dawn, severe morning conditions, wind chill -5 to -8C tops"
+          "reason": "risk 60-70mph dawn, gales 30-40mph, wind chill -5 to -8C, balance challenging"
         }
       ]
     }
   ],
-  "_generated": "2026-06-29T18:21:22.502Z",
+  "_generated": "2026-06-30T11:22:09.174Z",
   "_anchorDate": "2026-06-30"
 }
