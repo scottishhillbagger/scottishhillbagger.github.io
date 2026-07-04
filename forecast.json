@@ -1,49 +1,34 @@
 {
   "days": [
-    "Sat",
     "Sun",
-    "Mon"
+    "Mon",
+    "Tue"
   ],
-  "updatedAt": "2026-07-03T15:58:00.000Z",
+  "updatedAt": "2026-07-04T16:17:00.000Z",
   "regions": [
     {
       "name": "Northwest Highlands",
       "forecast": [
         {
           "sky": "rain",
-          "windMphLow": 25,
+          "windMphLow": 10,
           "windMphHigh": 35,
-          "gustMph": 50,
           "windDir": "WSW",
-          "tempCLow": 8,
-          "tempCHigh": 9,
+          "tempCLow": 5,
+          "tempCHigh": 10,
           "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "poor",
-          "amSky": "rain",
+          "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "persistent rain, gusts 45-50mph, blanket cloud to 400m"
+          "reason": "rain sets in widely PM, cloud above 600m, poor visibility"
         },
         {
           "sky": "rain",
-          "windMphLow": 20,
-          "windMphHigh": 25,
-          "windDir": "WSW",
-          "tempCLow": 6,
-          "tempCHigh": 8,
-          "cloudFree": 10,
-          "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "cloud",
-          "pmSky": "rain",
-          "status": "poor",
-          "reason": "frequent rain all day, cloud to mid-slopes, 10% cloud-free chance"
-        },
-        {
-          "sky": "rain",
-          "windMphLow": 20,
-          "windMphHigh": 30,
+          "windMphLow": 25,
+          "windMphHigh": 35,
+          "gustMph": 50,
           "windDir": "WSW",
           "tempCLow": 7,
           "tempCHigh": 9,
@@ -53,32 +38,11 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "persistent rain, cloud base below 600m, overcast and dull throughout"
-        }
-      ]
-    },
-    {
-      "name": "West Highlands",
-      "forecast": [
-        {
-          "sky": "rain",
-          "windMphLow": 30,
-          "windMphHigh": 45,
-          "gustMph": 55,
-          "windDir": "WSW",
-          "tempCLow": 9,
-          "tempCHigh": 10,
-          "cloudFree": 10,
-          "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "rain",
-          "pmSky": "rain",
-          "status": "poor",
-          "reason": "gale-force gusts 55mph, persistent rain, blanket cloud, murky"
+          "reason": "rain all day, gusts 45-50mph high tops, extensive low cloud"
         },
         {
           "sky": "rain",
-          "windMphLow": 15,
+          "windMphLow": 25,
           "windMphHigh": 40,
           "windDir": "W",
           "tempCLow": 8,
@@ -89,7 +53,28 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "persistent rain all Munros, blanket cloud, strengthening gusts on tops"
+          "reason": "30-40mph gusty, rain and drizzle all day, cloud to glen level west"
+        }
+      ]
+    },
+    {
+      "name": "West Highlands",
+      "forecast": [
+        {
+          "sky": "rain",
+          "windMphLow": 15,
+          "windMphHigh": 40,
+          "gustMph": 50,
+          "windDir": "WSW",
+          "tempCLow": 8,
+          "tempCHigh": 9,
+          "cloudFree": 10,
+          "freezingLevel": 9999,
+          "visibility": "poor",
+          "amSky": "partly-cloudy",
+          "pmSky": "rain",
+          "status": "poor",
+          "reason": "constant rain PM, gusts to 50mph, blanket cloud middle slopes"
         },
         {
           "sky": "rain",
@@ -99,75 +84,18 @@
           "windDir": "W",
           "tempCLow": 9,
           "tempCHigh": 10,
-          "cloudFree": 10,
+          "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 50mph highest summits, rain and drizzle, cloud to glen level coast"
-        }
-      ]
-    },
-    {
-      "name": "Cairngorms & Monadhliath",
-      "forecast": [
+          "reason": "gusts 50mph highest summits, persistent rain, blanket cloud to middle slopes"
+        },
         {
           "sky": "rain",
           "windMphLow": 25,
           "windMphHigh": 40,
-          "gustMph": 55,
-          "windDir": "WSW",
-          "tempCLow": 9,
-          "tempCHigh": 12,
-          "cloudFree": 10,
-          "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "rain",
-          "pmSky": "rain",
-          "status": "poor",
-          "reason": "gusts 55mph Cairngorm plateau, persistent rain, cloud above 600-800m"
-        },
-        {
-          "sky": "rain",
-          "windMphLow": 25,
-          "windMphHigh": 35,
-          "windDir": "WSW",
-          "tempCLow": 9,
-          "tempCHigh": 12,
-          "cloudFree": 20,
-          "freezingLevel": 9999,
-          "visibility": "moderate",
-          "amSky": "cloud",
-          "pmSky": "rain",
-          "status": "poor",
-          "reason": "rain increasingly persistent afternoon, cloud above 900m rarely clearing"
-        },
-        {
-          "sky": "rain",
-          "windMphLow": 25,
-          "windMphHigh": 35,
-          "windDir": "WSW",
-          "tempCLow": 9,
-          "tempCHigh": 11,
-          "cloudFree": 20,
-          "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "rain",
-          "pmSky": "rain",
-          "status": "poor",
-          "reason": "frequent rain Monadhliath/Drumochter, cloud to mid-slopes, poor vis west"
-        }
-      ]
-    },
-    {
-      "name": "Southeastern Highlands",
-      "forecast": [
-        {
-          "sky": "rain",
-          "windMphLow": 30,
-          "windMphHigh": 45,
-          "gustMph": 55,
           "windDir": "W",
           "tempCLow": 9,
           "tempCHigh": 12,
@@ -177,7 +105,27 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 55mph+ south, persistent rain, cloud to 500-700m, gale-force"
+          "reason": "30-40mph gusty, rain and drizzle, coastal slopes shrouded all day"
+        }
+      ]
+    },
+    {
+      "name": "Cairngorms & Monadhliath",
+      "forecast": [
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 10,
+          "windMphHigh": 35,
+          "windDir": "W",
+          "tempCLow": 8,
+          "tempCHigh": 11,
+          "cloudFree": 30,
+          "freezingLevel": 9999,
+          "visibility": "good",
+          "amSky": "sun",
+          "pmSky": "rain",
+          "status": "marginal",
+          "reason": "sun AM then rain sets in PM, cloud filling widely from midday"
         },
         {
           "sky": "rain",
@@ -186,19 +134,57 @@
           "gustMph": 50,
           "windDir": "WSW",
           "tempCLow": 9,
+          "tempCHigh": 11,
+          "cloudFree": 20,
+          "freezingLevel": 9999,
+          "visibility": "poor",
+          "amSky": "rain",
+          "pmSky": "rain",
+          "status": "poor",
+          "reason": "gusts 50mph high tops, frequent rain west, extensive cloud Monadhliath"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 25,
+          "windMphHigh": 40,
+          "gustMph": 55,
+          "windDir": "W",
+          "tempCLow": 9,
           "tempCHigh": 12,
           "cloudFree": 30,
           "freezingLevel": 9999,
-          "visibility": "moderate",
-          "amSky": "partly-cloudy",
-          "pmSky": "rain",
+          "visibility": "good",
+          "amSky": "cloud",
+          "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gusts 45-50mph south, persistent rain afternoon, cloud fills in all day"
+          "reason": "gusts 55mph dawn high tops, challenging in exposure, rain west"
+        }
+      ]
+    },
+    {
+      "name": "Southeastern Highlands",
+      "forecast": [
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 15,
+          "windMphHigh": 40,
+          "gustMph": 50,
+          "windDir": "WSW",
+          "tempCLow": 8,
+          "tempCHigh": 11,
+          "cloudFree": 40,
+          "freezingLevel": 9999,
+          "visibility": "good",
+          "amSky": "sun",
+          "pmSky": "rain",
+          "status": "marginal",
+          "reason": "sunny bursts AM, rain and gusts 50mph PM, cloud fills widely afternoon"
         },
         {
           "sky": "rain",
           "windMphLow": 30,
           "windMphHigh": 40,
+          "gustMph": 50,
           "windDir": "W",
           "tempCLow": 9,
           "tempCHigh": 11,
@@ -208,7 +194,23 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "strenuous winds, cloud to 600-700m, frequent rain central highlands"
+          "reason": "gusts 45-50mph, rain central highlands all day, slopes shrouded 600-700m"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 25,
+          "windMphHigh": 45,
+          "gustMph": 60,
+          "windDir": "W",
+          "tempCLow": 9,
+          "tempCHigh": 13,
+          "cloudFree": 40,
+          "freezingLevel": 9999,
+          "visibility": "good",
+          "amSky": "cloud",
+          "pmSky": "partly-cloudy",
+          "status": "poor",
+          "reason": "gusts 60mph dawn, challenging balance and wind chill, rain drifting west"
         }
       ]
     },
@@ -217,34 +219,19 @@
       "forecast": [
         {
           "sky": "rain",
-          "windMphLow": 35,
-          "windMphHigh": 45,
-          "gustMph": 55,
-          "windDir": "W",
-          "tempCLow": 11,
-          "tempCHigh": 12,
-          "cloudFree": 10,
-          "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "rain",
-          "pmSky": "rain",
-          "status": "poor",
-          "reason": "gusts 55mph high tops, drizzle and patchy rain, cloud to 500-600m west"
-        },
-        {
-          "sky": "rain",
-          "windMphLow": 30,
-          "windMphHigh": 40,
+          "windMphLow": 25,
+          "windMphHigh": 35,
+          "gustMph": 45,
           "windDir": "W",
           "tempCLow": 10,
           "tempCHigh": 11,
           "cloudFree": 10,
           "freezingLevel": 9999,
           "visibility": "poor",
-          "amSky": "rain",
+          "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "often raining, cloud above 500m west all day, strenuous winds throughout"
+          "reason": "persistent drizzle and rain, gusts 40-45mph, shrouded above 500m west"
         },
         {
           "sky": "rain",
@@ -253,17 +240,33 @@
           "windDir": "W",
           "tempCLow": 10,
           "tempCHigh": 13,
-          "cloudFree": 10,
+          "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "persistent rain Galloway, cloud above 500m west, strenuous winds all day"
+          "reason": "30-40mph gusty, patchy rain all day, western slopes shrouded above 600m"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 20,
+          "windMphHigh": 45,
+          "gustMph": 55,
+          "windDir": "W",
+          "tempCLow": 11,
+          "tempCHigh": 15,
+          "cloudFree": 35,
+          "freezingLevel": 9999,
+          "visibility": "moderate",
+          "amSky": "cloud",
+          "pmSky": "partly-cloudy",
+          "status": "poor",
+          "reason": "gusts 55mph Lothians/east Borders early, arduous walking, patchy rain west"
         }
       ]
     }
   ],
-  "_generated": "2026-07-04T10:26:18.426Z",
-  "_anchorDate": "2026-07-04"
+  "_generated": "2026-07-04T17:17:52.082Z",
+  "_anchorDate": "2026-07-05"
 }
