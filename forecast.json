@@ -21,24 +21,24 @@
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
-          "pmSky": "cloud",
+          "pmSky": "rain",
           "status": "poor",
-          "reason": "persistent rain, gusts 45-50mph, blanket cloud, poor visibility"
+          "reason": "persistent rain, gusts 45-50mph, blanket cloud to 400m"
         },
         {
           "sky": "rain",
           "windMphLow": 20,
           "windMphHigh": 25,
           "windDir": "WSW",
-          "tempCLow": 7,
+          "tempCLow": 6,
           "tempCHigh": 8,
           "cloudFree": 10,
           "freezingLevel": 9999,
           "visibility": "poor",
-          "amSky": "rain",
+          "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "frequent rain all day, extensive cloud to middle slopes, poor visibility"
+          "reason": "frequent rain all day, cloud to mid-slopes, 10% cloud-free chance"
         },
         {
           "sky": "rain",
@@ -53,7 +53,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "persistent heavy rain, cloud below 600m, overcast and dull all day"
+          "reason": "persistent rain, cloud base below 600m, overcast and dull throughout"
         }
       ]
     },
@@ -62,7 +62,7 @@
       "forecast": [
         {
           "sky": "rain",
-          "windMphLow": 40,
+          "windMphLow": 30,
           "windMphHigh": 45,
           "gustMph": 55,
           "windDir": "WSW",
@@ -78,7 +78,7 @@
         },
         {
           "sky": "rain",
-          "windMphLow": 30,
+          "windMphLow": 15,
           "windMphHigh": 40,
           "windDir": "W",
           "tempCLow": 8,
@@ -89,7 +89,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "persistent rain all day, blanket cloud, strenuous gusts, poor visibility"
+          "reason": "persistent rain all Munros, blanket cloud, strengthening gusts on tops"
         },
         {
           "sky": "rain",
@@ -105,7 +105,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 50mph, rain and drizzle all day, blanket cloud, poor visibility"
+          "reason": "gusts 50mph highest summits, rain and drizzle, cloud to glen level coast"
         }
       ]
     },
@@ -119,14 +119,14 @@
           "gustMph": 55,
           "windDir": "WSW",
           "tempCLow": 9,
-          "tempCHigh": 11,
+          "tempCHigh": 12,
           "cloudFree": 10,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
-          "pmSky": "cloud",
+          "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 55mph Cairngorm plateau, persistent rain, extensive cloud, murky"
+          "reason": "gusts 55mph Cairngorm plateau, persistent rain, cloud above 600-800m"
         },
         {
           "sky": "rain",
@@ -141,7 +141,7 @@
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "rain increasingly persistent, high tops shrouded, strenuous winds all day"
+          "reason": "rain increasingly persistent afternoon, cloud above 900m rarely clearing"
         },
         {
           "sky": "rain",
@@ -156,7 +156,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "frequent rain, cloud to middle slopes, poor visibility west, strenuous winds"
+          "reason": "frequent rain Monadhliath/Drumochter, cloud to mid-slopes, poor vis west"
         }
       ]
     },
@@ -175,9 +175,9 @@
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
-          "pmSky": "cloud",
+          "pmSky": "rain",
           "status": "poor",
-          "reason": "gale-force gusts 55mph, persistent rain, blanket cloud above 500-700m"
+          "reason": "gusts 55mph+ south, persistent rain, cloud to 500-700m, gale-force"
         },
         {
           "sky": "rain",
@@ -193,7 +193,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 45-50mph south, rain persistent afternoon, high terrain shrouded"
+          "reason": "gusts 45-50mph south, persistent rain afternoon, cloud fills in all day"
         },
         {
           "sky": "rain",
@@ -208,7 +208,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "strenuous winds, frequent rain central highlands, cloud below 600-700m"
+          "reason": "strenuous winds, cloud to 600-700m, frequent rain central highlands"
         }
       ]
     },
@@ -226,10 +226,10 @@
           "cloudFree": 10,
           "freezingLevel": 9999,
           "visibility": "poor",
-          "amSky": "cloud",
+          "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 55mph over tops, drizzle and patchy rain, blanket cloud west"
+          "reason": "gusts 55mph high tops, drizzle and patchy rain, cloud to 500-600m west"
         },
         {
           "sky": "rain",
@@ -244,7 +244,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "frequent rain, cloud to 500m west, strenuous winds, poor visibility"
+          "reason": "often raining, cloud above 500m west all day, strenuous winds throughout"
         },
         {
           "sky": "rain",
@@ -259,11 +259,11 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "persistent rain Galloway hills, cloud to 500m west, strenuous winds"
+          "reason": "persistent rain Galloway, cloud above 500m west, strenuous winds all day"
         }
       ]
     }
   ],
-  "_generated": "2026-07-03T17:45:26.284Z",
+  "_generated": "2026-07-04T10:26:18.426Z",
   "_anchorDate": "2026-07-04"
 }
