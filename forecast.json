@@ -23,12 +23,13 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gale-force gusts 45-50mph, rain all day, blanket cloud to mid-slopes"
+          "reason": "gale-force gusts 45-50mph, rain all day, blanket cloud"
         },
         {
           "sky": "rain",
           "windMphLow": 25,
           "windMphHigh": 40,
+          "gustMph": 45,
           "windDir": "W",
           "tempCLow": 8,
           "tempCHigh": 9,
@@ -38,7 +39,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "persistent rain/drizzle, blanket cloud, strong gusty winds all day"
+          "reason": "persistent rain/drizzle, blanket cloud, strong gusts, poor visibility"
         },
         {
           "sky": "cloud",
@@ -53,7 +54,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "western hills shrouded all day, drizzly coast, only 20-50% cloud-free"
+          "reason": "extensive low cloud west, drizzly coast, only 20% cloud-free Munros"
         }
       ]
     },
@@ -74,12 +75,13 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gale-force gusts 50mph, heavy rain Lochaber, blanket cloud to lower slopes"
+          "reason": "gale-force gusts 50mph, rain/drizzle blanket cloud, Lochaber worst"
         },
         {
           "sky": "rain",
           "windMphLow": 25,
           "windMphHigh": 40,
+          "gustMph": 45,
           "windDir": "W",
           "tempCLow": 9,
           "tempCHigh": 12,
@@ -87,15 +89,14 @@
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
-          "pmSky": "cloud",
+          "pmSky": "rain",
           "status": "poor",
-          "reason": "persistent rain/drizzle, coastal slopes shrouded all day, strong gusts"
+          "reason": "persistent rain/drizzle, extensive cloud, gusts, poor visibility on tops"
         },
         {
           "sky": "cloud",
           "windMphLow": 15,
-          "windMphHigh": 25,
-          "gustMph": 35,
+          "windMphHigh": 35,
           "windDir": "SW",
           "tempCLow": 11,
           "tempCHigh": 14,
@@ -105,7 +106,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "extensive cloud most hills, drizzle west Lochaber, only 20% cloud-free"
+          "reason": "extensive cloud below 700-800m, drizzle west of Loch Linnhe, only 20% clear"
         }
       ]
     },
@@ -126,7 +127,7 @@
           "amSky": "rain",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "gale-force gusts 50mph, rain/drizzle, cloud to mid-slopes, poor visibility"
+          "reason": "gale gusts 50mph, rain/drizzle west, blanket cloud, poor visibility"
         },
         {
           "sky": "cloud",
@@ -142,7 +143,7 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gusts 55mph early, patchy rain west, cloud 400-500m Monadhliath"
+          "reason": "gusts 55mph at dawn, patchy rain, challenging exposure east Cairngorms"
         },
         {
           "sky": "partly-cloudy",
@@ -155,10 +156,10 @@
           "cloudFree": 80,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "partly-cloudy",
+          "amSky": "cloud",
           "pmSky": "sun",
           "status": "go",
-          "reason": "increasingly sunny PM, 80% cloud-free, light winds, rain unlikely"
+          "reason": "clearing clouds, 80% cloud-free PM, warm, light winds, increasingly sunny"
         }
       ]
     },
@@ -179,7 +180,7 @@
           "amSky": "rain",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "gale-force gusts 45-50mph, rain west, cloud above 600m all day"
+          "reason": "gale gusts 45-50mph, rain/drizzle, extensive cloud, poor visibility west"
         },
         {
           "sky": "cloud",
@@ -195,7 +196,7 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gusts approaching 60mph early, patchy rain, cloud low to west"
+          "reason": "gusts approaching 60mph at dawn, challenging exposure, patchy rain"
         },
         {
           "sky": "partly-cloudy",
@@ -208,10 +209,10 @@
           "cloudFree": 70,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "partly-cloudy",
+          "amSky": "cloud",
           "pmSky": "sun",
           "status": "go",
-          "reason": "increasingly sunny PM eastward, 70% cloud-free, light winds, rain unlikely"
+          "reason": "largely clearing cloud, 70% rising, warm, light winds, increasingly sunny east"
         }
       ]
     },
@@ -222,6 +223,7 @@
           "sky": "cloud",
           "windMphLow": 25,
           "windMphHigh": 40,
+          "gustMph": 45,
           "windDir": "W",
           "tempCLow": 10,
           "tempCHigh": 13,
@@ -231,7 +233,7 @@
           "amSky": "rain",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "gale-force gusts, patchy rain/drizzle, low cloud above 600m west"
+          "reason": "gale gusts over tops, patchy rain/drizzle, extensive low cloud, poor visibility"
         },
         {
           "sky": "cloud",
@@ -247,27 +249,26 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gusts 55mph Lothians/east Borders, patchy rain, arduous walking early"
+          "reason": "gusts 55mph Lothians/east Borders, arduous walking, patchy rain"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 15,
-          "windMphHigh": 20,
-          "gustMph": 25,
+          "windMphHigh": 25,
           "windDir": "SW",
           "tempCLow": 11,
           "tempCHigh": 16,
           "cloudFree": 60,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "partly-cloudy",
+          "amSky": "cloud",
           "pmSky": "sun",
           "status": "go",
-          "reason": "increasingly sunny PM, light winds, cloud clearing east, rain unlikely"
+          "reason": "mostly clearing, 90% clear east, light winds, warm, increasingly sunny"
         }
       ]
     }
   ],
-  "_generated": "2026-07-05T17:31:46.602Z",
+  "_generated": "2026-07-06T12:15:44.036Z",
   "_anchorDate": "2026-07-06"
 }
