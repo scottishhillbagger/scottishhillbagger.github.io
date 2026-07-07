@@ -4,7 +4,7 @@
     "Wed",
     "Thu"
   ],
-  "updatedAt": "2026-07-06T16:21:00.000Z",
+  "updatedAt": "2026-07-07T07:28:00.000Z",
   "regions": [
     {
       "name": "Northwest Highlands",
@@ -13,7 +13,7 @@
           "sky": "rain",
           "windMphLow": 30,
           "windMphHigh": 45,
-          "gustMph": 50,
+          "gustMph": 55,
           "windDir": "W",
           "tempCLow": 8,
           "tempCHigh": 9,
@@ -23,7 +23,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gales 40-45mph rising, persistent rain, cloud to 700-800m all day"
+          "reason": "gales 40-45mph rising evening, persistent rain, cloud to 700-800m"
         },
         {
           "sky": "cloud",
@@ -35,16 +35,15 @@
           "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "moderate",
-          "amSky": "rain",
-          "pmSky": "cloud",
+          "amSky": "cloud",
+          "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "extensive low cloud west all day, drizzly, cloud rarely above 700-800m"
+          "reason": "extensive low cloud to 700-800m west, drizzly coastal hills all day"
         },
         {
           "sky": "cloud",
           "windMphLow": 25,
           "windMphHigh": 35,
-          "gustMph": 35,
           "windDir": "SW",
           "tempCLow": 11,
           "tempCHigh": 14,
@@ -54,7 +53,7 @@
           "amSky": "cloud",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "cloud 500-1000m shrouding most tops, patchy drizzle west, gusty coastal hills"
+          "reason": "cloud 500-1000m shrouding most tops, gusty west coast, drizzle near Skye"
         }
       ]
     },
@@ -65,17 +64,17 @@
           "sky": "rain",
           "windMphLow": 35,
           "windMphHigh": 45,
-          "gustMph": 50,
+          "gustMph": 55,
           "windDir": "W",
           "tempCLow": 9,
-          "tempCHigh": 10,
+          "tempCHigh": 12,
           "cloudFree": 10,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gales 35-45mph gusts 50mph Ben Nevis, persistent rain, cloud to 800-900m"
+          "reason": "gales 35-45mph, gusts over 50mph Ben Nevis, persistent rain, cloud to 800-900m"
         },
         {
           "sky": "cloud",
@@ -90,7 +89,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "extensive low cloud west, drizzle Lochaber morning, breaks inland afternoon"
+          "reason": "extensive cloud to 700-800m coasts, drizzle west Loch Linnhe, blustery NW hills"
         },
         {
           "sky": "partly-cloudy",
@@ -105,7 +104,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "cloud banks 500-1000m, slow thinning, high tops possibly above cloud early"
+          "reason": "cloud 500-1000m caps summits, slowly thinning; sun on high tops early at least"
         }
       ]
     },
@@ -126,12 +125,12 @@
           "amSky": "rain",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "gales gusts 50-55mph, patchy rain, cloud low west, poor visibility on tops"
+          "reason": "gales 35-45mph, gusts 50-55mph at dawn, patchy rain west, cloud to 700-800m"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 15,
-          "windMphHigh": 25,
+          "windMphHigh": 30,
           "gustMph": 30,
           "windDir": "SW",
           "tempCLow": 12,
@@ -139,10 +138,10 @@
           "cloudFree": 80,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "cloud",
+          "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "cloud clearing to 80% by afternoon, increasingly sunny, light winds"
+          "reason": "cloud clearing to 80% by afternoon, increasingly sunny, light winds, warm"
         },
         {
           "sky": "partly-cloudy",
@@ -158,7 +157,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "80% cloud-free Munros, sunshine and broken cloud, light winds, no rain"
+          "reason": "80% cloud-free Munros, sunshine and broken cloud, no rain, light winds"
         }
       ]
     },
@@ -179,7 +178,7 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gusts 55-60mph dawn, patchy rain, extensive cloud to 400m west, arduous"
+          "reason": "gales 35-45mph, gusts 55-60mph at dawn, patchy rain, cloud to 400m west"
         },
         {
           "sky": "partly-cloudy",
@@ -210,7 +209,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "80% cloud-free summits, sunshine developing, no rain, light SW winds"
+          "reason": "80% cloud-free, sunshine and broken cloud, no rain, light winds easing"
         }
       ]
     },
@@ -224,14 +223,14 @@
           "gustMph": 55,
           "windDir": "W",
           "tempCLow": 11,
-          "tempCHigh": 13,
+          "tempCHigh": 15,
           "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "early gales gusts 55mph Cheviots, damp murky cloud west, patchy rain all day"
+          "reason": "gusts 55mph Lothians-Cheviots at dawn, patchy rain, cloud covers western hills"
         },
         {
           "sky": "partly-cloudy",
@@ -246,7 +245,7 @@
           "amSky": "cloud",
           "pmSky": "sun",
           "status": "go",
-          "reason": "cloud clearing through day, 90% clear east by PM, light winds, dry"
+          "reason": "cloud clears most hills by midday, increasingly sunny east, light winds, no rain"
         },
         {
           "sky": "sun",
@@ -261,11 +260,11 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "often sunny, 90% cloud-free summits, light winds, no rain, excellent visibility"
+          "reason": "90% cloud-free summits, often sunny, light winds, excellent visibility, warm"
         }
       ]
     }
   ],
-  "_generated": "2026-07-06T18:20:22.045Z",
+  "_generated": "2026-07-07T11:19:36.003Z",
   "_anchorDate": "2026-07-07"
 }
