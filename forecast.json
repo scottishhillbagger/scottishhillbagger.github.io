@@ -22,7 +22,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "extensive low cloud west, drizzle, poor visibility, gusty 35mph"
+          "reason": "blanket low cloud west, drizzle, poor visibility, gusts 35mph"
         },
         {
           "sky": "cloud",
@@ -38,7 +38,7 @@
           "amSky": "cloud",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "blanket fog west coast, gusts 40mph, poor visibility most hills"
+          "reason": "blanket fog west coast, gusts 40mph, mostly foggy summits, poor visibility"
         },
         {
           "sky": "partly-cloudy",
@@ -53,7 +53,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "some low cloud persisting, patchy drizzle Skye coast, risk of rain"
+          "reason": "varied low cloud, patchy drizzle Skye coast, improving but uncertain"
         }
       ]
     },
@@ -88,13 +88,13 @@
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "cloud",
-          "pmSky": "cloud",
+          "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "blanket fog coastal areas Mull-Knoydart, gusts 30mph, poor visibility"
+          "reason": "blanket fog Mull to Knoydart persisting, gusts 30mph Ben Nevis, poor visibility"
         },
         {
           "sky": "cloud",
-          "windMphLow": 10,
+          "windMphLow": 15,
           "windMphHigh": 20,
           "windDir": "SW",
           "tempCLow": 10,
@@ -103,9 +103,9 @@
           "freezingLevel": 9999,
           "visibility": "moderate",
           "amSky": "cloud",
-          "pmSky": "cloud",
+          "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "risk extensive low cloud Lochaber-Mull, patchy drizzle, odd heavier burst"
+          "reason": "risk extensive low cloud Lochaber to Mull, patchy drizzle, odd heavier burst"
         }
       ]
     },
@@ -126,7 +126,7 @@
           "amSky": "cloud",
           "pmSky": "sun",
           "status": "go",
-          "reason": "cloud clears to warm sun afternoon, gusty early east Cairngorms only"
+          "reason": "cloud clears to warm sun afternoon, gusty 30mph early east Cairngorms only"
         },
         {
           "sky": "partly-cloudy",
@@ -142,7 +142,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "sunshine and broken cloud, 80% cloud-free, no rain, mostly light winds"
+          "reason": "sunshine and broken cloud, 80% cloud-free, gusts 30mph early higher Cairngorms"
         },
         {
           "sky": "partly-cloudy",
@@ -157,7 +157,7 @@
           "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "risk isolated thundery downpour later, cloud filling north by evening"
+          "reason": "isolated thundery downpour risk PM, cloud filling north by evening"
         }
       ]
     },
@@ -178,7 +178,7 @@
           "amSky": "cloud",
           "pmSky": "sun",
           "status": "go",
-          "reason": "cloud clears to warm sun, gusty east briefly at dawn, good visibility"
+          "reason": "cloud clears to warm sun east by midday, gusts 30mph early morning only"
         },
         {
           "sky": "partly-cloudy",
@@ -190,10 +190,10 @@
           "cloudFree": 50,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "cloud",
+          "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "sunshine and broken cloud clearing, no rain, 80% cloud-free east afternoon"
+          "reason": "sunshine and broken cloud, 80% clear eastern hills, no rain expected"
         },
         {
           "sky": "sun",
@@ -208,7 +208,7 @@
           "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "mostly fine but late isolated thundery downpour risk, humid"
+          "reason": "isolated thundery downpour risk PM, otherwise sunny, near-calm winds"
         }
       ]
     },
@@ -229,7 +229,7 @@
           "amSky": "cloud",
           "pmSky": "sun",
           "status": "go",
-          "reason": "cloud clears west to warm sun, light breeze, very good visibility afternoon"
+          "reason": "cloud clears west to warm sun, above 90% clear by afternoon, light breeze"
         },
         {
           "sky": "sun",
@@ -244,7 +244,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "often sunny, 90% cloud-free, no rain, excellent visibility, light winds PM"
+          "reason": "often sunny, 90% cloud-free, no rain, visibility excellent, light winds PM"
         },
         {
           "sky": "sun",
@@ -253,17 +253,17 @@
           "windDir": "E",
           "tempCLow": 15,
           "tempCHigh": 19,
-          "cloudFree": 95,
+          "cloudFree": 99,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "strong sunshine, hills clear, but low risk isolated thundery downpour later"
+          "reason": "strong sunshine but low isolated thunderstorm risk PM, very warm and humid"
         }
       ]
     }
   ],
-  "_generated": "2026-07-07T18:17:31.774Z",
+  "_generated": "2026-07-08T10:30:56.824Z",
   "_anchorDate": "2026-07-08"
 }
