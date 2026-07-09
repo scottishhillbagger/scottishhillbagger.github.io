@@ -23,7 +23,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "gusts 40-45mph west coast, Cuillin fog all day, 10% cloud-free chance"
+          "reason": "persistent blanket fog Cuillin, west coast tops capped, gusts 40-45mph"
         },
         {
           "sky": "partly-cloudy",
@@ -38,7 +38,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "patchy rain, low cloud shrouding hills, risk heavier bursts, weak sun"
+          "reason": "patchy drizzle, low cloud may shroud hills, steadier rain risk with heavier bursts"
         },
         {
           "sky": "cloud",
@@ -53,7 +53,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "largely overcast, poor visibility high terrain, cloud rarely breaking east hills"
+          "reason": "largely overcast, poor visibility on high terrain, patchy rain, bases rarely above 700m east"
         }
       ]
     },
@@ -74,7 +74,7 @@
           "amSky": "cloud",
           "pmSky": "sun",
           "status": "go",
-          "reason": "high summits above cloud inversion, warm, gusts 30mph limited to Lochaber coast"
+          "reason": "high summits above broken cloud layer, warm sunny above inversion, gusts 30mph"
         },
         {
           "sky": "cloud",
@@ -82,14 +82,14 @@
           "windMphHigh": 15,
           "windDir": "SW",
           "tempCLow": 10,
-          "tempCHigh": 16,
+          "tempCHigh": 15,
           "cloudFree": 30,
           "freezingLevel": 9999,
           "visibility": "moderate",
           "amSky": "cloud",
           "pmSky": "cloud",
           "status": "marginal",
-          "reason": "risk covering many hills, drizzle coastal, odd heavier burst central highlands later"
+          "reason": "fairly extensive low cloud, risk covering many hills, odd heavier burst central highlands PM"
         },
         {
           "sky": "cloud",
@@ -100,11 +100,11 @@
           "tempCHigh": 14,
           "cloudFree": 20,
           "freezingLevel": 9999,
-          "visibility": "moderate",
+          "visibility": "poor",
           "amSky": "cloud",
-          "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "reason": "largely overcast, cloud bases below 800m inland, patchy rain Ben Nevis/Glencoe"
+          "pmSky": "cloud",
+          "status": "poor",
+          "reason": "largely overcast, bases unlikely above 800m inland, poor visibility high terrain, patchy rain"
         }
       ]
     },
@@ -125,7 +125,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "mostly sunny, no rain, 80% cloud-free Cairngorm plateau, warm afternoon"
+          "reason": "mostly sunny becoming very warm, Cairngorm summits above scattered cloud banks"
         },
         {
           "sky": "partly-cloudy",
@@ -137,13 +137,13 @@
           "cloudFree": 80,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "sun",
+          "amSky": "partly-cloudy",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "risk isolated thundery downpour late, cloud forming north Cairngorms afternoon"
+          "reason": "risk isolated thundery downpour PM, cloud forming northern Cairngorms later"
         },
         {
-          "sky": "cloud",
+          "sky": "rain",
           "windMphLow": 10,
           "windMphHigh": 10,
           "windDir": "E",
@@ -153,9 +153,9 @@
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
-          "pmSky": "cloud",
+          "pmSky": "rain",
           "status": "poor",
-          "reason": "extensive cloud to glen level, periods of rain, risk heavy bursts, 10% cloud-free"
+          "reason": "extensive cloud to low slopes, periods of rain with risk of heavy bursts, poor visibility summits"
         }
       ]
     },
@@ -175,7 +175,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "mostly sunny becoming very warm, no rain, 80% cloud-free eastern hills"
+          "reason": "mostly sunny becoming very warm, eastern summits largely clear, light winds"
         },
         {
           "sky": "sun",
@@ -190,10 +190,10 @@
           "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "mostly clear and sunny but risk isolated thundery downpour late in day"
+          "reason": "mostly clear and very warm, low risk isolated thundery downpour late PM"
         },
         {
-          "sky": "cloud",
+          "sky": "rain",
           "windMphLow": 10,
           "windMphHigh": 15,
           "windDir": "E",
@@ -203,9 +203,9 @@
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
-          "pmSky": "cloud",
+          "pmSky": "rain",
           "status": "poor",
-          "reason": "fog into glens, extensive cloud, periods rain, risk heavy bursts, poor visibility"
+          "reason": "extensive cloud to low slopes, periods of rain with heavy burst risk, poor visibility summits"
         }
       ]
     },
@@ -225,7 +225,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "clears to very warm sun by midday, no rain, light winds, excellent visibility"
+          "reason": "early cloud clears by midday, very warm sunshine, summits 90% cloud-free, light winds"
         },
         {
           "sky": "sun",
@@ -240,7 +240,7 @@
           "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "strong sunshine, mostly clear, but low risk isolated thundery downpour late"
+          "reason": "strong sunshine and very warm, low risk isolated thundery downpour late PM"
         },
         {
           "sky": "partly-cloudy",
@@ -255,11 +255,11 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "east hills shrouded in cloud above 500-600m, risk steady rain, foggy east"
+          "reason": "cloud shrouds east slopes above 500-600m all day, patchy rain, foggy high terrain east"
         }
       ]
     }
   ],
-  "_generated": "2026-07-08T17:51:07.022Z",
+  "_generated": "2026-07-09T11:19:28.699Z",
   "_anchorDate": "2026-07-09"
 }
