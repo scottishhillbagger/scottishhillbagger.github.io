@@ -22,7 +22,7 @@
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "frequent heavy rain, thundery bursts, cloud from lower slopes"
+          "reason": "frequent heavy rain, thunder risk, hill cloud extensive from lower slopes"
         },
         {
           "sky": "cloud",
@@ -33,11 +33,11 @@
           "tempCHigh": 11,
           "cloudFree": 30,
           "freezingLevel": 9999,
-          "visibility": "moderate",
+          "visibility": "poor",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "extensive cloud to middle slopes, poor visibility on high terrain"
+          "reason": "largely overcast, poor visibility on high terrain, cloud extensive to middle slopes"
         },
         {
           "sky": "partly-cloudy",
@@ -46,13 +46,13 @@
           "windDir": "SE",
           "tempCLow": 9,
           "tempCHigh": 14,
-          "cloudFree": 45,
+          "cloudFree": 40,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "extensive cloud at dawn, fog Ben Wyvis to Easter Ross, slow to clear east"
+          "reason": "fog and cloud extensive at dawn, clears west only; east stays cloudy all day"
         }
       ]
     },
@@ -61,7 +61,7 @@
       "forecast": [
         {
           "sky": "partly-cloudy",
-          "windMphLow": 10,
+          "windMphLow": 5,
           "windMphHigh": 15,
           "windDir": "E",
           "tempCLow": 10,
@@ -69,10 +69,10 @@
           "cloudFree": 50,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "rain",
+          "amSky": "partly-cloudy",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "drizzle and rain northern hills Lochaber, pop-up bursts inland late"
+          "reason": "drizzle and rain northern hills; sunny south, cloud extensive Lochaber coast"
         },
         {
           "sky": "cloud",
@@ -83,11 +83,11 @@
           "tempCHigh": 14,
           "cloudFree": 20,
           "freezingLevel": 9999,
-          "visibility": "moderate",
+          "visibility": "poor",
           "amSky": "cloud",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "extensive cloud bases below 800m inland, poor visibility high terrain all day"
+          "reason": "largely overcast, cloud extensive from lower slopes, poor visibility on high terrain"
         },
         {
           "sky": "partly-cloudy",
@@ -102,7 +102,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "extensive cloud at dawn, fog in glens inland, slow clearing west only"
+          "reason": "fog and extensive cloud at dawn, clearing western summits only; dry but cloudy inland"
         }
       ]
     },
@@ -110,19 +110,19 @@
       "name": "Cairngorms & Monadhliath",
       "forecast": [
         {
-          "sky": "partly-cloudy",
+          "sky": "storm",
           "windMphLow": 10,
           "windMphHigh": 10,
           "windDir": "E",
           "tempCLow": 14,
           "tempCHigh": 17,
-          "cloudFree": 80,
+          "cloudFree": 55,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "sun",
           "pmSky": "storm",
-          "status": "marginal",
-          "reason": "thunderstorms with notable gusts forming mid-afternoon onward"
+          "status": "poor",
+          "reason": "thundery downpours forming mid-afternoon, notable gusts around storms, heavy rain"
         },
         {
           "sky": "rain",
@@ -137,7 +137,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "drizzle and rain all day, cloud to lower slopes, poor visibility on tops"
+          "reason": "drizzle and rain most of day, cloud to middle/lower slopes, poor visibility on tops"
         },
         {
           "sky": "partly-cloudy",
@@ -148,11 +148,11 @@
           "tempCHigh": 11,
           "cloudFree": 40,
           "freezingLevel": 9999,
-          "visibility": "moderate",
+          "visibility": "good",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "morning drizzle, extensive cloud, high Cairngorm plateau may not clear"
+          "reason": "drizzle on summits AM, high Cairngorm plateau may not clear; mostly dry PM"
         }
       ]
     },
@@ -160,19 +160,19 @@
       "name": "Southeastern Highlands",
       "forecast": [
         {
-          "sky": "partly-cloudy",
+          "sky": "storm",
           "windMphLow": 10,
           "windMphHigh": 10,
           "windDir": "E",
           "tempCLow": 14,
           "tempCHigh": 18,
-          "cloudFree": 90,
+          "cloudFree": 75,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "sun",
           "pmSky": "storm",
-          "status": "marginal",
-          "reason": "thundery downpours forming mid-afternoon, notable gusts around storms"
+          "status": "poor",
+          "reason": "thundery downpours mid-afternoon onward, notable gusts around storms, heavy rain"
         },
         {
           "sky": "rain",
@@ -187,7 +187,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "drizzle and rain with local heavy bursts, fog into glens, poor visibility tops"
+          "reason": "drizzle and rain all day, fog into glens, cloud extensive to low slopes, poor visibility"
         },
         {
           "sky": "partly-cloudy",
@@ -198,11 +198,11 @@
           "tempCHigh": 12,
           "cloudFree": 30,
           "freezingLevel": 9999,
-          "visibility": "moderate",
+          "visibility": "good",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "morning drizzle, breaks rare east of A9, cloud to lower slopes at dawn"
+          "reason": "drizzle AM, east of A9 breaks above 800m rare all day; central hills clearer PM"
         }
       ]
     },
@@ -222,7 +222,7 @@
           "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "go",
-          "reason": "mostly sunny, mountains free of cloud, only isolated thundery shower risk late"
+          "reason": "mostly sunny, summits clear, only isolated thundery shower risk late afternoon"
         },
         {
           "sky": "partly-cloudy",
@@ -237,7 +237,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "cloud shrouds eastern slopes above 500-600m, foggy east, steady rain risk"
+          "reason": "east terrain shrouded above 500-600m all day, foggy on high terrain, patchy rain"
         },
         {
           "sky": "partly-cloudy",
@@ -253,11 +253,11 @@
           "amSky": "cloud",
           "pmSky": "sun",
           "status": "go",
-          "reason": "likely dry, most summits clearing afternoon, gusts 20mph over high tops early"
+          "reason": "mostly clearing by afternoon, gusts 20mph early, dry, good visibility west"
         }
       ]
     }
   ],
-  "_generated": "2026-07-09T18:07:24.643Z",
+  "_generated": "2026-07-10T11:20:03.414Z",
   "_anchorDate": "2026-07-10"
 }
