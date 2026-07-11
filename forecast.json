@@ -11,7 +11,7 @@
       "forecast": [
         {
           "sky": "cloud",
-          "windMphLow": 5,
+          "windMphLow": 10,
           "windMphHigh": 10,
           "windDir": "E",
           "tempCLow": 9,
@@ -21,12 +21,12 @@
           "visibility": "poor",
           "amSky": "cloud",
           "pmSky": "cloud",
-          "status": "poor",
-          "reason": "mostly cloudy, poor visibility high terrain, drizzle east and south"
+          "status": "marginal",
+          "reason": "extensive cloud, patchy rain east/south, poor visibility high tops"
         },
         {
           "sky": "partly-cloudy",
-          "windMphLow": 5,
+          "windMphLow": 10,
           "windMphHigh": 10,
           "windDir": "SE",
           "tempCLow": 9,
@@ -37,11 +37,11 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "fog lingering Ben Wyvis to Ben Hope, slow clearing east; better west"
+          "reason": "fog lingers Ben Wyvis to Ben Hope, cloud slow to clear east"
         },
         {
           "sky": "sun",
-          "windMphLow": 5,
+          "windMphLow": 10,
           "windMphHigh": 10,
           "windDir": "SE",
           "tempCLow": 10,
@@ -52,7 +52,7 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "mostly sunny, summits above cloud banks, excellent visibility"
+          "reason": "mostly sunny, excellent visibility, light winds, 80% cloud-free Munros"
         }
       ]
     },
@@ -71,8 +71,8 @@
           "visibility": "poor",
           "amSky": "cloud",
           "pmSky": "cloud",
-          "status": "poor",
-          "reason": "mostly cloudy, bases below 800m, poor visibility on high terrain"
+          "status": "marginal",
+          "reason": "mostly cloudy, patchy rain Ben Nevis/Glencoe, poor visibility high terrain"
         },
         {
           "sky": "partly-cloudy",
@@ -87,7 +87,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "fog in glens at dawn, slow inland clearing; better west coast afternoon"
+          "reason": "fog in glens at dawn, slow to clear inland, only 20% cloud-free early"
         },
         {
           "sky": "sun",
@@ -102,7 +102,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "mostly sunny, summits above cloud, nuisance gusts southern groups"
+          "reason": "mostly sunny, excellent visibility, nuisance gusts southern groups only"
         }
       ]
     },
@@ -120,13 +120,13 @@
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "cloud",
-          "pmSky": "rain",
+          "pmSky": "cloud",
           "status": "poor",
-          "reason": "foggy high terrain, thundery showers risk over Cairngorms, sudden strong gusts"
+          "reason": "fog high terrain, thundery showers risk Cairngorms, sudden strong gusts"
         },
         {
           "sky": "partly-cloudy",
-          "windMphLow": 5,
+          "windMphLow": 10,
           "windMphHigh": 10,
           "windDir": "SE",
           "tempCLow": 10,
@@ -137,11 +137,11 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "Cairngorm plateau may not clear, slow breaking cloud, misty start"
+          "reason": "Cairngorm plateau may not clear, drizzle lingering summits morning"
         },
         {
           "sky": "partly-cloudy",
-          "windMphLow": 5,
+          "windMphLow": 10,
           "windMphHigh": 10,
           "windDir": "E",
           "tempCLow": 9,
@@ -149,10 +149,10 @@
           "cloudFree": 90,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "cloud",
+          "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "plateau above cloud banks, clearing to sunshine, very good visibility"
+          "reason": "plateau above cloud, 90%+ cloud-free, very good visibility, light winds"
         }
       ]
     },
@@ -170,9 +170,9 @@
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "cloud",
-          "pmSky": "rain",
+          "pmSky": "cloud",
           "status": "poor",
-          "reason": "foggy high terrain east of A9, thundery shower risk, sudden strong gusts"
+          "reason": "fog high terrain, thundery shower risk eastern hills, sudden strong gusts"
         },
         {
           "sky": "partly-cloudy",
@@ -187,7 +187,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "east of A9 slow to clear, fog in glens at dawn, cloudiest near east lowlands"
+          "reason": "east of A9 slow to clear, fog in glens at dawn, only 20% cloud-free early"
         },
         {
           "sky": "partly-cloudy",
@@ -199,10 +199,10 @@
           "cloudFree": 80,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "cloud",
+          "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "clearing to sun, patchy banks remain, nuisance gusts southern hills"
+          "reason": "rising to 80% cloud-free, very good visibility, nuisance gusts southern hills"
         }
       ]
     },
@@ -213,16 +213,16 @@
           "sky": "storm",
           "windMphLow": 10,
           "windMphHigh": 15,
-          "windDir": "SE",
+          "windDir": "E",
           "tempCLow": 14,
           "tempCHigh": 18,
-          "cloudFree": 40,
+          "cloudFree": 50,
           "freezingLevel": 9999,
           "visibility": "moderate",
           "amSky": "partly-cloudy",
           "pmSky": "storm",
           "status": "poor",
-          "reason": "rising risk thunderstorms, torrential downpours, sudden strong gusts widely"
+          "reason": "rising risk thunderstorms, heavy showers, sudden strong gusts, east shrouded"
         },
         {
           "sky": "partly-cloudy",
@@ -232,13 +232,13 @@
           "windDir": "E",
           "tempCLow": 12,
           "tempCHigh": 15,
-          "cloudFree": 70,
+          "cloudFree": 60,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "cloud",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "extensive cloud east of M74 at dawn, gusts 20mph early; mostly clearing afternoon"
+          "reason": "extensive cloud east at dawn, gusts 20mph high tops, mostly clearing afternoon"
         },
         {
           "sky": "sun",
@@ -253,11 +253,11 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "sunshine extensive west, sea fog east clears by midday, very good visibility"
+          "reason": "rising to 90% cloud-free, sunshine extensive west, very good visibility"
         }
       ]
     }
   ],
-  "_generated": "2026-07-10T17:59:25.582Z",
+  "_generated": "2026-07-11T09:49:34.779Z",
   "_anchorDate": "2026-07-11"
 }
