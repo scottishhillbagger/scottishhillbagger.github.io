@@ -15,14 +15,14 @@
           "windMphHigh": 10,
           "windDir": "SE",
           "tempCLow": 8,
-          "tempCHigh": 11,
+          "tempCHigh": 14,
           "cloudFree": 30,
           "freezingLevel": 9999,
           "visibility": "moderate",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "Extensive low cloud AM, poor visibility east, improving slowly west"
+          "reason": "extensive low cloud AM, fog inland/east, slow clearing to 70% PM"
         },
         {
           "sky": "sun",
@@ -30,14 +30,14 @@
           "windMphHigh": 10,
           "windDir": "SE",
           "tempCLow": 10,
-          "tempCHigh": 15,
+          "tempCHigh": 16,
           "cloudFree": 80,
           "freezingLevel": 9999,
           "visibility": "excellent",
-          "amSky": "partly-cloudy",
+          "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "Mostly sunny, excellent visibility, light winds, Munros largely clear"
+          "reason": "mostly sunny, summits above cloud, excellent visibility, light winds"
         },
         {
           "sky": "sun",
@@ -53,7 +53,7 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "Strong sunshine, tops widely clear, excellent visibility, light winds"
+          "reason": "strong sunshine, tops widely clear, excellent visibility, light winds"
         }
       ]
     },
@@ -68,13 +68,13 @@
           "windDir": "ESE",
           "tempCLow": 10,
           "tempCHigh": 14,
-          "cloudFree": 30,
+          "cloudFree": 25,
           "freezingLevel": 9999,
           "visibility": "moderate",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "Extensive low cloud and drizzle AM inland, poor visibility, slow clearing"
+          "reason": "extensive low cloud and fog AM inland, slow clearing to 70% PM"
         },
         {
           "sky": "sun",
@@ -82,14 +82,14 @@
           "windMphHigh": 15,
           "windDir": "E",
           "tempCLow": 10,
-          "tempCHigh": 15,
+          "tempCHigh": 16,
           "cloudFree": 80,
           "freezingLevel": 9999,
           "visibility": "excellent",
-          "amSky": "partly-cloudy",
+          "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "Mostly sunny, summits above cloud, excellent visibility, light winds"
+          "reason": "mostly sunny, summits above cloud, excellent visibility, light winds"
         },
         {
           "sky": "sun",
@@ -104,7 +104,7 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "Strong sunshine, hills clear, excellent visibility; breezier Arran and Clyde"
+          "reason": "strong sunshine, hills clear, 20-25mph breezier on southern hills and Arran"
         }
       ]
     },
@@ -124,7 +124,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "Overcast misty start, poor visibility, Cairngorm plateau may not clear all day"
+          "reason": "extensive cloud and fog AM, Cairngorm plateau may not clear, poor visibility"
         },
         {
           "sky": "partly-cloudy",
@@ -136,10 +136,10 @@
           "cloudFree": 90,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "partly-cloudy",
+          "amSky": "cloud",
           "pmSky": "sun",
           "status": "go",
-          "reason": "Cairngorm plateau above cloud, mostly clear afternoon, very good visibility"
+          "reason": "plateau above cloud layer, cloud lifts through day, very good visibility"
         },
         {
           "sky": "sun",
@@ -154,7 +154,7 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "Strong sunshine, tops clear all day, excellent visibility, light winds"
+          "reason": "strong sunshine, tops clear all day, excellent visibility, light winds"
         }
       ]
     },
@@ -169,13 +169,13 @@
           "windDir": "ESE",
           "tempCLow": 10,
           "tempCHigh": 13,
-          "cloudFree": 20,
+          "cloudFree": 15,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "Extensive low cloud, poor visibility, misty overcast start; slow improvement east"
+          "reason": "extensive cloud and fog AM east, patches lingering high terrain most of day"
         },
         {
           "sky": "partly-cloudy",
@@ -187,10 +187,10 @@
           "cloudFree": 80,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "partly-cloudy",
+          "amSky": "cloud",
           "pmSky": "sun",
           "status": "go",
-          "reason": "Patchwork cloud and sunshine, mostly clear PM, very good visibility"
+          "reason": "cloud breaks through day to 80% clear, very good visibility, light winds"
         },
         {
           "sky": "sun",
@@ -205,7 +205,7 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "Strong sunshine, tops clear all day, excellent visibility, light to moderate winds"
+          "reason": "strong sunshine, tops clear all day, excellent visibility, breezy near Callander"
         }
       ]
     },
@@ -226,7 +226,7 @@
           "amSky": "cloud",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "Extensive cloud east AM, gusts 20-25mph tops, misty start; clears to sunshine"
+          "reason": "cloud clears east slowly, gusts 20-25mph over tops, 90% clear only by afternoon"
         },
         {
           "sky": "sun",
@@ -241,7 +241,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "Sunshine increasingly extensive, summits clear, nuisance gusts over high terrain"
+          "reason": "sunshine extensive west, breaks east by midday, nuisance gusts over high tops"
         },
         {
           "sky": "partly-cloudy",
@@ -251,17 +251,17 @@
           "windDir": "E",
           "tempCLow": 13,
           "tempCHigh": 18,
-          "cloudFree": 60,
+          "cloudFree": 65,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "cloud",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "Low cloud/fog eastern hills AM, gusts 30mph upper slopes, clears midday"
+          "reason": "fog/low cloud eastern hills AM, gusts 30mph upper slopes, clears by midday"
         }
       ]
     }
   ],
-  "_generated": "2026-07-11T17:13:52.329Z",
+  "_generated": "2026-07-12T10:03:27.093Z",
   "_anchorDate": "2026-07-12"
 }
