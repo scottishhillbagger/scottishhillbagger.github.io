@@ -22,7 +22,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "patchy cloud clears, warm sunshine, light wind, 90%+ clear"
+          "reason": "patchy cloud clears, warm sunshine, negligible wind all day"
         },
         {
           "sky": "sun",
@@ -32,13 +32,13 @@
           "windDir": "SE",
           "tempCLow": 14,
           "tempCHigh": 17,
-          "cloudFree": 92,
+          "cloudFree": 90,
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "strong sunshine, tops clear all day, light winds, excellent visibility"
+          "reason": "strong sunshine, tops clear all day, light winds"
         },
         {
           "sky": "sun",
@@ -47,13 +47,13 @@
           "windDir": "SE",
           "tempCLow": 16,
           "tempCHigh": 19,
-          "cloudFree": 98,
+          "cloudFree": 95,
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "strong sunshine all day, mountains clear, negligible wind, practically certain"
+          "reason": "strong sunshine all day, mountains clear, negligible wind"
         }
       ]
     },
@@ -74,7 +74,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "patchy cloud clears, warm sunshine, gusts 20-25mph southern hills"
+          "reason": "patchy cloud clears, warm sunshine, gusts 20-25mph southern tops"
         },
         {
           "sky": "sun",
@@ -83,13 +83,13 @@
           "windDir": "E",
           "tempCLow": 14,
           "tempCHigh": 17,
-          "cloudFree": 92,
+          "cloudFree": 90,
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "strong sunshine, hills clear all day, breezy Arran and near Clyde"
+          "reason": "strong sunshine, hills clear, breezier 20-25mph Arran and Clyde"
         },
         {
           "sky": "sun",
@@ -99,13 +99,13 @@
           "windDir": "E",
           "tempCLow": 16,
           "tempCHigh": 19,
-          "cloudFree": 98,
+          "cloudFree": 95,
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "strong sunshine all day, mountains clear, gusty 20mph Arran only"
+          "reason": "strong sunshine, mountains clear, gusty 20mph Arran/Clyde tops"
         }
       ]
     },
@@ -134,13 +134,13 @@
           "windDir": "E",
           "tempCLow": 14,
           "tempCHigh": 17,
-          "cloudFree": 92,
+          "cloudFree": 90,
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "strong sunshine, tops clear all day, light easterly, excellent visibility"
+          "reason": "strong sunshine, tops clear all day, light easterly wind"
         },
         {
           "sky": "sun",
@@ -149,13 +149,13 @@
           "windDir": "SE",
           "tempCLow": 16,
           "tempCHigh": 19,
-          "cloudFree": 98,
+          "cloudFree": 95,
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "strong sunshine all day, mountains clear, negligible wind, practically certain"
+          "reason": "strong sunshine all day, mountains clear, negligible wind"
         }
       ]
     },
@@ -176,7 +176,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "patchy cloud clears by mid-morning, warm sunshine, nuisance gusts 20mph south"
+          "reason": "patchy cloud clears mid-morning, warm sunshine, gusts 20mph south"
         },
         {
           "sky": "sun",
@@ -185,13 +185,13 @@
           "windDir": "E",
           "tempCLow": 14,
           "tempCHigh": 17,
-          "cloudFree": 92,
+          "cloudFree": 90,
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "strong sunshine, tops clear all day, breezy near Callander, no rain"
+          "reason": "strong sunshine, tops clear, breezier near Callander/central belt"
         },
         {
           "sky": "sun",
@@ -201,13 +201,13 @@
           "windDir": "E",
           "tempCLow": 16,
           "tempCHigh": 19,
-          "cloudFree": 98,
+          "cloudFree": 95,
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "strong sunshine all day, mountains clear, gusty 20mph central belt hills only"
+          "reason": "strong sunshine, mountains clear, gusty 20mph southern central belt hills"
         }
       ]
     },
@@ -228,7 +228,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "east fog clears by midday, warm sunshine, gusts 20-25mph over tops"
+          "reason": "east cloud clears by midday, warm sunshine, gusts 20-25mph on tops"
         },
         {
           "sky": "partly-cloudy",
@@ -236,15 +236,15 @@
           "windMphHigh": 25,
           "gustMph": 30,
           "windDir": "E",
-          "tempCLow": 10,
+          "tempCLow": 13,
           "tempCHigh": 18,
           "cloudFree": 50,
           "freezingLevel": 9999,
-          "visibility": "moderate",
+          "visibility": "good",
           "amSky": "cloud",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "low cloud fog east AM, 50% cloud-free rising 90%, gusts 30mph, fine drizzle risk"
+          "reason": "low cloud/fog east hills AM, gusts 30mph, clears by midday"
         },
         {
           "sky": "partly-cloudy",
@@ -254,17 +254,17 @@
           "windDir": "E",
           "tempCLow": 14,
           "tempCHigh": 18,
-          "cloudFree": 92,
+          "cloudFree": 90,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "early east fog clears mid-morning, sunshine all day west, gusty 25mph in places"
+          "reason": "early fog east clears mid-morning, sunshine, gusts 25mph some spots"
         }
       ]
     }
   ],
-  "_generated": "2026-07-12T17:15:09.471Z",
+  "_generated": "2026-07-13T11:29:35.899Z",
   "_anchorDate": "2026-07-13"
 }
