@@ -17,13 +17,13 @@
           "windDir": "SE",
           "tempCLow": 15,
           "tempCHigh": 17,
-          "cloudFree": 95,
+          "cloudFree": 93,
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "extensive sunshine, mountains free of cloud, light wind"
+          "reason": "warm sunshine, mountains clear, light wind, early fog disperses"
         },
         {
           "sky": "sun",
@@ -38,7 +38,7 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "strong sunshine all day, mountains clear, negligible wind"
+          "reason": "strong sunshine all day, negligible wind, mountains practically certain clear"
         },
         {
           "sky": "sun",
@@ -53,7 +53,7 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "sunshine dawn to dusk, mountains widely clear, negligible wind"
+          "reason": "sunshine dawn to dusk, negligible wind, mountains widely clear"
         }
       ]
     },
@@ -63,18 +63,18 @@
         {
           "sky": "sun",
           "windMphLow": 10,
-          "windMphHigh": 25,
+          "windMphHigh": 20,
           "gustMph": 25,
           "windDir": "E",
           "tempCLow": 15,
           "tempCHigh": 17,
-          "cloudFree": 95,
+          "cloudFree": 93,
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "warm sunshine, hills clear, fairly light wind, gusty south"
+          "reason": "warm sunshine, hills clear, light-moderate wind, gusts 20-25mph south"
         },
         {
           "sky": "sun",
@@ -90,7 +90,7 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "strong sunshine, mountains clear, gusts 20mph Arran area only"
+          "reason": "strong sunshine, mountains clear, light wind, gusty 20mph Arran"
         },
         {
           "sky": "sun",
@@ -106,7 +106,7 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "sunshine dawn to dusk, hills clear, light wind throughout"
+          "reason": "sunshine dawn to dusk, hills clear, light wind, gusts 15-20mph southern hills"
         }
       ]
     },
@@ -121,13 +121,13 @@
           "windDir": "E",
           "tempCLow": 14,
           "tempCHigh": 17,
-          "cloudFree": 95,
+          "cloudFree": 93,
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "warm sunshine, mountains clear above early fog, light wind"
+          "reason": "warm sunshine, hills clear above early fog, mostly light wind"
         },
         {
           "sky": "sun",
@@ -142,7 +142,7 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "strong sunshine all day, mountains clear, negligible wind"
+          "reason": "strong sunshine all day, negligible wind, mountains practically certain clear"
         },
         {
           "sky": "sun",
@@ -157,7 +157,7 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "sunshine dawn to dusk, hills clear, negligible wind"
+          "reason": "sunshine dawn to dusk, hills clear, negligible wind, excellent visibility"
         }
       ]
     },
@@ -171,7 +171,7 @@
           "windDir": "E",
           "tempCLow": 14,
           "tempCHigh": 17,
-          "cloudFree": 95,
+          "cloudFree": 93,
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "sun",
@@ -193,7 +193,7 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "strong sunshine, mountains clear, gusts 20mph southern hills only"
+          "reason": "strong sunshine all day, mountains clear, gusts 20mph near central belt"
         },
         {
           "sky": "sun",
@@ -209,7 +209,7 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "sunshine dawn to dusk, hills widely clear, light wind"
+          "reason": "sunshine dawn to dusk, hills widely clear, gusts 15-20mph central belt hills"
         }
       ]
     },
@@ -230,7 +230,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "low cloud east at first, gusts 30mph, only 50% cloud-free summits early"
+          "reason": "early low cloud east below 650-700m, gusts 30mph, fog clears by noon"
         },
         {
           "sky": "sun",
@@ -240,13 +240,13 @@
           "windDir": "SE",
           "tempCLow": 14,
           "tempCHigh": 18,
-          "cloudFree": 90,
+          "cloudFree": 93,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "sunshine all day, summits above fog, gusts 25mph manageable"
+          "reason": "sunshine all day, summits clear above early east fog, gusts 25mph"
         },
         {
           "sky": "sun",
@@ -262,11 +262,11 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "sunshine dawn to dusk, hills clear, light wind with occasional gusts"
+          "reason": "sunshine dawn to dusk, hills clear, light wind, occasional gusts 25mph"
         }
       ]
     }
   ],
-  "_generated": "2026-07-13T18:05:07.912Z",
+  "_generated": "2026-07-14T10:11:24.065Z",
   "_anchorDate": "2026-07-14"
 }
