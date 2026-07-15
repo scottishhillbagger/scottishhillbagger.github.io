@@ -1,10 +1,10 @@
 {
   "days": [
-    "Wed",
     "Thu",
-    "Fri"
+    "Fri",
+    "Sat"
   ],
-  "updatedAt": "2026-07-14T16:28:00.000Z",
+  "updatedAt": "2026-07-15T15:59:00.000Z",
   "regions": [
     {
       "name": "Northwest Highlands",
@@ -13,7 +13,8 @@
           "sky": "sun",
           "windMphLow": 5,
           "windMphHigh": 10,
-          "windDir": "E",
+          "gustMph": 15,
+          "windDir": "NE",
           "tempCLow": 16,
           "tempCHigh": 19,
           "cloudFree": 95,
@@ -25,34 +26,34 @@
           "reason": "extensive sunshine, mountains free of cloud, negligible wind"
         },
         {
-          "sky": "sun",
-          "windMphLow": 5,
-          "windMphHigh": 15,
-          "windDir": "NE",
-          "tempCLow": 16,
-          "tempCHigh": 19,
-          "cloudFree": 95,
-          "freezingLevel": 9999,
-          "visibility": "excellent",
-          "amSky": "sun",
-          "pmSky": "sun",
-          "status": "go",
-          "reason": "sunshine dawn to dusk, mountains clear above coastal fog, light wind"
-        },
-        {
           "sky": "partly-cloudy",
           "windMphLow": 15,
           "windMphHigh": 25,
           "windDir": "N",
-          "tempCLow": 8,
-          "tempCHigh": 12,
-          "cloudFree": 50,
+          "tempCLow": 7,
+          "tempCHigh": 11,
+          "cloudFree": 60,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "partly-cloudy",
-          "pmSky": "sun",
+          "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "cloud banks covering northern hills for periods; 50% cloud-free north"
+          "reason": "cloud drifting onto northern slopes, 50% cloud-free north, cooler tops"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 10,
+          "windMphHigh": 20,
+          "windDir": "N",
+          "tempCLow": 7,
+          "tempCHigh": 10,
+          "cloudFree": 65,
+          "freezingLevel": 9999,
+          "visibility": "good",
+          "amSky": "cloud",
+          "pmSky": "partly-cloudy",
+          "status": "marginal",
+          "reason": "extensive cloud north/west coasts, spotty rain high terrain, gusty tops"
         }
       ]
     },
@@ -62,33 +63,18 @@
         {
           "sky": "sun",
           "windMphLow": 5,
-          "windMphHigh": 15,
-          "gustMph": 20,
-          "windDir": "SE",
+          "windMphHigh": 10,
+          "gustMph": 15,
+          "windDir": "NNE",
           "tempCLow": 16,
-          "tempCHigh": 19,
+          "tempCHigh": 20,
           "cloudFree": 95,
           "freezingLevel": 9999,
-          "visibility": "excellent",
+          "visibility": "good",
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "extensive sunshine, mountains free of cloud, gusts 20mph Arrochar/Arran only"
-        },
-        {
-          "sky": "sun",
-          "windMphLow": 5,
-          "windMphHigh": 15,
-          "windDir": "NE",
-          "tempCLow": 16,
-          "tempCHigh": 19,
-          "cloudFree": 95,
-          "freezingLevel": 9999,
-          "visibility": "excellent",
-          "amSky": "sun",
-          "pmSky": "sun",
-          "status": "go",
-          "reason": "sunshine dawn to dusk, hills clear, light wind, excellent visibility"
+          "reason": "extensive sunshine, mountains free of cloud, negligible wind"
         },
         {
           "sky": "partly-cloudy",
@@ -103,7 +89,22 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "mainly clear, 90% cloud-free, patchy morning cloud lifting, light northerly"
+          "reason": "90% cloud-free, patchy morning cloud near Great Glen, mostly fine"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 10,
+          "windMphHigh": 20,
+          "windDir": "N",
+          "tempCLow": 7,
+          "tempCHigh": 11,
+          "cloudFree": 70,
+          "freezingLevel": 9999,
+          "visibility": "good",
+          "amSky": "cloud",
+          "pmSky": "partly-cloudy",
+          "status": "marginal",
+          "reason": "patchy coastal cloud, fine drizzle west of Loch Linnhe, gusty high tops"
         }
       ]
     },
@@ -114,47 +115,47 @@
           "sky": "sun",
           "windMphLow": 5,
           "windMphHigh": 10,
-          "windDir": "SE",
-          "tempCLow": 16,
-          "tempCHigh": 19,
-          "cloudFree": 95,
-          "freezingLevel": 9999,
-          "visibility": "excellent",
-          "amSky": "sun",
-          "pmSky": "sun",
-          "status": "go",
-          "reason": "strong sunshine all day, mountains clear above early low fog, negligible wind"
-        },
-        {
-          "sky": "sun",
-          "windMphLow": 5,
-          "windMphHigh": 15,
           "windDir": "NE",
           "tempCLow": 16,
-          "tempCHigh": 19,
+          "tempCHigh": 20,
           "cloudFree": 95,
           "freezingLevel": 9999,
-          "visibility": "excellent",
+          "visibility": "good",
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "sunshine dawn to dusk, hills clear, light wind, excellent visibility"
+          "reason": "extensive sunshine, hills clear, light wind, very warm"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 15,
           "windMphHigh": 25,
-          "gustMph": 30,
           "windDir": "N",
           "tempCLow": 10,
           "tempCHigh": 14,
-          "cloudFree": 50,
+          "cloudFree": 60,
           "freezingLevel": 9999,
-          "visibility": "good",
-          "amSky": "partly-cloudy",
+          "visibility": "excellent",
+          "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "cloud covering north Cairngorms, 50% cloud-free north, gusts 30mph NE tops"
+          "reason": "cloud drifting north Cairngorms, 50% cloud-free north, local 30mph tops"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 15,
+          "windMphHigh": 20,
+          "gustMph": 30,
+          "windDir": "N",
+          "tempCLow": 7,
+          "tempCHigh": 12,
+          "cloudFree": 60,
+          "freezingLevel": 9999,
+          "visibility": "good",
+          "amSky": "cloud",
+          "pmSky": "partly-cloudy",
+          "status": "marginal",
+          "reason": "spotty rain Cairngorm plateau, cloud to 1000-1100m north, gusty tops"
         }
       ]
     },
@@ -165,32 +166,16 @@
           "sky": "sun",
           "windMphLow": 5,
           "windMphHigh": 10,
-          "gustMph": 20,
-          "windDir": "SE",
-          "tempCLow": 16,
-          "tempCHigh": 19,
-          "cloudFree": 95,
-          "freezingLevel": 9999,
-          "visibility": "excellent",
-          "amSky": "sun",
-          "pmSky": "sun",
-          "status": "go",
-          "reason": "strong sunshine all day, mountains free of cloud, light wind with local gusts 20mph"
-        },
-        {
-          "sky": "sun",
-          "windMphLow": 5,
-          "windMphHigh": 15,
           "windDir": "NE",
           "tempCLow": 16,
-          "tempCHigh": 19,
+          "tempCHigh": 20,
           "cloudFree": 95,
           "freezingLevel": 9999,
-          "visibility": "excellent",
+          "visibility": "good",
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "sunshine dawn to dusk, hills widely clear, light wind, excellent visibility"
+          "reason": "extensive sunshine, hills clear, light wind, very warm"
         },
         {
           "sky": "partly-cloudy",
@@ -205,7 +190,22 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "90% cloud-free, patchy morning cloud lifting, dry, light northerly, good visibility"
+          "reason": "90% cloud-free, patchy morning cloud, mostly fine, cooler tops"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 10,
+          "windMphHigh": 20,
+          "windDir": "N",
+          "tempCLow": 8,
+          "tempCHigh": 12,
+          "cloudFree": 80,
+          "freezingLevel": 9999,
+          "visibility": "good",
+          "amSky": "cloud",
+          "pmSky": "sun",
+          "status": "go",
+          "reason": "rising to 80% cloud-free, likely dry, gusty tops near Glenshee"
         }
       ]
     },
@@ -214,40 +214,25 @@
       "forecast": [
         {
           "sky": "sun",
-          "windMphLow": 10,
-          "windMphHigh": 15,
-          "gustMph": 20,
-          "windDir": "SE",
-          "tempCLow": 14,
-          "tempCHigh": 19,
-          "cloudFree": 92,
-          "freezingLevel": 9999,
-          "visibility": "good",
-          "amSky": "sun",
-          "pmSky": "sun",
-          "status": "go",
-          "reason": "sunshine all day, summits clear above early eastern fog, gusts 20mph only locally"
-        },
-        {
-          "sky": "sun",
           "windMphLow": 5,
           "windMphHigh": 15,
+          "gustMph": 20,
           "windDir": "NE",
           "tempCLow": 15,
           "tempCHigh": 20,
           "cloudFree": 95,
           "freezingLevel": 9999,
-          "visibility": "excellent",
+          "visibility": "good",
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "sunshine dawn to dusk, hills clear, light wind, excellent visibility"
+          "reason": "extensive sunshine, hills clear above sea fog, very warm"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 10,
           "windMphHigh": 20,
-          "windDir": "N",
+          "windDir": "NNE",
           "tempCLow": 12,
           "tempCHigh": 16,
           "cloudFree": 90,
@@ -256,11 +241,26 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "90% cloud-free, patchy early mist dispersing, dry, light northerly, good visibility"
+          "reason": "rising to 90% cloud-free, early mist clears, mostly fine and dry"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 10,
+          "windMphHigh": 20,
+          "windDir": "N",
+          "tempCLow": 8,
+          "tempCHigh": 14,
+          "cloudFree": 90,
+          "freezingLevel": 9999,
+          "visibility": "good",
+          "amSky": "partly-cloudy",
+          "pmSky": "sun",
+          "status": "go",
+          "reason": "above 90% cloud-free, coastal cloud clears by late morning, largely dry"
         }
       ]
     }
   ],
-  "_generated": "2026-07-15T10:15:46.633Z",
-  "_anchorDate": "2026-07-15"
+  "_generated": "2026-07-15T17:36:34.051Z",
+  "_anchorDate": "2026-07-16"
 }
