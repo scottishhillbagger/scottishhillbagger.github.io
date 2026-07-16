@@ -23,7 +23,7 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "extensive sunshine, mountains free of cloud, negligible wind"
+          "reason": "extensive sunshine, mountains clear, light winds, very warm"
         },
         {
           "sky": "partly-cloudy",
@@ -32,13 +32,13 @@
           "windDir": "N",
           "tempCLow": 7,
           "tempCHigh": 11,
-          "cloudFree": 60,
+          "cloudFree": 50,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "partly-cloudy",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "cloud drifting onto northern slopes, 50% cloud-free north, cooler tops"
+          "reason": "cloud covering northern hills for periods, 50% cloud-free north"
         },
         {
           "sky": "partly-cloudy",
@@ -47,13 +47,13 @@
           "windDir": "N",
           "tempCLow": 7,
           "tempCHigh": 10,
-          "cloudFree": 65,
+          "cloudFree": 60,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "extensive cloud north/west coasts, spotty rain high terrain, gusty tops"
+          "reason": "extensive cloud north/west coasts, spotty rain higher terrain, gusty tops"
         }
       ]
     },
@@ -74,7 +74,7 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "extensive sunshine, mountains free of cloud, negligible wind"
+          "reason": "extensive sunshine, mountains free of cloud, negligible wind, very warm"
         },
         {
           "sky": "partly-cloudy",
@@ -89,7 +89,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "90% cloud-free, patchy morning cloud near Great Glen, mostly fine"
+          "reason": "mostly clear, 90% cloud-free, patchy morning cloud near Great Glen only"
         },
         {
           "sky": "partly-cloudy",
@@ -104,7 +104,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "patchy coastal cloud, fine drizzle west of Loch Linnhe, gusty high tops"
+          "reason": "patchy coastal cloud, drizzle west of Loch Linnhe, gusty high tops"
         }
       ]
     },
@@ -124,7 +124,7 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "extensive sunshine, hills clear, light wind, very warm"
+          "reason": "extensive sunshine, mountains clear, light winds, very warm, some haze"
         },
         {
           "sky": "partly-cloudy",
@@ -133,13 +133,13 @@
           "windDir": "N",
           "tempCLow": 10,
           "tempCHigh": 14,
-          "cloudFree": 60,
+          "cloudFree": 50,
           "freezingLevel": 9999,
-          "visibility": "excellent",
+          "visibility": "good",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "cloud drifting north Cairngorms, 50% cloud-free north, local 30mph tops"
+          "reason": "cloud on north Cairngorms for periods, 50% cloud-free north, local 30mph"
         },
         {
           "sky": "partly-cloudy",
@@ -155,7 +155,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "spotty rain Cairngorm plateau, cloud to 1000-1100m north, gusty tops"
+          "reason": "cloud/rain on Cairngorm plateau, gusts 30mph, near-freezing wind chill"
         }
       ]
     },
@@ -175,7 +175,7 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "extensive sunshine, hills clear, light wind, very warm"
+          "reason": "extensive sunshine, mountains clear, light winds, very warm, some haze"
         },
         {
           "sky": "partly-cloudy",
@@ -190,7 +190,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "90% cloud-free, patchy morning cloud, mostly fine, cooler tops"
+          "reason": "90% cloud-free, patchy morning cloud lifting, noticeably cooler on hills"
         },
         {
           "sky": "partly-cloudy",
@@ -205,7 +205,7 @@
           "amSky": "cloud",
           "pmSky": "sun",
           "status": "go",
-          "reason": "rising to 80% cloud-free, likely dry, gusty tops near Glenshee"
+          "reason": "cloud clears most tops by morning, 80% cloud-free, largely dry, gusty summits"
         }
       ]
     },
@@ -226,7 +226,7 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "extensive sunshine, hills clear above sea fog, very warm"
+          "reason": "extensive sunshine, hills clear, light winds, very warm, some haze east"
         },
         {
           "sky": "partly-cloudy",
@@ -241,7 +241,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "rising to 90% cloud-free, early mist clears, mostly fine and dry"
+          "reason": "rising to 90% cloud-free, early mist clears, mostly small wind effect"
         },
         {
           "sky": "partly-cloudy",
@@ -261,6 +261,6 @@
       ]
     }
   ],
-  "_generated": "2026-07-15T17:36:34.051Z",
+  "_generated": "2026-07-16T10:21:27.729Z",
   "_anchorDate": "2026-07-16"
 }
