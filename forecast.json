@@ -21,9 +21,9 @@
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "cloud",
-          "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "reason": "Cloud retreating from northern coasts; 60% cloud-free north, breezy"
+          "pmSky": "sun",
+          "status": "go",
+          "reason": "cloud retreats north, 60-90% cloud-free, gusts 30-35mph Skye/Caithness"
         },
         {
           "sky": "partly-cloudy",
@@ -36,9 +36,9 @@
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "cloud",
-          "pmSky": "partly-cloudy",
+          "pmSky": "sun",
           "status": "marginal",
-          "reason": "Cloud extensive at dawn on coasts, 20% rising to 70-90%; patchy drizzle"
+          "reason": "extensive coast cloud at dawn, 20% rising to 70-90% cloud-free, patchy drizzle"
         },
         {
           "sky": "partly-cloudy",
@@ -53,7 +53,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "go",
-          "reason": "Mostly dry, cloud lifting to 700m, 60-80% cloud-free, excellent visibility"
+          "reason": "mostly dry, 60-80% cloud-free, wind strengthening to 25mph into evening"
         }
       ]
     },
@@ -64,17 +64,16 @@
           "sky": "sun",
           "windMphLow": 10,
           "windMphHigh": 20,
-          "gustMph": 30,
           "windDir": "N",
           "tempCLow": 13,
           "tempCHigh": 15,
           "cloudFree": 92,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "partly-cloudy",
+          "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "Extensive sunshine, mountains free of cloud, slight haze/smoke from fires east"
+          "reason": "extensive sunshine, mountains free of cloud, warm 13-15C, slight smoke haze south"
         },
         {
           "sky": "partly-cloudy",
@@ -87,15 +86,15 @@
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "cloud",
-          "pmSky": "partly-cloudy",
+          "pmSky": "sun",
           "status": "go",
-          "reason": "Cloud lifting above most summits PM; largely dry, 70% cloud-free"
+          "reason": "70% cloud-free, largely dry, nuisance gusts over high tops, south clearer"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 5,
           "windMphHigh": 15,
-          "windDir": "N",
+          "windDir": "NW",
           "tempCLow": 9,
           "tempCHigh": 14,
           "cloudFree": 80,
@@ -104,7 +103,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "Patchwork cloud and sunshine, 80% cloud-free, light winds, no rain"
+          "reason": "80% cloud-free, no rain, light winds, excellent visibility"
         }
       ]
     },
@@ -123,9 +122,9 @@
           "freezingLevel": 9999,
           "visibility": "moderate",
           "amSky": "cloud",
-          "pmSky": "partly-cloudy",
+          "pmSky": "sun",
           "status": "marginal",
-          "reason": "Active fire near Glen More; smoke reducing visibility, cloud on northern Cairngorms"
+          "reason": "active Glen More wildfire, smoke degrading visibility, 60-80% cloud-free north"
         },
         {
           "sky": "partly-cloudy",
@@ -141,13 +140,13 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "Gusts 30mph plateau, patchy rain high Cairngorms, fire smoke risk poor visibility"
+          "reason": "patchy rain on plateau, gusts 30mph east Cairngorms, smoke fire risk poor visibility"
         },
         {
           "sky": "sun",
           "windMphLow": 5,
-          "windMphHigh": 20,
-          "gustMph": 25,
+          "windMphHigh": 15,
+          "gustMph": 20,
           "windDir": "NNW",
           "tempCLow": 6,
           "tempCHigh": 12,
@@ -157,7 +156,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "90% cloud-free, no rain, excellent visibility, light winds"
+          "reason": "90% cloud-free, no rain, early east gusts 20mph only, excellent visibility"
         }
       ]
     },
@@ -177,7 +176,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "Mostly sunny, 90% cloud-free, smoke haze from Cairngorms NP fire reduces visibility"
+          "reason": "mostly sunny, 90% cloud-free, light winds, smoke haze from Cairngorms fire"
         },
         {
           "sky": "partly-cloudy",
@@ -189,14 +188,14 @@
           "tempCHigh": 13,
           "cloudFree": 80,
           "freezingLevel": 9999,
-          "visibility": "moderate",
+          "visibility": "good",
           "amSky": "cloud",
-          "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "reason": "Gusts 25-30mph east Glenshee; fire smoke risk poor visibility; cloud clearing by midday"
+          "pmSky": "sun",
+          "status": "go",
+          "reason": "rising to 80% cloud-free, gusts 25-30mph east Glenshee, largely dry"
         },
         {
-          "sky": "partly-cloudy",
+          "sky": "sun",
           "windMphLow": 5,
           "windMphHigh": 15,
           "gustMph": 25,
@@ -209,7 +208,7 @@
           "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "go",
-          "reason": "Above 90% cloud-free, no rain, excellent visibility, light winds"
+          "reason": "above 90% cloud-free, no rain, light winds, excellent visibility all day"
         }
       ]
     },
@@ -219,17 +218,17 @@
         {
           "sky": "partly-cloudy",
           "windMphLow": 5,
-          "windMphHigh": 20,
+          "windMphHigh": 15,
           "windDir": "NNE",
           "tempCLow": 10,
           "tempCHigh": 15,
-          "cloudFree": 85,
+          "cloudFree": 80,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "cloud",
           "pmSky": "sun",
           "status": "go",
-          "reason": "Warm sun west, fog clears east by midday; above 90% cloud-free later"
+          "reason": "warm sun west, east fog clears by midday, above 90% cloud-free by afternoon"
         },
         {
           "sky": "partly-cloudy",
@@ -239,16 +238,16 @@
           "windDir": "N",
           "tempCLow": 8,
           "tempCHigh": 14,
-          "cloudFree": 92,
+          "cloudFree": 90,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "Cloud clears all summits late morning; largely dry, gusts 25mph Cheviot"
+          "reason": "above 90% cloud-free by late morning, largely dry, gusts 25mph Cheviot only"
         },
         {
-          "sky": "partly-cloudy",
+          "sky": "sun",
           "windMphLow": 5,
           "windMphHigh": 15,
           "gustMph": 25,
@@ -259,13 +258,13 @@
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "sun",
-          "pmSky": "partly-cloudy",
+          "pmSky": "sun",
           "status": "go",
-          "reason": "Hills clear, above 90% cloud-free, no rain, excellent visibility"
+          "reason": "above 90% cloud-free, no rain, light winds, excellent visibility all day"
         }
       ]
     }
   ],
-  "_generated": "2026-07-16T17:38:53.394Z",
+  "_generated": "2026-07-17T10:12:09.015Z",
   "_anchorDate": "2026-07-17"
 }
