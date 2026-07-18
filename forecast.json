@@ -17,13 +17,13 @@
           "windDir": "N",
           "tempCLow": 6,
           "tempCHigh": 11,
-          "cloudFree": 50,
+          "cloudFree": 55,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "rain",
-          "pmSky": "sun",
+          "amSky": "cloud",
+          "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "patchy morning rain, extensive cloud early, gusts 25-30mph tops"
+          "reason": "patchy morning rain, cloud to 600-700m coasts, only 20% cloud-free early"
         },
         {
           "sky": "partly-cloudy",
@@ -33,13 +33,13 @@
           "windDir": "NW",
           "tempCLow": 6,
           "tempCHigh": 9,
-          "cloudFree": 50,
+          "cloudFree": 45,
           "freezingLevel": 9999,
           "visibility": "excellent",
-          "amSky": "sun",
+          "amSky": "partly-cloudy",
           "pmSky": "cloud",
           "status": "marginal",
-          "reason": "cloud filling in afternoon, gusts to 35mph north, strengthening wind"
+          "reason": "cloud filling in PM above 800m, gusts to 35mph north, lowering to 30% cloud-free"
         },
         {
           "sky": "cloud",
@@ -48,13 +48,13 @@
           "windDir": "NW",
           "tempCLow": 7,
           "tempCHigh": 8,
-          "cloudFree": 30,
+          "cloudFree": 35,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "extensive fog early, only 10% cloud-free rising slowly, drizzle on coast"
+          "reason": "fog shrouds hills from middle slopes up early, only 10% cloud-free rising to 60% inland"
         }
       ]
     },
@@ -75,7 +75,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "early cloud lifts above most summits, dry, light winds, sunniest south"
+          "reason": "early cloud lifts above most summits, sunniest south, light winds, dry"
         },
         {
           "sky": "partly-cloudy",
@@ -90,7 +90,7 @@
           "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "go",
-          "reason": "no rain, hills largely clear, light winds, excellent visibility"
+          "reason": "no rain, hills clear most of day, light winds, excellent visibility"
         },
         {
           "sky": "partly-cloudy",
@@ -98,14 +98,14 @@
           "windMphHigh": 20,
           "windDir": "NNW",
           "tempCLow": 7,
-          "tempCHigh": 14,
+          "tempCHigh": 13,
           "cloudFree": 60,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "cloud",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "cloud lingers coastal tops above 800m, only 50% clear coast, improves inland"
+          "reason": "cloud clinging above 800m Mull northward, 50% cloud-free coast rising through afternoon"
         }
       ]
     },
@@ -120,44 +120,43 @@
           "windDir": "NNW",
           "tempCLow": 7,
           "tempCHigh": 12,
-          "cloudFree": 40,
+          "cloudFree": 45,
           "freezingLevel": 9999,
           "visibility": "moderate",
-          "amSky": "rain",
+          "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "patchy rain plateau, cloud to 600m north, wildfire smoke reducing visibility"
+          "reason": "patchy rain Cairngorm plateau, cloud to 600m north, smoke from wildfire reducing visibility"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 5,
           "windMphHigh": 25,
-          "gustMph": 25,
           "windDir": "NNW",
           "tempCLow": 6,
           "tempCHigh": 12,
           "cloudFree": 90,
           "freezingLevel": 9999,
           "visibility": "moderate",
-          "amSky": "sun",
-          "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "reason": "largely clear hills, but wildfire smoke impacts visibility across Cairngorms"
+          "amSky": "partly-cloudy",
+          "pmSky": "sun",
+          "status": "go",
+          "reason": "90% cloud-free, no rain, smoke from fires may limit visibility"
         },
         {
-          "sky": "cloud",
+          "sky": "partly-cloudy",
           "windMphLow": 10,
           "windMphHigh": 20,
           "windDir": "NW",
           "tempCLow": 6,
           "tempCHigh": 13,
-          "cloudFree": 40,
+          "cloudFree": 45,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "cloud",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "extensive cloud plateau early, only 10% free at dawn, possible smoke from fires"
+          "reason": "extensive cloud above 700-800m early Cairngorm plateau, only 10% cloud-free at dawn"
         }
       ]
     },
@@ -177,8 +176,8 @@
           "visibility": "moderate",
           "amSky": "partly-cloudy",
           "pmSky": "sun",
-          "status": "marginal",
-          "reason": "cloud clears most tops by midday, wildfire smoke limiting visibility east"
+          "status": "go",
+          "reason": "cloud lifts above tops by midday, dry, smoke from Cairngorms wildfire affecting visibility"
         },
         {
           "sky": "partly-cloudy",
@@ -194,7 +193,7 @@
           "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "go",
-          "reason": "hills largely clear, no rain, light winds, smoke may limit views"
+          "reason": "above 90% cloud-free, no rain, light winds, smoke may limit visibility"
         },
         {
           "sky": "partly-cloudy",
@@ -209,8 +208,8 @@
           "visibility": "good",
           "amSky": "cloud",
           "pmSky": "sun",
-          "status": "go",
-          "reason": "cloud clears high terrain afternoon, no rain, light winds, clear south Loch Tay"
+          "status": "marginal",
+          "reason": "extensive cloud over high terrain early, only 20% cloud-free at dawn, clearing through afternoon"
         }
       ]
     },
@@ -231,7 +230,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "early fog clears, rising to 90% cloud-free, warm west, light winds"
+          "reason": "early fog east clears, rising to 90% cloud-free, dry, warmest west"
         },
         {
           "sky": "partly-cloudy",
@@ -245,9 +244,9 @@
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "sun",
-          "pmSky": "sun",
+          "pmSky": "partly-cloudy",
           "status": "go",
-          "reason": "hills clear, no rain, light winds, excellent visibility, warm conditions"
+          "reason": "above 90% cloud-free, no rain, light winds, excellent visibility"
         },
         {
           "sky": "partly-cloudy",
@@ -262,11 +261,11 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "fog patches lift above summits, no rain, light winds, warm inland"
+          "reason": "early fog patches lift above summits, rising to 90% cloud-free, no rain, light winds"
         }
       ]
     }
   ],
-  "_generated": "2026-07-17T17:22:29.958Z",
+  "_generated": "2026-07-18T09:45:36.602Z",
   "_anchorDate": "2026-07-18"
 }
