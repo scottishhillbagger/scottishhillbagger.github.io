@@ -10,7 +10,7 @@
       "name": "Northwest Highlands",
       "forecast": [
         {
-          "sky": "partly-cloudy",
+          "sky": "cloud",
           "windMphLow": 10,
           "windMphHigh": 20,
           "gustMph": 25,
@@ -22,8 +22,8 @@
           "visibility": "poor",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
-          "status": "poor",
-          "reason": "fog shrouds hills widely, drizzle on coasts, only 10% cloud-free Munros"
+          "status": "marginal",
+          "reason": "Low cloud and drizzle widely, fog shrouding hills, poor visibility AM"
         },
         {
           "sky": "cloud",
@@ -39,7 +39,7 @@
           "amSky": "cloud",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "drizzly showers, gusts 40mph north evening, extensive cloud above 600m"
+          "reason": "Drizzly showers, cloud above 600m west, gusts to 40mph north evening"
         },
         {
           "sky": "cloud",
@@ -54,8 +54,8 @@
           "visibility": "moderate",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
-          "status": "poor",
-          "reason": "rain and drizzle morning, cloud above 600-800m, feels 0C in wind"
+          "status": "marginal",
+          "reason": "Rain and drizzle AM, cloud above 600-800m, breezy and chilly on tops"
         }
       ]
     },
@@ -70,28 +70,28 @@
           "windDir": "NNW",
           "tempCLow": 7,
           "tempCHigh": 13,
-          "cloudFree": 60,
+          "cloudFree": 65,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "partly-cloudy",
+          "amSky": "cloud",
           "pmSky": "sun",
-          "status": "marginal",
-          "reason": "cloud lingering coastal Munros AM, clearing inland; light wind, dry"
+          "status": "go",
+          "reason": "Light winds, cloud lifting inland, mostly dry, 90% clear south PM"
         },
         {
-          "sky": "partly-cloudy",
+          "sky": "cloud",
           "windMphLow": 15,
           "windMphHigh": 25,
           "windDir": "NW",
           "tempCLow": 8,
           "tempCHigh": 12,
-          "cloudFree": 30,
+          "cloudFree": 40,
           "freezingLevel": 9999,
-          "visibility": "moderate",
+          "visibility": "good",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "cloud above 600-800m west, drizzle Mull-Ardnamurchan, wind chill near 0C"
+          "reason": "Drizzly showers near Mull-Ardnamurchan, cloud above 600-800m west coast"
         },
         {
           "sky": "partly-cloudy",
@@ -101,13 +101,13 @@
           "windDir": "NW",
           "tempCLow": 8,
           "tempCHigh": 13,
-          "cloudFree": 30,
+          "cloudFree": 35,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "rain and drizzle Lochaber to Mull, cloud 700-900m, feels 0C in wind AM"
+          "reason": "Patchy rain Lochaber to Mull, cloud 700-900m, breezy and cool on tops"
         }
       ]
     },
@@ -122,13 +122,13 @@
           "windDir": "NW",
           "tempCLow": 6,
           "tempCHigh": 13,
-          "cloudFree": 30,
+          "cloudFree": 35,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "cloud",
-          "pmSky": "partly-cloudy",
+          "pmSky": "sun",
           "status": "marginal",
-          "reason": "cloud above 700-800m AM, early drizzle NE Cairngorms, improving afternoon"
+          "reason": "Cloud above 700-800m plateau AM, early drizzle NE Cairngorms, gusts 25mph east"
         },
         {
           "sky": "partly-cloudy",
@@ -144,7 +144,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "gusts 40mph Cairngorm plateau by dusk, blustery high tops, wind chill 0C"
+          "reason": "Gusts to 40mph Cairngorm plateau by dusk, blustery affecting comfortable walking"
         },
         {
           "sky": "partly-cloudy",
@@ -153,13 +153,13 @@
           "windDir": "NW",
           "tempCLow": 7,
           "tempCHigh": 13,
-          "cloudFree": 40,
+          "cloudFree": 45,
           "freezingLevel": 9999,
           "visibility": "moderate",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "rain and drizzle northern Cairngorms AM, feels below 0C in wind, gusts east"
+          "reason": "Rain and drizzle north Cairngorms AM, gusts east, feels below 0C in wind"
         }
       ]
     },
@@ -174,13 +174,13 @@
           "windDir": "NNW",
           "tempCLow": 7,
           "tempCHigh": 15,
-          "cloudFree": 70,
+          "cloudFree": 75,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "dry, light wind, cloud lifting by midday, 90% cloud-free afternoon"
+          "reason": "Mostly dry, light winds, cloud lifting to clear summits, sunny afternoon"
         },
         {
           "sky": "partly-cloudy",
@@ -192,11 +192,11 @@
           "tempCHigh": 13,
           "cloudFree": 70,
           "freezingLevel": 9999,
-          "visibility": "excellent",
+          "visibility": "good",
           "amSky": "partly-cloudy",
-          "pmSky": "sun",
+          "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "gusts 35-40mph high tops by dusk, otherwise fairly benign and largely dry"
+          "reason": "Gusts 35-40mph high tops by dusk, otherwise fairly benign with good breaks"
         },
         {
           "sky": "partly-cloudy",
@@ -208,10 +208,10 @@
           "cloudFree": 65,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "partly-cloudy",
-          "pmSky": "sun",
+          "amSky": "cloud",
+          "pmSky": "partly-cloudy",
           "status": "go",
-          "reason": "largely dry, cloud lifting off tops by afternoon, 80% cloud-free PM"
+          "reason": "Mostly dry, cloud lifting above tops by afternoon, largely manageable winds"
         }
       ]
     },
@@ -225,13 +225,13 @@
           "windDir": "N",
           "tempCLow": 11,
           "tempCHigh": 16,
-          "cloudFree": 80,
+          "cloudFree": 85,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "dry, light wind, early fog patches lift, 90% cloud-free by afternoon"
+          "reason": "Light winds, largely dry, cloud lifting clear of summits by afternoon"
         },
         {
           "sky": "partly-cloudy",
@@ -243,11 +243,11 @@
           "tempCHigh": 15,
           "cloudFree": 80,
           "freezingLevel": 9999,
-          "visibility": "excellent",
+          "visibility": "good",
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "largely dry, mostly sunny, light winds, rare drizzle west Galloway only"
+          "reason": "Patchwork cloud and sun, rare drizzle Galloway, light to moderate winds"
         },
         {
           "sky": "partly-cloudy",
@@ -263,11 +263,11 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "mostly dry, cloud lifting off tops by midday, 90% cloud-free by afternoon"
+          "reason": "Mostly dry, patchy cloud lifting by midday, light winds, good visibility"
         }
       ]
     }
   ],
-  "_generated": "2026-07-19T17:13:46.443Z",
+  "_generated": "2026-07-20T11:13:56.237Z",
   "_anchorDate": "2026-07-20"
 }
