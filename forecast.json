@@ -23,7 +23,7 @@
           "amSky": "cloud",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "extensive low cloud west, drizzle, gusts 40mph far north evening"
+          "reason": "extensive low cloud west, drizzle, gusts 40mph far north"
         },
         {
           "sky": "cloud",
@@ -39,7 +39,7 @@
           "amSky": "cloud",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "steady rain/drizzle morning, hills widely cloud-covered, only 10-20% chance cloud-free"
+          "reason": "persistent low cloud, rain/drizzle morning, only 10-20% cloud-free"
         },
         {
           "sky": "cloud",
@@ -51,11 +51,11 @@
           "tempCHigh": 9,
           "cloudFree": 20,
           "freezingLevel": 9999,
-          "visibility": "poor",
+          "visibility": "moderate",
           "amSky": "cloud",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "persistent drizzle west, extensive low cloud, misty poor visibility lower elevations"
+          "reason": "extensive cloud shrouding west coast hills, drizzle, gusts 35mph+"
         }
       ]
     },
@@ -76,7 +76,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "cloud banks persistent west Lochaber, drizzle Mull-Knoydart, strengthening gusts by evening"
+          "reason": "cloud banks NW, drizzle Mull-Ardnamurchan, gusts increasing later"
         },
         {
           "sky": "partly-cloudy",
@@ -92,7 +92,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "patchy rain/drizzle Lochaber-Mull, fairly extensive cloud, 20-40% cloud-free north"
+          "reason": "fairly extensive cloud, patchy rain Lochaber-Mull, 20-40% cloud-free north"
         },
         {
           "sky": "cloud",
@@ -107,7 +107,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "damp drizzle west Lochaber, low cloud shrouding hills, misty poor visibility morning"
+          "reason": "extensive cloud Lochaber, drizzle/light rain west Loch Linnhe, poor vis AM"
         }
       ]
     },
@@ -128,7 +128,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "gusts 40mph Cairngorm plateau dusk onward, blustery affecting comfortable walking"
+          "reason": "gusts 40mph Cairngorm plateau by dusk, blustery tops, marked wind chill"
         },
         {
           "sky": "cloud",
@@ -144,7 +144,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "steady rain/drizzle north Cairngorms morning, blustery gusts, feels below 0C on tops"
+          "reason": "rain/drizzle morning north Cairngorms, blustery AM, feeling near -5C high tops"
         },
         {
           "sky": "partly-cloudy",
@@ -159,7 +159,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "go",
-          "reason": "largely dry, cloud lifting and breaking, 80% cloud-free by afternoon in east"
+          "reason": "largely dry, cloud lifting/breaking by afternoon, light winds, warming"
         }
       ]
     },
@@ -180,7 +180,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "dry, broken cloud clearing, 60-80% cloud-free, gusts 35-40mph east high tops by dusk"
+          "reason": "dry, broken cloud clearing, 60-80% cloud-free, gusts 35-40mph dusk east"
         },
         {
           "sky": "partly-cloudy",
@@ -196,7 +196,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "go",
-          "reason": "rare light rain, cloud lifting above most tops by afternoon, 50-80% cloud-free"
+          "reason": "rare rain, cloud lifting above tops by afternoon, 50-80% cloud-free"
         },
         {
           "sky": "partly-cloudy",
@@ -205,13 +205,13 @@
           "windDir": "W",
           "tempCLow": 9,
           "tempCHigh": 14,
-          "cloudFree": 65,
+          "cloudFree": 60,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "partly-cloudy",
-          "pmSky": "sun",
+          "amSky": "cloud",
+          "pmSky": "partly-cloudy",
           "status": "go",
-          "reason": "largely dry, cloud dispersing above tops afternoon, 40-80% cloud-free, light winds"
+          "reason": "largely dry, cloud dispersing by afternoon, light winds, warming to 14C"
         }
       ]
     },
@@ -226,13 +226,13 @@
           "windDir": "NW",
           "tempCLow": 12,
           "tempCHigh": 15,
-          "cloudFree": 80,
+          "cloudFree": 75,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "largely dry, patchy cloud clearing widely, 60-90% cloud-free, moderate breeze"
+          "reason": "largely dry, sun and patchy cloud, 60-90% cloud-free, light breeze"
         },
         {
           "sky": "partly-cloudy",
@@ -241,13 +241,13 @@
           "windDir": "NW",
           "tempCLow": 10,
           "tempCHigh": 15,
-          "cloudFree": 80,
+          "cloudFree": 75,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "mostly dry, cloud lifting above tops by midday, 60-90% cloud-free, light winds"
+          "reason": "mostly dry, cloud lifting above summits by midday, very good visibility"
         },
         {
           "sky": "partly-cloudy",
@@ -256,17 +256,17 @@
           "windDir": "W",
           "tempCLow": 10,
           "tempCHigh": 15,
-          "cloudFree": 75,
+          "cloudFree": 70,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "partly-cloudy",
-          "pmSky": "partly-cloudy",
+          "pmSky": "sun",
           "status": "go",
-          "reason": "generally dry, light winds, cloud rising above summits by midday, 50-90% cloud-free"
+          "reason": "generally dry, light winds, cloud clearing above summits by midday"
         }
       ]
     }
   ],
-  "_generated": "2026-07-20T18:17:30.679Z",
+  "_generated": "2026-07-21T10:34:03.485Z",
   "_anchorDate": "2026-07-21"
 }
