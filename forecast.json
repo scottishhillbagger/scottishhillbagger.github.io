@@ -12,7 +12,7 @@
         {
           "sky": "rain",
           "windMphLow": 25,
-          "windMphHigh": 40,
+          "windMphHigh": 30,
           "gustMph": 40,
           "windDir": "NW",
           "tempCLow": 8,
@@ -23,12 +23,13 @@
           "amSky": "rain",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "extensive low cloud, rain/drizzle all day, poor visibility, gusts 40mph"
+          "reason": "extensive low cloud, rain/drizzle all day, poor visibility, breezy"
         },
         {
           "sky": "cloud",
           "windMphLow": 20,
-          "windMphHigh": 40,
+          "windMphHigh": 30,
+          "gustMph": 40,
           "windDir": "SW",
           "tempCLow": 8,
           "tempCHigh": 9,
@@ -38,12 +39,13 @@
           "amSky": "cloud",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "persistent cloud west tops, drizzle, winds strengthening to 40mph later"
+          "reason": "extensive cloud, drizzle west coasts all day, strengthening to 40mph later"
         },
         {
           "sky": "rain",
           "windMphLow": 30,
-          "windMphHigh": 50,
+          "windMphHigh": 40,
+          "gustMph": 50,
           "windDir": "SW",
           "tempCLow": 7,
           "tempCHigh": 9,
@@ -53,7 +55,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gale-force gusts to 50mph Ben Hope, drizzle turning heavier, cloud 500-600m"
+          "reason": "gale-force gusts 50mph Ben Hope, heavier rain developing, extensive low cloud"
         }
       ]
     },
@@ -61,9 +63,10 @@
       "name": "West Highlands",
       "forecast": [
         {
-          "sky": "partly-cloudy",
+          "sky": "cloud",
           "windMphLow": 15,
-          "windMphHigh": 30,
+          "windMphHigh": 25,
+          "gustMph": 30,
           "windDir": "NW",
           "tempCLow": 9,
           "tempCHigh": 13,
@@ -73,22 +76,23 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "extensive cloud north/Lochaber, patchy drizzle, only 20-40% cloud-free Munros"
+          "reason": "extensive cloud north and coasts, patchy rain Lochaber/Mull, breezy 30mph tops"
         },
         {
           "sky": "cloud",
           "windMphLow": 15,
-          "windMphHigh": 30,
+          "windMphHigh": 25,
+          "gustMph": 30,
           "windDir": "W",
           "tempCLow": 8,
           "tempCHigh": 12,
           "cloudFree": 30,
           "freezingLevel": 9999,
-          "visibility": "moderate",
+          "visibility": "good",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "damp west Lochaber, cloud from low elevations, only 20-40% cloud-free Munros"
+          "reason": "persistent cloud west Lochaber/Mull, drizzle developing, freshening to 30mph"
         },
         {
           "sky": "rain",
@@ -104,7 +108,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 50mph Ben Nevis group, drizzle/heavier rain, cloud 500-600m coasts"
+          "reason": "gusts 50mph Ben Nevis group, extensive low cloud, drizzle/heavier rain developing"
         }
       ]
     },
@@ -125,12 +129,12 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "rain/drizzle northern Cairngorms AM, gusts 40mph, cloud lifting 50-70% PM south"
+          "reason": "rain/drizzle north Cairngorms morning, gusts 40mph east, cloud lifting south PM"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 15,
-          "windMphHigh": 35,
+          "windMphHigh": 25,
           "windDir": "W",
           "tempCLow": 9,
           "tempCHigh": 14,
@@ -140,7 +144,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "cloud lifting to 80% PM, winds increasing to 30-35mph, odd drizzle north"
+          "reason": "cloud lifting to 1000-1200m afternoon, strengthening to 35mph later, odd drizzle northwest"
         },
         {
           "sky": "cloud",
@@ -156,7 +160,7 @@
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 50mph Cairngorm plateau, drizzle west, heavier rain developing evening"
+          "reason": "gusts 50mph higher Cairngorms, drizzle west, heavier rain developing evening"
         }
       ]
     },
@@ -173,15 +177,15 @@
           "cloudFree": 70,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "partly-cloudy",
-          "pmSky": "sun",
+          "amSky": "cloud",
+          "pmSky": "partly-cloudy",
           "status": "go",
-          "reason": "largely dry, cloud lifting to 80% PM, moderate breeze easing through day"
+          "reason": "largely dry, cloud lifting/clearing to 80% by afternoon, breezy easing"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 15,
-          "windMphHigh": 25,
+          "windMphHigh": 20,
           "windDir": "W",
           "tempCLow": 9,
           "tempCHigh": 14,
@@ -191,7 +195,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "go",
-          "reason": "largely dry, cloud base rising above most tops PM, light winds, good visibility"
+          "reason": "largely dry, cloud lifting above tops afternoon, light winds, good visibility"
         },
         {
           "sky": "cloud",
@@ -205,9 +209,9 @@
           "freezingLevel": 9999,
           "visibility": "moderate",
           "amSky": "cloud",
-          "pmSky": "partly-cloudy",
+          "pmSky": "rain",
           "status": "marginal",
-          "reason": "gusts over 40mph higher summits, drizzle west-central, cloud 800-1000m"
+          "reason": "gusts 40mph higher mountains, drizzle west-central, steadier rain developing evening"
         }
       ]
     },
@@ -217,7 +221,7 @@
         {
           "sky": "partly-cloudy",
           "windMphLow": 15,
-          "windMphHigh": 25,
+          "windMphHigh": 20,
           "windDir": "NW",
           "tempCLow": 10,
           "tempCHigh": 15,
@@ -227,12 +231,12 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "largely dry, cloud lifting above tops by midday, moderate breeze, warm 15C tops"
+          "reason": "largely dry, cloud lifting above summits by midday, warm 13-15C, light breeze"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 10,
-          "windMphHigh": 25,
+          "windMphHigh": 15,
           "windDir": "W",
           "tempCLow": 10,
           "tempCHigh": 15,
@@ -242,7 +246,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "generally dry, cloud above summits PM, light winds most of day, warm tops"
+          "reason": "generally dry, light winds, cloud clearing summits by midday, warm and good visibility"
         },
         {
           "sky": "cloud",
@@ -253,15 +257,15 @@
           "tempCHigh": 14,
           "cloudFree": 50,
           "freezingLevel": 9999,
-          "visibility": "moderate",
+          "visibility": "good",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "blustery 25-30mph, drizzle west Galloway, cloud 600m morning, rain developing overnight"
+          "reason": "blustery 25-30mph affecting ridge walking, drizzle Galloway, steadier rain overnight"
         }
       ]
     }
   ],
-  "_generated": "2026-07-21T17:42:49.097Z",
+  "_generated": "2026-07-22T10:34:37.968Z",
   "_anchorDate": "2026-07-22"
 }
