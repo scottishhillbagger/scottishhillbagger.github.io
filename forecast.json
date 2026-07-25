@@ -23,7 +23,7 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "morning gales 60mph gusts, persistent rain, extensive low cloud"
+          "reason": "gale gusts 60mph dawn, morning rain, extensive low cloud"
         },
         {
           "sky": "rain",
@@ -37,13 +37,13 @@
           "visibility": "moderate",
           "amSky": "rain",
           "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "reason": "often raining, heavy bursts near Ben Wyvis, bases 500-700m, rarely clear"
+          "status": "poor",
+          "reason": "often raining, heavy bursts Ben Wyvis/Easter Ross, tops rarely clear"
         },
         {
-          "sky": "partly-cloudy",
+          "sky": "rain",
           "windMphLow": 15,
-          "windMphHigh": 30,
+          "windMphHigh": 35,
           "gustMph": 40,
           "windDir": "SW",
           "tempCLow": 6,
@@ -54,7 +54,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "rain sets in afternoon, cloud widely below 700m, gusts 35-40mph on high tops"
+          "reason": "rain sets in from SW, cloud fills above 700m, gusts 35-40mph high tops"
         }
       ]
     },
@@ -75,7 +75,7 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "morning gales gusts 55-60mph, heavy rain, wind chill to -5C, extensive cloud"
+          "reason": "gale gusts 55-60mph, persistent morning rain, extensive cloud from low elevations"
         },
         {
           "sky": "rain",
@@ -87,11 +87,11 @@
           "tempCHigh": 11,
           "cloudFree": 20,
           "freezingLevel": 9999,
-          "visibility": "moderate",
+          "visibility": "poor",
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "often raining all day, gusts 40mph high tops, cloud bases 500-700m, rarely clear"
+          "reason": "often raining, gusts 40mph high tops, cloud base 500-700m, tops rarely clear"
         },
         {
           "sky": "rain",
@@ -107,7 +107,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "heavy rain sets in afternoon, cloud below 600m west, gusts 45mph far south"
+          "reason": "heavy rain sets in PM, cloud widely below 600m coast, gusts 45mph south"
         }
       ]
     },
@@ -128,7 +128,7 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gales gusts 65mph may knock off feet, morning rain, wind chill near -5C"
+          "reason": "gale gusts 65mph, may knock off feet; morning rain, cloud above 600-800m"
         },
         {
           "sky": "partly-cloudy",
@@ -140,25 +140,25 @@
           "cloudFree": 30,
           "freezingLevel": 9999,
           "visibility": "moderate",
-          "amSky": "rain",
+          "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "periods of showery rain, cloud above 700-800m, risk of heavy afternoon showers"
+          "reason": "showery rain, cloud above 700-800m, heavier afternoon showers, tops often covered"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 15,
-          "windMphHigh": 25,
+          "windMphHigh": 30,
           "windDir": "SW",
           "tempCLow": 7,
           "tempCHigh": 11,
           "cloudFree": 30,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "partly-cloudy",
+          "amSky": "sun",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "afternoon rain setting in from Ben Macdui west, wind strengthening to 35mph summits"
+          "reason": "afternoon rain from Ben Macdui east, cloud fills west PM, winds strengthening"
         }
       ]
     },
@@ -179,7 +179,7 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "morning gales gusts 55-60mph, persistent rain, cloud to 500m, balance impacted"
+          "reason": "gale gusts 55-60mph, morning rain, cloud from 500-700m; improving east PM"
         },
         {
           "sky": "partly-cloudy",
@@ -191,26 +191,26 @@
           "cloudFree": 50,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "rain",
+          "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "periods of showery rain, heavier showers east of A9, breaks forming but returning in showers"
+          "reason": "showery rain from NW, heavier showers near/east of A9, cloud returns above 700m"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 15,
-          "windMphHigh": 25,
+          "windMphHigh": 35,
           "gustMph": 45,
           "windDir": "SW",
           "tempCLow": 7,
           "tempCHigh": 12,
-          "cloudFree": 40,
+          "cloudFree": 30,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "partly-cloudy",
+          "amSky": "sun",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "afternoon heavy rain central highlands, gusts 35-45mph summits, stability challenged south"
+          "reason": "persistent heavy rain central highlands PM, gusts 35-45mph summits, overcast late"
         }
       ]
     },
@@ -221,6 +221,7 @@
           "sky": "rain",
           "windMphLow": 40,
           "windMphHigh": 50,
+          "gustMph": 55,
           "windDir": "W",
           "tempCLow": 10,
           "tempCHigh": 13,
@@ -230,42 +231,42 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gale-force gusts dawn, several hours fog and rain, balance constantly impacted"
+          "reason": "gale-force gusts, several hours fog and rain, cloud above 400-600m west"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 20,
           "windMphHigh": 30,
           "gustMph": 35,
-          "windDir": "WNW",
+          "windDir": "W",
           "tempCLow": 9,
           "tempCHigh": 13,
           "cloudFree": 50,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "rain",
+          "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "showery rain, gusts 35mph high tops, foggy west terrain, heavier showers east afternoon"
+          "reason": "showery rain, gusts 35mph high tops, fog on high west terrain, variable cloud"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 20,
-          "windMphHigh": 30,
+          "windMphHigh": 40,
           "windDir": "SW",
           "tempCLow": 9,
           "tempCHigh": 13,
-          "cloudFree": 30,
+          "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "partly-cloudy",
+          "amSky": "sun",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "persistent rain west of M74 afternoon, wind strengthening 30-40mph, cloud 600-700m spreading east"
+          "reason": "substantial rain from west PM, 30-40mph gusts, Merrick/Ayrshire shrouded by afternoon"
         }
       ]
     }
   ],
-  "_generated": "2026-07-24T17:49:30.632Z",
+  "_generated": "2026-07-25T10:00:22.243Z",
   "_anchorDate": "2026-07-25"
 }
