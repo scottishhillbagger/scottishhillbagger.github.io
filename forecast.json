@@ -1,20 +1,19 @@
 {
   "days": [
-    "Sat",
     "Sun",
-    "Mon"
+    "Mon",
+    "Tue"
   ],
-  "updatedAt": "2026-07-24T16:28:00.000Z",
+  "updatedAt": "2026-07-25T16:00:00.000Z",
   "regions": [
     {
       "name": "Northwest Highlands",
       "forecast": [
         {
           "sky": "rain",
-          "windMphLow": 45,
-          "windMphHigh": 50,
-          "gustMph": 60,
-          "windDir": "W",
+          "windMphLow": 15,
+          "windMphHigh": 25,
+          "windDir": "NNW",
           "tempCLow": 7,
           "tempCHigh": 9,
           "cloudFree": 20,
@@ -23,38 +22,38 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gale gusts 60mph dawn, morning rain, extensive low cloud"
+          "reason": "persistent rain, low cloud bases 500-700m, only 20% cloud-free"
         },
         {
-          "sky": "rain",
-          "windMphLow": 10,
-          "windMphHigh": 20,
-          "windDir": "WNW",
-          "tempCLow": 7,
-          "tempCHigh": 9,
-          "cloudFree": 40,
-          "freezingLevel": 9999,
-          "visibility": "moderate",
-          "amSky": "rain",
-          "pmSky": "partly-cloudy",
-          "status": "poor",
-          "reason": "often raining, heavy bursts Ben Wyvis/Easter Ross, tops rarely clear"
-        },
-        {
-          "sky": "rain",
-          "windMphLow": 15,
-          "windMphHigh": 35,
-          "gustMph": 40,
-          "windDir": "SW",
+          "sky": "partly-cloudy",
+          "windMphLow": 20,
+          "windMphHigh": 30,
+          "windDir": "WSW",
           "tempCLow": 6,
           "tempCHigh": 10,
-          "cloudFree": 20,
+          "cloudFree": 30,
           "freezingLevel": 9999,
           "visibility": "moderate",
           "amSky": "partly-cloudy",
+          "pmSky": "cloud",
+          "status": "poor",
+          "reason": "cloud fills from SW, bases below 700m by afternoon, drizzly on tops"
+        },
+        {
+          "sky": "rain",
+          "windMphLow": 35,
+          "windMphHigh": 50,
+          "gustMph": 60,
+          "windDir": "SW",
+          "tempCLow": 8,
+          "tempCHigh": 10,
+          "cloudFree": 10,
+          "freezingLevel": 9999,
+          "visibility": "poor",
+          "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "rain sets in from SW, cloud fills above 700m, gusts 35-40mph high tops"
+          "reason": "gales 60mph gusts, persistent rain, blanket low cloud, dangerous ridges"
         }
       ]
     },
@@ -63,22 +62,6 @@
       "forecast": [
         {
           "sky": "rain",
-          "windMphLow": 40,
-          "windMphHigh": 50,
-          "gustMph": 60,
-          "windDir": "W",
-          "tempCLow": 8,
-          "tempCHigh": 10,
-          "cloudFree": 20,
-          "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "rain",
-          "pmSky": "partly-cloudy",
-          "status": "poor",
-          "reason": "gale gusts 55-60mph, persistent morning rain, extensive cloud from low elevations"
-        },
-        {
-          "sky": "rain",
           "windMphLow": 20,
           "windMphHigh": 30,
           "gustMph": 40,
@@ -91,23 +74,39 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "often raining, gusts 40mph high tops, cloud base 500-700m, tops rarely clear"
+          "reason": "rain, low cloud 500-700m, gusts 40mph Arran south, strenuous conditions"
         },
         {
-          "sky": "rain",
-          "windMphLow": 25,
+          "sky": "cloud",
+          "windMphLow": 15,
           "windMphHigh": 35,
-          "gustMph": 45,
-          "windDir": "SW",
+          "gustMph": 40,
+          "windDir": "WSW",
           "tempCLow": 7,
           "tempCHigh": 11,
-          "cloudFree": 10,
+          "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "partly-cloudy",
+          "pmSky": "cloud",
+          "status": "poor",
+          "reason": "cloud bases below 600-800m afternoon, gusts 40mph south, poor visibility"
+        },
+        {
+          "sky": "rain",
+          "windMphLow": 40,
+          "windMphHigh": 55,
+          "gustMph": 70,
+          "windDir": "SW",
+          "tempCLow": 9,
+          "tempCHigh": 12,
+          "cloudFree": 10,
+          "freezingLevel": 9999,
+          "visibility": "poor",
+          "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "heavy rain sets in PM, cloud widely below 600m coast, gusts 45mph south"
+          "reason": "severe gales 70mph gusts, persistent heavy rain, blanket low cloud"
         }
       ]
     },
@@ -116,49 +115,50 @@
       "forecast": [
         {
           "sky": "rain",
-          "windMphLow": 45,
-          "windMphHigh": 55,
-          "gustMph": 65,
-          "windDir": "W",
-          "tempCLow": 9,
-          "tempCHigh": 12,
-          "cloudFree": 10,
-          "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "rain",
-          "pmSky": "partly-cloudy",
-          "status": "poor",
-          "reason": "gale gusts 65mph, may knock off feet; morning rain, cloud above 600-800m"
-        },
-        {
-          "sky": "partly-cloudy",
-          "windMphLow": 10,
+          "windMphLow": 15,
           "windMphHigh": 20,
+          "gustMph": 30,
           "windDir": "WNW",
           "tempCLow": 8,
           "tempCHigh": 10,
           "cloudFree": 30,
           "freezingLevel": 9999,
-          "visibility": "moderate",
-          "amSky": "cloud",
-          "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "reason": "showery rain, cloud above 700-800m, heavier afternoon showers, tops often covered"
+          "visibility": "poor",
+          "amSky": "rain",
+          "pmSky": "rain",
+          "status": "poor",
+          "reason": "persistent rain with heavy afternoon showers, cloud above 700-800m, 30% clear"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 15,
-          "windMphHigh": 30,
+          "windMphHigh": 25,
           "windDir": "SW",
           "tempCLow": 7,
           "tempCHigh": 11,
-          "cloudFree": 30,
+          "cloudFree": 40,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "sun",
-          "pmSky": "rain",
+          "amSky": "partly-cloudy",
+          "pmSky": "cloud",
           "status": "marginal",
-          "reason": "afternoon rain from Ben Macdui east, cloud fills west PM, winds strengthening"
+          "reason": "cloud builds from west afternoon, bases 700m, strengthening winds on summits"
+        },
+        {
+          "sky": "rain",
+          "windMphLow": 45,
+          "windMphHigh": 60,
+          "gustMph": 70,
+          "windDir": "SW",
+          "tempCLow": 10,
+          "tempCHigh": 13,
+          "cloudFree": 20,
+          "freezingLevel": 9999,
+          "visibility": "poor",
+          "amSky": "rain",
+          "pmSky": "rain",
+          "status": "poor",
+          "reason": "gusts over 70mph Cairngorm plateau, persistent rain, blanket cloud above 700-900m"
         }
       ]
     },
@@ -166,25 +166,10 @@
       "name": "Southeastern Highlands",
       "forecast": [
         {
-          "sky": "rain",
-          "windMphLow": 45,
-          "windMphHigh": 50,
-          "gustMph": 60,
-          "windDir": "W",
-          "tempCLow": 9,
-          "tempCHigh": 12,
-          "cloudFree": 10,
-          "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "rain",
-          "pmSky": "partly-cloudy",
-          "status": "poor",
-          "reason": "gale gusts 55-60mph, morning rain, cloud from 500-700m; improving east PM"
-        },
-        {
           "sky": "partly-cloudy",
-          "windMphLow": 10,
-          "windMphHigh": 20,
+          "windMphLow": 15,
+          "windMphHigh": 25,
+          "gustMph": 30,
           "windDir": "WNW",
           "tempCLow": 8,
           "tempCHigh": 11,
@@ -194,23 +179,38 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "showery rain from NW, heavier showers near/east of A9, cloud returns above 700m"
+          "reason": "patchy rain and showers, cloud above 700-800m, heavier showers east of A9"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 15,
-          "windMphHigh": 35,
-          "gustMph": 45,
+          "windMphHigh": 25,
           "windDir": "SW",
           "tempCLow": 7,
           "tempCHigh": 12,
-          "cloudFree": 30,
+          "cloudFree": 50,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "sun",
-          "pmSky": "rain",
+          "amSky": "partly-cloudy",
+          "pmSky": "cloud",
           "status": "marginal",
-          "reason": "persistent heavy rain central highlands PM, gusts 35-45mph summits, overcast late"
+          "reason": "patchy drizzle, cloud covers central highland summits afternoon, winds strengthening"
+        },
+        {
+          "sky": "rain",
+          "windMphLow": 40,
+          "windMphHigh": 55,
+          "gustMph": 70,
+          "windDir": "SW",
+          "tempCLow": 11,
+          "tempCHigh": 13,
+          "cloudFree": 20,
+          "freezingLevel": 9999,
+          "visibility": "poor",
+          "amSky": "rain",
+          "pmSky": "rain",
+          "status": "poor",
+          "reason": "gusts 70mph, persistent rain, blanket cloud from 500-700m Callander area"
         }
       ]
     },
@@ -219,54 +219,54 @@
       "forecast": [
         {
           "sky": "rain",
-          "windMphLow": 40,
-          "windMphHigh": 50,
-          "gustMph": 55,
+          "windMphLow": 25,
+          "windMphHigh": 30,
+          "gustMph": 40,
           "windDir": "W",
-          "tempCLow": 10,
+          "tempCLow": 9,
           "tempCHigh": 13,
-          "cloudFree": 10,
+          "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gale-force gusts, several hours fog and rain, cloud above 400-600m west"
+          "reason": "windy gusts 40mph, rain and showers, cloud extensive Ayrshire to 300-400m"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 20,
           "windMphHigh": 30,
-          "gustMph": 35,
           "windDir": "W",
           "tempCLow": 9,
           "tempCHigh": 13,
-          "cloudFree": 50,
+          "cloudFree": 40,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "cloud",
-          "pmSky": "partly-cloudy",
+          "amSky": "partly-cloudy",
+          "pmSky": "cloud",
           "status": "marginal",
-          "reason": "showery rain, gusts 35mph high tops, fog on high west terrain, variable cloud"
+          "reason": "Merrick and Ayrshire tops shrouded afternoon, patchy rain spreading west to east"
         },
         {
-          "sky": "partly-cloudy",
-          "windMphLow": 20,
-          "windMphHigh": 40,
+          "sky": "rain",
+          "windMphLow": 40,
+          "windMphHigh": 50,
+          "gustMph": 60,
           "windDir": "SW",
-          "tempCLow": 9,
-          "tempCHigh": 13,
+          "tempCLow": 13,
+          "tempCHigh": 15,
           "cloudFree": 20,
           "freezingLevel": 9999,
-          "visibility": "good",
-          "amSky": "sun",
+          "visibility": "poor",
+          "amSky": "rain",
           "pmSky": "rain",
-          "status": "marginal",
-          "reason": "substantial rain from west PM, 30-40mph gusts, Merrick/Ayrshire shrouded by afternoon"
+          "status": "poor",
+          "reason": "gusts 60mph, persistent rain, blanket cloud from low elevations Dumfries & Galloway"
         }
       ]
     }
   ],
-  "_generated": "2026-07-25T10:00:22.243Z",
-  "_anchorDate": "2026-07-25"
+  "_generated": "2026-07-25T17:13:04.445Z",
+  "_anchorDate": "2026-07-26"
 }
