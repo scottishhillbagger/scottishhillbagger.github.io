@@ -4,7 +4,7 @@
     "Wed",
     "Thu"
   ],
-  "updatedAt": "2026-07-27T16:30:00.000Z",
+  "updatedAt": "2026-07-28T07:53:00.000Z",
   "regions": [
     {
       "name": "Northwest Highlands",
@@ -39,7 +39,7 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "persistent rain near Skye, gusts 40mph, cloud free Munros only 30-50%"
+          "reason": "frequent rain near Skye, cloud persisting, gusts 40mph dawn"
         },
         {
           "sky": "rain",
@@ -55,7 +55,7 @@
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "heavy showery rain, possible thunder, gusts 40mph, shrouding most tops"
+          "reason": "heavy showers, possible thunder, gusts 40mph, tops shrouded"
         }
       ]
     },
@@ -69,14 +69,14 @@
           "gustMph": 70,
           "windDir": "SW",
           "tempCLow": 9,
-          "tempCHigh": 10,
+          "tempCHigh": 12,
           "cloudFree": 10,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "severe gales gusts 70mph Ben Nevis group, persistent rain, blanket cloud"
+          "reason": "gusts 70mph Ben Nevis group, persistent rain, blanket low cloud"
         },
         {
           "sky": "rain",
@@ -92,7 +92,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "frequent persistent rain heavy and possibly thundery, gusts 40mph, 20% cloud-free"
+          "reason": "persistent rain possibly thundery, cloud shrouding most tops all day"
         },
         {
           "sky": "partly-cloudy",
@@ -108,7 +108,7 @@
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 50mph, showery heavy rain risk Lochaber, isolated thunder, wind chill -5 to -7C"
+          "reason": "gusts 50mph, heavy showers Lochaber, chance of isolated thunder"
         }
       ]
     },
@@ -122,30 +122,30 @@
           "gustMph": 70,
           "windDir": "SW",
           "tempCLow": 10,
-          "tempCHigh": 11,
+          "tempCHigh": 13,
           "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
-          "pmSky": "rain",
+          "pmSky": "cloud",
           "status": "poor",
-          "reason": "severe gales gusts 70mph+ higher Cairngorms, persistent rain, blanket cloud 700-900m"
+          "reason": "gusts over 70mph higher Cairngorms, persistent rain, blanket cloud"
         },
         {
           "sky": "rain",
           "windMphLow": 25,
           "windMphHigh": 35,
-          "gustMph": 40,
+          "gustMph": 50,
           "windDir": "SW",
           "tempCLow": 10,
-          "tempCHigh": 14,
+          "tempCHigh": 11,
           "cloudFree": 30,
           "freezingLevel": 9999,
           "visibility": "moderate",
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "patchy rain turning heavy thundery afternoon, gusts 40mph, cloud 800-1000m south"
+          "reason": "gusts 50mph dawn, risk thundery downpours afternoon-evening"
         },
         {
           "sky": "partly-cloudy",
@@ -161,7 +161,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 50mph, possible torrential downpours northeast, thunder risk, wind chill -5 to -7C"
+          "reason": "gusts 50mph, torrential downpours possible northeast, risk of thunder"
         }
       ]
     },
@@ -175,14 +175,14 @@
           "gustMph": 70,
           "windDir": "SW",
           "tempCLow": 11,
-          "tempCHigh": 13,
+          "tempCHigh": 14,
           "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "severe gales gusts 70mph, persistent rain, blanket cloud from 500-700m Callander"
+          "reason": "gusts 70mph, persistent rain, blanket cloud, risk isolated thunder PM"
         },
         {
           "sky": "rain",
@@ -194,11 +194,11 @@
           "tempCHigh": 14,
           "cloudFree": 20,
           "freezingLevel": 9999,
-          "visibility": "moderate",
+          "visibility": "poor",
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "patchy rain turning heavy thundery afternoon-evening, gusts 40mph, 20% cloud-free"
+          "reason": "persistent rain, risk thundery downpours, cloud covering most tops all day"
         },
         {
           "sky": "partly-cloudy",
@@ -214,7 +214,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 50mph, frequent heavy showers moving east, isolated thunder, wind chill -4 to -6C"
+          "reason": "gusts 50mph, heavy shower clusters eastward PM, chance of thunder"
         }
       ]
     },
@@ -223,8 +223,8 @@
       "forecast": [
         {
           "sky": "rain",
-          "windMphLow": 40,
-          "windMphHigh": 50,
+          "windMphLow": 35,
+          "windMphHigh": 45,
           "gustMph": 60,
           "windDir": "SW",
           "tempCLow": 13,
@@ -235,7 +235,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gales gusts 60mph, persistent rain, blanket cloud especially Dumfries & Galloway"
+          "reason": "gusts 55-60mph, rain and drizzle all day, blanket cloud on hills"
         },
         {
           "sky": "rain",
@@ -246,11 +246,11 @@
           "tempCHigh": 16,
           "cloudFree": 20,
           "freezingLevel": 9999,
-          "visibility": "moderate",
+          "visibility": "poor",
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "persistent rain D&G, heavy band arriving late, thunder risk, cloud-free only 20% SW"
+          "reason": "rain on and off, heavy band arriving from west, risk of thunder"
         },
         {
           "sky": "partly-cloudy",
@@ -265,11 +265,11 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "strengthening to 35mph gusts afternoon, locally heavy showers, isolated thunder"
+          "reason": "showery bursts PM, strengthening gusts, chance of isolated thunder"
         }
       ]
     }
   ],
-  "_generated": "2026-07-27T17:53:54.152Z",
+  "_generated": "2026-07-28T10:45:33.079Z",
   "_anchorDate": "2026-07-28"
 }
