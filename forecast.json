@@ -4,7 +4,7 @@
     "Fri",
     "Sat"
   ],
-  "updatedAt": "2026-07-29T16:29:00.000Z",
+  "updatedAt": "2026-07-30T07:47:00.000Z",
   "regions": [
     {
       "name": "Northwest Highlands",
@@ -12,18 +12,18 @@
         {
           "sky": "storm",
           "windMphLow": 15,
-          "windMphHigh": 40,
+          "windMphHigh": 45,
           "gustMph": 45,
           "windDir": "W",
           "tempCLow": 4,
           "tempCHigh": 6,
-          "cloudFree": 30,
+          "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "storm",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "heavy showers, lightning risk, gales to 40mph+, shrouding cloud"
+          "reason": "heavy showers, lightning risk, gales 35-45mph, cloud shrouding most tops"
         },
         {
           "sky": "rain",
@@ -39,22 +39,23 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "showers turning heavy PM, gusts 40-45mph, isolated thunder risk"
+          "reason": "showers turning heavy PM, gusts 40-45mph, cloud above 600-800m all day"
         },
         {
           "sky": "rain",
           "windMphLow": 20,
           "windMphHigh": 30,
+          "gustMph": 40,
           "windDir": "W",
           "tempCLow": 5,
           "tempCHigh": 6,
           "cloudFree": 40,
           "freezingLevel": 9999,
-          "visibility": "good",
-          "amSky": "partly-cloudy",
+          "visibility": "moderate",
+          "amSky": "cloud",
           "pmSky": "rain",
-          "status": "marginal",
-          "reason": "widespread afternoon showers, heaviest NW, gusty with wind chill"
+          "status": "poor",
+          "reason": "widespread showers, heaviest NW, cloud extensive 600-700m, gusty with wind chill"
         }
       ]
     },
@@ -66,16 +67,16 @@
           "windMphLow": 35,
           "windMphHigh": 55,
           "gustMph": 70,
-          "windDir": "W",
+          "windDir": "SW",
           "tempCLow": 4,
           "tempCHigh": 6,
-          "cloudFree": 40,
+          "cloudFree": 30,
           "freezingLevel": 9999,
           "visibility": "moderate",
           "amSky": "storm",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "sustained 55mph gusts to 70mph, heavy rain, thunder north of Glencoe"
+          "reason": "sustained 55mph gusts 70mph, heavy rain north of Glencoe, lightning risk"
         },
         {
           "sky": "rain",
@@ -91,12 +92,13 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "heavy showers inland PM, gusts to 40mph, isolated thunder risk"
+          "reason": "showers turning heavy inland PM, gusts 40mph, cloud widespread 600-800m"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 20,
           "windMphHigh": 30,
+          "gustMph": 40,
           "windDir": "W",
           "tempCLow": 5,
           "tempCHigh": 8,
@@ -105,8 +107,8 @@
           "visibility": "good",
           "amSky": "partly-cloudy",
           "pmSky": "rain",
-          "status": "marginal",
-          "reason": "western summits struggle to clear, heavy PM showers, gusty wind chill"
+          "status": "poor",
+          "reason": "persistent coastal showers, western summits struggle to clear, gusty wind chill"
         }
       ]
     },
@@ -118,16 +120,16 @@
           "windMphLow": 15,
           "windMphHigh": 45,
           "gustMph": 60,
-          "windDir": "W",
+          "windDir": "SW",
           "tempCLow": 5,
           "tempCHigh": 8,
-          "cloudFree": 50,
+          "cloudFree": 70,
           "freezingLevel": 9999,
-          "visibility": "moderate",
+          "visibility": "good",
           "amSky": "sun",
-          "pmSky": "storm",
-          "status": "poor",
-          "reason": "gales PM gusts 60mph, heavy showers lightning risk north and east"
+          "pmSky": "rain",
+          "status": "marginal",
+          "reason": "sunny AM but gusts 60mph, heavy showers with lightning risk PM west of A9"
         },
         {
           "sky": "partly-cloudy",
@@ -143,7 +145,7 @@
           "amSky": "sun",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "sunny AM clouding PM, gusts 40mph, heavy showers thunder risk"
+          "reason": "sunny AM, showers developing widely PM with thunder risk, gusts 40mph on tops"
         },
         {
           "sky": "partly-cloudy",
@@ -158,7 +160,7 @@
           "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "sunny AM, scattered showers PM with heavy bursts NE, gusty wind chill"
+          "reason": "mostly sunny AM, scattered showers midday-PM, heavy bursts NE, gusty wind chill"
         }
       ]
     },
@@ -170,16 +172,16 @@
           "windMphLow": 20,
           "windMphHigh": 45,
           "gustMph": 55,
-          "windDir": "W",
+          "windDir": "SW",
           "tempCLow": 5,
           "tempCHigh": 8,
-          "cloudFree": 60,
+          "cloudFree": 80,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "sun",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "sunny AM, gales PM gusts 55mph, heavy showers small thunder chance north"
+          "reason": "sunny AM, gusts 55mph northern Munros PM, showers with thunder risk developing"
         },
         {
           "sky": "partly-cloudy",
@@ -194,7 +196,7 @@
           "amSky": "sun",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "sunny AM, heavy showers and isolated thunder PM, gusty on tops"
+          "reason": "sunny AM, showers spread from west PM, heavy bursts east by evening, thunder risk"
         },
         {
           "sky": "partly-cloudy",
@@ -203,13 +205,13 @@
           "windDir": "W",
           "tempCLow": 6,
           "tempCHigh": 9,
-          "cloudFree": 70,
+          "cloudFree": 60,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "mostly sunny AM, scattered showers PM, eastern summits largely clear"
+          "reason": "mostly sunny AM, scattered showers PM, eastern summits largely clear, gusty wind chill"
         }
       ]
     },
@@ -221,16 +223,16 @@
           "windMphLow": 25,
           "windMphHigh": 35,
           "gustMph": 40,
-          "windDir": "W",
+          "windDir": "SW",
           "tempCLow": 8,
           "tempCHigh": 10,
-          "cloudFree": 70,
+          "cloudFree": 90,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "sun",
-          "pmSky": "rain",
+          "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "gusts 40mph, band of showery rain crosses hills midday, wind chill"
+          "reason": "scattered showers mainly Galloway, gusts 40mph on tops, considerable wind chill"
         },
         {
           "sky": "partly-cloudy",
@@ -245,7 +247,7 @@
           "amSky": "sun",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "heavy shower bursts PM drifting east, local lightning chance, gusty"
+          "reason": "showers banding together PM with heavy bursts, thunder risk, gusty on high tops"
         },
         {
           "sky": "partly-cloudy",
@@ -257,14 +259,14 @@
           "cloudFree": 80,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "sun",
+          "amSky": "partly-cloudy",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "scattered showers west, widespread PM outbreak possible, gusty at times"
+          "reason": "scattered western showers, more widespread PM outbreaks, gusty, feeling near freezing"
         }
       ]
     }
   ],
-  "_generated": "2026-07-29T17:35:44.911Z",
+  "_generated": "2026-07-30T10:34:29.365Z",
   "_anchorDate": "2026-07-30"
 }
