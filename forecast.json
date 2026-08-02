@@ -22,7 +22,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "showers clearing AM, cloud above 700m rising slowly to 80% clear PM"
+          "reason": "Showers clearing AM, cloud above 700m rising; 20% to 80% cloud-free"
         },
         {
           "sky": "partly-cloudy",
@@ -37,7 +37,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "cloud",
           "status": "marginal",
-          "reason": "low confidence; rain spreading north, fog shrouding eastern hills in rain"
+          "reason": "Rain spreading north, low confidence timing; fog shrouding eastern hills in rain"
         },
         {
           "sky": "rain",
@@ -53,7 +53,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusty 35mph, blanket fog below 300m Sutherland, intermittent rain all day"
+          "reason": "Intermittent rain, blanket fog below 300m Sutherland, gusty 35mph"
         }
       ]
     },
@@ -73,7 +73,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "go",
-          "reason": "light winds becoming negligible, hills mostly cloud free PM, dry"
+          "reason": "Wind soon light, hills mostly cloud-free PM, excellent visibility, dry"
         },
         {
           "sky": "partly-cloudy",
@@ -89,7 +89,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "cloud",
           "status": "marginal",
-          "reason": "low confidence; rain spreading north, fog shrouding Loch Lomond and Arran slopes"
+          "reason": "Rain spreading north, fog shrouding Loch Lomond and Arran in rain; low confidence"
         },
         {
           "sky": "rain",
@@ -105,7 +105,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusty 35mph, blanket fog below 450m central highlands and Arran, persistent rain"
+          "reason": "Intermittent rain, blanket fog below 450m central highlands and Arran, gusty 35mph"
         }
       ]
     },
@@ -122,10 +122,10 @@
           "cloudFree": 65,
           "freezingLevel": 9999,
           "visibility": "excellent",
-          "amSky": "cloud",
-          "pmSky": "partly-cloudy",
+          "amSky": "partly-cloudy",
+          "pmSky": "sun",
           "status": "go",
-          "reason": "intermittent sunshine, cloud clearing by late morning, wind dropping to 10mph PM"
+          "reason": "Cloud clearing by late morning, 40-90% cloud-free, rain very unlikely, excellent visibility"
         },
         {
           "sky": "partly-cloudy",
@@ -141,7 +141,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "cloud",
           "status": "marginal",
-          "reason": "low confidence; rain spreading north, fog shrouding higher slopes Deeside in rain"
+          "reason": "Rain spreading north, fog shrouding Deeside slopes; sudden gusts, low confidence"
         },
         {
           "sky": "rain",
@@ -157,7 +157,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusty 35mph, blanket fog below 300m Deeside, raining most or all day"
+          "reason": "Rain most or all day, blanket fog below 300m Deeside, gusty 35mph"
         }
       ]
     },
@@ -174,10 +174,10 @@
           "cloudFree": 70,
           "freezingLevel": 9999,
           "visibility": "excellent",
-          "amSky": "cloud",
-          "pmSky": "partly-cloudy",
+          "amSky": "partly-cloudy",
+          "pmSky": "sun",
           "status": "go",
-          "reason": "cloud clearing by late morning, wind dropping to 10mph PM, dry throughout"
+          "reason": "Cloud clearing late morning, 50-90% cloud-free, rain very unlikely, excellent visibility"
         },
         {
           "sky": "partly-cloudy",
@@ -193,7 +193,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "cloud",
           "status": "marginal",
-          "reason": "low confidence; rain spreading north, fog extensively shrouding higher slopes in rain"
+          "reason": "Rain spreading north, fog extensively shrouding higher slopes; sudden gusts, low confidence"
         },
         {
           "sky": "rain",
@@ -209,7 +209,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusty 35mph, blanket fog below 300m Angus and Ochils, raining most or all day"
+          "reason": "Rain most or all day, blanket fog below 300m Angus and Ochils, gusty 35mph"
         }
       ]
     },
@@ -229,10 +229,10 @@
           "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "go",
-          "reason": "summits almost certain cloud free, light wind negligible, rain not until dusk"
+          "reason": "Summits almost certainly cloud-free, light wind, rain not expected until dusk"
         },
         {
-          "sky": "rain",
+          "sky": "partly-cloudy",
           "windMphLow": 15,
           "windMphHigh": 25,
           "gustMph": 35,
@@ -245,13 +245,13 @@
           "amSky": "partly-cloudy",
           "pmSky": "cloud",
           "status": "marginal",
-          "reason": "gusts 30-35mph, rain on and off, fog shrouding Borders and Cheviots slopes"
+          "reason": "Rain on and off, gusts 30-35mph, fog Cheviots and Borders late day"
         },
         {
-          "sky": "cloud",
+          "sky": "rain",
           "windMphLow": 15,
           "windMphHigh": 20,
-          "windDir": "E",
+          "windDir": "SE",
           "tempCLow": 12,
           "tempCHigh": 12,
           "cloudFree": 30,
@@ -259,12 +259,12 @@
           "visibility": "poor",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "reason": "blanket fog below 300m Borders AM, patchy rain, possible late improvement south"
+          "status": "poor",
+          "reason": "Blanket fog below 300m Borders AM, patches of rain and drizzle, poor visibility in rain"
         }
       ]
     }
   ],
-  "_generated": "2026-08-01T17:12:16.661Z",
+  "_generated": "2026-08-02T10:08:36.078Z",
   "_anchorDate": "2026-08-02"
 }
