@@ -11,9 +11,8 @@
       "forecast": [
         {
           "sky": "rain",
-          "windMphLow": 10,
+          "windMphLow": 30,
           "windMphHigh": 40,
-          "gustMph": 40,
           "windDir": "N",
           "tempCLow": 6,
           "tempCHigh": 8,
@@ -23,12 +22,13 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "persistent heavy rain, low cloud, strengthening winds 40mph, poor visibility"
+          "reason": "persistent heavy rain, low cloud, strengthening northerly 40mph, thundery risk"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 15,
           "windMphHigh": 30,
+          "gustMph": 40,
           "windDir": "W",
           "tempCLow": 4,
           "tempCHigh": 6,
@@ -38,13 +38,12 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "showers fading to dry but rain returning evening; cloud above 700-800m"
+          "reason": "rain returning evening, gusts 40mph at dawn, cloud above 700-800m north"
         },
         {
           "sky": "rain",
-          "windMphLow": 25,
+          "windMphLow": 45,
           "windMphHigh": 55,
-          "gustMph": 55,
           "windDir": "SW",
           "tempCLow": 6,
           "tempCHigh": 9,
@@ -54,7 +53,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gales 45-55mph, gusts stronger near Ben Hope, persistent rain, poor visibility"
+          "reason": "near-gale 45-55mph, stronger near Ben Hope; persistent rain, poor visibility"
         }
       ]
     },
@@ -63,9 +62,8 @@
       "forecast": [
         {
           "sky": "storm",
-          "windMphLow": 10,
+          "windMphLow": 25,
           "windMphHigh": 40,
-          "gustMph": 40,
           "windDir": "W",
           "tempCLow": 7,
           "tempCHigh": 9,
@@ -75,7 +73,7 @@
           "amSky": "rain",
           "pmSky": "storm",
           "status": "poor",
-          "reason": "thunderstorms, torrential bursts, lightning, hail, 40mph gusts coast, low cloud"
+          "reason": "thunderstorms, torrential bursts, lightning, hail; winds 40mph coasts, low cloud"
         },
         {
           "sky": "partly-cloudy",
@@ -90,13 +88,12 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "scattered showers, cloud above 700-800m, rain returning evening coastal areas"
+          "reason": "rain returning evening, cloud above 700-800m, near-freezing on Ben Nevis summit"
         },
         {
           "sky": "rain",
           "windMphLow": 20,
           "windMphHigh": 50,
-          "gustMph": 50,
           "windDir": "SW",
           "tempCLow": 6,
           "tempCHigh": 9,
@@ -106,7 +103,7 @@
           "amSky": "rain",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "gusts 50mph Mull and Lochaber, persistent rain west coast, extensive low cloud"
+          "reason": "gusts to 50mph Mull and Lochaber; persistent rain, low cloud to forest canopies"
         }
       ]
     },
@@ -117,8 +114,7 @@
           "sky": "storm",
           "windMphLow": 10,
           "windMphHigh": 40,
-          "gustMph": 40,
-          "windDir": "NW",
+          "windDir": "NNW",
           "tempCLow": 7,
           "tempCHigh": 9,
           "cloudFree": 20,
@@ -127,7 +123,7 @@
           "amSky": "rain",
           "pmSky": "storm",
           "status": "poor",
-          "reason": "thunderstorms, torrential bursts, lightning, hail, strengthening to 40mph, low cloud"
+          "reason": "thunderstorms, torrential bursts, lightning, hail; 40mph+ evening, low cloud all day"
         },
         {
           "sky": "partly-cloudy",
@@ -143,10 +139,10 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "gusts 40mph Cairngorms at dawn, showers fading, cloud lifting to 80% clear afternoon"
+          "reason": "gusts 40mph at dawn Cairngorms; near-freezing on highest summits, improving PM"
         },
         {
-          "sky": "rain",
+          "sky": "cloud",
           "windMphLow": 20,
           "windMphHigh": 40,
           "windDir": "SW",
@@ -158,7 +154,7 @@
           "amSky": "rain",
           "pmSky": "cloud",
           "status": "marginal",
-          "reason": "rain frequent Monadhliath and western Cairngorms, wind strengthening to 40mph late"
+          "reason": "rain western Cairngorms/Monadhliath; 40mph gusts later, wind chill near freezing"
         }
       ]
     },
@@ -169,8 +165,7 @@
           "sky": "storm",
           "windMphLow": 20,
           "windMphHigh": 40,
-          "gustMph": 40,
-          "windDir": "NW",
+          "windDir": "NNW",
           "tempCLow": 8,
           "tempCHigh": 9,
           "cloudFree": 20,
@@ -179,7 +174,7 @@
           "amSky": "rain",
           "pmSky": "storm",
           "status": "poor",
-          "reason": "thunderstorms, torrential bursts, lightning, hail, gusts 40mph evening, low cloud"
+          "reason": "thunderstorms PM, torrential bursts, lightning, hail; 40mph gusts evening, low cloud"
         },
         {
           "sky": "partly-cloudy",
@@ -195,10 +190,10 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "gusts 35-40mph eastern tops at dawn; improving to 80% cloud-free by afternoon"
+          "reason": "gusts 35-40mph eastern tops at dawn; improving to mostly clear afternoon"
         },
         {
-          "sky": "partly-cloudy",
+          "sky": "cloud",
           "windMphLow": 20,
           "windMphHigh": 30,
           "windDir": "SW",
@@ -207,10 +202,10 @@
           "cloudFree": 55,
           "freezingLevel": 9999,
           "visibility": "excellent",
-          "amSky": "cloud",
+          "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "patchy rain west of A9, cloud slow to clear west; 70% clear east, wind strengthening"
+          "reason": "patchy rain west of A9, cloud slow to clear western hills, wind increasing"
         }
       ]
     },
@@ -218,9 +213,9 @@
       "name": "Southern Uplands",
       "forecast": [
         {
-          "sky": "storm",
-          "windMphLow": 25,
-          "windMphHigh": 50,
+          "sky": "rain",
+          "windMphLow": 40,
+          "windMphHigh": 55,
           "gustMph": 60,
           "windDir": "SW",
           "tempCLow": 9,
@@ -231,7 +226,7 @@
           "amSky": "rain",
           "pmSky": "storm",
           "status": "poor",
-          "reason": "gales to 50mph, gusts 60mph on tops, thundery bursts, lightning, near impassable"
+          "reason": "gales 50mph, gusts 60mph on tops; thundery downpours, near-freezing wind chill"
         },
         {
           "sky": "partly-cloudy",
@@ -246,7 +241,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "largely clear summits 80%, light winds, mostly dry with only rare showers"
+          "reason": "often dry, cloud clearing tops, light winds, excellent visibility"
         },
         {
           "sky": "partly-cloudy",
@@ -261,11 +256,11 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "patchy rain drifting west-to-east morning, easing afternoon; light winds manageable"
+          "reason": "patchy rain drifting west-to-east morning, easing PM; cloud above 700-800m at dawn"
         }
       ]
     }
   ],
-  "_generated": "2026-08-04T18:02:21.027Z",
+  "_generated": "2026-08-05T10:46:46.369Z",
   "_anchorDate": "2026-08-05"
 }
