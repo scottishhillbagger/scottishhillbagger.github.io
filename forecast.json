@@ -1,43 +1,28 @@
 {
   "days": [
-    "Sun",
     "Mon",
-    "Tue"
+    "Tue",
+    "Wed"
   ],
-  "updatedAt": "2026-08-08T14:00:00.000Z",
+  "updatedAt": "2026-08-09T14:06:00.000Z",
   "regions": [
     {
       "name": "Northwest Highlands",
       "forecast": [
         {
-          "sky": "rain",
-          "windMphLow": 25,
-          "windMphHigh": 40,
-          "windDir": "W",
-          "tempCLow": 7,
-          "tempCHigh": 7,
-          "cloudFree": 10,
-          "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "rain",
-          "pmSky": "cloud",
-          "status": "poor",
-          "reason": "near-gale 40mph Sutherland, low cloud 300-500m, drizzle persistent"
-        },
-        {
           "sky": "partly-cloudy",
           "windMphLow": 15,
-          "windMphHigh": 25,
+          "windMphHigh": 40,
           "windDir": "NW",
-          "tempCLow": 5,
+          "tempCLow": 4,
           "tempCHigh": 11,
-          "cloudFree": 60,
+          "cloudFree": 80,
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "partly-cloudy",
           "pmSky": "sun",
-          "status": "go",
-          "reason": "wind dropping, cloud confined above 1000m, excellent visibility"
+          "status": "marginal",
+          "reason": "gusts 40mph north/Ben Wyvis AM; easing PM, extensively fine"
         },
         {
           "sky": "sun",
@@ -45,14 +30,30 @@
           "windMphHigh": 25,
           "windDir": "S",
           "tempCLow": 7,
-          "tempCHigh": 14,
+          "tempCHigh": 15,
           "cloudFree": 90,
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "unbroken sunshine, 90% cloud-free, superb visibility, light winds"
+          "reason": "unbroken sunshine, 90% cloud-free Munros, light southerly winds"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 10,
+          "windMphHigh": 40,
+          "gustMph": 40,
+          "windDir": "S",
+          "tempCLow": 11,
+          "tempCHigh": 16,
+          "cloudFree": 70,
+          "freezingLevel": 9999,
+          "visibility": "good",
+          "amSky": "partly-cloudy",
+          "pmSky": "partly-cloudy",
+          "status": "marginal",
+          "reason": "gusts 40mph coastal summits, showery bursts near coast, haze Skye"
         }
       ]
     },
@@ -60,34 +61,19 @@
       "name": "West Highlands",
       "forecast": [
         {
-          "sky": "rain",
-          "windMphLow": 20,
-          "windMphHigh": 40,
-          "windDir": "W",
-          "tempCLow": 7,
-          "tempCHigh": 7,
-          "cloudFree": 10,
-          "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "rain",
-          "pmSky": "partly-cloudy",
-          "status": "poor",
-          "reason": "40mph dawn gusts Lochaber, low cloud 450-600m, rain clearing slowly"
-        },
-        {
           "sky": "partly-cloudy",
           "windMphLow": 15,
-          "windMphHigh": 15,
+          "windMphHigh": 25,
           "windDir": "NW",
-          "tempCLow": 6,
+          "tempCLow": 5,
           "tempCHigh": 12,
-          "cloudFree": 70,
+          "cloudFree": 90,
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "wind dropping, cloud clears summits by afternoon, excellent visibility"
+          "reason": "wind dropping to negligible PM, 90% cloud-free, intermittent bright sun"
         },
         {
           "sky": "sun",
@@ -95,14 +81,30 @@
           "windMphHigh": 25,
           "windDir": "S",
           "tempCLow": 8,
-          "tempCHigh": 14,
+          "tempCHigh": 15,
           "cloudFree": 80,
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "unbroken sunshine, gusty on Mull/Jura islands but light elsewhere"
+          "reason": "unbroken sunshine, light southerly, gusty Mull/Jura islands only"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 10,
+          "windMphHigh": 40,
+          "gustMph": 40,
+          "windDir": "S",
+          "tempCLow": 11,
+          "tempCHigh": 16,
+          "cloudFree": 70,
+          "freezingLevel": 9999,
+          "visibility": "good",
+          "amSky": "partly-cloudy",
+          "pmSky": "partly-cloudy",
+          "status": "marginal",
+          "reason": "gusts 40mph coastal summits, showery bursts Mull and west Loch Linnhe"
         }
       ]
     },
@@ -112,47 +114,48 @@
         {
           "sky": "partly-cloudy",
           "windMphLow": 25,
-          "windMphHigh": 50,
-          "windDir": "W",
-          "tempCLow": 8,
-          "tempCHigh": 9,
-          "cloudFree": 40,
-          "freezingLevel": 9999,
-          "visibility": "good",
-          "amSky": "cloud",
-          "pmSky": "partly-cloudy",
-          "status": "poor",
-          "reason": "50mph gusts at dawn, cloud base 750-900m west of A9, arduous conditions"
-        },
-        {
-          "sky": "partly-cloudy",
-          "windMphLow": 15,
-          "windMphHigh": 25,
+          "windMphHigh": 40,
           "windDir": "NW",
-          "tempCLow": 5,
+          "tempCLow": 4,
           "tempCHigh": 12,
-          "cloudFree": 70,
+          "cloudFree": 90,
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "partly-cloudy",
           "pmSky": "sun",
-          "status": "go",
-          "reason": "wind dropping, cloud clears above 1100m by late morning, superb visibility"
+          "status": "marginal",
+          "reason": "gusts 40mph Cairngorms and Deeside AM; easing PM, extensively fine"
         },
         {
           "sky": "sun",
-          "windMphLow": 15,
+          "windMphLow": 10,
           "windMphHigh": 15,
           "windDir": "S",
           "tempCLow": 7,
-          "tempCHigh": 14,
+          "tempCHigh": 16,
           "cloudFree": 80,
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "unbroken sunshine, negligible wind, 80% cloud-free, superb visibility"
+          "reason": "unbroken sunshine developing, light winds, fog dispersing mid-morning"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 10,
+          "windMphHigh": 40,
+          "gustMph": 40,
+          "windDir": "S",
+          "tempCLow": 11,
+          "tempCHigh": 16,
+          "cloudFree": 70,
+          "freezingLevel": 9999,
+          "visibility": "good",
+          "amSky": "partly-cloudy",
+          "pmSky": "partly-cloudy",
+          "status": "marginal",
+          "reason": "gusts 35-40mph higher tops, sudden downslope gusts, showers east Ben Alder"
         }
       ]
     },
@@ -160,49 +163,50 @@
       "name": "Southeastern Highlands",
       "forecast": [
         {
-          "sky": "rain",
-          "windMphLow": 20,
-          "windMphHigh": 40,
-          "windDir": "W",
-          "tempCLow": 9,
-          "tempCHigh": 9,
-          "cloudFree": 30,
-          "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "rain",
-          "pmSky": "partly-cloudy",
-          "status": "poor",
-          "reason": "40mph winds, rain clearing slowly, cloud base 850-1000m, poor visibility AM"
-        },
-        {
           "sky": "sun",
           "windMphLow": 15,
           "windMphHigh": 25,
           "windDir": "NW",
-          "tempCLow": 6,
+          "tempCLow": 5,
           "tempCHigh": 13,
-          "cloudFree": 90,
+          "cloudFree": 95,
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "cloud all clearing by mid-morning, 90% cloud-free, excellent visibility"
+          "reason": "extensive sunshine, mountains free of cloud by late morning, wind dropping"
         },
         {
           "sky": "sun",
-          "windMphLow": 15,
+          "windMphLow": 10,
           "windMphHigh": 15,
           "windDir": "S",
           "tempCLow": 7,
-          "tempCHigh": 14,
-          "cloudFree": 70,
+          "tempCHigh": 16,
+          "cloudFree": 80,
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "extensive sunshine, light winds, superb visibility, cloud dispersing AM"
+          "reason": "extensive sunshine developing, negligible wind, fog east A9 disperses mid-morning"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 10,
+          "windMphHigh": 35,
+          "gustMph": 35,
+          "windDir": "S",
+          "tempCLow": 11,
+          "tempCHigh": 16,
+          "cloudFree": 70,
+          "freezingLevel": 9999,
+          "visibility": "good",
+          "amSky": "partly-cloudy",
+          "pmSky": "partly-cloudy",
+          "status": "marginal",
+          "reason": "gusts 35mph higher tops, sudden downslope gusts, showers briefly heavy"
         }
       ]
     },
@@ -210,34 +214,19 @@
       "name": "Southern Uplands",
       "forecast": [
         {
-          "sky": "rain",
-          "windMphLow": 15,
-          "windMphHigh": 40,
-          "windDir": "SW",
-          "tempCLow": 11,
-          "tempCHigh": 11,
-          "cloudFree": 20,
-          "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "rain",
-          "pmSky": "partly-cloudy",
-          "status": "poor",
-          "reason": "30-40mph SW, widespread fog below 500m, persistent rain especially Galloway"
-        },
-        {
-          "sky": "sun",
+          "sky": "partly-cloudy",
           "windMphLow": 10,
           "windMphHigh": 20,
           "windDir": "NW",
           "tempCLow": 8,
           "tempCHigh": 13,
-          "cloudFree": 80,
+          "cloudFree": 95,
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "rain not expected, wind dropping, 80% cloud-free, excellent visibility"
+          "reason": "patchwork bright sunshine, light wind dropping, summits almost certainly clear"
         },
         {
           "sky": "sun",
@@ -252,11 +241,27 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "unbroken sunshine, negligible wind, 90% cloud-free, superb visibility"
+          "reason": "unbroken sunshine, negligible wind, 90% cloud-free summits, superb visibility"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 10,
+          "windMphHigh": 30,
+          "gustMph": 30,
+          "windDir": "S",
+          "tempCLow": 13,
+          "tempCHigh": 19,
+          "cloudFree": 80,
+          "freezingLevel": 9999,
+          "visibility": "good",
+          "amSky": "partly-cloudy",
+          "pmSky": "partly-cloudy",
+          "status": "marginal",
+          "reason": "gusts 30mph higher tops, odd heavy shower, haze reducing visibility"
         }
       ]
     }
   ],
-  "_generated": "2026-08-09T09:03:14.754Z",
-  "_anchorDate": "2026-08-09"
+  "_generated": "2026-08-09T16:51:28.365Z",
+  "_anchorDate": "2026-08-10"
 }
