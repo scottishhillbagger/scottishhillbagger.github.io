@@ -14,15 +14,15 @@
           "windMphLow": 25,
           "windMphHigh": 40,
           "windDir": "W",
-          "tempCLow": 5,
-          "tempCHigh": 10,
+          "tempCLow": 7,
+          "tempCHigh": 7,
           "cloudFree": 10,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "near-gale winds 40mph Sutherland, low cloud 300-500m, drizzly"
+          "reason": "near-gale 40mph Sutherland, low cloud 300-500m, drizzle persistent"
         },
         {
           "sky": "partly-cloudy",
@@ -36,8 +36,8 @@
           "visibility": "excellent",
           "amSky": "partly-cloudy",
           "pmSky": "sun",
-          "status": "marginal",
-          "reason": "scattered showers, cloud below 1000m coast; otherwise improving"
+          "status": "go",
+          "reason": "wind dropping, cloud confined above 1000m, excellent visibility"
         },
         {
           "sky": "sun",
@@ -52,7 +52,7 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "unbroken sunshine, 90% cloud-free Munros, superb visibility, light winds"
+          "reason": "unbroken sunshine, 90% cloud-free, superb visibility, light winds"
         }
       ]
     },
@@ -64,15 +64,15 @@
           "windMphLow": 20,
           "windMphHigh": 40,
           "windDir": "W",
-          "tempCLow": 5,
-          "tempCHigh": 10,
+          "tempCLow": 7,
+          "tempCHigh": 7,
           "cloudFree": 10,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "40mph dawn gusts Lochaber, cloud base 450-600m, rain clearing slowly"
+          "reason": "40mph dawn gusts Lochaber, low cloud 450-600m, rain clearing slowly"
         },
         {
           "sky": "partly-cloudy",
@@ -81,13 +81,13 @@
           "windDir": "NW",
           "tempCLow": 6,
           "tempCHigh": 12,
-          "cloudFree": 60,
+          "cloudFree": 70,
           "freezingLevel": 9999,
           "visibility": "excellent",
-          "amSky": "cloud",
+          "amSky": "partly-cloudy",
           "pmSky": "sun",
-          "status": "marginal",
-          "reason": "scattered showers, cloud below 1000m coast morning, clearing afternoon"
+          "status": "go",
+          "reason": "wind dropping, cloud clears summits by afternoon, excellent visibility"
         },
         {
           "sky": "sun",
@@ -102,7 +102,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "unbroken sunshine, 80% cloud-free, gusty on Mull/Jura islands only"
+          "reason": "unbroken sunshine, gusty on Mull/Jura islands but light elsewhere"
         }
       ]
     },
@@ -122,7 +122,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "50mph dawn gusts, cloud 750-1200m, rain clearing mid-morning"
+          "reason": "50mph gusts at dawn, cloud base 750-900m west of A9, arduous conditions"
         },
         {
           "sky": "partly-cloudy",
@@ -137,7 +137,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "scattered showers, cloud clearing above 1100m by late morning, sunny pm"
+          "reason": "wind dropping, cloud clears above 1100m by late morning, superb visibility"
         },
         {
           "sky": "sun",
@@ -164,15 +164,15 @@
           "windMphLow": 20,
           "windMphHigh": 40,
           "windDir": "W",
-          "tempCLow": 5,
-          "tempCHigh": 10,
+          "tempCLow": 9,
+          "tempCHigh": 9,
           "cloudFree": 30,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "40mph gusts, rain clearing late morning, cloud 850-1000m north Perthshire"
+          "reason": "40mph winds, rain clearing slowly, cloud base 850-1000m, poor visibility AM"
         },
         {
           "sky": "sun",
@@ -187,7 +187,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "90% cloud-free, isolated showers only, excellent visibility, light winds pm"
+          "reason": "cloud all clearing by mid-morning, 90% cloud-free, excellent visibility"
         },
         {
           "sky": "sun",
@@ -202,7 +202,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "extensive sunshine, negligible wind, superb visibility, cloud dispersing morning"
+          "reason": "extensive sunshine, light winds, superb visibility, cloud dispersing AM"
         }
       ]
     },
@@ -214,15 +214,15 @@
           "windMphLow": 15,
           "windMphHigh": 40,
           "windDir": "SW",
-          "tempCLow": 10,
-          "tempCHigh": 15,
+          "tempCLow": 11,
+          "tempCHigh": 11,
           "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "30-40mph gusts, persistent rain, widespread fog below 500m, poor visibility"
+          "reason": "30-40mph SW, widespread fog below 500m, persistent rain especially Galloway"
         },
         {
           "sky": "sun",
@@ -237,7 +237,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "no rain, 80% cloud-free, excellent visibility, winds dropping to negligible"
+          "reason": "rain not expected, wind dropping, 80% cloud-free, excellent visibility"
         },
         {
           "sky": "sun",
@@ -252,11 +252,11 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "unbroken sunshine, 90% cloud-free, negligible winds, superb visibility"
+          "reason": "unbroken sunshine, negligible wind, 90% cloud-free, superb visibility"
         }
       ]
     }
   ],
-  "_generated": "2026-08-08T16:49:49.079Z",
+  "_generated": "2026-08-09T09:03:14.754Z",
   "_anchorDate": "2026-08-09"
 }
