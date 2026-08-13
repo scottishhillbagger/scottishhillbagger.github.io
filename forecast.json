@@ -23,7 +23,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "heavy rain bursts, cloud below 300m coast, gusts in showers"
+          "reason": "frequent heavy rain, thunder risk, cloud below 500m coast"
         },
         {
           "sky": "cloud",
@@ -35,10 +35,10 @@
           "cloudFree": 10,
           "freezingLevel": 9999,
           "visibility": "poor",
-          "amSky": "rain",
+          "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "overcast all day, rain on and off, cloud to low slopes, poor visibility"
+          "reason": "extensive cloud shrouding western mountains, persistent rain and drizzle"
         },
         {
           "sky": "rain",
@@ -52,9 +52,9 @@
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
-          "pmSky": "cloud",
+          "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 45mph, showery rain all day, cloud mid-slopes, poor visibility"
+          "reason": "gusts 45mph, strenuous walking, west coast shrouded, poor visibility"
         }
       ]
     },
@@ -74,7 +74,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "heavy rain frequent afternoon, cloud below 300m Loch Linnhe, thunder risk north"
+          "reason": "frequent heavy rain afternoon, thunder north, cloud below 300m west Loch Linnhe"
         },
         {
           "sky": "cloud",
@@ -86,10 +86,10 @@
           "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "poor",
-          "amSky": "rain",
+          "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "shrouded from lower slopes, persistent rain near Loch Linnhe, dull and poor visibility"
+          "reason": "persistent cloud and rain near Loch Linnhe, little or no sun, poor visibility"
         },
         {
           "sky": "rain",
@@ -105,7 +105,7 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gusts 40-45mph early, showery rain Mull northward, cloud mid-slopes most of day"
+          "reason": "gusts 40-45mph early, blustery, hills shrouded Mull northward, near-freezing wind chill"
         }
       ]
     },
@@ -123,9 +123,9 @@
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "sun",
-          "pmSky": "cloud",
+          "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "sunny morning, cloud building PM, rain and thunder risk west of A9 afternoon"
+          "reason": "sunny AM, rising rain and thunder risk PM, cloud lowering to 700m west"
         },
         {
           "sky": "partly-cloudy",
@@ -136,11 +136,11 @@
           "tempCHigh": 13,
           "cloudFree": 40,
           "freezingLevel": 9999,
-          "visibility": "good",
+          "visibility": "excellent",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "patchy rain and drizzle, risk thundery bursts far east afternoon, variable cloud"
+          "reason": "patchy rain, risk heavy thundery bursts far east PM, lifting cloud trend"
         },
         {
           "sky": "partly-cloudy",
@@ -156,7 +156,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "gusts near 40mph morning affecting stability, patchy rain, 7C on tops"
+          "reason": "gusts 40mph morning affecting stability, near-freezing wind chill, patchy rain"
         }
       ]
     },
@@ -176,7 +176,7 @@
           "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "sunny morning, cloud and patchy rain increasing PM, thunder risk central highlands"
+          "reason": "sunny AM, rising shower and thunder risk PM, cloud to 700-800m in heavy bursts"
         },
         {
           "sky": "partly-cloudy",
@@ -187,11 +187,11 @@
           "tempCHigh": 15,
           "cloudFree": 50,
           "freezingLevel": 9999,
-          "visibility": "good",
+          "visibility": "excellent",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "patchy rain early, risk heavy thundery bursts far east afternoon, lifting cloud"
+          "reason": "patchy rain, risk heavy thundery bursts far east PM, lifting cloud trend"
         },
         {
           "sky": "partly-cloudy",
@@ -207,7 +207,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "gusts 35mph morning, patchy light rain, 7C tops, but extended dry windows east"
+          "reason": "gusts 35mph morning affecting stability, patchy rain, extended dry windows"
         }
       ]
     },
@@ -228,7 +228,7 @@
           "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "go",
-          "reason": "mostly clear, rare spotty rain, sunny spells, hot 22C tops east, hazy"
+          "reason": "mostly sunny and hot, rare spotty rain, hills largely clear, hazy"
         },
         {
           "sky": "partly-cloudy",
@@ -243,7 +243,7 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "heavy rain bursts early, lifting and clearing afternoon, small thunder risk far east"
+          "reason": "heavy rain early, cloud covering summits, risk thundery showers far east PM"
         },
         {
           "sky": "sun",
@@ -259,11 +259,11 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "largely clear summits afternoon, often sunny, few spots of rain, light winds"
+          "reason": "often sunny, largely clear summits PM, light rain, good visibility"
         }
       ]
     }
   ],
-  "_generated": "2026-08-12T17:09:51.657Z",
+  "_generated": "2026-08-13T09:34:06.274Z",
   "_anchorDate": "2026-08-13"
 }
