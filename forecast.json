@@ -22,7 +22,7 @@
           "amSky": "rain",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "extensive cloud shrouding western mountains, drizzle and rain all day, poor visibility"
+          "reason": "extensive cloud shrouding western mountains, drizzle/rain all day, poor visibility"
         },
         {
           "sky": "rain",
@@ -38,7 +38,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 45mph north, showery rain all day, hills shrouded, poor visibility"
+          "reason": "showery rain all day, gusts 45mph north, west coast hills shrouded to low slopes"
         },
         {
           "sky": "cloud",
@@ -51,9 +51,9 @@
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "cloud",
-          "pmSky": "cloud",
+          "pmSky": "rain",
           "status": "poor",
-          "reason": "coastal hills shrouded from 500m, persistent drizzle and showers, largely poor visibility"
+          "reason": "coastal hills shrouded from 500m, drizzle/showers, poor visibility on high terrain"
         }
       ]
     },
@@ -73,7 +73,7 @@
           "amSky": "rain",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "shrouded from lower slopes near Loch Linnhe, drizzle and light rain, poor visibility"
+          "reason": "drizzle and light rain near Loch Linnhe, extensive cloud from lower slopes, poor visibility"
         },
         {
           "sky": "partly-cloudy",
@@ -82,14 +82,14 @@
           "gustMph": 40,
           "windDir": "WNW",
           "tempCLow": 7,
-          "tempCHigh": 7,
+          "tempCHigh": 8,
           "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "moderate",
           "amSky": "partly-cloudy",
           "pmSky": "cloud",
-          "status": "marginal",
-          "reason": "gusts 40mph early, hills shrouded north of Loch Linnhe, showery rain drifting north"
+          "status": "poor",
+          "reason": "showery rain Mull northward, gusts 40mph early, hills shrouded middle slopes, trending cloudier"
         },
         {
           "sky": "cloud",
@@ -100,11 +100,11 @@
           "tempCHigh": 7,
           "cloudFree": 30,
           "freezingLevel": 9999,
-          "visibility": "moderate",
+          "visibility": "poor",
           "amSky": "cloud",
-          "pmSky": "partly-cloudy",
+          "pmSky": "rain",
           "status": "marginal",
-          "reason": "drizzle near coast, heavy burst possible, few breaks above 1000-1100m"
+          "reason": "drizzle near coast, cloud shrouding high terrain, heavy burst possible, poor summit visibility"
         }
       ]
     },
@@ -124,7 +124,7 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "early heavy rain clearing, patchy cloud and dry windows PM, bursts of sunshine"
+          "reason": "heavy rain early, clearing to patchy rain then dry; cloud lifting to 40% summit clearance"
         },
         {
           "sky": "partly-cloudy",
@@ -140,7 +140,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "cloud",
           "status": "marginal",
-          "reason": "gusts 40mph morning affecting stability, patchy rain west, trending cloudier PM"
+          "reason": "gusts 40mph morning affecting stability, patchy rain west, trending cloudier afternoon"
         },
         {
           "sky": "partly-cloudy",
@@ -155,7 +155,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "drizzle and showery rain drifting NW, heavy burst possible, cloud banks over tops"
+          "reason": "drizzle on summits, showery rain risk from northwest, cloud banks over high tops"
         }
       ]
     },
@@ -173,9 +173,9 @@
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "rain",
-          "pmSky": "sun",
+          "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "early heavy rain clearing to dry bright breaks; eastern tops largely clear to 70%"
+          "reason": "heavy rain early, clearing to largely dry with bright breaks; 70% cloud-free near Glenshee"
         },
         {
           "sky": "partly-cloudy",
@@ -191,7 +191,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "cloud",
           "status": "marginal",
-          "reason": "gusts 35mph morning affecting stability, extended dry windows, trending cloudier PM"
+          "reason": "gusts 35mph morning affecting stability; patchy sun, trending cloudier, extended dry windows"
         },
         {
           "sky": "partly-cloudy",
@@ -206,7 +206,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "rain on and off drifting west, heavy burst possible, cloud caps coming and going"
+          "reason": "rain drifting from west, heavy burst possible, cloud caps coming and going on tops"
         }
       ]
     },
@@ -224,9 +224,9 @@
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "rain",
-          "pmSky": "sun",
+          "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "heavy rain early clearing PM to sunshine; low cloud lifts, risk thundery shower Cheviots"
+          "reason": "heavy rain early, thundery shower risk Cheviots PM, clearing afternoon with bright breaks"
         },
         {
           "sky": "partly-cloudy",
@@ -242,7 +242,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "often sunny, summits largely clear PM, gusts 25-30mph easing, few spots of rain"
+          "reason": "mostly sunny, summits largely clear afternoon, few spots of rain, gusts 25-30mph easing"
         },
         {
           "sky": "partly-cloudy",
@@ -255,13 +255,13 @@
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "partly-cloudy",
-          "pmSky": "sun",
+          "pmSky": "partly-cloudy",
           "status": "go",
-          "reason": "bursts of sun, summits often clear 70%, light rain on and off with dry windows"
+          "reason": "bursts of sun, summits often clear 70%, light rain on and off, mostly small wind effects"
         }
       ]
     }
   ],
-  "_generated": "2026-08-13T17:10:03.413Z",
+  "_generated": "2026-08-14T09:28:24.724Z",
   "_anchorDate": "2026-08-14"
 }
