@@ -22,7 +22,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "persistent low cloud from 500m, poor visibility, damp all day west"
+          "reason": "often damp west, low cloud from 500m, poor visibility coastal hills"
         },
         {
           "sky": "rain",
@@ -37,7 +37,7 @@
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "heavy rain sets in PM, winds reaching 40mph, cloud base 300-600m"
+          "reason": "heavy rain sets in afternoon, winds reach 40mph, cloud bases 300-600m"
         },
         {
           "sky": "partly-cloudy",
@@ -49,10 +49,10 @@
           "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "cloud",
+          "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gusts to 40mph SW, considerable wind chill, showery rain western hills"
+          "reason": "gusts 40mph, western hills covered above 600-800m, considerable wind chill"
         }
       ]
     },
@@ -72,7 +72,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "low cloud shrouding coasts, drizzle all day, near-zero chance cloud-free Munros"
+          "reason": "often damp, low cloud shrouding coasts, almost nil cloud-free Munros on coast"
         },
         {
           "sky": "rain",
@@ -87,7 +87,7 @@
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "prolonged heavy rain PM-evening, winds to 40mph, cloud base 300-600m"
+          "reason": "prolonged heavy rain afternoon-evening, winds 40mph, cloud 300-600m"
         },
         {
           "sky": "partly-cloudy",
@@ -99,10 +99,10 @@
           "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "cloud",
+          "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "25-40mph WSW, considerable wind chill, showery rain with heavier inland bursts"
+          "reason": "showery rain, gusts 40mph, coastal hills covered above 600-800m, wind chill"
         }
       ]
     },
@@ -118,11 +118,11 @@
           "tempCHigh": 10,
           "cloudFree": 40,
           "freezingLevel": 9999,
-          "visibility": "good",
+          "visibility": "excellent",
           "amSky": "cloud",
-          "pmSky": "partly-cloudy",
+          "pmSky": "rain",
           "status": "marginal",
-          "reason": "occasional rain, cloud over tops, risk heavier bursts PM, 30-50% cloud-free"
+          "reason": "occasional rain, cloud tops above 900-1000m, risk heavier bursts afternoon"
         },
         {
           "sky": "rain",
@@ -137,7 +137,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "persistent rain PM, winds reaching 40mph by dusk, cloud lowering to 600-800m"
+          "reason": "rain develops to persistent, winds reach 40mph by dusk, cloud lowering 600-800m"
         },
         {
           "sky": "partly-cloudy",
@@ -153,7 +153,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "gusts 40mph on high Cairngorms, wind chill near freezing, showers west of A9"
+          "reason": "gusts 40mph high Cairngorms, showers west of A9, considerable wind chill"
         }
       ]
     },
@@ -171,9 +171,9 @@
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "cloud",
-          "pmSky": "partly-cloudy",
+          "pmSky": "rain",
           "status": "marginal",
-          "reason": "low cloud west, patchy rain, odd heavier bursts PM, poor visibility western hills"
+          "reason": "damp west with low cloud, light rain Callander to Loch Tay, odd heavier showers PM"
         },
         {
           "sky": "rain",
@@ -188,7 +188,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "heavy rain sets in PM, winds to 40mph evening, cloud lowering to 400-700m"
+          "reason": "heavy rain sets in late day, winds reach 40mph evening, cloud lowering 400-700m"
         },
         {
           "sky": "partly-cloudy",
@@ -204,7 +204,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "gusts 35mph high tops, marked wind chill, showers mainly central highlands"
+          "reason": "gusts 35mph high tops, showers central highlands, cloud 700-900m, marked wind chill"
         }
       ]
     },
@@ -223,9 +223,9 @@
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "cloud",
-          "pmSky": "partly-cloudy",
+          "pmSky": "rain",
           "status": "marginal",
-          "reason": "low cloud and drizzle west Galloway, patchy rain, 70% cloud-free east"
+          "reason": "damp west with low cloud, rain Dumfries and Galloway, 70% cloud-free east"
         },
         {
           "sky": "rain",
@@ -240,7 +240,7 @@
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "persistent heavy rain PM Galloway, winds to 40mph dusk, cloud covering western hills"
+          "reason": "persistent rain Dumfries & Galloway afternoon, winds to 40mph, cloud filling widely"
         },
         {
           "sky": "partly-cloudy",
@@ -255,11 +255,11 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "20-30mph westerly, wind chill 2-4C, occasional showers, cloud clearing to 800m"
+          "reason": "showery rain, winds 20-30mph, cloud above 600m lifting, marked wind chill"
         }
       ]
     }
   ],
-  "_generated": "2026-08-15T16:38:36.629Z",
+  "_generated": "2026-08-16T08:47:34.032Z",
   "_anchorDate": "2026-08-16"
 }
