@@ -22,7 +22,7 @@
           "amSky": "cloud",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "cloud and drizzle most hills, poor visibility, murky west coast"
+          "reason": "cloud from 700m, drizzle west, poor visibility on high terrain"
         },
         {
           "sky": "cloud",
@@ -37,10 +37,10 @@
           "amSky": "cloud",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "extensive cloud 600-700m, drizzle west coast, poor visibility on high terrain"
+          "reason": "extensive cloud from 600m, drizzle west coast, poor visibility on tops"
         },
         {
-          "sky": "sun",
+          "sky": "partly-cloudy",
           "windMphLow": 10,
           "windMphHigh": 25,
           "windDir": "S",
@@ -52,7 +52,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "mostly sunny, 80% cloud-free Munros, no rain, light winds"
+          "reason": "mostly sunny, cloud lifting off most summits, no rain, light winds"
         }
       ]
     },
@@ -66,13 +66,13 @@
           "windDir": "NW",
           "tempCLow": 5,
           "tempCHigh": 9,
-          "cloudFree": 45,
+          "cloudFree": 60,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "partly-cloudy",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "cloud lifts off many summits but Lochaber covered above 700-1000m"
+          "reason": "cloud lifts south/east but Lochaber often covered above 700-1000m, drizzle west"
         },
         {
           "sky": "cloud",
@@ -87,13 +87,13 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "extensive cloud west coast, poor visibility high terrain, drizzle persisting"
+          "reason": "extensive cloud to middle slopes, drizzle near coast, poor visibility on high terrain"
         },
         {
           "sky": "sun",
           "windMphLow": 10,
           "windMphHigh": 15,
-          "windDir": "SE",
+          "windDir": "S",
           "tempCLow": 7,
           "tempCHigh": 11,
           "cloudFree": 70,
@@ -102,7 +102,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "mostly sunny, no rain, light winds, 70% cloud-free Munros"
+          "reason": "mostly sunny, no rain, cloud clears most summits, light southerly winds"
         }
       ]
     },
@@ -123,7 +123,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "gusts 30-35mph east early, below-freezing wind chill on tops, cloud lifting"
+          "reason": "blustery east early, gusts 30-35mph high tops, cloud lifts to summit breaks by afternoon"
         },
         {
           "sky": "partly-cloudy",
@@ -138,7 +138,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "breezy Cairngorm plateau early, extensive cloud lifting to summit breaks"
+          "reason": "extensive cloud early, breezy Cairngorm plateau, lifting with breaks by afternoon"
         },
         {
           "sky": "sun",
@@ -153,7 +153,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "largely clear hills, 80% cloud-free, no rain, light winds, sunny spells"
+          "reason": "largely clear hills, mostly sunny, no rain, light southerly winds"
         }
       ]
     },
@@ -172,9 +172,9 @@
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "partly-cloudy",
-          "pmSky": "sun",
+          "pmSky": "partly-cloudy",
           "status": "go",
-          "reason": "cloud lifts off summits, often sunny, gusts 30mph east Glenshee but manageable"
+          "reason": "cloud lifts off summits, often sunny, dry, gusts to 30mph east Glenshee early"
         },
         {
           "sky": "partly-cloudy",
@@ -188,11 +188,11 @@
           "visibility": "excellent",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "reason": "cloud lifting to summit level, mostly cloudy with few breaks, drizzle early"
+          "status": "go",
+          "reason": "mostly dry, cloud lifting to summit breaks, excellent visibility out of cloud"
         },
         {
-          "sky": "sun",
+          "sky": "partly-cloudy",
           "windMphLow": 10,
           "windMphHigh": 15,
           "windDir": "SE",
@@ -204,7 +204,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "summits clear much of day, 80% cloud-free, no rain, light winds"
+          "reason": "summits largely clear much of day, no rain, patchwork cloud and sun"
         }
       ]
     },
@@ -222,9 +222,9 @@
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "partly-cloudy",
-          "pmSky": "sun",
+          "pmSky": "partly-cloudy",
           "status": "go",
-          "reason": "often sunny, 80% cloud-free, light winds, summits clearing after dawn"
+          "reason": "often sunny, cloud clears summits, dry, light winds, excellent visibility"
         },
         {
           "sky": "partly-cloudy",
@@ -239,7 +239,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "cloud lifts to 80% clear summits, light winds, mostly dry, patchy sun"
+          "reason": "cloud lifts above summits, patchwork sun, mostly dry, light winds"
         },
         {
           "sky": "sun",
@@ -254,11 +254,11 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "extensive sunshine, 80% cloud-free, no rain, light southerly winds"
+          "reason": "extensive sunshine, summits clear, no rain, light southerly winds"
         }
       ]
     }
   ],
-  "_generated": "2026-08-21T16:49:36.965Z",
+  "_generated": "2026-08-22T08:48:23.495Z",
   "_anchorDate": "2026-08-22"
 }
