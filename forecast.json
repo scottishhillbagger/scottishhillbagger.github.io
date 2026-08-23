@@ -1,43 +1,28 @@
 {
   "days": [
-    "Sun",
     "Mon",
-    "Tue"
+    "Tue",
+    "Wed"
   ],
-  "updatedAt": "2026-08-22T16:00:00.000Z",
+  "updatedAt": "2026-08-23T16:00:00.000Z",
   "regions": [
     {
       "name": "Northwest Highlands",
       "forecast": [
         {
-          "sky": "cloud",
-          "windMphLow": 15,
-          "windMphHigh": 25,
-          "windDir": "WSW",
-          "tempCLow": 6,
-          "tempCHigh": 7,
-          "cloudFree": 20,
-          "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "cloud",
-          "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "reason": "persistent low cloud and drizzle west, only 10-30% summits clear"
-        },
-        {
           "sky": "sun",
           "windMphLow": 10,
           "windMphHigh": 25,
           "windDir": "S",
-          "tempCLow": 7,
+          "tempCLow": 5,
           "tempCHigh": 10,
-          "cloudFree": 80,
+          "cloudFree": 90,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "mostly sunny, 80% summits clear, light winds, no rain expected"
+          "reason": "extensive sunshine, mountains free of cloud, light-moderate winds"
         },
         {
           "sky": "sun",
@@ -52,7 +37,23 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "mostly sunny, excellent visibility, light easterly winds, 80% clear"
+          "reason": "mostly sunny, light winds, mostly clear hills except patchy north"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 20,
+          "windMphHigh": 35,
+          "gustMph": 35,
+          "windDir": "E",
+          "tempCLow": 9,
+          "tempCHigh": 13,
+          "cloudFree": 70,
+          "freezingLevel": 9999,
+          "visibility": "good",
+          "amSky": "partly-cloudy",
+          "pmSky": "partly-cloudy",
+          "status": "marginal",
+          "reason": "gusty easterlies 20-35mph, low cloud eastern hills, drizzle risk"
         }
       ]
     },
@@ -60,34 +61,19 @@
       "name": "West Highlands",
       "forecast": [
         {
-          "sky": "partly-cloudy",
-          "windMphLow": 5,
-          "windMphHigh": 15,
-          "windDir": "W",
-          "tempCLow": 7,
-          "tempCHigh": 9,
-          "cloudFree": 45,
-          "freezingLevel": 9999,
-          "visibility": "good",
-          "amSky": "cloud",
-          "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "reason": "low cloud slow to lift, 30% initially rising 60%, coastal drizzle morning"
-        },
-        {
           "sky": "sun",
           "windMphLow": 10,
           "windMphHigh": 20,
-          "windDir": "S",
-          "tempCLow": 7,
+          "windDir": "SE",
+          "tempCLow": 5,
           "tempCHigh": 11,
-          "cloudFree": 70,
+          "cloudFree": 90,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "mostly sunny, 70% summits clear, light winds, no rain expected"
+          "reason": "extensive sunshine, mountains free of cloud, light winds"
         },
         {
           "sky": "sun",
@@ -96,13 +82,29 @@
           "windDir": "E",
           "tempCLow": 8,
           "tempCHigh": 12,
-          "cloudFree": 65,
+          "cloudFree": 70,
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "mostly sunny west, 80% NW summits clear, light easterly, excellent visibility"
+          "reason": "mostly sunny west, cloudier inland/south morning, light-moderate breeze"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 25,
+          "windMphHigh": 35,
+          "gustMph": 35,
+          "windDir": "E",
+          "tempCLow": 9,
+          "tempCHigh": 13,
+          "cloudFree": 50,
+          "freezingLevel": 9999,
+          "visibility": "good",
+          "amSky": "cloud",
+          "pmSky": "partly-cloudy",
+          "status": "marginal",
+          "reason": "blustery 25-35mph gusts, extensive cloud south, rain risk Arran-Jura"
         }
       ]
     },
@@ -113,32 +115,17 @@
           "sky": "partly-cloudy",
           "windMphLow": 10,
           "windMphHigh": 20,
-          "gustMph": 25,
-          "windDir": "W",
-          "tempCLow": 7,
-          "tempCHigh": 10,
-          "cloudFree": 55,
-          "freezingLevel": 9999,
-          "visibility": "good",
-          "amSky": "cloud",
-          "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "reason": "early cloud covers summits, 30% rising 80%, gusty Cairngorm plateau early"
-        },
-        {
-          "sky": "partly-cloudy",
-          "windMphLow": 10,
-          "windMphHigh": 15,
+          "gustMph": 20,
           "windDir": "S",
-          "tempCLow": 7,
+          "tempCLow": 8,
           "tempCHigh": 11,
-          "cloudFree": 80,
+          "cloudFree": 90,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "80% summits clear most of day, no rain, some gustiness Cairngorm plateau"
+          "reason": "dry, patchwork cloud and sun, mostly clear hills, light winds"
         },
         {
           "sky": "partly-cloudy",
@@ -153,7 +140,23 @@
           "amSky": "cloud",
           "pmSky": "sun",
           "status": "go",
-          "reason": "50-80% clear, sunny near Strathspey, eastern tops cloudier, no significant rain"
+          "reason": "sunshine near Strathspey, cloudier east morning, drizzle risk Lochnagar"
+        },
+        {
+          "sky": "cloud",
+          "windMphLow": 20,
+          "windMphHigh": 30,
+          "gustMph": 30,
+          "windDir": "E",
+          "tempCLow": 9,
+          "tempCHigh": 13,
+          "cloudFree": 45,
+          "freezingLevel": 9999,
+          "visibility": "good",
+          "amSky": "cloud",
+          "pmSky": "partly-cloudy",
+          "status": "marginal",
+          "reason": "gusty easterlies, extensive cloud south/east above 600-800m, drizzle risk"
         }
       ]
     },
@@ -162,33 +165,18 @@
       "forecast": [
         {
           "sky": "partly-cloudy",
-          "windMphLow": 5,
-          "windMphHigh": 15,
-          "windDir": "W",
-          "tempCLow": 7,
-          "tempCHigh": 11,
-          "cloudFree": 65,
-          "freezingLevel": 9999,
-          "visibility": "good",
-          "amSky": "partly-cloudy",
-          "pmSky": "partly-cloudy",
-          "status": "go",
-          "reason": "patchy cloud lifts above tops by midday, 50-80% clear, largely dry, light winds"
-        },
-        {
-          "sky": "partly-cloudy",
           "windMphLow": 10,
-          "windMphHigh": 15,
+          "windMphHigh": 20,
           "windDir": "SE",
-          "tempCLow": 7,
+          "tempCLow": 8,
           "tempCHigh": 11,
-          "cloudFree": 80,
+          "cloudFree": 90,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "80% summits clear much of day, no rain, light southerly winds"
+          "reason": "dry, patchwork cloud and sun, mostly clear hills, light winds"
         },
         {
           "sky": "cloud",
@@ -203,7 +191,23 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "drizzle on and off, fairly extensive cloud, 30-60% summits clear, damp conditions"
+          "reason": "drizzle frequent morning, extensive cloud on hills, slow to clear"
+        },
+        {
+          "sky": "cloud",
+          "windMphLow": 20,
+          "windMphHigh": 35,
+          "gustMph": 35,
+          "windDir": "E",
+          "tempCLow": 10,
+          "tempCHigh": 13,
+          "cloudFree": 20,
+          "freezingLevel": 9999,
+          "visibility": "moderate",
+          "amSky": "cloud",
+          "pmSky": "cloud",
+          "status": "poor",
+          "reason": "cloud shrouding hills above 600-800m, blustery gusts 35mph, poor cloudFree 20%"
         }
       ]
     },
@@ -211,34 +215,19 @@
       "name": "Southern Uplands",
       "forecast": [
         {
-          "sky": "partly-cloudy",
-          "windMphLow": 5,
-          "windMphHigh": 10,
-          "windDir": "NW",
-          "tempCLow": 9,
-          "tempCHigh": 13,
-          "cloudFree": 75,
-          "freezingLevel": 9999,
-          "visibility": "good",
-          "amSky": "partly-cloudy",
-          "pmSky": "sun",
-          "status": "go",
-          "reason": "cloud lifts above summits by midday, 60-90% clear, largely dry, light winds"
-        },
-        {
           "sky": "sun",
           "windMphLow": 10,
-          "windMphHigh": 15,
+          "windMphHigh": 20,
           "windDir": "SE",
-          "tempCLow": 8,
-          "tempCHigh": 13,
-          "cloudFree": 80,
+          "tempCLow": 9,
+          "tempCHigh": 14,
+          "cloudFree": 92,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "partly-cloudy",
+          "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "extensive sunshine, 80% summits clear, no rain, light winds"
+          "reason": "extensive sunshine, mountains clear all day, light southerly winds"
         },
         {
           "sky": "partly-cloudy",
@@ -247,17 +236,33 @@
           "windDir": "E",
           "tempCLow": 9,
           "tempCHigh": 13,
-          "cloudFree": 45,
+          "cloudFree": 55,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "drizzle east of M74, 30-60% summits clear, cloud on Cheviots much of day"
+          "reason": "drizzle frequent east morning, extensive cloud eastern hills, patchy west"
+        },
+        {
+          "sky": "cloud",
+          "windMphLow": 25,
+          "windMphHigh": 30,
+          "gustMph": 35,
+          "windDir": "E",
+          "tempCLow": 11,
+          "tempCHigh": 14,
+          "cloudFree": 30,
+          "freezingLevel": 9999,
+          "visibility": "moderate",
+          "amSky": "cloud",
+          "pmSky": "cloud",
+          "status": "poor",
+          "reason": "cloud shrouding hills above 500-600m, gusts 35mph western hills, patchy rain"
         }
       ]
     }
   ],
-  "_generated": "2026-08-23T08:49:16.492Z",
-  "_anchorDate": "2026-08-23"
+  "_generated": "2026-08-23T16:41:07.966Z",
+  "_anchorDate": "2026-08-24"
 }
