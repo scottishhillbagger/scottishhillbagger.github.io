@@ -13,8 +13,9 @@
           "sky": "sun",
           "windMphLow": 10,
           "windMphHigh": 25,
+          "gustMph": 25,
           "windDir": "S",
-          "tempCLow": 5,
+          "tempCLow": 7,
           "tempCHigh": 10,
           "cloudFree": 90,
           "freezingLevel": 9999,
@@ -37,7 +38,7 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "mostly sunny, light winds, mostly clear hills except patchy north"
+          "reason": "mostly sunny, cloud mainly north of Dornoch Firth, light winds"
         },
         {
           "sky": "partly-cloudy",
@@ -50,10 +51,10 @@
           "cloudFree": 70,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "partly-cloudy",
+          "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "gusty easterlies 20-35mph, low cloud eastern hills, drizzle risk"
+          "reason": "gusty 35mph east, notable balance risk western mountains, rain possible PM"
         }
       ]
     },
@@ -64,8 +65,9 @@
           "sky": "sun",
           "windMphLow": 10,
           "windMphHigh": 20,
-          "windDir": "SE",
-          "tempCLow": 5,
+          "gustMph": 20,
+          "windDir": "SSE",
+          "tempCLow": 7,
           "tempCHigh": 11,
           "cloudFree": 90,
           "freezingLevel": 9999,
@@ -73,7 +75,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "extensive sunshine, mountains free of cloud, light winds"
+          "reason": "extensive sunshine, mountains mostly clear, light winds becoming breezier coast"
         },
         {
           "sky": "sun",
@@ -88,7 +90,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "mostly sunny west, cloudier inland/south morning, light-moderate breeze"
+          "reason": "mostly sunny west, cloudier inland/south morning, light-moderate breezy winds"
         },
         {
           "sky": "partly-cloudy",
@@ -104,7 +106,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "blustery 25-35mph gusts, extensive cloud south, rain risk Arran-Jura"
+          "reason": "gusty 35mph east, cloud 600-800m south, rain risk Arran to Jura"
         }
       ]
     },
@@ -125,7 +127,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "dry, patchwork cloud and sun, mostly clear hills, light winds"
+          "reason": "dry, patchwork sun and cloud, mostly clear hills, gusts 20mph Cairngorm plateau"
         },
         {
           "sky": "partly-cloudy",
@@ -140,7 +142,7 @@
           "amSky": "cloud",
           "pmSky": "sun",
           "status": "go",
-          "reason": "sunshine near Strathspey, cloudier east morning, drizzle risk Lochnagar"
+          "reason": "sunshine best near Strathspey, cloudier east morning, light winds"
         },
         {
           "sky": "cloud",
@@ -156,7 +158,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "gusty easterlies, extensive cloud south/east above 600-800m, drizzle risk"
+          "reason": "cloud 600-800m south/east Cairngorms, gusty east, drizzle eastern slopes"
         }
       ]
     },
@@ -167,7 +169,8 @@
           "sky": "partly-cloudy",
           "windMphLow": 10,
           "windMphHigh": 20,
-          "windDir": "SE",
+          "gustMph": 20,
+          "windDir": "SSE",
           "tempCLow": 8,
           "tempCHigh": 11,
           "cloudFree": 90,
@@ -176,7 +179,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "dry, patchwork cloud and sun, mostly clear hills, light winds"
+          "reason": "dry, patchwork sun and cloud, mostly clear hills, light winds"
         },
         {
           "sky": "cloud",
@@ -191,7 +194,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "drizzle frequent morning, extensive cloud on hills, slow to clear"
+          "reason": "frequent drizzle morning, cloud extensive slow to break, 30% clear AM"
         },
         {
           "sky": "cloud",
@@ -207,7 +210,7 @@
           "amSky": "cloud",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "cloud shrouding hills above 600-800m, blustery gusts 35mph, poor cloudFree 20%"
+          "reason": "cloud shrouding hills 600-800m, gusty 35mph east, only 20% cloud-free"
         }
       ]
     },
@@ -218,19 +221,20 @@
           "sky": "sun",
           "windMphLow": 10,
           "windMphHigh": 20,
-          "windDir": "SE",
+          "gustMph": 20,
+          "windDir": "SSE",
           "tempCLow": 9,
           "tempCHigh": 14,
-          "cloudFree": 92,
+          "cloudFree": 93,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "extensive sunshine, mountains clear all day, light southerly winds"
+          "reason": "extensive sunshine, hills clear above 90%, light winds, warm on tops"
         },
         {
-          "sky": "partly-cloudy",
+          "sky": "cloud",
           "windMphLow": 15,
           "windMphHigh": 25,
           "windDir": "E",
@@ -242,10 +246,10 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "drizzle frequent east morning, extensive cloud eastern hills, patchy west"
+          "reason": "drizzle east of M74 morning, cloud extensive eastern hills, gusty in places"
         },
         {
-          "sky": "cloud",
+          "sky": "rain",
           "windMphLow": 25,
           "windMphHigh": 30,
           "gustMph": 35,
@@ -256,13 +260,13 @@
           "freezingLevel": 9999,
           "visibility": "moderate",
           "amSky": "cloud",
-          "pmSky": "cloud",
+          "pmSky": "rain",
           "status": "poor",
-          "reason": "cloud shrouding hills above 500-600m, gusts 35mph western hills, patchy rain"
+          "reason": "cloud above 500-600m widely, gusts 35mph west, patchy rain bursts possible"
         }
       ]
     }
   ],
-  "_generated": "2026-08-23T16:41:07.966Z",
+  "_generated": "2026-08-24T09:05:27.053Z",
   "_anchorDate": "2026-08-24"
 }
