@@ -1,10 +1,10 @@
 {
   "days": [
-    "Mon",
     "Tue",
-    "Wed"
+    "Wed",
+    "Thu"
   ],
-  "updatedAt": "2026-08-23T16:00:00.000Z",
+  "updatedAt": "2026-08-24T16:26:00.000Z",
   "regions": [
     {
       "name": "Northwest Highlands",
@@ -12,33 +12,33 @@
         {
           "sky": "sun",
           "windMphLow": 10,
-          "windMphHigh": 25,
-          "gustMph": 25,
-          "windDir": "S",
-          "tempCLow": 7,
-          "tempCHigh": 10,
-          "cloudFree": 90,
-          "freezingLevel": 9999,
-          "visibility": "good",
-          "amSky": "partly-cloudy",
-          "pmSky": "sun",
-          "status": "go",
-          "reason": "extensive sunshine, mountains free of cloud, light-moderate winds"
-        },
-        {
-          "sky": "sun",
-          "windMphLow": 10,
-          "windMphHigh": 20,
+          "windMphHigh": 15,
           "windDir": "SE",
-          "tempCLow": 8,
-          "tempCHigh": 13,
+          "tempCLow": 9,
+          "tempCHigh": 11,
           "cloudFree": 80,
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "mostly sunny, cloud mainly north of Dornoch Firth, light winds"
+          "reason": "extensive sunshine, mountains largely free of cloud, light winds"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 20,
+          "windMphHigh": 35,
+          "gustMph": 35,
+          "windDir": "ESE",
+          "tempCLow": 9,
+          "tempCHigh": 14,
+          "cloudFree": 60,
+          "freezingLevel": 9999,
+          "visibility": "good",
+          "amSky": "partly-cloudy",
+          "pmSky": "partly-cloudy",
+          "status": "marginal",
+          "reason": "gusty ESE 20-35mph, low cloud clinging eastern hills, hazy east"
         },
         {
           "sky": "partly-cloudy",
@@ -46,15 +46,15 @@
           "windMphHigh": 35,
           "gustMph": 35,
           "windDir": "E",
-          "tempCLow": 9,
+          "tempCLow": 11,
           "tempCHigh": 13,
-          "cloudFree": 70,
+          "cloudFree": 60,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "sun",
+          "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "gusty 35mph east, notable balance risk western mountains, rain possible PM"
+          "reason": "gusty easterly early, patchy rain drifting from east onto Munros"
         }
       ]
     },
@@ -65,39 +65,23 @@
           "sky": "sun",
           "windMphLow": 10,
           "windMphHigh": 20,
-          "gustMph": 20,
-          "windDir": "SSE",
-          "tempCLow": 7,
-          "tempCHigh": 11,
-          "cloudFree": 90,
-          "freezingLevel": 9999,
-          "visibility": "good",
-          "amSky": "partly-cloudy",
-          "pmSky": "sun",
-          "status": "go",
-          "reason": "extensive sunshine, mountains mostly clear, light winds becoming breezier coast"
-        },
-        {
-          "sky": "sun",
-          "windMphLow": 15,
-          "windMphHigh": 25,
-          "windDir": "E",
+          "windDir": "SE",
           "tempCLow": 8,
-          "tempCHigh": 12,
-          "cloudFree": 70,
+          "tempCHigh": 11,
+          "cloudFree": 80,
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "mostly sunny west, cloudier inland/south morning, light-moderate breezy winds"
+          "reason": "mostly sunny toward coast, cloud lifts to clear summits, light winds"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 25,
           "windMphHigh": 35,
           "gustMph": 35,
-          "windDir": "E",
+          "windDir": "ESE",
           "tempCLow": 9,
           "tempCHigh": 13,
           "cloudFree": 50,
@@ -106,7 +90,23 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "gusty 35mph east, cloud 600-800m south, rain risk Arran to Jura"
+          "reason": "gusty ESE 25-35mph, extensive cloud south, rain risk Arran to Jura"
+        },
+        {
+          "sky": "cloud",
+          "windMphLow": 20,
+          "windMphHigh": 30,
+          "gustMph": 30,
+          "windDir": "E",
+          "tempCLow": 11,
+          "tempCHigh": 13,
+          "cloudFree": 40,
+          "freezingLevel": 9999,
+          "visibility": "good",
+          "amSky": "cloud",
+          "pmSky": "rain",
+          "status": "marginal",
+          "reason": "cloud shrouds high inland terrain all day, rain arrives south later"
         }
       ]
     },
@@ -116,33 +116,33 @@
         {
           "sky": "partly-cloudy",
           "windMphLow": 10,
-          "windMphHigh": 20,
-          "gustMph": 20,
-          "windDir": "S",
-          "tempCLow": 8,
-          "tempCHigh": 11,
-          "cloudFree": 90,
-          "freezingLevel": 9999,
-          "visibility": "good",
-          "amSky": "partly-cloudy",
-          "pmSky": "sun",
-          "status": "go",
-          "reason": "dry, patchwork sun and cloud, mostly clear hills, gusts 20mph Cairngorm plateau"
-        },
-        {
-          "sky": "partly-cloudy",
-          "windMphLow": 10,
-          "windMphHigh": 20,
+          "windMphHigh": 15,
           "windDir": "SE",
           "tempCLow": 8,
-          "tempCHigh": 12,
+          "tempCHigh": 11,
           "cloudFree": 65,
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "cloud",
-          "pmSky": "sun",
-          "status": "go",
-          "reason": "sunshine best near Strathspey, cloudier east morning, light winds"
+          "pmSky": "partly-cloudy",
+          "status": "marginal",
+          "reason": "cloud and drizzle east, especially Lochnagar; clears west by afternoon"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 20,
+          "windMphHigh": 30,
+          "gustMph": 30,
+          "windDir": "ESE",
+          "tempCLow": 9,
+          "tempCHigh": 14,
+          "cloudFree": 45,
+          "freezingLevel": 9999,
+          "visibility": "good",
+          "amSky": "cloud",
+          "pmSky": "partly-cloudy",
+          "status": "marginal",
+          "reason": "cloud 600-800m south/east Cairngorms, gusty ESE on high tops and downslopes"
         },
         {
           "sky": "cloud",
@@ -150,15 +150,15 @@
           "windMphHigh": 30,
           "gustMph": 30,
           "windDir": "E",
-          "tempCLow": 9,
-          "tempCHigh": 13,
-          "cloudFree": 45,
+          "tempCLow": 10,
+          "tempCHigh": 12,
+          "cloudFree": 20,
           "freezingLevel": 9999,
-          "visibility": "good",
+          "visibility": "poor",
           "amSky": "cloud",
-          "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "reason": "cloud 600-800m south/east Cairngorms, gusty east, drizzle eastern slopes"
+          "pmSky": "rain",
+          "status": "poor",
+          "reason": "low cloud shrouds Cairngorms all day, poor visibility on high terrain, patchy rain"
         }
       ]
     },
@@ -167,25 +167,9 @@
       "forecast": [
         {
           "sky": "partly-cloudy",
-          "windMphLow": 10,
-          "windMphHigh": 20,
-          "gustMph": 20,
-          "windDir": "SSE",
-          "tempCLow": 8,
-          "tempCHigh": 11,
-          "cloudFree": 90,
-          "freezingLevel": 9999,
-          "visibility": "good",
-          "amSky": "partly-cloudy",
-          "pmSky": "sun",
-          "status": "go",
-          "reason": "dry, patchwork sun and cloud, mostly clear hills, light winds"
-        },
-        {
-          "sky": "cloud",
           "windMphLow": 15,
-          "windMphHigh": 25,
-          "windDir": "E",
+          "windMphHigh": 20,
+          "windDir": "SE",
           "tempCLow": 7,
           "tempCHigh": 10,
           "cloudFree": 45,
@@ -194,23 +178,39 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "frequent drizzle morning, cloud extensive slow to break, 30% clear AM"
+          "reason": "hill cloud and drizzle extensive morning, slow to break, 7-8C on tops"
         },
         {
           "sky": "cloud",
           "windMphLow": 20,
           "windMphHigh": 35,
           "gustMph": 35,
-          "windDir": "E",
-          "tempCLow": 10,
+          "windDir": "ESE",
+          "tempCLow": 9,
           "tempCHigh": 13,
-          "cloudFree": 20,
+          "cloudFree": 35,
           "freezingLevel": 9999,
           "visibility": "moderate",
           "amSky": "cloud",
-          "pmSky": "cloud",
+          "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "cloud shrouding hills 600-800m, gusty 35mph east, only 20% cloud-free"
+          "reason": "cloud 600-800m most hills, gusty ESE 20-35mph, poor visibility high terrain"
+        },
+        {
+          "sky": "cloud",
+          "windMphLow": 20,
+          "windMphHigh": 30,
+          "gustMph": 30,
+          "windDir": "E",
+          "tempCLow": 10,
+          "tempCHigh": 12,
+          "cloudFree": 30,
+          "freezingLevel": 9999,
+          "visibility": "poor",
+          "amSky": "cloud",
+          "pmSky": "rain",
+          "status": "poor",
+          "reason": "extensive low cloud, poor visibility high terrain, rain intensifying later"
         }
       ]
     },
@@ -218,42 +218,27 @@
       "name": "Southern Uplands",
       "forecast": [
         {
-          "sky": "sun",
-          "windMphLow": 10,
-          "windMphHigh": 20,
-          "gustMph": 20,
-          "windDir": "SSE",
-          "tempCLow": 9,
-          "tempCHigh": 14,
-          "cloudFree": 93,
-          "freezingLevel": 9999,
-          "visibility": "good",
-          "amSky": "sun",
-          "pmSky": "sun",
-          "status": "go",
-          "reason": "extensive sunshine, hills clear above 90%, light winds, warm on tops"
-        },
-        {
-          "sky": "cloud",
+          "sky": "partly-cloudy",
           "windMphLow": 15,
-          "windMphHigh": 25,
-          "windDir": "E",
+          "windMphHigh": 20,
+          "gustMph": 25,
+          "windDir": "ESE",
           "tempCLow": 9,
-          "tempCHigh": 13,
+          "tempCHigh": 12,
           "cloudFree": 55,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "drizzle east of M74 morning, cloud extensive eastern hills, gusty in places"
+          "reason": "cloud and drizzle eastern hills morning, Galloway largely dry; gusts 25mph"
         },
         {
-          "sky": "rain",
+          "sky": "cloud",
           "windMphLow": 25,
           "windMphHigh": 30,
           "gustMph": 35,
-          "windDir": "E",
+          "windDir": "ESE",
           "tempCLow": 11,
           "tempCHigh": 14,
           "cloudFree": 30,
@@ -262,11 +247,27 @@
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "cloud above 500-600m widely, gusts 35mph west, patchy rain bursts possible"
+          "reason": "cloud above 500-600m, gusts 35mph western hills, rain bursts rising risk"
+        },
+        {
+          "sky": "storm",
+          "windMphLow": 15,
+          "windMphHigh": 25,
+          "gustMph": 25,
+          "windDir": "E",
+          "tempCLow": 12,
+          "tempCHigh": 14,
+          "cloudFree": 30,
+          "freezingLevel": 9999,
+          "visibility": "poor",
+          "amSky": "partly-cloudy",
+          "pmSky": "storm",
+          "status": "poor",
+          "reason": "heavy thundery bursts arriving from south PM, extensive cloud, risk flooding"
         }
       ]
     }
   ],
-  "_generated": "2026-08-24T09:05:27.053Z",
-  "_anchorDate": "2026-08-24"
+  "_generated": "2026-08-24T16:53:47.415Z",
+  "_anchorDate": "2026-08-25"
 }
