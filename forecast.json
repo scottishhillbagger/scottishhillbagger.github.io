@@ -22,7 +22,7 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "extensive sunshine, mountains largely free of cloud, light winds"
+          "reason": "extensive sunshine, mountains mostly clear, light winds"
         },
         {
           "sky": "partly-cloudy",
@@ -38,7 +38,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "gusty ESE 20-35mph, low cloud clinging eastern hills, hazy east"
+          "reason": "gusty 20-35mph, low cloud east, 50% cloud-free Easter Ross"
         },
         {
           "sky": "partly-cloudy",
@@ -68,13 +68,13 @@
           "windDir": "SE",
           "tempCLow": 8,
           "tempCHigh": 11,
-          "cloudFree": 80,
+          "cloudFree": 70,
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "mostly sunny toward coast, cloud lifts to clear summits, light winds"
+          "reason": "mostly sunny toward coast, cloud lifts inland, little rain expected"
         },
         {
           "sky": "partly-cloudy",
@@ -90,7 +90,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "gusty ESE 25-35mph, extensive cloud south, rain risk Arran to Jura"
+          "reason": "blustery 25-35mph, cloud above 600-800m south, rain risk Arran-Jura"
         },
         {
           "sky": "cloud",
@@ -100,13 +100,13 @@
           "windDir": "E",
           "tempCLow": 11,
           "tempCHigh": 13,
-          "cloudFree": 40,
+          "cloudFree": 45,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "cloud shrouds high inland terrain all day, rain arrives south later"
+          "reason": "cloud shrouding high inland terrain, rain arrives south later, gusty early"
         }
       ]
     },
@@ -124,9 +124,9 @@
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "cloud",
-          "pmSky": "partly-cloudy",
+          "pmSky": "sun",
           "status": "marginal",
-          "reason": "cloud and drizzle east, especially Lochnagar; clears west by afternoon"
+          "reason": "lingering cloud east, drizzle near Lochnagar, 50% cloud-free rising west"
         },
         {
           "sky": "partly-cloudy",
@@ -142,7 +142,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "cloud 600-800m south/east Cairngorms, gusty ESE on high tops and downslopes"
+          "reason": "cloud 600-800m south/east Cairngorms, gusty on high tops and west downslopes"
         },
         {
           "sky": "cloud",
@@ -158,7 +158,7 @@
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "low cloud shrouds Cairngorms all day, poor visibility on high terrain, patchy rain"
+          "reason": "low cloud shrouds Cairngorms all day, below 800m Deeside, patchy rain east"
         }
       ]
     },
@@ -178,7 +178,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "hill cloud and drizzle extensive morning, slow to break, 7-8C on tops"
+          "reason": "frequent drizzle morning, hill cloud extensive early, 30% cloud-free rising to 60%"
         },
         {
           "sky": "cloud",
@@ -193,8 +193,8 @@
           "visibility": "moderate",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
-          "status": "poor",
-          "reason": "cloud 600-800m most hills, gusty ESE 20-35mph, poor visibility high terrain"
+          "status": "marginal",
+          "reason": "cloud above 600-800m, gusty 20-35mph, only 20% cloud-free rising to 50% north"
         },
         {
           "sky": "cloud",
@@ -210,7 +210,7 @@
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "extensive low cloud, poor visibility high terrain, rain intensifying later"
+          "reason": "cloud into glens east, patchy rain increasing, poor visibility on high terrain"
         }
       ]
     },
@@ -231,7 +231,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "cloud and drizzle eastern hills morning, Galloway largely dry; gusts 25mph"
+          "reason": "drizzle east of M74, cloud extensive east morning, nuisance gusts early"
         },
         {
           "sky": "cloud",
@@ -247,7 +247,7 @@
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "cloud above 500-600m, gusts 35mph western hills, rain bursts rising risk"
+          "reason": "cloud above 500-600m, gusts 35mph west hills, patchy rain rising chance"
         },
         {
           "sky": "storm",
@@ -259,15 +259,15 @@
           "tempCHigh": 14,
           "cloudFree": 30,
           "freezingLevel": 9999,
-          "visibility": "poor",
+          "visibility": "moderate",
           "amSky": "partly-cloudy",
           "pmSky": "storm",
           "status": "poor",
-          "reason": "heavy thundery bursts arriving from south PM, extensive cloud, risk flooding"
+          "reason": "heavy thundery bursts arriving from south PM, rain sets in, risk flooding"
         }
       ]
     }
   ],
-  "_generated": "2026-08-24T16:53:47.415Z",
+  "_generated": "2026-08-25T09:00:52.085Z",
   "_anchorDate": "2026-08-25"
 }
