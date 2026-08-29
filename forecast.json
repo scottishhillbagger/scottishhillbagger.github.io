@@ -16,13 +16,13 @@
           "windDir": "N",
           "tempCLow": 8,
           "tempCHigh": 10,
-          "cloudFree": 20,
+          "cloudFree": 25,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "low cloud shrouding hills, poor visibility north, murky navigation"
+          "reason": "low cloud shrouding hills, poor visibility north, drizzle all morning"
         },
         {
           "sky": "rain",
@@ -31,13 +31,13 @@
           "windDir": "S",
           "tempCLow": 7,
           "tempCHigh": 9,
-          "cloudFree": 50,
+          "cloudFree": 30,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "patchy rain all day, heavier falls later, visibility deteriorating, chance thunder"
+          "reason": "patchy rain all day, heavier falls forming, visibility deteriorates later"
         },
         {
           "sky": "rain",
@@ -49,10 +49,10 @@
           "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "moderate",
-          "amSky": "rain",
+          "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "westerly 25-30mph, showery rain all day, heavier bursts, chance thunder"
+          "reason": "westerly 25-30mph increasing, frequent showery rain, chance thunder, marked wind chill"
         }
       ]
     },
@@ -62,17 +62,17 @@
         {
           "sky": "partly-cloudy",
           "windMphLow": 5,
-          "windMphHigh": 15,
+          "windMphHigh": 10,
           "windDir": "NW",
           "tempCLow": 9,
           "tempCHigh": 12,
-          "cloudFree": 70,
+          "cloudFree": 60,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "low cloud lifting through morning, local showers risk, patchy sun developing"
+          "reason": "varied cloud breaks, light wind, risk localised afternoon showers especially south"
         },
         {
           "sky": "rain",
@@ -81,13 +81,13 @@
           "windDir": "S",
           "tempCLow": 7,
           "tempCHigh": 10,
-          "cloudFree": 40,
+          "cloudFree": 30,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "patchy rain all day, heavier falls afternoon, risk isolated thunder, visibility deteriorating"
+          "reason": "patchy rain all day, heavier falls afternoon, risk isolated thunder, visibility deteriorates"
         },
         {
           "sky": "rain",
@@ -100,10 +100,10 @@
           "cloudFree": 30,
           "freezingLevel": 9999,
           "visibility": "moderate",
-          "amSky": "rain",
+          "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "increasing to 30mph gusts 40mph south, showery rain all day, marked wind chill"
+          "reason": "westerly increasing 30mph, gusts 40mph south, showery rain, marked wind chill"
         }
       ]
     },
@@ -111,19 +111,19 @@
       "name": "Cairngorms & Monadhliath",
       "forecast": [
         {
-          "sky": "cloud",
+          "sky": "partly-cloudy",
           "windMphLow": 10,
           "windMphHigh": 25,
           "windDir": "NNW",
           "tempCLow": 8,
           "tempCHigh": 11,
-          "cloudFree": 30,
+          "cloudFree": 45,
           "freezingLevel": 9999,
-          "visibility": "poor",
+          "visibility": "moderate",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
-          "status": "poor",
-          "reason": "low cloud Cairngorm plateau, poor visibility morning, drizzly north, gusts NNW 25mph"
+          "status": "marginal",
+          "reason": "low cloud and drizzle morning Cairngorm plateau, clearing south PM, 25mph early"
         },
         {
           "sky": "rain",
@@ -138,7 +138,7 @@
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "patchy rain all day, heavier falls later, fog on high terrain, visibility increasingly poor"
+          "reason": "patchy rain all day, heavier falls later, visibility increasingly poor in fog"
         },
         {
           "sky": "rain",
@@ -147,13 +147,13 @@
           "windDir": "W",
           "tempCLow": 7,
           "tempCHigh": 9,
-          "cloudFree": 20,
+          "cloudFree": 35,
           "freezingLevel": 9999,
           "visibility": "moderate",
-          "amSky": "cloud",
+          "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "increasing to 25-30mph strong gusts, showery rain frequent, chance thunder, marked wind chill"
+          "reason": "westerly increasing 25-30mph, stronger gusts, heavy showers, chance thunder, wind chill"
         }
       ]
     },
@@ -164,16 +164,17 @@
           "sky": "partly-cloudy",
           "windMphLow": 5,
           "windMphHigh": 15,
+          "gustMph": 20,
           "windDir": "NW",
           "tempCLow": 9,
           "tempCHigh": 12,
-          "cloudFree": 80,
+          "cloudFree": 65,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "partly-cloudy",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "cloud breaks mid-day to 80%, local showery rain risk afternoon, otherwise largely dry"
+          "reason": "varied cloud breaks, mostly dry, risk heavier showery rain evening, good mid-day window"
         },
         {
           "sky": "rain",
@@ -182,13 +183,13 @@
           "windDir": "S",
           "tempCLow": 9,
           "tempCHigh": 12,
-          "cloudFree": 50,
+          "cloudFree": 35,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "patchy rain all day, heavier falls later afternoon, chance isolated thunder, visibility deteriorating"
+          "reason": "patchy rain all day, heavier falls afternoon, chance isolated thunder, visibility deteriorates"
         },
         {
           "sky": "rain",
@@ -197,13 +198,13 @@
           "windDir": "W",
           "tempCLow": 7,
           "tempCHigh": 9,
-          "cloudFree": 20,
+          "cloudFree": 35,
           "freezingLevel": 9999,
           "visibility": "moderate",
-          "amSky": "cloud",
+          "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "strengthening to 30mph gusts, heavy showery rain moving east, chance thunder, wind chill"
+          "reason": "westerly strengthening 30mph, frequent heavy showers, chance thunder, marked wind chill"
         }
       ]
     },
@@ -213,17 +214,17 @@
         {
           "sky": "partly-cloudy",
           "windMphLow": 5,
-          "windMphHigh": 20,
+          "windMphHigh": 15,
           "windDir": "W",
           "tempCLow": 11,
           "tempCHigh": 12,
-          "cloudFree": 70,
+          "cloudFree": 55,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "cloud lifting afternoon to 70% breaks, isolated showers risk, rain encroaching south later"
+          "reason": "cloud lifting to breaks PM, isolated afternoon showers, risk rain far south later"
         },
         {
           "sky": "rain",
@@ -232,13 +233,13 @@
           "windDir": "SW",
           "tempCLow": 10,
           "tempCHigh": 13,
-          "cloudFree": 60,
+          "cloudFree": 40,
           "freezingLevel": 9999,
           "visibility": "poor",
-          "amSky": "partly-cloudy",
+          "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "rain increasing to heavy bursts, setting in from west, risk thunder, visibility deteriorating"
+          "reason": "increasingly heavy rain, risk thunder, Moffat hills shrouded, visibility deteriorating"
         },
         {
           "sky": "rain",
@@ -248,17 +249,17 @@
           "windDir": "W",
           "tempCLow": 9,
           "tempCHigh": 9,
-          "cloudFree": 20,
+          "cloudFree": 45,
           "freezingLevel": 9999,
           "visibility": "moderate",
-          "amSky": "rain",
+          "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 35-40mph Galloway, showery rain extending east, worsening conditions on exposed terrain"
+          "reason": "gusts 35-40mph Galloway, showery rain spreading east, uncomfortable on exposed terrain"
         }
       ]
     }
   ],
-  "_generated": "2026-08-28T20:12:51.381Z",
+  "_generated": "2026-08-29T00:33:09.443Z",
   "_anchorDate": "2026-08-29"
 }
