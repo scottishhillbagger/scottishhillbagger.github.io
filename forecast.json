@@ -22,13 +22,12 @@
           "amSky": "rain",
           "pmSky": "storm",
           "status": "poor",
-          "reason": "local rain, thundery bursts PM, cloud shrouding hills, 20% cloud-free"
+          "reason": "thunderstorms PM, low cloud shrouding hills, 20% cloud-free"
         },
         {
           "sky": "rain",
           "windMphLow": 10,
           "windMphHigh": 30,
-          "gustMph": 40,
           "windDir": "SW",
           "tempCLow": 6,
           "tempCHigh": 8,
@@ -38,7 +37,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "showery rain all day, heavier bursts east PM, gusts increasing, marked wind chill"
+          "reason": "showery rain all day, heavier bursts east PM, increasing winds 30mph"
         },
         {
           "sky": "rain",
@@ -54,7 +53,7 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gusts over 50mph, strenuous/buffeting ridges, feels -5C wind chill, western tops covered"
+          "reason": "gusts over 50mph, strenuous conditions, -5C wind chill on tops"
         }
       ]
     },
@@ -74,7 +73,7 @@
           "amSky": "rain",
           "pmSky": "storm",
           "status": "poor",
-          "reason": "thundery bursts, hail, heavy rain PM, low cloud shrouding hills, only 10% cloud-free"
+          "reason": "thundery bursts PM, hail risk, low cloud 10% cloud-free, murky"
         },
         {
           "sky": "rain",
@@ -90,7 +89,7 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "showery rain, gusts 40mph, marked wind chill, feels sub-zero on tops"
+          "reason": "gusts 40mph, showery rain most of day, marked wind chill"
         },
         {
           "sky": "rain",
@@ -106,7 +105,7 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gusts over 50mph morning, strenuous buffeting ridges, feels -5C, western tops covered"
+          "reason": "gusts over 50mph AM, strenuous conditions, sub-zero wind chill on tops"
         }
       ]
     },
@@ -123,10 +122,10 @@
           "cloudFree": 30,
           "freezingLevel": 9999,
           "visibility": "poor",
-          "amSky": "rain",
+          "amSky": "cloud",
           "pmSky": "storm",
           "status": "poor",
-          "reason": "local rain, showery bursts PM, thunder risk, high terrain starts in fog, 30% cloud-free"
+          "reason": "showery bursts PM, isolated thunder risk, high terrain in fog"
         },
         {
           "sky": "rain",
@@ -140,8 +139,8 @@
           "visibility": "moderate",
           "amSky": "cloud",
           "pmSky": "rain",
-          "status": "marginal",
-          "reason": "showers moving east PM, wind building to 30mph gusts, cloud lifting to 1000m by afternoon"
+          "status": "poor",
+          "reason": "showers moving east PM, stronger gusts, wind chill near freezing"
         },
         {
           "sky": "rain",
@@ -157,7 +156,7 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gusts over 50mph Cairngorm plateau, strenuous buffeting, feels -5C in wind"
+          "reason": "gusts over 50mph high Cairngorms, strenuous, -5C wind chill"
         }
       ]
     },
@@ -177,7 +176,7 @@
           "amSky": "rain",
           "pmSky": "storm",
           "status": "poor",
-          "reason": "thundery bursts, hail, heavy rain PM central highlands, hills shrouded, 20% cloud-free"
+          "reason": "heavy thundery bursts PM, hail risk, hills shrouded, murky"
         },
         {
           "sky": "rain",
@@ -191,8 +190,8 @@
           "visibility": "moderate",
           "amSky": "cloud",
           "pmSky": "rain",
-          "status": "marginal",
-          "reason": "showers moving east PM, wind strengthening to 30mph gusts, cloud lowest morning"
+          "status": "poor",
+          "reason": "showers moving east, stronger gusts, wind chill near freezing"
         },
         {
           "sky": "rain",
@@ -208,7 +207,7 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gusts 50mph morning, strenuous buffeting ridges, feels -5C, persistent rain central highlands"
+          "reason": "gusts 50mph AM, strenuous buffeting on ridges, sub-zero wind chill"
         }
       ]
     },
@@ -222,13 +221,13 @@
           "windDir": "SW",
           "tempCLow": 10,
           "tempCHigh": 13,
-          "cloudFree": 30,
+          "cloudFree": 60,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
           "pmSky": "storm",
           "status": "poor",
-          "reason": "heavy downpours, thunder, hail advancing NE, Moffat hills shrouded all day"
+          "reason": "heavy thundery downpours PM, hail risk, Moffat hills shrouded"
         },
         {
           "sky": "rain",
@@ -242,8 +241,8 @@
           "visibility": "moderate",
           "amSky": "rain",
           "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "reason": "rain moving east, gusts developing, feels near freezing, cloud lifting PM"
+          "status": "poor",
+          "reason": "showery rain extending east, stronger gusts, wind chill near freezing"
         },
         {
           "sky": "rain",
@@ -258,11 +257,11 @@
           "amSky": "rain",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "persistent heavy rain Dumfries & Galloway, strenuous winds, feels 0C on tops, poor visibility west"
+          "reason": "persistent rain Galloway, cloud to 500m, strenuous winds on summits"
         }
       ]
     }
   ],
-  "_generated": "2026-08-29T19:23:51.842Z",
+  "_generated": "2026-08-30T13:49:03.793Z",
   "_anchorDate": "2026-08-30"
 }
