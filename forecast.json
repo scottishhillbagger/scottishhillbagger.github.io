@@ -12,7 +12,7 @@
         {
           "sky": "partly-cloudy",
           "windMphLow": 15,
-          "windMphHigh": 25,
+          "windMphHigh": 20,
           "windDir": "SE",
           "tempCLow": 3,
           "tempCHigh": 5,
@@ -22,7 +22,7 @@
           "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "go",
-          "reason": "dry most of day, 80% cloud-free, light winds rising later"
+          "reason": "largely dry, 80% cloud-free Munros, risk rain/wind evening only"
         },
         {
           "sky": "rain",
@@ -38,7 +38,7 @@
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "SW 35-50mph gusts 55mph, arduous walking, patchy rain all day"
+          "reason": "SW 35-50mph gusts 55mph, arduous walking all day, patchy rain"
         },
         {
           "sky": "rain",
@@ -53,7 +53,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "SW 40-50mph, frequent rain west, 10% cloud-free, wind chill -5C"
+          "reason": "SW 40-50mph, rain on/off west, only 10% cloud-free, wind chill -5C"
         }
       ]
     },
@@ -73,7 +73,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "marginal",
-          "reason": "patchy rain south, lowering cloud later, wind rising to 35mph evening"
+          "reason": "dry many hours but rain/lowering cloud spreading from south PM"
         },
         {
           "sky": "rain",
@@ -89,7 +89,7 @@
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "SW 35-50mph gusts 55mph, arduous walking, heavy rain for hours"
+          "reason": "SW 35-50mph gusts 55mph, arduous all day, patchy to heavy rain"
         },
         {
           "sky": "rain",
@@ -105,7 +105,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 70mph highest tops, rain throughout, wind chill -5C"
+          "reason": "gusts 70mph highest tops, rain throughout, arduous-to-difficult conditions"
         }
       ]
     },
@@ -114,7 +114,7 @@
       "forecast": [
         {
           "sky": "partly-cloudy",
-          "windMphLow": 15,
+          "windMphLow": 10,
           "windMphHigh": 20,
           "windDir": "SE",
           "tempCLow": 5,
@@ -125,7 +125,7 @@
           "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "go",
-          "reason": "dry all day, 70% cloud-free, sun through high cloud, light winds"
+          "reason": "dry most of day, 70% cloud-free, light winds until evening deterioration"
         },
         {
           "sky": "partly-cloudy",
@@ -141,7 +141,7 @@
           "amSky": "sun",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "SW 35-45mph gusts 55mph highest tops, strenuous-arduous walking all day"
+          "reason": "SW 35-45mph gusts 55mph highest tops, strenuous-arduous all day"
         },
         {
           "sky": "rain",
@@ -153,11 +153,11 @@
           "tempCHigh": 7,
           "cloudFree": 30,
           "freezingLevel": 9999,
-          "visibility": "good",
-          "amSky": "cloud",
+          "visibility": "moderate",
+          "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 70mph Cairngorm plateau, intermittent rain, wind chill -5C"
+          "reason": "gusts 70mph Cairngorm plateau, rain pulses west, arduous-to-difficult"
         }
       ]
     },
@@ -174,10 +174,10 @@
           "cloudFree": 50,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "partly-cloudy",
+          "amSky": "sun",
           "pmSky": "cloud",
           "status": "marginal",
-          "reason": "low cloud risk from SW afternoon, patchy rain, 20% cloud-free by PM"
+          "reason": "cloud-free drops to 20% PM, low cloud and rain risk from SW afternoon"
         },
         {
           "sky": "partly-cloudy",
@@ -190,10 +190,10 @@
           "cloudFree": 70,
           "freezingLevel": 9999,
           "visibility": "excellent",
-          "amSky": "cloud",
-          "pmSky": "sun",
+          "amSky": "sun",
+          "pmSky": "cloud",
           "status": "poor",
-          "reason": "SW 30-45mph gusts 50mph, strenuous-arduous walking, wind chill significant"
+          "reason": "SW 30-45mph gusts 50mph, strenuous-arduous all day, significant wind chill"
         },
         {
           "sky": "rain",
@@ -205,11 +205,11 @@
           "tempCHigh": 8,
           "cloudFree": 30,
           "freezingLevel": 9999,
-          "visibility": "good",
-          "amSky": "cloud",
+          "visibility": "moderate",
+          "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 70mph highest tops, intermittent rain, arduous-difficult walking"
+          "reason": "gusts 70mph highest tops, intermittent rain, arduous-to-difficult walking"
         }
       ]
     },
@@ -229,7 +229,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "rain on and off all day, cloud from 500m, poor visibility south and west"
+          "reason": "intermittent rain all day, blanket cloud 500-600m, poor visibility south/west"
         },
         {
           "sky": "partly-cloudy",
@@ -241,10 +241,10 @@
           "cloudFree": 50,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "cloud",
+          "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "SW 25-40mph, heavy persistent rain setting in west evening, strenuous walking"
+          "reason": "SW 25-40mph all day, persistent heavy rain setting in PM west, strenuous"
         },
         {
           "sky": "partly-cloudy",
@@ -257,14 +257,14 @@
           "cloudFree": 40,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "cloud",
+          "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gusts 60mph, arduous walking, wind chill -3C, showery rain west"
+          "reason": "gusts 60mph, arduous conditions, showery rain Dumfries & Galloway"
         }
       ]
     }
   ],
-  "_generated": "2026-09-01T19:22:55.970Z",
+  "_generated": "2026-09-02T12:47:24.449Z",
   "_anchorDate": "2026-09-02"
 }
