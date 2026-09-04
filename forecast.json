@@ -23,13 +23,13 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "severe gales 60-70mph+, persistent rain, tops covered in cloud"
+          "reason": "severe gales 60-70mph+, persistent rain, tops cloud-covered"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 20,
           "windMphHigh": 45,
-          "gustMph": 45,
+          "gustMph": 50,
           "windDir": "W",
           "tempCLow": 5,
           "tempCHigh": 7,
@@ -39,13 +39,13 @@
           "amSky": "partly-cloudy",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "blustery 35-45mph start, easing but deteriorating overnight; showers west"
+          "reason": "blustery 35-45mph start easing, deteriorating severely overnight"
         },
         {
           "sky": "rain",
           "windMphLow": 50,
           "windMphHigh": 65,
-          "windDir": "S",
+          "windDir": "SW",
           "tempCLow": 10,
           "tempCHigh": 12,
           "cloudFree": 20,
@@ -54,7 +54,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gales 50-65mph, rain most of day, blanket low cloud west"
+          "reason": "gales 50-65mph, rain rarely ceasing, blanket low cloud"
         }
       ]
     },
@@ -75,13 +75,13 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "severe gales 45-60mph gusts 70mph+, frequent heavy rain, tops covered"
+          "reason": "severe gales 45-60mph gusts 70mph+, frequent heavy rain, tops cloud-covered"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 20,
           "windMphHigh": 40,
-          "gustMph": 40,
+          "gustMph": 50,
           "windDir": "W",
           "tempCLow": 6,
           "tempCHigh": 8,
@@ -91,13 +91,13 @@
           "amSky": "partly-cloudy",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "blustery 30-40mph easing but gales return dusk; showers coastal early"
+          "reason": "blustery 30-40mph easing, few showers, deteriorating severely from dusk"
         },
         {
           "sky": "rain",
           "windMphLow": 45,
           "windMphHigh": 60,
-          "windDir": "S",
+          "windDir": "SW",
           "tempCLow": 10,
           "tempCHigh": 12,
           "cloudFree": 20,
@@ -106,7 +106,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gales 45-60mph, persistent rain west, blanket low cloud, poor visibility"
+          "reason": "gales 45-60mph, persistent rain west, blanket low cloud"
         }
       ]
     },
@@ -127,13 +127,12 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "severe gales Cairngorm plateau gusts 70mph+, showery bursts passing east"
+          "reason": "severe gales, gusts 70mph+ Cairngorm plateau, heavy showery bursts"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 20,
           "windMphHigh": 50,
-          "gustMph": 50,
           "windDir": "W",
           "tempCLow": 6,
           "tempCHigh": 8,
@@ -143,13 +142,13 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "40-50mph at dawn easing well, but deteriorating into night; scattered showers"
+          "reason": "40-50mph at dawn easing to 20-25mph, deteriorating severely overnight"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 50,
           "windMphHigh": 70,
-          "windDir": "S",
+          "windDir": "SW",
           "tempCLow": 10,
           "tempCHigh": 12,
           "cloudFree": 50,
@@ -158,7 +157,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gales 50-70mph strongest Cairngorm plateau, cloud rolling across plateau"
+          "reason": "gales 50-70mph strongest Cairngorm plateau, patchy rain, hazy"
         }
       ]
     },
@@ -179,13 +178,12 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "severe gales gusts 70mph afternoon, showery bursts eastwards, challenging tops"
+          "reason": "severe gales, gusts 70mph afternoon, intermittent heavy showers"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 20,
           "windMphHigh": 45,
-          "gustMph": 45,
           "windDir": "W",
           "tempCLow": 6,
           "tempCHigh": 8,
@@ -195,22 +193,22 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "35-45mph blustery start easing well; gales return overnight, scattered showers"
+          "reason": "35-45mph at dawn easing to 20-25mph, deteriorating severely overnight"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 45,
           "windMphHigh": 60,
-          "windDir": "S",
+          "windDir": "SW",
           "tempCLow": 10,
-          "tempCHigh": 12,
+          "tempCHigh": 14,
           "cloudFree": 30,
           "freezingLevel": 9999,
           "visibility": "moderate",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gales 45-60mph, low cloud covering southern slopes, drizzle central highlands"
+          "reason": "gales 45-60mph, low cloud south slopes near Callander, patchy rain"
         }
       ]
     },
@@ -227,17 +225,16 @@
           "tempCHigh": 9,
           "cloudFree": 40,
           "freezingLevel": 9999,
-          "visibility": "moderate",
+          "visibility": "good",
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gales 40-50mph gusts 60mph, showery rain Galloway, arduous on tops"
+          "reason": "gales 40-50mph gusts 60mph, showery rain Galloway, arduous walking"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 15,
           "windMphHigh": 35,
-          "gustMph": 35,
           "windDir": "W",
           "tempCLow": 7,
           "tempCHigh": 10,
@@ -247,13 +244,13 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "30-35mph easing to 15-20mph; rain returns Galloway from dusk, otherwise fair"
+          "reason": "30-35mph easing to 15-20mph, substantially dry, deteriorating from dusk"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 40,
           "windMphHigh": 55,
-          "windDir": "S",
+          "windDir": "SW",
           "tempCLow": 10,
           "tempCHigh": 12,
           "cloudFree": 40,
@@ -262,11 +259,11 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gales 40-55mph very gusty, low cloud Solway slopes, drizzle Dumfries & Galloway"
+          "reason": "gales 40-55mph, low cloud Solway slopes, patchy rain Dumfries & Galloway"
         }
       ]
     }
   ],
-  "_generated": "2026-09-03T19:17:15.316Z",
+  "_generated": "2026-09-04T12:44:14.675Z",
   "_anchorDate": "2026-09-04"
 }
