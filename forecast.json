@@ -39,7 +39,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 80mph, prolonged heavy rain west, thunder risk, poor visibility"
+          "reason": "70mph+ gusts, frequent heavy rain, chance of thunder, poor visibility"
         },
         {
           "sky": "rain",
@@ -55,7 +55,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 80mph+, near-constant showers and rain, blanket cloud below 600m"
+          "reason": "80mph+ gusts, near-constant showers and rain, cloud base 500-600m, poor visibility"
         }
       ]
     },
@@ -76,7 +76,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "severe gales gusting 65-70mph, persistent drizzle/rain, blanket cloud, poor visibility"
+          "reason": "gales becoming severe 70mph gusts, blanket cloud, drizzle and rain, poor visibility"
         },
         {
           "sky": "rain",
@@ -92,7 +92,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 80mph Ben Nevis group, prolonged heavy rain Lochaber, thunder risk"
+          "reason": "80mph gusts Ben Nevis, frequent heavy rain Lochaber to Mull, chance of thunder"
         },
         {
           "sky": "rain",
@@ -108,7 +108,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 80mph+, persistent rain/hail, sleet on highest summits, cloud from 500m"
+          "reason": "80mph+ gusts, persistent rain with hail and sleet on summits, cloud from 500m"
         }
       ]
     },
@@ -129,7 +129,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "severe gales gusting 70mph+ Cairngorm plateau, drizzle/rain all day, poor visibility"
+          "reason": "gales 70mph+ Cairngorm plateau, persistent drizzle and rain pulses, mostly poor visibility"
         },
         {
           "sky": "rain",
@@ -145,7 +145,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 70mph+ Cairngorms rising overnight, heavy showery bursts, significant wind chill"
+          "reason": "sustained 70mph Cairngorms rising; heavy showery rain returns PM, significant wind chill"
         },
         {
           "sky": "rain",
@@ -161,7 +161,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 80mph+ early, showers/rain/hail all day, sleet on high Cairngorms"
+          "reason": "80mph+ gusts early, showers with hail and sleet high Cairngorms, blanket cloud"
         }
       ]
     },
@@ -175,14 +175,14 @@
           "gustMph": 70,
           "windDir": "SW",
           "tempCLow": 10,
-          "tempCHigh": 10,
+          "tempCHigh": 12,
           "cloudFree": 30,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
-          "pmSky": "rain",
+          "pmSky": "cloud",
           "status": "poor",
-          "reason": "gales gusting 70mph, drizzle/rain all day, cloud to mid-slopes, poor visibility"
+          "reason": "gales to 70mph, drizzle and rain pulses, low cloud on most tops, poor visibility"
         },
         {
           "sky": "rain",
@@ -191,14 +191,14 @@
           "gustMph": 70,
           "windDir": "SW",
           "tempCLow": 6,
-          "tempCHigh": 6,
+          "tempCHigh": 8,
           "cloudFree": 40,
           "freezingLevel": 9999,
           "visibility": "moderate",
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 70mph, heavy showery rain central hills, suddenly worsening evening"
+          "reason": "gusts 70mph high tops, heavy rain frequent central hills, wind chill -5 to -10C"
         },
         {
           "sky": "rain",
@@ -214,7 +214,7 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gusts 80mph early, showers/hail/rain all day, blanket cloud to mid-slopes"
+          "reason": "80mph gusts early, showers with hail, blanket cloud mid-slopes, significant wind chill"
         }
       ]
     },
@@ -222,7 +222,7 @@
       "name": "Southern Uplands",
       "forecast": [
         {
-          "sky": "rain",
+          "sky": "partly-cloudy",
           "windMphLow": 40,
           "windMphHigh": 45,
           "windDir": "SW",
@@ -234,23 +234,22 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gales 40-45mph, early and late rain, cloud extensive west all day"
+          "reason": "gales 40-45mph, early and late rain, cloud persistent west, arduous walking"
         },
         {
           "sky": "rain",
           "windMphLow": 30,
           "windMphHigh": 45,
-          "gustMph": 60,
           "windDir": "SW",
           "tempCLow": 7,
-          "tempCHigh": 8,
+          "tempCHigh": 9,
           "cloudFree": 50,
           "freezingLevel": 9999,
           "visibility": "moderate",
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "suddenly strengthening to 60mph evening, frequent heavy showers west, wind chill"
+          "reason": "suddenly strengthening to 50-60mph evening, heavy showery rain frequent west, wind chill"
         },
         {
           "sky": "rain",
@@ -265,11 +264,11 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "arduous 40-55mph all day, showers merging to prolonged falls, cloud blankets west"
+          "reason": "40-55mph arduous all day, showers merging into prolonged falls, cloud blankets high terrain"
         }
       ]
     }
   ],
-  "_generated": "2026-09-05T18:15:11.165Z",
+  "_generated": "2026-09-06T12:09:27.916Z",
   "_anchorDate": "2026-09-06"
 }
