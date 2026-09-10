@@ -1,59 +1,60 @@
 {
   "days": [
-    "Thu",
     "Fri",
-    "Sat"
+    "Sat",
+    "Sun"
   ],
-  "updatedAt": "2026-09-09T16:10:00.000Z",
+  "updatedAt": "2026-09-10T16:30:00.000Z",
   "regions": [
     {
       "name": "Northwest Highlands",
       "forecast": [
         {
-          "sky": "rain",
-          "windMphLow": 45,
-          "windMphHigh": 50,
-          "gustMph": 60,
-          "windDir": "SW",
-          "tempCLow": 6,
-          "tempCHigh": 9,
-          "cloudFree": 10,
-          "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "rain",
-          "pmSky": "rain",
-          "status": "poor",
-          "reason": "gales 45-50mph, gusts 60mph, heavy rain, poor visibility Skye/Wester Ross"
-        },
-        {
           "sky": "partly-cloudy",
           "windMphLow": 25,
           "windMphHigh": 35,
-          "windDir": "SW",
+          "gustMph": 35,
+          "windDir": "W",
           "tempCLow": 5,
           "tempCHigh": 6,
           "cloudFree": 50,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "cloud",
+          "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "gusty 25-35mph, cloud clinging western summits, Cuillin breaks late only"
+          "reason": "brisk winds, cloud clings western summits, light showers fading"
         },
         {
           "sky": "rain",
-          "windMphLow": 60,
+          "windMphLow": 30,
           "windMphHigh": 70,
+          "gustMph": 70,
           "windDir": "SW",
           "tempCLow": 7,
           "tempCHigh": 10,
           "cloudFree": 20,
           "freezingLevel": 9999,
-          "visibility": "poor",
+          "visibility": "moderate",
           "amSky": "rain",
-          "pmSky": "rain",
+          "pmSky": "cloud",
           "status": "poor",
-          "reason": "gales 60-70mph dawn, heavy rain, blanket cloud, extremely dangerous conditions"
+          "reason": "gales 60-70mph from dawn, heavy rain, blanket cloud on all tops"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 15,
+          "windMphHigh": 20,
+          "windDir": "W",
+          "tempCLow": 4,
+          "tempCHigh": 7,
+          "cloudFree": 60,
+          "freezingLevel": 9999,
+          "visibility": "excellent",
+          "amSky": "cloud",
+          "pmSky": "sun",
+          "status": "go",
+          "reason": "mostly dry, light winds, cloud clears to 80% by afternoon"
         }
       ]
     },
@@ -61,50 +62,51 @@
       "name": "West Highlands",
       "forecast": [
         {
-          "sky": "rain",
-          "windMphLow": 45,
-          "windMphHigh": 50,
-          "gustMph": 60,
-          "windDir": "SW",
-          "tempCLow": 7,
-          "tempCHigh": 9,
-          "cloudFree": 10,
-          "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "rain",
-          "pmSky": "rain",
-          "status": "poor",
-          "reason": "gales 45-50mph, gusts 60mph Lochaber tops, heavy rain, poor visibility"
-        },
-        {
           "sky": "partly-cloudy",
           "windMphLow": 20,
           "windMphHigh": 30,
+          "gustMph": 30,
           "windDir": "W",
           "tempCLow": 5,
-          "tempCHigh": 6,
+          "tempCHigh": 7,
           "cloudFree": 40,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "cloud",
+          "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "gusty 20-30mph, cloud above 900m coastal tops, inland breaks developing"
+          "reason": "cloud clings coastal tops, light drizzle, gusty Lochaber, chilly"
         },
         {
           "sky": "rain",
-          "windMphLow": 60,
+          "windMphLow": 30,
           "windMphHigh": 70,
+          "gustMph": 70,
           "windDir": "SW",
           "tempCLow": 8,
-          "tempCHigh": 11,
-          "cloudFree": 10,
+          "tempCHigh": 10,
+          "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
-          "pmSky": "rain",
+          "pmSky": "cloud",
           "status": "poor",
-          "reason": "gales 60-70mph dawn, sustained heavy rain, blanket cloud to lower slopes"
+          "reason": "gales 60-70mph, sustained heavy rain all morning, blanket cloud"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 10,
+          "windMphHigh": 20,
+          "windDir": "W",
+          "tempCLow": 5,
+          "tempCHigh": 8,
+          "cloudFree": 65,
+          "freezingLevel": 9999,
+          "visibility": "excellent",
+          "amSky": "cloud",
+          "pmSky": "sun",
+          "status": "go",
+          "reason": "largely dry, light winds, cloud breaks above all tops by afternoon"
         }
       ]
     },
@@ -112,26 +114,11 @@
       "name": "Cairngorms & Monadhliath",
       "forecast": [
         {
-          "sky": "rain",
-          "windMphLow": 45,
-          "windMphHigh": 50,
-          "gustMph": 60,
-          "windDir": "SW",
-          "tempCLow": 6,
-          "tempCHigh": 10,
-          "cloudFree": 10,
-          "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "cloud",
-          "pmSky": "rain",
-          "status": "poor",
-          "reason": "gales 45-50mph, gusts 60mph Cairngorm plateau, heavy rain developing midday"
-        },
-        {
           "sky": "partly-cloudy",
           "windMphLow": 25,
           "windMphHigh": 35,
-          "windDir": "WSW",
+          "gustMph": 35,
+          "windDir": "W",
           "tempCLow": 6,
           "tempCHigh": 8,
           "cloudFree": 60,
@@ -140,22 +127,38 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "gusty 25-35mph Cairngorm plateau, cloud lifting and breaking, mostly dry"
+          "reason": "gusty Cairngorm plateau, cloud breaking, chilly -3 to -5C windchill"
         },
         {
           "sky": "rain",
-          "windMphLow": 60,
+          "windMphLow": 30,
           "windMphHigh": 80,
+          "gustMph": 80,
           "windDir": "SW",
           "tempCLow": 7,
-          "tempCHigh": 11,
+          "tempCHigh": 10,
           "cloudFree": 30,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "gales 60-80mph dawn, heavy rain Drumochter, very difficult conditions all day"
+          "reason": "gales 60-80mph, rain Drumochter, extensive cloud shrouding all tops"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 15,
+          "windMphHigh": 25,
+          "windDir": "W",
+          "tempCLow": 6,
+          "tempCHigh": 9,
+          "cloudFree": 70,
+          "freezingLevel": 9999,
+          "visibility": "excellent",
+          "amSky": "cloud",
+          "pmSky": "sun",
+          "status": "go",
+          "reason": "largely dry, moderate winds easing, cloud clears to 90% by afternoon"
         }
       ]
     },
@@ -163,24 +166,10 @@
       "name": "Southeastern Highlands",
       "forecast": [
         {
-          "sky": "rain",
-          "windMphLow": 40,
-          "windMphHigh": 50,
-          "windDir": "SW",
-          "tempCLow": 6,
-          "tempCHigh": 9,
-          "cloudFree": 10,
-          "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "cloud",
-          "pmSky": "rain",
-          "status": "poor",
-          "reason": "gales 40-50mph high tops, heavy rain extends east afternoon, poor visibility"
-        },
-        {
           "sky": "partly-cloudy",
           "windMphLow": 20,
           "windMphHigh": 30,
+          "gustMph": 30,
           "windDir": "W",
           "tempCLow": 6,
           "tempCHigh": 8,
@@ -190,22 +179,38 @@
           "amSky": "cloud",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "gusty tops early, cloud clearing well east of A9; breezy but improving"
+          "reason": "gusty tops, cloud clearing well east, chilly -3C windchill on summits"
         },
         {
           "sky": "rain",
-          "windMphLow": 60,
+          "windMphLow": 30,
           "windMphHigh": 70,
+          "gustMph": 70,
           "windDir": "SW",
-          "tempCLow": 7,
+          "tempCLow": 8,
           "tempCHigh": 11,
           "cloudFree": 10,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
-          "pmSky": "rain",
+          "pmSky": "cloud",
           "status": "poor",
-          "reason": "gales 60-70mph dawn, sustained heavy rain central highlands, blanket cloud"
+          "reason": "gales 60-70mph, heavy rain central highlands morning, blanket cloud"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 15,
+          "windMphHigh": 25,
+          "windDir": "W",
+          "tempCLow": 6,
+          "tempCHigh": 9,
+          "cloudFree": 75,
+          "freezingLevel": 9999,
+          "visibility": "excellent",
+          "amSky": "cloud",
+          "pmSky": "sun",
+          "status": "go",
+          "reason": "largely dry, moderate winds, cloud clears to 90% by afternoon"
         }
       ]
     },
@@ -213,53 +218,55 @@
       "name": "Southern Uplands",
       "forecast": [
         {
-          "sky": "rain",
-          "windMphLow": 40,
-          "windMphHigh": 45,
-          "windDir": "SW",
-          "tempCLow": 8,
-          "tempCHigh": 11,
-          "cloudFree": 20,
-          "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "partly-cloudy",
-          "pmSky": "rain",
-          "status": "poor",
-          "reason": "gales 40-45mph, rain extends east midday, heavier falls Dumfries & Galloway"
-        },
-        {
           "sky": "partly-cloudy",
           "windMphLow": 20,
           "windMphHigh": 25,
+          "gustMph": 25,
           "windDir": "W",
           "tempCLow": 8,
           "tempCHigh": 10,
           "cloudFree": 70,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "partly-cloudy",
+          "amSky": "cloud",
           "pmSky": "sun",
-          "status": "marginal",
-          "reason": "blustery early, cloud breaking well east, light showers Merrick/Ayrshire west"
+          "status": "go",
+          "reason": "mostly dry, light showers west only, cloud breaks well east, breezy"
         },
         {
           "sky": "rain",
-          "windMphLow": 50,
+          "windMphLow": 40,
           "windMphHigh": 65,
+          "gustMph": 65,
           "windDir": "SW",
-          "tempCLow": 9,
+          "tempCLow": 10,
           "tempCHigh": 12,
           "cloudFree": 10,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
-          "pmSky": "rain",
+          "pmSky": "cloud",
           "status": "poor",
-          "reason": "gales 50-65mph, sustained heavy rain Dumfries & Galloway, blanket cloud"
+          "reason": "gales 50-65mph, heavy rain Dumfries and Galloway, blanket cloud"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 10,
+          "windMphHigh": 20,
+          "windDir": "W",
+          "tempCLow": 7,
+          "tempCHigh": 10,
+          "cloudFree": 75,
+          "freezingLevel": 9999,
+          "visibility": "excellent",
+          "amSky": "cloud",
+          "pmSky": "sun",
+          "status": "go",
+          "reason": "largely dry, winds ease to 10mph by morning, cloud clears to 90%"
         }
       ]
     }
   ],
-  "_generated": "2026-09-10T12:56:01.208Z",
-  "_anchorDate": "2026-09-10"
+  "_generated": "2026-09-10T19:06:59.348Z",
+  "_anchorDate": "2026-09-11"
 }
