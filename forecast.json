@@ -23,7 +23,7 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "brisk winds, cloud clings western summits, light showers fading"
+          "reason": "brisk winds, cloud clings to western summits, light showers fading"
         },
         {
           "sky": "rain",
@@ -39,7 +39,7 @@
           "amSky": "rain",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "gales 60-70mph from dawn, heavy rain, blanket cloud on all tops"
+          "reason": "gales 60-70mph dawn, heavy rain, blanket cloud, very difficult conditions"
         },
         {
           "sky": "partly-cloudy",
@@ -48,13 +48,13 @@
           "windDir": "W",
           "tempCLow": 4,
           "tempCHigh": 7,
-          "cloudFree": 60,
+          "cloudFree": 80,
           "freezingLevel": 9999,
           "visibility": "excellent",
-          "amSky": "cloud",
+          "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "mostly dry, light winds, cloud clears to 80% by afternoon"
+          "reason": "largely dry, cloud clears to 80%, light winds, excellent visibility afternoon"
         }
       ]
     },
@@ -67,7 +67,7 @@
           "windMphHigh": 30,
           "gustMph": 30,
           "windDir": "W",
-          "tempCLow": 5,
+          "tempCLow": 6,
           "tempCHigh": 7,
           "cloudFree": 40,
           "freezingLevel": 9999,
@@ -75,7 +75,7 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "cloud clings coastal tops, light drizzle, gusty Lochaber, chilly"
+          "reason": "breezy, cloud on western tops to 900m, light showers fading inland"
         },
         {
           "sky": "rain",
@@ -91,7 +91,7 @@
           "amSky": "rain",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "gales 60-70mph, sustained heavy rain all morning, blanket cloud"
+          "reason": "gales 60-70mph, sustained heavy rain early, blanket cloud to lower slopes"
         },
         {
           "sky": "partly-cloudy",
@@ -100,13 +100,13 @@
           "windDir": "W",
           "tempCLow": 5,
           "tempCHigh": 8,
-          "cloudFree": 65,
+          "cloudFree": 80,
           "freezingLevel": 9999,
           "visibility": "excellent",
-          "amSky": "cloud",
+          "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "largely dry, light winds, cloud breaks above all tops by afternoon"
+          "reason": "largely dry, cloud clears tops, light winds daytime, excellent visibility"
         }
       ]
     },
@@ -127,7 +127,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "gusty Cairngorm plateau, cloud breaking, chilly -3 to -5C windchill"
+          "reason": "gusty Cairngorm plateau, cloud lifting but rolling over tops, chilly"
         },
         {
           "sky": "rain",
@@ -143,7 +143,7 @@
           "amSky": "rain",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "gales 60-80mph, rain Drumochter, extensive cloud shrouding all tops"
+          "reason": "gales 60-80mph, heavy rain near Drumochter, extensive cloud all day"
         },
         {
           "sky": "partly-cloudy",
@@ -152,13 +152,13 @@
           "windDir": "W",
           "tempCLow": 6,
           "tempCHigh": 9,
-          "cloudFree": 70,
+          "cloudFree": 90,
           "freezingLevel": 9999,
           "visibility": "excellent",
-          "amSky": "cloud",
+          "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "largely dry, moderate winds easing, cloud clears to 90% by afternoon"
+          "reason": "largely dry, cloud clears to 90%, light winds, excellent visibility afternoon"
         }
       ]
     },
@@ -179,7 +179,7 @@
           "amSky": "cloud",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "gusty tops, cloud clearing well east, chilly -3C windchill on summits"
+          "reason": "breezy and chilly, cloud lifting to 70-90% clear east, gusty on tops"
         },
         {
           "sky": "rain",
@@ -195,7 +195,7 @@
           "amSky": "rain",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "gales 60-70mph, heavy rain central highlands morning, blanket cloud"
+          "reason": "gales 60-70mph, sustained heavy rain central highlands, blanket cloud"
         },
         {
           "sky": "partly-cloudy",
@@ -204,13 +204,13 @@
           "windDir": "W",
           "tempCLow": 6,
           "tempCHigh": 9,
-          "cloudFree": 75,
+          "cloudFree": 90,
           "freezingLevel": 9999,
           "visibility": "excellent",
-          "amSky": "cloud",
+          "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "largely dry, moderate winds, cloud clears to 90% by afternoon"
+          "reason": "largely dry, cloud clears to 90%, light winds daytime, excellent visibility"
         }
       ]
     },
@@ -231,7 +231,7 @@
           "amSky": "cloud",
           "pmSky": "sun",
           "status": "go",
-          "reason": "mostly dry, light showers west only, cloud breaks well east, breezy"
+          "reason": "moderate breeze, mostly dry, cloud breaks east, often sunny east borders"
         },
         {
           "sky": "rain",
@@ -247,7 +247,7 @@
           "amSky": "rain",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "gales 50-65mph, heavy rain Dumfries and Galloway, blanket cloud"
+          "reason": "gales 50-65mph, heavy rain Dumfries & Galloway, blanket cloud, poor visibility"
         },
         {
           "sky": "partly-cloudy",
@@ -256,17 +256,17 @@
           "windDir": "W",
           "tempCLow": 7,
           "tempCHigh": 10,
-          "cloudFree": 75,
+          "cloudFree": 90,
           "freezingLevel": 9999,
           "visibility": "excellent",
-          "amSky": "cloud",
+          "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "largely dry, winds ease to 10mph by morning, cloud clears to 90%"
+          "reason": "largely dry, cloud clears by midday, light winds, excellent visibility"
         }
       ]
     }
   ],
-  "_generated": "2026-09-10T19:06:59.348Z",
+  "_generated": "2026-09-11T12:50:13.362Z",
   "_anchorDate": "2026-09-11"
 }
