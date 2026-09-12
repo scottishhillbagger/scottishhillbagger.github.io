@@ -16,14 +16,14 @@
           "gustMph": 70,
           "windDir": "SW",
           "tempCLow": 5,
-          "tempCHigh": 10,
+          "tempCHigh": 9,
           "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gales 60-70mph dawn, persistent rain, blanket cloud, poor visibility"
+          "reason": "severe gales 60-70mph dawn, heavy rain, blanket cloud, poor visibility"
         },
         {
           "sky": "partly-cloudy",
@@ -38,7 +38,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "largely dry, patchy cloud clearing, winds light, visibility excellent"
+          "reason": "largely dry, cloud lifting and clearing, light winds, excellent visibility"
         },
         {
           "sky": "rain",
@@ -53,7 +53,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 30-45mph, heavy rain Skye/Torridon, extensive low cloud all day"
+          "reason": "gusts 30-45mph, heavy rain west/Skye, cloud shrouding mountains all day"
         }
       ]
     },
@@ -66,15 +66,15 @@
           "windMphHigh": 40,
           "gustMph": 70,
           "windDir": "SW",
-          "tempCLow": 5,
+          "tempCLow": 8,
           "tempCHigh": 10,
           "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
-          "pmSky": "rain",
+          "pmSky": "cloud",
           "status": "poor",
-          "reason": "gales 60-70mph dawn, sustained heavy rain, blanket cloud, poor visibility"
+          "reason": "severe gales 60-70mph dawn, sustained heavy rain, cloud capping tops all day"
         },
         {
           "sky": "partly-cloudy",
@@ -89,7 +89,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "largely dry, cloud clears most tops by afternoon, visibility excellent"
+          "reason": "largely dry, cloud lifting off tops, light winds, excellent visibility later"
         },
         {
           "sky": "rain",
@@ -104,7 +104,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "persistent rain Mull to Ben Nevis, gusts 30-45mph, cloud shrouding all day"
+          "reason": "gusts 30-45mph, persistent rain Mull to Ben Nevis, cloud shrouding mountains all day"
         }
       ]
     },
@@ -112,20 +112,20 @@
       "name": "Cairngorms & Monadhliath",
       "forecast": [
         {
-          "sky": "rain",
+          "sky": "cloud",
           "windMphLow": 20,
           "windMphHigh": 40,
           "gustMph": 80,
           "windDir": "SW",
-          "tempCLow": 5,
+          "tempCLow": 7,
           "tempCHigh": 10,
           "cloudFree": 30,
           "freezingLevel": 9999,
-          "visibility": "poor",
+          "visibility": "moderate",
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gales 60-80mph dawn, rain then patchy, cloud extensive, locally poor visibility"
+          "reason": "gales 60-80mph dawn, heavy rain Drumochter, cloud extensive; breaks NE later"
         },
         {
           "sky": "partly-cloudy",
@@ -140,7 +140,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "substantially dry, cloud clears most tops, visibility excellent"
+          "reason": "substantially dry, cloud clearing most tops, light winds, excellent visibility"
         },
         {
           "sky": "cloud",
@@ -155,7 +155,7 @@
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 30-50mph, rain near/west A9, cloud capping plateau, gusty downslopes"
+          "reason": "gusts 30-50mph, cloud caps Cairngorm plateau, rain risk west of A9, gusty downslopes"
         }
       ]
     },
@@ -168,7 +168,7 @@
           "windMphHigh": 40,
           "gustMph": 70,
           "windDir": "SW",
-          "tempCLow": 5,
+          "tempCLow": 8,
           "tempCHigh": 11,
           "cloudFree": 10,
           "freezingLevel": 9999,
@@ -176,7 +176,7 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gales 60-70mph dawn, heavy rain, blanket cloud, poor visibility all morning"
+          "reason": "gales 60-70mph dawn, heavy rain central Highlands, blanket cloud, poor visibility"
         },
         {
           "sky": "partly-cloudy",
@@ -191,7 +191,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "substantially dry, cloud breaks to 90% by afternoon, visibility excellent"
+          "reason": "substantially dry, cloud clearing most tops, light winds, excellent visibility"
         },
         {
           "sky": "cloud",
@@ -206,7 +206,7 @@
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 30-45mph, cloud shrouding all day, steady rain risk central highlands"
+          "reason": "gusts 30-45mph, cloud shrouding most mountains, rain risk central Highlands, gusty downslopes"
         }
       ]
     },
@@ -227,7 +227,7 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gales 50-65mph dawn, heavy rain Dumfries & Galloway, poor visibility widespread"
+          "reason": "gales 50-65mph dawn, heavy rain Dumfries & Galloway, blanket cloud, poor visibility"
         },
         {
           "sky": "partly-cloudy",
@@ -242,7 +242,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "substantially dry, cloud clears most hills by midday, visibility excellent"
+          "reason": "substantially dry, cloud clearing hills by midday, light winds, excellent visibility"
         },
         {
           "sky": "cloud",
@@ -257,11 +257,11 @@
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 30-45mph, blanket low cloud Dumfries & Galloway above 400-500m, rain risk"
+          "reason": "gusts 30-45mph, blanket low cloud Dumfries & Galloway above 400m, rain risk SW later"
         }
       ]
     }
   ],
-  "_generated": "2026-09-11T19:09:13.624Z",
+  "_generated": "2026-09-12T12:11:34.498Z",
   "_anchorDate": "2026-09-12"
 }
