@@ -23,14 +23,14 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "mountain gales 60mph, heavy rain, wind chill -10C, haze and fog"
+          "reason": "mountain gales 60mph, heavy rain, hail risk, wind chill -10C"
         },
         {
           "sky": "rain",
           "windMphLow": 35,
           "windMphHigh": 55,
           "gustMph": 55,
-          "windDir": "SW",
+          "windDir": "SSW",
           "tempCLow": 4,
           "tempCHigh": 8,
           "cloudFree": 10,
@@ -39,7 +39,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 50-55mph, heavy rain arrives afternoon, cloud filling widely"
+          "reason": "gales increasing to 50-55mph PM, persistent rain, cloud fills in widely"
         },
         {
           "sky": "rain",
@@ -54,7 +54,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gales 40-55mph, frequent rain west, wind chill -8C, poor visibility"
+          "reason": "gales 40-55mph squally, frequent rain west, wind chill -5 to -8C"
         }
       ]
     },
@@ -75,13 +75,13 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "mountain gales 60mph, heavy rain near Glencoe, wind chill -10C"
+          "reason": "mountain gales 60mph+, heavy rain, hail risk Glencoe, wind chill -10C"
         },
         {
           "sky": "rain",
           "windMphLow": 35,
           "windMphHigh": 60,
-          "windDir": "SW",
+          "windDir": "SSW",
           "tempCLow": 4,
           "tempCHigh": 7,
           "cloudFree": 10,
@@ -90,7 +90,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts to 60mph afternoon, persistent heavy rain, wind chill below 0C"
+          "reason": "gales to 60mph early afternoon, persistent heavy rain PM, cloud fills in"
         },
         {
           "sky": "rain",
@@ -105,7 +105,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gales 40-55mph, frequent rain all day, poor coastal visibility, wind chill -8C"
+          "reason": "gales 40-55mph squally, rain rarely ceasing, wind chill -5 to -8C"
         }
       ]
     },
@@ -120,19 +120,19 @@
           "windDir": "WSW",
           "tempCLow": 5,
           "tempCHigh": 5,
-          "cloudFree": 40,
+          "cloudFree": 20,
           "freezingLevel": 9999,
-          "visibility": "good",
+          "visibility": "moderate",
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gales 60mph Cairngorm plateau, heavy showers, wind chill -7C"
+          "reason": "gales 60mph Cairngorm plateau, heavy showers, hail risk, wind chill -7C"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 35,
           "windMphHigh": 60,
-          "windDir": "SW",
+          "windDir": "SSW",
           "tempCLow": 4,
           "tempCHigh": 7,
           "cloudFree": 20,
@@ -141,7 +141,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 50-60mph afternoon, rain fills in, wind chill below 0C"
+          "reason": "gales to 60mph PM, rain develops and sets in, cloud fills Cairngorms"
         },
         {
           "sky": "partly-cloudy",
@@ -150,13 +150,13 @@
           "windDir": "SW",
           "tempCLow": 6,
           "tempCHigh": 7,
-          "cloudFree": 45,
+          "cloudFree": 60,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "partly-cloudy",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gales 40-55mph, strongest Cairngorms; wind chill -8C, showers west A9"
+          "reason": "gales 40-55mph sustained on high Cairngorms, wind chill -5 to -8C"
         }
       ]
     },
@@ -171,19 +171,19 @@
           "windDir": "WSW",
           "tempCLow": 5,
           "tempCHigh": 5,
-          "cloudFree": 50,
+          "cloudFree": 30,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 60mph high tops, heavy showers developing, wind chill -7C"
+          "reason": "gales to 60mph high tops PM, heavy showers, hail risk, wind chill -7C"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 35,
           "windMphHigh": 55,
-          "windDir": "SW",
+          "windDir": "SSW",
           "tempCLow": 4,
           "tempCHigh": 7,
           "cloudFree": 20,
@@ -192,7 +192,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 50-55mph afternoon, heavy rain sets in, cloud fills high terrain"
+          "reason": "gales to 55mph PM, rain sets in from west, cloud fills central highlands"
         },
         {
           "sky": "partly-cloudy",
@@ -201,13 +201,13 @@
           "windDir": "SW",
           "tempCLow": 6,
           "tempCHigh": 7,
-          "cloudFree": 45,
+          "cloudFree": 60,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "partly-cloudy",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gales 40-50mph, frequent buffeting, wind chill -6C, showers west"
+          "reason": "gales 40-50mph, showers west toward Callander, wind chill -3 to -6C"
         }
       ]
     },
@@ -221,13 +221,13 @@
           "windDir": "SW",
           "tempCLow": 6,
           "tempCHigh": 7,
-          "cloudFree": 60,
+          "cloudFree": 30,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "reaching gale-force on tops, gusts affecting stability, wind chill -5C"
+          "reason": "gales 40-45mph, showers fill in PM, wind chill -5C, gale-force tops"
         },
         {
           "sky": "rain",
@@ -242,7 +242,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 50mph, heavy rain sets in Galloway-Moffat, poor visibility afternoon"
+          "reason": "gales to 50mph high tops PM, heavy rain sets in Galloway to Moffat"
         },
         {
           "sky": "partly-cloudy",
@@ -251,17 +251,17 @@
           "windDir": "SW",
           "tempCLow": 7,
           "tempCHigh": 8,
-          "cloudFree": 55,
+          "cloudFree": 70,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "partly-cloudy",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "strenuous-to-arduous gales 35-45mph, wind chill -5C, showers Galloway"
+          "reason": "gales 35-45mph strenuous-to-arduous, showers west Galloway, wind chill -5C"
         }
       ]
     }
   ],
-  "_generated": "2026-09-16T19:32:41.367Z",
+  "_generated": "2026-09-17T13:29:22.923Z",
   "_anchorDate": "2026-09-17"
 }
