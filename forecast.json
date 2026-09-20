@@ -23,7 +23,7 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gales 50mph AM, showery rain, cloud 600-800m, severe wind chill"
+          "reason": "Gales 50mph AM, showery rain west, only 30% cloud-free Munros"
         },
         {
           "sky": "cloud",
@@ -39,7 +39,7 @@
           "amSky": "rain",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "blanket fog west coast all day, 35-50mph gusts, misty poor visibility"
+          "reason": "Blanket fog from low elevations, misty poor visibility, gusts 50mph"
         },
         {
           "sky": "rain",
@@ -55,7 +55,7 @@
           "amSky": "rain",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "persistent rain Skye/Torridon, gusts 50mph, extensive low cloud, murky"
+          "reason": "Persistent rain Skye/Torridon, gusts 50mph AM, murky poor visibility west"
         }
       ]
     },
@@ -76,7 +76,7 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gales 50mph AM Ben Nevis, showery rain west, significant wind chill"
+          "reason": "Early gales 50mph Ben Nevis, showery rain coast, 40% cloud-free only"
         },
         {
           "sky": "cloud",
@@ -92,7 +92,7 @@
           "amSky": "rain",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "blanket fog coast and sea lochs all day, 35-45mph gusts, misty poor visibility"
+          "reason": "Blanket fog coast/sea lochs all day, misty poor visibility, gusts 45mph"
         },
         {
           "sky": "rain",
@@ -104,11 +104,11 @@
           "tempCHigh": 10,
           "cloudFree": 30,
           "freezingLevel": 9999,
-          "visibility": "moderate",
+          "visibility": "poor",
           "amSky": "rain",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "drizzly rain Mull/Loch Linnhe, risk heavier falls, extensive coastal cloud"
+          "reason": "Drizzly rain widespread, heavier risk west of Loch Linnhe/Mull, gusty 40mph"
         }
       ]
     },
@@ -129,7 +129,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "poor",
-          "reason": "gusts 60mph Cairngorm plateau AM, near-freezing Ben Macdui summit, severe wind chill"
+          "reason": "Gusts to 60mph Cairngorms AM, significant wind chill, dangerous on high tops"
         },
         {
           "sky": "cloud",
@@ -145,7 +145,7 @@
           "amSky": "rain",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "blanket cloud shrouding hills, 35-50mph gusts, misty poor visibility widely"
+          "reason": "Blanket cloud foggy mid-elevations west, gusts 50mph, misty poor visibility"
         },
         {
           "sky": "partly-cloudy",
@@ -161,7 +161,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "cloud",
           "status": "marginal",
-          "reason": "gusty 40mph northern Cairngorms corries, drizzle Drumochter, rain risk PM"
+          "reason": "Drizzle Drumochter, gusty 40mph higher Cairngorms, cloud filling later from west"
         }
       ]
     },
@@ -170,9 +170,9 @@
       "forecast": [
         {
           "sky": "partly-cloudy",
-          "windMphLow": 30,
+          "windMphLow": 25,
           "windMphHigh": 50,
-          "gustMph": 55,
+          "gustMph": 50,
           "windDir": "W",
           "tempCLow": 5,
           "tempCHigh": 6,
@@ -182,7 +182,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "poor",
-          "reason": "gales 50mph AM, gusts 55mph, severe wind chill, challenging on exposed slopes"
+          "reason": "Gales 50mph early AM, significant wind chill, challenging on high exposed slopes"
         },
         {
           "sky": "cloud",
@@ -198,7 +198,7 @@
           "amSky": "rain",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "blanket cloud central highlands, 35-45mph gusts, misty poor visibility widely"
+          "reason": "Blanket cloud foggy central highlands, misty poor visibility, gusts 45mph"
         },
         {
           "sky": "partly-cloudy",
@@ -214,7 +214,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "drizzle central highlands, low cloud western hills, risk steady rain PM"
+          "reason": "Drizzle central highlands, gusty eastern downslopes, cloud persisting west all day"
         }
       ]
     },
@@ -223,7 +223,7 @@
       "forecast": [
         {
           "sky": "partly-cloudy",
-          "windMphLow": 25,
+          "windMphLow": 20,
           "windMphHigh": 45,
           "gustMph": 45,
           "windDir": "W",
@@ -235,7 +235,7 @@
           "amSky": "rain",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "40-45mph AM gusts, Galloway showers fading, sub-zero wind chill on tops"
+          "reason": "Gales 40-45mph AM moderating, local Galloway showers, 80% cloud-free PM"
         },
         {
           "sky": "cloud",
@@ -251,13 +251,12 @@
           "amSky": "rain",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "blanket cloud Galloway, fog lower elevations west, misty poor visibility on hills"
+          "reason": "Blanket cloud foggy Galloway/Solway, misty poor visibility, gusts 40mph"
         },
         {
           "sky": "cloud",
           "windMphLow": 20,
           "windMphHigh": 30,
-          "gustMph": 30,
           "windDir": "SW",
           "tempCLow": 7,
           "tempCHigh": 14,
@@ -265,13 +264,13 @@
           "freezingLevel": 9999,
           "visibility": "moderate",
           "amSky": "cloud",
-          "pmSky": "cloud",
+          "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "drizzle Galloway/M74 all day, cloud persisting southwest, misty western hills"
+          "reason": "Drizzle persistent Galloway/M74 corridor, cloud shrouding southwest hills all day"
         }
       ]
     }
   ],
-  "_generated": "2026-09-19T18:35:33.728Z",
+  "_generated": "2026-09-20T13:03:50.767Z",
   "_anchorDate": "2026-09-20"
 }
