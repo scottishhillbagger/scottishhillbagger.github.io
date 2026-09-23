@@ -22,7 +22,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "Showers with possible hail, cloud over western tops, chilly wind"
+          "reason": "showers with hail, cloud on west tops, chilly wind"
         },
         {
           "sky": "partly-cloudy",
@@ -34,11 +34,11 @@
           "tempCHigh": 9,
           "cloudFree": 30,
           "freezingLevel": 9999,
-          "visibility": "good",
+          "visibility": "moderate",
           "amSky": "partly-cloudy",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "Gusts 50-60mph, knocking off feet; rain spreading from Skye afternoon"
+          "reason": "gusts 50-60mph knocking off feet, Cuillin filling in PM"
         },
         {
           "sky": "rain",
@@ -53,7 +53,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "Gales 40-55mph, rain on and off, arduous buffeting on exposed terrain"
+          "reason": "gales 40-55mph, rain on western hills, arduous buffeting"
         }
       ]
     },
@@ -71,10 +71,10 @@
           "cloudFree": 40,
           "freezingLevel": 9999,
           "visibility": "excellent",
-          "amSky": "cloud",
-          "pmSky": "partly-cloudy",
+          "amSky": "partly-cloudy",
+          "pmSky": "sun",
           "status": "marginal",
-          "reason": "Dawn rain clearing, showers west, cloud breaking to 70% free later"
+          "reason": "dawn rain, showers west, cloud variable; improves afternoon"
         },
         {
           "sky": "partly-cloudy",
@@ -86,11 +86,11 @@
           "tempCHigh": 8,
           "cloudFree": 20,
           "freezingLevel": 9999,
-          "visibility": "good",
+          "visibility": "moderate",
           "amSky": "partly-cloudy",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "Gusts 45-60mph near coast, knocking off feet; rain spreading widely evening"
+          "reason": "gusts to 60mph, tops filling in PM, challenging walking"
         },
         {
           "sky": "rain",
@@ -105,7 +105,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "50mph gusts Lochaber, rain on and off coastal hills, strenuous conditions"
+          "reason": "gales 50mph Lochaber, rain coastal mountains, arduous buffeting"
         }
       ]
     },
@@ -113,7 +113,7 @@
       "name": "Cairngorms & Monadhliath",
       "forecast": [
         {
-          "sky": "partly-cloudy",
+          "sky": "sun",
           "windMphLow": 15,
           "windMphHigh": 25,
           "gustMph": 40,
@@ -126,7 +126,7 @@
           "amSky": "cloud",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "Early heavy rain clears to sunny clear hills; gusts 40mph briefly at dawn"
+          "reason": "early heavy rain, gusts 40mph possible at dawn; clears to sun"
         },
         {
           "sky": "partly-cloudy",
@@ -142,7 +142,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "Sustained 50mph+ gusts high Cairngorms, walking extremely challenging late"
+          "reason": "sustained 50mph+ gusts Cairngorm plateau, knocking you upright"
         },
         {
           "sky": "partly-cloudy",
@@ -156,8 +156,8 @@
           "visibility": "good",
           "amSky": "partly-cloudy",
           "pmSky": "partly-cloudy",
-          "status": "poor",
-          "reason": "50mph gusts Cairngorms plateau, strenuous buffeting, considerable wind chill"
+          "status": "marginal",
+          "reason": "50mph gusts higher Cairngorms, strenuous buffeting, showery rain"
         }
       ]
     },
@@ -165,7 +165,7 @@
       "name": "Southeastern Highlands",
       "forecast": [
         {
-          "sky": "partly-cloudy",
+          "sky": "sun",
           "windMphLow": 15,
           "windMphHigh": 25,
           "gustMph": 40,
@@ -178,7 +178,7 @@
           "amSky": "cloud",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "Early heavy rain then extensive sunshine; gusts 40mph briefly east at dawn"
+          "reason": "early heavy rain, gusts 40mph dawn; clears to extensive sunshine"
         },
         {
           "sky": "partly-cloudy",
@@ -194,7 +194,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "Gusts 45-55mph on tops, increasingly challenging, rain spreading evening"
+          "reason": "gusts 45-55mph tops, great effort to stay upright, filling in PM"
         },
         {
           "sky": "partly-cloudy",
@@ -209,7 +209,7 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "Occasional showery rain, strenuous winds, cloud over western tops, better east"
+          "reason": "strenuous winds 25-35mph, showery rain western hills, wind chill"
         }
       ]
     },
@@ -219,7 +219,8 @@
         {
           "sky": "partly-cloudy",
           "windMphLow": 20,
-          "windMphHigh": 40,
+          "windMphHigh": 35,
+          "gustMph": 40,
           "windDir": "NW",
           "tempCLow": 7,
           "tempCHigh": 10,
@@ -229,7 +230,7 @@
           "amSky": "rain",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "Heavy rain and wind early, clearing to sunshine PM; brief 40mph gusts Cheviots"
+          "reason": "heavy morning rain, gusts 40mph Cheviots; clears to sunshine PM"
         },
         {
           "sky": "partly-cloudy",
@@ -245,7 +246,7 @@
           "amSky": "sun",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "Gusts 40-50mph west later, rain spreading from Galloway, balance affected"
+          "reason": "gusts 40-50mph west, balance affected, rain spreading from Galloway late"
         },
         {
           "sky": "rain",
@@ -260,11 +261,11 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "Rain frequent early, cloud to 600m near Solway, clearing east through day"
+          "reason": "persistent early rain, cloud to 600m near Solway, clearing slowly"
         }
       ]
     }
   ],
-  "_generated": "2026-09-22T19:44:10.489Z",
+  "_generated": "2026-09-23T13:39:50.523Z",
   "_anchorDate": "2026-09-23"
 }
