@@ -1,51 +1,35 @@
 {
   "days": [
-    "Fri",
     "Sat",
-    "Sun"
+    "Sun",
+    "Mon"
   ],
-  "updatedAt": "2026-09-24T16:28:00.000Z",
+  "updatedAt": "2026-09-25T16:30:00.000Z",
   "regions": [
     {
       "name": "Northwest Highlands",
       "forecast": [
         {
-          "sky": "partly-cloudy",
-          "windMphLow": 40,
-          "windMphHigh": 50,
-          "gustMph": 55,
-          "windDir": "SW",
-          "tempCLow": 5,
-          "tempCHigh": 6,
-          "cloudFree": 55,
-          "freezingLevel": 9999,
-          "visibility": "good",
-          "amSky": "partly-cloudy",
-          "pmSky": "partly-cloudy",
-          "status": "poor",
-          "reason": "gale 40-50mph SW, arduous walking, showers, significant wind chill"
-        },
-        {
-          "sky": "partly-cloudy",
+          "sky": "rain",
           "windMphLow": 35,
           "windMphHigh": 50,
           "gustMph": 60,
           "windDir": "SW",
           "tempCLow": 5,
-          "tempCHigh": 8,
+          "tempCHigh": 10,
           "cloudFree": 30,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "partly-cloudy",
-          "pmSky": "cloud",
+          "amSky": "rain",
+          "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 60mph Skye/west coast, strenuous-arduous, showery rain west"
+          "reason": "strengthening gales gusts 60mph, cloud capping west tops, showery rain"
         },
         {
           "sky": "rain",
           "windMphLow": 40,
-          "windMphHigh": 55,
-          "gustMph": 55,
+          "windMphHigh": 60,
+          "gustMph": 60,
           "windDir": "S",
           "tempCLow": 5,
           "tempCHigh": 8,
@@ -55,7 +39,22 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "torrential rain band, cloud bases 400-500m west, gales 40-55mph"
+          "reason": "powerful southerly gusts 60mph, torrential rain band, cloud bases 400-500m"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 25,
+          "windMphHigh": 35,
+          "windDir": "SSW",
+          "tempCLow": 4,
+          "tempCHigh": 7,
+          "cloudFree": 45,
+          "freezingLevel": 9999,
+          "visibility": "good",
+          "amSky": "cloud",
+          "pmSky": "partly-cloudy",
+          "status": "marginal",
+          "reason": "showers frequent near Skye, cloud above 800m west, blustery ridges"
         }
       ]
     },
@@ -63,42 +62,26 @@
       "name": "West Highlands",
       "forecast": [
         {
-          "sky": "partly-cloudy",
-          "windMphLow": 25,
-          "windMphHigh": 40,
-          "gustMph": 50,
-          "windDir": "SW",
-          "tempCLow": 6,
-          "tempCHigh": 6,
-          "cloudFree": 40,
-          "freezingLevel": 9999,
-          "visibility": "good",
-          "amSky": "partly-cloudy",
-          "pmSky": "partly-cloudy",
-          "status": "poor",
-          "reason": "gusts 50mph Ben Nevis group, scattered showers, tops often in cloud"
-        },
-        {
-          "sky": "partly-cloudy",
+          "sky": "rain",
           "windMphLow": 30,
           "windMphHigh": 50,
-          "gustMph": 50,
+          "gustMph": 60,
           "windDir": "SW",
           "tempCLow": 6,
           "tempCHigh": 8,
           "cloudFree": 30,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "partly-cloudy",
-          "pmSky": "cloud",
+          "amSky": "rain",
+          "pmSky": "rain",
           "status": "poor",
-          "reason": "strenuous-arduous 30-50mph, tops capped, showery rain coastal mountains"
+          "reason": "gales gusts 60mph Ben Nevis to Mull, showery rain, cloud above 800m coast"
         },
         {
           "sky": "rain",
           "windMphLow": 40,
           "windMphHigh": 50,
-          "gustMph": 55,
+          "gustMph": 60,
           "windDir": "S",
           "tempCLow": 5,
           "tempCHigh": 8,
@@ -108,7 +91,22 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "torrential rain possible, cloud bases 400-500m, gusts 55mph coast"
+          "reason": "gusts 60mph Lochaber, torrential rain, cloud bases 400-500m west coast"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 20,
+          "windMphHigh": 30,
+          "windDir": "SSW",
+          "tempCLow": 4,
+          "tempCHigh": 7,
+          "cloudFree": 60,
+          "freezingLevel": 9999,
+          "visibility": "good",
+          "amSky": "cloud",
+          "pmSky": "partly-cloudy",
+          "status": "marginal",
+          "reason": "showers near Mull and west Loch Linnhe, cloud 800-900m morning, blustery"
         }
       ]
     },
@@ -117,24 +115,9 @@
       "forecast": [
         {
           "sky": "partly-cloudy",
-          "windMphLow": 25,
-          "windMphHigh": 40,
-          "gustMph": 50,
-          "windDir": "SW",
-          "tempCLow": 6,
-          "tempCHigh": 7,
-          "cloudFree": 70,
-          "freezingLevel": 9999,
-          "visibility": "good",
-          "amSky": "partly-cloudy",
-          "pmSky": "sun",
-          "status": "marginal",
-          "reason": "gusts 50mph Cairngorm plateau AM, easing PM; few showers southwest"
-        },
-        {
-          "sky": "partly-cloudy",
           "windMphLow": 30,
-          "windMphHigh": 45,
+          "windMphHigh": 40,
+          "gustMph": 60,
           "windDir": "SW",
           "tempCLow": 6,
           "tempCHigh": 10,
@@ -142,14 +125,15 @@
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "partly-cloudy",
-          "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "reason": "strenuous-arduous 30-45mph high Cairngorms, patchy cloud, occasional showers SW"
+          "pmSky": "cloud",
+          "status": "poor",
+          "reason": "gusts 60mph high Cairngorms later, gales worsening afternoon, showery rain"
         },
         {
           "sky": "rain",
           "windMphLow": 40,
           "windMphHigh": 50,
+          "gustMph": 60,
           "windDir": "S",
           "tempCLow": 6,
           "tempCHigh": 9,
@@ -159,7 +143,22 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "heavy rain PM, cloud bases 700m south Cairngorms, gales 40-50mph"
+          "reason": "gusts 60mph high Cairngorms, heavy sustained rain afternoon, cloud bases 700m south"
+        },
+        {
+          "sky": "sun",
+          "windMphLow": 20,
+          "windMphHigh": 30,
+          "windDir": "SW",
+          "tempCLow": 4,
+          "tempCHigh": 8,
+          "cloudFree": 80,
+          "freezingLevel": 9999,
+          "visibility": "excellent",
+          "amSky": "partly-cloudy",
+          "pmSky": "sun",
+          "status": "go",
+          "reason": "sunshine and fair-weather cloud, mountains mostly clear, light blustery winds"
         }
       ]
     },
@@ -169,33 +168,17 @@
         {
           "sky": "partly-cloudy",
           "windMphLow": 25,
-          "windMphHigh": 35,
-          "gustMph": 40,
-          "windDir": "SW",
-          "tempCLow": 6,
-          "tempCHigh": 7,
-          "cloudFree": 70,
-          "freezingLevel": 9999,
-          "visibility": "good",
-          "amSky": "cloud",
-          "pmSky": "sun",
-          "status": "marginal",
-          "reason": "gusts 40mph tops AM, easing PM; few showers west, east hills mostly clear"
-        },
-        {
-          "sky": "partly-cloudy",
-          "windMphLow": 30,
           "windMphHigh": 40,
           "windDir": "SW",
           "tempCLow": 6,
           "tempCHigh": 10,
-          "cloudFree": 60,
+          "cloudFree": 55,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "partly-cloudy",
-          "pmSky": "partly-cloudy",
+          "pmSky": "rain",
           "status": "marginal",
-          "reason": "strenuous-arduous 30-40mph, cloud capping west tops, scattered showers west"
+          "reason": "gales 50mph later, showery rain spreading east PM, cloud capping west tops"
         },
         {
           "sky": "rain",
@@ -210,7 +193,22 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "heavy rain PM, cloud lowering to 700m, challenging gales 40-50mph"
+          "reason": "heavy rain swathe from SW afternoon, cloud 700m, challenging winds all day"
+        },
+        {
+          "sky": "sun",
+          "windMphLow": 20,
+          "windMphHigh": 25,
+          "windDir": "SW",
+          "tempCLow": 4,
+          "tempCHigh": 8,
+          "cloudFree": 70,
+          "freezingLevel": 9999,
+          "visibility": "excellent",
+          "amSky": "partly-cloudy",
+          "pmSky": "sun",
+          "status": "go",
+          "reason": "sunshine and fair-weather cloud, mountains generally clear, light winds easing"
         }
       ]
     },
@@ -219,52 +217,54 @@
       "forecast": [
         {
           "sky": "partly-cloudy",
-          "windMphLow": 20,
-          "windMphHigh": 25,
-          "windDir": "SW",
-          "tempCLow": 7,
-          "tempCHigh": 8,
-          "cloudFree": 80,
-          "freezingLevel": 9999,
-          "visibility": "good",
-          "amSky": "cloud",
-          "pmSky": "sun",
-          "status": "go",
-          "reason": "early rain clears, sun breaks out, light winds, summits clearing to 80%"
-        },
-        {
-          "sky": "partly-cloudy",
           "windMphLow": 25,
           "windMphHigh": 40,
+          "gustMph": 50,
           "windDir": "SW",
           "tempCLow": 7,
           "tempCHigh": 11,
-          "cloudFree": 80,
+          "cloudFree": 70,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "partly-cloudy",
-          "pmSky": "partly-cloudy",
+          "pmSky": "rain",
           "status": "marginal",
-          "reason": "25-40mph strenuous gusts, mostly clear summits, light showers Galloway"
+          "reason": "gusts 50mph high tops evening, light rain Galloway, mostly manageable elsewhere"
         },
         {
           "sky": "rain",
           "windMphLow": 30,
           "windMphHigh": 40,
+          "gustMph": 50,
           "windDir": "S",
           "tempCLow": 8,
           "tempCHigh": 10,
           "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "poor",
-          "amSky": "sun",
+          "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "torrential rain swathe PM, cloud bases 600-700m Galloway, strenuous gusts"
+          "reason": "torrential rain with possible thunder, cloud 600-700m Galloway, gusts 50mph"
+        },
+        {
+          "sky": "sun",
+          "windMphLow": 15,
+          "windMphHigh": 25,
+          "windDir": "SW",
+          "tempCLow": 5,
+          "tempCHigh": 9,
+          "cloudFree": 80,
+          "freezingLevel": 9999,
+          "visibility": "excellent",
+          "amSky": "partly-cloudy",
+          "pmSky": "sun",
+          "status": "go",
+          "reason": "sunshine developing widely, hills clear, light winds easing through afternoon"
         }
       ]
     }
   ],
-  "_generated": "2026-09-25T13:49:17.768Z",
-  "_anchorDate": "2026-09-25"
+  "_generated": "2026-09-25T20:01:03.343Z",
+  "_anchorDate": "2026-09-26"
 }
