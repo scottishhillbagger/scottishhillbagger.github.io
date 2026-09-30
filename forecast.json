@@ -23,58 +23,7 @@
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "severe gales gusting 75mph, torrential rain, thunder risk early"
-        },
-        {
-          "sky": "partly-cloudy",
-          "windMphLow": 20,
-          "windMphHigh": 35,
-          "windDir": "SW",
-          "tempCLow": 6,
-          "tempCHigh": 7,
-          "cloudFree": 50,
-          "freezingLevel": 9999,
-          "visibility": "good",
-          "amSky": "cloud",
-          "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "reason": "Skye/Cuillin shrouded 600-700m, frequent showers west coast all day"
-        },
-        {
-          "sky": "rain",
-          "windMphLow": 25,
-          "windMphHigh": 35,
-          "windDir": "SW",
-          "tempCLow": 5,
-          "tempCHigh": 7,
-          "cloudFree": 10,
-          "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "rain",
-          "pmSky": "rain",
-          "status": "poor",
-          "reason": "persistent heavy rain, cloud from 500-600m, mostly poor visibility all day"
-        }
-      ]
-    },
-    {
-      "name": "West Highlands",
-      "forecast": [
-        {
-          "sky": "rain",
-          "windMphLow": 45,
-          "windMphHigh": 60,
-          "gustMph": 75,
-          "windDir": "SSE",
-          "tempCLow": 8,
-          "tempCHigh": 12,
-          "cloudFree": 40,
-          "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "rain",
-          "pmSky": "partly-cloudy",
-          "status": "poor",
-          "reason": "severe gales gusting 70-75mph Ben Nevis, torrential rain, thunder risk"
+          "reason": "severe gales gusting 75mph, torrential rain, lightning risk AM"
         },
         {
           "sky": "partly-cloudy",
@@ -89,7 +38,7 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "showers west of Loch Linnhe all day, tops start shrouded, blustery Lochaber"
+          "reason": "Skye shrouded 600-700m, frequent showers west, chilly wind chill"
         },
         {
           "sky": "rain",
@@ -104,7 +53,58 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "rain most of day, cloud base 600m, heavy falls near Mull, poor visibility"
+          "reason": "persistent heavy rain, Cuillin in cloud all day, 10% cloud-free"
+        }
+      ]
+    },
+    {
+      "name": "West Highlands",
+      "forecast": [
+        {
+          "sky": "rain",
+          "windMphLow": 45,
+          "windMphHigh": 60,
+          "gustMph": 75,
+          "windDir": "SSE",
+          "tempCLow": 8,
+          "tempCHigh": 12,
+          "cloudFree": 30,
+          "freezingLevel": 9999,
+          "visibility": "poor",
+          "amSky": "rain",
+          "pmSky": "partly-cloudy",
+          "status": "poor",
+          "reason": "severe gales gusting 70-75mph Ben Nevis, torrential rain, lightning AM"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 20,
+          "windMphHigh": 35,
+          "windDir": "SW",
+          "tempCLow": 6,
+          "tempCHigh": 7,
+          "cloudFree": 60,
+          "freezingLevel": 9999,
+          "visibility": "good",
+          "amSky": "cloud",
+          "pmSky": "partly-cloudy",
+          "status": "marginal",
+          "reason": "showers west of Loch Linnhe, tops shrouded AM, blustery Lochaber"
+        },
+        {
+          "sky": "rain",
+          "windMphLow": 25,
+          "windMphHigh": 35,
+          "windDir": "SW",
+          "tempCLow": 5,
+          "tempCHigh": 7,
+          "cloudFree": 10,
+          "freezingLevel": 9999,
+          "visibility": "poor",
+          "amSky": "rain",
+          "pmSky": "rain",
+          "status": "poor",
+          "reason": "rain most of day, tops above 700-900m in cloud, heaviest near Mull"
         }
       ]
     },
@@ -119,13 +119,13 @@
           "windDir": "SE",
           "tempCLow": 9,
           "tempCHigh": 12,
-          "cloudFree": 30,
+          "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
           "pmSky": "sun",
           "status": "poor",
-          "reason": "severe gales gusting 75mph+ Cairngorm plateau, torrential rain, thunder risk AM"
+          "reason": "gusts 75mph+ Cairngorm plateau, torrential rain AM, nil cloud-free morning"
         },
         {
           "sky": "partly-cloudy",
@@ -140,7 +140,7 @@
           "amSky": "cloud",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "cloud rolling over south Cairngorm tops from 900m, nuisance wind, chilly"
+          "reason": "cloud 900m+ southern Cairngorms AM, mostly dry, wind chill near 0C"
         },
         {
           "sky": "rain",
@@ -155,7 +155,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "persistent rain, heavy falls south Cairngorms, cloud base 600-700m Drumochter"
+          "reason": "persistent rain Drumochter and west Cairngorms, cloud base 600-700m, often poor visibility"
         }
       ]
     },
@@ -170,13 +170,13 @@
           "windDir": "SE",
           "tempCLow": 8,
           "tempCHigh": 12,
-          "cloudFree": 30,
+          "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
           "pmSky": "sun",
           "status": "poor",
-          "reason": "severe gales gusting 70mph, torrential heavy rain, thunder risk morning"
+          "reason": "severe gales gusting 70mph, torrential rain AM, mobility difficult early"
         },
         {
           "sky": "partly-cloudy",
@@ -191,7 +191,7 @@
           "amSky": "cloud",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "banks above 800m morning clearing by midday; many hills largely dry"
+          "reason": "cloud above 800m early, clears by midday, scattered light showers, 0C wind chill"
         },
         {
           "sky": "rain",
@@ -206,7 +206,7 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "showery rain west of A9 all day, summits in cloud, heavy extended falls"
+          "reason": "showery rain west of A9 all day, summits in cloud, bases 500-800m"
         }
       ]
     },
@@ -221,13 +221,13 @@
           "windDir": "S",
           "tempCLow": 10,
           "tempCHigh": 15,
-          "cloudFree": 50,
+          "cloudFree": 40,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "early gales gusting 60mph, heavy morning rain, poor visibility, thundery risk"
+          "reason": "gusts 60mph, heavy rain AM, arduous walking, poor visibility near Solway"
         },
         {
           "sky": "partly-cloudy",
@@ -242,7 +242,7 @@
           "amSky": "cloud",
           "pmSky": "sun",
           "status": "go",
-          "reason": "cloud clears most summits, patchy sun, showers light and decreasing"
+          "reason": "cloud clears most summits, scattered light showers, extended sunny windows"
         },
         {
           "sky": "rain",
@@ -262,6 +262,6 @@
       ]
     }
   ],
-  "_generated": "2026-09-29T20:44:10.029Z",
+  "_generated": "2026-09-30T14:56:40.307Z",
   "_anchorDate": "2026-09-30"
 }
