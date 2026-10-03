@@ -1,48 +1,35 @@
 {
   "days": [
-    "Sat",
     "Sun",
-    "Mon"
+    "Mon",
+    "Tue"
   ],
-  "updatedAt": "2026-10-02T14:11:00.000Z",
+  "updatedAt": "2026-10-03T13:30:00.000Z",
   "regions": [
     {
       "name": "Northwest Highlands",
       "forecast": [
         {
           "sky": "rain",
-          "windMphLow": 25,
-          "windMphHigh": 40,
+          "windMphLow": 50,
+          "windMphHigh": 60,
+          "gustMph": 60,
           "windDir": "SW",
           "tempCLow": 5,
           "tempCHigh": 10,
-          "cloudFree": 10,
+          "cloudFree": 5,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "persistent fog, showers, near-gale 40mph, almost nil cloud-free Munros"
-        },
-        {
-          "sky": "cloud",
-          "windMphLow": 50,
-          "windMphHigh": 60,
-          "windDir": "SW",
-          "tempCLow": 8,
-          "tempCHigh": 8,
-          "cloudFree": 10,
-          "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "cloud",
-          "pmSky": "cloud",
-          "status": "poor",
-          "reason": "50-60mph gale, persistent fog all day, drizzly rain, severe wind chill"
+          "reason": "persistent gales 50-60mph, heavy rain, fog all day"
         },
         {
           "sky": "rain",
           "windMphLow": 40,
           "windMphHigh": 55,
+          "gustMph": 55,
           "windDir": "SW",
           "tempCLow": 4,
           "tempCHigh": 9,
@@ -52,7 +39,22 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "rain most or all day, 55mph gusts, persistent fog 200-600m, extensively dull"
+          "reason": "rain most or all day, persistent fog, gales 40-55mph"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 20,
+          "windMphHigh": 35,
+          "windDir": "W",
+          "tempCLow": 3,
+          "tempCHigh": 3,
+          "cloudFree": 20,
+          "freezingLevel": 9999,
+          "visibility": "good",
+          "amSky": "cloud",
+          "pmSky": "partly-cloudy",
+          "status": "poor",
+          "reason": "heavy snow/hail showers, -8C wind chill, cloud below 600m near coast"
         }
       ]
     },
@@ -61,48 +63,50 @@
       "forecast": [
         {
           "sky": "rain",
-          "windMphLow": 20,
-          "windMphHigh": 35,
+          "windMphLow": 40,
+          "windMphHigh": 50,
+          "gustMph": 50,
           "windDir": "SW",
           "tempCLow": 5,
           "tempCHigh": 10,
-          "cloudFree": 10,
+          "cloudFree": 5,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "mostly foggy and showery, almost nil cloud-free Munros, poor visibility west"
-        },
-        {
-          "sky": "cloud",
-          "windMphLow": 40,
-          "windMphHigh": 50,
-          "windDir": "SW",
-          "tempCLow": 9,
-          "tempCHigh": 9,
-          "cloudFree": 10,
-          "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "cloud",
-          "pmSky": "cloud",
-          "status": "poor",
-          "reason": "40-50mph gale Lochaber, foggy all day, drizzly rain, walking extensively difficult"
+          "reason": "gales 40-50mph, incessant heavy rain, fog all day Lochaber"
         },
         {
           "sky": "rain",
           "windMphLow": 40,
-          "windMphHigh": 55,
+          "windMphHigh": 50,
+          "gustMph": 50,
           "windDir": "SW",
-          "tempCLow": 9,
-          "tempCHigh": 9,
+          "tempCLow": 8,
+          "tempCHigh": 8,
           "cloudFree": 10,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "rain rarely ceasing Lochaber/Mull, 55mph gusts, persistent fog, extensively dull"
+          "reason": "rain all day west, persistent fog, gales 40-50mph on summits"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 15,
+          "windMphHigh": 30,
+          "windDir": "NW",
+          "tempCLow": 4,
+          "tempCHigh": 4,
+          "cloudFree": 30,
+          "freezingLevel": 9999,
+          "visibility": "good",
+          "amSky": "cloud",
+          "pmSky": "partly-cloudy",
+          "status": "marginal",
+          "reason": "snow/hail showers Lochaber and Mull, -5C wind chill, cloud below 600m near showers"
         }
       ]
     },
@@ -110,39 +114,26 @@
       "name": "Cairngorms & Monadhliath",
       "forecast": [
         {
-          "sky": "partly-cloudy",
-          "windMphLow": 30,
-          "windMphHigh": 35,
-          "windDir": "SW",
-          "tempCLow": 6,
-          "tempCHigh": 6,
-          "cloudFree": 45,
-          "freezingLevel": 9999,
-          "visibility": "good",
-          "amSky": "cloud",
-          "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "reason": "35mph Cairngorm plateau, fog mostly higher tops, 20-70% cloud-free afternoon"
-        },
-        {
           "sky": "cloud",
           "windMphLow": 50,
           "windMphHigh": 60,
+          "gustMph": 60,
           "windDir": "SW",
-          "tempCLow": 10,
+          "tempCLow": 5,
           "tempCHigh": 10,
           "cloudFree": 10,
           "freezingLevel": 9999,
-          "visibility": "good",
+          "visibility": "poor",
           "amSky": "cloud",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "60mph Cairngorm plateau, foggy all day, severe wind chill, walking extensively difficult"
+          "reason": "gales 50-60mph Cairngorm plateau, fog, rain mainly W of A9"
         },
         {
           "sky": "cloud",
           "windMphLow": 40,
           "windMphHigh": 55,
+          "gustMph": 55,
           "windDir": "SW",
           "tempCLow": 9,
           "tempCHigh": 9,
@@ -152,7 +143,22 @@
           "amSky": "cloud",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "55mph gusts, persistent fog 500-750m, occasional rain W of A9, extensively cloudy"
+          "reason": "gales 40-55mph, persistent fog 500-750m, rain W of A9"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 20,
+          "windMphHigh": 30,
+          "windDir": "NW",
+          "tempCLow": 5,
+          "tempCHigh": 5,
+          "cloudFree": 40,
+          "freezingLevel": 9999,
+          "visibility": "excellent",
+          "amSky": "partly-cloudy",
+          "pmSky": "sun",
+          "status": "marginal",
+          "reason": "snow/hail showers PM, -5C wind chill, dusting snow above 1100m"
         }
       ]
     },
@@ -160,39 +166,26 @@
       "name": "Southeastern Highlands",
       "forecast": [
         {
-          "sky": "partly-cloudy",
-          "windMphLow": 25,
-          "windMphHigh": 30,
-          "windDir": "SW",
-          "tempCLow": 6,
-          "tempCHigh": 6,
-          "cloudFree": 55,
-          "freezingLevel": 9999,
-          "visibility": "good",
-          "amSky": "cloud",
-          "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "reason": "fog mostly higher tops, 90% cloud-free east of Glenshee PM, windy 25-30mph"
-        },
-        {
           "sky": "cloud",
           "windMphLow": 40,
           "windMphHigh": 50,
+          "gustMph": 50,
           "windDir": "SW",
-          "tempCLow": 10,
+          "tempCLow": 5,
           "tempCHigh": 10,
           "cloudFree": 10,
           "freezingLevel": 9999,
-          "visibility": "good",
+          "visibility": "poor",
           "amSky": "cloud",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "40-50mph gale, foggy all day, walking difficult, significant wind chill"
+          "reason": "gales 40-50mph, fog all day, persistent rain W of A9"
         },
         {
           "sky": "cloud",
           "windMphLow": 40,
           "windMphHigh": 55,
+          "gustMph": 55,
           "windDir": "SW",
           "tempCLow": 9,
           "tempCHigh": 9,
@@ -202,7 +195,22 @@
           "amSky": "cloud",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "55mph gusts, persistent fog 500-750m, occasional rain W of A9, extensively cloudy"
+          "reason": "gales 40-55mph, persistent fog 500-750m, rain W of A9 and Glen Garry summits"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 15,
+          "windMphHigh": 25,
+          "windDir": "NW",
+          "tempCLow": 6,
+          "tempCHigh": 6,
+          "cloudFree": 80,
+          "freezingLevel": 9999,
+          "visibility": "excellent",
+          "amSky": "cloud",
+          "pmSky": "sun",
+          "status": "go",
+          "reason": "cloud largely clears by midday, 80% cloud-free afternoon, light winds"
         }
       ]
     },
@@ -211,38 +219,25 @@
       "forecast": [
         {
           "sky": "partly-cloudy",
-          "windMphLow": 20,
-          "windMphHigh": 25,
-          "windDir": "W",
-          "tempCLow": 7,
-          "tempCHigh": 7,
-          "cloudFree": 80,
-          "freezingLevel": 9999,
-          "visibility": "good",
-          "amSky": "cloud",
-          "pmSky": "partly-cloudy",
-          "status": "go",
-          "reason": "light winds, cloud clearing summits, 90% cloud-free by midday, periods of sun"
-        },
-        {
-          "sky": "cloud",
-          "windMphLow": 35,
+          "windMphLow": 30,
           "windMphHigh": 35,
+          "gustMph": 35,
           "windDir": "SW",
-          "tempCLow": 12,
-          "tempCHigh": 12,
-          "cloudFree": 40,
+          "tempCLow": 5,
+          "tempCHigh": 10,
+          "cloudFree": 50,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "cloud",
-          "pmSky": "partly-cloudy",
+          "amSky": "partly-cloudy",
+          "pmSky": "cloud",
           "status": "marginal",
-          "reason": "35mph gusts higher tops, foggy west Galloway all day, drizzle penetrating inland"
+          "reason": "windy 30-35mph, fog W Galloway, low cloud extending NE through day"
         },
         {
           "sky": "cloud",
           "windMphLow": 30,
-          "windMphHigh": 45,
+          "windMphHigh": 35,
+          "gustMph": 35,
           "windDir": "SW",
           "tempCLow": 10,
           "tempCHigh": 10,
@@ -251,12 +246,27 @@
           "visibility": "moderate",
           "amSky": "cloud",
           "pmSky": "cloud",
-          "status": "poor",
-          "reason": "45mph gusts, persistent fog 200-450m Galloway, drizzle, balance strenuous in gusts"
+          "status": "marginal",
+          "reason": "persistent fog D&G above 200-450m, drizzle, wind near freezing with chill"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 15,
+          "windMphHigh": 30,
+          "windDir": "NW",
+          "tempCLow": 6,
+          "tempCHigh": 6,
+          "cloudFree": 90,
+          "freezingLevel": 9999,
+          "visibility": "excellent",
+          "amSky": "cloud",
+          "pmSky": "sun",
+          "status": "marginal",
+          "reason": "fog clears by midday, overnight rain clearing; 90% cloud-free by afternoon"
         }
       ]
     }
   ],
-  "_generated": "2026-10-02T20:41:34.159Z",
-  "_anchorDate": "2026-10-03"
+  "_generated": "2026-10-03T13:24:09.984Z",
+  "_anchorDate": "2026-10-04"
 }
