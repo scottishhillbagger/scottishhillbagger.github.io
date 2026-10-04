@@ -1,60 +1,59 @@
 {
   "days": [
-    "Sun",
     "Mon",
-    "Tue"
+    "Tue",
+    "Wed"
   ],
-  "updatedAt": "2026-10-04T07:23:00.000Z",
+  "updatedAt": "2026-10-04T15:52:00.000Z",
   "regions": [
     {
       "name": "Northwest Highlands",
       "forecast": [
         {
           "sky": "rain",
-          "windMphLow": 40,
-          "windMphHigh": 55,
-          "gustMph": 60,
-          "windDir": "SW",
-          "tempCLow": 5,
-          "tempCHigh": 10,
-          "cloudFree": 5,
-          "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "rain",
-          "pmSky": "rain",
-          "status": "poor",
-          "reason": "persistent gales 60mph, heavy rain, fog all day, near-zero cloud-free"
-        },
-        {
-          "sky": "rain",
-          "windMphLow": 40,
-          "windMphHigh": 55,
+          "windMphLow": 45,
+          "windMphHigh": 65,
+          "gustMph": 65,
           "windDir": "SW",
           "tempCLow": 4,
-          "tempCHigh": 9,
+          "tempCHigh": 5,
           "cloudFree": 10,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
-          "pmSky": "rain",
+          "pmSky": "cloud",
           "status": "poor",
-          "reason": "gales 55mph, persistent fog and rain especially west of Torridon"
+          "reason": "severe gale 45-65mph, persistent fog, rain, balance impossible"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 20,
           "windMphHigh": 30,
-          "gustMph": 35,
           "windDir": "W",
           "tempCLow": 3,
           "tempCHigh": 3,
           "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "cloud",
+          "amSky": "snow",
           "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "reason": "heavy squally snow/hail showers Wester Ross; snow above 900-1000m; winter conditions"
+          "status": "poor",
+          "reason": "heavy squally snow/hail showers, 10% cloud-free, severe wind chill -8C"
+        },
+        {
+          "sky": "snow",
+          "windMphLow": 20,
+          "windMphHigh": 30,
+          "windDir": "NW",
+          "tempCLow": 1,
+          "tempCHigh": 1,
+          "cloudFree": 10,
+          "freezingLevel": 1050,
+          "visibility": "poor",
+          "amSky": "snow",
+          "pmSky": "snow",
+          "status": "poor",
+          "reason": "frequent hail/snow, lightning risk, near-constant precipitation, wind chill -8C"
         }
       ]
     },
@@ -63,40 +62,24 @@
       "forecast": [
         {
           "sky": "rain",
-          "windMphLow": 40,
-          "windMphHigh": 50,
-          "gustMph": 50,
+          "windMphLow": 45,
+          "windMphHigh": 60,
+          "gustMph": 60,
           "windDir": "SW",
-          "tempCLow": 5,
-          "tempCHigh": 10,
+          "tempCLow": 4,
+          "tempCHigh": 5,
           "cloudFree": 5,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "persistent gales, incessant rain, fog all mountains, near-zero cloud-free"
-        },
-        {
-          "sky": "rain",
-          "windMphLow": 40,
-          "windMphHigh": 50,
-          "windDir": "SW",
-          "tempCLow": 8,
-          "tempCHigh": 8,
-          "cloudFree": 10,
-          "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "rain",
-          "pmSky": "rain",
-          "status": "poor",
-          "reason": "gales 50mph, persistent fog and rain concentrated on western mountains"
+          "reason": "severe gale 45-60mph, persistent rain all day, persistent fog, almost nil cloud-free"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 15,
           "windMphHigh": 25,
-          "gustMph": 30,
           "windDir": "NW",
           "tempCLow": 4,
           "tempCHigh": 4,
@@ -106,7 +89,22 @@
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "snow/hail showers mainly Lochaber and Mull; snow above 1000-1100m; winter conditions"
+          "reason": "hail/snow showers Lochaber and Mull, wind chill -5C, 30% cloud-free"
+        },
+        {
+          "sky": "snow",
+          "windMphLow": 20,
+          "windMphHigh": 30,
+          "windDir": "NW",
+          "tempCLow": 1,
+          "tempCHigh": 1,
+          "cloudFree": 10,
+          "freezingLevel": 1050,
+          "visibility": "poor",
+          "amSky": "snow",
+          "pmSky": "snow",
+          "status": "poor",
+          "reason": "frequent hail/snow, lightning risk, near-constant precipitation, wind chill -8C"
         }
       ]
     },
@@ -115,26 +113,11 @@
       "forecast": [
         {
           "sky": "cloud",
-          "windMphLow": 40,
-          "windMphHigh": 55,
-          "gustMph": 60,
+          "windMphLow": 45,
+          "windMphHigh": 70,
+          "gustMph": 70,
           "windDir": "SW",
-          "tempCLow": 5,
-          "tempCHigh": 10,
-          "cloudFree": 10,
-          "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "rain",
-          "pmSky": "cloud",
-          "status": "poor",
-          "reason": "gales 60mph Cairngorm plateau, fog and rain mainly west of A9, severe wind chill"
-        },
-        {
-          "sky": "cloud",
-          "windMphLow": 40,
-          "windMphHigh": 55,
-          "windDir": "SW",
-          "tempCLow": 9,
+          "tempCLow": 6,
           "tempCHigh": 9,
           "cloudFree": 10,
           "freezingLevel": 9999,
@@ -142,23 +125,37 @@
           "amSky": "rain",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "gales 55mph, persistent fog 500-750m, rain west of A9, significant wind chill"
+          "reason": "severe gale 45-70mph, persistent fog, rain W of A9, wind chill -8C"
         },
         {
           "sky": "partly-cloudy",
           "windMphLow": 20,
-          "windMphHigh": 25,
-          "gustMph": 30,
+          "windMphHigh": 30,
           "windDir": "NW",
           "tempCLow": 5,
           "tempCHigh": 5,
           "cloudFree": 40,
           "freezingLevel": 9999,
-          "visibility": "excellent",
+          "visibility": "good",
           "amSky": "partly-cloudy",
-          "pmSky": "partly-cloudy",
+          "pmSky": "snow",
           "status": "marginal",
-          "reason": "snow/hail showers mainly afternoon; snow dusting above 1100m; winter conditions"
+          "reason": "hail/snow showers afternoon, wind chill -5C, 40% cloud-free, gusts near showers"
+        },
+        {
+          "sky": "snow",
+          "windMphLow": 20,
+          "windMphHigh": 30,
+          "windDir": "NW",
+          "tempCLow": 1,
+          "tempCHigh": 1,
+          "cloudFree": 20,
+          "freezingLevel": 1100,
+          "visibility": "poor",
+          "amSky": "partly-cloudy",
+          "pmSky": "snow",
+          "status": "poor",
+          "reason": "frequent hail/snow extending east, snow above 800m, wind chill -8C"
         }
       ]
     },
@@ -166,26 +163,12 @@
       "name": "Southeastern Highlands",
       "forecast": [
         {
-          "sky": "cloud",
-          "windMphLow": 40,
-          "windMphHigh": 50,
+          "sky": "rain",
+          "windMphLow": 45,
+          "windMphHigh": 60,
+          "gustMph": 60,
           "windDir": "SW",
-          "tempCLow": 5,
-          "tempCHigh": 10,
-          "cloudFree": 10,
-          "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "rain",
-          "pmSky": "cloud",
-          "status": "poor",
-          "reason": "gales 50mph, persistent fog, rain mainly west of A9, walking extensively difficult"
-        },
-        {
-          "sky": "cloud",
-          "windMphLow": 40,
-          "windMphHigh": 55,
-          "windDir": "SW",
-          "tempCLow": 9,
+          "tempCLow": 7,
           "tempCHigh": 9,
           "cloudFree": 10,
           "freezingLevel": 9999,
@@ -193,7 +176,7 @@
           "amSky": "rain",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "gales 55mph, persistent fog 500-750m, rain west of A9 and Glen Garry summits"
+          "reason": "severe gale 45-60mph, persistent fog, rain W of A9, wind chill -7C"
         },
         {
           "sky": "partly-cloudy",
@@ -208,7 +191,22 @@
           "amSky": "cloud",
           "pmSky": "sun",
           "status": "go",
-          "reason": "low cloud clears by midday, 80% cloud-free afternoon, light winds, excellent visibility"
+          "reason": "cloud clears by midday, 80% cloud-free afternoon, light winds, excellent visibility"
+        },
+        {
+          "sky": "snow",
+          "windMphLow": 20,
+          "windMphHigh": 30,
+          "windDir": "NW",
+          "tempCLow": 2,
+          "tempCHigh": 2,
+          "cloudFree": 30,
+          "freezingLevel": 1100,
+          "visibility": "poor",
+          "amSky": "partly-cloudy",
+          "pmSky": "snow",
+          "status": "marginal",
+          "reason": "hail/snow showers extending east, snow above 850m, wind chill -7C"
         }
       ]
     },
@@ -216,35 +214,19 @@
       "name": "Southern Uplands",
       "forecast": [
         {
-          "sky": "partly-cloudy",
-          "windMphLow": 25,
-          "windMphHigh": 40,
-          "gustMph": 35,
-          "windDir": "SW",
-          "tempCLow": 5,
-          "tempCHigh": 10,
-          "cloudFree": 50,
-          "freezingLevel": 9999,
-          "visibility": "good",
-          "amSky": "partly-cloudy",
-          "pmSky": "cloud",
-          "status": "marginal",
-          "reason": "gusts 35mph, fog spreading from west, low cloud Galloway; Borders mostly clear until late"
-        },
-        {
-          "sky": "cloud",
-          "windMphLow": 30,
-          "windMphHigh": 35,
+          "sky": "rain",
+          "windMphLow": 40,
+          "windMphHigh": 45,
           "windDir": "SW",
           "tempCLow": 10,
           "tempCHigh": 10,
-          "cloudFree": 20,
+          "cloudFree": 10,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
-          "pmSky": "cloud",
-          "status": "marginal",
-          "reason": "persistent fog 200-450m Galloway, drizzly rain, gusts 35mph, extensive cloud"
+          "pmSky": "rain",
+          "status": "poor",
+          "reason": "gale 40-45mph, persistent fog, rain/drizzle Galloway to Moffat, wind chill near freezing"
         },
         {
           "sky": "partly-cloudy",
@@ -259,11 +241,26 @@
           "amSky": "cloud",
           "pmSky": "sun",
           "status": "go",
-          "reason": "fog clears by midday, sunshine and excellent visibility PM, winds easing"
+          "reason": "fog clears by midday, 90% cloud-free, sunshine and excellent visibility afternoon"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 20,
+          "windMphHigh": 30,
+          "windDir": "NW",
+          "tempCLow": 5,
+          "tempCHigh": 5,
+          "cloudFree": 40,
+          "freezingLevel": 9999,
+          "visibility": "moderate",
+          "amSky": "sun",
+          "pmSky": "snow",
+          "status": "marginal",
+          "reason": "hail showers extending east, temporarily very poor visibility Galloway, wind chill -4C"
         }
       ]
     }
   ],
-  "_generated": "2026-10-04T14:05:40.295Z",
-  "_anchorDate": "2026-10-04"
+  "_generated": "2026-10-04T19:34:52.203Z",
+  "_anchorDate": "2026-10-05"
 }
