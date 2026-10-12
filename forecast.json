@@ -23,7 +23,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gales 35-45mph gusting 50mph+, frequent heavy hail showers PM"
+          "reason": "gales 50mph+, frequent heavy hail PM, 30% cloud-free"
         },
         {
           "sky": "cloud",
@@ -39,22 +39,22 @@
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "severe gales 50-80mph gusting 90mph+, mobility extremely difficult"
+          "reason": "severe gales 90mph+, mobility difficult, 20% cloud-free"
         },
         {
-          "sky": "partly-cloudy",
+          "sky": "cloud",
           "windMphLow": 25,
           "windMphHigh": 35,
           "windDir": "SW",
           "tempCLow": 3,
           "tempCHigh": 3,
-          "cloudFree": 35,
+          "cloudFree": 30,
           "freezingLevel": 9999,
-          "visibility": "good",
+          "visibility": "moderate",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "cloud covering high terrain, showers with snow on tops, strong winds N Ullapool"
+          "reason": "snow on high tops, persistent drizzle, 20% cloud-free rising to 50% east"
         }
       ]
     },
@@ -62,7 +62,7 @@
       "name": "West Highlands",
       "forecast": [
         {
-          "sky": "partly-cloudy",
+          "sky": "rain",
           "windMphLow": 35,
           "windMphHigh": 45,
           "gustMph": 55,
@@ -75,7 +75,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gales gusting 55mph+, hours of heavy hail rain PM, risk of thunder and snow high tops"
+          "reason": "gales 55mph+, persistent heavy rain/hail PM, snow highest tops"
         },
         {
           "sky": "cloud",
@@ -91,7 +91,7 @@
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "severe gales 50-80mph gusting 90mph+, drizzle turning heavier, mobility very difficult"
+          "reason": "severe gales 90mph+, mobility difficult, 20% cloud-free"
         },
         {
           "sky": "cloud",
@@ -105,9 +105,9 @@
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "cloud",
-          "pmSky": "partly-cloudy",
+          "pmSky": "cloud",
           "status": "poor",
-          "reason": "extensive cloud to middle slopes, poor hazy visibility, snow on high terrain"
+          "reason": "snow on high terrain, cloud to middle slopes, poor visibility coast"
         }
       ]
     },
@@ -128,13 +128,12 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gales 35-45mph gusting 50mph+, frequent heavy hail showers PM, sleet/snow high tops"
+          "reason": "gales 50mph+, heavy hail/sleet PM, sleet/snow high tops"
         },
         {
           "sky": "cloud",
           "windMphLow": 50,
           "windMphHigh": 80,
-          "gustMph": 80,
           "windDir": "SSW",
           "tempCLow": 5,
           "tempCHigh": 8,
@@ -144,7 +143,7 @@
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "severe gales 50-80mph on plateau, rain heavier later, mobility very difficult"
+          "reason": "severe gales 50-80mph, mobility difficult, heavier rain arriving PM"
         },
         {
           "sky": "rain",
@@ -153,13 +152,13 @@
           "windDir": "SW",
           "tempCLow": 4,
           "tempCHigh": 8,
-          "cloudFree": 15,
+          "cloudFree": 20,
           "freezingLevel": 9999,
           "visibility": "moderate",
           "amSky": "rain",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "persistent morning rain, fog to middle slopes south Cairngorms, 35-45mph winds"
+          "reason": "persistent AM rain, fog to middle slopes, only 10% cloud-free rising late"
         }
       ]
     },
@@ -180,13 +179,12 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gales gusting 50-55mph, frequent heavy hail showers PM, strong wind chill"
+          "reason": "gales 50-55mph, heavy hail PM, 60% cloud-free east drops to 30%"
         },
         {
           "sky": "cloud",
           "windMphLow": 50,
           "windMphHigh": 70,
-          "gustMph": 70,
           "windDir": "SSW",
           "tempCLow": 5,
           "tempCHigh": 8,
@@ -196,7 +194,7 @@
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "severe gales 50-70mph, rain worsening later, mobility very difficult on high terrain"
+          "reason": "severe gales 50-70mph, mobility difficult on high terrain"
         },
         {
           "sky": "rain",
@@ -211,7 +209,7 @@
           "amSky": "rain",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "persistent morning rain, blanket cloud to middle slopes, 35-50mph winds to start"
+          "reason": "persistent morning rain, blanket cloud, only 10% cloud-free all day"
         }
       ]
     },
@@ -232,23 +230,22 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gales gusting 50mph PM, frequent heavy showers, arduous walking in exposure"
+          "reason": "gusts 50mph PM, frequent heavy showers, wind chill -7C"
         },
         {
           "sky": "cloud",
           "windMphLow": 40,
           "windMphHigh": 60,
-          "gustMph": 60,
           "windDir": "SSW",
           "tempCLow": 6,
           "tempCHigh": 9,
-          "cloudFree": 35,
+          "cloudFree": 30,
           "freezingLevel": 9999,
           "visibility": "moderate",
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gales 40-60mph, gusts knocking off balance, western tops shrouded in cloud"
+          "reason": "gales 40-60mph, gusts knocking off balance, cloud covering western tops"
         },
         {
           "sky": "rain",
@@ -263,11 +260,11 @@
           "amSky": "rain",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "persistent rain most of day, terrain above 600m in cloud, 45-55mph at dawn"
+          "reason": "persistent rain most of day, terrain above 600m in cloud, poor visibility"
         }
       ]
     }
   ],
-  "_generated": "2026-10-12T17:56:56.788Z",
+  "_generated": "2026-10-12T22:55:43.636Z",
   "_anchorDate": "2026-10-13"
 }
