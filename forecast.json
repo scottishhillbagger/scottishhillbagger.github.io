@@ -22,8 +22,8 @@
           "visibility": "good",
           "amSky": "rain",
           "pmSky": "partly-cloudy",
-          "status": "poor",
-          "reason": "snow/hail showers on tops, cloud to 500-800m, poor in snow"
+          "status": "marginal",
+          "reason": "snow/hail showers on high tops, cloud 500-800m, gusty 30mph"
         },
         {
           "sky": "sun",
@@ -39,7 +39,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "mostly dry, often sunny, light winds, 50% cloud-free north Ullapool"
+          "reason": "often sunny, light winds, cloud persisting north of Ullapool above 700m"
         },
         {
           "sky": "sun",
@@ -48,13 +48,13 @@
           "windDir": "SW",
           "tempCLow": 3,
           "tempCHigh": 6,
-          "cloudFree": 80,
+          "cloudFree": 55,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "sun",
           "pmSky": "sun",
-          "status": "go",
-          "reason": "extensive sun, dry, 80% cloud-free; Cuillin shrouded, gusts impede Cuillin walking"
+          "status": "marginal",
+          "reason": "Cuillin summits shrouded all day; gusty Cuillin impedes walking"
         }
       ]
     },
@@ -74,12 +74,12 @@
           "visibility": "good",
           "amSky": "rain",
           "pmSky": "partly-cloudy",
-          "status": "poor",
-          "reason": "frequent showers, hail, snow above 1000m, cloud to 500-800m coastal"
+          "status": "marginal",
+          "reason": "frequent hail showers AM, snow above 1000m, cloud bases 500m coast"
         },
         {
           "sky": "sun",
-          "windMphLow": 10,
+          "windMphLow": 5,
           "windMphHigh": 10,
           "windDir": "variable",
           "tempCLow": 1,
@@ -90,7 +90,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "mostly sunny, dry, negligible winds, 70% cloud-free"
+          "reason": "mostly sunny, near-calm winds, scattered high patches only"
         },
         {
           "sky": "sun",
@@ -105,7 +105,7 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "extensive sun, dry, light winds, 70% cloud-free; some banks west of Loch Linnhe"
+          "reason": "extensive sun, light SSW winds, scattered cloud mainly west of Loch Linnhe"
         }
       ]
     },
@@ -126,7 +126,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "scattered showers, hail, snow above 900-1000m, gusts 30-35mph on Cairngorms"
+          "reason": "hail showers, snow above 900m, gusts 30-35mph buffeting high Cairngorms"
         },
         {
           "sky": "sun",
@@ -141,7 +141,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "mostly sunny afternoon, dry, light winds, clearing to 70% cloud-free"
+          "reason": "mostly sunny PM, negligible wind, cloud rolling off high Cairngorms by afternoon"
         },
         {
           "sky": "sun",
@@ -156,7 +156,7 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "extensive sun, dry, light winds, 80% cloud-free summits"
+          "reason": "extensive sun, light variable winds, little or no cloud on summits"
         }
       ]
     },
@@ -177,7 +177,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "scattered showers, hail, snow on high tops; gusts to 35mph far east; wind chill -5 to -7C"
+          "reason": "hail showers, snow on high tops, gusts 35mph east, wind chill -5 to -7C"
         },
         {
           "sky": "sun",
@@ -192,7 +192,7 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "mostly sunny, dry, negligible winds, 80% cloud-free"
+          "reason": "mostly sunny, negligible wind, hills clearing quickly after sunrise"
         },
         {
           "sky": "sun",
@@ -207,7 +207,7 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "extensive sun, dry, light winds, 80% cloud-free"
+          "reason": "extensive sun, light southerly winds, mostly clear summits all day"
         }
       ]
     },
@@ -225,10 +225,10 @@
           "cloudFree": 80,
           "freezingLevel": 9999,
           "visibility": "good",
-          "amSky": "partly-cloudy",
+          "amSky": "rain",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "showers with heavy bursts and hail, mostly west; gusts 30mph western areas"
+          "reason": "heavy hail showers west, gusts 30mph west later, driest/sunniest east"
         },
         {
           "sky": "sun",
@@ -238,17 +238,17 @@
           "windDir": "NE",
           "tempCLow": 2,
           "tempCHigh": 3,
-          "cloudFree": 90,
+          "cloudFree": 85,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "mostly sunny, dry, light winds, 90% cloud-free (70% Cheviot)"
+          "reason": "mostly sunny, light winds, hills largely clear; odd patch on Cheviot only"
         },
         {
           "sky": "sun",
-          "windMphLow": 10,
+          "windMphLow": 5,
           "windMphHigh": 10,
           "windDir": "variable",
           "tempCLow": 3,
@@ -257,13 +257,13 @@
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "sun",
-          "pmSky": "sun",
+          "pmSky": "partly-cloudy",
           "status": "go",
-          "reason": "mostly sunny, calm winds, dry; small risk of rain on easternmost Cheviots"
+          "reason": "mostly sunny, near-calm winds; low-confidence rain risk east Cheviots PM"
         }
       ]
     }
   ],
-  "_generated": "2026-10-15T19:52:02.360Z",
+  "_generated": "2026-10-16T13:16:22.566Z",
   "_anchorDate": "2026-10-16"
 }
