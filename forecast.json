@@ -1,32 +1,16 @@
 {
   "days": [
-    "Fri",
     "Sat",
-    "Sun"
+    "Sun",
+    "Mon"
   ],
-  "updatedAt": "2026-10-15T16:18:00.000Z",
+  "updatedAt": "2026-10-16T16:00:00.000Z",
   "regions": [
     {
       "name": "Northwest Highlands",
       "forecast": [
         {
           "sky": "partly-cloudy",
-          "windMphLow": 20,
-          "windMphHigh": 25,
-          "gustMph": 30,
-          "windDir": "W",
-          "tempCLow": 1,
-          "tempCHigh": 2,
-          "cloudFree": 30,
-          "freezingLevel": 9999,
-          "visibility": "good",
-          "amSky": "rain",
-          "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "reason": "snow/hail showers on high tops, cloud 500-800m, gusty 30mph"
-        },
-        {
-          "sky": "sun",
           "windMphLow": 10,
           "windMphHigh": 15,
           "gustMph": 20,
@@ -34,12 +18,12 @@
           "tempCLow": 1,
           "tempCHigh": 2,
           "cloudFree": 60,
-          "freezingLevel": 9999,
+          "freezingLevel": 900,
           "visibility": "good",
           "amSky": "partly-cloudy",
           "pmSky": "sun",
-          "status": "go",
-          "reason": "often sunny, light winds, cloud persisting north of Ullapool above 700m"
+          "status": "marginal",
+          "reason": "light sleet/snow showers north of Ullapool, hill cloud 700-800m"
         },
         {
           "sky": "sun",
@@ -47,14 +31,29 @@
           "windMphHigh": 25,
           "windDir": "SW",
           "tempCLow": 3,
-          "tempCHigh": 6,
-          "cloudFree": 55,
+          "tempCHigh": 5,
+          "cloudFree": 65,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "sun",
           "pmSky": "sun",
-          "status": "marginal",
-          "reason": "Cuillin summits shrouded all day; gusty Cuillin impedes walking"
+          "status": "go",
+          "reason": "extensive sun most areas, cloud above 700m Cuillin only, light winds"
+        },
+        {
+          "sky": "sun",
+          "windMphLow": 15,
+          "windMphHigh": 25,
+          "windDir": "SSW",
+          "tempCLow": 5,
+          "tempCHigh": 5,
+          "cloudFree": 90,
+          "freezingLevel": 9999,
+          "visibility": "excellent",
+          "amSky": "sun",
+          "pmSky": "partly-cloudy",
+          "status": "go",
+          "reason": "sunshine, 90% cloud-free Munros, winds rising to 30mph dusk only"
         }
       ]
     },
@@ -62,50 +61,49 @@
       "name": "West Highlands",
       "forecast": [
         {
-          "sky": "partly-cloudy",
-          "windMphLow": 20,
-          "windMphHigh": 25,
-          "gustMph": 30,
-          "windDir": "W",
-          "tempCLow": 2,
-          "tempCHigh": 3,
-          "cloudFree": 30,
-          "freezingLevel": 1200,
-          "visibility": "good",
-          "amSky": "rain",
-          "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "reason": "frequent hail showers AM, snow above 1000m, cloud bases 500m coast"
-        },
-        {
           "sky": "sun",
-          "windMphLow": 5,
+          "windMphLow": 10,
           "windMphHigh": 10,
-          "windDir": "variable",
+          "windDir": "N",
           "tempCLow": 1,
-          "tempCHigh": 4,
-          "cloudFree": 70,
-          "freezingLevel": 9999,
-          "visibility": "good",
+          "tempCHigh": 2,
+          "cloudFree": 80,
+          "freezingLevel": 1200,
+          "visibility": "excellent",
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "mostly sunny, near-calm winds, scattered high patches only"
+          "reason": "extensive sunshine, mountains free of cloud, negligible wind"
         },
         {
           "sky": "sun",
-          "windMphLow": 15,
-          "windMphHigh": 20,
+          "windMphLow": 10,
+          "windMphHigh": 15,
           "windDir": "SSW",
           "tempCLow": 2,
           "tempCHigh": 3,
-          "cloudFree": 70,
+          "cloudFree": 80,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "extensive sun, light SSW winds, scattered cloud mainly west of Loch Linnhe"
+          "reason": "extensive sun, light winds, 80% cloud-free Munros"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 15,
+          "windMphHigh": 20,
+          "windDir": "SSE",
+          "tempCLow": 5,
+          "tempCHigh": 5,
+          "cloudFree": 60,
+          "freezingLevel": 9999,
+          "visibility": "moderate",
+          "amSky": "partly-cloudy",
+          "pmSky": "cloud",
+          "status": "marginal",
+          "reason": "cloud above 600-700m south, drizzle Loch Lomond to Arran, dull inland"
         }
       ]
     },
@@ -113,35 +111,19 @@
       "name": "Cairngorms & Monadhliath",
       "forecast": [
         {
-          "sky": "partly-cloudy",
-          "windMphLow": 20,
-          "windMphHigh": 25,
-          "gustMph": 35,
-          "windDir": "W",
-          "tempCLow": 2,
-          "tempCHigh": 3,
-          "cloudFree": 70,
-          "freezingLevel": 1300,
-          "visibility": "good",
-          "amSky": "partly-cloudy",
-          "pmSky": "sun",
-          "status": "marginal",
-          "reason": "hail showers, snow above 900m, gusts 30-35mph buffeting high Cairngorms"
-        },
-        {
           "sky": "sun",
           "windMphLow": 10,
           "windMphHigh": 15,
           "windDir": "NNW",
           "tempCLow": 1,
-          "tempCHigh": 4,
+          "tempCHigh": 2,
           "cloudFree": 70,
-          "freezingLevel": 9999,
+          "freezingLevel": 1000,
           "visibility": "good",
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "mostly sunny PM, negligible wind, cloud rolling off high Cairngorms by afternoon"
+          "reason": "chilly sunshine after early mist clears, light winds, 70% cloud-free"
         },
         {
           "sky": "sun",
@@ -156,7 +138,22 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "extensive sun, light variable winds, little or no cloud on summits"
+          "reason": "extensive sunshine, light variable winds, 80% cloud-free Munros"
+        },
+        {
+          "sky": "cloud",
+          "windMphLow": 15,
+          "windMphHigh": 25,
+          "windDir": "S",
+          "tempCLow": 5,
+          "tempCHigh": 5,
+          "cloudFree": 45,
+          "freezingLevel": 9999,
+          "visibility": "moderate",
+          "amSky": "cloud",
+          "pmSky": "cloud",
+          "status": "marginal",
+          "reason": "cloud above 600-700m south/east Cairngorms, drizzle Deeside/Braemar, dull"
         }
       ]
     },
@@ -164,35 +161,19 @@
       "name": "Southeastern Highlands",
       "forecast": [
         {
-          "sky": "partly-cloudy",
-          "windMphLow": 20,
-          "windMphHigh": 25,
-          "gustMph": 35,
-          "windDir": "W",
-          "tempCLow": 3,
-          "tempCHigh": 3,
-          "cloudFree": 80,
-          "freezingLevel": 9999,
-          "visibility": "good",
-          "amSky": "partly-cloudy",
-          "pmSky": "sun",
-          "status": "marginal",
-          "reason": "hail showers, snow on high tops, gusts 35mph east, wind chill -5 to -7C"
-        },
-        {
           "sky": "sun",
           "windMphLow": 10,
           "windMphHigh": 15,
           "windDir": "N",
           "tempCLow": 1,
-          "tempCHigh": 4,
-          "cloudFree": 80,
-          "freezingLevel": 9999,
-          "visibility": "good",
+          "tempCHigh": 2,
+          "cloudFree": 90,
+          "freezingLevel": 900,
+          "visibility": "excellent",
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "mostly sunny, negligible wind, hills clearing quickly after sunrise"
+          "reason": "extensive sunshine, 90% cloud-free, negligible wind after early mist"
         },
         {
           "sky": "sun",
@@ -207,29 +188,28 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "extensive sun, light southerly winds, mostly clear summits all day"
+          "reason": "extensive sunshine, light variable winds, 80% cloud-free Munros"
+        },
+        {
+          "sky": "cloud",
+          "windMphLow": 15,
+          "windMphHigh": 25,
+          "windDir": "SSE",
+          "tempCLow": 5,
+          "tempCHigh": 5,
+          "cloudFree": 20,
+          "freezingLevel": 9999,
+          "visibility": "poor",
+          "amSky": "cloud",
+          "pmSky": "rain",
+          "status": "poor",
+          "reason": "cloud above 600-700m most hills, persistent drizzle, poor visibility in cloud"
         }
       ]
     },
     {
       "name": "Southern Uplands",
       "forecast": [
-        {
-          "sky": "partly-cloudy",
-          "windMphLow": 15,
-          "windMphHigh": 25,
-          "gustMph": 30,
-          "windDir": "NW",
-          "tempCLow": 4,
-          "tempCHigh": 5,
-          "cloudFree": 80,
-          "freezingLevel": 9999,
-          "visibility": "good",
-          "amSky": "rain",
-          "pmSky": "sun",
-          "status": "marginal",
-          "reason": "heavy hail showers west, gusts 30mph west later, driest/sunniest east"
-        },
         {
           "sky": "sun",
           "windMphLow": 10,
@@ -238,32 +218,47 @@
           "windDir": "NE",
           "tempCLow": 2,
           "tempCHigh": 3,
-          "cloudFree": 85,
+          "cloudFree": 90,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "go",
-          "reason": "mostly sunny, light winds, hills largely clear; odd patch on Cheviot only"
+          "reason": "extensive sunshine, 90% cloud-free, breezy east only early, soon negligible"
         },
         {
           "sky": "sun",
-          "windMphLow": 5,
+          "windMphLow": 10,
           "windMphHigh": 10,
           "windDir": "variable",
           "tempCLow": 3,
-          "tempCHigh": 4,
+          "tempCHigh": 5,
           "cloudFree": 80,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "go",
-          "reason": "mostly sunny, near-calm winds; low-confidence rain risk east Cheviots PM"
+          "reason": "mostly sunny, light winds, 80% cloud-free, minor shower risk Cheviots only"
+        },
+        {
+          "sky": "cloud",
+          "windMphLow": 15,
+          "windMphHigh": 25,
+          "windDir": "ESE",
+          "tempCLow": 6,
+          "tempCHigh": 6,
+          "cloudFree": 30,
+          "freezingLevel": 9999,
+          "visibility": "poor",
+          "amSky": "cloud",
+          "pmSky": "rain",
+          "status": "poor",
+          "reason": "cloud above 600-700m, persistent light rain Borders/Cheviots, increasingly blustery"
         }
       ]
     }
   ],
-  "_generated": "2026-10-16T13:16:22.566Z",
-  "_anchorDate": "2026-10-16"
+  "_generated": "2026-10-16T19:32:22.157Z",
+  "_anchorDate": "2026-10-17"
 }
