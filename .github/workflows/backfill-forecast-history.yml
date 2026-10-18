@@ -13,20 +13,20 @@ jobs:
   backfill:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0   # full history is needed to read old forecast.json versions
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
-          node-version: 20
+          node-version: '20'
 
       - run: node scripts/backfill-forecast-history.mjs
 
       - name: Commit history CSV
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "forecast-bot"
+          git config user.email "forecast-bot@users.noreply.github.com"
           git add data/forecast-history.csv
           git diff --cached --quiet || git commit -m "Backfill forecast history from git"
           git push

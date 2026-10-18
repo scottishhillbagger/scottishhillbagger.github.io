@@ -12,6 +12,10 @@ permissions:
 jobs:
   forecast:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      # Optional private archive for raw MWIS text; empty until you set it up
+      ARCHIVE_TOKEN: ${{ secrets.ARCHIVE_TOKEN }}
     steps:
       - uses: actions/checkout@v5
 
@@ -20,17 +24,49 @@ jobs:
           node-version: '20'
 
       - name: Install
-        run: npm install @anthropic-ai/sdk
+        run: npm install --no-save @anthropic-ai/sdk
 
       - name: Generate forecast
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: node scripts/build-forecast.mjs
 
+      # NEW: add this run's forecast to the long-term history
+      - name: Archive forecast
+        run: node scripts/archive-forecast.mjs
+
       - name: Commit
         run: |
           git config user.name "forecast-bot"
           git config user.email "forecast-bot@users.noreply.github.com"
-          git add forecast.json
+          git add forecast.json data/forecast-history.csv data/forecast-runs.csv
           git diff --staged --quiet || git commit -m "Update forecast $(TZ='Europe/London' date +'%Y-%m-%d %H:%M %Z')"
           git push
+
+      # NEW (optional): raw MWIS text to a private repo.
+      # Skips itself until the ARCHIVE_TOKEN secret exists.
+      - name: Save raw MWIS text
+        if: success() && env.ARCHIVE_TOKEN != ''
+        run: |
+          STAMP=$(date -u +%Y-%m-%d_%H%M)
+          YEAR=$(date -u +%Y)
+          git clone --depth 1 "https://x-access-token:${ARCHIVE_TOKEN}@github.com/scottishhillbagger/mwis-archive.git" archive
+          mkdir -p "archive/raw/${YEAR}"
+          cp mwis-raw.json "archive/raw/${YEAR}/${STAMP}.json"
+          cd archive
+          git config user.name "forecast-bot"
+          git config user.email "forecast-bot@users.noreply.github.com"
+          git add raw
+          git commit -m "Raw MWIS ${STAMP}"
+          git push
+
+      # NEW: if anything above fails, record the failed day in forecast-runs.csv
+      - name: Log failed run
+        if: failure()
+        run: |
+          node scripts/archive-forecast.mjs --failed
+          git config user.name "forecast-bot"
+          git config user.email "forecast-bot@users.noreply.github.com"
+          git add data/forecast-runs.csv
+          git commit -m "Log failed forecast run" || true
+          git push || true
