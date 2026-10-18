@@ -38,7 +38,7 @@
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 40mph, cloud on hills above 700m, drizzle Skye area"
+          "reason": "gusts 40mph, cloud above 700-800m, drizzle spreading from south"
         },
         {
           "sky": "rain",
@@ -53,7 +53,7 @@
           "amSky": "rain",
           "pmSky": "snow",
           "status": "poor",
-          "reason": "patchy rain, snow on Munros evening, extensive low cloud"
+          "reason": "patchy rain, snow on Munros by evening, extensive cloud from 600m"
         }
       ]
     },
@@ -73,7 +73,7 @@
           "amSky": "sun",
           "pmSky": "cloud",
           "status": "marginal",
-          "reason": "sunshine AM, low cloud fills in south PM above 600-700m"
+          "reason": "cloud fills in from south PM, dropping cloudFree to 20% south by afternoon"
         },
         {
           "sky": "cloud",
@@ -88,7 +88,7 @@
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "overcast, fog from low elevations, rain spreading south, gusty Ben Nevis"
+          "reason": "low cloud blankets hills from base up, rain south, only 10% cloud-free"
         },
         {
           "sky": "rain",
@@ -103,7 +103,7 @@
           "amSky": "cloud",
           "pmSky": "snow",
           "status": "poor",
-          "reason": "patchy rain, snow on Munros later, extensive cloud 700-900m"
+          "reason": "patchy rain, snow on Munros later, cloud 700-900m, high uncertainty"
         }
       ]
     },
@@ -117,13 +117,13 @@
           "windDir": "S",
           "tempCLow": 0,
           "tempCHigh": 5,
-          "cloudFree": 70,
+          "cloudFree": 60,
           "freezingLevel": 9999,
           "visibility": "excellent",
           "amSky": "sun",
           "pmSky": "cloud",
           "status": "marginal",
-          "reason": "sunshine AM, cloud fills in south PM above 700-800m, drizzle Deeside"
+          "reason": "sunshine AM, cloud rolls in from south PM, dropping to 20% cloudFree south"
         },
         {
           "sky": "cloud",
@@ -139,7 +139,7 @@
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 50mph Cairngorm plateau, fog from low elevations, rain south"
+          "reason": "gusts 50mph Cairngorms plateau, low cloud blankets hills, rain south"
         },
         {
           "sky": "rain",
@@ -154,7 +154,7 @@
           "amSky": "rain",
           "pmSky": "snow",
           "status": "poor",
-          "reason": "rain east AM, snow on Munros from dusk, extensive cloud 800-1000m"
+          "reason": "early rain, snow on Munros from dusk, cloud 800-1000m, uncertain fronts"
         }
       ]
     },
@@ -174,7 +174,7 @@
           "amSky": "sun",
           "pmSky": "cloud",
           "status": "marginal",
-          "reason": "sunny start, cloud blankets hills above 600-800m PM, drizzle afternoon"
+          "reason": "cloud blankets hills PM, cloudFree near nil by evening, drizzle develops"
         },
         {
           "sky": "cloud",
@@ -190,7 +190,7 @@
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "overcast fog from low elevations, rain all day, gusts 40mph east hills"
+          "reason": "low cloud from base up all day, rain, gusts 40mph eastern hills"
         },
         {
           "sky": "rain",
@@ -205,7 +205,7 @@
           "amSky": "rain",
           "pmSky": "snow",
           "status": "poor",
-          "reason": "patchy rain, snow on Munros evening, extensive low cloud 700-900m"
+          "reason": "patchy to persistent rain, snow on Munros by evening, cloud 700-900m"
         }
       ]
     },
@@ -225,7 +225,7 @@
           "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "cloud above 600-700m all day, rain Borders/Cheviots, murky navigation"
+          "reason": "cloud above 600-700m, light rain east/Borders, gusty, poor visibility"
         },
         {
           "sky": "rain",
@@ -237,10 +237,10 @@
           "cloudFree": 10,
           "freezingLevel": 9999,
           "visibility": "poor",
-          "amSky": "cloud",
+          "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "rain all day, heavier PM Dumfries & Galloway, fog from low elevations"
+          "reason": "persistent rain, heavier PM in Dumfries & Galloway, low cloud blanketing hills"
         },
         {
           "sky": "rain",
@@ -255,11 +255,15 @@
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "persistent rain Dumfries & Galloway and Cheviots, cloud 700-800m"
+          "reason": "persistent rain risk Dumfries & Galloway and Cheviots, cloud 700-800m"
         }
       ]
     }
   ],
-  "_generated": "2026-10-18T18:37:04.754Z",
-  "_anchorDate": "2026-10-19"
+  "_generated": "2026-10-18T20:40:17.950Z",
+  "_anchorDate": "2026-10-19",
+  "_mwisUpdatedAt": "2026-10-18T16:00:00.000Z",
+  "_model": "claude-sonnet-4-6",
+  "_promptVersion": "2026-10-18",
+  "_schemaVersion": 2
 }
