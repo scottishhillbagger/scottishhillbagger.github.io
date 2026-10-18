@@ -2,8 +2,7 @@ name: Update forecast
 
 on:
   schedule:
-    # Twice daily — shortly after MWIS updates (~7:35 and ~15:30 UTC)
-    - cron: '15 8 * * *'
+    # Once daily — after MWIS publishes its afternoon update (~15:30 UTC)
     - cron: '15 16 * * *'
   workflow_dispatch:  # allow manual run
 
