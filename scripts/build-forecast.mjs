@@ -1,9 +1,19 @@
 // scripts/build-forecast.mjs
-// Runs in GitHub Actions twice daily. Fetches MWIS pages directly,
+// Runs in GitHub Actions daily. Fetches MWIS pages directly,
 // extracts a structured 3-day forecast via Claude, writes forecast.json.
+// Also writes mwis-raw.json (raw page text + model output) for the private
+// archive. mwis-raw.json must NOT be committed to the public repo.
 
 import Anthropic from '@anthropic-ai/sdk';
 import { writeFileSync } from 'fs';
+
+// --- Versioning for the long-term record ----------------------------
+// Bump PROMPT_VERSION whenever you change the prompt or field rules, so the
+// history shows exactly where the extraction method changed.
+// SCHEMA_VERSION: 1 = windMph/tempC/note (early), 2 = low/high ranges + gustMph + reason.
+const MODEL = 'claude-sonnet-4-6';
+const PROMPT_VERSION = '2026-10-18';
+const SCHEMA_VERSION = 2;
 
 const REGIONS = [
   { id: 'the-northwest-highlands', name: 'Northwest Highlands' },
@@ -251,11 +261,24 @@ if (newestUpdate) {
   console.warn('⚠ No MWIS update timestamp found on any page — falling back to today');
 }
 
+// Save raw MWIS text now, before the model call, so a failed extraction
+// still leaves the source text in the archive for re-extraction later.
+const raw = {
+  fetchedAt: now.toISOString(),
+  mwisUpdatedAt: newestUpdate ? new Date(newestUpdate).toISOString() : null,
+  anchorDate: day0.toISOString().slice(0, 10),
+  model: MODEL,
+  promptVersion: PROMPT_VERSION,
+  pages: pages.map(({ id, name, url, updatedAt, error, text }) => ({ id, name, url, updatedAt, error: error || null, text })),
+  responseText: null,
+};
+writeFileSync('mwis-raw.json', JSON.stringify(raw, null, 2));
+
 // 2. Hand pages + date anchor to Claude for structured extraction
 console.log('Asking Claude to structure the forecast…');
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 const message = await client.messages.create({
-  model: 'claude-sonnet-4-6',
+  model: MODEL,
   max_tokens: 4000,
   messages: [{ role: 'user', content: buildPrompt(pages) }],
 });
@@ -264,6 +287,9 @@ const responseText = message.content
   .filter(b => b.type === 'text')
   .map(b => b.text)
   .join('\n');
+
+raw.responseText = responseText;
+writeFileSync('mwis-raw.json', JSON.stringify(raw, null, 2));
 
 const data = parseJSON(responseText);
 
@@ -275,6 +301,10 @@ if (!data.updatedAt && newestUpdate) {
 }
 data._generated = new Date().toISOString();
 data._anchorDate = day0.toISOString().slice(0, 10);
+data._mwisUpdatedAt = newestUpdate ? new Date(newestUpdate).toISOString() : null;
+data._model = MODEL;
+data._promptVersion = PROMPT_VERSION;
+data._schemaVersion = SCHEMA_VERSION;
 
 // 4. Sanity check — first day label should match today
 const expectedFirst = dayShort(day0);
