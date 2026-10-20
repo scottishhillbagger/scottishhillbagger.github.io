@@ -1,59 +1,59 @@
 {
   "days": [
-    "Tue",
     "Wed",
-    "Thu"
+    "Thu",
+    "Fri"
   ],
-  "updatedAt": "2026-10-19T16:53:00.000Z",
+  "updatedAt": "2026-10-20T16:29:00.000Z",
   "regions": [
     {
       "name": "Northwest Highlands",
       "forecast": [
         {
           "sky": "rain",
-          "windMphLow": 30,
-          "windMphHigh": 40,
-          "gustMph": 50,
-          "windDir": "SSE",
-          "tempCLow": 5,
-          "tempCHigh": 5,
-          "cloudFree": 30,
-          "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "cloud",
-          "pmSky": "rain",
-          "status": "poor",
-          "reason": "fog and rain building, gusts 45-50mph, strenuous walking all day"
-        },
-        {
-          "sky": "rain",
           "windMphLow": 20,
-          "windMphHigh": 35,
+          "windMphHigh": 30,
+          "gustMph": 35,
           "windDir": "SSE",
-          "tempCLow": 2,
+          "tempCLow": 3,
           "tempCHigh": 4,
           "cloudFree": 30,
           "freezingLevel": 9999,
-          "visibility": "moderate",
+          "visibility": "poor",
           "amSky": "rain",
-          "pmSky": "snow",
+          "pmSky": "rain",
           "status": "poor",
-          "reason": "patchy rain turning snow on Munros evening, low cloud, freezing level dropping"
+          "reason": "persistent rain, blustery 20-30mph, cloud base 600-700m, poor visibility"
         },
         {
           "sky": "partly-cloudy",
-          "windMphLow": 15,
+          "windMphLow": 20,
           "windMphHigh": 25,
           "windDir": "SW",
           "tempCLow": 0,
           "tempCHigh": 3,
-          "cloudFree": 40,
+          "cloudFree": 30,
           "freezingLevel": 950,
-          "visibility": "moderate",
+          "visibility": "good",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "snow to 700m on Skye, capping cloud Munros, freezing level 900-1000m"
+          "reason": "snow to 700m on Skye, cloud capping west Munros, winter conditions on tops"
+        },
+        {
+          "sky": "rain",
+          "windMphLow": 15,
+          "windMphHigh": 35,
+          "windDir": "SE",
+          "tempCLow": 0,
+          "tempCHigh": 2,
+          "cloudFree": 10,
+          "freezingLevel": 900,
+          "visibility": "poor",
+          "amSky": "rain",
+          "pmSky": "rain",
+          "status": "poor",
+          "reason": "rain all day, extensive low cloud, freezing level 900m, wind chill -10C"
         }
       ]
     },
@@ -62,35 +62,19 @@
       "forecast": [
         {
           "sky": "rain",
-          "windMphLow": 30,
-          "windMphHigh": 35,
-          "gustMph": 45,
-          "windDir": "SSE",
-          "tempCLow": 5,
-          "tempCHigh": 5,
-          "cloudFree": 20,
-          "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "cloud",
-          "pmSky": "rain",
-          "status": "poor",
-          "reason": "fog and rain widespread, gusts to 45mph Ben Nevis group, strenuous all day"
-        },
-        {
-          "sky": "rain",
           "windMphLow": 10,
           "windMphHigh": 30,
           "gustMph": 40,
-          "windDir": "W",
-          "tempCLow": 2,
+          "windDir": "WNW",
+          "tempCLow": 3,
           "tempCHigh": 4,
           "cloudFree": 30,
           "freezingLevel": 9999,
-          "visibility": "moderate",
-          "amSky": "cloud",
-          "pmSky": "snow",
+          "visibility": "poor",
+          "amSky": "rain",
+          "pmSky": "rain",
           "status": "poor",
-          "reason": "patchy rain turning snow on Munros later, up to 40mph gusts, low cloud"
+          "reason": "rain on-and-off, gusts to 40mph south Mull, cloud base 600-900m, poor visibility"
         },
         {
           "sky": "partly-cloudy",
@@ -98,14 +82,29 @@
           "windMphHigh": 25,
           "windDir": "SW",
           "tempCLow": 0,
-          "tempCHigh": 3,
+          "tempCHigh": 2,
           "cloudFree": 30,
           "freezingLevel": 950,
-          "visibility": "moderate",
+          "visibility": "good",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
           "status": "marginal",
-          "reason": "snow to 700m, summits above 1100m rarely clearing, freezing level 900-1000m"
+          "reason": "snow to 700m, cloud rarely breaking above 1100m west, winter conditions on tops"
+        },
+        {
+          "sky": "rain",
+          "windMphLow": 15,
+          "windMphHigh": 45,
+          "windDir": "E",
+          "tempCLow": 0,
+          "tempCHigh": 2,
+          "cloudFree": 10,
+          "freezingLevel": 1000,
+          "visibility": "poor",
+          "amSky": "rain",
+          "pmSky": "rain",
+          "status": "poor",
+          "reason": "heavy rain Mull to Loch Lomond, gusts to 45mph, hills shrouded to lower slopes"
         }
       ]
     },
@@ -114,49 +113,48 @@
       "forecast": [
         {
           "sky": "rain",
-          "windMphLow": 30,
-          "windMphHigh": 40,
-          "gustMph": 50,
-          "windDir": "SE",
-          "tempCLow": 5,
-          "tempCHigh": 5,
-          "cloudFree": 20,
-          "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "cloud",
-          "pmSky": "rain",
-          "status": "poor",
-          "reason": "rain and drizzle, gusts near 50mph high Cairngorms, fog from lower slopes"
-        },
-        {
-          "sky": "cloud",
           "windMphLow": 20,
           "windMphHigh": 30,
           "windDir": "SSE",
           "tempCLow": 2,
           "tempCHigh": 4,
-          "cloudFree": 30,
+          "cloudFree": 20,
           "freezingLevel": 9999,
-          "visibility": "moderate",
+          "visibility": "poor",
           "amSky": "rain",
-          "pmSky": "snow",
-          "status": "marginal",
-          "reason": "early rain fading, snow on Munros from dusk, largely cloudy, chilly"
+          "pmSky": "cloud",
+          "status": "poor",
+          "reason": "persistent morning rain, cloud above 700-800m, poor visibility, snow high Cairngorms PM"
         },
         {
           "sky": "partly-cloudy",
-          "windMphLow": 15,
-          "windMphHigh": 20,
+          "windMphLow": 20,
+          "windMphHigh": 25,
           "windDir": "SW",
           "tempCLow": 0,
           "tempCHigh": 3,
-          "cloudFree": 50,
+          "cloudFree": 60,
           "freezingLevel": 950,
           "visibility": "good",
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "largely dry, sunshine north Cairngorms, freezing level 900-1000m, wintry conditions"
+          "reason": "mostly dry, winter conditions — snow on high terrain, freezing level 900-1000m"
+        },
+        {
+          "sky": "rain",
+          "windMphLow": 25,
+          "windMphHigh": 40,
+          "windDir": "ESE",
+          "tempCLow": 0,
+          "tempCHigh": 4,
+          "cloudFree": 10,
+          "freezingLevel": 9999,
+          "visibility": "poor",
+          "amSky": "rain",
+          "pmSky": "rain",
+          "status": "poor",
+          "reason": "persistent heavy rain south Cairngorms, gusts 40mph, blanket cloud, wind chill -10C"
         }
       ]
     },
@@ -165,49 +163,48 @@
       "forecast": [
         {
           "sky": "rain",
-          "windMphLow": 30,
-          "windMphHigh": 35,
-          "gustMph": 40,
-          "windDir": "SE",
-          "tempCLow": 4,
-          "tempCHigh": 5,
+          "windMphLow": 20,
+          "windMphHigh": 30,
+          "windDir": "SSE",
+          "tempCLow": 2,
+          "tempCHigh": 4,
+          "cloudFree": 10,
+          "freezingLevel": 9999,
+          "visibility": "poor",
+          "amSky": "rain",
+          "pmSky": "cloud",
+          "status": "poor",
+          "reason": "blanket cloud to lower slopes, steady rain with heavy falls east of A9, poor visibility"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 15,
+          "windMphHigh": 25,
+          "windDir": "SW",
+          "tempCLow": 1,
+          "tempCHigh": 3,
+          "cloudFree": 40,
+          "freezingLevel": 1000,
+          "visibility": "good",
+          "amSky": "cloud",
+          "pmSky": "sun",
+          "status": "marginal",
+          "reason": "snow on summits early, shower clusters west of A9, winter conditions on high tops"
+        },
+        {
+          "sky": "rain",
+          "windMphLow": 25,
+          "windMphHigh": 40,
+          "windDir": "ESE",
+          "tempCLow": 0,
+          "tempCHigh": 4,
           "cloudFree": 10,
           "freezingLevel": 9999,
           "visibility": "poor",
           "amSky": "rain",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "persistent rain and fog all day, gusts 40mph, cloud from lower slopes upward"
-        },
-        {
-          "sky": "cloud",
-          "windMphLow": 20,
-          "windMphHigh": 30,
-          "windDir": "SSE",
-          "tempCLow": 2,
-          "tempCHigh": 4,
-          "cloudFree": 20,
-          "freezingLevel": 9999,
-          "visibility": "moderate",
-          "amSky": "rain",
-          "pmSky": "snow",
-          "status": "marginal",
-          "reason": "patchy rain, snow on Munros by evening, fairly extensive cloud, uncertain"
-        },
-        {
-          "sky": "partly-cloudy",
-          "windMphLow": 15,
-          "windMphHigh": 20,
-          "windDir": "SW",
-          "tempCLow": 1,
-          "tempCHigh": 3,
-          "cloudFree": 55,
-          "freezingLevel": 1000,
-          "visibility": "good",
-          "amSky": "partly-cloudy",
-          "pmSky": "sun",
-          "status": "marginal",
-          "reason": "mostly dry, patchy sun east, freezing level ~1000m, wintry tops"
+          "reason": "rain rarely ceases, prolonged heavy falls, blanket cloud, wind chill near -10C"
         }
       ]
     },
@@ -216,34 +213,19 @@
       "forecast": [
         {
           "sky": "rain",
-          "windMphLow": 20,
-          "windMphHigh": 30,
-          "gustMph": 40,
-          "windDir": "SE",
-          "tempCLow": 5,
-          "tempCHigh": 7,
-          "cloudFree": 10,
-          "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "rain",
-          "pmSky": "rain",
-          "status": "poor",
-          "reason": "persistent rain and drizzle west, fog most hills, gusts 40mph Cheviots"
-        },
-        {
-          "sky": "cloud",
           "windMphLow": 10,
           "windMphHigh": 30,
+          "gustMph": 40,
           "windDir": "W",
-          "tempCLow": 4,
-          "tempCHigh": 6,
+          "tempCLow": 2,
+          "tempCHigh": 5,
           "cloudFree": 30,
           "freezingLevel": 9999,
           "visibility": "moderate",
           "amSky": "rain",
-          "pmSky": "cloud",
-          "status": "marginal",
-          "reason": "persistent rain risk Galloway, highly uncertain, largely cloudy tops"
+          "pmSky": "rain",
+          "status": "poor",
+          "reason": "rain coming and going, gusts to 40mph west Galloway, cloud capping above 400-800m"
         },
         {
           "sky": "partly-cloudy",
@@ -252,20 +234,35 @@
           "windDir": "SW",
           "tempCLow": 3,
           "tempCHigh": 4,
-          "cloudFree": 50,
+          "cloudFree": 40,
           "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "cloud",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "mostly dry, patchy sun best northeast, snow possible Merrick summits, freezing near tops"
+          "reason": "showers west with snow on summits, prolonged dry windows, freezing level grazing tops"
+        },
+        {
+          "sky": "rain",
+          "windMphLow": 25,
+          "windMphHigh": 50,
+          "windDir": "E",
+          "tempCLow": 1,
+          "tempCHigh": 6,
+          "cloudFree": 10,
+          "freezingLevel": 9999,
+          "visibility": "poor",
+          "amSky": "rain",
+          "pmSky": "rain",
+          "status": "poor",
+          "reason": "rain most of day, northwesterly gusts to 50mph later, cloud to middle slopes, wind chill -10C"
         }
       ]
     }
   ],
-  "_generated": "2026-10-19T21:01:54.028Z",
-  "_anchorDate": "2026-10-20",
-  "_mwisUpdatedAt": "2026-10-19T16:53:00.000Z",
+  "_generated": "2026-10-20T19:59:22.304Z",
+  "_anchorDate": "2026-10-21",
+  "_mwisUpdatedAt": "2026-10-20T16:29:00.000Z",
   "_model": "claude-sonnet-4-6",
   "_promptVersion": "2026-10-18",
   "_schemaVersion": 2
