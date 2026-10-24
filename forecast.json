@@ -1,32 +1,16 @@
 {
   "days": [
-    "Sat",
     "Sun",
-    "Mon"
+    "Mon",
+    "Tue"
   ],
-  "updatedAt": "2026-10-23T16:15:00.000Z",
+  "updatedAt": "2026-10-24T16:12:00.000Z",
   "regions": [
     {
       "name": "Northwest Highlands",
       "forecast": [
         {
-          "sky": "rain",
-          "windMphLow": 50,
-          "windMphHigh": 80,
-          "gustMph": 90,
-          "windDir": "SSW",
-          "tempCLow": 1,
-          "tempCHigh": 4,
-          "cloudFree": 10,
-          "freezingLevel": 1000,
-          "visibility": "poor",
-          "amSky": "partly-cloudy",
-          "pmSky": "rain",
-          "status": "poor",
-          "reason": "Storm Boelo; severe gales 70-90mph, heavy torrential rain"
-        },
-        {
-          "sky": "rain",
+          "sky": "storm",
           "windMphLow": 70,
           "windMphHigh": 90,
           "gustMph": 100,
@@ -34,27 +18,43 @@
           "tempCLow": -1,
           "tempCHigh": 0,
           "cloudFree": 10,
-          "freezingLevel": 900,
+          "freezingLevel": 850,
           "visibility": "poor",
-          "amSky": "rain",
+          "amSky": "storm",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 100mph+, near-constant rain/hail/snow, appalling visibility"
+          "reason": "hurricane-force gusts 100mph+, summit snow, near-constant precipitation"
         },
         {
           "sky": "rain",
           "windMphLow": 35,
           "windMphHigh": 50,
-          "windDir": "W",
+          "windDir": "SSE",
           "tempCLow": 1,
-          "tempCHigh": 11,
-          "cloudFree": 10,
-          "freezingLevel": 1000,
-          "visibility": "moderate",
+          "tempCHigh": 10,
+          "cloudFree": 30,
+          "freezingLevel": 9999,
+          "visibility": "good",
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "rain sets in widely PM, gusts 40-50mph, cloud extensive by afternoon"
+          "reason": "rain sets in widely afternoon, wind strengthens to 50mph with snow above 800m"
+        },
+        {
+          "sky": "storm",
+          "windMphLow": 65,
+          "windMphHigh": 85,
+          "gustMph": 100,
+          "windDir": "SW",
+          "tempCLow": 0,
+          "tempCHigh": 4,
+          "cloudFree": 20,
+          "freezingLevel": 900,
+          "visibility": "poor",
+          "amSky": "rain",
+          "pmSky": "snow",
+          "status": "poor",
+          "reason": "severe gales 65-85mph gusts 100mph, persistent rain turning snow above 700m"
         }
       ]
     },
@@ -62,36 +62,20 @@
       "name": "West Highlands",
       "forecast": [
         {
-          "sky": "rain",
-          "windMphLow": 50,
-          "windMphHigh": 80,
-          "gustMph": 90,
-          "windDir": "SSW",
-          "tempCLow": 1,
-          "tempCHigh": 4,
-          "cloudFree": 10,
-          "freezingLevel": 1000,
-          "visibility": "poor",
-          "amSky": "partly-cloudy",
-          "pmSky": "rain",
-          "status": "poor",
-          "reason": "Storm Boelo; severe gales 70-90mph, heavy torrential rain all areas"
-        },
-        {
-          "sky": "rain",
-          "windMphLow": 60,
-          "windMphHigh": 80,
+          "sky": "storm",
+          "windMphLow": 70,
+          "windMphHigh": 85,
           "gustMph": 100,
-          "windDir": "W",
+          "windDir": "WNW",
           "tempCLow": 0,
           "tempCHigh": 1,
           "cloudFree": 10,
           "freezingLevel": 950,
           "visibility": "poor",
-          "amSky": "rain",
+          "amSky": "storm",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 100mph+, near-constant rain/hail/snow above 700m, wind chill -15 to -20C"
+          "reason": "hurricane-force wind 70-85mph gusts 100mph+, summit snow, near-constant rain/hail"
         },
         {
           "sky": "rain",
@@ -100,13 +84,29 @@
           "windDir": "S",
           "tempCLow": 1,
           "tempCHigh": 11,
-          "cloudFree": 10,
-          "freezingLevel": 1000,
-          "visibility": "moderate",
+          "cloudFree": 15,
+          "freezingLevel": 9999,
+          "visibility": "good",
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "rain sets in persistent PM, winds rapidly reach 45-60mph, cloud extensive"
+          "reason": "rain sets in persistently, wind rapidly strengthens to 45-60mph, snow above 800m"
+        },
+        {
+          "sky": "storm",
+          "windMphLow": 60,
+          "windMphHigh": 80,
+          "gustMph": 90,
+          "windDir": "SW",
+          "tempCLow": 1,
+          "tempCHigh": 4,
+          "cloudFree": 20,
+          "freezingLevel": 950,
+          "visibility": "poor",
+          "amSky": "rain",
+          "pmSky": "snow",
+          "status": "poor",
+          "reason": "gales 60-80mph gusts 90mph+, frequent heavy rain turning snow on tops to 700m"
         }
       ]
     },
@@ -114,51 +114,51 @@
       "name": "Cairngorms & Monadhliath",
       "forecast": [
         {
-          "sky": "rain",
-          "windMphLow": 40,
-          "windMphHigh": 80,
-          "gustMph": 80,
-          "windDir": "SSW",
-          "tempCLow": 1,
-          "tempCHigh": 4,
-          "cloudFree": 10,
-          "freezingLevel": 1000,
-          "visibility": "poor",
-          "amSky": "partly-cloudy",
-          "pmSky": "rain",
-          "status": "poor",
-          "reason": "severe gales 70-80mph, heavy rain, flooding risk Drumochter area"
-        },
-        {
-          "sky": "rain",
-          "windMphLow": 70,
+          "sky": "storm",
+          "windMphLow": 80,
           "windMphHigh": 90,
           "gustMph": 100,
-          "windDir": "W",
+          "windDir": "WNW",
           "tempCLow": 0,
           "tempCHigh": 1,
-          "cloudFree": 30,
+          "cloudFree": 20,
           "freezingLevel": 900,
           "visibility": "poor",
-          "amSky": "rain",
-          "pmSky": "partly-cloudy",
+          "amSky": "storm",
+          "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 100mph+, snow above 900-1000m, appalling visibility in snow/cloud"
+          "reason": "gusts 100mph+ Cairngorm plateau, near-constant snow/hail, mobility near impossible"
         },
         {
           "sky": "rain",
           "windMphLow": 20,
           "windMphHigh": 50,
-          "windDir": "W",
+          "windDir": "S",
           "tempCLow": 1,
-          "tempCHigh": 11,
-          "cloudFree": 10,
-          "freezingLevel": 1000,
+          "tempCHigh": 8,
+          "cloudFree": 20,
+          "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "rain sets in afternoon, winds reach 40-50mph PM, snow above 800-900m AM"
+          "reason": "rain sets in afternoon, wind rises to 40-50mph, snow above 800m AM"
+        },
+        {
+          "sky": "storm",
+          "windMphLow": 65,
+          "windMphHigh": 80,
+          "gustMph": 100,
+          "windDir": "SW",
+          "tempCLow": 1,
+          "tempCHigh": 4,
+          "cloudFree": 30,
+          "freezingLevel": 950,
+          "visibility": "poor",
+          "amSky": "rain",
+          "pmSky": "snow",
+          "status": "poor",
+          "reason": "severe gales 65-80mph gusts 100mph, snow on tops to 700m, severe wind chill"
         }
       ]
     },
@@ -166,51 +166,51 @@
       "name": "Southeastern Highlands",
       "forecast": [
         {
-          "sky": "rain",
-          "windMphLow": 40,
-          "windMphHigh": 80,
-          "gustMph": 80,
-          "windDir": "SSW",
-          "tempCLow": 1,
-          "tempCHigh": 4,
-          "cloudFree": 10,
-          "freezingLevel": 1000,
-          "visibility": "poor",
-          "amSky": "partly-cloudy",
-          "pmSky": "rain",
-          "status": "poor",
-          "reason": "severe gales 70-80mph, heavy persistent rain, flood risk, poor visibility"
-        },
-        {
-          "sky": "rain",
-          "windMphLow": 70,
+          "sky": "storm",
+          "windMphLow": 75,
           "windMphHigh": 85,
           "gustMph": 100,
-          "windDir": "W",
+          "windDir": "WNW",
           "tempCLow": 0,
-          "tempCHigh": 1,
+          "tempCHigh": 2,
           "cloudFree": 30,
           "freezingLevel": 900,
           "visibility": "poor",
-          "amSky": "rain",
-          "pmSky": "partly-cloudy",
+          "amSky": "storm",
+          "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 100mph highest tops, snow above 900-1000m, wind chill -15 to -20C"
+          "reason": "hurricane-force gusts 100mph, snow above 800m, mobility near impossible"
         },
         {
           "sky": "rain",
           "windMphLow": 20,
           "windMphHigh": 50,
-          "windDir": "W",
+          "windDir": "S",
           "tempCLow": 1,
-          "tempCHigh": 11,
-          "cloudFree": 10,
-          "freezingLevel": 1000,
+          "tempCHigh": 8,
+          "cloudFree": 20,
+          "freezingLevel": 9999,
           "visibility": "good",
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "rain from midday, winds 40-50mph PM, cloud extensive to mid/low slopes"
+          "reason": "persistent heavy rain arriving, wind strengthens to 40-50mph, snow above 800m AM"
+        },
+        {
+          "sky": "storm",
+          "windMphLow": 60,
+          "windMphHigh": 80,
+          "gustMph": 90,
+          "windDir": "SW",
+          "tempCLow": 1,
+          "tempCHigh": 4,
+          "cloudFree": 20,
+          "freezingLevel": 950,
+          "visibility": "poor",
+          "amSky": "rain",
+          "pmSky": "snow",
+          "status": "poor",
+          "reason": "gales 60-80mph gusts 90mph+, snow above 700-800m PM, severe wind chill"
         }
       ]
     },
@@ -218,36 +218,20 @@
       "name": "Southern Uplands",
       "forecast": [
         {
-          "sky": "rain",
-          "windMphLow": 40,
-          "windMphHigh": 70,
-          "gustMph": 70,
-          "windDir": "SSW",
-          "tempCLow": 3,
-          "tempCHigh": 10,
-          "cloudFree": 20,
-          "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "partly-cloudy",
-          "pmSky": "rain",
-          "status": "poor",
-          "reason": "severe gales 60-70mph, heavy rain especially Dumfries & Galloway, flooding"
-        },
-        {
-          "sky": "rain",
-          "windMphLow": 55,
-          "windMphHigh": 75,
+          "sky": "storm",
+          "windMphLow": 60,
+          "windMphHigh": 80,
           "gustMph": 90,
-          "windDir": "W",
+          "windDir": "WNW",
           "tempCLow": 2,
           "tempCHigh": 3,
-          "cloudFree": 20,
-          "freezingLevel": 9999,
+          "cloudFree": 30,
+          "freezingLevel": 750,
           "visibility": "poor",
-          "amSky": "rain",
-          "pmSky": "partly-cloudy",
+          "amSky": "storm",
+          "pmSky": "rain",
           "status": "poor",
-          "reason": "gusts 90mph, frequent rain/hail west, wind chill -10 to -15C, mobility very difficult"
+          "reason": "storm-force gusts 90mph, frequent rain/hail, mobility dangerous all day"
         },
         {
           "sky": "rain",
@@ -262,14 +246,30 @@
           "amSky": "partly-cloudy",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "persistent heavy rain most of day, winds 50mph+ into night, cloud to valley level south"
+          "reason": "persistent heavy rain all day, wind strengthens to 50mph+, extensive cloud to valley level"
+        },
+        {
+          "sky": "storm",
+          "windMphLow": 50,
+          "windMphHigh": 60,
+          "gustMph": 70,
+          "windDir": "SW",
+          "tempCLow": 4,
+          "tempCHigh": 5,
+          "cloudFree": 30,
+          "freezingLevel": 9999,
+          "visibility": "moderate",
+          "amSky": "rain",
+          "pmSky": "partly-cloudy",
+          "status": "poor",
+          "reason": "gales 50-60mph gusts 70mph, frequent showers clustering, challenging mobility all day"
         }
       ]
     }
   ],
-  "_generated": "2026-10-23T19:56:49.988Z",
-  "_anchorDate": "2026-10-24",
-  "_mwisUpdatedAt": "2026-10-23T16:15:00.000Z",
+  "_generated": "2026-10-24T18:46:17.745Z",
+  "_anchorDate": "2026-10-25",
+  "_mwisUpdatedAt": "2026-10-24T16:12:00.000Z",
   "_model": "claude-sonnet-4-6",
   "_promptVersion": "2026-10-18",
   "_schemaVersion": 2
