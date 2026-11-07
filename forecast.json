@@ -1,43 +1,28 @@
 {
   "days": [
-    "Sat",
     "Sun",
-    "Mon"
+    "Mon",
+    "Tue"
   ],
-  "updatedAt": "2026-11-06T15:30:00.000Z",
+  "updatedAt": "2026-11-07T15:00:00.000Z",
   "regions": [
     {
       "name": "Northwest Highlands",
       "forecast": [
         {
-          "sky": "cloud",
+          "sky": "partly-cloudy",
           "windMphLow": 10,
           "windMphHigh": 10,
-          "windDir": "E",
+          "windDir": "SE",
           "tempCLow": 3,
           "tempCHigh": 3,
-          "cloudFree": 20,
-          "freezingLevel": 9999,
-          "visibility": "poor",
+          "cloudFree": 40,
+          "freezingLevel": 1000,
+          "visibility": "moderate",
           "amSky": "cloud",
-          "pmSky": "cloud",
-          "status": "poor",
-          "reason": "extensive fog east, low cloud 700-1050m, only 20% cloud-free"
-        },
-        {
-          "sky": "cloud",
-          "windMphLow": 10,
-          "windMphHigh": 10,
-          "windDir": "variable",
-          "tempCLow": 3,
-          "tempCHigh": 3,
-          "cloudFree": 20,
-          "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "cloud",
-          "pmSky": "cloud",
-          "status": "poor",
-          "reason": "cloud persistent 700-900m, fog clinging all day, only 20% cloud-free"
+          "pmSky": "partly-cloudy",
+          "status": "marginal",
+          "reason": "cloud/fog above 700-900m, only 40% cloud-free, near-freezing tops"
         },
         {
           "sky": "partly-cloudy",
@@ -49,10 +34,25 @@
           "cloudFree": 70,
           "freezingLevel": 1000,
           "visibility": "good",
-          "amSky": "partly-cloudy",
+          "amSky": "cloud",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "70% cloud-free west coast; fog and cloud east; freezing near 1000m"
+          "reason": "fog in eastern glens, western hills clearer; tops above fog at 1000m freezing"
+        },
+        {
+          "sky": "sun",
+          "windMphLow": 10,
+          "windMphHigh": 10,
+          "windDir": "SSE",
+          "tempCLow": 1,
+          "tempCHigh": 2,
+          "cloudFree": 90,
+          "freezingLevel": 1000,
+          "visibility": "excellent",
+          "amSky": "sun",
+          "pmSky": "sun",
+          "status": "go",
+          "reason": "sunshine, 90% cloud-free, light winds, excellent visibility"
         }
       ]
     },
@@ -60,34 +60,19 @@
       "name": "West Highlands",
       "forecast": [
         {
-          "sky": "cloud",
+          "sky": "partly-cloudy",
           "windMphLow": 10,
-          "windMphHigh": 20,
-          "windDir": "E",
+          "windMphHigh": 15,
+          "windDir": "ESE",
           "tempCLow": 3,
           "tempCHigh": 3,
           "cloudFree": 30,
-          "freezingLevel": 9999,
-          "visibility": "poor",
+          "freezingLevel": 1000,
+          "visibility": "moderate",
           "amSky": "cloud",
-          "pmSky": "cloud",
-          "status": "poor",
-          "reason": "fog and drizzle south, cloud base 600m, persistent fog most lower slopes"
-        },
-        {
-          "sky": "cloud",
-          "windMphLow": 10,
-          "windMphHigh": 10,
-          "windDir": "variable",
-          "tempCLow": 3,
-          "tempCHigh": 3,
-          "cloudFree": 10,
-          "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "cloud",
-          "pmSky": "cloud",
-          "status": "poor",
-          "reason": "extensive cloud 700-900m, fog clinging all day, only 10% cloud-free"
+          "pmSky": "partly-cloudy",
+          "status": "marginal",
+          "reason": "cloud/fog 700-900m, only 20-40% cloud-free, near-freezing tops"
         },
         {
           "sky": "partly-cloudy",
@@ -96,13 +81,28 @@
           "windDir": "E",
           "tempCLow": 1,
           "tempCHigh": 2,
-          "cloudFree": 60,
+          "cloudFree": 70,
           "freezingLevel": 1000,
-          "visibility": "moderate",
+          "visibility": "good",
           "amSky": "cloud",
-          "pmSky": "partly-cloudy",
+          "pmSky": "sun",
           "status": "marginal",
-          "reason": "60% cloud-free west Lochaber; fog central belt; freezing from 1000m"
+          "reason": "fog inland/central belt, western hills mostly clear, tops near freezing 1000m"
+        },
+        {
+          "sky": "sun",
+          "windMphLow": 10,
+          "windMphHigh": 20,
+          "windDir": "SSE",
+          "tempCLow": 1,
+          "tempCHigh": 2,
+          "cloudFree": 70,
+          "freezingLevel": 1000,
+          "visibility": "excellent",
+          "amSky": "sun",
+          "pmSky": "sun",
+          "status": "go",
+          "reason": "sunshine, 70% cloud-free, light-to-moderate winds, excellent visibility"
         }
       ]
     },
@@ -112,47 +112,47 @@
         {
           "sky": "cloud",
           "windMphLow": 10,
-          "windMphHigh": 15,
+          "windMphHigh": 10,
           "windDir": "E",
           "tempCLow": 3,
           "tempCHigh": 3,
           "cloudFree": 30,
-          "freezingLevel": 9999,
-          "visibility": "poor",
+          "freezingLevel": 1000,
+          "visibility": "moderate",
           "amSky": "cloud",
-          "pmSky": "cloud",
-          "status": "poor",
-          "reason": "fog and drizzle south/east, cloud base 600-800m, persistent fog lower slopes"
+          "pmSky": "partly-cloudy",
+          "status": "marginal",
+          "reason": "extensive cloud/fog above 700-900m, only 30% cloud-free, near-freezing tops"
         },
         {
-          "sky": "cloud",
-          "windMphLow": 10,
-          "windMphHigh": 10,
-          "windDir": "variable",
-          "tempCLow": 3,
-          "tempCHigh": 3,
-          "cloudFree": 10,
-          "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "cloud",
-          "pmSky": "cloud",
-          "status": "poor",
-          "reason": "cloud extensive 700-900m, fog all day most slopes, only 10% cloud-free"
-        },
-        {
-          "sky": "cloud",
+          "sky": "partly-cloudy",
           "windMphLow": 5,
           "windMphHigh": 10,
-          "windDir": "variable",
+          "windDir": "E",
           "tempCLow": 1,
           "tempCHigh": 1,
-          "cloudFree": 20,
+          "cloudFree": 50,
           "freezingLevel": 1000,
-          "visibility": "poor",
+          "visibility": "moderate",
           "amSky": "cloud",
-          "pmSky": "cloud",
-          "status": "poor",
-          "reason": "cloud covers high terrain, fog in glens, only 20% cloud-free, freezing 1000m"
+          "pmSky": "partly-cloudy",
+          "status": "marginal",
+          "reason": "varied fog and cloud at multiple levels, 50% cloud-free, tops near freezing"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 10,
+          "windMphHigh": 20,
+          "windDir": "SSE",
+          "tempCLow": 1,
+          "tempCHigh": 2,
+          "cloudFree": 70,
+          "freezingLevel": 1000,
+          "visibility": "excellent",
+          "amSky": "sun",
+          "pmSky": "sun",
+          "status": "go",
+          "reason": "sunshine, 70% cloud-free north, patchy fog lower slopes, light winds"
         }
       ]
     },
@@ -161,33 +161,18 @@
       "forecast": [
         {
           "sky": "cloud",
-          "windMphLow": 15,
-          "windMphHigh": 20,
+          "windMphLow": 10,
+          "windMphHigh": 10,
           "windDir": "E",
           "tempCLow": 3,
           "tempCHigh": 3,
-          "cloudFree": 20,
-          "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "cloud",
-          "pmSky": "cloud",
-          "status": "poor",
-          "reason": "extensive fog and drizzle, persistent cloud on hills, poor visibility, navigation hazard"
-        },
-        {
-          "sky": "cloud",
-          "windMphLow": 10,
-          "windMphHigh": 10,
-          "windDir": "variable",
-          "tempCLow": 3,
-          "tempCHigh": 3,
           "cloudFree": 10,
-          "freezingLevel": 9999,
+          "freezingLevel": 1000,
           "visibility": "poor",
           "amSky": "cloud",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "extensive fog, cloud persistent 700-900m, only 10% cloud-free all day"
+          "reason": "extensive cloud/fog, only 10% cloud-free, patchy drizzle, sun rare"
         },
         {
           "sky": "cloud",
@@ -196,34 +181,34 @@
           "windDir": "E",
           "tempCLow": 1,
           "tempCHigh": 1,
-          "cloudFree": 20,
+          "cloudFree": 50,
           "freezingLevel": 1000,
-          "visibility": "poor",
+          "visibility": "moderate",
           "amSky": "cloud",
-          "pmSky": "cloud",
-          "status": "poor",
-          "reason": "little sun, hazy/foggy widely, only 20% cloud-free, freezing from 1000m"
+          "pmSky": "partly-cloudy",
+          "status": "marginal",
+          "reason": "varied fog/cloud at multiple levels, little sun lower areas, tops near freezing"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 10,
+          "windMphHigh": 20,
+          "windDir": "SSE",
+          "tempCLow": 1,
+          "tempCHigh": 2,
+          "cloudFree": 50,
+          "freezingLevel": 1000,
+          "visibility": "good",
+          "amSky": "partly-cloudy",
+          "pmSky": "sun",
+          "status": "marginal",
+          "reason": "cloud/fog banks many hills, 50% cloud-free above fog, central belt hazy"
         }
       ]
     },
     {
       "name": "Southern Uplands",
       "forecast": [
-        {
-          "sky": "cloud",
-          "windMphLow": 10,
-          "windMphHigh": 20,
-          "windDir": "E",
-          "tempCLow": 5,
-          "tempCHigh": 5,
-          "cloudFree": 10,
-          "freezingLevel": 9999,
-          "visibility": "poor",
-          "amSky": "cloud",
-          "pmSky": "cloud",
-          "status": "poor",
-          "reason": "persistent fog east, drizzle, fog from valley floors to summits, 10% cloud-free"
-        },
         {
           "sky": "cloud",
           "windMphLow": 10,
@@ -237,29 +222,45 @@
           "amSky": "cloud",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "extensive fog most hills, cloud above 700m, only 10% cloud-free"
+          "reason": "extensive cloud/fog above 700m, only 10% cloud-free, patchy drizzle eastern hills"
         },
         {
           "sky": "cloud",
           "windMphLow": 10,
           "windMphHigh": 15,
           "windDir": "E",
-          "tempCLow": 3,
+          "tempCLow": 2,
           "tempCHigh": 3,
-          "cloudFree": 30,
+          "cloudFree": 50,
           "freezingLevel": 9999,
-          "visibility": "poor",
+          "visibility": "moderate",
           "amSky": "cloud",
           "pmSky": "partly-cloudy",
-          "status": "poor",
-          "reason": "extensive fog and low cloud, only 30% cloud-free, best chance Galloway west"
+          "status": "marginal",
+          "reason": "extensive cloud/fog high terrain east, 30-70% cloud-free, best west Galloway"
+        },
+        {
+          "sky": "partly-cloudy",
+          "windMphLow": 15,
+          "windMphHigh": 20,
+          "gustMph": 25,
+          "windDir": "SE",
+          "tempCLow": 3,
+          "tempCHigh": 4,
+          "cloudFree": 50,
+          "freezingLevel": 9999,
+          "visibility": "good",
+          "amSky": "partly-cloudy",
+          "pmSky": "partly-cloudy",
+          "status": "marginal",
+          "reason": "cloud/fog eastern hills, gusts 25mph Galloway affecting walking, 50% cloud-free"
         }
       ]
     }
   ],
-  "_generated": "2026-11-06T21:28:24.154Z",
-  "_anchorDate": "2026-11-07",
-  "_mwisUpdatedAt": "2026-11-06T15:30:00.000Z",
+  "_generated": "2026-11-07T20:12:15.300Z",
+  "_anchorDate": "2026-11-08",
+  "_mwisUpdatedAt": "2026-11-07T15:00:00.000Z",
   "_model": "claude-sonnet-4-6",
   "_promptVersion": "2026-10-18",
   "_schemaVersion": 2
