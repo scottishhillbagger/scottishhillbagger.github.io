@@ -1,35 +1,19 @@
 {
   "days": [
-    "Sun",
     "Mon",
-    "Tue"
+    "Tue",
+    "Wed"
   ],
-  "updatedAt": "2026-11-14T16:05:00.000Z",
+  "updatedAt": "2026-11-15T15:02:00.000Z",
   "regions": [
     {
       "name": "Northwest Highlands",
       "forecast": [
         {
-          "sky": "snow",
+          "sky": "partly-cloudy",
           "windMphLow": 20,
           "windMphHigh": 30,
-          "gustMph": 40,
-          "windDir": "NNW",
-          "tempCLow": -3,
-          "tempCHigh": -3,
-          "cloudFree": 40,
-          "freezingLevel": 500,
-          "visibility": "poor",
-          "amSky": "partly-cloudy",
-          "pmSky": "snow",
-          "status": "poor",
-          "reason": "persistent snow PM, -3C on tops, gusts 40mph, wind chill -10 to -15C"
-        },
-        {
-          "sky": "partly-cloudy",
-          "windMphLow": 10,
-          "windMphHigh": 35,
-          "windDir": "NW",
+          "windDir": "N",
           "tempCLow": -2,
           "tempCHigh": -2,
           "cloudFree": 60,
@@ -38,23 +22,37 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "winter conditions, -2C tops, wind chill -10 to -15C early, gales after dark"
+          "reason": "snow/hail showers fading; below-zero tops, freezing level 600m"
         },
         {
           "sky": "cloud",
-          "windMphLow": 40,
-          "windMphHigh": 50,
-          "gustMph": 60,
+          "windMphLow": 45,
+          "windMphHigh": 60,
           "windDir": "E",
           "tempCLow": -2,
           "tempCHigh": -1,
-          "cloudFree": 30,
+          "cloudFree": 40,
           "freezingLevel": 700,
           "visibility": "good",
           "amSky": "cloud",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "easterly gales 40-60mph, challenging conditions, wind chill near -15C"
+          "reason": "gales 45-60mph, buffeting gusts, wind chill -15C on high terrain"
+        },
+        {
+          "sky": "cloud",
+          "windMphLow": 25,
+          "windMphHigh": 40,
+          "windDir": "E",
+          "tempCLow": -1,
+          "tempCHigh": -1,
+          "cloudFree": 30,
+          "freezingLevel": 750,
+          "visibility": "good",
+          "amSky": "cloud",
+          "pmSky": "cloud",
+          "status": "poor",
+          "reason": "cloud covering most tops all day, gusts, wind chill -10 to -15C"
         }
       ]
     },
@@ -62,26 +60,10 @@
       "name": "West Highlands",
       "forecast": [
         {
-          "sky": "snow",
-          "windMphLow": 20,
-          "windMphHigh": 30,
-          "gustMph": 40,
-          "windDir": "NNW",
-          "tempCLow": -3,
-          "tempCHigh": 2,
-          "cloudFree": 40,
-          "freezingLevel": 700,
-          "visibility": "poor",
-          "amSky": "cloud",
-          "pmSky": "snow",
-          "status": "poor",
-          "reason": "snow flurries, cloud lifting slowly, gusts 40mph coast, wind chill -10 to -15C"
-        },
-        {
           "sky": "sun",
-          "windMphLow": 10,
+          "windMphLow": 20,
           "windMphHigh": 25,
-          "windDir": "NW",
+          "windDir": "N",
           "tempCLow": -3,
           "tempCHigh": -3,
           "cloudFree": 92,
@@ -89,24 +71,38 @@
           "visibility": "excellent",
           "amSky": "partly-cloudy",
           "pmSky": "sun",
-          "status": "marginal",
-          "reason": "increasingly sunny, cloud free >90%, winter -3C tops, gales after dark coast"
+          "status": "go",
+          "reason": "mostly dry, widely sunny, mountains free of cloud, light winds midday"
         },
         {
-          "sky": "cloud",
+          "sky": "snow",
           "windMphLow": 40,
-          "windMphHigh": 50,
-          "gustMph": 60,
+          "windMphHigh": 60,
           "windDir": "E",
           "tempCLow": -2,
           "tempCHigh": -1,
           "cloudFree": 20,
           "freezingLevel": 600,
           "visibility": "poor",
-          "amSky": "cloud",
+          "amSky": "snow",
           "pmSky": "snow",
           "status": "poor",
-          "reason": "gales 40-60mph, persistent hill snow south, cloud shrouding mountains, appalling visibility"
+          "reason": "persistent snowfalls, gales 40-60mph, appalling visibility in snow and cloud"
+        },
+        {
+          "sky": "cloud",
+          "windMphLow": 20,
+          "windMphHigh": 35,
+          "windDir": "E",
+          "tempCLow": -1,
+          "tempCHigh": -1,
+          "cloudFree": 30,
+          "freezingLevel": 750,
+          "visibility": "good",
+          "amSky": "cloud",
+          "pmSky": "cloud",
+          "status": "poor",
+          "reason": "cloud covering most tops all day, patchy snow, wind chill -10 to -15C"
         }
       ]
     },
@@ -114,26 +110,10 @@
       "name": "Cairngorms & Monadhliath",
       "forecast": [
         {
-          "sky": "snow",
-          "windMphLow": 20,
-          "windMphHigh": 30,
-          "gustMph": 40,
-          "windDir": "N",
-          "tempCLow": -3,
-          "tempCHigh": 0,
-          "cloudFree": 20,
-          "freezingLevel": 550,
-          "visibility": "poor",
-          "amSky": "snow",
-          "pmSky": "snow",
-          "status": "poor",
-          "reason": "frequent persistent snow, cloud shrouding hills all day, appalling visibility on tops"
-        },
-        {
           "sky": "partly-cloudy",
-          "windMphLow": 10,
-          "windMphHigh": 40,
-          "windDir": "NW",
+          "windMphLow": 30,
+          "windMphHigh": 35,
+          "windDir": "N",
           "tempCLow": -3,
           "tempCHigh": -3,
           "cloudFree": 70,
@@ -142,23 +122,37 @@
           "amSky": "partly-cloudy",
           "pmSky": "sun",
           "status": "marginal",
-          "reason": "30-40mph at dawn easing, winter -3C tops, wind chill near -15C early, gales after dark"
+          "reason": "snow/hail showers early, strong N winds 30-35mph, wind chill near -15C"
         },
         {
-          "sky": "cloud",
-          "windMphLow": 40,
-          "windMphHigh": 50,
-          "gustMph": 60,
+          "sky": "snow",
+          "windMphLow": 45,
+          "windMphHigh": 60,
           "windDir": "E",
           "tempCLow": -2,
           "tempCHigh": -1,
           "cloudFree": 20,
           "freezingLevel": 600,
           "visibility": "poor",
-          "amSky": "cloud",
+          "amSky": "snow",
           "pmSky": "snow",
           "status": "poor",
-          "reason": "gales 40-60mph, persistent hill snow south/east Cairngorms, appalling visibility in cloud"
+          "reason": "persistent hill snow south/east, gales 45-60mph, appalling visibility in snow"
+        },
+        {
+          "sky": "cloud",
+          "windMphLow": 25,
+          "windMphHigh": 40,
+          "windDir": "E",
+          "tempCLow": -1,
+          "tempCHigh": -1,
+          "cloudFree": 20,
+          "freezingLevel": 750,
+          "visibility": "moderate",
+          "amSky": "cloud",
+          "pmSky": "cloud",
+          "status": "poor",
+          "reason": "cloud shrouding most tops all day, frequent snow east, wind chill -10 to -15C"
         }
       ]
     },
@@ -166,41 +160,24 @@
       "name": "Southeastern Highlands",
       "forecast": [
         {
-          "sky": "snow",
+          "sky": "sun",
           "windMphLow": 20,
-          "windMphHigh": 40,
-          "gustMph": 40,
+          "windMphHigh": 35,
           "windDir": "N",
           "tempCLow": -2,
-          "tempCHigh": 2,
-          "cloudFree": 30,
-          "freezingLevel": 600,
-          "visibility": "poor",
-          "amSky": "rain",
-          "pmSky": "snow",
-          "status": "poor",
-          "reason": "rain then persistent snow, cloud shrouding tops all day, poor visibility, wind chill -10 to -15C"
-        },
-        {
-          "sky": "sun",
-          "windMphLow": 10,
-          "windMphHigh": 35,
-          "windDir": "NW",
-          "tempCLow": -2,
           "tempCHigh": -2,
-          "cloudFree": 90,
+          "cloudFree": 85,
           "freezingLevel": 600,
           "visibility": "excellent",
           "amSky": "partly-cloudy",
           "pmSky": "sun",
-          "status": "marginal",
-          "reason": "generally sunny, cloud free >90% PM, winter -2C tops, wind chill -10 to -15C early"
+          "status": "go",
+          "reason": "mostly dry, widely sunny, mountains largely clear, easing winds midday"
         },
         {
           "sky": "snow",
           "windMphLow": 40,
-          "windMphHigh": 50,
-          "gustMph": 60,
+          "windMphHigh": 60,
           "windDir": "E",
           "tempCLow": -2,
           "tempCHigh": -1,
@@ -210,7 +187,22 @@
           "amSky": "snow",
           "pmSky": "snow",
           "status": "poor",
-          "reason": "gales 40-60mph, persistent snow extensively over mountains all day, appalling visibility"
+          "reason": "persistent snowfall all day, blizzard risk on tops, gales 40-60mph"
+        },
+        {
+          "sky": "cloud",
+          "windMphLow": 20,
+          "windMphHigh": 30,
+          "windDir": "E",
+          "tempCLow": -1,
+          "tempCHigh": -1,
+          "cloudFree": 20,
+          "freezingLevel": 750,
+          "visibility": "moderate",
+          "amSky": "cloud",
+          "pmSky": "cloud",
+          "status": "poor",
+          "reason": "cloud shrouding most tops all day, frequent snow, wind chill near -10C"
         }
       ]
     },
@@ -218,26 +210,10 @@
       "name": "Southern Uplands",
       "forecast": [
         {
-          "sky": "rain",
-          "windMphLow": 20,
-          "windMphHigh": 35,
-          "gustMph": 40,
-          "windDir": "SW",
-          "tempCLow": 0,
-          "tempCHigh": 3,
-          "cloudFree": 20,
-          "freezingLevel": 550,
-          "visibility": "poor",
-          "amSky": "rain",
-          "pmSky": "snow",
-          "status": "poor",
-          "reason": "persistent rain then snow on hills, cloud shrouding all day, poor visibility, gusts 40mph"
-        },
-        {
           "sky": "sun",
-          "windMphLow": 10,
+          "windMphLow": 20,
           "windMphHigh": 30,
-          "windDir": "NW",
+          "windDir": "N",
           "tempCLow": -1,
           "tempCHigh": -1,
           "cloudFree": 90,
@@ -245,8 +221,8 @@
           "visibility": "excellent",
           "amSky": "sun",
           "pmSky": "sun",
-          "status": "marginal",
-          "reason": "generally sunny, 90% cloud-free, winter -1C tops, wind chill -10C early, gales after dark"
+          "status": "go",
+          "reason": "generally dry and sunny, mountains free of cloud, winds easing midday"
         },
         {
           "sky": "snow",
@@ -256,19 +232,34 @@
           "tempCLow": -1,
           "tempCHigh": 4,
           "cloudFree": 10,
-          "freezingLevel": 800,
+          "freezingLevel": 400,
           "visibility": "poor",
           "amSky": "snow",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "risk gales 40-50mph, persistent snow/rain, cloud shrouding hills all day, poor visibility"
+          "reason": "persistent rain and hill snow, gales 40-50mph early, poor visibility all day"
+        },
+        {
+          "sky": "cloud",
+          "windMphLow": 15,
+          "windMphHigh": 25,
+          "windDir": "SE",
+          "tempCLow": 0,
+          "tempCHigh": 1,
+          "cloudFree": 20,
+          "freezingLevel": 800,
+          "visibility": "moderate",
+          "amSky": "cloud",
+          "pmSky": "rain",
+          "status": "marginal",
+          "reason": "patchy rain and snow on summits, cloud covering hills, wind chill -7C"
         }
       ]
     }
   ],
-  "_generated": "2026-11-14T20:41:16.912Z",
-  "_anchorDate": "2026-11-15",
-  "_mwisUpdatedAt": "2026-11-14T16:05:00.000Z",
+  "_generated": "2026-11-15T21:00:57.778Z",
+  "_anchorDate": "2026-11-16",
+  "_mwisUpdatedAt": "2026-11-15T15:02:00.000Z",
   "_model": "claude-sonnet-4-6",
   "_promptVersion": "2026-10-18",
   "_schemaVersion": 2
