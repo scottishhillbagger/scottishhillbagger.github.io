@@ -1,49 +1,34 @@
 {
   "days": [
-    "Thu",
     "Fri",
-    "Sat"
+    "Sat",
+    "Sun"
   ],
-  "updatedAt": "2026-11-18T14:34:00.000Z",
+  "updatedAt": "2026-11-19T12:23:00.000Z",
   "regions": [
     {
       "name": "Northwest Highlands",
       "forecast": [
         {
           "sky": "partly-cloudy",
-          "windMphLow": 20,
-          "windMphHigh": 30,
-          "windDir": "ENE",
+          "windMphLow": 10,
+          "windMphHigh": 15,
+          "windDir": "N",
           "tempCLow": -2,
-          "tempCHigh": 0,
-          "cloudFree": 70,
+          "tempCHigh": -2,
+          "cloudFree": 60,
           "freezingLevel": 750,
           "visibility": "good",
           "amSky": "partly-cloudy",
-          "pmSky": "partly-cloudy",
+          "pmSky": "sun",
           "status": "marginal",
-          "reason": "snow/hail showers north and east, below-zero tops, considerable wind chill"
-        },
-        {
-          "sky": "partly-cloudy",
-          "windMphLow": 10,
-          "windMphHigh": 15,
-          "windDir": "NE",
-          "tempCLow": -2,
-          "tempCHigh": 0,
-          "cloudFree": 55,
-          "freezingLevel": 750,
-          "visibility": "excellent",
-          "amSky": "cloud",
-          "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "reason": "snow showers Ben Hope area, 40% cloud-free north/east, below-zero tops"
+          "reason": "snow/hail showers Sutherland, fog patches corries, terrain frozen"
         },
         {
           "sky": "sun",
           "windMphLow": 10,
-          "windMphHigh": 25,
-          "windDir": "ESE",
+          "windMphHigh": 20,
+          "windDir": "E",
           "tempCLow": -2,
           "tempCHigh": 0,
           "cloudFree": 90,
@@ -52,7 +37,22 @@
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "extensive sunshine, 90% cloud-free, light winds rising ESE later"
+          "reason": "extensive sunshine, superb visibility, mountains mostly cloud free"
+        },
+        {
+          "sky": "sun",
+          "windMphLow": 20,
+          "windMphHigh": 30,
+          "windDir": "E",
+          "tempCLow": -2,
+          "tempCHigh": -2,
+          "cloudFree": 80,
+          "freezingLevel": 650,
+          "visibility": "excellent",
+          "amSky": "sun",
+          "pmSky": "sun",
+          "status": "marginal",
+          "reason": "locally very gusty E winds, feels -10C, frozen terrain, balance difficult"
         }
       ]
     },
@@ -61,48 +61,48 @@
       "forecast": [
         {
           "sky": "sun",
-          "windMphLow": 20,
-          "windMphHigh": 30,
-          "windDir": "ENE",
-          "tempCLow": -2,
-          "tempCHigh": 0,
+          "windMphLow": 10,
+          "windMphHigh": 10,
+          "windDir": "N",
+          "tempCLow": -1,
+          "tempCHigh": -1,
           "cloudFree": 80,
-          "freezingLevel": 750,
+          "freezingLevel": 800,
           "visibility": "excellent",
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "winter sunshine, 80% cloud-free, below-zero tops with wind chill"
+          "reason": "bright sunshine, little wind, mountains mostly cloud free, terrain frozen"
         },
         {
           "sky": "sun",
           "windMphLow": 10,
           "windMphHigh": 20,
-          "windDir": "NE",
-          "tempCLow": -1,
-          "tempCHigh": 0,
-          "cloudFree": 80,
-          "freezingLevel": 850,
-          "visibility": "excellent",
-          "amSky": "sun",
-          "pmSky": "sun",
-          "status": "go",
-          "reason": "frequently sunny, 80% cloud-free, light winds, dry throughout"
-        },
-        {
-          "sky": "sun",
-          "windMphLow": 10,
-          "windMphHigh": 25,
-          "windDir": "ESE",
+          "windDir": "E",
           "tempCLow": -2,
           "tempCHigh": 0,
-          "cloudFree": 92,
+          "cloudFree": 95,
           "freezingLevel": 750,
           "visibility": "excellent",
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "extensive sunshine, above 90% cloud-free, no precipitation, light winds"
+          "reason": "extensive sunshine, superb visibility, mountains almost certainly cloud free"
+        },
+        {
+          "sky": "sun",
+          "windMphLow": 25,
+          "windMphHigh": 40,
+          "windDir": "E",
+          "tempCLow": -2,
+          "tempCHigh": -2,
+          "cloudFree": 70,
+          "freezingLevel": 650,
+          "visibility": "excellent",
+          "amSky": "sun",
+          "pmSky": "sun",
+          "status": "poor",
+          "reason": "gusts 25-40mph, feels -12C in wind, balance difficult, frozen terrain"
         }
       ]
     },
@@ -111,48 +111,48 @@
       "forecast": [
         {
           "sky": "partly-cloudy",
-          "windMphLow": 20,
-          "windMphHigh": 30,
-          "windDir": "ENE",
-          "tempCLow": -2,
-          "tempCHigh": -1,
-          "cloudFree": 60,
-          "freezingLevel": 700,
-          "visibility": "good",
-          "amSky": "cloud",
-          "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "reason": "cloud capping tops, snow flurries north/east Cairngorms, below-zero wind chill"
-        },
-        {
-          "sky": "partly-cloudy",
           "windMphLow": 10,
           "windMphHigh": 20,
-          "windDir": "NE",
+          "windDir": "NW",
           "tempCLow": -2,
           "tempCHigh": -2,
           "cloudFree": 50,
           "freezingLevel": 700,
           "visibility": "excellent",
-          "amSky": "cloud",
-          "pmSky": "partly-cloudy",
+          "amSky": "partly-cloudy",
+          "pmSky": "sun",
           "status": "marginal",
-          "reason": "cloud persisting north Cairngorms AM, snow showers, 50% cloud-free"
+          "reason": "snow showers Deeside/N Cairngorms AM, cloud 800-1000m, clears afternoon"
         },
         {
           "sky": "sun",
           "windMphLow": 10,
-          "windMphHigh": 20,
-          "windDir": "ESE",
+          "windMphHigh": 15,
+          "windDir": "E",
           "tempCLow": -2,
           "tempCHigh": -2,
-          "cloudFree": 90,
+          "cloudFree": 95,
           "freezingLevel": 650,
           "visibility": "excellent",
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "mostly sunny, 90% cloud-free, light winds, negligible precipitation risk"
+          "reason": "mostly sunny, superb visibility, hills almost certainly clear, light winds"
+        },
+        {
+          "sky": "sun",
+          "windMphLow": 20,
+          "windMphHigh": 30,
+          "windDir": "E",
+          "tempCLow": -2,
+          "tempCHigh": -2,
+          "cloudFree": 70,
+          "freezingLevel": 650,
+          "visibility": "excellent",
+          "amSky": "sun",
+          "pmSky": "sun",
+          "status": "marginal",
+          "reason": "locally very gusty E winds, feels -10C, balance difficult, frozen terrain"
         }
       ]
     },
@@ -161,48 +161,48 @@
       "forecast": [
         {
           "sky": "sun",
-          "windMphLow": 20,
-          "windMphHigh": 30,
-          "windDir": "ENE",
+          "windMphLow": 10,
+          "windMphHigh": 15,
+          "windDir": "NW",
           "tempCLow": -2,
-          "tempCHigh": -1,
+          "tempCHigh": -2,
           "cloudFree": 80,
-          "freezingLevel": 700,
-          "visibility": "good",
+          "freezingLevel": 750,
+          "visibility": "excellent",
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "winter sunshine, 80% cloud-free, rare snow flurries east only, breezy"
-        },
-        {
-          "sky": "partly-cloudy",
-          "windMphLow": 10,
-          "windMphHigh": 20,
-          "windDir": "NE",
-          "tempCLow": -2,
-          "tempCHigh": -1,
-          "cloudFree": 70,
-          "freezingLevel": 750,
-          "visibility": "excellent",
-          "amSky": "cloud",
-          "pmSky": "sun",
-          "status": "go",
-          "reason": "frequently sunny central highlands, patchy cloud east, mostly dry"
+          "reason": "extensive sunshine, little wind, mountains mostly cloud free, terrain frozen"
         },
         {
           "sky": "sun",
           "windMphLow": 10,
-          "windMphHigh": 20,
-          "windDir": "ESE",
+          "windMphHigh": 15,
+          "windDir": "E",
           "tempCLow": -2,
           "tempCHigh": -2,
-          "cloudFree": 92,
+          "cloudFree": 95,
           "freezingLevel": 650,
           "visibility": "excellent",
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "extensive sunshine, above 90% cloud-free, no precipitation, light winds"
+          "reason": "extensive sunshine, superb visibility, hills almost certainly clear, calm"
+        },
+        {
+          "sky": "sun",
+          "windMphLow": 20,
+          "windMphHigh": 30,
+          "windDir": "E",
+          "tempCLow": -2,
+          "tempCHigh": -2,
+          "cloudFree": 60,
+          "freezingLevel": 650,
+          "visibility": "excellent",
+          "amSky": "sun",
+          "pmSky": "partly-cloudy",
+          "status": "marginal",
+          "reason": "locally very gusty E winds, feels -10C, cloud risk higher areas, frozen terrain"
         }
       ]
     },
@@ -210,56 +210,57 @@
       "name": "Southern Uplands",
       "forecast": [
         {
-          "sky": "partly-cloudy",
-          "windMphLow": 25,
-          "windMphHigh": 35,
-          "windDir": "ENE",
+          "sky": "sun",
+          "windMphLow": 10,
+          "windMphHigh": 15,
+          "windDir": "N",
           "tempCLow": 0,
           "tempCHigh": 0,
-          "cloudFree": 70,
-          "freezingLevel": 750,
-          "visibility": "good",
-          "amSky": "cloud",
-          "pmSky": "partly-cloudy",
-          "status": "poor",
-          "reason": "gusts 30-35mph ENE, blustery impeding walking on exposed ridges AM"
-        },
-        {
-          "sky": "partly-cloudy",
-          "windMphLow": 10,
-          "windMphHigh": 20,
-          "windDir": "NE",
-          "tempCLow": 0,
-          "tempCHigh": 1,
-          "cloudFree": 75,
-          "freezingLevel": 750,
+          "cloudFree": 90,
+          "freezingLevel": 800,
           "visibility": "excellent",
-          "amSky": "cloud",
+          "amSky": "partly-cloudy",
           "pmSky": "sun",
-          "status": "marginal",
-          "reason": "snow/hail showers Borders and Cheviots AM, cloud eastern tops, clearing west"
+          "status": "go",
+          "reason": "bright sunshine, hills cloud free except Cheviot AM snow showers clearing midday"
         },
         {
           "sky": "sun",
           "windMphLow": 10,
-          "windMphHigh": 25,
-          "windDir": "ESE",
+          "windMphHigh": 15,
+          "windDir": "E",
           "tempCLow": -1,
           "tempCHigh": 0,
-          "cloudFree": 92,
+          "cloudFree": 95,
           "freezingLevel": 700,
           "visibility": "excellent",
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "extensive sunshine, above 90% cloud-free, no precipitation, light winds"
+          "reason": "extensive sunshine, superb visibility, no cloud, no precipitation expected"
+        },
+        {
+          "sky": "sun",
+          "windMphLow": 20,
+          "windMphHigh": 40,
+          "gustMph": 40,
+          "windDir": "E",
+          "tempCLow": -2,
+          "tempCHigh": -2,
+          "cloudFree": 80,
+          "freezingLevel": 650,
+          "visibility": "excellent",
+          "amSky": "sun",
+          "pmSky": "sun",
+          "status": "marginal",
+          "reason": "gusts 35-40mph west of M74, feels -12C, balance difficult, frozen terrain"
         }
       ]
     }
   ],
-  "_generated": "2026-11-18T22:56:24.428Z",
-  "_anchorDate": "2026-11-19",
-  "_mwisUpdatedAt": "2026-11-18T14:34:00.000Z",
+  "_generated": "2026-11-19T23:01:10.853Z",
+  "_anchorDate": "2026-11-20",
+  "_mwisUpdatedAt": "2026-11-19T12:23:00.000Z",
   "_model": "claude-sonnet-4-6",
   "_promptVersion": "2026-10-18",
   "_schemaVersion": 2
