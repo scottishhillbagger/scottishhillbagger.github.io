@@ -1,47 +1,32 @@
 {
   "days": [
-    "Sun",
     "Mon",
-    "Tue"
+    "Tue",
+    "Wed"
   ],
-  "updatedAt": "2026-11-21T12:20:00.000Z",
+  "updatedAt": "2026-11-22T15:00:00.000Z",
   "regions": [
     {
       "name": "Northwest Highlands",
       "forecast": [
         {
           "sky": "sun",
-          "windMphLow": 30,
-          "windMphHigh": 45,
-          "gustMph": 45,
-          "windDir": "E",
-          "tempCLow": -1,
-          "tempCHigh": 2,
-          "cloudFree": 95,
-          "freezingLevel": 800,
-          "visibility": "excellent",
-          "amSky": "sun",
-          "pmSky": "sun",
-          "status": "marginal",
-          "reason": "near-gale gusts 45mph, severe wind chill -12C, terrain frozen"
-        },
-        {
-          "sky": "sun",
           "windMphLow": 20,
           "windMphHigh": 30,
+          "gustMph": 50,
           "windDir": "SE",
           "tempCLow": -1,
           "tempCHigh": 2,
-          "cloudFree": 80,
+          "cloudFree": 90,
           "freezingLevel": 800,
           "visibility": "excellent",
           "amSky": "sun",
           "pmSky": "sun",
           "status": "go",
-          "reason": "bright sunshine, light SE winds, 80% cloud-free Munros"
+          "reason": "bright sunshine, mountains clear, gusty west coast, cold -8C chill"
         },
         {
-          "sky": "rain",
+          "sky": "snow",
           "windMphLow": 40,
           "windMphHigh": 60,
           "gustMph": 60,
@@ -52,9 +37,25 @@
           "freezingLevel": 600,
           "visibility": "poor",
           "amSky": "partly-cloudy",
-          "pmSky": "rain",
+          "pmSky": "snow",
           "status": "poor",
-          "reason": "ferocious gusts 60mph, rain/snow spreading east, wind chill -15C"
+          "reason": "ferocious gusts 40-60mph, rain/snow to 800m, -15C wind chill"
+        },
+        {
+          "sky": "cloud",
+          "windMphLow": 15,
+          "windMphHigh": 25,
+          "gustMph": 40,
+          "windDir": "SSE",
+          "tempCLow": 1,
+          "tempCHigh": 3,
+          "cloudFree": 30,
+          "freezingLevel": 1000,
+          "visibility": "good",
+          "amSky": "cloud",
+          "pmSky": "partly-cloudy",
+          "status": "marginal",
+          "reason": "extensive cloud, patchy snow flurries, risk gusts 40mph Ben Wyvis/Ben Hope"
         }
       ]
     },
@@ -62,35 +63,20 @@
       "name": "West Highlands",
       "forecast": [
         {
-          "sky": "sun",
-          "windMphLow": 35,
-          "windMphHigh": 45,
-          "gustMph": 45,
-          "windDir": "E",
-          "tempCLow": -1,
-          "tempCHigh": 1,
-          "cloudFree": 70,
-          "freezingLevel": 850,
-          "visibility": "excellent",
-          "amSky": "sun",
-          "pmSky": "sun",
-          "status": "poor",
-          "reason": "near-gale 35-45mph, gusty gusts knocking balance, wind chill -12C"
-        },
-        {
-          "sky": "sun",
+          "sky": "partly-cloudy",
           "windMphLow": 20,
           "windMphHigh": 30,
+          "gustMph": 50,
           "windDir": "SE",
           "tempCLow": -1,
           "tempCHigh": -1,
-          "cloudFree": 60,
+          "cloudFree": 70,
           "freezingLevel": 800,
           "visibility": "good",
-          "amSky": "sun",
-          "pmSky": "partly-cloudy",
-          "status": "go",
-          "reason": "bright sunshine Lochaber, SE 20-30mph, cloud risk Loch Lomond NP"
+          "amSky": "partly-cloudy",
+          "pmSky": "sun",
+          "status": "marginal",
+          "reason": "patchy cloud 700-900m south/islands, gusts 40-50mph coast, -8C wind chill"
         },
         {
           "sky": "rain",
@@ -103,10 +89,25 @@
           "cloudFree": 20,
           "freezingLevel": 600,
           "visibility": "poor",
-          "amSky": "partly-cloudy",
+          "amSky": "cloud",
           "pmSky": "rain",
           "status": "poor",
-          "reason": "ferocious gusts 60mph, rain/snow spreading east, cloud base 300-500m Loch Lomond"
+          "reason": "ferocious gusts 40-60mph, rain/snow all day, cloud base 300-500m Loch Lomond"
+        },
+        {
+          "sky": "cloud",
+          "windMphLow": 15,
+          "windMphHigh": 25,
+          "windDir": "SE",
+          "tempCLow": 0,
+          "tempCHigh": 2,
+          "cloudFree": 20,
+          "freezingLevel": 1000,
+          "visibility": "good",
+          "amSky": "snow",
+          "pmSky": "cloud",
+          "status": "marginal",
+          "reason": "extensive cloud covering hills, patchy snow flurries south, -7C wind chill"
         }
       ]
     },
@@ -115,34 +116,19 @@
       "forecast": [
         {
           "sky": "partly-cloudy",
-          "windMphLow": 30,
-          "windMphHigh": 45,
-          "gustMph": 45,
-          "windDir": "E",
-          "tempCLow": -1,
-          "tempCHigh": 0,
-          "cloudFree": 70,
-          "freezingLevel": 850,
-          "visibility": "excellent",
-          "amSky": "partly-cloudy",
-          "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "reason": "near-gale 30-45mph Cairngorm plateau, gusty, wind chill -8C, cloud banks"
-        },
-        {
-          "sky": "sun",
           "windMphLow": 20,
           "windMphHigh": 20,
+          "gustMph": 30,
           "windDir": "SE",
           "tempCLow": -1,
           "tempCHigh": -1,
-          "cloudFree": 70,
+          "cloudFree": 80,
           "freezingLevel": 800,
           "visibility": "excellent",
           "amSky": "sun",
           "pmSky": "partly-cloudy",
           "status": "go",
-          "reason": "bright sunshine northern Cairngorms, light SE 20mph, cloud risk southern areas"
+          "reason": "bright sunshine northern mountains, patchy cloud southern Cairngorms above 800m"
         },
         {
           "sky": "snow",
@@ -155,10 +141,26 @@
           "cloudFree": 20,
           "freezingLevel": 450,
           "visibility": "poor",
-          "amSky": "partly-cloudy",
+          "amSky": "snow",
           "pmSky": "snow",
           "status": "poor",
-          "reason": "snow spreading east, gusts 60mph, cloud base 500m Ben Alder–Drumochter, wind chill -15C"
+          "reason": "ferocious gusts 40-60mph, persistent snow, cloud base 500m Glen Garry, -15C chill"
+        },
+        {
+          "sky": "cloud",
+          "windMphLow": 20,
+          "windMphHigh": 35,
+          "gustMph": 35,
+          "windDir": "SE",
+          "tempCLow": 0,
+          "tempCHigh": 0,
+          "cloudFree": 30,
+          "freezingLevel": 600,
+          "visibility": "good",
+          "amSky": "snow",
+          "pmSky": "cloud",
+          "status": "marginal",
+          "reason": "blustery gusts NE Cairngorms, extensive cloud, patchy snow, -12C wind chill"
         }
       ]
     },
@@ -167,34 +169,19 @@
       "forecast": [
         {
           "sky": "partly-cloudy",
-          "windMphLow": 30,
-          "windMphHigh": 40,
-          "gustMph": 40,
-          "windDir": "E",
-          "tempCLow": -1,
-          "tempCHigh": 0,
-          "cloudFree": 50,
-          "freezingLevel": 850,
-          "visibility": "excellent",
-          "amSky": "partly-cloudy",
-          "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "reason": "near-gale 30-40mph, large cloud banks, 50% cloud-free, wind chill -8C"
-        },
-        {
-          "sky": "partly-cloudy",
           "windMphLow": 15,
-          "windMphHigh": 20,
+          "windMphHigh": 25,
+          "gustMph": 30,
           "windDir": "SE",
           "tempCLow": -1,
           "tempCHigh": -1,
-          "cloudFree": 40,
+          "cloudFree": 60,
           "freezingLevel": 800,
           "visibility": "good",
           "amSky": "partly-cloudy",
           "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "reason": "extensive cloud banks 700-900m, only 40% cloud-free Munros, patchy sunshine"
+          "status": "go",
+          "reason": "patchy cloud 700-900m, dry, patchy sunshine, manageable breeze"
         },
         {
           "sky": "snow",
@@ -207,10 +194,26 @@
           "cloudFree": 10,
           "freezingLevel": 450,
           "visibility": "poor",
-          "amSky": "cloud",
+          "amSky": "snow",
           "pmSky": "snow",
           "status": "poor",
-          "reason": "persistent snow, gusts 55mph, cloud base below 500m, whiteout risk, wind chill -15C"
+          "reason": "whiteout risk, cloud base below 500m all day, gusts 40-55mph, -15C chill"
+        },
+        {
+          "sky": "cloud",
+          "windMphLow": 20,
+          "windMphHigh": 30,
+          "gustMph": 30,
+          "windDir": "SE",
+          "tempCLow": 0,
+          "tempCHigh": 0,
+          "cloudFree": 10,
+          "freezingLevel": 600,
+          "visibility": "good",
+          "amSky": "snow",
+          "pmSky": "cloud",
+          "status": "marginal",
+          "reason": "persistent cloud sheet covering most hills, patchy early snow, -10C wind chill"
         }
       ]
     },
@@ -219,37 +222,21 @@
       "forecast": [
         {
           "sky": "partly-cloudy",
-          "windMphLow": 25,
-          "windMphHigh": 40,
-          "gustMph": 40,
-          "windDir": "E",
-          "tempCLow": 0,
-          "tempCHigh": 0,
-          "cloudFree": 80,
-          "freezingLevel": 800,
-          "visibility": "excellent",
-          "amSky": "sun",
-          "pmSky": "partly-cloudy",
-          "status": "marginal",
-          "reason": "near-gale gusts 40mph west of M74, wind chill -8C, terrain frozen"
-        },
-        {
-          "sky": "partly-cloudy",
           "windMphLow": 15,
           "windMphHigh": 25,
           "windDir": "SE",
           "tempCLow": 1,
           "tempCHigh": 1,
-          "cloudFree": 80,
+          "cloudFree": 85,
           "freezingLevel": 800,
           "visibility": "good",
-          "amSky": "sun",
-          "pmSky": "partly-cloudy",
+          "amSky": "partly-cloudy",
+          "pmSky": "sun",
           "status": "go",
-          "reason": "patchy sunshine, light SE winds, 80% cloud-free, dry throughout"
+          "reason": "sunshine periods, mostly clear hills, light breeze, dry all day"
         },
         {
-          "sky": "rain",
+          "sky": "snow",
           "windMphLow": 35,
           "windMphHigh": 55,
           "gustMph": 55,
@@ -259,17 +246,33 @@
           "cloudFree": 20,
           "freezingLevel": 600,
           "visibility": "poor",
-          "amSky": "cloud",
-          "pmSky": "rain",
+          "amSky": "rain",
+          "pmSky": "snow",
           "status": "poor",
-          "reason": "rain/snow spreading east, gusts 55mph, cloud base 300-500m Cheviots–Galloway, wind chill -12C"
+          "reason": "ferocious gusts 35-55mph, persistent rain/snow, cloud base 300-500m Cheviots"
+        },
+        {
+          "sky": "cloud",
+          "windMphLow": 15,
+          "windMphHigh": 25,
+          "gustMph": 30,
+          "windDir": "ESE",
+          "tempCLow": 0,
+          "tempCHigh": 2,
+          "cloudFree": 30,
+          "freezingLevel": 600,
+          "visibility": "good",
+          "amSky": "snow",
+          "pmSky": "partly-cloudy",
+          "status": "marginal",
+          "reason": "early snow/sleet west, extensive morning cloud, -10C wind chill gusty spots"
         }
       ]
     }
   ],
-  "_generated": "2026-11-21T21:37:48.661Z",
-  "_anchorDate": "2026-11-22",
-  "_mwisUpdatedAt": "2026-11-21T12:20:00.000Z",
+  "_generated": "2026-11-22T21:44:17.479Z",
+  "_anchorDate": "2026-11-23",
+  "_mwisUpdatedAt": "2026-11-22T15:00:00.000Z",
   "_model": "claude-sonnet-4-6",
   "_promptVersion": "2026-10-18",
   "_schemaVersion": 2
