@@ -1,48 +1,32 @@
 {
   "days": [
-    "Tue",
     "Wed",
-    "Thu"
+    "Thu",
+    "Fri"
   ],
-  "updatedAt": "2026-11-23T16:15:00.000Z",
+  "updatedAt": "2026-11-24T15:53:00.000Z",
   "regions": [
     {
       "name": "Northwest Highlands",
       "forecast": [
         {
           "sky": "snow",
-          "windMphLow": 40,
-          "windMphHigh": 60,
-          "gustMph": 60,
-          "windDir": "SE",
-          "tempCLow": -2,
-          "tempCHigh": 2,
-          "cloudFree": 30,
-          "freezingLevel": 600,
-          "visibility": "poor",
-          "amSky": "snow",
-          "pmSky": "snow",
-          "status": "poor",
-          "reason": "powerful gales 40-60mph, snow/rain mix, ferocious gusts to valleys"
-        },
-        {
-          "sky": "cloud",
-          "windMphLow": 15,
-          "windMphHigh": 25,
+          "windMphLow": 10,
+          "windMphHigh": 20,
           "gustMph": 40,
           "windDir": "SSE",
           "tempCLow": 1,
-          "tempCHigh": 3,
+          "tempCHigh": 2,
           "cloudFree": 30,
           "freezingLevel": 1000,
           "visibility": "good",
-          "amSky": "cloud",
-          "pmSky": "partly-cloudy",
+          "amSky": "snow",
+          "pmSky": "cloud",
           "status": "marginal",
-          "reason": "extensive cloud, gusts 40mph Ben Hope/Wyvis, patchy snow flurries"
+          "reason": "patchy snow flurries, gusty 40mph east Ben Wyvis, full winter conditions"
         },
         {
-          "sky": "partly-cloudy",
+          "sky": "cloud",
           "windMphLow": 35,
           "windMphHigh": 50,
           "gustMph": 60,
@@ -53,9 +37,25 @@
           "freezingLevel": 600,
           "visibility": "good",
           "amSky": "partly-cloudy",
+          "pmSky": "cloud",
+          "status": "poor",
+          "reason": "gusts 60mph afternoon, 70-80mph after dark, severe wind chill -20C"
+        },
+        {
+          "sky": "snow",
+          "windMphLow": 25,
+          "windMphHigh": 35,
+          "gustMph": 70,
+          "windDir": "S",
+          "tempCLow": -2,
+          "tempCHigh": 0,
+          "cloudFree": 30,
+          "freezingLevel": 800,
+          "visibility": "poor",
+          "amSky": "snow",
           "pmSky": "partly-cloudy",
           "status": "poor",
-          "reason": "gales 35-50mph gusts 60mph, severe wind chill -15 to -20C on tops"
+          "reason": "60-70mph at dawn, early snow whiteout, visibility very poor to appalling"
         }
       ]
     },
@@ -64,37 +64,21 @@
       "forecast": [
         {
           "sky": "snow",
-          "windMphLow": 40,
-          "windMphHigh": 60,
-          "gustMph": 60,
-          "windDir": "SE",
+          "windMphLow": 15,
+          "windMphHigh": 25,
+          "windDir": "SSE",
           "tempCLow": -2,
-          "tempCHigh": 2,
+          "tempCHigh": 0,
           "cloudFree": 10,
-          "freezingLevel": 600,
-          "visibility": "poor",
+          "freezingLevel": 500,
+          "visibility": "moderate",
           "amSky": "snow",
-          "pmSky": "snow",
+          "pmSky": "cloud",
           "status": "poor",
-          "reason": "blizzards and whiteout, persistent snow/rain, ferocious gales 40-60mph"
+          "reason": "persistent inland snow AM, full winter conditions, cloud covers most hills all day"
         },
         {
           "sky": "cloud",
-          "windMphLow": 15,
-          "windMphHigh": 25,
-          "windDir": "SE",
-          "tempCLow": 0,
-          "tempCHigh": 2,
-          "cloudFree": 20,
-          "freezingLevel": 1000,
-          "visibility": "good",
-          "amSky": "cloud",
-          "pmSky": "cloud",
-          "status": "marginal",
-          "reason": "extensive cloud covering hills, patchy snow flurries south, frozen terrain"
-        },
-        {
-          "sky": "partly-cloudy",
           "windMphLow": 35,
           "windMphHigh": 50,
           "gustMph": 60,
@@ -105,9 +89,25 @@
           "freezingLevel": 500,
           "visibility": "good",
           "amSky": "partly-cloudy",
-          "pmSky": "partly-cloudy",
+          "pmSky": "cloud",
           "status": "poor",
-          "reason": "gales 35-50mph gusts 60mph, severe wind chill -15 to -20C, persistent cloud south"
+          "reason": "gusts 60mph afternoon, 70-80mph after dark, severe wind chill, challenging on high terrain"
+        },
+        {
+          "sky": "snow",
+          "windMphLow": 25,
+          "windMphHigh": 35,
+          "gustMph": 70,
+          "windDir": "S",
+          "tempCLow": -2,
+          "tempCHigh": 0,
+          "cloudFree": 20,
+          "freezingLevel": 800,
+          "visibility": "poor",
+          "amSky": "snow",
+          "pmSky": "rain",
+          "status": "poor",
+          "reason": "60-70mph at dawn, heavy snow southern areas persisting into day, appalling visibility"
         }
       ]
     },
@@ -116,51 +116,51 @@
       "forecast": [
         {
           "sky": "snow",
-          "windMphLow": 40,
-          "windMphHigh": 60,
-          "gustMph": 60,
+          "windMphLow": 25,
+          "windMphHigh": 35,
+          "gustMph": 50,
           "windDir": "SE",
           "tempCLow": -2,
-          "tempCHigh": -2,
-          "cloudFree": 10,
-          "freezingLevel": 450,
-          "visibility": "poor",
-          "amSky": "snow",
-          "pmSky": "snow",
-          "status": "poor",
-          "reason": "frequent persistent hill snow, gales 40-60mph, cloud base 500m south, -15C chill"
-        },
-        {
-          "sky": "cloud",
-          "windMphLow": 20,
-          "windMphHigh": 35,
-          "gustMph": 40,
-          "windDir": "SE",
-          "tempCLow": 0,
           "tempCHigh": 0,
           "cloudFree": 30,
           "freezingLevel": 600,
           "visibility": "good",
-          "amSky": "cloud",
+          "amSky": "snow",
           "pmSky": "cloud",
-          "status": "marginal",
-          "reason": "gusts 40mph north/east Cairngorms, extensive cloud, patchy snow flurries, -12C chill"
+          "status": "poor",
+          "reason": "gusts 40-50mph north/east Cairngorms, wind chill -15C, full winter conditions"
         },
         {
-          "sky": "partly-cloudy",
+          "sky": "cloud",
           "windMphLow": 35,
           "windMphHigh": 50,
           "gustMph": 60,
-          "windDir": "SE",
+          "windDir": "SSE",
           "tempCLow": -2,
           "tempCHigh": -2,
           "cloudFree": 40,
           "freezingLevel": 500,
           "visibility": "good",
           "amSky": "partly-cloudy",
-          "pmSky": "partly-cloudy",
+          "pmSky": "cloud",
           "status": "poor",
-          "reason": "gales 35-50mph gusts 60mph, severe wind chill -15 to -20C, cloud south Cairngorms"
+          "reason": "gusts 60mph afternoon, 70-80mph into night, wind chill -20C, terrain mostly frozen"
+        },
+        {
+          "sky": "snow",
+          "windMphLow": 25,
+          "windMphHigh": 35,
+          "gustMph": 70,
+          "windDir": "S",
+          "tempCLow": -2,
+          "tempCHigh": -2,
+          "cloudFree": 20,
+          "freezingLevel": 500,
+          "visibility": "poor",
+          "amSky": "snow",
+          "pmSky": "snow",
+          "status": "poor",
+          "reason": "60-70mph dawn, prolonged heavy snow southern Cairngorms, whiteout, wind chill -20C"
         }
       ]
     },
@@ -169,42 +169,26 @@
       "forecast": [
         {
           "sky": "snow",
-          "windMphLow": 40,
-          "windMphHigh": 55,
-          "gustMph": 55,
-          "windDir": "SE",
-          "tempCLow": -2,
-          "tempCHigh": -2,
-          "cloudFree": 5,
-          "freezingLevel": 450,
-          "visibility": "poor",
-          "amSky": "snow",
-          "pmSky": "snow",
-          "status": "poor",
-          "reason": "near-constant hill snow, whiteout, gales 40-55mph, cloud base below 500m all day"
-        },
-        {
-          "sky": "cloud",
-          "windMphLow": 20,
-          "windMphHigh": 30,
+          "windMphLow": 25,
+          "windMphHigh": 35,
           "gustMph": 40,
           "windDir": "SE",
-          "tempCLow": 0,
+          "tempCLow": -2,
           "tempCHigh": 0,
           "cloudFree": 20,
-          "freezingLevel": 600,
-          "visibility": "good",
-          "amSky": "cloud",
+          "freezingLevel": 500,
+          "visibility": "poor",
+          "amSky": "snow",
           "pmSky": "cloud",
-          "status": "marginal",
-          "reason": "persistent cloud sheet, gusts 40mph eastern hills, early snow, frozen upland terrain"
+          "status": "poor",
+          "reason": "gusts 40mph+ Lochnagar eastward, heavy overnight snow, poor visibility in snow"
         },
         {
           "sky": "cloud",
           "windMphLow": 35,
           "windMphHigh": 50,
           "gustMph": 60,
-          "windDir": "SE",
+          "windDir": "SSE",
           "tempCLow": -2,
           "tempCHigh": -2,
           "cloudFree": 20,
@@ -213,7 +197,23 @@
           "amSky": "cloud",
           "pmSky": "cloud",
           "status": "poor",
-          "reason": "gales 35-50mph gusts 60mph by dusk, cloud shrouding tops, severe wind chill -15 to -20C"
+          "reason": "gusts 60mph afternoon, 70-80mph into night, cloud shrouds high terrain all day"
+        },
+        {
+          "sky": "snow",
+          "windMphLow": 25,
+          "windMphHigh": 35,
+          "gustMph": 70,
+          "windDir": "S",
+          "tempCLow": -2,
+          "tempCHigh": -2,
+          "cloudFree": 10,
+          "freezingLevel": 500,
+          "visibility": "poor",
+          "amSky": "snow",
+          "pmSky": "snow",
+          "status": "poor",
+          "reason": "60-70mph dawn, prolonged heavy snow widespread, whiteout, wind chill -20C"
         }
       ]
     },
@@ -222,41 +222,25 @@
       "forecast": [
         {
           "sky": "snow",
-          "windMphLow": 35,
-          "windMphHigh": 55,
-          "gustMph": 55,
+          "windMphLow": 20,
+          "windMphHigh": 30,
+          "gustMph": 40,
           "windDir": "SE",
           "tempCLow": -1,
-          "tempCHigh": 3,
-          "cloudFree": 10,
-          "freezingLevel": 600,
-          "visibility": "poor",
-          "amSky": "snow",
-          "pmSky": "rain",
-          "status": "poor",
-          "reason": "snow/rain mix, gales 35-55mph, blanket cloud 300-500m, appalling visibility in snow"
-        },
-        {
-          "sky": "partly-cloudy",
-          "windMphLow": 15,
-          "windMphHigh": 25,
-          "gustMph": 30,
-          "windDir": "ESE",
-          "tempCLow": 0,
-          "tempCHigh": 2,
+          "tempCHigh": 0,
           "cloudFree": 50,
           "freezingLevel": 600,
-          "visibility": "good",
-          "amSky": "cloud",
-          "pmSky": "partly-cloudy",
+          "visibility": "moderate",
+          "amSky": "snow",
+          "pmSky": "cloud",
           "status": "marginal",
-          "reason": "cloud patches lingering, early sleet/snow fading, gusty 30mph Cheviots, frozen terrain"
+          "reason": "early snow west Galloway fading, gusty 40mph Cheviots, wind chill -10C, hazy"
         },
         {
-          "sky": "partly-cloudy",
+          "sky": "cloud",
           "windMphLow": 25,
           "windMphHigh": 40,
-          "gustMph": 50,
+          "gustMph": 60,
           "windDir": "SE",
           "tempCLow": -1,
           "tempCHigh": -1,
@@ -264,16 +248,32 @@
           "freezingLevel": 500,
           "visibility": "good",
           "amSky": "partly-cloudy",
-          "pmSky": "partly-cloudy",
+          "pmSky": "cloud",
           "status": "poor",
-          "reason": "gales 25-40mph gusts 50mph, severe wind chill -10 to -15C, frozen terrain"
+          "reason": "gusts 50mph dusk rising 60mph overnight, strenuous then dangerous on high terrain"
+        },
+        {
+          "sky": "snow",
+          "windMphLow": 20,
+          "windMphHigh": 50,
+          "gustMph": 60,
+          "windDir": "S",
+          "tempCLow": -1,
+          "tempCHigh": 1,
+          "cloudFree": 10,
+          "freezingLevel": 600,
+          "visibility": "poor",
+          "amSky": "snow",
+          "pmSky": "rain",
+          "status": "poor",
+          "reason": "50-60mph dawn eastern hills, prolonged snow then rain, whiteout, wind chill -15C"
         }
       ]
     }
   ],
-  "_generated": "2026-11-24T02:53:34.441Z",
-  "_anchorDate": "2026-11-24",
-  "_mwisUpdatedAt": "2026-11-23T16:15:00.000Z",
+  "_generated": "2026-11-25T00:38:10.167Z",
+  "_anchorDate": "2026-11-25",
+  "_mwisUpdatedAt": "2026-11-24T15:53:00.000Z",
   "_model": "claude-sonnet-4-6",
   "_promptVersion": "2026-10-18",
   "_schemaVersion": 2
